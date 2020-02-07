@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="samp_LiveMessenger.tpButtonShowLogins"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    d:DesignWidth="15.167" d:DesignHeight="18.333" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="RootElement">
+
+    	<Path HorizontalAlignment="Left" Margin="4.73400020599365,6.44999980926514,0,0" VerticalAlignment="Top" Width="5.364" Fill="#FF000000" Stretch="Fill" Stroke="#FF000000" Data="M0.5,0.5 L12.902,0.5 L0.5,11.871 z"  RenderTransformOrigin="0.5,0.5" x:Name="da" Height="5.364" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, Width, Height">
+    		<Path.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="-135.56"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Path.RenderTransform>
+    	</Path>
+    	<Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Opacity="0" Cursor="Arrow"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,83 @@
+2010-06-21  Andreia Gaita  <avidigal@novell.com>
+
+	* make-crx.py: dropped, we use chrome to pack up the crx
+
+2010-04-28  Andreia Gaita  <avidigal@novell.com>
+
+	* Makefile.am: remove ff36 bridge.
+
+2010-04-08  Chris Toshok  <toshok@ximian.com>
+
+	* Makefile.am (novell-moonlight.crx): use chrome to pack/sign the
+	extension instead of python+openssl.
+
+2010-02-11  Chris Toshok  <toshok@ximian.com>
+
+	* Makefile.am: we need to include the ff3 bridge.
+
+2009-11-21  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* Makefile.am: Don't bundle machine.config in the XPI since it's
+	unused (nothing even tries to load it) and misnamed (mono would
+	never try to load it from the 2.0 directory since our
+	framework_version is "2.1"
+
+2009-11-20  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* Makefile.am: Don't include extra assemblies in the XPI
+
+2009-10-13  Larry Ewing  <lewing@novell.com>
+
+	* install.rdf.in: add fennec id to the list of supported targets.
+
+	r: toshok
+
+2009-08-07  Rusty Howell  <rhowell@novell.com>
+
+	 * Makefile.am: Change xpi target to respect changes to dlls
+
+2009-05-02  Rusty Howell  <rhowell@novell.com>
+
+	* Makefile.am: Added xpi FF bridges to xpi
+
+2009-04-22  Rusty Howell  <rhowell@novell.com>
+
+	* Remove GAC from xpi. 
+
+2009-01-20  Marek Habersack  <mhabersack@novell.com>
+
+	* Makefile.am (novell-moonlight.xpi): moonlight.exe no longer
+	exists
+
+2009-01-12  Jb Evain  <jbevain@novell.com>
+
+	* Makefile.am: remove references to moonlight.cs and moonlight.exe.
+	Install the assemblies in the plugin gac for the 2.1 profile.
+
+2008-11-12  Rusty Howell  <rhowell@novell.com>
+
+	* install.rdf.in: Add macros for updateURL
+
+2008-08-17  Chris Toshok  <toshok@ximian.com>
+
+	* Makefile.am: INCLUDE_MONO_RUNTIME ->
+	INCLUDE_BROWSER_MANAGED_CODE.
+
+2008-05-27  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* Makefile.am: firefox bridges got moved
+
+2008-05-16  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* Makefile.am: Dist the files from the previous checkin
+
+2008-05-15  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* install.rdf.in, chrome.manifest, icon.png, Makefile.am: Add our spiffy
+	logo to the firefox extension.  (Needs to be replace by a nicer one some
+	day but it's not bad).
+
+2008-05-15  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* install.rdf.in: Use targetPlatform to restrict installation to
+	the supported platform.  Fixes bnc#390873

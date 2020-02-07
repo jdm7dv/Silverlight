@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ContentFramework.Core.Models">
+  <Description>Silverlight 4 Training Course</Description>
+  <Id>Silverlight4</Id>
+  <Name>Silverlight 4 Training Course</Name>
+  <Version>1.1</Version>
+  <Logo>Assets\Silverlight.png</Logo>
+
+  <Overview>
+    <Author>
+      <Blog>http://johnpapa.net</Blog>
+      <Email>JoPapa@microsoft.com</Email>
+      <Name>JoPapa</Name>
+    </Author>
+    <Description>
+      The Silverlight 4 Training Course includes a whitepaper explaining all of the new Silverlight 4 RC features, several hands-on-labs that explain the features, and a 8 unit course for building business applications with Silverlight 4.
+      The business applications course includes 8 modules with extensive hands on labs as well as 25 accompanying videos (videos are all available in the online at http://r.ch9.ms/sl4) that walk you through key aspects of building a business application with Silverlight.
+      Key aspects in this course are working with numerous sandboxed and elevated out of browser features, the new RichTextBox control, implicit styling, webcam, drag and drop, multi touch, validation, authentication, MEF, WCF RIA Services, right mouse click, and much more!
+    </Description>
+    <Document></Document>
+    <Title>Silverlight Training Course (Silverlight 4)</Title>
+    <Version>1.1</Version>
+    <Feedback>To give feedback please write to jopapa@microsoft.com</Feedback>
+  </Overview>
+
+  <Prerequisites>
+    <Group Name="Common Prerequisites" Order="1" Description="">
+      <Prerequisites>
+        <Prerequisite Name="Microsoft Visual Studio 2010 RC" Link="http://go.microsoft.com/fwlink/?LinkID=151797" Description="" />
+        <Prerequisite Name="Silverlight 4 RC" Link="http://go.microsoft.com/fwlink/?LinkId=177658" Description="" />
+      </Prerequisites>
+    </Group>
+  </Prerequisites>
+
+  <AudiencePrerequisites>Knowledge and experience with previous versions of Silverlight</AudiencePrerequisites>
+
+  <RelatedResources>
+    <Resource>
+      <Title>Silverlight TV</Title>
+      <Link>http://r.ch9.ms/sltv</Link>
+      <Description>Go behind the scenes at Microsoft with John Papa and learn what the Silverlight product team is dreaming up next. Catch the inside scoop on Silverlight TV!</Description>
+    </Resource>
+    <Resource>
+      <Title>Silverlight.net</Title>
+      <Link>http://Silverlight.net</Link>
+      <Description>Silverlight Community Resources, Forums and Training Material</Description>
+    </Resource>
+    <Resource>
+      <Title>Expression Community Site</Title>
+      <Link>http://expression.microsoft.com</Link>
+      <Description>Expression Community Resources and Training Material</Description>
+    </Resource>
+    <Resource>
+      <Title>Project Rosetta</Title>
+      <Link>http://projectrosetta.com</Link>
+      <Description>Tutorials for Designers and UI Developers</Description>
+    </Resource>
+  </RelatedResources>
+
+  <Units xmlns:d="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <Unit>
+      <Description>Find out what enhancements Silverlight 4 RC introduces! This unit contains a video introduction of Silverlight 4 and a technical whitepaper that walks through the new features in Silverlight 4 RC</Description>
+      <Id>Overview</Id>
+      <Name>What's New in Silverlight 4</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\Overview</Lab>
+      </Labs>
+    </Unit>
+    <Unit>
+      <Description>Check out these 5 hands on labs that demonstrate some of the newest features in Silverlight. Explore multi touch, drag and drop, numerous out of browser features, learn to interact with the webcam, create a rich text notepad using the RichTextBox control, printing your content, and more!</Description>
+      <Id>NewFeatures</Id>
+      <Name>Silverlight 4 New Features</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\RichTextBox</Lab>
+        <Lab>..\..\Labs\Silverlight4\MultiTouch</Lab>
+        <Lab>..\..\Labs\Silverlight4\DataValidation</Lab>
+        <Lab>..\..\Labs\Silverlight4\OutOfBrowser</Lab>
+        <Lab>..\..\Labs\Silverlight4\WebCam</Lab>
+      </Labs>
+    </Unit>
+    <!--<Unit>
+      <Description>John Papa and Ian Griffiths discuss the key areas that the Building Business Applications with Silverlight 4 course focuses on. This module is the overview of the course which covers many key scenarios that are faced when building business applications and how Silverlight can help address them.</Description>
+      <Id>SL4BusinessModule1</Id>
+      <Name>Silverlight 4 Business Apps: Module 1 - Introduction</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      --><!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_01_01_Introduction</Video>
+      </Videos>--><!--
+    </Unit>-->
+    <Unit>
+      <Description>This is module 2 of the Building Business Applications with Silverlight 4 course. This module sets the stage with the course's Event Manager application. It discusses using WCF services vs WCF RIA Services. Then it walks you through integrating WCF RIA Services into the solution to support reading, editing and inserting entities. This unit also covers the key aspects of data binding and page navigation.</Description>
+      <Id>SL4BusinessModule2</Id>
+      <Name>Silverlight 4 Business Apps: Module 2 - Event Manager using WCF RIA Services</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_02_01_RIAServices</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_02_02_EditingEntities</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_02_03_ShowingEvents</Video>
+      </Videos>-->
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\SL4LOB_02_Event_Manager</Lab>
+      </Labs>
+    </Unit>
+    <Unit>
+      <Description>This is module 3 of the Building Business Applications with Silverlight 4 course. This module covers authentication, using the DataForm, setting up validation for the model, the RichTextBox control, implicit styling, commanding, and the fundamentals of MVVM.</Description>
+      <Id>SL4BusinessModule3</Id>
+      <Name>Silverlight 4 Business Apps: Module 3 - User Registration with Authentication, Validation, Rich Text, Styling, and Commands</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_03_01_Authentication</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_03_02_MVVM</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_03_03_Validation</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_03_04_ImplicitStyles</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_03_05_RichTextBox</Video>
+      </Videos>-->
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\SL4LOB_03_User_Registration</Lab>
+      </Labs>
+    </Unit>
+    <Unit>
+      <Description>This is module 4 of the Building Business Applications with Silverlight 4 course. This module covers dropping a file onto a Silverlight application, programmatic clipboard acces, and accessing the webcam.</Description>
+      <Id>SL4BusinessModule4</Id>
+      <Name>Silverlight 4 Business Apps: Module 4 - User Profile with Drop Target, Webcam, Clipboard</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_04_01_Webcam</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_04_02_Drop</Video>
+      </Videos>-->
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\SL4LOB_04_User_Profile</Lab>
+      </Labs>
+    </Unit>
+    <Unit>
+      <Description>This is module 5 of the Building Business Applications with Silverlight 4 course. This module covers grouping in a DataGrid and an ItemsControl. It also covers the new Fluid UI visual states, right mouse click, and word based text trimming.</Description>
+      <Id>SL4BusinessModule5</Id>
+      <Name>Silverlight 4 Business Apps: Module 5 - Schedule Planner with Grouping and Right Click</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_05_01_Grouping</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_05_02_FluidUI</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_05_03_RightMouseClick</Video>
+      </Videos>-->
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\SL4LOB_05_Schedule_Planner</Lab>
+      </Labs>
+    </Unit>
+    <Unit>
+      <Description>This is module 6 of the Building Business Applications with Silverlight 4 course. This module covers the fundamentals of printing in Silverlight. It also offers some techniques for printing multiple pages.</Description>
+      <Id>SL4BusinessModule6</Id>
+      <Name>Silverlight 4 Business Apps: Module 6 - Printing the Schedule</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_06_01_Printing</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_06_02_MultipagePrinting</Video>
+      </Videos>-->
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\SL4LOB_06_Printing_the_Schedule</Lab>
+      </Labs>
+    </Unit>
+    <Unit>
+      <Description>This is module 7 of the Building Business Applications with Silverlight 4 course. This module covers several out of browser features including creating toasts, window placement, elevated trust, and native integration.</Description>
+      <Id>SL4BusinessModule7</Id>
+      <Name>Silverlight 4 Business Apps: Module 7 - Event Dashboard Running Out of Browser</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_07_01_OOB</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_07_02_Toasts</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_07_03_WindowPlacement</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_07_04_ElevatedTrust</Video>
+      </Videos>-->
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\SL4LOB_07_Event_Administrator_Dashboard</Lab>
+      </Labs>
+    </Unit>
+    <Unit>
+      <Description>This is module 8 of the Building Business Applications with Silverlight 4 course. This module covers more out of browser features including creating custom chrome, the window closing event, silent installs, and XAP signing. It also covers MEF and ow it enables composability, supports a plug in model, and can dynamically load XAP files.</Description>
+      <Id>SL4BusinessModule8</Id>
+      <Name>Silverlight 4 Business Apps: Module 8 - Advanced Out of Browser and MEF</Name>
+      <Thumbnail>Assets\Silverlight.png</Thumbnail>
+      <!--<Videos>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_08_01_CustomChrome</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_08_02_WindowClosingEvent</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_08_03_OOBSilentInstall</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_08_04_XapSigning</Video>
+        <Video>..\..\Videos\Silverlight4\SL4LOB_08_05_MEF</Video>
+      </Videos>-->
+      <Labs>
+        <Lab>..\..\Labs\Silverlight4\SL4LOB_08_Advanced_OOB</Lab>
+      </Labs>
+    </Unit>
+  </Units>
+</Package>

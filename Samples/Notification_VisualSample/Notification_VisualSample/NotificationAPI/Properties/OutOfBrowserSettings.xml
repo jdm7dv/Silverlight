@@ -1,0 +1,7 @@
+<OutOfBrowserSettings ShortName="NotificationAPI Application" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>Sample application to show the Notification API</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="NotificationAPI Samples" Height="480" Width="640" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

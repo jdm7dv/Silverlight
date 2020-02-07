@@ -1,0 +1,139 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Drag and Drop" />
+      <MSHelp:RLTitle Title="Exercise 2: Drag and Drop" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Drag and Drop</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 4 - Webcam, Drag and Drop, and Clipboard Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Drag and Drop</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Not all users will have webcams, and even those who do may already have a picture they’d like to use instead of taking a new one. In this part of the lab, you’ll make it possible for users to drag a PNG or JPEG file from their computer into the application.</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Don’t forget that the <i>Completed</i> folder in each lab contains a completed solution for every part of the lab. If you did not do the previous part (e.g., because you don’t have a webcam) you can use the solution in the Part 1 folder as your starting point for this part.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <a name="_Toc256193949" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add Drop Support</b>
+        </p>
+        <ol>
+          <li>Open the <b>SlEventManager</b> solution. In the <b>SlEventManager</b> project, open the <b>UserPicture.xaml</b> file in the <b>Views</b> folder.</li>
+          <li>Find the <b>Grid</b> element named <b>LayoutRoot</b>.</li>
+          <li>Set its <b>AllowDrop</b> property to true. This enables it to act as a drop target. </li>
+          <li>Add a <b>Drop</b> event handler to the LayoutRoot element.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The <b>Grid</b> is currently invisible. It performs layout but has no appearance of its own. This presents a problem for drag and drop because invisible elements cannot directly receive mouse input. They can receive mouse events as they bubble out of child elements, but as far as Silverlight is concerned, any empty space in the UI really is empty, even though it’s contained within the bounding box of the grid. (Mouse events will end up being delivered to the element behind the <b>Grid</b>.) <br />To ensure that the whole area occupied by the <b>Grid</b> works as a drop target, you need to set its <b>Background</b> property. In fact you can set it to <b>Transparent (</b>although this is also invisible). Silverlight treats anything that has been painted with a brush as being visible to the mouse, even if it’s not visible to the eyes.</td></tr></table><p /></div></li>
+          <li>Set the background of the LayoutRoot to White.</li>
+          <li>Add the following using directive to the <b>UserPicture.xaml.cs</b> code behind.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Windows.Media.Imaging;</pre></td></tr></table></span></div></li>
+          <li>Add the following code to the Drop event handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (e.Data.GetDataPresent(DataFormats.FileDrop)){    FileInfo[] fi = (FileInfo[]) e.Data.GetData(DataFormats.FileDrop);    BitmapImage image = new BitmapImage();    using (Stream fileStream = fi[0].OpenRead())    {        image.SetSource(fileStream);    }    ImageBrush brush = new ImageBrush();    brush.ImageSource = image;    brush.Stretch = Stretch.UniformToFill;    userPictureBorder.Background = brush;}</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+          <li>Navigate to the <b>UserPicture</b> View.</li>
+          <li>Drag a bitmap onto the UI. (There’s a JPEG file in the lab folder if you don’t have a suitable image to hand.) You should see the image appear.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The Save Picture button won’t be working yet, because it relies on saving a copy of the bytes of the image. We’re not yet retrieving those bytes. </td></tr></table><p /></div></li>
+          <li>Inside the using statement you just added, after the call to image.SetSource, add this code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>fileStream.Seek(0, SeekOrigin.Begin);MemoryStream targetStream = new MemoryStream();fileStream.CopyTo(targetStream);imageBytes = targetStream.ToArray();</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+          <li>Verify that you can drag an image and save it to the database.</li>
+        </ol>
+        <a name="_Toc256193950" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Load the Image from the Database (Optional)</b>
+        </p>
+        <p>As an additional exercise, you might want to try writing code that loads the images saved in this lab to display them. One way to do this would be to add a method to the domain service that retrieves an Attendee entity for the currently logged in user. This has a UserPicture property containing the image bytes. Once you’ve got that on the client side, you can wrap it in a MemoryStream, and then pass that to a BitmapImage object’s SetSource method, just like you did with the file stream in the Drop handler. (Or if you want a more advanced approach, you could write an ASP.NET HTTP handler that makes the user pictures available via HTTP.)</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The solution for this optional task can be found in the completed lab for Exercise 2.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

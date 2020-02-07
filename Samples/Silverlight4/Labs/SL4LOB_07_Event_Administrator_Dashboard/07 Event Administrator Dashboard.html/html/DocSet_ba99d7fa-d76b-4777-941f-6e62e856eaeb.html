@@ -1,0 +1,435 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Adding an Out of Browser Application" />
+      <MSHelp:RLTitle Title="Exercise 1: Adding an Out of Browser Application" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Adding an Out of Browser Application</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 7 - Out of Browser, Toasts, Native Integration Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Adding an Out of Browser Application</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this part of the lab, you will add a second Silverlight application to the solution. The event administration application needs to run with elevated privileges to be able to use certain Silverlight features, which in turn means it needs to run out of browser. We want to leave the end-user-facing part of the application as it is, and while it’s possible to write a single Silverlight application that can run both inside and outside the browser (and you can show different UIs in each if necessary), there’s no real benefit to doing that in this case because the two parts of the application do quite different things. There’s no point in making the user download a larger .xap than necessary, so splitting the application in two makes sense here.</p>
+        <a name="_Toc256194227" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add a New Application</b>
+        </p>
+        <ol>
+          <li>Open the SlEventManager solution in Visual Studio 2010.</li>
+          <li>Add a new Silverlight Application project to the solution called EventAdministration.</li>
+          <li>Host it in the existing SlEventManager.Web solution</li>
+          <li>Enable use of WCF RIA Services</li>
+          <li>Allow Visual Studio to generate a new test page (setting it as the new start page), with debugging enabled.<p><img src="images\8ef94f6c-0942-4af1-84f2-d89047595d07.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 1</b>
+          <br />
+        </p>
+        <br />
+        <p class="label">
+          <i>Adding a New Silverlight Application</i>
+        </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>If you build the solution right now, you’ll get compilation errors. This is because the original projects were built with the Silverlight Business Application template, which relies on building certain files into both client and server. (In general, linking multiple Silverlight projects to a single web project doesn’t cause problems. The problems here are due to how this particular template uses RIA Services.) If you look at the original SlEventManager project and expand its Web\Resources folder, you’ll see some linked files</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <p>
+          <img src="images\868fbb3b-866f-4845-a997-ddde57088f81.png" />
+        </p>
+        <p>
+          <b>Figure 2</b>
+          <br />
+          <i>Linked Files</i>
+        </p>
+        <br />
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The little arrow overlay icon indicates that these files (and also the Designer.cs files you’ll see if you expand the icons) are references to files that live elsewhere, rather than belonging to this project. If you select one of them and look at the Properties panel, you’ll see that the FullPath property refers to a folder in the SlEventManager.Web project—it has a Resources folder that contains these files—the icons you see in the SlEventManager project are just links pointing to those files. The types generated as a result of the RIA Services link depend on these resources being present in both projects. (This enables messages such as validation errors to be shared across the client and server code.)<br />There’s an unfortunate problem we need to work around here: resource sharing between the server and client works with the Silverlight Business Application template presumes a common namespace—in our case, both the original projects shared the name SlEventManager, with the web project just adding .Web on the end. By linking to the shared resource files in a Web subfolder from the client SlEventManager project, the resources end up in the SlEventManager.Web namespace in both cases. But our new project has a default namespace of EventAdministration, which means that if we tried to link the files in in the same way, the resources would end up in a different namespace: EventAdministration.Web<b>. This will</b> break the shared code. The simplest solution to this is to modify the project default namespace. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <a name="_Toc256194228" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Configure the New Project </b>
+        </p>
+        <ol>
+          <li>Go to the new project’s Properties page and to the Silverlight tab.</li>
+          <li>Set the Default namespace to SlEventManager. (You can leave the assembly name as it is, and of course you can’t change the project name, because you already have a project called SlEventManager.)</li>
+          <li>Add similar links in your new project by first going to the new EventAdministration project and creating a Web folder with a Resources subfolder. </li>
+          <li>Use Add Existing Item to add <i>links</i> to the <b>ErrorResources</b>.resx  and <b>RegistrationDataResources.resx </b>files in the web project. (Do <b>not</b> add links to the associated .Designer.cs files.) <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>To add the file as a link, click on the dropdown arrow at the right of the Add button in the Add Existing Item dialog, and choose the Add As Link menu item. Otherwise, it will make a copy of the files, which makes it possible for the two projects to get out of sync.</td></tr></table><p /></div></li>
+          <br />
+          <p>
+            <img src="images\648dd394-5d83-4b0b-a2dd-abc513769e96.png" />
+          </p>
+        </ol>
+        <p>
+          <b>Figure 3</b>
+          <br />
+          <i>Add Linked Files</i>
+        </p>
+        <br />
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>You now need to configure these two .resx files to be associated with the generated .Designer.cs files. This isn’t quite as straightforward as adding links to those files. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>For each .resx file, go to the Properties panel and set the Custom Tool property to PublicResXFileCodeGenerator. When <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>When you do that, Visual Studio will realize that it needs to link to the relevant generated file, and your .resx file in Solution Explorer should now contain the relevant generated file. The project should now build.</td></tr></table><p /></div></li>
+          <br />
+          <li>Go into App.xaml.cs and change the EventAdministration namespace near the top to SlEventManager <b>by choosing</b> Refactor <b>and</b> Rename <b>from the menu bar</b>. </li>
+          <li>Say yes when Visual Studio asks if you want to change the namespace across the entire project. (This will also update the MainPage.xaml and MainPage.xaml.cs files for you.)</li>
+          <li>Go to the project properties page.</li>
+          <li>Change the startup object from to EventAdministration.App to SlEventManager.App.</li>
+        </ol>
+        <a name="_Toc256194229" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Configure for Out-of-Browser</b>
+        </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Our administration application won’t be able to run at all in-browser, so the next thing we need to do is to add some UI that detects when the user has tried to open the application in the browser. If the application’s not already installed, we can offer to install it for out-of-browser use, but otherwise, we just need to direct the user to run it as a normal app</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>Add two user controls to the project, one called WebUiNotInstalled and one called WebUiInstalled. </li>
+          <li>Add the following content to WebUiInstalled:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>        &lt;TextBlock TextWrapping="Wrap"&gt;            This application cannot run inside the web browser. It is            already installed on your computer, so please run it in the usual way.        &lt;/TextBlock&gt;</pre></td></tr></table></span></div></li>
+          <br />
+          <li>For the WebUiNotInstalled, we need to give the user the option to install the application. Add the following XAML inside the Grid:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.RowDefinitions&gt;    &lt;RowDefinition /&gt;    &lt;RowDefinition Height="Auto" /&gt;&lt;/Grid.RowDefinitions&gt;&lt;TextBlock TextWrapping="Wrap"&gt;    This application cannot run inside the web browser. To install it on    your computer, please click the Install... button.&lt;/TextBlock&gt;&lt;Button    x:Name="installButton"    Grid.Row="1"    Content="Install..."    /&gt;</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Add a Click handler to the button. Inside this handler, kick off the installation of the application with the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Application.Current.Install();</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Next, the MainPage.xaml.cs codebehind needs to decide which of these two UIs to show. In the constructor, after the call to InitializeComponent, add this code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (!Application.Current.IsRunningOutOfBrowser){    if (Application.Current.InstallState == InstallState.Installed)    {        LayoutRoot.Children.Add(new WebUiInstalled());    }    else    {        LayoutRoot.Children.Add(new WebUiNotInstalled());    }}</pre></td></tr></table></span></div></li>
+          <li>Open the <b>EventAdministration</b> project’s property pages, and in the Silverlight tab, check the Enable running application out of the browser button.<p><img src="images\2a77595d-036a-42a6-83e5-9995a030acaf.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 4</b>
+          <br />
+          <i>Enabling Out-of-Browser</i>
+        </p>
+        <br />
+        <ol>
+          <li>In the SlEventManager.Web project in the Solution Explorer, right-click on EventAdministrationTestPage.html and select Set as Start Page. </li>
+          <li>Run the application. </li>
+          <li>You should see the UI that offers to install the application. Click the Install… button. You should see the usual confirmation dialog:<p><img src="images\c77df0c7-1f47-4fae-972b-6ea9e2547f1b.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 5</b>
+          <br />
+          <i>Prompt to Install Out-of-Browser Application</i>
+        </p>
+        <br />
+        <ol>
+          <li>Check the <b>Desktop</b> checkbox and click OK. You’ll then see the application launch out-of-browser with an empty window. It’s empty because so far, MainPage.xaml doesn’t load any UI at all if we’re running out of browser. </li>
+          <li>Close both the OOB window and the browser window.</li>
+          <li>Run the application again, and this time you should see the UI that tells you the application is already installed. </li>
+          <li>Close the browser.</li>
+          <li>Try running from the Windows Start menu or the Desktop where you installed it. Again you should see an empty window.</li>
+        </ol>
+        <a name="_Toc256194230" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Setting up for Debugging OOB</b>
+        </p>
+        <p>We have a problem now: running the application from within Visual Studio will always show the web UI that tells us we can’t run the application from the web. This is going to make meaningful debugging of the application difficult. Now that we’ve got it installed, we need to modify the way we launch the application for debugging in Visual Studio. </p>
+        <ol>
+          <li>Open the EventAdministration project’s property pages and go to the Debug tab. </li>
+          <li>Select the Installed out-of-browser application radio button.<p><img src="images\7a8aa7e2-00a9-4607-8986-3a8f7ee07cc4.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 6</b>
+          <br />
+          <i>Setting Up Debugging for Out-of-Browser</i>
+        </p>
+        <br />
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Normally you’d then set the EventAdministration project as the startup project, and you’d be able to debug the application purely in out-of-browser mode. However, this particular application won’t work without the web server project also running—unlike some OOB apps, this one cannot usefully run offline. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>Right click on the solution and choose Properties. </li>
+          <li>In the Common Properties → Startup Project section, choose Multiple startup projects, and configure both EventAdministration and SlEventManager.Web to run.<p><img src="images\6beb68df-1bc1-4cc3-a71f-7bd218de180d.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 7</b>
+          <br />
+          <i>Multiple Startup Projects</i>
+        </p>
+        <br />
+        <ol>
+          <li>Run the application again, and you should now find that Visual Studio launches both the web browser and the out-of-browser windows. The first time you do that, you’ll see this dialog:<p><img src="images\c6259295-5e51-4424-a02f-9a230c5dadc5.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 7</b>
+          <br />
+          <i>Warning Dialog</i>
+        </p>
+        <br />
+        <ol>
+          <li>This dialog appears when you debug a project with the RIA Services Link enabled. Check the checkbox and click Yes, because in fact you are running the web project as well as the Silverlight application. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The dialog doesn’t take into account out-of-browser RIA Services scenarios. The debugger will attach itself to both Silverlight applications (and also to the web application).<br />When you use out-of-browser debugging support, you don’t need to worry about deploying updates to the application each time you build. Visual Studio will always debug the most recently built version.</td></tr></table><p /></div></li>
+          <br />
+          <li>Add another user control to the EventAdministration project, called OobUi. This will be the main out of browser user interface. </li>
+          <li>Add a TextBlock in there with the text “OOB” so that this control is distinct. </li>
+          <li>In the MainPage.xaml.cs, modify the code that decides which UI to show, so that it show this new OobUi control when we’re out of the browser:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (!Application.Current.IsRunningOutOfBrowser){    if (Application.Current.InstallState == InstallState.Installed)    {        LayoutRoot.Children.Add(new WebUiInstalled());    }    else    {        LayoutRoot.Children.Add(new WebUiNotInstalled());    }}else{    LayoutRoot.Children.Add(new OobUi());}</pre></td></tr></table></span></div></li>
+          <li>Run the application again and confirm that you see the OobUi when you run out of browser.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Because you need to run the web project and the Silverlight project, both in-browser and out-of-browser versions of your application will be running. Since the debugger attaches to both, debugging this kind of code can occasionally be surprising. If you put breakpoints in this code to follow it through, you need to remember that you’ll be debugging two processes simultaneously taking different paths through the same code.</td></tr></table><p /></div></li>
+          <br />
+        </ol>
+        <a name="_Toc256194231" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Check for Updates</b>
+        </p>
+        <ol>
+          <li>The next few steps will alert the user when an update is available for the application.</li>
+          <li>Open <b>OobUi.xaml.cs</b> and add assign an event handler for the <b>Application.Current.CheckAndDownloadUpdatedCompleted</b> event inside the <b>OobUi</b> constructor.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Application.Current.CheckAndDownloadUpdateCompleted +=     new CheckAndDownloadUpdateCompletedEventHandler(    Current_CheckAndDownloadUpdateCompleted);</pre></td></tr></table></span></div></li>
+          <li>Add the following method call to check for updates, in the <b>OobUi</b> constructor:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Application.Current.CheckAndDownloadUpdateAsync();</pre></td></tr></table></span></div></li>
+          <li>Add the event handler that tells the user if an update is available:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>void Current_CheckAndDownloadUpdateCompleted(    object sender, CheckAndDownloadUpdateCompletedEventArgs e){    if (e.UpdateAvailable)    {        MessageBox.Show("An update is available for this application. Please close the application and restart it.");    }}</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc256194232" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Wire the UI to the Domain Service</b>
+        </p>
+        <p>Now that our application is choosing the right UI to show based on how it is launched, we need to start wiring the OobUi into our domain service. To begin with, we need to log in, so we need the user to provide credentials. You might be tempted to copy across the login UI code from the SlEventManager project. However, doing so requires copying substantial amounts of infrastructure code over, so it’s easier just to build our own login UI.</p>
+        <ol>
+          <li>Add a new Silverlight Child Window to the EventAdministration project, called LoginWindow.</li>
+          <li>Replace the content of the window’s Grid with this<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.RowDefinitions&gt;    &lt;RowDefinition Height="Auto" /&gt;    &lt;RowDefinition Height="Auto" /&gt;    &lt;RowDefinition Height="Auto" /&gt;    &lt;RowDefinition Height="Auto" /&gt;&lt;/Grid.RowDefinitions&gt;&lt;Grid.ColumnDefinitions&gt;    &lt;ColumnDefinition Width="Auto" /&gt;    &lt;ColumnDefinition Width="200" /&gt;&lt;/Grid.ColumnDefinitions&gt;&lt;Border    x:Name="invalidCredentials"    Visibility="Collapsed"    Grid.ColumnSpan="2"    Padding="3"    Margin="3"    HorizontalAlignment="Center"    Background="Red"&gt;    &lt;TextBlock        Foreground="White"        FontWeight="Bold"        Text="Either the user name or password is incorrect"        /&gt;&lt;/Border&gt;&lt;TextBlock    Text="User name:"    Grid.Row="1"    Margin="3"    VerticalAlignment="Center"    /&gt;&lt;TextBox    x:Name="userNameText"    Grid.Row="1"    Grid.Column="1"    Margin="3"    /&gt;&lt;TextBlock    Text="Password:"    Grid.Row="2"    Margin="3"    VerticalAlignment="Center"    /&gt;&lt;PasswordBox    x:Name="passwordText"    Grid.Column="2"    Grid.Row="2"    Margin="3"    /&gt;&lt;StackPanel    Grid.Row="3"    Grid.ColumnSpan="2"    Orientation="Horizontal"    HorizontalAlignment="Right"    &gt;    &lt;Button        x:Name="OkButton"        Content="OK"        MinWidth="75"        Margin="10"        Click="OKButton_Click"        /&gt;    &lt;Button        x:Name="CancelButton"        Content="Cancel"        MinWidth="75"        Margin="10"        Click="CancelButton_Click"        /&gt;&lt;/StackPanel&gt;</pre></td></tr></table></span></div></li>
+          <li>Delete the Width and Height properties of the <b>LoginWindow </b>and set the<b> Title </b>to<b> Login</b>.</li>
+          <li>In the <b>LoginWindow.xaml.cs </b>codebehind, add this namespace declaration:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.ServiceModel.DomainServices.Client.ApplicationServices;</pre></td></tr></table></span></div></li>
+          <li>Then replace the body of the OKButton_Click handler method with this:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>WebContext.Current.Authentication.Login(    new LoginParameters(userNameText.Text, passwordText.Password),    loginOperation =&gt;    {        if (loginOperation.LoginSuccess)        {            this.DialogResult = true;        }        else        {            invalidCredentials.Visibility = Visibility.Visible;        }    }, null);</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This attempts to log the user in, and if it fails, shows an error, and if it succeeds, closes the login child window. For this to work, that WCF RIA Services need to know how it’s supposed to be authenticating. </td></tr></table><p /></div></li>
+          <br />
+          <li>In the App.xaml <b>for the OOB project</b>, add the following after the closing Application.Resources tag (but before the closing Application tag) so<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Application.ApplicationLifetimeObjects&gt;    &lt;app:WebContext&gt;        &lt;app:WebContext.Authentication&gt;            &lt;appsvc:FormsAuthentication/&gt;        &lt;/app:WebContext.Authentication&gt;    &lt;/app:WebContext&gt;&lt;/Application.ApplicationLifetimeObjects&gt;</pre></td></tr></table></span></div></li>
+          <li>You’ll need to add these namespace declarations to the root element:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>xmlns:appsvc="clr-namespace:System.ServiceModel.DomainServices.Client.ApplicationServices;assembly=System.ServiceModel.DomainServices.Client.Web" xmlns:app="clr-namespace:SlEventManager"  </pre></td></tr></table></span></div></li>
+          <li>Go to OobUi.xaml and add a button with Content="Login" and add a Click handler. Add this code in the handler<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>LoginWindow w = new LoginWindow();w.Show();</pre></td></tr></table></span></div></li>
+          <li>Run the application. </li>
+          <li>Click the Login button. The login UI should appear much as it does in the web-hosted Silverlight application from earlier labs. Try logging in with invalid credentials. The UI should show a message saying “The username or password is incorrect”. (This might be quite slow first time you try it.) </li>
+          <li>Try logging in with correct credentials. (Use “administrator” and “P@ssw0rd”.) The login should succeed, verifying that the credentials are being correctly validated.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>There are two additional steps you could do if you’d like to improve the user experience. Neither of these is necessary for the rest of the lab, but would make the application better.<br />You could add code to change the login button to a logout one once you’ve logged in—you can log out by calling the WebContext.Current.AuthenticationService.Logout method.<br />You could add a BusyIndicator to the login control, and make it visible while waiting for a response from the service, so that the user knows something is happening. The BusyIndicator control is in the Silverlight toolkit. (In the November 2009 toolkit, it’s in the ‘experimental’ band, so you’ll need to add the relevant pieces to the project yourself—you won’t find it in the Visual Studio Toolbox.)</td></tr></table><p /></div></li>
+          <br />
+        </ol>
+        <a name="_Toc256194233" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Loading the Dashboard</b>
+        </p>
+        <p>Now that we can authenticate with our server, let’s add some code to show the information this administrator dashboard needs to display. We need an extra service operation to retrieve a list of attendee registrations that we’ve not yet acknowledged.</p>
+        <ol>
+          <li> Add the following method to the EventManagerDomainService in the SlEventManager.Web project’s Services folder:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[RequiresRole("Event Administrators")]public IQueryable&lt;AttendeeEvent&gt; GetUnacknowledgedAttendeeEventsWithEvents(){    return from attendeeEvent in this.ObjectContext.AttendeeEvents.Include("Event")           where !attendeeEvent.IsAcknowledged           select attendeeEvent;}</pre></td></tr></table></span></div></li>
+          <li>In the EventManagerDomainService.metadata.cs file, find the AttendeeEventMetadata class and add an [Include] attribute to the Event field.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This service operation will enable the client to discover when attendees have registered for an event and their registration has not yet been acknowledged. However, the information about the user’s name and email lives elsewhere: we’ve been using the ASP.NET Membership and Profile handling for that. So we need to add more to the service to make that accessible to the client. </td></tr></table><p /></div></li>
+          <br />
+          <li>Add a new class to the web project’s Models folder called UserDisplayDetails. Add this using declaration:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.ComponentModel.DataAnnotations;</pre></td></tr></table></span></div></li>
+          <li>implement the class as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class UserDisplayDetails{    [Key]    public int AttendeeID { get; set; }    public string FriendlyName { get; set; }    public string Email { get; set; }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The Key attribute is required when returning custom types from a WCF RIA Service. It is used to determine the logical identity of an object. (Multiple service calls may end up returning the same object, and a key makes it possible to reconcile these back to the same instance on the client.) Without this, we would get an error if we tried to return objects of this type.</td></tr></table><p /></div></li>
+          <br />
+          <li>Add the following method to EventManagerDomainService, which returns the display details for the requested attendee IDs:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[RequiresRole("Event Administrators")]public IEnumerable&lt;UserDisplayDetails&gt; GetUserDisplayDetails(int[] attendeeIds){    var dbAttendeeQuery = from attendee in this.ObjectContext.Attendees                          where attendeeIds.Contains(attendee.AttendeeID)                          select new                          {                              attendee.AttendeeID,                              attendee.AspNetUserId                          };    var allUsers = Membership.GetAllUsers().OfType&lt;MembershipUser&gt;();    var results = from attendeeInfo in dbAttendeeQuery.ToList()                  let aspNetUser = allUsers.FirstOrDefault(mu =&gt;                        ((Guid) mu.ProviderUserKey) == attendeeInfo.AspNetUserId)                  where aspNetUser != null                  let prof = ProfileBase.Create(aspNetUser.UserName)                  where prof != null                  select new UserDisplayDetails                  {                      AttendeeID = attendeeInfo.AttendeeID,                      Email = aspNetUser.Email,                      FriendlyName = prof.GetPropertyValue("FriendlyName") as string                  };    return results;}</pre></td></tr></table></span></div></li>
+          <li>You’ll need to add this using directives to the file for this to compile:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Web.Profile;using SlEventManager.Web.Models;</pre></td></tr></table></span></div></li>
+          <li>Add a DataGrid to the OobUI.xaml file called unacknowledgedEvents. </li>
+          <li>Set its AutoGenerateColumns property to True. </li>
+          <li>Add another button labeled “Get”, and add a Click handler.</li>
+          <li>In the code behind, add this namespace directive:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Web.Services;</pre></td></tr></table></span></div></li>
+          <li>Then in the “<b>Get”</b> button’s Click handler, add the following code to fetch the list of unacknowledged event registrations, and then to fetch the name and email details for all the attendees in question:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>EventManagerDomainContext ctx = new EventManagerDomainContext();ctx.Load(ctx.GetUnacknowledgedAttendeeEventsWithEventsQuery(), loadUnackOp =&gt;{    int[] attendeeIds = (from atev in loadUnackOp.Entities                         select atev.AttendeeID).Distinct().ToArray();    ctx.Load(ctx.GetUserDisplayDetailsQuery(attendeeIds), loadDetailsOp =&gt;    {        var all = loadDetailsOp.Entities.ToArray();        unacknowledgedEvents.ItemsSource = all;    }, null);}, null);</pre></td></tr></table></span></div></li>
+          <li>Run the application. </li>
+          <li>Log in as “administrator” (password “P@ssw0rd”). </li>
+          <li>Click the Get button, and the grid should be populated with the name and email of any attendee registered for an event who has not yet received an acknowledgement email. (This will probably be just the “ian” user, unless you’ve registered more users in your application.)</li>
+          <li>Close the application.</li>
+        </ol>
+        <a name="_Toc256194234" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Adding ViewModels</b>
+        </p>
+        <p>The information being displayed isn’t quite what we need. We also need to show the event for which the user is registered. We’ll add a per item view model class for this.</p>
+        <ol>
+          <li> In the EventAdministration project, add a ViewModels folder.</li>
+          <li>Create a UnacknowledgedRegistrationViewModel class in the <b>ViewModels</b> folder. </li>
+          <li>Add the following properties to the View Model:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class UnacknowledgedRegistrationViewModel{    public string EventTitle { get; set; }    public string UserDisplayName { get; set; }    public string UserEmail { get; set; }}</pre></td></tr></table></span></div></li>
+          <li>That will be the view model class used to represent individual items in the list. We should also add a view model for the whole OobUi.</li>
+          <li>In the ViewModels folder, add an OobUiViewModel class. </li>
+          <li>Copy the <b>ViewModelBase</b> class from the SlEventManager project into this project, and make it the base class of OobUiViewModel. </li>
+          <li>Add the following using declarations:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Collections.Generic;using System.Linq;using SlEventManager.Web.Services;</pre></td></tr></table></span></div></li>
+          <li>The view model will need to provide a collection to act as the data grid’s source:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private IList&lt;UnacknowledgedRegistrationViewModel&gt; _unacknowledgedRegistrations;public IList&lt;UnacknowledgedRegistrationViewModel&gt; UnacknowledgedRegistrations{    get { return _unacknowledgedRegistrations; }    set    {        if (_unacknowledgedRegistrations != value)        {            _unacknowledgedRegistrations = value;            OnPropertyChanged("UnacknowledgedRegistrations");        }    }}</pre></td></tr></table></span></div></li>
+          <li>Add the following field, since we will need a domain context to use the service:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private EventManagerDomainContext ctx = new EventManagerDomainContext();</pre></td></tr></table></span></div></li>
+          <li>Add an OnGet method that will handle the click. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This will be similar to the click handler you wrote earlier, but this time, rather than just showing the user names, it will generate an item for each event registration. (Individual users may register for multiple events.) And it builds an instance of the item view model for each row, providing the exact details we wish to show:</td></tr></table><p /></div></li>
+          <br />
+          <div class="code">
+            <span codeLanguage="CSharp">
+              <table width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th>C#</th>
+                  <th>
+                    <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                      <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <pre>public void OnGet(){    ctx.Load(ctx.GetUnacknowledgedAttendeeEventsWithEventsQuery(), loadUnackOp =&gt;    {        int[] attendeeIds = (from atev in loadUnackOp.Entities                             select atev.AttendeeID).Distinct().ToArray();        ctx.Load(ctx.GetUserDisplayDetailsQuery(attendeeIds), loadDetailsOp =&gt;        {            var attendeeDetails = loadDetailsOp.Entities.ToDictionary(d =&gt; d.AttendeeID);            var registrations = from atev in loadUnackOp.Entities                                let details = attendeeDetails[atev.AttendeeID]                                select new UnacknowledgedRegistrationViewModel                                {                                    EventTitle = atev.Event.EventTitle,                                    UserDisplayName = details.FriendlyName,                                    UserEmail = details.Email                                };            UnacknowledgedRegistrations = registrations.ToList();        }, null);    }, null);}</pre>
+                  </td>
+                </tr>
+              </table>
+            </span>
+          </div>
+        </ol>
+        <a name="_Toc256194235" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Binding the ViewModels to the Views</b>
+        </p>
+        <ol>
+          <li>In the OobUi.xaml.cs code behind, add a field declaring and constructing an instance of OobUiViewModel. </li>
+          <li>Add the following using statement so you can reference the View Model.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.ViewModels;</pre></td></tr></table></span></div></li>
+          <li>In the constructor, put a reference to the view model in the DataContext. </li>
+          <li>Replace the entire Get button click handler with a call to the view model’s OnGet method.</li>
+          <li>Finally, in OobUi.xaml, bind the DataGrid control’s ItemsSource to the UnacknowledgedRegistrations property of the view model:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>ItemsSource="{Binding Path=UnacknowledgedRegistrations}"</pre></td></tr></table></span></div></li>
+          <li>Run the application, log in as administrator (P@ssw0rd), and click the Get button. You should now see a list showing event titles, names, and email addresses. There will be at least two entries because the “Ian Griffiths” user has registered for two events.</li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

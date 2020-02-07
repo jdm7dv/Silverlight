@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Kit3D : 3D Javascript engine for Silverlight : Blank template</title>
+    
+    <script language="javascript" src="..\..\Kit3D\core\Silverlight.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Camera.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\GeometryModel.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\SceneGraph.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\SceneNode.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Vertex.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Viewport.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Face.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\Core\DebugHelper.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\XamlFactory.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\AnimationManager.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\IdGenerator.js"></script>
+    <script language="javascript" src="..\..\Kit3D\core\InputManager.js"></script>
+    <script language="javascript" src="..\..\Kit3D\core\GeometryManager.js"></script>
+    <script language="javascript" src="..\..\Kit3D\math\Frustum.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\MathHelper.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Matrix3x3.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Matrix4x4.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Plane.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Vector3.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Vector4.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\materials\TextureMaterial.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\materials\SolidMaterial.js" ></script>
+    
+    <script language="javascript">    
+    
+    //Called each time a frame completes
+    function OnDemoFrameCompleted(frameCount)
+    {
+        
+    }
+
+    function pageLoaded()
+    {
+        //As soon as the page is loaded we will create the silverlight control
+        //then once this control loads we will create all of the Javascript goodness
+        Silverlight.createObjectEx(
+            {source: '#xamlContent', 
+             parentElement:document.getElementById('silverlightControl'), 
+             id:'Ag1', 
+             properties:{width:'600', 
+                         height:'600', 
+                         background:'#fff0f0f0', 
+                         isWindowless:'true', 
+                         version:'0.90.0'}, 
+             events:{onError:null, 
+                     onLoad:null}, 
+                     context:null});
+    }
+   
+    //Called once the Silverlight control is loaded
+    function onCanvasLoaded(sender, eventArgs)
+    {        
+        //Need to call this once to initialize it, otherwise
+        //elements cannot be added to the silverlight host, you
+        //must call this before doing anything
+        XamlFactory_GetInstance(sender);
+
+        
+        //Start the animation, we also need to set the method we want
+        //to call each time a frame completes, this will be used to
+        //animate our models in some way
+        AnimationManager_GetInstance().SetOnFrameCompleteCallback(OnDemoFrameCompleted);
+        AnimationManager_GetInstance().Start();
+        AnimationManager_GetInstance().ShowFrameRateCounter(false);
+    }
+
+    </script>
+    
+    <script type="text/xaml" id="xamlContent"><?xml version="1.0"?>
+        <Canvas xmlns="http://schemas.microsoft.com/client/2007"   
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                Loaded="onCanvasLoaded" >
+                
+                <Canvas.Resources>
+                    <Storyboard x:Name="AnimationLoop" Completed="AnimationManager_OnFrameComplete" Duration="0:0:0.016" />
+                </Canvas.Resources>
+                
+                <Canvas x:Name="RenderTarget" Visibility="Visible" Width="400" Height="400">
+                </Canvas>
+                
+                <TextBlock Visibility="Collapsed" x:Name="FrameRateCounter">0 fps</TextBlock>
+                <TextBlock Visibility="Collapsed" x:Name="DebugText"></TextBlock>
+        </Canvas>
+    </script>
+</head>
+
+<body onload="pageLoaded();">
+    <div id="silverlightControl" style="width:600px; height:600px;">
+    </div>
+</body>
+</html>

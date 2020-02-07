@@ -1,0 +1,197 @@
+2009-12-02  Alan McGovern  <amcgovern@novell.com>
+
+	* Binding.cs:
+	* RelativeSource.cs:
+	* BindingExpressionBase.cs: Implement support for
+	  RelativeSource based bindings.
+
+2009-12-02  Alan McGovern  <amcgovern@novell.com>
+
+	* Binding.cs:
+	* BindingExpressionBase.cs: Add provisional support for the
+	  SL3 Binding.ElementName API.
+
+2009-12-10  Chris Toshok  <toshok@ximian.com>
+
+	* BindingExpressionBase.cs (ConvertToType): pass true for
+	@doToStringConversion.
+
+2009-12-02  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: ContentPresenter copies its
+	  Content to its DataContext whenever it isn't a UIElement,
+	  therefore if we're databinding the Content property we need
+	  to use the parent DataContext in order to get the correct
+	  value.
+
+2009-11-09  Chris Toshok  <toshok@ximian.com>
+
+	* BindingExpression.cs: stub UpdateSource method.
+
+	* Binding.cs: stub UpdateSourceTrigger property.
+
+	r: rolf
+
+2009-10-05  Jackson Harper  <jackson@ximian.com>
+
+	* BindingExpression.cs: This is a public class in 3.0 (constructor
+	is not though).
+
+2009-09-29  Jackson Harper  <jackson@ximian.com>
+
+	* BindingExpressionBase.cs: Implement indexed property paths. r: spouliot
+
+2009-08-05  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: When a binding has been applied to
+	  the DataContext property, we need to use the DataContext of
+	  the parent element.
+
+2009-07-29  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: If a two way binding is attached
+	  to TextBox.Text we should not update the source while the
+	  textbox has focus.
+
+2009-06-30  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: OneTime bindings can be
+	  invalidated and they do reflect the new value.
+
+2009-06-23  Alan McGovern  <amcgovern@novell.com>
+
+	* Binding.cs: Don't null check value before using it, we
+	  should throw a nullref if it's null.
+
+2009-05-20  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: DataBinding and ManagedXamlLoader
+	  use exactly the same type conversion as Styles and
+	  ObjectKeyFrames - so merge both of them to use
+	  MoonlightTypeConverter. This also fixes several
+	  typeconversion related databinding issues.
+
+2009-05-19  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: Handle invalid values returned
+	  from IValueConverters properly.
+
+2009-05-15  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: Properly handle exceptions when
+	  updating the source in a 2 way binding. Raise the
+	  BindingValidationError event in the right place.
+
+2009-05-13  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: If we have a property path like
+	  "A.B.C" and the object 'B' is null, we should bail out with
+	  failure.
+
+2009-05-03  Chris Toshok  <toshok@ximian.com>
+
+	* BindingExpressionBase.cs rename Updating/updating to
+	UpdatingSource/updatingSource to better communicate what it means,
+	and make a couple of properties internal instead of private (they
+	weren't used anywhere else anyway.)
+	(Dispose): make sure to unhook from the PropertyChanged event too
+	so that we don't continue updating our target after we've been
+	disposed.
+
+	* BindingExpression.cs: remove all the commented out code.
+
+2009-04-03  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: Fix a few type converting issues
+	  with two way bindings which are now revealed by the datagrid
+	  tests.
+
+2009-04-01  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpression.cs:
+	* BindingExpressionBase.cs: TextBox only updates a two way
+	  binding when it loses focus, so we need to hook into the
+	  LostFocus event. Add an internal
+	  BindingExpressionBase.Dispose method so that we can ensure
+	  we detach from this event when the binding is removed.
+
+2009-04-01  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: If we're updating a two way
+	  binding, don't invoke the setter if the old value is the
+	  same as the new value.
+
+2009-03-26  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: If we can't convert the value to
+	  the correct type, bail out without throwing an exception.
+
+2009-03-26  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: If the datasource in a two way
+	  binding doesn't exist, just return immediately. Fixes
+	  several datagrid issues.
+
+2009-03-25  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: Null check value before
+	  referencing it. Allows a datagrid test to complete
+	  successfully.
+
+2009-03-25  Geoff Norton  <gnorton@novell.com>
+
+	* Binding.cs: Bindings are 100% managed now, so we need some
+	local managed members here to hold some of the values that
+	used to live in native.
+
+2009-03-24  Alan McGovern  <amcgovern@novell.com>
+
+	* Binding.cs: Bindings cannot use PropertyPaths which are
+	  instantiated with DependencyProperties, they must be
+	  instantiated with a string.
+
+2009-03-24  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: 1) When updating from an
+	  INotifyPropertyChanged, mark the binding as 'Updating' so
+	  that it doesn't get removed when calling
+	  Target.SetValueImpl.
+	2) If the target property doesn't exist (invalid binding or
+	  source hasn't been set), then ignore the property changed
+	  notification.
+
+2009-02-26  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: Use Helper.DefaultCulture
+	rather than declaring it here.
+
+* BindingExpressionBase.cs: When updating from a two-way binding,
+ensure we properly typeconvert from source type to dest type.
+
+2009-03-13  Geoff Norton  <gnorton@novell.com>
+
+	* Binding.cs: Ensure we ref, if we're going to unref
+
+2009-02-26  Chris Toshok  <toshok@ximian.com>
+
+	* BindingExpressionBase.cs (GetValue): mark this an override.
+
+2009-02-26  Alan McGovern  <amcgovern@novell.com>
+
+	* BindingExpressionBase.cs: If the property path is invalid,
+	  we should bail out early and just return DP.DefaultValue.
+
+2009-02-23  Jackson Harper  <jackson@ximian.com>
+
+	* BindingExpressionBase.cs: If the user supplied ValueConverter
+	doesn't work, try using our value converter.
+
+2009-02-20  Jeffrey Stedfast  <fejj@novell.com>
+
+	* Binding.cs: Throw ArgumentNullException if path is null.
+
+2009-02-08  Chris Toshok  <toshok@ximian.com>
+
+	* System.Windows.Data/BindingExpressionBase.cs: clean this up a
+	bit, use the default value converter, rename Target <-> Source to
+	match SL terminology, and remove a bunch of commented out code.

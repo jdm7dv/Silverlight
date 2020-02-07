@@ -1,0 +1,55 @@
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\Mix08.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\Mix08.pdb
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\AppManifest.xaml
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\Mix08.xap
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\TestPage.html
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\System.Windows.Controls.Data.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\System.Windows.Controls.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\System.Windows.Controls.Extended.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\System.Xml.Linq.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\System.Windows.Controls.Extended.xml
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\System.Windows.Controls.xml
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\System.Windows.Controls.Data.xml
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\ja\System.Windows.Controls.Extended.resources.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\ja\System.Xml.Linq.resources.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\ja\System.Windows.Controls.resources.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\ClientBin\ja\System.Windows.Controls.Data.resources.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\Mix08.g.resources
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\App.g.cs
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\Page.g.cs
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\DetailsView.g.cs
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\Mix08.dll
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\Mix08.pdb
+C:\Users\jstegman\Documents\Visual Studio 2008\Projects\Mix08\Mix08\obj\Debug\XapCacheFile.xml
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\Mix08.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\Mix08.pdb
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\AppManifest.xaml
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\Mix08.xap
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\TestPage.html
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\System.Windows.Controls.Data.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\System.Windows.Controls.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\System.Windows.Controls.Extended.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\System.Xml.Linq.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\System.Windows.Controls.Extended.xml
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\System.Windows.Controls.xml
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\System.Windows.Controls.Data.xml
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\ja\System.Windows.Controls.Extended.resources.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\ja\System.Xml.Linq.resources.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\ja\System.Windows.Controls.resources.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\ClientBin\ja\System.Windows.Controls.Data.resources.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\Mix08.g.resources
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\App.g.cs
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\Page.g.cs
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\DetailsView.g.cs
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\Mix08.dll
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\Mix08.pdb
+C:\Users\mharsh\Desktop\Mix08 - Copy\Mix08\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\mix08\Mix08 - End\Mix08\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\mix08\Mix08 - End\Mix08\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\mix08\Mix08 - End\Mix08\obj\Debug\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\mix08\Mix08 - End\Mix08\obj\Debug\DetailsView.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\mix08\Mix08 - End\Mix08\obj\Debug\Mix08.g.resources
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\mix08\Mix08 - End\Mix08\obj\Debug\Mix08.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\mix08\Mix08 - End\Mix08\obj\Debug\Mix08.pdb

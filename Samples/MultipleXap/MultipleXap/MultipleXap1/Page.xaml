@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="MultipleXap1.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+   Width="133.333" Height="100">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Image x:Name="xap1Image" HorizontalAlignment="Stretch" Margin="0,0,0,0" Source="MultipleXap1;component/2.png"  VerticalAlignment="Stretch" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</UserControl>

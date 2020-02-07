@@ -1,0 +1,14 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\Theme.xaml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.ShinyRed.XML
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.ShinyRed.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.ShinyRed.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.ShinyRed.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.ShinyRed.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.Toolkit.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.Toolkit.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\ClientBin\System.Windows.Controls.Theming.Toolkit.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\obj\Debug\System.Windows.Controls.Theming.ShinyRed.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\obj\Debug\Controls.Theming.ShinyRed.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\obj\Debug\Controls.Theming.ShinyRed.csproj.CopyComplete
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\obj\Debug\System.Windows.Controls.Theming.ShinyRed.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ShinyRed\obj\Debug\System.Windows.Controls.Theming.ShinyRed.pdb

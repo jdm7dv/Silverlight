@@ -1,0 +1,11 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.ComponentModel.DataAnnotations.XML
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.ComponentModel.DataAnnotations.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.ComponentModel.DataAnnotations.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.ComponentModel.DataAnnotations.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.ComponentModel.DataAnnotations.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.ComponentModel.DataAnnotations\obj\Debug\System.ComponentModel.DataAnnotations.csprojAssemblyReference.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.ComponentModel.DataAnnotations\obj\Debug\System.ComponentModel.DataAnnotations.Resources.DataAnnotationsResources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.ComponentModel.DataAnnotations\obj\Debug\System.ComponentModel.DataAnnotations.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.ComponentModel.DataAnnotations\obj\Debug\System.ComponentModel.DataAnnotations.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.ComponentModel.DataAnnotations\obj\Debug\System.ComponentModel.DataAnnotations.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.ComponentModel.DataAnnotations\obj\Debug\System.ComponentModel.DataAnnotations.pdb

@@ -1,0 +1,22 @@
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\MultipleXap.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\MultipleXap.pdb
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\AppManifest.xaml
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\MultipleXap.xap
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\TestPage.html
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\System.Windows.Controls.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\System.Windows.Controls.Extended.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\System.Windows.Controls.Extended.xml
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\System.Windows.Controls.xml
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\ja\System.Windows.Controls.Extended.resources.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\ClientBin\ja\System.Windows.Controls.resources.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\obj\Debug\MultipleXap.g.resources
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\obj\Debug\App.g.cs
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\obj\Debug\Page.g.cs
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\obj\Debug\MultipleXap.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\obj\Debug\MultipleXap.pdb
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap\obj\Debug\XapCacheFile.xml
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap\obj\Debug\MultipleXap.g.resources
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap\obj\Debug\MultipleXap.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap\obj\Debug\MultipleXap.pdb

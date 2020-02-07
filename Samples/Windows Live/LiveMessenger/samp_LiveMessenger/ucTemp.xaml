@@ -1,0 +1,97 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="samp_LiveMessenger.ucTemp"
+	d:DesignWidth="640" d:DesignHeight="880">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Height="Auto" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            
+            
+            <!-- MAIN LAYOUT -->
+            <Grid x:Name="grdMessenger" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="rowHeader" Height="60"/>
+                    <RowDefinition x:Name="rowBody" Height="*"/>
+                    <RowDefinition x:Name="rowFooter" Height="120"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+            <!-- HEADER -->
+            <Grid x:Name="grdMessengerHeader" Grid.Row="0"
+                  HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+                  VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="rowHeaderLeftPart" Width="*"/>
+                    <ColumnDefinition x:Name="rowHeaderRightPart" Width="160"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- HEADER - RIGHT CONTROLS -->
+                <Grid x:Name="grdMessengerHeaderRightPart" Grid.Column="1"
+                      HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+                      VerticalAlignment="Stretch" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.5*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- HEADER - RIGHT - TOP CONTROLS -->
+                    <Button x:Name="butMinimise" Grid.Row="0"
+                            HorizontalAlignment="Left" Margin="8,0,0,8" 
+                            Content="Button" Width="43" Visibility="Visible"/>
+                    <Button x:Name="butMaximise"  Grid.Row="0" 
+                            HorizontalAlignment="Stretch" Margin="55,0,62,8" 
+                            Content="Button" Visibility="Visible"/>
+                    <Button x:Name="butClose"  Grid.Row="0"
+                            HorizontalAlignment="Right" Margin="0,0,15,8" 
+                            Width="43" Content="Button" Visibility="Visible"/>
+
+                    <!-- HEADER - RIGHT - BOTTOM CONTROLS -->
+                </Grid>
+
+            </Grid>
+
+            
+            <!-- BODY -->
+            <Grid x:Name="grdMessengerBody" Grid.Row="1" 
+                  HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+                  VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            
+            
+
+            <!-- FOOTER -->
+            <Grid x:Name="grdMessengerFooter" Grid.Row="2"
+                  HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+                  VerticalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+
+
+
+        </Grid>
+    </Grid>
+</UserControl>

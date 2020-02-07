@@ -1,0 +1,347 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Creating the Application" />
+      <MSHelp:RLTitle Title="Exercise 1: Creating the Application" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Creating the Application</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 2 - WCF RIA Services, Creating and Editing Data, and Data Binding</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Creating the Application</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this first step, you will create the Visual Studio solution to build the web site and Silverlight application. You will also add a prebuilt database, which you’ll use via the Entity Framework, as the basis for a WCF RIA Services “Domain Service”. This service will be used for the remaining parts of the lab, but you’ll verify that the service is operating correctly by adding a simple DataGrid to display the events as the final step of this part.</p>
+        <a name="_Toc256193852" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the Solution</b>
+        </p>
+        <ol>
+          <li>Open Visual Studio 2010</li>
+          <li>In Visual Studio 2010, press Ctrl+Shift+N, or use the File→New→Project... menu item.</li>
+          <li>Select <b>Visual C#→Silverlight</b> in the treeview on the left</li>
+          <li>In the center, select the Silverlight Business Application template.</li>
+          <li>Name the project SlEventManager.</li>
+        </ol>
+        <p>
+          <img src="images\61f2c4f8-ca59-49f5-a6e9-96a3d6e95aa0.png" />
+        </p>
+        <p>
+          <b>Figure 1</b>
+          <br />
+          <i>Add New Silverlight Business Application Project</i>
+        </p>
+        <br />
+        <ol>
+          <li>Go to the SlEventManager project’s Properties. (You can open this by double clicking on the Properties node under the project in the Solution Explorer.)</li>
+          <li>Click on the <b>Silverlight</b> tab. Notice that it shows that the project is linked to WCF RIA Services code in the Web project. </li>
+        </ol>
+        <p>
+          <img src="images\cb99d2c1-5a42-4dd2-a199-22092405f8a2.png" />
+        </p>
+        <p>
+          <b>Figure 2</b>
+          <br />
+          <i>WCF RIA Services Link</i>
+        </p>
+        <br />
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This means that any domain services you define in the SlEventManagement.Web project will automatically be made available in the SlEventManagerment Silverlight project.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Close the properties page.</li>
+        </ol>
+        <a name="_Toc256193853" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the Entity Data Model</b>
+        </p>
+        <ol>
+          <li>This application will need a database. In the SlEventManagement.Web project in the <b>Solution Explorer</b>, right click on App_Data and choose Add→Existing Item…. </li>
+          <li>In the Add Existing Item dialog, find the folder for this lab and open the DatabaseFiles subdirectory. </li>
+          <li>Add the SlEventManager.mdf the project. Visual Studio will make a copy in the App_Data directory.</li>
+          <li>Double click on the newly-added file, <b>SlEventManager.mdf</b>, in the Solution Explorer. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Visual Studio will add an entry for this database in the Server Explorer panel. You can look in its Tables node to see the structure of the database. It contains various tables whose names begin with aspnet_, which we’ll be using in later labs when we add user management features to the application; these are standard tables used by ASP.NET. There are also various tables specific to this application, such as Event, which contains an entry for every event the application knows about. (The example database has been preloaded with some data so that there will be something to see as soon as you start wiring up the UI.)</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>In this application, we’re going to use WCF RIA Services’ ability to make server-side Entity Framework entities available to a Silverlight client. So we’ll need to define an Entity Data Model.</li>
+          <li>Add a new ADO.NET Entity Data Model item to the SlEventManager.Web project. You can find this template by choosing Visual C#→Data <b>in the treeview on the left.</b></li>
+          <li>Set the name to EventManagerDbModel and click Add.</li>
+          <li>Select the Generate from database option in the Entity Data Model Wizard dialog and click Next.</li>
+          <li>On the next screen select the connection from the dropdown list for the SlEventManager.mdf database and then click Next.</li>
+        </ol>
+        <p>
+          <img src="images\bca2a532-9531-41d2-9f73-ba768143d4a9.png" />
+        </p>
+        <p>
+          <b>Figure 3</b>
+          <br />
+          <i>Choosing a Data Connection</i>
+        </p>
+        <br />
+        <ol>
+          <li>The Entity Data Model Wizard’s next page lets you choose which database objects to represent in the Entity Data model. Expand the Tables section, and check the Attendee, AttendeeEvent, AttendeeScheduleTalk, Event, EventTrack, and Talk tables. </li>
+          <li>Click Finish. Visual Studio will show a diagram representing the Entity Data Model (EDM) you just created. </li>
+          <li><b>Rebuild the solution</b>. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Without this step, the current WCF RIA Services preview won’t find the EDM you just added when you go onto the next steps. The web project will make this EDM available to Silverlight clients through WCF RIA Services.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <a name="_Toc256193854" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the Domain Services</b>
+        </p>
+        <ol>
+          <li>Expand the Services node in the web project. </li>
+          <li>Add a new service by right-clicking on the Services item and select Add→New Item….</li>
+          <li>In the Add New Item dialog, choose the Visual C#→Web item on the left.</li>
+          <li>Select the Domain Service Class template in the middle.</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>there are a lot of web templates. Visual Studio 2010 provides a quick way to find the templates you require: there’s a <i>Search Installed Templates</i> box at the top right of the form (and you can use the common <i>Ctrl+E</i> shortcut to get there). If you type <i>Domain</i> into that box, the dialog will just show those templates whose name contains the word Domain.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>Name the new item EventManagerDomainService, and click Add. This will show a dialog that will let you pick the Entity Framework EDM you just created, and the entities from that EDM you’d like to use in your service. </li>
+          <li>Check all the checkboxes since we want all the entities to be available and editable to the Silverlight client. (We’ll deal with access control in a later lab.) </li>
+          <li>Check the Generate associated classes for metadata checkbox:</li>
+        </ol>
+        <p>
+          <img src="images\210eaf85-ee35-4405-9fbd-4bc5eca9919d.png" />
+        </p>
+        <p>
+          <b>Figure 4</b>
+          <br />
+          <i>Add a New Domain Service Class</i>
+        </p>
+        <br />
+        <ol>
+          <li>Click OK. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This will add a new class to your project that derives from LinqToEntitiesDomainService&lt;SlEventManagerEntities&gt;. This class is annotated with the [EnableClientAccess()] attribute, which tells WCF RIA Services to make this class and its operations available to clients. This also lets the WCR RIA Services link in Visual Studio know that it should provide code generation in the linked Silverlight project to make the domain services available. We’ll verify that this is working by consuming some data from the service in the Silverlight UI.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <a name="_Toc256193855" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add Data Bindings and Domain Context</b>
+        </p>
+        <ol>
+          <li>In the SlEventManager project, expand the <b>Views</b> folder and double click Home.xaml. </li>
+          <li>Delete the contents of the Grid. You should just have the root navigation:Page element containing a Grid, which should be empty.</li>
+          <li>Open Visual Studio’s Data Sources panel, which can be opened with the Data→Show Data Sources menu item. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Unless you’ve rebuilt the project since you added the service, you may see just one entry in here, UserRegistrationContext, which corresponds to the domain service that was put in the project by the Silverlight Business Application template. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>Build the project again. You should see EventManagerDomainContext, which will contain child items for each of the entities in your EDM:</li>
+        </ol>
+        <p>
+          <img src="images\f99d196a-c3d1-488f-84cf-739ed7ec9578.png" />
+        </p>
+        <p>
+          <b>Figure 5</b>
+          <br />
+          <i>Locating the Domain Context in the Data Sources Window</i>
+        </p>
+        <br />
+        <ol>
+          <li>Drag the Event item from the Data Sources window to the XAML design surface to add a DataGrid to the page. </li>
+          <li>Arrange the DataGrid so that it fills most of the space, with a bit of space around the edges. </li>
+          <li>Anchor the DataGrid’s bottom and right hand edges to the containing space. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>By default, you’ll see little circles against the right and bottom edges. Click these, and they will be replaced with arrows and lines, indicating that the edges are now anchored. (This works by removing the VerticalAlignment and HorizontalAlignment in the XAML. By default, the Visual Studio designer sets them to Top and Left respectively, but by removing them the DataGrid will default to resizing with its container.)</td></tr></table><p /></div></li>
+          <br />
+          <li>Run the application. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>You should see a web browser showing a grid that is briefly empty. WCF RIA Services fetches data asynchronously, so the UI appears before the data is ready. After a few seconds the data will become visible and you should see a list of events in the grid:</td></tr></table><p /></div></li>
+          <br />
+        </ol>
+        <p>
+          <img src="images\f88b2189-3bf3-4b88-b5bb-39c9efa2467c.png" />
+        </p>
+        <p>
+          <b>Figure 6</b>
+          <br />
+          <i>Running the Application for the First Time</i>
+        </p>
+        <br />
+        <ol>
+          <li>Close the web browser.</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Inspect the XAML that Visual Studio generated when you dragged the Event entity collection onto the UI. Notice that it added a DataGrid, which was visible at runtime, and a &lt;riaControls:DomainDataSource&gt; element. This is a non-visual control that can automatically fetch data (notice that its AutoLoad property is set to True) from a WCF RIA Services domain service. Its DomainContext property determines which service it will use. Visual Studio has put an EventManagerDomainContext in there. That’s a type generated by the RIA services link that acts as the client-side representation of the EventManagerDomainService you added to the web project.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <a name="_Toc256193856" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Format the DataGrid and its Columns</b>
+        </p>
+        <ol>
+          <li>Select the DataGrid.</li>
+          <li>Go to the Properties panel to see the properties for the DataGrid. </li>
+          <li>Select the Columns property and click the “…” button to edit it. </li>
+          <li>Remove the Event ID and Is Live columns. </li>
+          <li>Reorder the columns so that the title appears first, followed by the start then end dates, then the venue, and finally the description.</li>
+        </ol>
+        <p>
+          <img src="images\d10e7309-15b1-4e81-b7a1-7f669f26d3bb.png" />
+        </p>
+        <p>
+          <b>Figure 7</b>
+          <br />
+          <i>Editing the Columns </i>
+        </p>
+        <a name="_GoBack" href="#">
+          <span />
+        </a>
+        <br />
+        <ol>
+          <li>Set the <b>Description</b> column’s <b>Width</b> to <b>Star</b>, so that it fills all the space not used by the other columns.</li>
+          <li>Click OK.</li>
+          <li>Run the application again. The grid should now be in a slightly more sensible order. </li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

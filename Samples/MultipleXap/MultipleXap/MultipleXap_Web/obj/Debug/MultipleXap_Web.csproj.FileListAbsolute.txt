@@ -1,0 +1,13 @@
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap_Web\bin\MultipleXap_Web.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap_Web\bin\MultipleXap_Web.pdb
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap_Web\bin\System.Web.Silverlight.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap_Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap_Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap_Web\obj\Debug\MultipleXap_Web.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap_Web\obj\Debug\MultipleXap_Web.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap_Web\bin\MultipleXap_Web.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap_Web\bin\MultipleXap_Web.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap_Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap_Web\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap_Web\obj\Debug\MultipleXap_Web.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap_Web\obj\Debug\MultipleXap_Web.pdb

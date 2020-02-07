@@ -1,0 +1,2 @@
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore\Generated_Code\AppCode\Enums.shared.cs
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore\Generated_Code\SilverlightStore.Web.g.cs

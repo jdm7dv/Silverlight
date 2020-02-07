@@ -1,0 +1,31 @@
+﻿<v:ViewChildWindow x:Class="SilverlightStore.Views.ProductDetail"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:v="clr-namespace:SilverlightStore.Views"
+           xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Title="{Binding Name}">
+    <Grid Width="760" Height="520" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Height="69" Margin="8,8,0,0" VerticalAlignment="Top" Source="{Binding ImageLogo}" Stretch="None" Width="257" HorizontalAlignment="Left"/>
+        <Image Margin="290,8,8,70" Stretch="None" Source="{Binding ImageLarge}"/>
+        <TextBlock Height="75" HorizontalAlignment="Left" Margin="8,115,0,0" VerticalAlignment="Top" Width="278" TextWrapping="Wrap" Text="{Binding Summary}" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Foreground="#FF444444"/>
+        <TextBlock HorizontalAlignment="Left" Margin="8,194,0,70" Width="278" TextWrapping="Wrap" Text="{Binding Details}" FontFamily="Calibri" FontSize="15"/>
+        <StackPanel Height="Auto" Margin="8,0,8,31" VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFBBBBBB" Offset="1"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <TextBlock Margin="6,4,6,4" Width="Auto" TextWrapping="NoWrap" Text="{Binding Name}" FontFamily="Arial" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch"/>
+            <TextBlock Margin="6,4,6,4" Width="Auto" TextWrapping="NoWrap" Text="{Binding Price}" Foreground="#FF009800" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        </StackPanel>
+        <Button Content="Copy Permalink" Click="PermalinkButton_Click" Width="100" Height="23" HorizontalAlignment="Left" Margin="8,8,0,4" Grid.Row="1" />
+        <Button Content="Go Back" Click="GoBackButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,8,8,4" Grid.Row="1" />
+        <Button Content="Buy Online" Click="BuyOnlineButton_Click" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,8,87,4" Grid.Row="1" RenderTransformOrigin="-0.293,0.391" />
+        <TextBox Margin="112,8,166,4" Grid.Row="1" TextWrapping="NoWrap" Foreground="#FFB4B4B4" Text="{Binding Permalink}" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+    </Grid>
+</v:ViewChildWindow>

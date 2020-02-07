@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SlEventManagerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SlEventManagerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Attendees" EntityType="SlEventManagerModel.Attendee" />
+    <EntitySet Name="AttendeeEvents" EntityType="SlEventManagerModel.AttendeeEvent" />
+    <EntitySet Name="AttendeeScheduleTalks" EntityType="SlEventManagerModel.AttendeeScheduleTalk" />
+    <EntitySet Name="Events" EntityType="SlEventManagerModel.Event" />
+    <EntitySet Name="EventTracks" EntityType="SlEventManagerModel.EventTrack" />
+    <EntitySet Name="Talks" EntityType="SlEventManagerModel.Talk" />
+    <AssociationSet Name="FK_AttendeeEvent_Attendee" Association="SlEventManagerModel.FK_AttendeeEvent_Attendee">
+      <End Role="Attendee" EntitySet="Attendees" />
+      <End Role="AttendeeEvent" EntitySet="AttendeeEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttendeeScheduleTalk_Attendee" Association="SlEventManagerModel.FK_AttendeeScheduleTalk_Attendee">
+      <End Role="Attendee" EntitySet="Attendees" />
+      <End Role="AttendeeScheduleTalk" EntitySet="AttendeeScheduleTalks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttendeeEvent_Event" Association="SlEventManagerModel.FK_AttendeeEvent_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="AttendeeEvent" EntitySet="AttendeeEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttendeeScheduleTalk_Talk" Association="SlEventManagerModel.FK_AttendeeScheduleTalk_Talk">
+      <End Role="Talk" EntitySet="Talks" />
+      <End Role="AttendeeScheduleTalk" EntitySet="AttendeeScheduleTalks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventTrack_Event" Association="SlEventManagerModel.FK_EventTrack_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventTrack" EntitySet="EventTracks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Talk_EventTrack" Association="SlEventManagerModel.FK_Talk_EventTrack">
+      <End Role="EventTrack" EntitySet="EventTracks" />
+      <End Role="Talk" EntitySet="Talks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Attendee">
+    <Key>
+      <PropertyRef Name="AttendeeID" />
+    </Key>
+    <Property Name="AttendeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AspNetUserId" Type="Guid" Nullable="false" />
+    <Property Name="UserPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="AttendeeEvents" Relationship="SlEventManagerModel.FK_AttendeeEvent_Attendee" FromRole="Attendee" ToRole="AttendeeEvent" />
+    <NavigationProperty Name="AttendeeScheduleTalks" Relationship="SlEventManagerModel.FK_AttendeeScheduleTalk_Attendee" FromRole="Attendee" ToRole="AttendeeScheduleTalk" />
+  </EntityType>
+  <EntityType Name="AttendeeEvent">
+    <Key>
+      <PropertyRef Name="AttendeeEventID" />
+    </Key>
+    <Property Name="AttendeeEventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttendeeID" Type="Int32" Nullable="false" />
+    <Property Name="EventID" Type="Int32" Nullable="false" />
+    <Property Name="IsAcknowledged" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Attendee" Relationship="SlEventManagerModel.FK_AttendeeEvent_Attendee" FromRole="AttendeeEvent" ToRole="Attendee" />
+    <NavigationProperty Name="Event" Relationship="SlEventManagerModel.FK_AttendeeEvent_Event" FromRole="AttendeeEvent" ToRole="Event" />
+  </EntityType>
+  <EntityType Name="AttendeeScheduleTalk">
+    <Key>
+      <PropertyRef Name="AttendeeScheduleTalkID" />
+    </Key>
+    <Property Name="AttendeeScheduleTalkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttendeeID" Type="Int32" Nullable="false" />
+    <Property Name="TalkID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Attendee" Relationship="SlEventManagerModel.FK_AttendeeScheduleTalk_Attendee" FromRole="AttendeeScheduleTalk" ToRole="Attendee" />
+    <NavigationProperty Name="Talk" Relationship="SlEventManagerModel.FK_AttendeeScheduleTalk_Talk" FromRole="AttendeeScheduleTalk" ToRole="Talk" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventTitle" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EventVenueName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EventStartDate" Type="DateTime" Nullable="false" />
+    <Property Name="EventEndDate" Type="DateTime" Nullable="false" />
+    <Property Name="EventDescription" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IsLive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AttendeeEvents" Relationship="SlEventManagerModel.FK_AttendeeEvent_Event" FromRole="Event" ToRole="AttendeeEvent" />
+    <NavigationProperty Name="EventTracks" Relationship="SlEventManagerModel.FK_EventTrack_Event" FromRole="Event" ToRole="EventTrack" />
+  </EntityType>
+  <EntityType Name="EventTrack">
+    <Key>
+      <PropertyRef Name="EventTrackID" />
+    </Key>
+    <Property Name="EventTrackID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="Int32" Nullable="false" />
+    <Property Name="EventTrackTitle" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Event" Relationship="SlEventManagerModel.FK_EventTrack_Event" FromRole="EventTrack" ToRole="Event" />
+    <NavigationProperty Name="Talks" Relationship="SlEventManagerModel.FK_Talk_EventTrack" FromRole="EventTrack" ToRole="Talk" />
+  </EntityType>
+  <EntityType Name="Talk">
+    <Key>
+      <PropertyRef Name="TalkID" />
+    </Key>
+    <Property Name="TalkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventTrackID" Type="Int32" Nullable="false" />
+    <Property Name="TalkTitle" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TalkAbstract" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TalkStartTime" Type="DateTime" Nullable="false" />
+    <Property Name="TalkEndTime" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="AttendeeScheduleTalks" Relationship="SlEventManagerModel.FK_AttendeeScheduleTalk_Talk" FromRole="Talk" ToRole="AttendeeScheduleTalk" />
+    <NavigationProperty Name="EventTrack" Relationship="SlEventManagerModel.FK_Talk_EventTrack" FromRole="Talk" ToRole="EventTrack" />
+  </EntityType>
+  <Association Name="FK_AttendeeEvent_Attendee">
+    <End Role="Attendee" Type="SlEventManagerModel.Attendee" Multiplicity="1" />
+    <End Role="AttendeeEvent" Type="SlEventManagerModel.AttendeeEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Attendee">
+        <PropertyRef Name="AttendeeID" />
+      </Principal>
+      <Dependent Role="AttendeeEvent">
+        <PropertyRef Name="AttendeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttendeeScheduleTalk_Attendee">
+    <End Role="Attendee" Type="SlEventManagerModel.Attendee" Multiplicity="1" />
+    <End Role="AttendeeScheduleTalk" Type="SlEventManagerModel.AttendeeScheduleTalk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Attendee">
+        <PropertyRef Name="AttendeeID" />
+      </Principal>
+      <Dependent Role="AttendeeScheduleTalk">
+        <PropertyRef Name="AttendeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttendeeEvent_Event">
+    <End Role="Event" Type="SlEventManagerModel.Event" Multiplicity="1" />
+    <End Role="AttendeeEvent" Type="SlEventManagerModel.AttendeeEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="AttendeeEvent">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttendeeScheduleTalk_Talk">
+    <End Role="Talk" Type="SlEventManagerModel.Talk" Multiplicity="1" />
+    <End Role="AttendeeScheduleTalk" Type="SlEventManagerModel.AttendeeScheduleTalk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talk">
+        <PropertyRef Name="TalkID" />
+      </Principal>
+      <Dependent Role="AttendeeScheduleTalk">
+        <PropertyRef Name="TalkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventTrack_Event">
+    <End Role="Event" Type="SlEventManagerModel.Event" Multiplicity="1" />
+    <End Role="EventTrack" Type="SlEventManagerModel.EventTrack" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="EventTrack">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Talk_EventTrack">
+    <End Role="EventTrack" Type="SlEventManagerModel.EventTrack" Multiplicity="1" />
+    <End Role="Talk" Type="SlEventManagerModel.Talk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventTrack">
+        <PropertyRef Name="EventTrackID" />
+      </Principal>
+      <Dependent Role="Talk">
+        <PropertyRef Name="EventTrackID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,14 @@
+<Canvas xmlns="http://schemas.microsoft.com/client/2007"   
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Loaded="onCanvasLoaded" >
+                
+        <Canvas.Resources>
+            <Storyboard x:Name="AnimationLoop" Completed="AnimationManager_OnFrameComplete" Duration="0:0:0.016" />
+        </Canvas.Resources>
+        
+        <Canvas x:Name="RenderTarget" Visibility="Visible" Width="400" Height="400">
+        </Canvas>
+        
+        <TextBlock Visibility="Collapsed" x:Name="FrameRateCounter">0 fps</TextBlock>
+        <TextBlock Visibility="Collapsed" x:Name="DebugText"></TextBlock>
+</Canvas>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e339e4ba-4286-4e16-950b-ef626d7893e6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3604/Login.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Login.xsd" MetadataType="Schema" ID="a854d414-da41-45ca-9ee5-246ba002a320" SourceId="1" SourceUrl="http://localhost:3604/Login.svc?xsd=xsd2" />
+    <MetadataFile FileName="Login.disco" MetadataType="Disco" ID="31b84bbb-d6b9-48bb-941c-ec0ac7ec2cbb" SourceId="1" SourceUrl="http://localhost:3604/Login.svc?disco" />
+    <MetadataFile FileName="Login.wsdl" MetadataType="Wsdl" ID="acd1180c-e0a1-4cd5-8a03-98048d51576f" SourceId="1" SourceUrl="http://localhost:3604/Login.svc?wsdl" />
+    <MetadataFile FileName="Login1.xsd" MetadataType="Schema" ID="deb54d61-c594-4cdf-a83c-b418b2d1f29b" SourceId="1" SourceUrl="http://localhost:3604/Login.svc?xsd=xsd0" />
+    <MetadataFile FileName="Login2.xsd" MetadataType="Schema" ID="377d221c-bd79-4cdf-9123-89a44593a5fa" SourceId="1" SourceUrl="http://localhost:3604/Login.svc?xsd=xsd1" />
+    <MetadataFile FileName="Login1.wsdl" MetadataType="Wsdl" ID="08cdf539-ee6d-45b3-881b-9a271069a346" SourceId="1" SourceUrl="http://localhost:3604/Login.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

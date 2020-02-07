@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\Bin\Debug\FloatableWindow.dll">
+   <Modules>
+    <Module Name="floatablewindow.dll">
+     <Namespaces>
+      <Namespace Name="System.Windows.Automation.Peers">
+       <Types>
+        <Type Name="FloatableWindowAutomationPeer" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#System.Windows.Automation.Provider.ITransformProvider.CanMove" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.ITransformProvider.get_CanMove()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="373">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ITransformProvider.CanMove.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.ITransformProvider.CanResize" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.ITransformProvider.get_CanResize()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="382">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ITransformProvider.CanResize.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.ITransformProvider.CanRotate" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.ITransformProvider.get_CanRotate()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="391">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ITransformProvider.CanRotate.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.ITransformProvider.Move(System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="292">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ITransformProvider.Move(double, double)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.ITransformProvider.Resize(System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="352">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ITransformProvider.Resize(double, double)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.ITransformProvider.Rotate(System.Double)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="364">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ITransformProvider.Rotate(double)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.Close()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="245">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.Close()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.InteractionState" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.IWindowProvider.get_InteractionState()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="177">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.InteractionState.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.IsModal" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.IWindowProvider.get_IsModal()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="190">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.IsModal.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.IsTopmost" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.IWindowProvider.get_IsTopmost()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="203">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.IsTopmost.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.Maximizable" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.IWindowProvider.get_Maximizable()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="214">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.Maximizable.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.Minimizable" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.IWindowProvider.get_Minimizable()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="223">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.Minimizable.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.SetVisualState(System.Windows.Automation.WindowVisualState)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="258">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.SetVisualState(WindowVisualState)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.VisualState" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Windows.Automation.Provider.IWindowProvider.get_VisualState()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="236">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.VisualState.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle(System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindowAutomationPeer.cs" Line="274">Make 'FloatableWindowAutomationPeer' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IWindowProvider.WaitForInputIdle(int)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="System.Windows.Controls">
+       <Types>
+        <Type Name="FloatableWindow" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#_isOpen" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'FloatableWindow._isOpen' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#_windowPosition" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'FloatableWindow._windowPosition' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BringToFront()" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="644">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.BringToFront()' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Chrome_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Double.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="884">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Chrome_MouseLeftButtonDown(object, MouseButtonEventArgs)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="884">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Chrome_MouseLeftButtonDown(object, MouseButtonEventArgs)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="884">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Chrome_MouseLeftButtonDown(object, MouseButtonEventArgs)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Resizer_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Double.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="1646">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Resizer_MouseLeftButtonDown(object, MouseButtonEventArgs)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="1646">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Resizer_MouseLeftButtonDown(object, MouseButtonEventArgs)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="1646">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Resizer_MouseLeftButtonDown(object, MouseButtonEventArgs)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Resizer_MouseMove(System.Object,System.Windows.Input.MouseEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Double.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="1669">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Resizer_MouseMove(object, MouseEventArgs)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="1669">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Resizer_MouseMove(object, MouseEventArgs)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="1669">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'FloatableWindow.Resizer_MouseMove(object, MouseEventArgs)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShowWindow(System.Boolean)" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2010-03-20 02:58:21Z" FixCategory="NonBreaking">
+             <Issue Name="IncorrectParameterName" Certainty="95" Level="CriticalError" Path="G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow" File="FloatableWindow.cs" Line="1376">Method 'FloatableWindow.ShowWindow(bool)' passes 'ParentLayoutRoot' as the 'paramName' argument to a 'ArgumentNullException' constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+   <Name>Avoid unused private fields</Name>
+   <Description>Private fields were detected that do not appear to be accessed within the assembly. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245042(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208">
+   <Name>Instantiate argument exceptions correctly</Name>
+   <Description>String arguments passed to constructors of ArgumentException and its derived types should be correct. Types derived from ArgumentException have inconsistent constructor overloads with respect to the message and paramName parameters as compared to ArgumentException.</Description>
+   <Resolution Name="IncorrectParameterName">Method {0} passes '{1}' as the {2} argument to a {3} constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182347(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+   <Name>Interface methods should be callable by child types</Name>
+   <Description>Explicit method implementations are defined with private accessibility. Classes that derive from classes with explicit method implementations and choose to re-declare them on the class will not be able to call into the base class implementation unless the base class has provided an alternate method with appropriate accessibility. When overriding a base class method that has been hidden by explicit interface implementation, in order to call into the base class implementation, a derived class must cast the base pointer to the relevant interface. When calling through this reference, however, the derived class implementation will actually be invoked, resulting in recursion and an eventual stack overflow.</Description>
+   <Resolution Name="Default">Make {0} sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of {1} and is visible to derived classes.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182153(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0060" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>The indirectly-referenced Silverlight assembly 'System.Runtime.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e' could not be found. This assembly is not required for analysis, however, analysis results could be incomplete. Silverlight reference assemblies should be specified with the '/reference' switch. This assembly was referenced by: c:\Program Files\Reference Assemblies\Microsoft\Framework\Silverlight\v4.0\System.Windows.dll.</ExceptionMessage>
+  </Exception>
+ </Exceptions>
+</FxCopReport>

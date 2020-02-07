@@ -1,0 +1,94 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 6: Implicit Styling" />
+      <MSHelp:RLTitle Title="Exercise 6: Implicit Styling" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 6: Implicit Styling</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 3 - Authentication, Validation, MVVM, Implicit Styles and RichTextBox Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 6: Implicit Styling</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Since the user registration features are, by definition, visible to the end user, visual design starts to become more of a concern than it might be for a purely internal application. (Not that there’s anything wrong with wanting internal LOB applications to look good. But appearance tends to become a higher priority with UI that customers can see.) The buttons we added earlier in this lab aren’t very consistent with the look of the rest of the application. The main navigation chrome’s link buttons look like neither normal hyperlinks nor normal buttons. And even where moderately normal-looking buttons appear (e.g. in the login UI) they don’t use the standard Silverlight appearance for a button.</p>
+        <p>To make our buttons look more harmonious with the rest of the application, we’ll define a style for them. We’ll use the implicit styling feature added in Silverlight 4 to apply this style automatically to all buttons in the application that don’t specify their own custom style. That way, all the unstyled buttons we have added already will pick up the new look, as will any more we add in the future.</p>
+        <ol>
+          <li>Open the SlEventManager project in Visual Studio 2010.</li>
+          <li>Open the App.xaml file.</li>
+          <li><b>You’ll find the file already contains an </b>&lt;Application.Resources&gt;<b> element, with a </b>&lt;ResourceDictionary&gt;<b> inside it. The </b>ResourceDictionary<b> contains a couple of merged dictionaries. You’re going to add the style <i>after</i> the closing </b>&lt;/ResourceDictionary.MergedResources&gt;<b> tag and <i>before</i> the closing </b>&lt;/ResourceDictionary&gt;<b> tag. Paste in the following Xaml between those two closing tags:</b><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Style TargetType="Button"&gt;  &lt;Setter Property="Background" Value="#FF484848"/&gt;  &lt;Setter Property="Foreground" Value="White"/&gt;  &lt;Setter Property="Padding" Value="6"/&gt;  &lt;Setter Property="Margin" Value="3"/&gt;  &lt;Setter Property="BorderThickness" Value="1"/&gt;  &lt;Setter Property="BorderBrush" Value="#FF1C1D33"/&gt;  &lt;Setter Property="Template"&gt;    &lt;Setter.Value&gt;      &lt;ControlTemplate TargetType="Button"&gt;        &lt;Grid&gt;          &lt;VisualStateManager.VisualStateGroups&gt;            &lt;VisualStateGroup x:Name="CommonStates"&gt;              &lt;VisualState x:Name="Normal"/&gt;              &lt;VisualState x:Name="MouseOver"&gt;                &lt;Storyboard&gt;                  &lt;DoubleAnimation Duration="0" To="1"                    Storyboard.TargetProperty="Opacity"                    Storyboard.TargetName="BackgroundAnimation"/&gt;                &lt;/Storyboard&gt;              &lt;/VisualState&gt;              &lt;VisualState x:Name="Pressed"&gt;                &lt;Storyboard&gt;                  &lt;DoubleAnimation Duration="0" To="1"                    Storyboard.TargetProperty="Opacity"                    Storyboard.TargetName="BackgroundAnimation"/&gt;                  &lt;ColorAnimation Duration="0" To="#FF563AFF"    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"    Storyboard.TargetName="BackgroundAnimation" /&gt;                &lt;/Storyboard&gt;              &lt;/VisualState&gt;              &lt;VisualState x:Name="Disabled"&gt;                &lt;Storyboard&gt;                  &lt;DoubleAnimation Duration="0" To=".55"                    Storyboard.TargetProperty="Opacity"                    Storyboard.TargetName="DisabledVisualElement"/&gt;                &lt;/Storyboard&gt;              &lt;/VisualState&gt;            &lt;/VisualStateGroup&gt;            &lt;VisualStateGroup x:Name="FocusStates"&gt;              &lt;VisualState x:Name="Focused"&gt;                &lt;Storyboard&gt;                  &lt;DoubleAnimation Duration="0" To="1"                    Storyboard.TargetProperty="Opacity"                    Storyboard.TargetName="FocusVisualElement"/&gt;                &lt;/Storyboard&gt;              &lt;/VisualState&gt;              &lt;VisualState x:Name="Unfocused"/&gt;            &lt;/VisualStateGroup&gt;          &lt;/VisualStateManager.VisualStateGroups&gt;          &lt;Border x:Name="Background"                BorderBrush="{TemplateBinding BorderBrush}"                BorderThickness="{TemplateBinding BorderThickness}"                Background="{TemplateBinding Background}"                CornerRadius="1"                Padding="1"&gt;            &lt;Border x:Name="BackgroundAnimation" Background="#FF448DCA"                    Opacity="0"/&gt;          &lt;/Border&gt;          &lt;ContentPresenter            x:Name="contentPresenter"            ContentTemplate="{TemplateBinding ContentTemplate}"            Content="{TemplateBinding Content}"            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"            Margin="{TemplateBinding Padding}"            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/&gt;          &lt;Rectangle x:Name="DisabledVisualElement" Fill="#FFFFFFFF"            IsHitTestVisible="false" Opacity="0" RadiusY="1" RadiusX="1"/&gt;          &lt;Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false"            Margin="1" Opacity="0" RadiusY="0.5" RadiusX="0.5"            Stroke="#FF6DBDD1" StrokeThickness="1"/&gt;        &lt;/Grid&gt;      &lt;/ControlTemplate&gt;    &lt;/Setter.Value&gt;  &lt;/Setter&gt;&lt;/Style&gt;</pre></td></tr></table></span></div></li>
+          <li><b>Run the application.</b></li>
+          <li><b>Log in. (You can log in either as </b>ian<b> or </b>administrator<b> (</b>P@ssw0<b>, in either case), as either kind of user will cause some buttons to appear.)</b></li>
+          <li><b>The buttons that appear when you log in should now look slightly more in keeping with the overall look provided by the Silverlight Business Application template. (Feel free to express your creativity by modifying the style to suit your own tastes.)</b></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

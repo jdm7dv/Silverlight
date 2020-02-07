@@ -1,0 +1,23 @@
+Imports Microsoft.VisualBasic
+Imports System
+Imports System.Windows
+Imports System.Windows.Controls
+
+Namespace ArcGISSilverlightSDK
+    Partial Public Class ProgressBar
+        Inherits UserControl
+        Public Sub New()
+            InitializeComponent()
+        End Sub
+
+        Private Sub MyMap_Progress(ByVal sender As Object, ByVal args As ESRI.ArcGIS.Client.ProgressEventArgs)
+            If args.Progress < 100 Then
+                progressGrid.Visibility = Visibility.Visible
+                MyProgressBar.Value = args.Progress
+                ProgressValueTextBlock.Text = String.Format("{0}%", args.Progress)
+            Else
+                progressGrid.Visibility = Visibility.Collapsed
+            End If
+        End Sub
+    End Class
+End Namespace

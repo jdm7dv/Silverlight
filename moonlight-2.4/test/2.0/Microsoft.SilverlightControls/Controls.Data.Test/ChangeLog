@@ -1,0 +1,46 @@
+2009-06-11  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Controls.Data.Test.sources: Add a bunch of source files
+	we were missing.
+
+2009-04-23  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Yay sles 10. zip 2.31 doesn't support -MM.
+
+2009-03-18  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Put the mdb files in the xap too.
+
+2009-03-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Define Moonlight so that we get proper
+	  reporting.
+
+2009-03-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am:
+	* Controls.Data.Test.sources: Add a .sources file which
+	  doesn't include VS-generated files. Use xamlg to generate
+	  App.xaml.g.cs.
+
+2009-03-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Use Mono.Moonlight.UnitTesting.dll when
+	  building with Moonlight so the test results gets logged.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Resign System.Windows.Controls[.Data].dll and
+	  System.Xml.Linq.dll with a key for which we have the private
+	  key (so that SL loads the assemblies).
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Fix dependencies and clean and install targets.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* ChangeLog:
+	* Makefile.am: Include support for building MS' toolkit tests
+	  in our build.
+

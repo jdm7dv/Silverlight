@@ -1,0 +1,23 @@
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* respack.mdp: Add a project for each tool, and clean up some
+	  of the existing projects.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Fix install directories.
+
+2009-03-25  Jackson Harper  <jackson@ximian.com>
+
+	* respack.cs: Make error message not crash.
+	
+2009-01-21  Jackson Harper  <jackson@ximian.com>
+
+	* respack.cs: Create directories for resources if needed when
+	decompressing.
+
+2009-01-14  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* respack.cs: Always embed in lowercase. This fixes running mono-built
+	xap files on SL.
+

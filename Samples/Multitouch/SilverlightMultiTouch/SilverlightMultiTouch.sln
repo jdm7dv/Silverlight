@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTouch.Controls.WPF", "MultiTouch.Controls.WPF\MultiTouch.Controls.WPF.csproj", "{190FD2B0-5CEB-426B-AF0D-669D47B03DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMultiTouch", "WpfMultiTouch\WpfMultiTouch.csproj", "{8052F58A-5FA4-4271-AC11-913AA9455926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTouch.Controls.Silverlight4", "MultiTouch.Controls.Silverlight4\MultiTouch.Controls.Silverlight4.csproj", "{CAACAC80-EEE1-47D4-BC68-B4ED45535F79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight4MultiTouch", "Silverlight4MultiTouch\Silverlight4MultiTouch.csproj", "{64D94805-0316-4638-9C49-FAE6625B3E35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTouch.ManipulationLib.Silverlight4", "MultiTouch.ManipulationLib.Silverlight4\MultiTouch.ManipulationLib.Silverlight4.csproj", "{AA3A860C-D205-4F6A-9E6B-44713AE1DA18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTouch.Behaviors.Silverlight4", "MultiTouch.Behaviors.Silverlight4\MultiTouch.Behaviors.Silverlight4.csproj", "{EC9961B9-39B4-454F-966F-5C3E8C2B75C0}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{190FD2B0-5CEB-426B-AF0D-669D47B03DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190FD2B0-5CEB-426B-AF0D-669D47B03DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190FD2B0-5CEB-426B-AF0D-669D47B03DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190FD2B0-5CEB-426B-AF0D-669D47B03DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8052F58A-5FA4-4271-AC11-913AA9455926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8052F58A-5FA4-4271-AC11-913AA9455926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8052F58A-5FA4-4271-AC11-913AA9455926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8052F58A-5FA4-4271-AC11-913AA9455926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAACAC80-EEE1-47D4-BC68-B4ED45535F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAACAC80-EEE1-47D4-BC68-B4ED45535F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAACAC80-EEE1-47D4-BC68-B4ED45535F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAACAC80-EEE1-47D4-BC68-B4ED45535F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D94805-0316-4638-9C49-FAE6625B3E35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D94805-0316-4638-9C49-FAE6625B3E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D94805-0316-4638-9C49-FAE6625B3E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D94805-0316-4638-9C49-FAE6625B3E35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA3A860C-D205-4F6A-9E6B-44713AE1DA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3A860C-D205-4F6A-9E6B-44713AE1DA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3A860C-D205-4F6A-9E6B-44713AE1DA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3A860C-D205-4F6A-9E6B-44713AE1DA18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC9961B9-39B4-454F-966F-5C3E8C2B75C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9961B9-39B4-454F-966F-5C3E8C2B75C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC9961B9-39B4-454F-966F-5C3E8C2B75C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC9961B9-39B4-454F-966F-5C3E8C2B75C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

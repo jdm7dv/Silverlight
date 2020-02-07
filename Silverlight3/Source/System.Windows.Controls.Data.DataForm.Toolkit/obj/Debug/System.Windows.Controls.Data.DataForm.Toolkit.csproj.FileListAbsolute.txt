@@ -1,0 +1,6 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.DataForm.Toolkit\obj\Debug\System.Windows.Controls.Data.DataForm.Toolkit.csprojAssemblyReference.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.DataForm.Toolkit\obj\Debug\System.Windows.Controls.Data.DataForm.Toolkit.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.DataForm.Toolkit\obj\Debug\System.Windows.Controls.Common.CommonResources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.DataForm.Toolkit\obj\Debug\System.Windows.Controls.Resources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.DataForm.Toolkit\obj\Debug\System.Windows.Controls.Data.DataForm.Toolkit.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.DataForm.Toolkit\obj\Debug\System.Windows.Controls.Data.DataForm.Toolkit.csproj.CoreCompileInputs.cache

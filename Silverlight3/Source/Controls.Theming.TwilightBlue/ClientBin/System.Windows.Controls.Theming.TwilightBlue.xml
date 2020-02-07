@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.Theming.TwilightBlue</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Controls.Theming.TwilightBlueTheme">
+            <summary>
+            Implicitly applies the Twilight Blue theme to all of its descendent
+            FrameworkElements.
+            </summary>
+            <remarks>
+            The theme is applied using ImplicitStyleManager.
+            </remarks>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.Theming.TwilightBlueTheme.#ctor">
+            <summary>
+            Initializes a new instance of the TwilightBlueTheme class.
+            </summary>
+        </member>
+    </members>
+</doc>

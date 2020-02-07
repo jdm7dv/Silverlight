@@ -1,0 +1,6 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data\obj\Debug\System.Windows.Controls.Data.csprojAssemblyReference.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data\obj\Debug\System.Windows.Controls.Data.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data\obj\Debug\System.Windows.Controls.DataPager.PagerResources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data\obj\Debug\System.Windows.Controls.Resource.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data\obj\Debug\System.Windows.Controls.Data.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data\obj\Debug\System.Windows.Controls.Data.csproj.CoreCompileInputs.cache

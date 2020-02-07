@@ -1,0 +1,130 @@
+﻿<navigation:Page x:Class="SlEventManager.Views.SchedulePlanner" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+           xmlns:scm="clr-namespace:System.ComponentModel;assembly=System.Windows"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           DataContext="{Binding}"
+           Title="SchedulePlanner Page">
+
+    <navigation:Page.Resources>
+        <CollectionViewSource x:Key="eventEventTalksByTrackViewSource"
+                          Source="{Binding Path=AllTalks}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="EventTrack" />
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+        <CollectionViewSource x:Key="eventEventTalksByStartTimeViewSource"
+                      Source="{Binding Path=SubscribedTalks}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="TalkStartTime" />
+            </CollectionViewSource.GroupDescriptions>
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="TalkStartTime" />
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </navigation:Page.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="36" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+    x:Name="eventTitleTextBlock"
+    Text="{Binding Path=EventTitle}"
+    VerticalAlignment="Top"
+    />
+
+        <data:DataGrid
+            x:Name="eventTrackList"
+            Margin="12,56,9,12"
+            ItemsSource="{Binding Source={StaticResource eventEventTalksByTrackViewSource}}"
+            SelectedItem="{Binding Path=SelectedTalkInFullList, Mode=TwoWay}"
+            >
+            <data:DataGrid.Columns>
+                <data:DataGridTextColumn x:Name="talkTitleColumn"
+                                 Binding="{Binding Path=TalkTitle}"
+                                 Header="Title" />
+                <data:DataGridTextColumn x:Name="talkTimeColumn"
+                                 Binding="{Binding Path=TalkStartTime}"
+                                 Header="Start Time" />
+                <data:DataGridTextColumn x:Name="talkAbstractColumn"
+                                  Binding="{Binding Path=TalkAbstract}"
+                                  Header="Abstract" />
+            </data:DataGrid.Columns>
+        </data:DataGrid>
+
+        <Button
+            Content="&gt;"
+            Grid.Column="1"
+            Margin="0,56,0,12"
+            Command="{Binding Path=AddTalkCommand}"
+            />
+
+        <ScrollViewer
+    Grid.Column="2"
+    Margin="15,62,12,6"
+    HorizontalScrollBarVisibility="Disabled"
+    VerticalScrollBarVisibility="Auto"
+    >
+            <ItemsControl
+        VerticalAlignment="Top"
+        ItemsSource="{Binding Path=Groups,
+                         Source={StaticResource eventEventTalksByStartTimeViewSource}}"
+        >
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="{Binding Path=Name, StringFormat=HH:mm}" />
+                            <ItemsControl
+                        Grid.Row="1"
+                        ItemsSource="{Binding Path=Items}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid
+                                    >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition MaxHeight="40" />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock
+                                        Text="{Binding Path=TalkTitle}"
+                                        FontWeight="Bold"
+                                        />
+                                            <TextBlock
+                                        Grid.Row="1"
+                                        Text="{Binding Path=TalkAbstract}"
+                                        TextWrapping="Wrap"
+                                        TextTrimming="WordEllipsis"
+                                        MaxHeight="40"
+                                        >
+                                        <ToolTipService.ToolTip>
+                                            <TextBlock Text="{Binding Path=TalkAbstract}"
+                                                       Width="200" TextWrapping="Wrap" />
+                                        </ToolTipService.ToolTip>
+                                    </TextBlock>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Moonlight Clip Modification Test</title>
+		<script type="text/javascript" src="../js/js/utils.js"></script>
+		<script type="text/javascript" src="../js/js/testplugin.js"></script>
+
+      <script language="javascript">
+	var control;
+ 
+	function OnLoaded(sender, eventArgs)
+        {
+                if (document.body == null || !TestPluginReady) {
+                        setTimeout (function(){ OnLoaded(sender, eventArgs)}, 100);
+                        return;
+                }
+	        
+                setTimeout (function(){ RunTest(sender, eventArgs)}, 1000);
+        }
+	
+        function RunTest (sender, eventArgs)
+        {
+	       var clip0 = sender.findName ("clipPoint0");
+	       var clip1 = sender.findName ("clipPoint1");
+	       var clip2 = sender.findName ("clipPoint2");
+	       var clip3 = sender.findName ("clipPoint3");
+	       var clip4 = sender.findName ("clipPoint4");
+
+               clip0.Point = "0,0";
+               clip1.Point = "200,0";
+               clip2.Point = "200,200";
+               clip3.Point = "0,200";
+               clip4.Point = "0,0";
+
+	       setTimeout ("Finish ()", 100);
+        }
+
+	function Finish ()
+	{
+	       TakeSingleSnapshotAndShutdown ("", "test-transform-clip.htm.png", 500, 500); 
+
+	}
+
+        function ErrorHandler (sender, args)
+        {
+	alert (args.ErrorMessage);
+        }
+      </script>
+  </head>
+
+<body scroll="no" style='border-width: 0px'>
+    <div>
+        <embed type="application/x-silverlight"
+             width="500"
+             height="500"
+             id="_MoonlightControl" Source="test-transform-clip.xaml" OnError="ErrorHandler" 
+             style="position:absolute; left:0px; top:0px" >
+        </embed>
+    </div>
+  </body>
+</html>
+
+

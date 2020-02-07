@@ -1,0 +1,1246 @@
+2009-07-15  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* supp/mono.supp: Added.
+
+2009-05-21  Rusty Howell  <rhowell@novell.com>
+
+	 * Makefile.am: Changed templates to DIST_SUBDIRS for make dist
+
+2009-05-20  Rusty Howell  <rhowell@novell.com>
+
+	 * Makefile.am: Added templates to SUBDIRS for 'make dist'
+
+2009-05-01  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/README:
+	* xaml/test-xaml.html:
+	* xaml/input-test.html:
+	* xaml/test-bubbling.html:
+	* xaml/test-empty-source.html:
+	* xaml/test-runtimeerrors.html:
+	* xaml/test-transform-clip.htm:
+	* xaml/test-canvas-no-size.html:
+	* xaml/test-event-argcount.html:
+	* xaml/test-directory-in-zip.html:
+	* xaml/test-downloader-events.html:
+	* xaml/test-inkpresenter-scale.htm:
+	* xaml/test-clip-invalid-update.htm:
+	* xaml/test-transform-group-2.0.xaml:
+	* xaml/test-empty-element-source.html:
+	* xaml/test-stroke-thickness-2.0.xaml:
+	* xaml/test-second-surface-error.html:
+	* xaml/assorted/test-collections.html:
+	* xaml/test-inkpresenter-position.htm:
+	* xaml/test-trigger-collection-2.0.xaml:
+	* xaml/test-toplevel-canvas-events.html:
+	* xaml/test-textblock-examples-2.0.xaml:
+	* xaml/test-setsource-with-downloader.html:
+	* xaml/test-setsource-with-downloader.xaml:
+	* xaml/assorted/test-stroke-collection.html:
+	* xaml/test-animation-null-keyframe-2.0.xaml: Updated to work
+	  on FF/IE+SL2.
+
+2009-04-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/test-bubbling.html: Make sure the test doesn't start
+	  before OnLoaded has been raised. Fixes some random failures.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/test-dead-downloaders.html:
+	* xaml/test-downloaderprogress.html:
+	* xaml/test-setsource-with-downloader.html: Update path to
+	  timecode.mpeg.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* cs:
+	* cs/tests:
+	* test.xaml:
+	* cs/demo.cs:
+	* cs/Makefile:
+	* cs/.gitignore:
+	* cs/tests/ITest.cs:
+	* test-run-explorer.aspx:
+	* cs/tests/LineColorTest.cs:
+	* cs/tests/LinearBrushTest.cs:
+	* cs/tests/RadialBrushTest.cs:
+	* cs/tests/ZIndexChangeTest.cs:
+	* cs/tests/LineAnimationTest.cs: Delete old/obsolete code.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Web.config: Help debugging a bit by not hiding exceptions.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* timecode.mpeg: Move videos to test/media/video.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* objecttypes:
+	* objecttypes/Makefile.am:
+	* objecttypes/objecttypes.cpp: This app isn't required
+	  anymore.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Remove obsolete targets.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/drtlist.xml: Delete old-style drtlists.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* templates:
+	* templates/README:
+	* templates/managed:
+	* templates/Makefile.am:
+	* templates/managed/App.xaml:
+	* templates/managed/Makefile.am:
+	* templates/managed/App.xaml.cs:
+	* templates/managed/Control.xaml:
+	* templates/managed/SampleTest.html:
+	* templates/managed/Control.xaml.cs:
+	* templates/test-screenshot-template.html: Add test templates.
+
+2009-04-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/input-test.html:
+	* xaml/test-bubbling.html:
+	* xaml/test-event-argcount.html:
+	* xaml/test-empty-element-source.html:
+	* xaml/assorted/test-collections.html:
+	* xaml/assorted/test-stroke-collection.html: Include our
+	  testplugin.js to report test results and handle
+	  mouse/screenshot coordinates correctly.
+
+2009-03-31  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test.mdp: Updated some project files.
+
+2009-03-31  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: We need to load the plugin from where the rest
+	  of the assemblies are (in the prefix), otherwise moonlight
+	  won't find the assemblies.
+
+2009-03-25  Chris Toshok  <toshok@ximian.com>
+
+	* uri-test.cpp: use accessors.
+
+2009-03-25  Jeffrey Stedfast  <fejj@novell.com>
+
+	* parsertest/parsertest.cpp (parse_value_test): Fixed
+	value_from_str() calls to not pass an sl2 argument.
+
+2009-03-25  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/test-xaml.html:
+	* xaml/test-parsererrors.html: New html files which will be
+	  used in several tests.
+
+2009-03-24  Chris Toshok  <toshok@ximian.com>
+
+	* uri-test.cpp: s/protocol/scheme for Uris.
+
+2009-03-24  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* demo.cs:
+	* control.cs:
+	* etest.xaml:
+	* Makefile.am:
+	* download.cs:
+	* drtlist.xml:
+	* xaml/drtlist.xml:
+	* test-custom-element.cs:
+	* xaml/test-custom-element.xaml: Delete some old files.
+
+2009-03-24  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/test-shape-path-overdraw.xaml:
+	* xaml/test-shape-path-overrdraw.xaml: Fix typo
+	  (test-shape-path-overrdraw.xaml ->
+	  test-shape-path-overdraw.xaml).
+
+2009-03-24  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/test-type-with-case-mismatch.html:
+	* xaml/test-createFromXaml-nodownload.html:
+	* xaml/test-setsource-with-downloader.html:
+	* xaml/test-timelinemarkercollection-order.html: utils.js must
+	  be included before testplugin.js.
+
+2009-03-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* xaml/drtlist.xml: Reenable test-canvas-no-size.html
+
+2009-02-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* sizes/sizes.cpp: Remove Playlist and PlaylistEntry from
+	  here.
+
+2009-02-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test.mdp: Updated to use new MD features (ChangeLog and log
+	  message policy).
+
+2008-12-03  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Makefile.am: Add new targets to run individual files using agviewer
+	  and for running unit tests.
+
+2008-11-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml: test-path-group-ellipse.xaml,
+	  test-path-group-rectangle.xaml and xaml/test-fillrule.xaml does not
+	  parse in SL 2.0. Update drtlist to expect an error.
+
+2008-11-21  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test.mdp: Updated.
+
+2008-11-17  Michael Dominic K.  <mdk@mdk.am>
+
+	* seek-test-multiple-repeat.html: Upgrading the test. Shows that multiple repeat 
+	seeks is broken.
+
+2008-11-05  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/storyboard-continuity.html: Adding a storyboard continuity test. 
+	A testcase for a memleak in AnimationStorage.
+
+2008-11-04  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/empty-storyboard-used-as-delay.html: A test-case for #440662.
+
+2008-10-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml: Remove duplicated test and mark another one as
+	  known failure.
+
+2008-10-20  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml: Sprinkle knownFailure around.
+
+2008-10-17  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/fullscreen-enter-leave.html: The fullscreen enter-leave test-case
+	now also does some storyboard start/stop on enter/leave to better replicate
+	vertigo issue.
+
+2008-10-16  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/fullscreen-enter-leave.html: Adding a test-case for tracking what 
+	happens with Enter/Leave events when triggering fullscreen.
+
+2008-10-16  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/sl2-animation-blending.html: Adding a test to see if 
+	Silverlight 2.0 does the described animation blending in any way.
+
+2008-10-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* 2.0/xaml/nested-canvas.cs, 2.0/xaml/nested-canvas.xaml,
+	  2.0/xaml/seekable-canvas.cs,
+	  2.0/xaml/test-seekable-storyboard.xaml,
+	  2.0/xaml/test-string-property.cs,
+	  2.0/xaml/test-string-property.xaml, 2.0/xaml/video-player.cs,
+	  2.0/xaml/video-player.xaml, 2.0/xaml/visualbrush,
+	  xaml/nested-canvas.xaml, xaml/nested-canvas.cs,
+	  xaml/seekable-canvas.cs, xaml/test-seekable-storyboard.xaml,
+	  xaml/test-string-property.cs, xaml/test-string-property.xaml,
+	  xaml/video-player.cs, xaml/video-player.xaml, xaml/visualbrush,
+	  xaml/visualbrush/Makefile, xaml/visualbrush/MyCanvas.cs,
+	  xaml/visualbrush/test-reflected-line.xaml,
+	  xaml/visualbrush/test-reflected-videobrush-text.xaml,
+	  xaml/drtlist.xml, 2.0/xaml/drtlist.xml: Move some 2.0 tests from
+	  test/xaml to test/2.0/xaml.
+
+2008-10-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml, xaml/test-event-argcount.html,
+	  xaml/test-toplevel-canvas-events.html: Added
+	  test-event-argcount.html and test-toplevel-canvas-events.html.
+
+2008-09-19  Alan McGovern  <amcgovern@novell.com>
+	* Makefile.am: Removed reference to NDesk.Options.dll that i missed.
+
+2008-09-19  Alan McGovern  <amcgovern@novell.com>
+	* Silverlight.js
+	* xaml/clock/Silverlight.js:
+	* xaml/enums/Silverlight.js
+	* xaml/fullscreen/Silverlight.js
+	* xaml/Silverlight.js: Update to the latest version, licensed under MS-PL.
+	* harness/test-runner/NDesk.Options.dll:
+	* harness/test-runner/Npgsql.dll:
+	* harness/test-runner/Makefile.am: Nuke the two binaries. Replaced
+	NDesk.Options.dll with a reference to Options.cs and take Npgsql from
+	the GAC. 
+
+2008-09-19  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/sprawl-test.html: Adding a test case for sprawl bug #412074.
+
+2008-09-16  Fernando Herrera  <fherrera@novell.com>
+
+	* parsertest/Makefile.am:
+	* sizes/Makefile.am: Add asf include dir
+
+2008-09-10  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/completed-event-consistency.html: Adding a test for completed 
+	event consistency. Check if all values are ok during 'Completed' emission.
+
+2008-09-05  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/downloader-smooth-set-source-passing.html: Another (this time 
+	really accurate) test for source setting on image. The famous #375275.
+
+2008-09-02  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-object-animation.xaml: Adding a test for ObjectAnimationUsingKeyFrames.
+
+2008-08-13  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml, xaml/test-fillrule.xaml: Added test-fillrule.xaml.
+
+2008-08-13  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test.mdp: Updated.
+
+2008-08-08  Chris Toshok  <toshok@ximian.com>
+
+	* parsertest/parsertest.cpp (parse_value_test): update for
+	value_from_str api change.
+
+2008-08-05  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* sizes/sizes.cpp: Deleted Visual (moved content into UIElement), and
+	  renamed VisualCollection to UIElementCollection.
+
+2008-08-05  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	
+
+2008-08-01  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/shocker/image-capture.cpp: Fixing a memleak (screenshot pixbuf not being unreffed).
+
+2008-07-30  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/downloader-smooth-set-source-direct.html: Adding an example for
+	the "flickering" (non-atomic Source setting on Image) as seen on Vertigo Slideshow. 
+	This is version two, not using the SetSource (as opposed to
+	downloader-smooth-set-source.html that uses it). 
+
+2008-07-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/carousel.png:
+	* xaml/assorted/icon-1.png:
+	* xaml/assorted/icon-2.png:
+	* xaml/assorted/icon-3.png:
+	* xaml/assorted/icon-4.png: Replacing images with stubs not to infringe anybody's
+	copyright.
+
+2008-07-18  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/downloader-smooth-set-source.html: Fixing this test to actually 
+	take the image from the downloader. This is the correct way websites do it. 
+	It should be flicker-free.
+
+2008-07-09  Jeffrey Stedfast  <fejj@novell.com>
+
+	* xaml/assorted/unattached-image-set-source.html: New test to
+	check that setting an image.source on an unattached image will
+	display the correct image when the image is reattached.
+
+2008-07-09  Geoff Norton  <gnorton@novell.com>
+
+	* Makefile.am: xsetroot our Xephyr instance.
+
+2008-07-07  Jeffrey Stedfast  <fejj@novell.com>
+
+	* xaml/test-stroke-thickness.xaml: Renamed from
+	assorted/stroke-thickness-test.html (since it didn't actually use
+	any js).
+
+2008-06-30  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/test-default-keyspline-animation.html: Adding a test for
+	default (no control points specified) animation using KeySplines. We're
+	broken here.
+
+2008-06-30  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/test-clock-hands.html: Adding a test doing a analog
+	clock using similiar technique to http://xmldocs.net/ball/. Uses a very
+	far-off seeks.
+
+2008-06-26  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/test-keyframe-keytime.html: A test for accessing
+	KeyFrame's KeyTime, as described in #402035.
+
+2008-06-20  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/remove-while-running-test.html: Making the test trigger
+	the remove/reset action on MouseLeave instead of separate timer
+	storyboard. Having just one storyboard in the test makes it easier to
+	debug.
+
+2008-06-20  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/remove-while-running-test.html: A test for removing the
+	Storyboard from resources while it's still running. 
+
+2008-06-19  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/timer-test.html: A test for using StoryBoard as timer.
+
+2008-06-12  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test.mdp: Updated.
+
+2008-06-11  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* Makefile.am: Remove $(MAKEFLAGS) from run-tests as well
+
+2008-06-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Makefile.am: Remove $(MAKEFLAGS), it's causing problems.
+
+2008-06-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Makefile.am: Add a run-xephyr target.
+
+2008-06-11  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-nested-storyboard.html: Adding a test for
+	seeking on nested storyboards.
+
+2008-06-10  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-animation-nested-storyboard.xaml: Adding a test for nested
+	storyboards.
+
+2008-06-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test.mdp: Added.
+
+2008-06-07  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-downloader-events.html: Added.
+	* xaml/drtlist.xml: Added test-downloader-events.html
+
+2008-06-05  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-multiple-repeat.html: Adding a test that shows
+	we're incorectly seeking into animations that have AutoReverse and
+	RepeatBehavior >= 1.0. We're not correctly figuring out when the
+	forward/backward timing needs to wrap around itself once we pass the
+	first iteration.
+
+2008-06-04  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-speed-ratio-begin.html: Adding a test that
+	shows that we're incorectly calculating begin time shift with SpeeRatio
+	seeks.
+
+2008-06-04  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-speed-ratio.html: Adding a test that shows
+	that we're incorrectly parsing (not including?) SpeedRatio in our
+	seeking calculations.
+
+2008-05-30  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock41.html:
+	* xaml/clock/clock41.xaml: Adding a new test. Anims with
+	Duration="00:00:00" and FillBehavior="Stop" are not started at all in
+	SL.
+
+2008-05-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock40.html:
+	* xaml/clock/clock40.xaml: Adding a new clock40 that does something
+	similiar to test-animation-hold-stop-speed.xaml. Broken currently.
+
+2008-05-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-animation-hold-stop-speed.xaml: Adding a test where outer
+	storyboard has HoldEnd, inner animation has Stop + SpeedRation. In this
+	case the block doesn't bounce back (FillBehavior=Stop) as expected. It
+	seems to be caused by the speed property. If it's not there it works as
+	expected.
+
+2008-05-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/xaml/test-animation-only-from.xaml: Adding a test for animation
+	that only has "From" value but not "To" value. We currently break with
+	it.
+
+2008-05-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Makefile.am: Export MS_DRTLIST, necessary for the big hack in
+	  Driver.cs.
+	* drtlist.xml: Updated.
+
+2008-05-26  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock31.xaml: Updating description now with the fixed
+	RepeatBehavior.
+
+2008-05-26  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-animation-zero-duration.xaml: Adding a test for
+	zero-duration storyboard. Broken now, or rather -- acts differently than
+	SL.
+
+2008-05-26  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-animation-repeat-behavior.xaml: Adding a very simple test
+	case that shows that Silverlight does understand the
+	RepeatBehavior="XX:XX:XX" syntax.
+
+2008-05-26  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-animation-zero-repeat-behavior.xaml: Adding a test with
+	RepeatBehavior="00:00:00". This animations should not start at all.
+
+2008-05-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added.
+
+2008-05-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml: Added missing extension.
+
+2008-05-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Makefile.am: And another target, run-gdb this time.
+
+2008-05-21  Jackson Harper  <jackson@ximian.com>
+
+	* xaml/test-illegal-prop-set.html: Try calling canvas.SetValue
+	("Canvas.Width", 0.0) which should throw an exception.
+
+2008-05-21  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-wrapping-set.html: A composite test with many
+	various seek combinations including wrapping repeat-forever tests.
+
+2008-05-20  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-begin-time.html: Another test for seeking on
+	storyboard which have BeginTime. This is completely broken on us.
+
+2008-05-20  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-on-pause.html: Adding a test for seeking on
+	Pause. SL has an interesting behavior where entering the rect many times
+	(triggering the seek many times) causses an increasing offsett.
+
+2008-05-20  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-no-begin.html: Test for seeking without
+	begining.
+
+2008-05-20  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock38.html:
+	* xaml/clock/clock38.xaml: Adding test similiar to clock37.xaml but for
+	keyframe-based animations.
+
+2008-05-19  Jackson Harper  <jackson@ximian.com>
+
+	* xaml/test-create-resources.html: New test, verifies that we
+	create a wrapper element when properties are the top element
+	passed to createFromXaml.
+
+2008-05-19  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-overbounds-and-return.html:
+	* xaml/assorted/seek-test-overbounds.html: Two more seeking tests --
+	overbounds and return plus normal overbounds.
+
+2008-05-19  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-multiple.html: Adding another seeking test
+	with multiple seek operations performed one after another.
+
+2008-05-19  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/seek-test-1.html: Adding a simple seek test.
+
+2008-05-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* supp/helgrind.supp: Added.
+
+2008-05-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Makefile.am: Added a run-valgrind target.
+
+2008-05-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-downloaderprogress.html, xaml/test-dead-downloaders.html:
+	  Added.
+	* xaml/drtlist.xml: Added test-dead-downloaders and
+	  test-downloaderprogress.
+
+2008-05-15  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock37.html:
+	* xaml/clock/clock37.xaml: Adding a new test that shows an interesting
+	case of animation jags (not proper animation finishing).
+
+2008-05-14  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock22.xaml: Changing values/timing for this test to make
+	the problem a little bit more obvious (that's bug #388745).
+
+2008-05-13  Michael Dominic K.  <mdk@mdk.am>
+	
+	* xaml/clock/clock32.xaml: Fixing the clock32.xaml test.
+
+2008-05-13  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml, xaml/test-second-surface-error.html: Added
+	  test-second-surface-error.html.
+
+2008-05-06  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/storyboard-stopping-prop-override.html: A new test for
+	storyboard stopping + overriding the prop manually.
+
+2008-05-06  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/storyboard-stopping-two.html: Another test for stopping
+	two storyboards applied to one property. It seems that SL does some kind
+	of baseValue chaining -- the more recent storyboard (for same prop)
+	somehow getting the baseValue from the previous one. This seems to be
+	the reson for the HHH comic bug (#383879).
+
+2008-05-06  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/storyboard-stopping.html: Storyboard stopping behavior
+	test.
+
+2008-05-02  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/mouse-moving-object-tracking.html: Adding a test for
+	tracking MouseEnter/Leave events on objects that are moving (as opposed
+	to mouse itself moving).
+
+2008-05-01  Jeffrey Stedfast  <fejj@novell.com>
+
+	* xaml/test-cached-text-paths.xaml: added new test case provided
+	by Sebastien to test cached text paths - see bug #375279 for more
+	info
+
+2008-04-30  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/mouse-enter-leave-transparent-brush.html: A new test for
+	hit testing on shape with a transparent brush applied.
+
+2008-04-29  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-shape-cursor-clippingMaster.png:
+	* xaml/drtlist.xml:
+	* xaml/test-shape-cursor-clipping.xaml: Adding a test for shape +
+	clipping path + cursor (hit test). This is taken from Sebastien's
+	test-case for #383894.
+
+2008-04-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-parser-empty-propertyMaster.png:
+	* xaml/drtlist.xml:
+	* xaml/test-parser-empty-property.xaml: A test for parser when parsing
+	something like: <Rectangle Width="">. This is a problem for #383904.
+
+2008-04-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/image-brush-stretch-set.html:
+	* xaml/assorted/one.png:
+	* xaml/assorted/two.png: Adding a test for Stretch setting being reset
+	on ImageSource set. This is a problem from bug #383938 (Poker).
+
+2008-04-25  Larry Ewing  <lewing@novell.com>
+
+	* Makefile.am: quick hack to disable test targets if the test
+	harness is disabled.
+
+2008-04-25  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/mouse-enter-leave-hit-test-visibility.html: Adding a
+	test for IsHitTestVisible being changed in the MouseEnter callback. The
+	MouseLeave should not be fired for this element and "mouse leave" shold
+	not be printed on the Firebug console.
+
+2008-04-25  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/setting-keyframe-to-null.html: A test for setting a
+	KeyFrame value to null from js. Interestingly, SL throws an exception,
+	we allow it to happen.
+
+2008-04-24  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/assorted/mouse-enter-leave-visibility.html: Adding html test for
+	changing the element visibility in the mouse-enter handler. The mouse
+	leave should not be called. 
+
+2008-04-24  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xaml/test-shape-path-stretch-animated.xaml: Adding a test-case with
+	animated shape path stretch.
+
+2008-04-24  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-shape-path-overdrawMaster.png:
+	* xaml/drtlist.xml:
+	* xaml/test-shape-path-overrdraw.xaml: Adding a test for the path
+	'anti-aliasing overdraw'. This is the factored-out problem of the
+	'CGeometryBuilder_AddSegments.htm' test.
+
+2008-04-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-timelinemarkercollection-order.html: Added.
+	* xaml/drtlist.xml: Added test-timeline-markercollection-order.html.
+
+2008-04-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml: Added test-type-with-case-mismatch.html.
+	* xaml/test-type-with-case-mismatch.html: Added test case for #375230
+	  and #375231.
+
+2008-04-22  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xaml/test-animation-invalid-keyframe-keytime.xaml: Adding new test for
+	a KeyFrame specified without a KeyTime value. It should not animate at
+	all.
+
+2008-04-18  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/README.txt:
+	* xaml/clock/clock36.html:
+	* xaml/clock/clock36.xaml: A clock test for FillBehavior=HoldEnd with
+	scaling with SplineDoubleKeyFrame. It seems the animation is not
+	"finished off" (last value applied is not the last value specified). In
+	other words -- jags again.
+
+	This seems to be the problem with PopFly -- when block-list/tutorial is
+	collapsed, it leaves a small trailing line (not scaled to 0.0 but
+	0.0000xxx-something).
+
+2008-04-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/drtlist.xml, xaml/test-canvas-no-size.html: Added (currently
+	  failing) test with a MediaElement within a Canvas which doesn't
+	  have width/height set.
+
+2008-04-17  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-geometry-collection-stretchMaster.png:
+	* xaml/drtlist.xml:
+	* xaml/test-geometry-collection-stretch.xaml: Adding master, adding
+	Canvas width/height to the test.
+
+2008-04-17  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xaml/test-animation-null-defaults-color.xaml: Adding a test against
+	default value for SplineColorKeyFrame.
+
+2008-04-17  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xaml/test-animation-null-defaults-double.xaml: Adding a test against
+	default value for SplineDoubleKeyFrame.
+
+2008-04-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* make-xephyr: Set screen size, default size is too small for some
+	  tests.
+
+2008-04-16  Larry Ewing  <lewing@novell.com>
+
+	* xaml/test-geometry-collection-stretch.xaml: new test to show how
+	our extents calculations are broken on line geometries.
+
+2008-04-16  Larry Ewing  <lewing@novell.com>
+
+	* xaml/test-shape-path-stretch3.xaml: make the test clearer by
+	using different numbers for different parts.
+
+2008-04-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* supp/audio.supp, supp/firefox.supp: A few minor fixes.
+
+2008-04-16  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock17.xaml: Changing measures for this test as they're a
+	bit confusing.
+
+2008-04-15  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/README.txt:
+	* xaml/clock/clock35.html:
+	* xaml/clock/clock35.xaml: Adding a test that shows jagging problems in
+	autoreversed very fast (SpeedRatio) storyboards.
+
+2008-04-15  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/README.txt:
+	* xaml/clock/clock34.html:
+	* xaml/clock/clock34.xaml: Adding a new test which is a test-case
+	for the storyboard/animation combination found in Popfly which was
+	causing bug #378390 (can't configure popfly elements).
+
+2008-04-15  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/README.txt:
+	* xaml/clock/clock33.html:
+	* xaml/clock/clock33.xaml: Adding new test with autoreversed storyboard
+	with a SpeedRation > 1.0. Currently broken, stops in the middle of the
+	return cycle.
+
+2008-04-14  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* index.aspx: Include *.html files as well.
+
+2008-04-14  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* make-xephyr: Added, script to run tests in xephyr.
+	* Makefile.am: Added run-drtlist to run an arbitrary drtlist.
+
+2008-04-11  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* Makefile.am: Use MOON_PLUGIN_DIR to override the path to libmoonplugin
+
+2008-04-11  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/README.txt:
+	* xaml/clock/clock32.xaml: Adding a test-case that showcases the
+	jagyness/align problem in our storyboards/clocks. Esentially we never
+	"Tick" at the edge value on stop.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-directory-in-zip.html: Fix test to work on SL as well.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-downloader-aborted-in-setsource.html,
+	  xaml/test-downloader-aborted-in-setsource.xaml,
+	  xaml/test-setsource-with-downloader.html,
+	  xaml/test-setsource-with-downloader.xaml: Renamed to something more
+	  meaningful.
+	* xaml/drtlist.xml: Added test-setsource-with-downloader.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-downloader-aborted-in-setsource.html,
+	  xaml/test-downloader-aborted-in-setsource.xaml: Minor fixes.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-downloader-aborted-in-setsource.html,
+	  xaml/test-downloader-aborted-in-setsource.xaml: Added.
+
+2008-04-10  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* Makefile.am: Set MOZ_PLUGIN_PATH and LD_LIBARY_PATH so that tests will
+	use the uninstalled plugin
+
+2008-04-07  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-shape-path-stretch-gradientMaster.png:
+	* xaml/drtlist.xml:
+	* xaml/test-shape-path-stretch-gradient.xaml: One more test for path
+	stretching and gradients.
+
+2008-04-07  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-shape-line-stretch-gradientMaster.png:
+	* xaml/drtlist.xml:
+	* xaml/test-shape-line-stretch-gradient.xaml: One more test for line
+	stetching and gradients. Gradients work correctly but fails because of
+	stetching borkeness (see test-shape-line-stretch3.xaml).
+
+2008-04-07  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-shape-line-stretch3Master.png:
+	* xaml/drtlist.xml:
+	* xaml/test-shape-line-stretch3.xaml: Adding new test for line
+	stretching. This is similiar to the test-shape-path-strech4.xaml except
+	that it uses actual Line object instead of path. Fails for exactly
+	similiar reasons -- stretching the bounds including stroke instead of
+	using the logical extents.
+
+2008-04-02  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xaml/test-shape-path-stretch4.xaml: Adding one more path stretching
+	test (+Master) that is currently broken. This one shows how the stroke
+	size deforms our Stretch fill calculations.
+
+2008-03-31  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* Makefile.am, harness/Makefile.am: Add directories to dist for tests
+
+2008-03-31  Larry Ewing  <lewing@novell.com>
+
+	* xaml/drtlist.xml: convert some of the tests that were
+	incorrectly turned into animations back to static tests.  Fix the
+	incorrect html templates for those tests.
+
+2008-03-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/README.txt: Updating the test descriptions. 
+	
+	Removing the notes about failures on Windows (I couldn't reproduce them
+	with latest SL). 
+
+	Adding information about the new tests added.
+
+2008-03-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock31.html:
+	* xaml/clock/clock31.xaml: One more clock test with duration-base
+	RepeatBehavior and AutoReverse property specified. Fails currently.
+
+2008-03-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock30.html:
+	* xaml/clock/clock30.xaml: Adding a new clock test that has
+	AutoReverse="True" set on Storyboard (not animation). It currently keeps
+	repeating forever, while it should repeat only once.
+
+2008-03-28  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/clock/clock26.xaml: Updating this test's description. It actually
+	passes now (the behavior is same on SL).
+
+2008-03-26  Stephane Delcroix  <sdelcroix@novell.com>
+
+	* xaml/test-shape-dashcaps.xaml: new test.
+
+2008-03-26  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-shape-path-stretch3Master.png:
+	* xaml/drtlist.xml:
+	* xaml/test-shape-path-stretch3.xaml: Yet another test for shape/path
+	bounds brokeness with Stretch=Fill.
+
+2008-03-26  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/test-shape-path-stretch2Master.png:
+	* xaml/drtlist.xml:
+	* xaml/test-shape-path-stretch2.xaml: Adding one extra test that shows
+	our stretching bug. It look like we're missing or adding extra
+	translation (the line should be at y = 10). Master included.
+
+2008-03-25  Jackson Harper  <jackson@ximian.com>
+
+	* xaml/drtlist.xml:	
+	* xaml/test-custom-namespace.xaml: Remove this test, since it
+	requires external dependencies that we don't have and doesn't even
+	test what it is supposed to test.
+
+2008-03-25  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/harness/masters/test-shape-path-stretchMaster.png:
+	* test/xaml/drtlist.xml:
+	* test/xaml/test-shape-path-stretch.xaml: Renaming the test since it
+	actually tests path stretching.
+
+2008-03-25  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/harness/masters/test-stroke-low-thicknessMaster.png:
+	* test/xaml/drtlist.xml:
+	* test/xaml/test-stroke-low-thickness.xaml: Adding a test that showcases
+	differences in ML <-> SL low-width stroke rendering. Master included.
+
+2008-03-25  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/harness/masters/test-shape-line-stretch3Master.png:
+	* test/xaml/drtlist.xml:
+	* test/xaml/test-shape-line-stretch3.xaml: Adding one more (currently
+	failing) test against line stretching. Take from the Silverlight
+	showcase. Master included.
+
+2008-03-24  Jackson Harper  <jackson@ximian.com>
+
+	* xaml/drtlist.xml:
+	* xaml/test-parser-multiple-canvases: Add a new test that checks
+	for setting a name multiple times.
+
+2008-03-24  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/harness/masters/test-lineargradientbrush-absolute-moireMaster.png:
+	* test/harness/masters/test-lineargradientbrush-moire-scaledMaster.png:
+	* test/harness/masters/test-radialgradientbrush-absolute-moireMaster.png:
+	Adding some masters for subpixel-gradient rendering tests.
+
+2008-03-24  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/harness/masters/test-blending-gradientsMaster.png:
+	* test/xaml/drtlist.xml:
+	* test/xaml/test-blending-gradients.xaml: Adding a new test that does
+	some alpha blending on gradients with SL master. Shows an interesting SL
+	bug (stripes). 
+
+2008-03-21  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/harness/masters/test-text-font-qualityMaster.png: Adding a
+	master for test-text-font-sizing-vs-hinting.xaml.
+
+2008-03-21  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/xaml/drtlist.xml:
+	* test/xaml/test-text-font-sizing-vs-hinting.xaml: Adding a test for
+	scaling text and checking how it goes with hinting. It should not be too
+	jumpy. 
+
+	Master needed.
+
+2008-03-21  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/xaml/arial-pango.png:
+	* test/xaml/drtlist.xml:
+	* test/xaml/test-text-font-quality.xaml:
+	* test/xaml/times-pango.png:
+	* test/xaml/verdana-pango.png: Adding a new test against our crappy
+	small-fonts rendering quality. Compares side-by-side with Pango
+	rendering masters for Arial, Verdana and Times New Roman.
+
+2008-03-19  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/xaml/drtlist.xml:
+	* test/xaml/test-crash-gracefull-prop-resolving.xaml: Yet another
+	property-resolving test-case. This time we check against a human error
+	which we could be smart about (reported on http://sessions.visitmix.com).
+
+2008-03-19  Jackson Harper  <jackson@ximian.com>
+
+	* xaml/drtlist.xml: Add codebehind files.
+
+2008-03-19  Stephane Delcroix  <sdelcroix@novell.com>
+
+	* xaml/test-line-caps.xaml: various tests for Line/Dash caps on
+	dashed lines
+
+2008-03-18  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-crash-color-anim-on-solid.xaml:
+	* xaml/drtlist.xml: Adding another crasher test-case -- trying to
+	animate a SolidColorBrush using color animation.
+
+	Master needed.
+
+2008-03-17  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-animation-slow-keyspline.xaml:
+	* xaml/drtlist.xml: Adding a new test for KeySpline animation. It
+	demonstrates a precision problem in our KeySpline calculations that
+	results in jaggyness in long/large animations.
+
+	Master needed.
+
+2008-03-15  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-mediaelement-clip.xaml, xaml/test-videobrush.xaml,
+	  xaml/test-videobrush-text.xaml, xaml/video-player.xaml: Fix video paths.
+
+2008-03-14  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xalm/test-crash-non-existing-animation-target-prop4.xaml:
+	Adding yet another one test-case for trying to access something that
+	doesn't exist. This time we're not getting any error even though it's
+	clearly wrong. Need to investigate.
+
+	Master needed.
+
+2008-03-13  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xalm/test-crash-non-existing-animation-target-prop2.xaml:
+	Adding another (different) test-case for trying to access something that
+	doesn't exist.
+
+	Master needed.
+
+22008-03-13  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/drtlist.xml:
+	* xalm/test-crash-non-existing-animation-target-prop.xaml:
+	Adding a test-case against trying to animate a property that
+	doesn't exist. Currently crashes ML. 
+
+	Master needed.
+
+2008-03-13  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-animation-null-keyframe.xaml:
+	* xaml/drtlist.xml: Adding a test-case for a discrete animation
+	which has a null (no value) keyframe. It currently crashes our
+	stuff. 
+
+	This is taken from AnimationMatrix2.xaml test. 
+	Master needed.
+
+2008-03-13  Stephane Delcroix  <sdelcroix@novell.com>
+
+	* xaml/test-relativetransform-bug-354892-2.xaml:
+	* xaml/test-relativetransform-bug-354892.xaml: tests attached
+	to bnc #354892.
+
+2008-03-13  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-lineargradientbrush-moire-scaled.xaml:
+	* xaml/drtlist.xml: Adding another moire gradient test. This
+	time the gradient is moirish but because the canvas is scaled
+	it's not.
+
+	Master needed.
+
+2008-03-13  Michael Dominic K.  <mdk@mdk.am>
+	
+	* xaml/test-lineargradientbrush-absolute.xaml:
+	* xaml/test-radialgradientbrush-absolite.xaml:
+	* xaml/drtlist.xml: Adding a '-moire' suffix to those tests for
+	better representation of what it's testing.
+	
+2008-03-13  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-radialgradientbrush-absolute.xaml:
+	* xaml/drtlist.xml: Adding a similiar radial-gradient absolute
+	mapping test. 
+
+	Master needed.
+
+2008-03-13  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-lineargradientbrush-absolute.xaml:
+	* xaml/drtlist.xml: Adding a new test for our (broken) corner
+	cases with LinearGradientBrush in MappingMode = Absolute. 
+
+	Master needed.
+
+2008-03-12  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* supp, supp/audio.supp, supp/ffmpeg.supp, supp/firefox.supp,
+	  supp/moon.supp: Added suppression files for valgrind.
+
+2008-03-11  Michael Dominic K.  <mdk@mdk.am>
+
+	* harness/masters/:
+	* xaml/: Removing the storyboard tests...
+
+	* xaml/clock/: ...Instead adding those tests here following the
+	existing semantics (adding only the ones which were not already there).
+
+2008-03-06  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/xaml/drtlist.xml: Adding the new storyboard tests to the
+	drtlist.
+
+2008-03-06  Michael Dominic K.  <mdk@mdk.am>
+
+	* test/xaml/test-storyboard-constrained-autoreverse.xaml:
+	* test/xaml/test-storyboard-constrained-fill.xaml:
+	* test/xaml/test-storyboard-constrained-stop.xaml: Few more tests for
+	clocks/storyboard, this time contrained ones. Contrained as in: the
+	storyboard duration is smaller than the duration of it's children
+	animations. Not yet added to the drtlist.
+
+2008-03-06  Michael Dominic K.  <mdk@mdk.am>
+
+	* xaml/test-storyboard-simple-autoreverse-forever.xaml:
+	* xaml/test-storyboard-simple-autoreverse.xaml:
+	* xaml/test-storyboard-simple-fill-fill.xaml:
+	* xaml/test-storyboard-simple-fill-stop.xaml:
+	* xaml/test-storyboard-simple-stop-fill.xaml:
+	* xaml/test-storyboard-simple-stop-stop.xaml: Adding few base
+	clock/storyboard tests. Not yet added to the drtlist.
+
+2008-03-06  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness/xaml2png.cpp: Can't delete a surface anymore, unref it.
+
+2008-02-29  Geoff Norton  <gnorton@novell.com>
+
+	* index.aspx:
+	* xamlize.aspx:
+	* Silverlight.js: A few helper asp.net pages to test all our tests in here
+	in browser.  Simply run "xsp2" in this directory and you'll get a list of 
+	all the xamls you can startup.
+
+2008-02-22  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-directory-in-zip.html, xaml/test-directory-in-zip.zip,
+	  xaml/test-directory-in-zip.xaml, xaml/test-empty-element-source.html:
+	  New test.
+	* xaml/Silverlight.js, harness/masters/test-directory-in-zip.htmlMaster.png,
+	  harness/masters/test-empty-element-source.htmlMaster.png: Added.
+	* xaml/drtlist.xml: Added 2 more tests.
+
+2008-02-21  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* xaml/test-rectangle-fill-with-image-brush.xaml: Add a xaml file that was
+	  crashing moonlight.
+
+2008-02-06  Michael Dominic K.  <mdk@mdk.am> 
+
+	* test/harness/xaml2png.cpp: Use GdkPixbuf to save the PNG instead of the
+	cairo png saver. Makes it faster by skipping the post-save png loading
+	step to strip metadata.
+
+2007-11-05  Larry Ewing  <lewing@novell.com>
+
+	* xaml/test-path-group-stretch.xaml: add some stretched paths with
+	incomplete size specifiers.
+
+2007-10-24  Chris Toshok  <toshok@ximian.com>
+
+	* harness/xaml2png.cpp: fill the background with white so we look
+	like mopen.  Also, use the MS way of specifying timespecs -
+	"100,15" == generate image every 100 milliseconds, up to 15
+	images.
+
+2007-10-23  Chris Toshok  <toshok@ximian.com>
+
+	* harness/xaml2png.cpp (main): use RUNTIME_INIT_AUDIO_DISABLE so
+	we can screenshot video.
+
+2007-10-23  Chris Toshok  <toshok@ximian.com>
+
+	* harness/xaml2png.cpp: fix up a lot of this.  allow timespans to
+	be places on the command line after the xaml file + output file
+	args, and use the manual time source to move the timemanager to
+	those times before dumping pngs.
+
+2007-10-17  Chris Toshok  <toshok@ximian.com>
+
+	* harness/Makefile.am (xaml2png_LDADD): add MOON_PROG_LIBS.
+
+2007-09-27  Jeffrey Stedfast  <fejj@novell.com>
+
+	* harness/xaml2png.cpp (main): Updated runtime_init() call.
+
+2007-09-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness/xaml2png.cpp: Update according to API change.
+
+2007-06-15  Miguel de Icaza  <miguel@novell.com>
+
+	* ManagedDownloader.cs: Fixed so that the download happens in
+	Send(), it is not supposed to happen during open.
+
+	* ManagedDownloader.cs: Add support for local files
+	
+

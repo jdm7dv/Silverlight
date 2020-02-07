@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="samp_LiveMessenger.popupLogins"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    Width="250"
+    d:DesignWidth="250" d:DesignHeight="200" >
+    <Grid x:Name="LayoutRoot">
+    	<Path HorizontalAlignment="Right" Margin="0,2.83299994468689,-6.83300018310547,-5.5" VerticalAlignment="Stretch" Width="15.333" Stretch="Fill" Data="M195,3.3333333 L206,3.3333333 L206.33333,205.00034 L192.6666,196.00034 L191.99956,3.3336666 z" d:LayoutOverrides="Width">
+    		<Path.Fill>
+    			<LinearGradientBrush EndPoint="0.989000022411346,0.45100000500679" StartPoint="-0.119999997317791,0.45100000500679">
+    				<GradientStop Color="#FF000000"/>
+    				<GradientStop Color="#00FFFFFF" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Path Height="9.043" HorizontalAlignment="Stretch" Margin="3.22900009155273,0,-6.46799993515015,-5.2810001373291" VerticalAlignment="Bottom" Stretch="Fill" Data="M3.6666667,196.66667 L4,204.33333 L206.10434,204.8358 L191.84851,196.79044 z" d:LayoutOverrides="Height">
+    		<Path.Fill>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="#FF000000"/>
+    				<GradientStop Color="#00FFFFFF" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Fill="#FFFFFFFF" Stroke="#FF6E6E6E"/>
+    </Grid>
+</UserControl>

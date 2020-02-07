@@ -1,0 +1,171 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1 - Creating an Out-of-Browser Application" />
+      <MSHelp:RLTitle Title="Exercise 1 - Creating an Out-of-Browser Application" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1 - Creating an Out-of-Browser Application</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Out of Browser with COM Interop Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1 - Creating an Out-of-Browser Application</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this exercise we'll see how to enable an application to run out-of-browser with elevated privileges.  We'll also handle checking for application updates and detecting if the application is closing. Once those tasks are completed code will be added to automate Excel and Outlook.</p>
+        <ol>
+          <li>Start Visual Studio 2010 </li>
+          <li>On the <b>File</b> menu click <b>Open</b><b>Project/Solution…</b><ol><li>Alternatively, from Visual Studio Start Page click “<b>Open Project…</b>”</li></ol></li>
+          <li> At the “Open Project” dialog navigate to the Lab installation folder</li>
+          <li>Navigate to the “Source\Ex01\begin” folder</li>
+          <li>Click the “OOBWindows.sln” file followed by the “<b>Open</b>” button</li>
+          <li>Take some time to familiarize yourself with the application<ol><li>Points of interest here are:<ul><li>MainPage.xaml</li><li>MainPage.xaml.cs</li><li>WindowClosing.xaml </li><li>WindowClosing.xaml.cs</li><li>DataHelper.cs</li></ul></li></ol></li>
+          <li>Set the <b>OOBWindows.Web</b> project as the startup project by right clicking the project in the Solution Explorer and selecting “Set as Startup Project”</li>
+        </ol>
+        <br />
+        <a name="_Toc256193391" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Elevate Privileges and Handle Out-of-Browser Events</b>
+        </p>
+        <p>In this task you will modify the Silverlight project's properties and add code to the application to handle specific out-of-browser events. You'll also create a ChildWindow that will prompt the user to install the application.</p>
+        <ol>
+          <li>If you have not opened the project open it now (see previous section for instructions)</li>
+          <li>Right-click on the OOBWindows project in the Solution Explorer and select Properties from the menu.</li>
+          <li>Go to the Silverlight tab and check the <b>Enable running application out of the browser</b> checkbox.</li>
+          <li>Click the <b>Out-of-Browser Settings</b> button and check the <b>Require elevated trust when running outside the browser </b>checkbox.  This will allow the application to access specific features such as COM Interop once it's running out-of-browser.</li>
+          <li>The Window Style drop-down in the Out-of-Browser Settings dialog allows different window styles to be selected including Default, No Border, Single Border and Borderless Round Corners (see Figure 1). <p><img src="images\1f39487e-38bd-4147-b8c9-a288519ce6d8.png" /></p><p><b>Figure 1</b><br /><i>Out-of-Browser Settings Dialog</i></p></li>
+          <li>Select the <b>Borderless Round Corners</b> item from the Window Style drop-down and click the OK button to close the project's properties window.</li>
+          <li>Open MainPage.xaml.cs in the code editor window.</li>
+          <br />
+          <li>Add a field of type Window named mainWindow:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Window mainWindow;</pre></td></tr></table></span></div></li>
+          <li>Within the MainPage_Loaded method add the following code to check if the application is running out-of-browser:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>mainWindow = Application.Current.MainWindow;if (Application.Current.IsRunningOutOfBrowser){}else{}</pre></td></tr></table></span></div></li>
+          <li>Within the <b>if</b> statement add code to handle the MainWindow object's Closing event:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>mainWindow.Closing += (s, args) =&gt;{    WindowClosing win = new WindowClosing();    win.Closed += (sen, winArgs) =&gt;    {        if (win.DialogResult.Value) args.Cancel = true;    };    win.Show();};</pre></td></tr></table></span></div></li>
+          <li>Immediately under the code added in the previous step add code to check if a new update is available on the server. If an update is found notify the user.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Application.Current.CheckAndDownloadUpdateCompleted += (s, args) =&gt;{    if (args.UpdateAvailable) MessageBox.Show("Application has been updated." +        "Please close and re-launch the application to pick up the changes.");};Application.Current.CheckAndDownloadUpdateAsync();</pre></td></tr></table></span></div></li>
+          <li>Now that all of the out-of-browser events have been handled we'll add a ChildWindow that will display when the application first loads.  The ChildWindow will let the user know that they need to install the application and provide an install button that they can click.</li>
+          <li>Right-click on the OOBWindows project and select Add  New Item from the menu.</li>
+          <li>Select <b>Silverlight Child Window</b> and give it a name of <b>InstallWindow.xaml</b>.</li>
+          <li>Remove the 2 buttons that are currently in the <b>InstallWindow.xaml</b> file.</li>
+          <li>Add the following code within the existing Grid control:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;StackPanel&gt;    &lt;TextBlock Text="This application must be installed out-of-browser to run.        Please click the Install Button and then exit the application."        TextWrapping="Wrap"  Margin="10"/&gt;    &lt;Button Content="Install Application" HorizontalAlignment="Center"        FontSize="14" Click="Button_Click" Margin="50" /&gt;&lt;/StackPanel&gt;</pre></td></tr></table></span></div></li>
+          <li>Double-click on the <b>Install Application</b> button in the XAML designer to create a click event handler for it.</li>
+          <li>Add the following code within the button's click event handler in InstallWindow.xaml.cs:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (App.Current.InstallState != InstallState.Installing){    App.Current.InstallStateChanged += (s, args) =&gt;    {        if (App.Current.InstallState == InstallState.Installed)        {            MessageBox.Show("Application installed! Please close your " +              "browser and run the application from your desktop " +              "or Start menu.");        }    };    App.Current.Install();}</pre></td></tr></table></span></div></li>
+          <li>Go back to MainPage.xaml.cs, locate MainPage_Loaded and add the following code into the <b>else</b> block to show the InstallWindow to the user if the application is not running out-of-browser:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>InstallWindow win = new InstallWindow();win.Closed += (s, args) =&gt;{    this.LayoutRoot.Visibility = Visibility.Collapsed;};win.Show();</pre></td></tr></table></span></div></li>
+          <li>Run the application by pressing F5 and the ChildWindow should display. Click the Install Application button to take the application out-of-browser. Close the browser and the out-of-browser application that is running.</li>
+          <li>Right-click on the OOBWindows project and select "Set as Startup Project" from the menu.</li>
+          <li>Go to the OOBWindows properties window, select the Debug tab and ensure that the <b>Installed out-of-browser application</b> radio button is selected. Close the properties window once you're done.</li>
+          <li>Press F5 again to run the application and note that the out-of-browser application starts instead of the browser-based application.  Looking at the application you'll see a DataGrid containing customer data as well as buttons that allow users to export the data to Excel or email the data using Outlook.  Close the application before moving on to the next task.<p><img src="images\3ba03898-0fb1-4fbd-bf95-df7acda168a0.png" /></p><p><b>Figure 2</b><br /><i>Running the out-of-browser application</i></p></li>
+        </ol>
+        <a name="_Toc256193392" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Integrating Silverlight with Excel and Outlook </b>
+        </p>
+        <p>Silverlight 4 allows out-of-browser applications with elevated privileges to interact with desktop applications such as Excel and Outlook. In this task we'll add code to instantiate Excel through COM Interop and add data from a DataGrid to a worksheet.  We'll also see how to interact with Outlook and dynamically add data from the Silverlight application into an email message.</p>
+        <ol>
+          <li>Right-click on the OOBWindows project in the Solution Explorer and select Add Reference from the menu.</li>
+          <li>Select the <b>Microsoft.CSharp</b> assembly and click OK. This assembly supports the new C# 4.0 <b>dynamic</b> keyword which we'll use to create Excel and Outlook objects through COM Interop.</li>
+          <br />
+          <li>Open MainPage.xaml.cs in the code editor and add a reference to the System.Runtime.InteropServices.Automation namespace at the top of the MainPage.xaml.cs file. This namespace contains the AutomationFactory class used to interact with COM-based applications such as Excel.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Runtime.InteropServices.Automation;</pre></td></tr></table></span></div></li>
+          <li>Locate the <b>LaunchExcel</b> method and add the following code to check if Excel is running already by calling AutomationFactory.GetObject. If it's not running a new Excel object will be created using AutomationFactory.CreateObject.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>string excelName = "Excel.Application";try{    //See if Excel is already running    excel = AutomationFactory.GetObject(excelName);}catch{    excel = AutomationFactory.CreateObject(excelName);}</pre></td></tr></table></span></div></li>
+          <li>Once the object is created Excel needs to be made visible to the end user and a workbook needs to be created. Add the following code into LaunchExcel below the code added in the previous step:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (excel == null) excel = AutomationFactory.CreateObject("Excel.Application");excel.Visible = true;dynamic workbook = excel.workbooks;workbook.Add();dynamic sheet = excel.ActiveSheet;</pre></td></tr></table></span></div></li>
+          <br />
+          <li>The data from the existing DataGrid needs to be exported to Excel. To accomplish that task we'll iterate through the DataGrid's ItemSource and programmatically create cells that are added into the Excel worksheet. Add the following code immediately below the code added in the previous step:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>dynamic cell = null;int i = 1;foreach (Customer cust in dg.ItemsSource){    cell = sheet.Cells[i /*row*/, 1 /*col*/];    cell.Value = cust.FirstName;    cell.ColumnWidth = 25;    cell = sheet.Cells[i, 2];    cell.Value = cust.LastName;    cell.ColumnWidth = 25;    cell = sheet.Cells[i, 3];    cell.Value = cust.Phone;    cell.ColumnWidth = 25;    cell = sheet.Cells[i, 4];    cell.Value = cust.State;    cell.ColumnWidth = 25;    i++;}</pre></td></tr></table></span></div></li>
+          <br />
+          <li>If the end user changes data in the Excel spreadsheet we'd like to sync it automatically with the Silverlight DataGrid. Add the following code (below the previous code) which handles Excel's SheetChange event:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (firstTime){    excel.SheetChange += new SheetChangedDelegate(sheetChangedEventHandler);    string name = sheet.Name;    firstTime = false;}</pre></td></tr></table></span></div></li>
+          <li>As data changes in the Excel spreadsheet we want to sync it with the application's DataGrid. Add a sheetChangedEventHandler method to walk through the Excel cells and update the DataGrid's ItemsSource with any changes. Once the DataGrid is updated we'll show a NotificationWindow to the end user.  Add the event handler method below into the MainPage.xaml.cs class.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void sheetChangedEventHandler(dynamic excelSheet, dynamic rangeArgs){    dynamic sheet = excelSheet;    string name = sheet.Name;    dynamic range = rangeArgs;    dynamic rowvalue = range.Row;    IEnumerable&lt;Customer&gt; custs = dg.ItemsSource as IEnumerable&lt;Customer&gt;;    int len = custs.Count();    Customer[] newEntities = new Customer[len];    dynamic col1range = sheet.Range("A1:A" + len.ToString());    dynamic col2range = sheet.Range("B1:B" + len.ToString());    dynamic col3range = sheet.Range("C1:C" + len.ToString());    dynamic col4range = sheet.Range("D1:D" + len.ToString());    for (int i = 0; i &lt; len; i++)    {        dynamic item1 = col1range.Item(i + 1);        dynamic item2 = col2range.Item(i + 1);        dynamic item3 = col3range.Item(i + 1);        dynamic item4 = col4range.Item(i + 1);        Customer newEntity = new Customer();        newEntity.CustomerID = i;        newEntity.FirstName = item1.Value;        newEntity.LastName = item2.Value;        newEntity.Phone = item3.Value;        newEntity.State = item4.Value;        newEntities[i] = newEntity;    }    dg.ItemsSource = newEntities;    dg.SelectedIndex = Convert.ToInt32(rowvalue) - 1;    //Show NotificationWindow    NotificationWindow win = new NotificationWindow();    Grid grid = new Grid { Background = new SolidColorBrush(Colors.Yellow) };    grid.Children.Add(new TextBlock { FontSize = 20, Text = "Customers Modified",       HorizontalAlignment = HorizontalAlignment.Center,       VerticalAlignment=VerticalAlignment.Center });    win.Content = grid;    win.Show(3000);}</pre></td></tr></table></span></div></li>
+          <li>The user may want to email the data in the DataGrid to one or more people in their company. This can be done by converting the data to HTML and then embedding it in an Outlook email message. Open the DataHelper class in the code editor window and look through the method named <b>GetCustomersAsHtmlTable</b>. Notice that the method simply iterates through a collection of Customer objects and converts the data into HTML that can be embedded in an email message.</li>
+          <li>Close the DataHelper.cs class in the code editor.</li>
+          <br />
+          <li>Go back to MainPage.xaml.cs and locate the <b>CreateEmail</b> method. This method will use the AutomationFactory class's GetObject method to check if Outlook is already running or not.  If it isn't AutomationFactory.CreateObject will be called.  Once Outlook is available the code will create an email message and assign values to the To, Subject and Body properties. Add the following code into the <b>CreateEmail</b> method to handle the creation an Outlook message object using COM Interop:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>string outlookName = "Outlook.Application";try{    //See if Outlook is already running    outlook = AutomationFactory.GetObject(outlookName);}catch{    outlook = AutomationFactory.CreateObject(outlookName);}dynamic mailItem = outlook.CreateItem(0);mailItem.Display();string msgBody = "&lt;P&gt;Customer Records&lt;/P&gt;";msgBody += "&lt;P&gt;" + DataHelper.GetCustomersAsHtmlTable() + "&lt;/P&gt;";mailItem.To = "BigBoss;";mailItem.Subject = "Updated Customer Records";mailItem.HTMLBody = msgBody;</pre></td></tr></table></span></div></li>
+          <li>Build the project by going to Build  Rebuild Solution on the Visual Studio menu.</li>
+          <li>Run the application by clicking the icon on the desktop (or in the Start menu if you didn't install it with the desktop option). If you're notified that changes have been made close the application and re-start it to pick up the changes.</li>
+          <li>Once the application opens click the <b>Export to Excel</b> button which will show the data in a new Excel spreadsheet.  Make a change in the spreadsheet and notice how the notification window appears in the lower-right corner of the desktop and how any changes are updated in the application's DataGrid.</li>
+          <li>Click the <b>Send Email</b> button and notice how the DataGrid data is converted into HTML and embedded in the Outlook email message.<p><img src="images\acee26ef-a677-4232-9709-65c096edc2bf.png" /></p><p><b>Figure 3</b><br /><i>Sending an Email from Silverlight using COM Interop</i></p></li>
+          <li>Right-click on the application and select <b>Remove this application</b> from the menu.</li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

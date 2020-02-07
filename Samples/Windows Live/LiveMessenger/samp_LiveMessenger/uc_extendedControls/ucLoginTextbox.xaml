@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="samp_LiveMessenger.ucLoginTextbox"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+    d:DesignWidth="104" d:DesignHeight="20">
+    <Grid x:Name="LayoutRoot">
+    	<TextBox Height="20" Text="" FontFamily="Arial" FontSize="12" x:Name="txtLogin" BorderBrush="#FFA5A5A5" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+    	<Button Height="18.15" HorizontalAlignment="Right" Template="{StaticResource MSNShowLogin}" Margin="0,1.18400001525879,1.33200001716614,0.666000008583069" VerticalAlignment="Stretch" Width="18" Content="Button" x:Name="butShowLogins" d:LayoutOverrides="Height" MouseLeftButtonDown="butShowLogins_MouseLeftButtonDown" MouseLeftButtonUp="butShowLogins_MouseLeftButtonUp" />
+
+    </Grid>
+</UserControl>

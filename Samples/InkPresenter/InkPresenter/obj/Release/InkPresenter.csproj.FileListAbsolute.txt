@@ -1,0 +1,36 @@
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\AppManifest.xaml
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.dll
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.pdb
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.xap
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\TestPage.html
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\ResolveAssemblyReference.cache
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\App.g.cs
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\Page.g.cs
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.g.resources
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.dll
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.pdb
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\XapCacheFile.xml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\AppManifest.xaml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.xap
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\TestPage.html
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\App.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.g.resources
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\XapCacheFile.xml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\AppManifest.xaml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\InkPresenter.xap
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Release\TestPage.html
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\App.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.g.resources
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\InkPresenter.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\InkPresenter\InkPresenter\obj\Release\XapCacheFile.xml

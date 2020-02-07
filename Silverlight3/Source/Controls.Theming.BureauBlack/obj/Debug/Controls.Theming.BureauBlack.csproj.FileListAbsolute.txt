@@ -1,0 +1,14 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\Theme.xaml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.BureauBlack.XML
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.BureauBlack.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.BureauBlack.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.BureauBlack.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.BureauBlack.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.Toolkit.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.Toolkit.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\ClientBin\System.Windows.Controls.Theming.Toolkit.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\obj\Debug\System.Windows.Controls.Theming.BureauBlack.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\obj\Debug\Controls.Theming.BureauBlack.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\obj\Debug\Controls.Theming.BureauBlack.csproj.CopyComplete
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\obj\Debug\System.Windows.Controls.Theming.BureauBlack.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BureauBlack\obj\Debug\System.Windows.Controls.Theming.BureauBlack.pdb

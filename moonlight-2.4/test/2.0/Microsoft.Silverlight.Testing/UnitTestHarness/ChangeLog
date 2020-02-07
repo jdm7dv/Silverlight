@@ -1,0 +1,59 @@
+2009-04-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* UnitTestHarness.csproj: Updated.
+
+2009-03-20  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* UnitTestHarness.csproj: Update project files to build
+	  property in VS with our changes to the code base.
+
+2009-03-04  Alan McGovern  <amcgovern@novell.com>
+
+	* WorkItemTest.cs: Add the ability to append a failure message
+	  to EnqueueConditional to make it easy to tell which
+	  EnqueueConditional fails when a test uses this multiple
+	  times.
+
+2009-02-18  Alan McGovern  <amcgovern@novell.com>
+
+	* WorkItemTest.cs: Add overload for EnqueueConditional which takes
+	a timeout value
+
+2009-02-05  Alan McGovern  <amcgovern@novell.com>
+
+	* PresentationTest.cs: Add a helper method (CreateAsyncTest) to allow
+	asyncronous testing of controls using the TestPanel.
+
+2009-02-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* UnitTestHarness.mdp: Updated to use new MD features
+	  (ChangeLog and log message policy).
+
+2009-01-14  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* BugAttribute.cs: Add a Platforms field to BugAttribute so that we can
+	specify which platform the test fails on. MoonlightBugAttribute sets
+	this to Unix, and SilverlightBugAttribute to Mac and Windows.
+
+2008-12-03  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* BugAttribute.cs: Unseal this class so that we can have derived
+	  MoonlightBugAttribute and SilverlightBugAttribute.
+
+2008-11-25  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* UnitTestHarness.mdp: Updated name.
+	* UnitTestHarness.csproj: Updated to build with VS.
+
+2008-11-20  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* PresentationTest.cs, UnitTestHarness.mdp, UnitTestSystem.cs,
+	  CustomFrameworkUnitTest.cs, WorkItemTest.cs: Remove the
+	  VISUALSTUDIO_SUPPORT ifdef, not needed anymore.
+
+2008-11-20  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* PresentationTest.cs, UnitTestHarness.mdp, UnitTestSystem.cs,
+	  CustomFrameworkUnitTest.cs, WorkItemTest.cs: ifdef out all code to
+	  access VisualStudio. Add MD project and solutions.
+

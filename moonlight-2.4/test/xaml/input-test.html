@@ -1,0 +1,52 @@
+<html>
+  <head>
+      <title>Moonlight Test Page</title>
+
+	<script src="../js/js/utils.js"></script>
+	<script src="../js/js/testplugin.js"></script>
+
+      <script type="text/xaml" id="xaml">
+          <Canvas xmlns="http://schemas.microsoft.com/client/2007" Width="100" Height="100">
+              <Rectangle Canvas.Left="25" Canvas.Top="25" Width="25" Height="25" Fill="Blue" MouseLeftButtonDown="FinishTest" />
+          </Canvas>
+      </script>
+
+      <script language="javascript">
+
+      function OnTestPluginReady ()
+      {
+          if (document.body == null || !TestPluginReady) {
+              window.setTimeout ("OnTestPluginReady ()", 100);
+              return;
+          }
+          TestHost.TranslateCoordinates = true;
+          window.setTimeout ("RunTest ()", 1000);
+      }
+
+      function RunTest ()
+      {
+          TestHost.moveMouseLogarithmic (30, 30);
+          TestHost.mouseLeftClick ();
+      }
+
+      function FinishTest ()
+      {
+		TestLogger.LogDebug ("Rectangle was clicked, test passes.");
+		TestLogger.LogResult (1);
+		TestHost.SignalShutdown ();
+      }
+
+      </script>
+  </head>
+
+  <body>
+    <div>
+        <embed type="application/x-silverlight" width="100" height="100"
+             id="_MoonlightControl" Source="#xaml" OnError="ErrorHandler"
+             style="position:absolute; left:0px; top:0px" >
+        </embed>
+    </div>
+  </body>
+</html>
+
+

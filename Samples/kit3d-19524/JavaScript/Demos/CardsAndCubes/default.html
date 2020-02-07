@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+//Kit3D - Copyright Mark Dawson
+//If you want to reuse, please see the license terms at: http://www.codeplex.com/Kit3D/Project/License.aspx
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Kit3D : 3D Javascript engine for Silverlight : Playing Card / 3D Cube Demo with Texture mapping</title>
+    
+    <script language="javascript" src="..\..\Kit3D\core\Silverlight.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Camera.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\GeometryModel.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\SceneGraph.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\SceneNode.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Vertex.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Viewport.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Face.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\Core\DebugHelper.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\XamlFactory.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\AnimationManager.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\IdGenerator.js"></script>
+    <script language="javascript" src="..\..\Kit3D\core\InputManager.js"></script>
+    <script language="javascript" src="..\..\Kit3D\core\GeometryManager.js"></script>
+    <script language="javascript" src="..\..\Kit3D\math\Frustum.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\MathHelper.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Matrix3x3.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Matrix4x4.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Plane.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Vector3.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Vector4.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\materials\TextureMaterial.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\materials\SolidMaterial.js" ></script>
+    
+    <script language="javascript">
+    
+    function CreateCard(x, y, parentNode)
+    {
+        var playingCardGeometry = GeometryManager_GetInstance().CreateGeometry();
+        
+        //Create the model for a single playing card, simple shape, just
+        //two triangles, could make it more complex by breaking down into
+        //smaller triangles, to get better looking texture mapping.
+        var vertices = new Array(4);
+        
+        //Textures go from top left to bottom right, there are 14 card faces
+        //in each row and 4 rows (see cardssm.jpg)
+        var singleU = 1.0 / 14;
+        var singleV = 1.0 / 4;
+        
+        //Want to choose a random position in 3D space for the card
+        var xRand = -40 + Math.random() * 50;
+        var yRand = -18 + Math.random() * 60;
+        var zRand = Math.random() * 40;
+        
+        vertices[0] = new Vertex(new Vector3(-5,-7, 0), 0, 0, 0, singleU * x, singleV * y);
+        vertices[1] = new Vertex(new Vector3(5,-7, 0), 0, 0, 0, singleU * x + singleU, singleV * y);
+        vertices[2] = new Vertex(new Vector3(5,7,0), 0, 0, 0, singleU * x + singleU, singleV * y + singleV);
+        vertices[3] = new Vertex(new Vector3(-5,7,0), 0, 0, 0, singleU * x, singleV * y + singleV);
+        
+        //Need to set the vertices into the geometry, then specify the faces that make up
+        //the geometry model TODO: Talk about face normals.
+        playingCardGeometry.SetVertices(vertices);
+        playingCardGeometry.SetFrontMaterial(new TextureMaterial("cardssm.jpg", 806, 324));
+        playingCardGeometry.SetBackMaterial(new TextureMaterial("cardssm_back.jpg", 806, 324));
+        
+        playingCardGeometry.AddFace(3, 0, 1);
+        playingCardGeometry.AddFace(3, 1, 2);
+        
+        var sceneNode = new SceneNode(playingCardGeometry);
+        parentNode.AddChild(sceneNode);
+        
+        //Want to choose a random rotation for each of the 3 axis, so each time 
+        //the card is animated it will move in different directions than the other
+        //cards
+        var rotX = 2/180 * Math.PI + Math.random() * 5/180 * Math.PI;
+        var rotY = 2/180 * Math.PI + Math.random() * 5/180 * Math.PI;
+        var rotZ = 2/180 * Math.PI + Math.random() * 5/180 * Math.PI;
+        
+        sceneNode.SetLocalTransform(Matrix4x4_TranslateMatrix(xRand, yRand, zRand));
+        var m = Matrix4x4_RotateYAroundPoint(rotY, new Vector3(xRand,yRand,zRand));
+        m = m.Multiply(Matrix4x4_RotateZAroundPoint(rotZ, new Vector3(xRand,yRand,zRand)));
+        m = m.Multiply(Matrix4x4_RotateXAroundPoint(rotX, new Vector3(xRand,yRand,zRand)));
+        
+        return new PlayingCard(sceneNode, m);
+    }    
+    
+    function PlayingCard(sceneNode, rotationMatrix)
+    {
+        this._rotationMatrix = rotationMatrix;
+        this._sceneNode = sceneNode;
+    }
+    
+    PlayingCard.prototype = 
+    {
+        UpdateCard: function()
+        {
+            //Move playing card to new position
+            this._sceneNode.SetLocalTransform(this._sceneNode.GetLocalTransform().Multiply(this._rotationMatrix));
+        }
+    }
+    
+    var g_cards = new Array(52);
+    function AnimateCards(frameCount)
+    {
+        for(var i=0; i<26; ++i)
+        {
+            g_cards[i].UpdateCard();
+        }                       
+        g_viewPort.Render();
+    }
+    
+    function AnimateCubes(frameCount)
+    {        
+        //Move each of the subes
+        var p = Matrix4x4_RotateZAroundOrigin((frameCount*3 * Math.PI / 360)).Multiply(Matrix4x4_TranslateMatrix(0,0,35));
+        g_viewPort.GetSceneGraph().Root.ChildNodes[0].ChildNodes[0].ChildNodes[0].SetLocalTransform(p);
+
+        var x = Matrix4x4_RotateYAroundOrigin((frameCount*3 * Math.PI / 360)).Multiply(Matrix4x4_TranslateMatrix(20, 0, 0));
+        g_viewPort.GetSceneGraph().Root.ChildNodes[0].ChildNodes[0].SetLocalTransform(x);
+
+        var w = Matrix4x4_RotateYAroundOrigin((frameCount*2 * Math.PI / 360)).Multiply(Matrix4x4_RotateXAroundOrigin(frameCount * Math.PI / 360));
+        
+        //This will move the cube towards the camera, we could also move the camera twoards the
+        //cubes if we wanted
+        w = w.Multiply(Matrix4x4_TranslateMatrix(0,0,(frameCount * -0.25) % 80));
+        g_viewPort.GetSceneGraph().Root.ChildNodes[0].SetLocalTransform(w);
+                        
+        g_viewPort.Render();
+    }
+    
+    //Called each time a frame completes
+    function OnDemoFrameCompleted(frameCount)
+    {
+        if(g_showCards)
+        {
+            AnimateCards(frameCount);
+        }
+        else
+        {
+            AnimateCubes(frameCount);
+        }
+    }
+    
+    var g_viewPort = null; 
+    function CreatePlayingCards()
+    {        
+        var playingCard;
+        
+        //Create a scenegraph that contains all of the geometry
+        var sceneGraph = new SceneGraph();
+        for(var suit=0; suit<4; ++suit)
+        {
+            for(var cardInSuit=0; cardInSuit<13; ++cardInSuit)
+            {
+                playingCard = CreateCard(cardInSuit, suit, sceneGraph.Root);
+                g_cards[(suit * 13 + cardInSuit)] = playingCard;
+            }
+            if(suit>0) break;
+        }
+
+        //Need to create a viewport and render the contents
+        var camera = new Camera(new Vector3(0, 0, -100),
+                                new Vector3(0, 0, 0),
+                                new Vector3(0, 1, 0),
+                                Math.PI / 4);
+        g_viewPort = new Viewport(0, 0, 800, 800, camera);
+        g_viewPort.SetSceneGraph(sceneGraph);
+        
+        //Move objects into view of the camera 
+        sceneGraph.Root.SetLocalTransform(Matrix4x4_TranslateMatrix(0,0,10));
+    }
+    
+    function CreateCubes()
+    {
+        //* Draw a cube
+        //* 
+        //*            -5,5,5 (7)
+        //*              X---------X 5,5,5 (5)
+        //*             /|        /|
+        //*            / |       / |
+        //*           /  |      /  |
+        //*(3)-5,5,-5X---X(6)--X---X 5,-5,5 (4)
+        //*          |  /      |  /
+        //*          | /       | /
+        //*          |/        |/
+        //*          X---------X
+        //*      -5,-5,-5(0) 5,-5,-5(1)
+        //* 
+        
+           
+        var vertices = new Array();
+        var cubeModel = GeometryManager_GetInstance().CreateGeometry();
+        
+        //Not sharing vertices, since we are mapping the texture and
+        //sharing could make the textures map incorrectly
+        
+        //Front Face
+        vertices[vertices.length] = new Vertex(new Vector3(-5,-5,-5), 255, 0, 0, 0.0, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(5,-5,-5), 255, 0, 0, 0.25, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(5,5,-5), 255, 0, 0, 0.25, 0.33);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,5,-5), 255, 0, 0, 0.0, 0.33);
+        
+        //Right Face
+        vertices[vertices.length] = new Vertex(new Vector3(5,-5,-5), 0, 255, 0, 0.25,0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(5,-5,5), 0, 255, 0, 0.5, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(5,5,5), 0, 255, 0, 0.5, 0.33);
+        vertices[vertices.length] = new Vertex(new Vector3(5,5,-5), 0, 255, 0, 0.25, 0.33);
+        
+        //Back Face
+        vertices[vertices.length] = new Vertex(new Vector3(5,-5,5), 0, 0, 255, 0.5, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,-5,5), 0, 0, 255, 0.75, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,5,5), 0, 0, 255, 0.75, 0.33);
+        vertices[vertices.length] = new Vertex(new Vector3(5,5,5), 0, 0, 255, 0.5, 0.33);
+        
+        //Bottom Face
+        vertices[vertices.length] = new Vertex(new Vector3(-5,-5,-5), 10, 100, 200, 0.75, 0.33);
+        vertices[vertices.length] = new Vertex(new Vector3(5,-5,-5), 10, 100, 200, 1.0, 0.33);
+        vertices[vertices.length] = new Vertex(new Vector3(5,-5,5), 10, 100, 200, 1.0, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,-5,5), 10, 100, 200, 0.75, 0.66);
+ 
+        //Top Face
+        vertices[vertices.length] = new Vertex(new Vector3(-5,5,-5), 95,0,95, 0.0, 0.33);
+        vertices[vertices.length] = new Vertex(new Vector3(5,5,-5), 95,0,95, 0.25, 0.33);
+        vertices[vertices.length] = new Vertex(new Vector3(5,5,5), 95,0,95, 0.25, 0.0);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,5,5), 95,0,95, 0.0, 0.0);  
+        
+        //Left Face
+        vertices[vertices.length] = new Vertex(new Vector3(-5,5,-5), 0,40,0, 0.25, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,5,5), 0,40,0, 0.0, 0.66);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,-5,5), 0,40,0, 0.0, 1.0);
+        vertices[vertices.length] = new Vertex(new Vector3(-5,-5,-5), 0,40,0, 0.25, 1.0);
+        
+        cubeModel.SetVertices(vertices);
+        
+        if(g_solidCube)
+        {
+            cubeModel.SetFrontMaterial(new SolidMaterial());
+        }
+        else
+        {
+            cubeModel.SetFrontMaterial(new TextureMaterial("cubefaces.jpg", 1040, 584));
+        }
+        
+        //Front Face - face normals are determined using the left hand rule, so pass in vertices
+        //in a clockwise order to set the face normal to point towards the camera
+        cubeModel.AddFace(0, 3, 2);
+        cubeModel.AddFace(0, 2, 1);
+        
+        //Right Face
+        cubeModel.AddFace(4, 7, 6);
+        cubeModel.AddFace(4, 6, 5);
+        
+        //Back Face
+        cubeModel.AddFace(8, 11, 10);
+        cubeModel.AddFace(8, 10, 9);
+        
+        //Bottom Face
+        cubeModel.AddFace(12, 13, 14);
+        cubeModel.AddFace(12, 14, 15);
+                
+        //Top Face
+        cubeModel.AddFace(16, 19, 18);
+        cubeModel.AddFace(16, 18, 17);
+        
+        //Left Face
+        cubeModel.AddFace(23, 22, 21);
+        cubeModel.AddFace(23, 21, 20);        
+      
+        var sceneGraph = new SceneGraph();
+        
+        //Will add three cubes to the scene graph
+        var node1 = new SceneNode(cubeModel);
+        sceneGraph.Root.AddChild(node1);
+        
+        var node2 = new SceneNode(cubeModel.Clone());
+        node1.AddChild(node2);
+        
+        var node3 = new SceneNode(cubeModel.Clone());
+        node2.AddChild(node3);
+
+        sceneGraph.Root.SetLocalTransform(Matrix4x4_TranslateMatrix(0,0,10));
+        
+        //Need to create a viewport and render the contents
+        var camera = new Camera(new Vector3(0, 0, -100),
+                                new Vector3(0, 0, 0),
+                                new Vector3(0, 1, 0),
+                                Math.PI / 4);
+        g_viewPort = new Viewport(0, 0, 600, 600, camera);
+        g_viewPort.SetSceneGraph(sceneGraph);
+    }
+
+    function pageLoaded()
+    {
+        //Parse the querystring to see which demo we want
+        if(window.location.href.indexOf('cards=yes') != -1)
+        {
+            g_showCards = true;
+        }
+        else
+        {
+            if(window.location.href.indexOf('solidcubes') != -1)
+            {
+                g_solidCube = true;
+            }
+        }
+        
+        //As soon as the page is loaded we will create the silverlight control
+        //then once this control loads we will create all of the Javascript goodness
+        Silverlight.createObjectEx(
+            {source: 'Kit3DCanvas.xaml', 
+             parentElement:document.getElementById('silverlightControl'), 
+             id:'Ag1', 
+             properties:{width:'600', 
+                         height:'600', 
+                         background:'#fff0f0f0', 
+                         isWindowless:'true', 
+                         version:'0.90.0'}, 
+             events:{onError:null, 
+                     onLoad:null}, 
+                     context:null});
+    }
+   
+    var g_showCards = false;
+    var g_solidCube = false;
+    
+    //Called once the Silverlight control is loaded
+    function onCanvasLoaded(sender, eventArgs)
+    {        
+        //Need to call this once to initialize it, otherwise
+        //elements cannot be added to the silverlight host.
+        XamlFactory_GetInstance(sender);
+       
+        //Create the content for the demo we want to show
+        if(g_showCards)
+        {
+            CreatePlayingCards();
+        }
+        else
+        {
+            CreateCubes();
+        }
+        
+        //Start the animation, we also need to set the method we want
+        //to call each time a frame completes, this will be used to
+        //animate our models in some way
+        AnimationManager_GetInstance().SetOnFrameCompleteCallback(OnDemoFrameCompleted);
+        AnimationManager_GetInstance().Start();
+        AnimationManager_GetInstance().ShowFrameRateCounter(false);
+    }
+
+    </script>
+    
+
+</head>
+
+<body onload="pageLoaded();">
+    <div id="silverlightControl" style="width:600px; height:600px;">
+    </div>
+
+</body>
+</html>

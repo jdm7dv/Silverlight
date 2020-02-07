@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ArcGISSilverlightSDK.QueryLayer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS;assembly=ESRI.ArcGIS"
+    xmlns:esriWidgets="clr-namespace:ESRI.ArcGIS.Widgets;assembly=ESRI.ArcGIS.Widgets"
+    xmlns:esriConverters="clr-namespace:ESRI.ArcGIS.ValueConverters;assembly=ESRI.ArcGIS"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <Grid.Resources>
+            <esriConverters:DictionaryConverter x:Name="MyDictConverter" />
+        </Grid.Resources>
+        
+        <esri:Map x:Name="MyMap"  >
+            <esri:Map.Layers>
+                <esri:ArcGISTiledMapServiceLayer ID="StreetMapLayer" 
+                    Url="http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"/>
+                
+                <esriWidgets:QueryLayer ID="MyQueryLayer" 
+                    Url="http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Census_USA/MapServer/5"
+                    Where="STATE_NAME Like '%I%'" Color="Azure" Opacity="0.5">
+                    <esriWidgets:QueryLayer.OutFields>
+                        <sys:String>STATE_NAME</sys:String>
+                        <sys:String>SUB_REGION</sys:String>
+                    </esriWidgets:QueryLayer.OutFields>                    
+                    <esriWidgets:QueryLayer.MapTip>
+						<Grid Background="LightYellow">
+							<StackPanel Orientation="Vertical" Margin="5">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="State Name: " FontWeight="Bold" />
+									<TextBlock Text="{Binding Converter={StaticResource MyDictConverter}, ConverterParameter=STATE_NAME, Mode=OneWay}" />
+								</StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="Sub Region: " FontWeight="Bold" />
+									<TextBlock Text="{Binding Converter={StaticResource MyDictConverter}, ConverterParameter=SUB_REGION, Mode=OneWay}" />
+								</StackPanel>
+							</StackPanel>
+							<Border BorderBrush="Black" BorderThickness="1" />
+						</Grid>
+					</esriWidgets:QueryLayer.MapTip>
+                </esriWidgets:QueryLayer>
+            
+            </esri:Map.Layers>
+        </esri:Map>
+        
+    </Grid>
+</UserControl>

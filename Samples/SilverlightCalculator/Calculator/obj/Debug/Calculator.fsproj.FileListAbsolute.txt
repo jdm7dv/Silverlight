@@ -1,0 +1,17 @@
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\SilverlightCalc.XML
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\Calculator.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\FSharp.Core.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\FSharp.Core.xml
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\de\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\es\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\fr\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\it\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\ja\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\ko\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\ru\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\zh-Hans\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\bin\Debug\zh-Hant\FSharp.Core.resources.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\obj\Debug\Calculator.dll
+C:\Users\Jonathan_Moore\Desktop\SilverlightCalculator\Calculator\obj\Debug\Calculator.pdb

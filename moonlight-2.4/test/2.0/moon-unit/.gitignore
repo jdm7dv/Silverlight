@@ -1,0 +1,15 @@
+/*.dll
+/*.dll.mdb
+/site
+/App.xaml.g.cs
+/BasicCanvas.xaml.g.cs
+/BindingXaml.xaml.g.cs
+/AppManifest.xaml
+/moon-unit.g.resources
+/moon-unit.sources
+/moon-unit.xap
+/*.pidb
+/*.suo
+/*.user
+/obj
+/Bin

@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="SimpleXpsViewer.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:theme="clr-namespace:System.Windows.Controls.Theming;assembly=System.Windows.Controls.Theming.Toolkit"
+    xmlns:controls="clr-namespace:SimpleXpsViewer"
+    xmlns:dark="clr-namespace:System.Windows.Controls.Theming;assembly=System.Windows.Controls.Theming.ExpressionDark"     
+    Foreground="#AAFFFFFF"
+    FontSize="10">
+    <dark:ExpressionDarkTheme>
+    <Grid Background="#707070">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <Canvas x:Name="contentPanel" Grid.Row="1" Margin="16">
+            <Grid x:Name="page" Cursor="Hand" Opacity="0">
+                <Grid.Resources>
+                    <Storyboard x:Name="sbShowPage" Duration="0:0:1.5">
+                        <DoubleAnimation Storyboard.TargetName="page" Storyboard.TargetProperty="Opacity" From="0" To="1" />
+                    </Storyboard>
+                </Grid.Resources>
+                <Grid.RenderTransform>
+                    <ScaleTransform x:Name="scale"/>
+                </Grid.RenderTransform>
+                <!-- page shadow -->
+                <!--Rectangle Fill="#303030" Margin="12,12,-12,-12" /-->
+                <Border x:Name="pageContents" Background="White" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </Border>
+            </Grid>
+        </Canvas>
+        <Grid Background="#FF303030" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Silverlight XPS Viewer" Margin="3"/>
+            <StackPanel x:Name="pnl" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <controls:ComboBoxFix x:Name="cmbSelect" BorderThickness="0" Margin="0,1,0,1" SelectionChanged="cmbSelect_SelectionChanged">
+                    <controls:ComboBoxFix.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </controls:ComboBoxFix.ItemTemplate>
+                </controls:ComboBoxFix>
+                <Button x:Name="btnOpen" Content="From Disk..." Width="80" Click="btnOpen_Click" />
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="controlPanel" Grid.Row="2" Background="#CC404040">
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnPrev" Content="&lt;" Width="24" Click="btnPrev_Click" />
+                    <Button x:Name="btnNext" Content="&gt;" Width="24" Click="btnNext_Click" />
+                    <TextBox x:Name="txtPage" Text="1" Width="30" TextAlignment="Right" Background="Transparent" BorderBrush="Transparent" KeyDown="txtPage_KeyDown" TextChanged="txtPage_TextChanged" />
+                    <TextBlock x:Name="txtTotal" Text="/ 1" Width="36" VerticalAlignment="Center" Margin="0,4,0,4" />
+                    <Button x:Name="btnZoomOut" Content="-" Width="24" Click="btnZoomOut_Click" />
+                    <Button x:Name="btnZoomIn" Content="+" Width="24" Click="btnZoomIn_Click"/>
+                    <TextBlock x:Name="txtZoom" Text="100%" VerticalAlignment="Center" Width="32" TextAlignment="Center" Margin="4" />
+                </StackPanel>
+                <TextBlock x:Name="txtStatus" HorizontalAlignment="Center" Text="Status: Ready" Margin="1,8,0,-1" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+        </dark:ExpressionDarkTheme>
+</UserControl>

@@ -1,0 +1,17 @@
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\AppManifest.xaml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\favicon.ico
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\FlipClockApp.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\FlipClockApp.xap
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\TestPage.html
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\Microsoft.Expression.Interactions.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\System.Windows.Interactivity.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\System.Windows.Interactivity.xml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Release\Microsoft.Expression.Interactions.xml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\App.g.cs
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\FlipClock.g.cs
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\Flipper.g.cs
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\MainPage.g.cs
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\FlipClockApp.g.resources
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\FlipClockApp.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Release\XapCacheFile.xml

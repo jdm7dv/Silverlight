@@ -1,0 +1,145 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2 – Hardware Interaction" />
+      <MSHelp:RLTitle Title="Exercise 2 – Hardware Interaction" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2 – Hardware Interaction</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Webcam in Silverlight Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2 – Hardware Interaction</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>During exercise 2, we will activate webcam capture. This will involve retrieving the default visual input devices of the host environment, checking if the devices can be initialized correctly, instantiating the <b>CaptureSource</b>, hook up to devices, starting and stopping capture, and setting a <b>VideoBrush</b><b>Source</b> to the <b>CaptureSource</b>. Next, we will asynchronously capture an image from the video stream. Finally, we will open a <b>ChildWindow</b> dialog and display a still of the animation and the pixel shader effects. We will implement Print functionality to print this captured still to a print device via the Silverlight plugin.</p>
+        <a name="_Toc256175676" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 - Activate / Deactivate WebCam capture</b>
+        </p>
+        <p>Silverlight 4 has the ability to capture hardware device sources, including video sources such as webcams and audio sources such as microphones. In this task we will activate webcam capture – this will involve retrieving the default devices, checking if the devices can be initialized correctly, instantiating the <b>CaptureSource</b>, hook up to devices, starting and stopping capture and setting a <b>VideoBrush</b><b>Source</b> to the <b>CaptureSource</b>.</p>
+        <p>The <b>System.Windows.Media</b> namespace exposes several classes for hardware capture. The core class is <b>CaptureSource</b>, which<b> </b>points to specific devices and starts and stops capture. The<b> CaptureDeviceConfiguration </b>class<b> </b>provides the <b>CaptureSource</b> with the configur<b> VideoCaptureDevice </b>a<b> AudioCaptureDevice. </b></p>
+        <p>A<b> VideoBrush </b>paints an area with video content – set its source property to point to the <b>CaptureSource</b>.</p>
+        <ol>
+          <li>Run the application and right click on the Plugin surface and click the Silverlight context menu to open the configuration dialog and see the Capture Device Configuration settings. This allows you to choose the default audio and video data source devices.<p><img src="images\317fd596-8216-4f70-ae8a-f2f5b930a4be.png" /></p><p><b>Figure 1</b><br /><i>Webcam/Mic Tab in Silverlight Configuration Screen</i></p></li>
+          <li>In MainPage.xaml.cs, Declare a <b>CaptureSource </b>object instance<b> </b>– this is the core object that we will use to interact with device capture.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>CaptureSource cs = null;</pre></td></tr></table></span></div></li>
+          <li>Add code to the <b>btnStart_Click</b> event handle to toggle the button text according to state, and set the “Webcam off” state <b>Fill</b> of the <b>Path</b> to an <b>ImageBrush</b> retrieved from the UserControl’s <b>Resources</b> dictionary.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (btnStart.Content.ToString() == "Webcam On"){btnStart.Content = "Webcam Off";// TODO: Check devices using CaptureDeviceConfigurationobject}else{btnStart.Content = "Webcam On";TO_FILL.Fill = this.Resources["imageBrush"] as ImageBrush;}</pre></td></tr></table></span></div></li>
+          <li>Next, add the following code into btnStart_Click to check if the devices can be accessed and ask the user if it is OK to use the devices using the <b>CaptureDeviceConfiguration</b> object. This lab only uses the webcam, however audio devices can also be used. Add the code within the CaptureDeviceConfiguration "if" statement.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (CaptureDeviceConfiguration.AllowedDeviceAccess ||    CaptureDeviceConfiguration.RequestDeviceAccess()){      VideoCaptureDevice vcd =    CaptureDeviceConfiguration.GetDefaultVideoCaptureDevice();      if (null != vcd) //Only check for webcam for this lab      {      }      else        MessageBox.Show("Error initializing Webcam or Mic.\nPlease install device drivers and try again");}</pre></td></tr></table></span></div></li>
+          <li>Instantiate the <b>CaptureSource</b>, set the video device retrieved from <b>CaptureDeviceConfiguration</b>  and <b>Start</b> the capture process. Add the following code into the <b>if (null != vcd)</b> block within btnStart_Click:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>cs = new CaptureSource();cs.VideoCaptureDevice = vcd;cs.Start();</pre></td></tr></table></span></div></li>
+          <li>Create a <b>VideoBrush</b> and set its source to the <b>CaptureSource</b>. Set the <b>Path</b> in the UI to <b>Fill</b> with the VideoBrush when the webcam is toggled on.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>VideoBrush videoBrush = new VideoBrush();videoBrush.Stretch = Stretch.Uniform;videoBrush.SetSource(cs);TO_FILL.Fill = videoBrush;</pre></td></tr></table></span></div></li>
+          <li>If the button is toggled off and the capture source was previously initialized, stop the capture by adding the following code into the last <b>else</b> block within btnStart_Click:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (null != cs)cs.Stop();</pre></td></tr></table></span></div></li>
+          <li>The complete event handler should look as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void btnStart_Click(object sender, RoutedEventArgs e){  if (btnStart.Content.ToString() == "Webcam On")  {    btnStart.Content = "Webcam Off";    if (CaptureDeviceConfiguration.AllowedDeviceAccess ||    CaptureDeviceConfiguration.RequestDeviceAccess())    {      VideoCaptureDevice vcd =    CaptureDeviceConfiguration.GetDefaultVideoCaptureDevice();      if (null != vcd)      {        cs = new CaptureSource();        cs.VideoCaptureDevice = vcd;        cs.Start();        VideoBrush videoBrush = new VideoBrush();        videoBrush.Stretch = Stretch.Uniform;        videoBrush.SetSource(cs);        TO_FILL.Fill = videoBrush;      }      else        MessageBox.Show("Error initializing Webcam or Mic.\nPlease install      device drivers and try again");    }  }  else  {    btnStart.Content = "Webcam On";    if (null != cs)      cs.Stop();    TO_FILL.Fill = this.Resources["imageBrush"] as ImageBrush;  }}</pre></td></tr></table></span></div></li>
+          <li>Run the application. Click the Button labeled “Webcam On”. A permission elevation request dialog is displayed. Click yes to proceed.<p><img src="images\93db99c3-274e-4103-bab7-8c098e8f65e4.png" /></p><p><b>Figure 2</b><br /><i>Webcam/Mic Usage Approval Dialog</i></p></li>
+          <li>Notice that the Path is filled with real-time video captured from the Webcam or emulator! </li>
+        </ol>
+        <a name="_Toc256175677" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Capture an Image Snapshot</b>
+        </p>
+        <p>Now that we can enable webcam capture, we can capture an image snapshot from the video.</p>
+        <ol>
+          <li>Add an image element to CapturedImage.xaml:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Image x:Name="img" Stretch="Uniform"/&gt;</pre></td></tr></table></span></div></li>
+          <li>In MainPage.xaml.cs, check with the <b>CaptureSource</b><b>State</b> that the Webcam is actually running and capturing a video stream – check this against the <b>CaptureState</b> enum – <b>Failed, Started, Stopped.  </b>Asynchronously capture an image from the video stream via <b>CaptureSource's CaptureImageAsync() </b>method.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void btnCapture_Click(object sender, RoutedEventArgs e){    if (null != cs)    {        if (cs.State == CaptureState.Started)        {            cs.CaptureImageCompleted +=               new EventHandler&lt;CaptureImageCompletedEventArgs&gt;(                  cs_CaptureImageCompleted);            cs.CaptureImageAsync();        }        else        {            MessageBox.Show("Start capture from Webcam and try again!");        }    }    else        MessageBox.Show("Start capture from Webcam and try again!");}</pre></td></tr></table></span></div></li>
+          <li>In the cs_CaptureImageCompleted callback, set the source for the image in the <b>ChildWindow</b>. Indicate that the child window doesn’t have a Close button. Open the Child window in a modeless manner to display the image.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>void cs_CaptureImageCompleted(object sender,   CaptureImageCompletedEventArgs e){  // initialize the child window  CapturedImage ci = new CapturedImage();  ci.HasCloseButton = false;  ci.img.Source = e.Result;  ci.Show();  cs.CaptureImageCompleted -= new     EventHandler&lt;CaptureImageCompletedEventArgs&gt;(cs_CaptureImageCompleted);}</pre></td></tr></table></span></div></li>
+          <li>A<b> WritableBitmap</b> provides a BitmapSource that can be written to and updated. Run the application. Start animating the perspective transform and set a pixel shader. Notice how the capture Button opens a <b>ChildWindow</b> dialog and displays a still of the animation and the pixel shader effects. Click Close to close the <b>ChildWindow</b>. You can see that this is very visually impressive functionality.</li>
+        </ol>
+        <a name="_Toc256175678" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 – Printing</b>
+        </p>
+        <p>To complete hardware interaction picture, Silverlight 4 now comes with printer output support. This is provided via the <b>System.Windows.Printing </b>namespace, using the core class <b>PrintDocument</b>, which provides a print dialog and pages for printing from a Silverlight application.</p>
+        <p>In the CapturedImage.xaml.cs <b>ChildWindow </b>code behind, find the PrintButton_Click event handler. Instantiate a <b>PrintDocument</b> , attach an event handler for its PrintPage event, and set the PageVisual to print. Finally, call the Print method.</p>
+        <p>The<b> PrintDocument.PrintPage </b>event – occurs when the page is printing. It has a <b>PrintPageEventArgs</b> with the following properties: <b>PageVisual</b> – set the <b>UIElement</b> to print (in this case the Image element) , <b>HasMorePages</b> – a Boolean value – use to get or set whether there are more pages to print.</p>
+        <p><b>PrintDocument.Print()</b> – starts the printing process by opening the print dialog.</p>
+        <ol>
+          <li>Add the following to the Print button event handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>PrintDocument pd = new PrintDocument();pd.PrintPage += (s, args) =&gt;{    args.PageVisual = img;    args.HasMorePages = false;};pd.Print("SilverlightPrintJob");</pre></td></tr></table></span></div></li>
+          <li>Run the application. Start animating the perspective transform and set a pixel shader. Click the capture Button to open a <b>ChildWindow</b> dialog and display a still of the animation and the pixel shader effects. Click Print to print this captured still – The Silverlight plugin present you with a standard windows print dialog for selecting the output device, satisfying a core business case scenario.<p><img src="images\2f667391-0c5f-4b9d-bf34-d49028e5ff54.png" /></p><p><b>Figure 5</b><br /><i>Print Dialog</i></p></li>
+        </ol>
+        <br />
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

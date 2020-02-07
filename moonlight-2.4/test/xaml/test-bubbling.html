@@ -1,0 +1,433 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>event bubbling tests</title>
+  
+	<script src="../js/js/utils.js"></script>
+	<script src="../js/js/testplugin.js"></script>
+
+  <script type="text/xaml" id="TestXaml">
+    <Canvas xmlns="http://schemas.microsoft.com/client/2007"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            x:Name="root" Width="260" Height="200" Background="Orange" Loaded="OnLoaded">
+
+      <Canvas x:Name="AdvanceArea" MouseLeftButtonDown="AdvanceTest" Canvas.Left="200" Canvas.Top="10" Width="50" Height="50" Background="Red" />
+
+      <TextBlock x:Name="Log" Canvas.Left="270" Canvas.Top="0" Width="300" Height="200" FontSize="10" />
+    </Canvas>
+  </script>
+
+  <script type="text/javascript">
+
+    var testXamlFragment = '<Canvas xmlns="http://schemas.microsoft.com/client/2007" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="A"><Canvas x:Name="B"><Rectangle x:Name="C" Canvas.Left="50" Canvas.Top="50" Width="100" Height="100" Fill="Green" /></Canvas></Canvas>';
+
+    var mouseDownCount;
+
+    var token_to_remove;
+	var root = null;
+
+    function mouseLeftButtonDownCount (sender, args)
+    {
+        mouseDownCount ++;
+    }
+
+    // Test0 = ordering amongst listeners
+    var order = 0;
+    var handler1 = 0;
+    var handler2 = 0;
+
+    function mouseLeftButtonDownCount1 (sender, args)
+    {
+        handler1 = ++order;
+    }
+
+    function mouseLeftButtonDownCount2 (sender, args)
+    {
+        handler2 = ++order;
+    }
+    
+    function StartTest0 ()
+    {
+        var A = root.findName("A");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount1");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount2");
+    }
+
+    function FinishTest0 ()
+    {
+        Assert (handler1 == 1 && handler2 == 2);
+    }
+
+    // Test1 = click in the rectangle, there should be 3 mouseleftbuttondowns
+    // as the hierarchy isn't modified and no handlers are disabled.
+    function StartTest1 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest1 ()
+    {
+        Assert (mouseDownCount == 3);
+    }
+
+
+    // Test2 = add a handler to the element which is emitting the
+    // event.  The result should be 3, showing that the newly added
+    // handler is not invoked.
+    function AddHandler_and_mouseLeftButtonDownCount (sender, args)
+    {
+        var A = root.findName("A");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        mouseLeftButtonDownCount (sender, args);
+    }
+
+    function StartTest2 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "AddHandler_and_mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest2 ()
+    {
+        Assert (mouseDownCount == 3);
+    }
+
+    // Test3 = remove a handler from the element which is emitting the
+    // event.  The result should be 3, showing that the removed
+    // handler is not actually removed until after the emitting.
+    function RemoveHandler_and_mouseLeftButtonDownCount (sender, args)
+    {
+        var A = root.findName("A");
+        A.removeEventListener ("MouseLeftButtonDown", token_to_remove);
+        mouseLeftButtonDownCount (sender, args);
+    }
+
+    function StartTest3 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "RemoveHandler_and_mouseLeftButtonDownCount");
+        token_to_remove = A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest3 ()
+    {
+        Assert (mouseDownCount == 4);
+    }
+
+
+    // Test4 = add a handler to the parent of the element which is //
+    // emitting the event (when it has one already).  The result should
+    // be 4 because the new handler isn't added to the list of event
+    // listeners to call.
+    function AddHandlerParent_and_mouseLeftButtonDownCount (sender, args)
+    {
+        var B = sender.findName ("B");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        mouseLeftButtonDownCount (sender, args);
+    }
+
+    function StartTest4 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        C.addEventListener ("MouseLeftButtonDown", "AddHandlerParent_and_mouseLeftButtonDownCount");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest4 ()
+    {
+        Assert (mouseDownCount == 4);
+    }
+
+    // Test5 = remove a handler from the parent of the element which
+    // is emitting the event (when it has one already).  The result
+    // should be 5, because the handler is not removed until after
+    // emitting is complete.
+    function RemoveHandlerParent_and_mouseLeftButtonDownCount (sender, args)
+    {
+        var B = root.findName ("B");
+        B.removeEventListener ("MouseLeftButtonDown", token_to_remove);
+        mouseLeftButtonDownCount (sender, args);
+    }
+
+    function StartTest5 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        C.addEventListener ("MouseLeftButtonDown", "RemoveHandlerParent_and_mouseLeftButtonDownCount");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        token_to_remove = B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest5 ()
+    {
+        Assert (mouseDownCount == 5);
+    }
+
+
+    // Test6 = add a handler to the parent of the element which is
+    // emitting the event (when it doesn't have one already).  The result
+    // should be 3 because the newly added handler is not invoked.
+    function StartTest6 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        C.addEventListener ("MouseLeftButtonDown", "AddHandlerParent_and_mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest6 ()
+    {
+        Assert (mouseDownCount == 3);
+    }
+
+    // Test7 = remove the parent element from the xaml hierarchy in
+    // the child's handler.  The result should be 3 because the listeners
+    // are copied before emitting.
+    function RemoveParentElement (sender, args)
+    {
+        var A = root.findName ("A");
+        var B = root.findName ("B");
+        A.children.remove (B);
+    }
+
+    function StartTest7 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        C.addEventListener ("MouseLeftButtonDown", "removeParentElement");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest7 ()
+    {
+        Assert (mouseDownCount == 3);
+    }
+
+
+    // Test8 = splice in a new parent element between child and
+    // parent.  The result should be 3 because the hierarchy isn't walked
+    // during emitting, but before.
+
+    function SpliceParentElement (sender, args)
+    {
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+        var xaml = root.getHost().content.createFromXaml ('<Canvas xmlns="http://schemas.microsoft.com/client/2007" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="D"/>');
+        B.children.add (xaml);
+ 
+        var D = root.findName ("D");
+        D.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        B.children.remove(C);
+        D.children.add(C);
+    }
+
+    function StartTest8 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName ("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        C.addEventListener ("MouseLeftButtonDown", "SpliceParentElement");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest8 ()
+    {
+        Assert (mouseDownCount == 3);
+    }
+
+    // Test9 = clear the root canvas's children.  The result should be
+    // 3 because the list of listeners is copied before emitting.
+    function clearParentChildren (sender, args)
+    {
+        var A = root.findName("A");
+        A.children.clear ();
+    }
+
+    function StartTest9 ()
+    {
+        var A = root.findName("A");
+        var B = root.findName("B");
+        var C = root.findName ("C");
+
+        C.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        C.addEventListener ("MouseLeftButtonDown", "clearParentChildren");
+        B.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+        A.addEventListener ("MouseLeftButtonDown", "mouseLeftButtonDownCount");
+
+        mouseDownCount = 0;
+    }
+
+    function FinishTest9 ()
+    {
+        Assert (mouseDownCount == 3);
+    }
+
+
+    // harness foo
+
+    var Tests = [
+        { name:"Ordering", start: StartTest0, finish: FinishTest0 },
+
+        { name:"Baseline", start: StartTest1, finish: FinishTest1 },
+
+        { name:"AddElementHandler", start: StartTest2, finish: FinishTest2 },
+        { name:"RemoveElementHandler", start: StartTest3, finish: FinishTest3 },
+        { name:"AddParentHandler", start: StartTest4, finish: FinishTest4 },
+        { name:"RemoveParentHandler", start: StartTest5, finish: FinishTest5 },
+        { name:"AddParentHandler0", start: StartTest6, finish: FinishTest6 },
+
+        { name:"RemoveParentElement", start: StartTest7, finish: FinishTest7 },
+        { name:"SpliceParentElement", start: StartTest8, finish: FinishTest8 },
+
+        { name:"ClearParentChildren", start: StartTest9, finish: FinishTest9 }
+    ];
+    
+    var testNum = -1;
+    var failure = false;
+
+    function Assert (f)
+    {
+        var Log = root.findName ("Log");
+        Log.text += (f ? "PASSED" : "FAILED") + ".\n";
+        if (!f)
+            failure = true;
+    }
+
+    function AdvanceTest (sender, args)
+    {
+        if (testNum >= 0) {
+            var A = root.findName("A");
+            root.children.remove(A);
+            Tests[testNum].finish();
+        }
+        testNum ++;
+        if (testNum < Tests.length) {
+	    var xaml = root.getHost().content.createFromXaml (testXamlFragment);
+	    root.children.add (xaml);
+
+            var Log = root.findName ("Log");
+	    Log.text += "test ('" + Tests[testNum].name + "') ";
+
+	    Tests [testNum].start ();
+
+            window.setTimeout ("DoClicks ()", 50);
+        }
+        else {
+	    var AdvanceArea = root.findName ("AdvanceArea");
+            AdvanceArea.removeEventListener ("MouseLeftButtonDown", 0);
+            var Log = root.findName ("Log");
+	    Log.text += "Done.\n";
+
+	    FinishTest();
+        }
+    }
+
+    function OnLoaded(sender, args)
+    {
+        root = sender;
+
+        var Log = sender.findName ("Log");
+        Log.text += "Alternate between clicking green and red, starting with green.\n";
+    }
+
+    function DoClicks ()
+    {
+			TestHost.TranslateCoordinates = true;
+
+            // click in the green rectangle
+            TestHost.moveMouseLogarithmic (75, 75);
+            TestHost.mouseLeftClick ();
+
+            // click in the red rectangle
+            TestHost.moveMouseLogarithmic (205, 15);
+            TestHost.mouseLeftClick ();
+    }
+		      
+
+      QueueTestReady ();
+
+      function QueueTestReady ()
+      {
+          if (document.body == null || root == null || !TestPluginReady) {
+              window.setTimeout ("QueueTestReady ()", 100);
+              return;
+          }
+
+          window.setTimeout ("RunTest ()", 50);
+      }
+
+      function RunTest ()
+      {
+          AdvanceTest ();
+      }
+
+      function FinishTest ()
+      {
+	  	TestHost.LogResult (failure ? 0 : 1);
+          TestHost.SignalShutdown ();
+      }
+
+</script>
+</head>
+<body>
+
+  <div>
+    <embed type="application/x-silverlight" width="600" height="200"
+           id="_MoonlightControl" Source="#TestXaml"
+           style="position:absolute; left:0px; top:0px" >
+    </embed>
+  </div>
+
+</body>
+</html>

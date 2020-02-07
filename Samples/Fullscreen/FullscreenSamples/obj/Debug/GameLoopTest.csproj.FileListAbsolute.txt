@@ -1,0 +1,28 @@
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\Bin\Debug\GameLoopTest.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\Bin\Debug\GameLoopTest.pdb
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\Bin\Debug\GameLoopTest.xap
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\Bin\Debug\TestPage.html
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\App.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\Page.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\GameLoopTest.g.resources
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\GameLoopTest.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\GameLoopTest.pdb
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\Fullscreen1.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\Fullscreen2.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\GameLoopTest\GameLoopTest\obj\Debug\PageNavigator.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\TestPage.html
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\App.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\Fullscreen1.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\Fullscreen2.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\FullscreenSamples.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\FullscreenSamples.pdb
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\FullscreenSamples.xap
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\FullscreenSamples.g.resources
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\FullscreenSamples.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\FullscreenSamples.pdb

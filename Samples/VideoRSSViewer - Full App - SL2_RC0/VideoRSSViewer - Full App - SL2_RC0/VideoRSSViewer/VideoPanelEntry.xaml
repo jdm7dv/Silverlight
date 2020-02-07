@@ -1,0 +1,187 @@
+﻿<UserControl x:Class="VideoRSSViewer.VideoPanelEntry"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="100" Height="100" RenderTransformOrigin="0.5,0.5" Canvas.Left="0" Canvas.Top="0">
+    <UserControl.RenderTransform>
+        <ScaleTransform ScaleX="1" ScaleY="1" x:Name="rootScaleTransform"/>
+    </UserControl.RenderTransform>
+    <Canvas  Width="100" Height="100" x:Name="vi" >
+        <Canvas.Resources>
+            <Storyboard x:Name="MouseEnterStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.2"  KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="MouseLeaveStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="HorizontalScrollStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="(Canvas.Left)">
+                    <SplineDoubleKeyFrame x:Name="HorizontalScrollKeyFrame" KeyTime="00:00:1" Value="0" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="VerticalScrollStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="(Canvas.Top)">
+                    <SplineDoubleKeyFrame x:Name="VerticalScrollKeyFrame" KeyTime="00:00:1" Value="0" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="MouseDownStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootScaleTransform" Storyboard.TargetProperty="(ScaleTransform.ScaleX)">
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.05" Value="0.7"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.3" Value="0.9"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.45" Value="0.825"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.65" Value="0.865"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.7" Value="0.85"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootScaleTransform" Storyboard.TargetProperty="(ScaleTransform.ScaleY)">
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.1" Value="0.7"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.25" Value="0.9"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.55" Value="0.825"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.6" Value="0.865"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.7" Value="0.85"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="MouseUpStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootScaleTransform" Storyboard.TargetProperty="(ScaleTransform.ScaleX)">
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.05" Value="1.15"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.3" Value="0.95"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.45" Value="1.025"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.65" Value="0.985"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.7" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootScaleTransform" Storyboard.TargetProperty="(ScaleTransform.ScaleY)">
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.1" Value="1.15"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.25" Value="0.95"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.55" Value="1.025"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.6" Value="0.985"/>
+                    <SplineDoubleKeyFrame KeySpline="0.5,0 0.5,1" KeyTime="00:00:0.7" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="ShowDragAndDropButtonStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="dragAndDropButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="HideDragAndDropButtonStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="dragAndDropButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="AddDragAndDropButtonFaceStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="addButtonFace" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="moveButtonFace" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="MoveDragAndDropButtonFaceStoryboard">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="addButtonFace" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="moveButtonFace" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1" KeySpline="0,0.5 0.5,1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+        </Canvas.Resources>
+        <!--<Canvas.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                <SkewTransform AngleX="0" AngleY="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform X="0" Y="0"/>
+            </TransformGroup>
+        </Canvas.RenderTransform>-->
+        <Image Clip="M0.5,5.5 C0.5,2.7385763 2.7385763,0.5 5.5,0.5 L94.5,0.5 C97.261424,0.5 99.5,2.7385763 99.5,5.5 L99.5,94.5 C99.5,97.261424 97.261424,99.5 94.5,99.5 L5.5,99.5 C2.7385763,99.5 0.5,97.261424 0.5,94.5 z" x:Name="entryImage" Width="99.338" Height="100" Stretch="UniformToFill" Canvas.Left="0.227"/>
+        <Rectangle Fill="#77000000" RadiusX="5" RadiusY="5" Width="99.338" Height="100" Canvas.Left="0.228" x:Name="rectangle"/>
+        <Canvas Clip="M0,5C0.5,2.7385763,2.7385763,0.5,5.5,0.5L74.5,0.5C77.261424,0.5,79.5,2.7385763,79.5,5.5L79.5,74.5C79.5,77.261424,77.261424,79.5,74.5,79.5L5.5,79.5C2.7385763,79.5,0.5,77.261424,0.5,74.5z" Width="81.041" Height="81.997" Canvas.Left="9.042" Canvas.Top="10.005">
+            <TextBlock x:Name="titleTextShadow" FontFamily="Verdana" FontSize="10" Foreground="#FF000000" Text="Title" TextWrapping="Wrap" Width="80" Height="80" Canvas.Left="0.708" Canvas.Top="0.998"/>
+		    <TextBlock x:Name="titleText" FontFamily="Verdana" FontSize="10" Foreground="White" Width="80" Height="80" TextWrapping="Wrap" Text="Title"/>
+	    </Canvas>
+        <Rectangle x:Name="backgroundRect_Copy" RadiusX="5" RadiusY="5" Width="88.166" Height="48.76" RenderTransformOrigin="0.5,0.5" Canvas.Left="6.002" Canvas.Top="6.73">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.529,0.118" StartPoint="0.529,1.07">
+                    <GradientStop Color="#03FFFFFF" Offset="0"/>
+                    <GradientStop Color="#3DFFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="-0.107"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="-0.081"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Canvas Opacity="0" x:Name="dragAndDropButton" Width="40.249" Height="40.249" Canvas.Left="77" Canvas.Top="77.751" IsHitTestVisible="False">
+            <Ellipse Width="40.249" Height="40.249">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.301,0.322">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.035" ScaleY="1.035"/>
+                                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform X="-0.033" Y="-0.03"/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                        <GradientStop Color="#FFE1F26D" Offset="0.755"/>
+                        <GradientStop Color="#FF5C670F" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="33.61" Height="29.874" RenderTransformOrigin="0.5,0.5" Canvas.Left="3.144" Canvas.Top="9.625">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.59,0.191" StartPoint="0.55,0.66">
+                        <GradientStop Color="#00FFFFFF" Offset="0"/>
+                        <GradientStop Color="#6DFFFFFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <Path Stretch="Fill" x:Name="addButtonFace" Width="28.75" Height="29.006" Data="M14.028549,-1.5632271 L13.545938,7.4366356 25.61121,7.6241327 25.128599,11.74907 13.545938,11.374075 15.502607,20.19094 7.7546075,19.99925 8.7198293,11.561573 -2.1389153,12.124064 -2.1389153,7.4366356 8.4785238,7.8116298 7.5133021,-1.37573 z" Canvas.Left="5.75" Canvas.Top="4.749">
+                <Path.Fill>
+                    <RadialGradientBrush GradientOrigin="0.301,0.322">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.035" ScaleY="1.035"/>
+                                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform X="-0.022" Y="-0.205"/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF8F9BDF" Offset="0"/>
+                        <GradientStop Color="#FF353A57" Offset="1"/>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Opacity="0" Stretch="Fill" x:Name="moveButtonFace" Width="35" Height="24.25" Canvas.Left="2.5" Canvas.Top="7.499" Data="M0.74130428,0.3125 L0.74130427,7.25 21.493479,7.0625 21.493479,12.3125 0.74130427,11.75 0.5,18.5 -12.289131,9.5 z">
+                <Path.Fill>
+                    <RadialGradientBrush GradientOrigin="0.301,0.322">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.035" ScaleY="1.035"/>
+                                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform X="-0.022" Y="-0.205"/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF8F9BDF" Offset="0"/>
+                        <GradientStop Color="#FF353A57" Offset="1"/>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+        </Canvas>
+    </Canvas>
+</UserControl>

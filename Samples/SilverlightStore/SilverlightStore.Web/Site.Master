@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" EnableViewState="false" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SilverlightStore.Web.Site" %>
+<%@ Register Assembly="System.Web.DomainServices.WebControls" Namespace="System.Web.DomainServices.WebControls" TagPrefix="ria" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Silverlight Store</title>
+    <link href="Static/Site.css" rel="Stylesheet" />
+    <script type="text/javascript" src="Static/Silverlight.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div id="head">
+            <h1>Silverlight Store</h1>
+        </div>
+        <div>
+            <form runat="server">
+            <object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="100%" height="640px">
+                <param name="source" value="ClientBin/SilverlightStore.xap" />
+                <param name="onError" value="onSilverlightError" />
+                <param name="background" value="white" />
+                <param name="minRuntimeVersion" value="3.0.40611.0" />
+                <param name="initParams" value="DeepLink=<%= this.Server.UrlEncode(this.Request.QueryString["Name"]) %>" />
+                <param name="autoUpgrade" value="true" />
+                <div class="install-prompt">
+                    For the best shopping experience, install the latest version of Silverlight <a href="http://www.microsoft.com/silverlight/resources/install.aspx?v=3">
+                        here</a>.
+                    <br />
+                    <a href="http://www.microsoft.com/silverlight/resources/install.aspx?v=3">
+                        <img id="Img1" src="~/Static/Images/install-silverlight.png" width="316" height="127"
+                            alt="Click here to install Silverlight" runat="server" />
+                    </a>
+                </div>
+                <asp:ContentPlaceHolder ID="SilverlightDownLevelContent" runat="server" />
+            </object>
+            <iframe id="_sl_historyFrame" style="display: none;"></iframe>
+            </form>
+        </div>
+        <div id="footer">
+            <h2>SEO Links</h2>
+            <ul>
+                <li><a href="~/Sitemap.aspx" target="_blank" runat="server">Sitemap</a></li>
+                <li><a href="~/Robots.txt" target="_blank" runat="server">Robots</a></li>
+            </ul>
+            <p class="super">
+                <strong>Disclaimer:</strong> This application contains sample data concerning Microsoft
+                products that may not be up-to-date. It's intended to demonstrate what you can do
+                using Silverlight and ASP.NET technologies and is not an offer of these different
+                Microsoft products. Visit <a href="http://www.microsoftstore.com/">http://www.microsoftstore.com/</a>
+                if you're looking to purchase Microsoft products.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

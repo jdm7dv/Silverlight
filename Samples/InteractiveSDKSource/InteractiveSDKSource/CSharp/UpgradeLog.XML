@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ArcGISSilverlightSDK">
+</Property><Property Name="Solution File" Value="C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\InteractiveSDKSource\InteractiveSDKSource\CSharp\ArcGISSilverlightSDK.sln">
+</Property><Property Name="Date" Value="Friday, November 13, 2009">
+</Property><Property Name="Time" Value="22:48 PM">
+</Property></Properties><Event ErrorLevel="0" Project="ArcGISSilverlightSDK" Source="ArcGISSilverlightSDK\ArcGISSilverlightSDK.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ArcGISSilverlightSDK" Source="ArcGISSilverlightSDK\ArcGISSilverlightSDK.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ArcGISSilverlightSDK.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="ArcGISSilverlightSDK.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ArcGISSilverlightSDK" Source="ArcGISSilverlightSDK\ArcGISSilverlightSDK.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,1102 @@
+2009-10-29  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* masters/test-stopMaster.png: Added.
+
+2009-07-08  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/shocker.cpp: implement GetTestDirectory
+	
+2009-05-01  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* results:
+	* baselines:
+	* baselines/test-rtol.xaml.png:
+	* baselines/test-image.xaml.png:
+	* baselines/test-colors.xaml.png:
+	* baselines/test-monkey.xaml.png:
+	* baselines/test-path-line.xaml.png:
+	* baselines/test-text-runs.xaml.png:
+	* baselines/test-textblock.xaml.png:
+	* baselines/test-path-group.xaml.png:
+	* baselines/test-shape-line.xaml.png:
+	* baselines/test-imagebrush.xaml.png:
+	* baselines/test-shape-styles.xaml.png:
+	* baselines/test-path-ellipse.xaml.png:
+	* baselines/test-brush-radial.xaml.png:
+	* baselines/test-brush-linear.xaml.png:
+	* baselines/test-shape-ellipse.xaml.png:
+	* baselines/test-shape-polygon.xaml.png:
+	* baselines/test-shape-opacity.xaml.png:
+	* baselines/test-property-path.xaml.png:
+	* baselines/test-shape-polyline.xaml.png:
+	* baselines/test-render-xorigin.xaml.png:
+	* baselines/test-path-rectangle.xaml.png:
+	* baselines/test-transform-skew.xaml.png:
+	* baselines/test-transform-group.xaml.png:
+	* baselines/test-shape-rectangle.xaml.png:
+	* baselines/test-transform-matrix.xaml.png:
+	* baselines/test-path-group-empty.xaml.png:
+	* baselines/test-path-line-stroke.xaml.png:
+	* baselines/test-textblock-content.xaml.png:
+	* baselines/test-path-line-stretch.xaml.png:
+	* baselines/test-shape-line-stroke.xaml.png:
+	* baselines/test-path-segments-arc.xaml.png:
+	* baselines/test-path-smoothbezier.xaml.png:
+	* baselines/test-solidbrush-opacity.xaml.png:
+	* baselines/test-path-group-ellipse.xaml.png:
+	* baselines/test-path-segments-line.xaml.png:
+	* baselines/test-imagebrush-opacity.xaml.png:
+	* baselines/test-path-group-stretch.xaml.png:
+	* baselines/test-trigger-collection.xaml.png:
+	* baselines/test-shape-line-stretch.xaml.png:
+	* baselines/test-geometry-collection.xaml.png:
+	* baselines/test-path-segments-empty.xaml.png:
+	* baselines/test-path-ellipse-stroke.xaml.png:
+	* baselines/test-path-group-rectangle.xaml.png:
+	* baselines/test-path-ellipse-stretch.xaml.png:
+	* baselines/test-canvas-inside-canvas.xaml.png:
+	* baselines/test-imagebrush-transform.xaml.png:
+	* baselines/test-shape-polygon-stroke.xaml.png:
+	* baselines/test-zero-scale-animation.xaml.png:
+	* baselines/test-shape-ellipse-stroke.xaml.png:
+	* baselines/test-path-ellipse-stroke-3.xaml.png:
+	* baselines/test-path-ellipse-stroke-2.xaml.png:
+	* baselines/test-transform-group-empty.xaml.png:
+	* baselines/test-shape-ellipse-stretch.xaml.png:
+	* baselines/test-shape-polygon-stretch.xaml.png:
+	* baselines/test-path-segments-empty-2.xaml.png:
+	* baselines/test-path-rectangle-stroke.xaml.png:
+	* baselines/test-shape-polyline-stroke.xaml.png:
+	* baselines/test-path-figure-collection.xaml.png:
+	* baselines/test-path-rectangle-stretch.xaml.png:
+	* baselines/test-shape-rectangle-stroke.xaml.png:
+	* baselines/test-shape-polyline-stretch.xaml.png:
+	* baselines/test-shape-rectangle-matrix.xaml.png:
+	* baselines/test-shape-ellipse-stroke-2.xaml.png:
+	* baselines/test-shape-rectangle-stretch.xaml.png:
+	* baselines/test-path-segments-collection.xaml.png:
+	* baselines/test-path-smoothbezier-stroke.xaml.png:
+	* baselines/test-shape-line-renderxorigin.xaml.png:
+	* baselines/test-trigger-action-collection.xaml.png:
+	* baselines/test-path-segments-line-stroke.xaml.png:
+	* baselines/test-path-smoothquadraticbezier.xaml.png:
+	* baselines/test-path-ellipse-renderxorigin.xaml.png:
+	* baselines/test-shape-ellipse-renderxorigin.xaml.png:
+	* baselines/test-shape-polygon-renderxorigin.xaml.png:
+	* baselines/test-path-rectangle-round-stroke.xaml.png:
+	* baselines/test-shape-polyline-renderxorigin.xaml.png:
+	* baselines/test-shape-rectangle-round-stroke.xaml.png:
+	* baselines/test-shape-rectangle-renderxorigin.xaml.png:
+	* baselines/test-set-inherited-property-elements.xaml.png:
+	* baselines/test-path-smoothquadraticbezier-stroke.xaml.png:
+	  Deleted, unused.
+
+	* Makefile.am: Update after deleting the baselines directory.
+
+	* masters/test-rtolMaster.png:
+	* masters/video-seek.html.png:
+	* masters/test-imageMaster.png:
+	* masters/test-imageMaster.tif:
+	* masters/test-zindexMaster.png:
+	* masters/test-colorsMaster.png:
+	* masters/test-monkeyMaster.png:
+	* masters/test-fillruleMaster.png:
+	* masters/test-path-lineMaster.png:
+	* masters/test-text-runsMaster.png:
+	* masters/points-tortureMaster.png:
+	* masters/test-textblockMaster.png:
+	* masters/test-videobrushMaster.png:
+	* masters/test-shape-lineMaster.png:
+	* masters/test-path-groupMaster.png:
+	* masters/test-imagebrushMaster.png:
+	* masters/test-clip-rangeMaster.png:
+	* masters/test-brush-linearMaster.png:
+	* masters/test-path-group-2Master.png:
+	* masters/test-inkpresenterMaster.png:
+	* masters/test-shape-stylesMaster.png:
+	* masters/test-empty-sourceMaster.png:
+	* masters/test-opacity-maskMaster.png:
+	* masters/test-brush-radialMaster.png:
+	* masters/test-layout-shapeMaster.png:
+	* masters/test-opacity-maskMaster.tif:
+	* masters/test-path-ellipseMaster.png:
+	* masters/test-clip-fillruleMaster.png:
+	* masters/test-property-pathMaster.png:
+	* masters/test-shape-ellipseMaster.png:
+	* masters/test-property-pathMaster.tif:
+	* masters/test-shape-polygonMaster.png:
+	* masters/test-shape-opacityMaster.png:
+	* masters/test-transform-clipMaster.png:
+	* masters/test-render-xoriginMaster.tif:
+	* masters/test-shape-polylineMaster.png:
+	* masters/test-transform-skewMaster.tif:
+	* masters/test-path-rectangleMaster.png:
+	* masters/test-shape-negativeMaster.png:
+	* masters/nested-canvas-emptyMaster.png:
+	* masters/test-render-xoriginMaster.png:
+	* masters/test-transform-skewMaster.png:
+	* masters/test-canvas-no-sizeMaster.png:
+	* masters/test-videobrush-textMaster.png:
+	* masters/test-45-bounding-boxMaster.tif:
+	* masters/test-45-bounding-boxMaster.png:
+	* masters/test-sibling-opacityMaster.png:
+	* masters/test-shape-rectangleMaster.png:
+	* masters/test-canvas-toplevelMaster.png:
+	* masters/test-transform-groupMaster.png:
+	* masters/test-transform-matrixMaster.png:
+	* masters/test-stroke-thicknessMaster.png:
+	* masters/test-transform-matrixMaster.tif:
+	* masters/test-directory-in-zipMaster.png:
+	* masters/test-path-line-strokeMaster.png:
+	* masters/test-zero-length-lineMaster.png:
+	* masters/test-text-font-qualityMaster.png:
+	* masters/test-path-group-strokeMaster.png:
+	* masters/test-path-smoothbezierMaster.png:
+	* masters/test-relativetransformMaster.png:
+	* masters/test-path-line-stretchMaster.png:
+	* masters/test-textblock-contentMaster.png:
+	* masters/test-shape-line-strokeMaster.png:
+	* masters/test-relativetransformMaster.tif:
+	* masters/test-path-segments-arcMaster.png:
+	* masters/test-blending-gradientsMaster.png:
+	* masters/test-path-group-stretchMaster.png:
+	* masters/test-geometry-transformMaster.png:
+	* masters/test-trigger-collectionMaster.png:
+	* masters/test-path-group-ellipseMaster.png:
+	* masters/test-solidbrush-opacityMaster.png:
+	* masters/test-inkpresenter-scaleMaster.png:
+	* masters/test-path-segments-lineMaster.png:
+	* masters/test-imagebrush-opacityMaster.png:
+	* masters/test-shape-line-stretchMaster.png:
+	* masters/test-inkpresenter-imageMaster.png:
+	* masters/test-textblock-examplesMaster.png:
+	* masters/test-shape-path-stretchMaster.png:
+	* masters/test-rectangle-aliasingMaster.png:
+	* masters/test-trigger-collectionMaster.tif:
+	* masters/test-path-group-tortureMaster.png:
+	* masters/test-animation-only-fromMaster.png:
+	* masters/test-transform-group-2.0Master.png:
+	* masters/test-shape-line-stretch5Master.png:
+	* masters/test-shape-line-stretch4Master.png:
+	* masters/test-path-segments-arc-2Master.tif:
+	* masters/test-path-ellipse-strokeMaster.png:
+	* masters/test-shape-line-stretch2Master.png:
+	* masters/test-shape-path-stretch4Master.png:
+	* masters/test-brush-linear-pointsMaster.png:
+	* masters/test-shape-path-stretch3Master.png:
+	* masters/test-shape-line-stretch3Master.png:
+	* masters/test-clip-invalid-updateMaster.png:
+	* masters/test-geometry-collectionMaster.png:
+	* masters/test-shape-polygon-linesMaster.png:
+	* masters/test-resource-collectionMaster.png:
+	* masters/test-shape-path-overdrawMaster.png:
+	* masters/test-imagebrush-opacity2Master.png:
+	* masters/test-shape-path-stretch2Master.png:
+	* masters/test-path-segments-arc-2Master.png:
+	* masters/test-shape-polyline-linesMaster.png:
+	* masters/test-path-ellipse-stretchMaster.png:
+	* masters/test-canvas-inside-canvasMaster.png:
+	* masters/test-second-surface-errorMaster.png:
+	* masters/test-empty-element-sourceMaster.png:
+	* masters/test-path-group-rectangleMaster.png:
+	* masters/test-shape-polygon-strokeMaster.png:
+	* masters/test-imagebrush-transformMaster.tif:
+	* masters/test-radialgradientbrush2Master.png:
+	* masters/test-stroke-low-thicknessMaster.png:
+	* masters/test-shape-ellipse-matrixMaster.png:
+	* masters/test-textblock-brush-runsMaster.png:
+	* masters/test-imagebrush-transformMaster.png:
+	* masters/test-shape-ellipse-strokeMaster.png:
+	* masters/test-shape-ellipse-stretchMaster.png:
+	* masters/test-transform-group-emptyMaster.png:
+	* masters/test-path-ellipse-stroke-2Master.png:
+	* masters/test-shape-polygon-stretchMaster.png:
+	* masters/test-transform-group-emptyMaster.tif:
+	* masters/test-shape-polyline-strokeMaster.png:
+	* masters/test-path-ellipse-stroke-3Master.png:
+	* masters/test-shape-polyline-boundsMaster.png:
+	* masters/test-parser-empty-propertyMaster.png:
+	* masters/test-inkpresenter-positionMaster.png:
+	* masters/test-brush-linear-negativeMaster.png:
+	* masters/test-shape-cursor-clippingMaster.png:
+	* masters/test-directory-in-zip.htmlMaster.png:
+	* masters/test-layout-image-alignmentMaster.png:
+	* masters/test-path-rectangle-stretchMaster.png:
+	* masters/test-shape-rectangle-matrixMaster.png:
+	* masters/test-shape-polyline-stretchMaster.png:
+	* masters/test-trigger-collection-2.0Master.png:
+	* masters/test-textblock-examples-2.0Master.png:
+	* masters/test-shape-ellipse-stroke-2Master.png:
+	* masters/test-inkpresenter-nostrokesMaster.png:
+	* masters/test-shape-polygon-stretch2Master.png:
+	* masters/test-path-line-renderxoriginMaster.png:
+	* masters/test-animation-zero-durationMaster.png:
+	* masters/test-path-line-renderxoriginMaster.tif:
+	* masters/test-shape-rectangle-stretchMaster.png:
+	* masters/test-shape-polyline-stretch2Master.png:
+	* masters/test-shape-line-caps-stretchMaster.png:
+	* masters/test-shape-line-renderxoriginMaster.tif:
+	* masters/test-path-smoothbezier-strokeMaster.png:
+	* masters/test-shape-line-stroke-boundsMaster.png:
+	* masters/test-shape-line-renderxoriginMaster.png:
+	* masters/test-animation-repeat-behaviorMaster.png:
+	* masters/test-trigger-action-collectionMaster.png:
+	* masters/test-path-segments-line-strokeMaster.png:
+	* masters/test-trigger-action-collectionMaster.tif:
+	* masters/test-empty-element-source.htmlMaster.png:
+	* masters/test-inkpresenter-height-widthMaster.png:
+	* masters/test-path-stretch-fill-extentsMaster.png:
+	* masters/test-animation-hold-stop-speedMaster.png:
+	* masters/test-path-smoothquadraticbezierMaster.png:
+	* masters/test-gradientbrush-spreadmethodMaster.png:
+	* masters/test-path-ellipse-renderxoriginMaster.png:
+	* masters/test-path-ellipse-renderxoriginMaster.tif:
+	* masters/test-animation-storyboard-nestedMaster.png:
+	* masters/test-path-rectangle-round-strokeMaster.png:
+	* masters/test-shape-path-stretch-gradientMaster.png:
+	* masters/test-shape-ellipse-renderxoriginMaster.png:
+	* masters/test-shape-polygon-renderxoriginMaster.png:
+	* masters/test-shape-ellipse-renderxoriginMaster.tif:
+	* masters/test-geometry-collection-stretchMaster.png:
+	* masters/test-shape-path-stretch-animatedMaster.png:
+	* masters/test-shape-polygon-renderxoriginMaster.tif:
+	* masters/test-shape-line-stretch-gradientMaster.png:
+	* masters/test-path-rectangle-renderxoriginMaster.png:
+	* masters/test-path-rectangle-renderxoriginMaster.tif:
+	* masters/test-shape-polyline-renderxoriginMaster.png:
+	* masters/test-path-segments-arc-degenerateMaster.png:
+	* masters/test-shape-rectangle-round-strokeMaster.png:
+	* masters/test-shape-polyline-renderxoriginMaster.tif:
+	* masters/test-path-segments-arc-sweep-largeMaster.png:
+	* masters/test-shape-rectangle-round-stretchMaster.png:
+	* masters/test-shape-rectangle-renderxoriginMaster.png:
+	* masters/test-shape-rectangle-renderxoriginMaster.tif:
+	* masters/test-inkpresenter-drawingattributesMaster.png:
+	* masters/test-animation-zero-repeat-behaviorMaster.png:
+	* masters/test-set-inherited-property-elementsMaster.png:
+	* masters/test-lineargradientbrush-moire-scaledMaster.png:
+	* masters/test-path-smoothquadraticbezier-strokeMaster.png:
+	* masters/test-lineargradientbrush-absolute-moireMaster.png:
+	* masters/test-radialgradientbrush-absolute-moireMaster.png:
+	* masters/test-shape-rectangle-imagebrush-stretchMaster.png:
+	  Updated for SL 2.0.
+
+2009-04-27  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* masters/test-playlist-with-duration.Master.png: Added
+	  missing master file.
+
+2009-04-27  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* masters/test-mediaopened.Master.png:
+	* masters/video-seek-7.html.master.png:
+	* masters/test-yuv-converterMaster.png: Regenerated.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* harness.mdp: Add a project for each tool, and clean up some
+	  of the existing projects.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* agviewer:
+	* agviewer/agserver.h:
+	* agviewer/.gitignore:
+	* agviewer/Makefile.am:
+	* agviewer/agviewer.cpp:
+	* agviewer/AgserverObject.h:
+	* agviewer/AgserverObject.xml: Delete agviewer.
+
+2009-04-08  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Remove agviewer and test-runner from the build.
+
+2009-04-01  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* masters/video-seek.html.png:
+	* masters/test-mediaopened.Master.png:
+	* masters/video-seek-7.html.master.png: Move master files to a
+	  common location.
+
+2009-03-31  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* agviewer/agviewer.cpp: If the test failed, return 1 instead
+	  of 0.
+
+2009-03-31  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-runner/TestRunner.cs: Don't overwrite the result of a
+	  test which already timed out.
+
+2009-03-20  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-runner/TestRunner.cs: Include more information in the
+	  output when the agviewer process exits.
+
+2009-03-20  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* agviewer/agviewer.cpp:
+	* test-runner/TestRunner.cs: Have an optional way of executing
+	  only one test per agviewer process.
+
+2009-03-18  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* harness.mdp:
+	* shocker/Makefile.am:
+	* shocker/netscape.cpp:
+	* agviewer/agviewer.cpp:
+	* shocker/signal-handler.h:
+	* shocker/signal-handler.cpp: Move signal handler into
+	  libmoon.
+
+2009-03-18  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-runner/ExternalProcess.cs: Try another way of getting
+	  stdout, hopefully this one doesn't cause weird exceptions.
+
+2009-03-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-runner/ComparisonReport.cs: If an exception is thrown
+	  don't crash the entire harness.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* harness.mdp: Updated with new files.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker/logging.cpp: LogProvider::LogResult: implement
+	  logging to a file.
+
+2009-03-11  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker/shocker.cpp: Add support for getting the x,y
+	  coordinates of the html page from the plugin by js.
+
+	* shocker/netscape.cpp: Install signal handler upon startup.
+
+	* shocker/image-capture.h:
+	* shocker/image-capture.cpp: Remove the origin translation,
+	  it's done in js now.
+
+	* shocker/Makefile.am: Updated with new files.
+
+	* shocker/signal-handler.h:
+	* shocker/signal-handler.cpp: Added signal handler for crash
+	  reporting.
+
+2009-03-05  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker/image-capture.cpp: shocker_capture_image: call
+	  g_type_init.
+
+2009-03-04  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker/plugin.h:
+	* shocker/plugin.cpp: Calculate the x,y screen coordinates of
+	  the html page when the plugin has a non-zero size.
+
+	* shocker/shocker.h:
+	* shocker/shocker.cpp: Pass on the plugin object to
+	  ImageCaptureProvider.
+
+	* shocker/image-capture.h:
+	* shocker/image-capture.cpp: Add support for
+	  MOONLIGHT_HARNESS_OUTPUT_DIR, putting screenshots in that
+	  directory. Also offset the screenshot using the coordinates
+	  the plugin found.
+
+2009-03-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-runner/TestRunner.cs: Need to set MONO_PATH here too.
+
+2009-03-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-runner/ExternalProcess.cs: Expose the process'
+	  environment variables.
+
+	* test-runner/Agviewer.cs: If MOON_PATH is set, set agviewer's
+	  MONO_PATH to it. This should fix loading moonlight from the
+	  harness when mono and moonlight are installed into different
+	  prefixes (buildbots).
+
+2009-02-11  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* harness.mdp:
+	* test-runner/Log.cs:
+	* test-runner/Driver.cs:
+	* test-runner/TestRun.cs:
+	* test-runner/Makefile.am:
+	* test-runner/TestRunner.cs: Add some logging to see if this
+	  will help figure out why the harness isn't shutting down on
+	  the buildbot.
+
+2009-02-11  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker/shutdown-manager.h:
+	* shocker/shutdown-manager.cpp: Remove unused method.
+
+2009-02-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* harness.mdp: Updated to use new MD features (ChangeLog and
+	  log message policy).
+
+2009-01-30  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker/image-capture.cpp: capture_multiple_images: don't crash if
+	imagemagick throws an exception.
+
+2008-12-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ExternalProcess.cs: Thread reading stdout: catch and exit
+	  thread if we get any exceptions (instead of crashing the entire
+	  harness due to an uncaught exception).
+
+2008-12-05  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* agviewer/agviewer.cpp: If the hang detector detects that we're hung
+	  in a sigsegv handler, just exit, we probably deadlocked in malloc
+	  and trying to provide stack traces will just deadlock the hang
+	  detector too.
+
+2008-12-03  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Test.cs, test-runner/TestRun.cs: Add support for printing
+	  unit tests summary to stdout.
+
+2008-12-02  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ExternalProcess.cs, test-runner/Test.cs: Detect if xsp
+	  started successfully or not, and if xsp failed to start due to port
+	  being in use, try another port.
+
+2008-11-28  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Test.cs: Newest advances in testing technology require
+	  xsp2.
+
+2008-11-28  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Driver.cs: Simplify included/excluded logic.
+
+2008-11-19  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* agviewer/agviewer.cpp: Don't mix one byte bool with four bytes
+	gboolean
+	r: jackson
+
+2008-11-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Driver.cs: Add support for MOON_DRT_EXCLUDE_FIXTURE(S).
+
+2008-11-03  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* shocker/input.cpp: Fix typo.
+
+2008-10-29  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* shocker/input.cpp: SendKeyInput: add error checking before faking a
+	  key event.
+
+2008-10-29  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* shocker/image-capture.cpp, shocker/image-capture.h: Make screenshots
+	  a whole lot faster, more predictable and less memory-consuming by
+	  doing XGetImage ourselves. For some reason using ImageMagick
+	  without Xephyr causes a lot of memory to be used (between 100 and
+	  200 *MB* per screenshot), effectively making animation tests very
+	  nasty, and gdk inserts a XSync after blitting the screen, causing
+	  performance to vary wildly. Also include time tracking when taking
+	  multiple screenshots, so that we compensate for the time spent
+	  taking a screenshot when deciding when the next screenshot should
+	  be taken.
+
+2008-10-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Driver.cs: Added support for MOON_DRT_EXCLUDE_CATEGORIES:
+	  excluding categories for test runs.
+	* test-runner/Test.cs: Added support for MOON_DRT_EXCLUDE_CATEGORIES:
+	  excluding categories for test runs. Call Dispose on our
+	  ExternalProcesses.
+	* test-runner/ExternalProcess.cs: Make ExternalProcess IDisposable, and
+	  make Dispose call process.Dispose to properly dispose of our
+	  disposable resources.
+
+2008-10-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ExternalProcess.cs: Dispose our processes when we're done
+	  with them.
+
+2008-10-17  Chris Toshok  <toshok@ximian.com>
+
+	* shocker/input.cpp: send a NumlockPress when we initialize the
+	InputProvider -- not a sure fire way to get this to work, but test
+	82 requires numlock to be on.
+
+2008-10-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Test.cs: Use local file path when executing xsp. Fixes
+	  tests which has both location and xspExecDir set.
+
+2008-10-08  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Test.cs: RunLocationServerIfNeeded: add /:. as xsp
+	  application, allows tests to access files in other directories
+	  (test/js/js/*.js specifically).
+
+2008-10-07  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ConsoleReport.cs: Revert summary changes to avoid
+	  double-printing failures.
+
+2008-10-07  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ComparisonReport.cs: Quick fix for datetime format
+	  changes.
+
+2008-10-07  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/TestRun.cs: Add a Tests property getter and in
+	  RecordResult actually set the result on the test.
+	* test-runner/Test.cs: Add Result accessors and prevent NRE in
+	  Location.
+	* test-runner/ConsoleReport.cs: Changed summary somewhat, printing
+	  result for every test at the end.
+
+2008-10-07  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ComparisonReport.cs: Work around an exception.
+	* test-runner/Driver.cs: Show some rudimentary timing.
+
+2008-10-07  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/XmlReport.cs: Use a date/time formats which sort
+	  correctly.
+
+2008-10-06  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/Test.cs: Use a new port for the location server, the
+	test might not have been finalized by the time the next test
+	starts.
+
+2008-10-06  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/HtmlTest.cs: We try to patch "remote" files if they
+	aren't actually remote, they are just using the location
+	attribute.
+
+2008-10-06  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/Test.cs: Obey the location attribute so we can run
+	'remote' tests.
+	* test-runner/EdgeCompare.cs: Use the local path for saving the
+	diff file.
+
+2008-09-22  Larry Ewing  <lewing@novell.com>
+
+	* agviewer/agviewer.cpp: make the viewer stay on top.
+
+2008-08-13  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* masters/test-fillruleMaster.png: Added test-fillrule.xaml.
+
+2008-07-30  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness.mdp: Updated.
+
+2008-07-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* agviewer/agviewer.cpp: Add support for doing 'pkill -QUIT agviewer'
+	  to dump stack trace to console while running.
+
+2008-07-09  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* test-runner/Makefile.am: Dist the regression report template
+
+2008-07-08  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/TestRun.cs: Return the number of tests that failed.
+	* test-runner/Makefile.am: Add the regression report template
+	* test-runner/ComparisonReport.cs: Create a text file if there are
+	regressions listing each regression.
+
+2008-06-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* agviewer/agviewer.cpp: Log a message when starting a test, and when
+	  aborting if we're hanged, print a stack trace.
+
+2008-06-24  Jackson Harper  <jackson@ximian.com>
+
+	* harness/ComparisonReport.cs:
+	* harness/comparison_report.html: Quick hack so people can copy
+	the IDs of the tests.
+	
+2008-06-24  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/XmlReport.cs: Don't save so much stuff.
+
+2008-06-23  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/plugin.cpp:
+	* shocker/image-capture.cpp|h:
+	* test-runner/HtmlTest.cs:  Add support for offsetting the screencapture.
+	
+2008-06-21  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* masters/test-asf-demuxer-shuffled-payloadsMaster.png: Added.
+
+2008-06-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* shocker/logging.cpp: Added an option to have the test plugin write
+	  logging output directly to stdout instead of going through
+	  dbus/logging server.
+
+2008-06-16  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* test-runner/HtmlReport.cs: Use index.html rather than index.htm
+
+2008-06-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/DbusServices.cs, test-runner/LoggingServer.cs: Don't fail
+	  a test run if logging-server.exe is running.
+
+2008-06-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness.mdp: Updated.
+
+2008-05-29  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Test.cs: When starting up xsp wait a second before
+	  continuing with the test.
+
+2008-05-28  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* agviewer/agviewer.cpp: Add hang/infinite loop detection.
+
+2008-05-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Driver.cs, test-runner/HtmlReport.cs,
+	  test-runner/ConsoleReport.cs, test-runner/TestResult.cs,
+	  test-runner/TestRun.cs: Added TestResult.UnexpectedPass.
+
+2008-05-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Driver.cs: I lack the knowledge to do this at
+	  configure/build time, so lets do it during execution.
+
+2008-05-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/XmlReport.cs, test-runner/Test.cs,
+	  test-runner/ImageCompare.cs, test-runner/HtmlReport.cs,
+	  test-runner/EdgeCompare.cs: Dispose of Graphics/Image/Bitmaps when
+	  we're done with them.
+
+2008-05-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* agviewer/agviewer.cpp: Set the current directory to the directory
+	  where each test resides, and only use the -working-dir argument for
+	  remote tests. This is necessary since tests may reside in any
+	  directory now that we support nested drtlists.
+
+2008-05-26  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness.mdp: Updated.
+
+2008-05-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Driver.cs: Added support for remote and nested drtlists.
+
+2008-05-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Test.cs: Don't load dimensions until we need them. Cuts
+	  the time spent running 1 test to a third (from 15 seconds to 5
+	  seconds on my machine).
+
+2008-05-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* agviewer/agviewer.cpp: Install a signal handler to print stack traces
+	  when we crash.
+
+2008-05-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness.mdp: Updated to give better tooltips.
+
+2008-05-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/LoggingServer.cs, test-runner/ExternalProcess.cs,
+	  test-runner/Driver.cs, test-runner/TestRun.cs,
+	  test-runner/TestRunner.cs: Add support for running agviewer with
+	  gdb, printing test output from the plugin to stdout as we go (so
+	  that it comes in sync with the rest of the debug output), and make
+	  SWALLOW_STREAMS configurable with an env-var.
+	* test-runner/Test.cs, test-runner/HtmlTest.cs: Add support for remote
+	  tests.
+	* test-runner/ConsoleReport.cs: Don't print colors when we're running
+	  gdb, it confuses gdb badly.
+
+2008-05-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ConsoleReport.cs: Print the id of the tests in addition
+	  to the name.
+
+2008-05-22  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness.mdp: Updated.
+
+2008-05-22  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/TestRunner.cs: Remove unneeded line.
+
+2008-05-20  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/input.cpp: We don't need to open our own display anymore
+	since this method is called in the main thread.
+
+2008-05-19  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/image-capture.cpp: Workaround for TIFFs not being saved
+	properly.
+
+2008-05-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Test.cs: StopXspIfNeeded: Don't take down the entire
+	  process if we can't kill XSP.
+
+2008-05-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* harness.mdp: Added.
+
+2008-05-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Driver.cs, test-runner/TestRunner.cs: Added -valgrind
+	  option to run agviewer with valgrind.
+
+2008-05-15  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/ConsoleReport.cs: Add colors to the console output.
+
+2008-05-13  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* masters/test-second-surface-errorMaster.png: Added
+	  test-second-surface-error.html.
+
+2008-05-05  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/TestRun.cs:
+	* test-runner/TestRunner.cs: Move the test setup into the test
+	runner so that tests will still be setup when running in a
+	separate server process.
+
+2008-05-05  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Use _call instead of the timeout call so
+	we can work on older versions of dbus-glib.
+
+2008-05-02  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* agviewer/Makefile.am: Missing some headers from dist
+
+2008-05-01  Jeffrey Stedfast  <fejj@novell.com>
+
+	* test-runner/HtmlTest.cs: We always want an initial
+	delay. Default to 500. Otherwise the screenshot happens before the
+	result is rendered (happens for a bunch of the current tests).
+
+2008-04-30  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/Driver.cs: Sometimes you want to start a run midway
+	through.  I added MOON_DRT_FIXTURE_START so you can specify which
+	test the run should start on.
+
+2008-04-30  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/ConsoleReport.cs: Now that processing is async we
+	can't report test and result separately.
+
+2008-04-29  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/EdgeCompare.cs:
+	* test-runner/ImageCompare.cs: Dispose bitmaps.
+
+	* test-runner/Test.cs: Add the completed reason as a property.
+	* test-runner/TestRunner.cs: Set the completed reason property
+	when tests are completed.
+	* test-runner/TestRun.cs: Test processing is now done in a
+	separate thread, this allows the tests to run while image compares
+	are done in the background.  When a test that does animation or
+	input or something else that takes a lot of time the processing
+	thread can catch up, so there isn't much lag at the end of a test
+	run and tests load much faster.
+
+2008-04-29  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/image-capture.cpp: Use gdk for capturing single
+	screenshots, this is done in the main thread, so it's safe, a
+	little better performing, and frees us of image magicks memory
+	management.
+	
+2008-04-29  Jeffrey Stedfast  <fejj@novell.com>
+
+	* agviewer/agviewer.cpp (new_gtk_browser): Remove unused variable.
+
+2008-04-28  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/EdgeCompare.cs: We don't need this blurred images
+	anymore.
+
+2008-04-28  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Clean up test_path strings.
+
+2008-04-28  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Still need to run a main loop when a test
+	isn't supplied.
+
+2008-04-28  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Allow non absolute paths to be used for
+	user supplied test paths.
+
+	* test-runner/TestRunner.cs:
+	* test-runner/Driver.cs: Add a new mode that allows the test
+	runner to run as a separate service which a user can connect to
+	with their own agviewer process.  This makes debugging agviewer
+	much easier.
+
+2008-04-28  Jeffrey Stedfast  <fejj@novell.com>
+
+	* agviewer/agviewer.cpp (main): Gotta loop thru all the args.
+
+2008-04-28  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Fix running in standalone mode.
+
+2008-04-28  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/input.cpp: When we are shutdown make sure down keys are
+	sent an up, otherwise the keyboard ends in a weird state.
+	* shocker/shocker.cpp|h: Cleanup the providers when shutdown is
+	signalled, not the image capture provider though, since that might
+	still be working.
+	
+2008-04-25  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Don't use escape for quitting a test
+	anymore.  Use CTRL-C, also add CTRL-N to move to the next test.
+
+2008-04-25  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/Driver.cs: Make sure ignored tests get added to the
+	report.  We need to add them separately now, because the list of
+	tests passed to the runner are only tests that will be run.
+	* test-runner/TestRun.cs: Modernize!
+
+2008-04-25  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Don't start or stop the main loop if
+	there are no tests to run.
+
+2008-04-25  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/HtmlTest.cs, test-runner/html_template.html: Spaces->tabs
+	  and indent correctly.
+
+2008-04-25  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Fix the error message.
+
+2008-04-25  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/Makefile.am: Fix logging-server.exe.
+
+2008-04-25  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/ExternalProcess.cs: For now don't capture
+	stdout/stderr, should make debugging a little easier.
+
+2008-04-24  Jackson Harper  <jackson@ximian.com>
+
+	- A single agviewer process is now used, when it completes a test,
+	it get's the next test from the test-runner.  If the agviewer
+	process crashes the test runner will start a new one.
+	- Instead of shutting down after each test we send a message to
+	the agviewer via dbus, which cleans up and sends the testcompleted
+	message up to the runner.
+	
+2008-04-22  Larry Ewing  <lewing@novell.com>
+
+	* agviewer/agviewer.cpp: fix typo in include.
+
+2008-04-22  Larry Ewing  <lewing@novell.com>
+
+	* agviewer/agviewer.cpp (new_gtk_browser): changes to work against
+	newer gtkmozembed versions.
+
+	* shocker/image-capture.cpp (acquire_screenshot): add a probably
+	pointless argument to capture in the hope of speeding it up a
+	little.
+
+	* shocker/input.cpp: add a disabled alternate version of MoveMouse
+	that lets MouseInput pass.
+
+2008-04-21  Jeffrey Stedfast  <fejj@novell.com>
+
+	* test-runner/HtmlTest.cs: Updated to change
+	http://localhost/test/jtr.js to jtr.js. Updated to reflect changes
+	made to the test input files.
+
+2008-04-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* masters/test-yuv-converterMaster.png: Added yuv converter test,
+	  currently fails with our own yuv converter, succeeds with ffmpeg's.
+
+2008-04-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* masters/test-canvas-no-sizeMaster.png: Added (currently failing) test
+	  with a MediaElement within a Canvas which doesn't have width/height
+	  set.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/XamlTest.cs: Use a relative path for the path to the xaml file
+	  in the html file.
+	* test-runner/html_template.html: Make sure we call Connect on the test
+	  plugin before using it.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/LoggingServer.cs: Create a StandaloneServer class that does
+	  all the standalone logging.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-runner/HtmlTest.cs: Use relative path for the snapshots. Makes it
+	  possible to use the generated html file for creating baselines on SL.
+	* test-runner/html_template.html: Some fixes to be compatible with IE/MS'
+	  test plugin: pass document.name to SignalShutdown and create the
+	  testplugin using a object tag on IE.
+
+2008-04-11  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* shocker/shutdown-manager.cpp: Add a MOONLIGHT_SHOCKER_DONT_DIE flag which,
+	  if is set to anything, will prevent the plugin from shutting down the
+	  browser.
+
+2008-04-09  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* test-runner/Makefile.am: dist comparison_report.html
+
+2008-04-09  Rolf Bjarne Kvinge  <RKVinge@novell.com>
+
+	* test-runner/LoggingServer.cs: Fix the standalone logging server.
+
+2008-04-08  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/ComparisonReport.cs: Fix compare that i changed for
+	debug.
+
+2008-04-08  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/ComparisonReport.cs: Add the current test to the
+	list of completed tests.
+
+2008-04-08  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/*: Add the new comparison report stuff.
+
+2008-04-03  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Add a new signal that is passed to the
+	test harness to notify that the test exited safely.
+	* test-runner/LoggingServer.cs:
+	* test-runner/Driver.cs:  Ensure that the test was shut down
+	cleanly.
+
+2008-04-01  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/ExternalProcess.cs: Fix error message.
+	- Don't try to get the error code if the process times out.
+
+2008-04-01  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/*: Add a new xml report system.
+
+2008-03-31  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/EdgeCompare.cs: Add a key so people can tell what
+	they are looking at.
+
+2008-03-31  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* shocker/logging.cpp: include time.h (for older systems)
+
+2008-03-31  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/HtmlReport.cs: Tidy up the borders on mosaic images.
+	
+2008-03-31  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/ImageCompare.cs: Report the differences in layer
+	count.
+
+2008-03-28  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/shutdown-manager.cpp|h: Don't run in a separate thread
+	anymore, just use a g_timeout for waiting.
+	* image-capture.cpp: Update shutdown_manager function names.
+
+2008-03-28  Jackson Harper  <jackson@ximian.com>
+
+	* agviewer/agviewer.cpp: Fix var naming.
+	- cleanup properly.
+	
+2008-03-27  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/LoggingServer.cs: Fix test result from int.  1 is a
+	pass.
+
+2008-03-27  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/Test.cs:
+	* test-runner/HtmlTest.cs: Ignore tests where the input file can
+	not be found.
+
+2008-03-25  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/Test.cs: Include the silver package when compiling
+	codebehind files.
+	* test-runner/ExternalProcess.cs: If we are waiting for the
+	process set the exit code immediately after it exits.
+
+2008-03-24  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/HtmlTest.cs:
+	* test-runner/html_template.html: Add supported for expected
+	errors.  You can now specify an expected error in the drtlist that
+	will be caught by the OnError handler and will have it's error
+	type verified.  These will only work with .xaml tests that use the
+	html template.
+
+2008-03-20  Jackson Harper  <jackson@ximian.com>
+
+	* shocker/browser.cpp|h: Add Release and Retain functions.
+	* shocker/plugin.cpp: Properly retain and release the scriptable
+	plugin.
+
+2008-03-20  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/HtmlTest.cs: Make sure that the substitutions get
+	made if there are more than one on a line.
+	- Adding pieces of the expected error stuff since it's all tangled
+	with the above code.
+
+2008-03-19  Jackson Harper  <jackson@ximian.com>
+
+	* test-runner/ExternalProcess:  Add exit codes
+	* test-runner/HtmlTest.cs: Make sure we call the base Setup and
+	Teardown methods.
+	* test-runner/ImageCompare.cs: Make ignore message a little more
+	useful.
+	* test-runner/Test.cs: Add support for a single code behind file
+	so we can run 2.0 tests.

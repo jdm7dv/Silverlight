@@ -1,0 +1,22 @@
+2009-09-30  Jackson Harper  <jackson@ximian.com>
+
+	* DesignerProperties.cs: Stub out this property. r: lewing
+
+2009-05-22  Alan McGovern  <amcgovern@novell.com>
+
+	* DesignerProperties.cs: Use DependencyProperty.RegisterCore for
+	these DPs.
+
+2008-12-18  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* DesignerProperties.cs: Implement since some controls (like DataGrid
+	and HyperlinkButton) peek at the value (so throwing would be bad).
+
+2008-11-18  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* DesignerProperties.cs: Corcompare work.
+
+2008-08-08  Fernando Herrera  <fherrera@novell.com>
+
+	* DesignerProperties.cs: Added stub for SL2 beta2
+

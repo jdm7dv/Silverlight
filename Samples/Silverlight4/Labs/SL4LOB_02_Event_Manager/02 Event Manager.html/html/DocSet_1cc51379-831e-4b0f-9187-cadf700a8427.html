@@ -1,0 +1,341 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Editing Events" />
+      <MSHelp:RLTitle Title="Exercise 2: Editing Events" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Editing Events</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 2 - WCF RIA Services, Creating and Editing Data, and Data Binding</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Editing Events</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this part, you will add a new page to the Silverlight application for editing the details of an event. This will illustrate how the domain service we created in the previous part provides the ability to fetch data selectively and to push back changes to the server after the user has edited the data.</p>
+        <a name="_Toc256193858" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the Events Details Page</b>
+        </p>
+        <ol>
+          <li>In the SlEventManager project, right-click on the Views folder and choose to <b>Add a New Item</b>. </li>
+          <li>Select the Silverlight Page template. </li>
+          <li>Name the new page EditEvent.</li>
+          <li><b>Click</b> Add. </li>
+          <li>Open the <b>Data Sources</b> window. </li>
+          <li>Find the same Event entity item you added to the Home page in the previous part of this lab and select it. </li>
+          <li>Click on the dropdown button for the <b>Event</b> entity. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This lets you choose what sort of UI element or elements will appear when you drag the item onto the design surface. By default, a collection of entities such as this will produce a DataGrid, but the menu offers an alternative, Details.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Select Details.</li>
+        </ol>
+        <p>
+          <img src="images\f8cdc0e6-b03c-4ad5-a992-b3860c04aeb8.png" />
+        </p>
+        <p>
+          <b>Figure 8</b>
+          <br />
+          <i>Changing the Layout to Details</i>
+        </p>
+        <ol>
+          <li>Drag the Event entity onto the new XAML page. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This time, instead of a <b>DataGrid</b>, you should see a set of editable text fields, date pickers, and a checkbox to represent textual, date, and boolean values respectively:</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <p>
+          <img src="images\0869561e-9323-4b56-9bb5-c521ba325086.png" />
+        </p>
+        <p>
+          <b>Figure 9</b>
+          <br />
+        </p>
+        <ol>
+          <li>Laying out the Details</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>If you inspect the XAML, you’ll see that once again, Visual Studio has added a DomainDataSource non-visual control to the page, which it has configured in exactly the same way as it did in the previous part. This would make sense if we were writing a master/details view, where the fields edited the currently-selected item in some list. But that’s not how this UI will work: this page will show a single event. (It will eventually also use a master/details style, but that will be for managing the tracks and sessions. To do that for all the events as well would be overkill.) So we need to do some work to get the domain data source to pick just a single value. But how will it know which event it’s supposed to edit? We’ll put this into the URL so an event administrator can bookmark the page for editing a particular event. We’ll have a URL of the form: http://sitename/SlEventManagerTestPage.aspx#/EditEvent?EventID=3<br />Right now, there’s no way to get to this new page, so we’ll start by adding a button to the Home.xaml page to edit the currently selected event. We’ll make that navigate to this new page, putting the event ID into the URL query string.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <a name="_Toc256193859" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Setting up the Navigation Parameter </b>
+        </p>
+        <ol>
+          <li>Open the Home.xaml.cs codebehind file. </li>
+          <li>Add the following helper function, which will help us navigate to EditEvent:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void NavigateToEditEvent(int eventId){    NavigationService.Navigate(new Uri("/EditEvent?EventID=" +         eventId, UriKind.Relative));}</pre></td></tr></table></span></div></li>
+          <li>Add the following using declaration for this to compile:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System;</pre></td></tr></table></span></div></li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This method builds a URL with the event ID in the query string, and navigates to the event editing page. (We will eventually need to perform this step in a couple of different places, which is why we’re putting it in a helper function.)</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Go back to the Home.xaml page in Visual Studio. </li>
+          <li>Make some extra space at the top of the page by dragging the top of the data grid down a bit. </li>
+          <li>Add a grid row by clicking in the blue bar to the left of the design surface:</li>
+        </ol>
+        <p>
+          <img src="images\d0c5f04b-9520-4cca-98e0-eb6ddec387c0.png" />
+        </p>
+        <p>
+          <b>Figure 10</b>
+          <br />
+          <i>Adding a Grid Row</i>
+        </p>
+        <ol>
+          <li>After the closing tag for the DataGrid, but before the closing &lt;/Grid&gt; tag, add the following XAML:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;StackPanel Orientation="Horizontal" HorizontalAlignment="Right"&gt;    &lt;Button x:Name="editCurrentButton" Content="Edit current event" /&gt;&lt;/StackPanel&gt;</pre></td></tr></table></span></div></li>
+          <li>In the Grid.RowDefinitions section near the top of the file (which was added when you created the extra row), modify the Height of the first row to Auto. </li>
+          <li>Double click on the Edit current event button in the design view. This generates and displays the button’s Click event handler. </li>
+          <li>Add the code shown below to the <b>Click</b> hander:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void editCurrentButton_Click(object sender,     System.Windows.RoutedEventArgs e){    Event currentEvent = eventDataGrid.SelectedItem as Event;    if (currentEvent != null)    {        NavigateToEditEvent(currentEvent.EventID);    }}</pre></td></tr></table></span></div></li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The Event type that this refers to comes from the domain service you added earlier. The WCF RIA Services link feature of Visual Studio generates client-side classes that correspond to the entities exposed by the service. However, it generates these in a separate namespace, so the code above won’t compile. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Add the following using declaration to the top of the codebehind file:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Web;</pre></td></tr></table></span></div></li>
+          <li>We should only enable the button when the user has selected an item (an Event) in the DataGrid. Go to the XAML, find the button and set its IsEnabled property to false. </li>
+          <li>Double click on the <b>DataGrid</b>. This will add a SelectionChanged event handler. </li>
+          <li>Add the code shown in this <b>SelectionChanged</b> handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void eventDataGrid_SelectionChanged(object sender,    SelectionChangedEventArgs e){    editCurrentButton.IsEnabled =         eventDataGrid.SelectedItem != null;}</pre></td></tr></table></span></div></li>
+          <li>Run the application. </li>
+          <li>Select an event in the grid</li>
+          <li>Click the Edit current event button. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The application should navigate to the event editing page, and you’ll see the ID of the item you selected in the URL. However, the editing page is currently ignoring this ID completely. It will just edit the first event that comes back from the service every time. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Close the web browser.</li>
+        </ol>
+        <a name="_Toc256193860" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Filtering the Domain Data Source</b>
+        </p>
+        <ol>
+          <li>Go to the EditEvent.xaml.cs page. Visual Studio will have added an OnNavigatedTo method that gets called when the user navigates to this page. </li>
+          <li>Implement the <b>OnNavigatedTo</b> method as shown:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>protected override void OnNavigatedTo(NavigationEventArgs e){    string eventId = NavigationContext.QueryString["EventID"];    eventDomainDataSource.FilterDescriptors.Add(        new FilterDescriptor        {            PropertyPath = "EventID",            Operator = FilterOperator.IsEqualTo,            Value = eventId        });}</pre></td></tr></table></span></div></li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This retrieves the EventID from the URL. It then adds a filter descriptor collection to the DomainDataSource non-visual control telling it to filter events by an exact match on the EventID property. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Run the application. </li>
+          <li>Select an event in the <b>DataGrid</b>.</li>
+          <li>Click the Edit current event button. This time, the event editing page will show the details for the item you have selected, rather than the first item.</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Although we specified the filter criteria on the client, the filtering is in fact taking place on the server, thanks to the “composability” feature of WCF RIA Services. When a domain service operation returns an IQueryable&lt;T&gt;, WCF RIA Services allows clients to pass in optional filter, sorting, and grouping criteria as part of the request. These criteria are then applied to the IQueryable&lt;T&gt; that the domain service operation returns, using the standard LINQ query operators for filtering, sorting, and grouping.<br />Since our domain services returns IQueryable&lt;T&gt; directly from the Entity Framework, this means that filtering, sorting, and grouping are done by the Entity Framework. And the Entity Framework implements these standard LINQ operators in the database. So in this example, the client-side filter specification is ultimately implemented as a WHERE clause in the SQL query executed against the database.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Stop the application.</li>
+        </ol>
+        <a name="_Toc256193861" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Allow Saving of Events</b>
+        </p>
+        <ol>
+          <li>In EditEvent.xaml, drag a button on from the Toolbox. (You can open the Toolbox from the View menu.)</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>While the user can edit the event details, these edits remain on the client side. RIA Services will not push changes back to the database unless asked, because it has no way of knowing when it should do that. We need to add some code to make that happen.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Set the button’s Name to saveChangesButton</li>
+          <li><b>Set the button’s </b>Content to Save Changes. </li>
+          <li>Double click the button to generate the <b>Click</b> handler.</li>
+          <li>Add just one line of code to the <b>Click</b> event handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void saveChangesButton_Click(object sender,     RoutedEventArgs e){    eventDomainDataSource.SubmitChanges();}</pre></td></tr></table></span></div></li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This SubmitChanges method builds a message describing all of the properties that have changed since the entities were fetched from the services. (The client-side entity objects that WCF RIA Services generates all perform change tracking to enable this.) It sends this message to the server where the server-side parts of RIA Services will start up a transaction, and then call all the methods on your domain service needed to perform all of the updates. <br />So as far as network communications are concerned, updates happen as a single operation, but this batching is done for you. Your domain service just provides the individual insert, update, and delete operations and RIA Services will call what it needs to call to process the batched update. (The relevant insert, update, and delete operations were generated when you added the domain service, because you checked the Enable editing checkboxes.)</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Run the application again. </li>
+          <li>Pick an event to edit and click the Edit current event button. </li>
+          <li>Change a couple of the properties.</li>
+          <li>Click Save Changes. </li>
+          <li>Click the Home link at the top left to go back to the home page with the event list. This will reload the data, so you should now be able to see the changes you made in the list.</li>
+        </ol>
+        <a name="_Toc256193862" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Conclusion</b>
+        </p>
+        <p>The functionality you just added wasn’t technically necessary to add this new page. The <b>DataGrid</b> is editable by default. It does two-way binding to the source objects, and you can double click on grid cells to edit them. So we could have added a button to save changes on the original form, using the same <b>SubmitChanges</b> method. However, in general it’s common to have more selective pages, such as the single event editing page added in this part. When we add features later in this lab to edit track and session information, there will be more data to show per event, and having all of the events be editable from a single page would involve fetching a rather large quantity of data up front. (We’d be not far away from having the client download a complete copy of the database on startup. That might work for the small volumes of data we’re working with in this example, but it’s clearly not a sustainable approach for a real application.)</p>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,563 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C17D52B1-8A98-4DC2-A3B9-3A601B9A0356}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>ArcGISSilverlightSDK</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ArcGISSilverlightSDK.xap</XapFilename>
+    <SilverlightManifestTemplate>My Project\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>ArcGISSilverlightSDK.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>Q:\esriKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DefineConstants>SILVERLIGHT=True</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DefineConstants>SILVERLIGHT=True</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.Client">
+      <HintPath>..\..\..\ArcGISSilverlight\ClientBin\ESRI.ArcGIS.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Client.Toolkit">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ArcGISSilverlight\ClientBin\ESRI.ArcGIS.Client.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Controls">
+      <HintPath>..\..\..\..\SharedArcGIS\DepFiles\DotNet\SilverlightToolkit\Microsoft.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Syndication" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq" />
+    <Page Include="Map\MapExtent.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Map\MapExtent.xaml.vb">
+      <DependentUpon>MapExtent.xaml</DependentUpon>
+    </Compile>
+    <BlendEmbeddedFont Include="Fonts\verdana.ttf">
+      <IsSystemFont>True</IsSystemFont>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\verdanab.ttf">
+      <IsSystemFont>True</IsSystemFont>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\verdanai.ttf">
+      <IsSystemFont>True</IsSystemFont>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\verdanaz.ttf">
+      <IsSystemFont>True</IsSystemFont>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\pegasus.TTF">
+      <IsSystemFont>True</IsSystemFont>
+    </BlendEmbeddedFont>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeoprocessorTask\ClipFeatures.xaml.vb">
+      <DependentUpon>ClipFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\CustomClusterer.xaml.vb">
+      <DependentUpon>CustomClusterer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\CustomSymbols.xaml.vb">
+      <DependentUpon>CustomSymbols.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\DrawGraphics.xaml.vb">
+      <DependentUpon>DrawGraphics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeoprocessorTask\DriveTimes.xaml.vb">
+      <DependentUpon>DriveTimes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\FeatureLayer.xaml.vb">
+      <DependentUpon>FeatureLayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\RenderersXAML.xaml.vb">
+      <DependentUpon>RenderersXAML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\SimpleClusterer.xaml.vb">
+      <DependentUpon>SimpleClusterer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Thematic_Interactive.xaml.vb">
+      <DependentUpon>Thematic_Interactive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LightPage.xaml.vb">
+      <DependentUpon>LightPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocatorTask\AddressToLocation.xaml.vb">
+      <DependentUpon>AddressToLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clipboard.vb" />
+    <Compile Include="Graphics\AddGraphicsXAML.xaml.vb">
+      <DependentUpon>AddGraphicsXAML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocatorTask\LocationToAddress.xaml.vb">
+      <DependentUpon>LocationToAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeoprocessorTask\MessageInABottle.xaml.vb">
+      <DependentUpon>MessageInABottle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeoprocessorTask\SurfaceProfile.xaml.vb">
+      <DependentUpon>SurfaceProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogosFade.xaml.vb">
+      <DependentUpon>LogosFade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\AddLayerDynamically.xaml.vb">
+      <DependentUpon>AddLayerDynamically.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\DefineMapProjection.xaml.vb">
+      <DependentUpon>DefineMapProjection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\ElementLayer.xaml.vb">
+      <DependentUpon>ElementLayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\MediaLayer.xaml.vb">
+      <DependentUpon>MediaLayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\ProgressBar.xaml.vb">
+      <DependentUpon>ProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\Scalebar.xaml.vb">
+      <DependentUpon>Scalebar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\GeoRSS.xaml.vb">
+      <DependentUpon>GeoRSS.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Routing\Routing.xaml.vb">
+      <DependentUpon>Routing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Routing\RoutingBarriers.xaml.vb">
+      <DependentUpon>RoutingBarriers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Routing\RoutingDirections.xaml.vb">
+      <DependentUpon>RoutingDirections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Relation.xaml.vb">
+      <DependentUpon>Relation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\LabelPoints.xaml.vb">
+      <DependentUpon>LabelPoints.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\MapTip.xaml.vb">
+      <DependentUpon>MapTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\MapAnimation.xaml.vb">
+      <DependentUpon>MapAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\SpatialQuery.xaml.vb">
+      <DependentUpon>SpatialQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\UsingImageServer.xaml.vb">
+      <DependentUpon>UsingImageServer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\AreasAndLengths.xaml.vb">
+      <DependentUpon>AreasAndLengths.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\AddGraphics.xaml.vb">
+      <DependentUpon>AddGraphics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Application.xaml.vb">
+      <DependentUpon>Application.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeoprocessorTask\ViewShed.xaml.vb">
+      <DependentUpon>ViewShed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Bookmarks.xaml.vb">
+      <DependentUpon>Bookmarks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\MagnifyingGlass.xaml.vb">
+      <DependentUpon>MagnifyingGlass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\MapTipWidget.xaml.vb">
+      <DependentUpon>MapTipWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\BufferQuery.xaml.vb">
+      <DependentUpon>BufferQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\BufferPoint.xaml.vb">
+      <DependentUpon>BufferPoint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryWithoutMap.xaml.vb">
+      <DependentUpon>QueryWithoutMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Simplify.xaml.vb">
+      <DependentUpon>Simplify.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\AttributeQuery.xaml.vb">
+      <DependentUpon>AttributeQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\Find.xaml.vb">
+      <DependentUpon>Find.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\Identify.xaml.vb">
+      <DependentUpon>Identify.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\MapLayersOnOff.xaml.vb">
+      <DependentUpon>MapLayersOnOff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Navigation.xaml.vb">
+      <DependentUpon>Navigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\OverviewMap.xaml.vb">
+      <DependentUpon>OverviewMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\ToolBarWidget.xaml.vb">
+      <DependentUpon>ToolBarWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\SwitchMap.xaml.vb">
+      <DependentUpon>SwitchMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Magnify.xaml.vb">
+      <DependentUpon>Magnify.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\DynamicAndTile.xaml.vb">
+      <DependentUpon>DynamicAndTile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\MouseCoords.xaml.vb">
+      <DependentUpon>MouseCoords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\DynamicMap.xaml.vb">
+      <DependentUpon>DynamicMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map\Map.xaml.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page.xaml.vb">
+      <DependentUpon>Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="SDKObjects.vb" />
+    <Compile Include="Utilities\Lengths.xaml.vb">
+      <DependentUpon>Lengths.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Application.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="GeoprocessorTask\ClipFeatures.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\CustomClusterer.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\CustomSymbols.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\DrawGraphics.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="GeoprocessorTask\DriveTimes.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Graphics\FeatureLayer.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\RenderersXAML.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Graphics\SimpleClusterer.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Thematic_Interactive.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LightPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LocatorTask\AddressToLocation.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Graphics\AddGraphicsXAML.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LocatorTask\LocationToAddress.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="GeoprocessorTask\MessageInABottle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="GeoprocessorTask\SurfaceProfile.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="LogosFade.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Map\AddLayerDynamically.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Map\DefineMapProjection.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\ElementLayer.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\MediaLayer.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\ProgressBar.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\Scalebar.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Query\GeoRSS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Routing\Routing.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Routing\RoutingBarriers.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Routing\RoutingDirections.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Utilities\Relation.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Utilities\LabelPoints.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Graphics\MapTip.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\MapAnimation.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Query\SpatialQuery.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Map\UsingImageServer.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Utilities\AreasAndLengths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Graphics\AddGraphics.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="GeoprocessorTask\ViewShed.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Widgets\Bookmarks.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Widgets\MagnifyingGlass.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Widgets\MapTipWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Query\BufferQuery.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Utilities\BufferPoint.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Query\QueryWithoutMap.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Utilities\Simplify.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Query\AttributeQuery.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Query\Find.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Query\Identify.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\MapLayersOnOff.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Widgets\Navigation.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Widgets\OverviewMap.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Widgets\ToolBarWidget.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\SwitchMap.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Widgets\Magnify.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\DynamicAndTile.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\MouseCoords.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\DynamicMap.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map\Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Page.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Utilities\Lengths.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="My Project\AppManifest.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight\v2.0\Microsoft.Silverlight.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>@echo ------ Copy xaml files to ArcSDKWeb  -------
+cd "$(ProjectDir)"
+for /R "$(ProjectDir)" %25%25I in (*.xaml) do (xcopy %25%25I  "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\"  /C/I/R/Y)
+for /R "$(ProjectDir)" %25%25I in (*.xaml.vb) do (xcopy %25%25I  "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\"  /C/I/R/Y)
+@echo ------ Delete xaml files copied from ArcSDK root folder  -------
+for %25%25I in (*.xaml) do (del "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\%25%25~nI%25%25~xI")
+for %25%25I in (*.xaml.vb) do (del "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\%25%25~nI%25%25~xI")
+@echo ------ Rename xaml.vb to xaml.vb.txt files in ArcSDKWeb  -------
+for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\" %25%25I in (*.xaml.vb.txt) do (del "%25%25I")
+for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\" %25%25I in (*.xaml.vb) do (rename "%25%25I"  "%25%25~nI%25%25~xI.txt")
+</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="SubsetFontSilverlight.targets" />
+</Project>

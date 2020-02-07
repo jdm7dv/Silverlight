@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Release xmlns="http://schemas.datacontract.org/2004/07/ContentFramework.Core.Models">
+  <MetadataFile>Package.xml</MetadataFile>
+  <PackageStatus>Released</PackageStatus>
+  <PackageType>Training Course</PackageType>
+  <ReleaseStatus>Published</ReleaseStatus>
+  <ReleaseLocation>Channel9</ReleaseLocation>
+
+  <ExternalInfoUrl>http://channel9.msdn.com/learn/VS2010</ExternalInfoUrl>
+  <ExternalDownloadUrl>http://channel9.msdn.com/learn/VS2010</ExternalDownloadUrl>
+
+  <InternalInfoUrl>http://c9srv/learn/VS2010</InternalInfoUrl>
+  <InternalDownloadUrl>http://c9srv/learn/VS2010</InternalDownloadUrl>
+
+  <EvangelistOwner>drobbins</EvangelistOwner>
+
+  <LastUpdated>2009-10-21</LastUpdated>
+  <Rhythms>
+    <Rhythm Year="FY10">Framework and Tools</Rhythm>
+  </Rhythms>
+</Release>

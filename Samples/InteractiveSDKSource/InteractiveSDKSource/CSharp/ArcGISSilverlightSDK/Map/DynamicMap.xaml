@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ArcGISSilverlightSDK.DynamicMap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client">
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <esri:Map x:Name="MyMap" Background="AliceBlue">
+            <esri:Map.Layers>
+                <esri:ArcGISDynamicMapServiceLayer ID="DynamicLayer"
+                    Url="http://serverapps.esri.com/ArcGIS/rest/services/California/MapServer" />
+            </esri:Map.Layers>
+        </esri:Map>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿Imports Microsoft.VisualBasic
+Imports System
+Imports System.Windows
+Imports System.Windows.Controls
+Imports ESRI.ArcGIS.Client
+
+Namespace ArcGISSilverlightSDK
+    Partial Public Class SwitchMap
+        Inherits UserControl
+        Public Sub New()
+            InitializeComponent()
+        End Sub
+
+        Private Sub RadioButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+            ' Get the Tag from the selected radio button.  The Tag value
+            ' cooresponds to the index value of a layer in the map.  
+            Dim index As Integer = Convert.ToInt32((CType(sender, RadioButton)).Tag)
+
+            Dim arcgisLayer As ArcGISTiledMapServiceLayer = TryCast(MyMap.Layers("AGOLayer"), ArcGISTiledMapServiceLayer)
+
+            Select Case index
+                Case 0
+                    arcgisLayer.Url = "http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"
+                Case 1
+                    arcgisLayer.Url = "http://server.arcgisonline.com/ArcGIS/rest/services/NGS_Topo_US_2D/MapServer"
+                Case 2
+                    arcgisLayer.Url = "http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_Imagery_World_2D/MapServer"
+            End Select
+        End Sub
+    End Class
+End Namespace

@@ -1,0 +1,82 @@
+<UserControl x:Class="ArcGISSilverlightSDK.ToolBarWidget"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client"
+    xmlns:esriSymbols="clr-namespace:ESRI.ArcGIS.Client.Symbols;assembly=ESRI.ArcGIS.Client"
+    xmlns:esriToolkit="clr-namespace:ESRI.ArcGIS.Client.Toolkit;assembly=ESRI.ArcGIS.Client.Toolkit">
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <Grid.Resources>
+            <esriSymbols:SimpleFillSymbol x:Name="DefaultFillSymbol" Fill="#33FF0000" BorderBrush="Red" BorderThickness="2" />
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <esri:Map x:Name="MyMap" Grid.RowSpan="2" Extent="-33,-12.85,99.75,87.15" ExtentChanged="MyMap_ExtentChanged">
+            <esri:Map.Layers>
+                <esri:ArcGISTiledMapServiceLayer ID="StreetMapLayer" 
+                    Url="http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer" />
+            </esri:Map.Layers>
+        </esri:Map>
+
+        <Grid Height="110" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" >
+            <Rectangle Fill="#22000000" RadiusX="10" RadiusY="10" Margin="0,4,0,0" />
+            <Rectangle Fill="#775C90B2" Stroke="Gray"  RadiusX="10" RadiusY="10" Margin="0,0,0,5" />
+            <Rectangle Fill="#66FFFFFF" Stroke="DarkGray" RadiusX="5" RadiusY="5" Margin="10,10,10,15" />
+            <StackPanel Orientation="Vertical">
+                <esriToolkit:Toolbar x:Name="MyToolbar" MaxItemHeight="80" MaxItemWidth="80"
+                    Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
+                    Loaded="MyToolbar_Loaded"
+                    ToolbarItemClicked="MyToolbar_ToolbarItemClicked" 
+                    ToolbarIndexChanged="MyToolbar_ToolbarIndexChanged"
+                    Width="450" Height="80">
+                    <esriToolkit:Toolbar.Items>
+                        <esriToolkit:ToolbarItemCollection>
+                            <esriToolkit:ToolbarItem Text="Zoom In">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/i_zoomin.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Zoom Out">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/i_zoomout.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Pan">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/i_pan.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Previous Extent" >
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/i_previous.png" IsHitTestVisible="False" Opacity="0.3" Stretch="UniformToFill" Margin="5"/>
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Next Extent">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/i_next.png" IsHitTestVisible="False" Opacity="0.3" Stretch="UniformToFill" Margin="5"/>
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Full Extent">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/i_globe.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Full Screen">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/i_widget.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                        </esriToolkit:ToolbarItemCollection>
+                    </esriToolkit:Toolbar.Items>
+                </esriToolkit:Toolbar>
+                <TextBlock x:Name="StatusTextBlock" Text="" FontWeight="Bold" HorizontalAlignment="Center"/>
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>

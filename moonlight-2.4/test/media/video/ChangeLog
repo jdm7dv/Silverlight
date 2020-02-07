@@ -1,0 +1,571 @@
+2009-11-24  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-video-seek.html: Add case for testing that BufferingProgress
+	doesn't go back to 0 immediately after seeking.
+
+2009-10-29  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-stop.html: Added.
+
+2009-10-08  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-reset-media-element-source.html: Add a test for setting the
+	source of a media element to null.
+
+	r: alan
+
+2009-10-07  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-video-end.html: Added.
+
+	r: spouliot
+
+2009-07-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-playlist-events.html:
+	* test-playlist-events.asx: Added. New test.
+
+	* test-seek-race.html: Add comments.
+
+2009-07-07  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-playlist-attributes.asx:
+	* test-playlist-attributes.html: Added.
+
+2009-07-07  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-source.html: Fix test to actually pass.
+
+2009-06-29  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-source.html: Added.
+
+2009-06-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-server-side-playlist.html: Added.
+
+2009-04-27  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-misc.html:
+	* test-states.html:
+	* test-autoplay.html:
+	* test-video-seek.html:
+	* test-mediaopened.html:
+	* test-double-stop.html:
+	* test-mms-failure.html:
+	* test-video-seek-7.html:
+	* test-mediaopened-3.html:
+	* test-yuv-converter.html:
+	* test-stopped-media.html:
+	* test-mediaopened-2.html:
+	* test-video-only-seek.html:
+	* test-bufferingprogress.html:
+	* test-playlist-with-base.html:
+	* test-playlist-with-base-10.asx:
+	* test-playlist-with-base-08.asx:
+	* test-playlist-with-base-09.asx:
+	* test-playlist-with-base-13.asx:
+	* test-playlist-with-base-12.asx:
+	* test-playlist-with-base-11.asx:
+	* test-playlist-with-base-07.asx:
+	* test-playlist-with-base-04.asx:
+	* test-playlist-with-base-01.asx:
+	* test-playlist-with-base-06.asx:
+	* test-playlist-with-base-05.asx:
+	* test-state-after-setsource.html:
+	* test-playlist-with-duration.html:
+	* test-asf-demuxer-big-markers.html:
+	* test-playlist-autoplayed-stop.html:
+	* test-playlist-live-with-duration.asx:
+	* test-reset-media-element-source.html:
+	* test-playlist-live-with-duration.html:
+	* test-asf-demuxer-shuffled-payloads.html:
+	* test-downloadprogress-on-small-files.html:
+	* test-download-and-buffering-progress-on-big-files.html:
+	  Fixed tests to run and pass in MS' 2.0 harness.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* timecode.mpeg: Move videos to test/media/video.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* masters:
+	* masters/video-seek.html.png:
+	* masters/test-mediaopened.Master.png:
+	* masters/video-seek-7.html.master.png: Delete this directory,
+	  the files have been moved to test/harness/masters.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: Delete old-style drtlists.
+
+2009-04-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-video-seek-7.html:
+	* test-yuv-converter.html:
+	* test-asf-demuxer-shuffled-payloads.html: Opt in for
+	  translating coordinates.
+
+2009-04-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-inexistent-media.html: Don't time out if the shutdown
+	  has already been requested.
+
+2009-03-20  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: Reenable test-mms-failure.html.
+
+2009-03-20  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: Mark test-mms-failure as known failure.
+
+2009-03-12  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: Disable test-mms-with-markers.html again.
+
+2009-03-12  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: Mark test-seek-race.html as known failure for
+	  now.
+
+2009-03-12  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-seek-race.html: Don't start seek/fail timer when we
+	  seek, but when we finish downloading.
+
+	* drtlist.xml: Remove known failure from test-mms-failure.html
+	  and up test-seek-race.html's timeout to 1 minute.
+
+2009-03-12  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-seek-race.html: Don't verify that the mediaelement has
+	  seeked successfully until the entire file has been
+	  downloaded. This way we don't fail the test due to the
+	  mediaelement not having seeked successfully when downloading
+	  the file took too long.
+
+2009-03-03  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* test-download-and-buffering-progress-on-big-files.html: Make
+	  this test not depend on a fast network (and make it succeed
+	  faster when the network is fast).
+
+2009-02-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: test-dns-failure.html needs xsp running.
+
+2009-02-11  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: Marking test-mms-failure as known failure.
+
+2008-12-04  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml, test-mms-with-markers.html: Added test for #456154.
+
+2008-11-12  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml, test-pause-and-play.html: Added
+	  test-pause-and-play.html.
+
+2008-11-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* ElephantsDream.en_fr.wmv, test-audiostreamindex.html, drtlist.xml:
+	  Added test-audiostreamindex.html.
+
+2008-11-03  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-states.html: Added test for CurrentState.
+	* drtlist.xml: Added test-states.html.
+
+2008-10-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Put more tests in the 'mediaserver' category.
+
+2008-10-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Add the 'mediaserver' category to tests which require
+	  the media server.
+
+2008-10-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-video-only-seek.html: Delay calling Play on the MediaElement
+	  until the MediaElement has had a chance to load the media.
+
+2008-10-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Add location attributes to those tests that need it.
+
+2008-08-20  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-inexistent-medias.html, test-inexistent-media.html, drtlist.xml:
+	  test-inexistent-media(s) were failing due to ISP's tendency to
+	  return search pages for failed dns lookups. Fixed tests after
+	  testing with sane DNS settings and did the appropiate change in
+	  code (raise correct error message/number).
+
+2008-07-03  Fernando Herrera  <fherrera@novell.com>
+
+	* test-dns-failure.html: Fixed.
+
+2008-07-02  Fernando Herrera  <fherrera@novell.com>
+
+	* drtlist.xml:
+	* test-dns-failure.html: Added.
+
+2008-06-30  Fernando Herrera  <fherrera@novell.com>
+
+	* test-http-failure.html: increase timeout.
+
+2008-06-28  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-inexistent-medias.html: Added.
+	* drtlist.xml: Added test-inexistent-medias.html.
+
+2008-06-28  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added test-seek-race.
+	* test-http-failure.html, test-playlist-live-with-duration.html: Inform
+	  about the most probable (duh) cause for this test to fail.
+	* test-markers-after-seek.html: Don't seek in MediaOpened, SL has some
+	  really random seeking behaviour if we do that.
+	* test-seek-race.html: Added.
+
+2008-06-26  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added test-double-stop.html.
+	* test-double-stop.asx, test-double-stop.html: Added.
+
+2008-06-26  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added test-video-only-seek.html.
+	* test-video-only-seek.html: Added.
+
+2008-06-21  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-asf-demuxer-big-markers.html,
+	  test-asf-demuxer-shuffled-payloads.html: Added.
+	* drtlist.xml: Updated ids to not conflict with any other media ids.
+	  Added test-asf-demuxer-shuffled-payloads and
+	  test-asf-demuxer-big-markers.
+
+2008-06-19  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Fixed test path.
+	* test-markers-after-seek.html: Enhanced to test backwards seeking too.
+
+2008-06-19  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* elephants-dream-320x180-first-minute.wmv,
+	  test-markers-after-seek.html: Added.
+	* drtlist.xml: Added test-markers-after-seek.
+
+2008-06-18  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-progressive-mms-seek.html: Added, not complete test about
+	  progressive mms seeking (backwards).
+
+2008-06-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml, test-nested-playlist.A.asx, test-nested-playlist.B.asx,
+	  test-nested-playlist.html: Added test-nested-playlist.html.
+
+2008-06-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml, test-stopped-media.asx, test-stopped-media.html: Added
+	  test-stopped-media.html
+
+2008-06-12  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added more tests.
+	* test-autoplay.html, test-mediaopened-2.html, test-mediaopened-3.html,
+	  test-playlist-autoplayed-stop.asx,
+	  test-playlist-autoplayed-stop.html: Added.
+
+2008-06-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Silverlight.js: Removed, not needed.
+
+2008-05-30  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* video-seek.html, test-video-seek-7.html, test-video-seek.html,
+	  test-mediaopened.html, test-all.js, test-all.html, all.js,
+	  drtlist.xml, all.html, video-seek-7.html: Renamed tests to be have
+	  more consistent names.
+
+2008-05-29  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Add another (randomly) known failure.
+
+2008-05-29  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* all.html, test-bufferingprogress.html,
+	  test-download-and-buffering-progress-on-big-files.html,
+	  test-downloadprogress-on-small-files.html,
+	  test-events-with-playlist.html, test-http-failure.html,
+	  test-inexistent-media.html, test-invalid-video-codec.html,
+	  test-mms-failure.html, test-misc.html,
+	  test-playlist-live-with-duration.html,
+	  test-playlist-with-base.html, test-playlist-with-duration.html,
+	  test-reset-media-element-source.html,
+	  test-playlist-with-clientskip.html, test-yuv-converter.html,
+	  test-state-after-setsource.html, video-seek.html,
+	  video-seek-7.html: Include utils.js before testplugin.js, and
+	  remove Silverlight.js includes.
+
+2008-05-28  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-playlist-live-with-duration.html: No need for Silverlight.js.
+
+2008-05-28  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-http-failure.html: Use a source which doesn't have to be
+	  restarted every time we want to play it.
+
+2008-05-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-mms-failure.html, test-inexistent-media.html: No need for
+	  Silverlight.js.
+
+2008-05-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: One test has regressed, mark it as known failure for
+	  now.
+
+2008-05-16  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-playlist-live-with-duration.html: Assert for media server.
+
+2008-05-15  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-playlist-live-with-duration.html, test-mediaopened.asx,
+	  test-mediaopened.html, masters/test-mediaopened.Master.png,
+	  test-playlist-live-with-duration.asx: Added.
+	* drtlist.xml: Updated.
+
+2008-05-14  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: test-http-failure isn't failing anymore.
+
+2008-05-14  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added test-playlist-with-zero-duration and
+	  test-playlist-with-duration.
+	* test-download-and-buffering-progress-on-big-files.html: Modified to
+	  don't fail if we get events after shutdown was requested.
+	* test-playlist-with-duration.asx,
+	  test-playlist-with-zero-duration.asx,
+	  test-playlist-with-zero-duration.html,
+	  test-playlist-with-duration.html: Added.
+
+2008-05-13  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Silverlight.js: Demystified.
+
+2008-05-06  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-playlist-with-base.html, test-playlist-with-base-01.asx,
+	  test-playlist-with-base-02.asx, test-playlist-with-base-03.asx,
+	  test-playlist-with-base-04.asx, test-playlist-with-base-05.asx,
+	  test-playlist-with-base-06.asx, test-playlist-with-base-07.asx,
+	  test-playlist-with-base-08.asx, test-playlist-with-base-09.asx,
+	  test-playlist-with-base-10.asx, test-playlist-with-base-11.asx,
+	  test-playlist-with-base-12.asx, test-playlist-with-base-13.asx,
+	  drtlist.xml: Added test-playlist-with-base.
+
+2008-05-06  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* timecode-long-with-audio.wmv: Added.
+
+2008-05-05  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-events-with-playlist.asx, test-events-with-playlist.html,
+	  drtlist.xml: Added test-events-with-playlist.
+
+2008-05-05  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Add two knownFailures and tweak timeouts.
+
+2008-05-05  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added test-bufferingprogress, test-http-failure and
+	  test-misc.
+	* test-bufferingprogress.html, test-http-failure.html, test-misc.html:
+	  Added.
+
+2008-05-02  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-playlist-with-clientskip.asx,
+	  test-playlist-with-clientskip.html: Added.
+	* drtlist.xml: Added test-playlist-with-clientskip.
+
+2008-04-30  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: test-mms-failure requires xsp.
+
+2008-04-30  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-mms-failure.html, drtlist.xml: Added test-mms-failure.
+
+2008-04-30  Fernando Herrera  <fherrera@novell.com>
+
+	* Makefile: Fix dirs.
+	* video-player.xaml: Added to test progresive http with mopen.
+
+2008-04-25  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml, test-downloadprogress-on-small-files.html,
+	  test-download-and-buffering-progress-on-big-files.html: Added
+	  test-downloadprogress-on-small-files and
+	  test-download-and-buffering-progress-on-big-files.
+
+2008-04-25  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-state-after-setsource.html: Fix filename.
+
+2008-04-25  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml, test-invalid-video-codec.html,
+	  test-state-after-setsource.html: Added test-state-after-setsource
+	  and test-invalid-video-codec.
+
+2008-04-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-inexistent-media.html, drtlist.xml: Added
+	  test-inexistent-media.html.
+
+2008-04-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-reset-media-element-source.html: Adjust timeouts and add another
+	  error condition.
+
+2008-04-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-yuv-converter.html: Added yuv converter test, currently fails
+	  with our own yuv converter, succeeds with ffmpeg's.
+	* test-reset-media-element-source.html: Added test for behaviour when
+	  resetting a MediaElement's source to the same url.
+	* drtlist.xml: Updated.
+
+2008-04-14  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* video-seek-7.html, video-seek.html, all.html: Fixed to work with the test
+	  harness.
+	* video-auto.xaml, video.xaml, all.xaml: Removed, using inline xaml.
+	* drtlist.xml: Updated.
+	* all.js: Minor fix.
+
+2008-03-15  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	
+
+2008-02-29  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* video-seek.html: Fix comparison.
+	* timecode-short.wmv: Encode this file with a codec that SL supports.
+	* playlist/event-with-entry.asx, playlist/case-mismatched-asx-tag.asx,
+	  playlist/asx-previewmode-no.asx, playlist/base-in-asx-default.asx,
+	  playlist/asx-version-3..asx, playlist/entryref-in-entryref.asx,
+	  playlist/ref-with-ref.asx, playlist/starttime-with-starttime.asx,
+	  playlist/playlist.asx, playlist/event-with-name.asx,
+	  playlist/ref-with-duration.asx, playlist/endmarker-in-entry.asx,
+	  playlist/asx-version-2.0.asx, playlist/copyright-in-entry.asx,
+	  playlist/entry-with-skipifref-invalid.asx,
+	  playlist/entryref-with-clientbind-yes.asx, playlist/nested-1.asx,
+	  playlist/entryref-in-event.asx, playlist/copyright-in-copyright.asx,
+	  playlist/nested-3.asx, playlist/nested-5.asx,
+	  playlist/repeat-with-entryref.asx,
+	  playlist/endmarker-with-name-and-number.asx, playlist/nested-7.asx,
+	  playlist/all.js, playlist/entryref-in-asx.asx,
+	  playlist/entry-with-text.asx, playlist/base-without-href.asx,
+	  playlist/entry-in-asx.asx, playlist/invalid-tag.asx,
+	  playlist/endmarker-with-name.asx,
+	  playlist/event-with-name-and-whendone-break.asx,
+	  playlist/startmarker-in-entryref.asx,
+	  playlist/startmarker-in-startmarker.asx,
+	  playlist/param-with-name-and-value.asx,
+	  playlist/startmarker-in-entry.asx, playlist/playlist-crash.xaml,
+	  playlist/abstract-in-entry.asx, playlist/asx-bannerbar-invalid.asx,
+	  playlist/moreinfo-in-asx.asx, playlist/asx-nested.asx, playlist/ref.asx,
+	  playlist/asx-previewmode-yes.asx, playlist/repeat-in-asx.asx,
+	  playlist/repeat-with-invalid-attribute.asx, playlist/event.asx,
+	  playlist/playlist.js, playlist/endmarker-in-ref.asx, playlist/all.sh,
+	  playlist/param-with-text.asx, playlist/invalid-media.asx,
+	  playlist/title-with-tag.asx, playlist/copyright-in-asx.asx,
+	  playlist/endmarker-in-asx.asx, playlist/base-in-asx.asx,
+	  playlist/moreinfo-with-href.asx, playlist/entry-with-clientskip-yes.asx,
+	  playlist/ref-attribute.asx, playlist/all.xaml,
+	  playlist/entryref-in-repeat.asx,
+	  playlist/starttime-with-invalid-value.asx, playlist/base-in-base.asx,
+	  playlist/entry-with-clientskip-no.asx, playlist/multiple-refs.asx,
+	  playlist/entry-with-skipifref-yes.asx, playlist/copyright-with-tag.asx,
+	  playlist/author-in-asx.asx, playlist/event-with-whendone.asx,
+	  playlist/no-version.asx, playlist/duration-without-value.asx,
+	  playlist/moreinfo-with-moreinfo.asx, playlist/param-in-entry.asx,
+	  playlist/asx-previewmode-invalid.asx, playlist/event-with-entry-ref.asx,
+	  playlist/ref-in-asx.asx, playlist/playlist.html,
+	  playlist/ref-with-invalid-attribute.asx,
+	  playlist/moreinfo-with-target.asx, playlist/Silverlight.js,
+	  playlist/moreinfo-in-entry.asx, playlist/duration-in-asx.asx,
+	  playlist/entry-in-repeat.asx, playlist/param-with-name.asx,
+	  playlist/duration-in-entry.asx, playlist/asx-version-03.0.asx,
+	  playlist/ref-with-tag.asx, playlist/very-long-title.asx,
+	  playlist/entry-with-clientskip-invalid.asx,
+	  playlist/author-attribute.asx, playlist/base-casemismatched-href.asx,
+	  playlist/deleted-entry.asx, playlist/author-in-author.asx,
+	  playlist/ref-with-text.asx, playlist/startmarker-in-ref.asx,
+	  playlist/base-in-entry.asx, playlist/asx-version-4.0.asx,
+	  playlist/starttime-in-entry.asx, playlist/asx-bannerbar-fixed.asx,
+	  playlist/asx-invalid-attribute.asx, playlist/nested-2.asx,
+	  playlist/ref-with-startmarker.asx, playlist/nested-4.asx,
+	  playlist/nested-6.asx, playlist/simple.asx,
+	  playlist/starttime-in-starttime.asx, playlist/ref-with-endmarker.asx,
+	  playlist/asx-version-3.00.asx, playlist/startmarker-in-asx.asx,
+	  playlist/param-in-asx.asx, playlist/param-with-invalid-attribute.asx,
+	  playlist/ref-with-starttime.asx, playlist/abstract-in-asx.asx,
+	  playlist/event-with-name-and-whendone-invalid.asx,
+	  playlist/asx-invalid-version.asx, playlist/author-in-entry.asx,
+	  playlist/repeat-with-repeat.asx, playlist/playlist.xaml,
+	  playlist/param-with-param.asx, playlist/copyright-attribute.asx,
+	  playlist/event-with-name-and-whendone-resume.asx,
+	  playlist/title-attribute.asx, playlist/param-with-value.asx,
+	  playlist/title-in-author.asx, playlist/asx-bannerbar-auto.asx,
+	  playlist/starttime-in-twice.asx,
+	  playlist/entryref-with-clientbind-no.asx, playlist/starttime-in-ref.asx,
+	  playlist/ref-without-href.asx, playlist/entry-with-skipifref-no.asx,
+	  playlist/entryref-with-clientbind-invalid.asx,
+	  playlist/inexistent-media.asx, playlist/abstract-in-abstract.asx,
+	  playlist/starttime-in-asx.asx,
+	  playlist/starttime-with-invalid-attribute.asx,
+	  playlist/asx-version-3.0.asx, playlist/repeat-with-number.asx,
+	  playlist/entry-in-event.asx, playlist/starttime-without-value.asx,
+	  playlist/repeat-with-entry.asx,
+	  playlist/event-with-name-and-whendone-next.asx,
+	  playlist/startmarker-with-text.asx,
+	  playlist/endmarker-with-invalid-number.asx,
+	  playlist/moreinfo-with-href-and-target.asx, playlist/empty.asx,
+	  playlist/param.asx, playlist/entry-attribute.asx,
+	  playlist/endmarker-with-number.asx,
+	  playlist/asx-nested-with-version.asx, playlist/repeat-without-count.asx,
+	  playlist/starttime-with-text.asx, playlist/playlist-crash.html,
+	  playlist/title-with-title.asx, playlist/duration-in-duration.asx,
+	  playlist/duration-in-entry-invalid.asx,
+	  playlist/base-without-href-with-invalid-attrib.asx,
+	  playlist/copyright-in-asx-twice.asx, playlist/asx-version-3.asx,
+	  playlist/title-in-asx.asx, playlist/title-with-invalid-attribute.asx,
+	  playlist/entryref-without-href.asx, playlist/asx-no-end-tag.asx,
+	  playlist/repeat-in-entry.asx, playlist/author-with-tag.asx,
+	  playlist/title-in-entry.asx: Add a couple of asx/playlist parser test
+	  files.
+	* video.xaml: Fix spurious character.
+
+2008-02-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml, masters, masters/video-seek.html.png,
+	  masters/video-seek-7.html.png, timecode-long.wmv, video.xaml,
+	  video-auto.xaml, video-seek.html, video-seek-7.html: Added a drtlist and
+	  a few media tests.
+
+2007-12-27  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Created a web page to test for markers, added some videos.

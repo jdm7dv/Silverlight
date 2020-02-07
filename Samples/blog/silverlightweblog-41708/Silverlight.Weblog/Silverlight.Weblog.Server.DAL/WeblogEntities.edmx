@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SilverlightWeblogModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="SilverlightWeblogModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="SilverlightWeblogModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Comments" EntityType="SilverlightWeblogModel.Store.Comments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PostCategories" EntityType="SilverlightWeblogModel.Store.PostCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PostCategory" EntityType="SilverlightWeblogModel.Store.PostCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Posts" EntityType="SilverlightWeblogModel.Store.Posts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="SilverlightWeblogModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Categories_Categories" Association="SilverlightWeblogModel.Store.FK_Categories_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Categories1" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Comments" Association="SilverlightWeblogModel.Store.FK_Comments_Comments">
+            <End Role="Comments" EntitySet="Comments" />
+            <End Role="Comments1" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Posts" Association="SilverlightWeblogModel.Store.FK_Comments_Posts">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PostCategories_Categories" Association="SilverlightWeblogModel.Store.FK_PostCategories_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="PostCategories" EntitySet="PostCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PostCategories_Posts" Association="SilverlightWeblogModel.Store.FK_PostCategories_Posts">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="PostCategories" EntitySet="PostCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PostCategory_Categories" Association="SilverlightWeblogModel.Store.FK_PostCategory_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="PostCategory" EntitySet="PostCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PostCategory_Posts" Association="SilverlightWeblogModel.Store.FK_PostCategory_Posts">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="PostCategory" EntitySet="PostCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Posts_Users" Association="SilverlightWeblogModel.Store.FK_Posts_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Posts" EntitySet="Posts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" />
+          <Property Name="ParentID" Type="int" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Url" Type="nvarchar" MaxLength="256" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="HTML" Type="text" />
+          <Property Name="PostID" Type="int" />
+          <Property Name="ParentID" Type="int" />
+        </EntityType>
+        <EntityType Name="PostCategories">
+          <Key>
+            <PropertyRef Name="PostID" />
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="PostID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PostCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="PostID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="text" />
+          <Property Name="HTML" Type="text" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Permlink" Type="nvarchar" MaxLength="300" />
+          <Property Name="DateCreated" Type="date" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="nvarchar" MaxLength="64" />
+          <Property Name="PasswordHash" Type="nvarchar" MaxLength="64" />
+          <Property Name="BlogTitle" Type="nvarchar" MaxLength="256" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="64" />
+          <Property Name="Email" Type="nvarchar" MaxLength="128" />
+          <Property Name="BlogName" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsDefaultBlog" Type="bit" />
+          <Property Name="HomeUrl" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <Association Name="FK_Categories_Categories">
+          <End Role="Categories" Type="SilverlightWeblogModel.Store.Categories" Multiplicity="0..1" />
+          <End Role="Categories1" Type="SilverlightWeblogModel.Store.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Categories1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Comments">
+          <End Role="Comments" Type="SilverlightWeblogModel.Store.Comments" Multiplicity="0..1" />
+          <End Role="Comments1" Type="SilverlightWeblogModel.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comments">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Comments1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Posts">
+          <End Role="Posts" Type="SilverlightWeblogModel.Store.Posts" Multiplicity="0..1" />
+          <End Role="Comments" Type="SilverlightWeblogModel.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="PostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PostCategories_Categories">
+          <End Role="Categories" Type="SilverlightWeblogModel.Store.Categories" Multiplicity="1" />
+          <End Role="PostCategories" Type="SilverlightWeblogModel.Store.PostCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PostCategories">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PostCategories_Posts">
+          <End Role="Posts" Type="SilverlightWeblogModel.Store.Posts" Multiplicity="1" />
+          <End Role="PostCategories" Type="SilverlightWeblogModel.Store.PostCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PostCategories">
+              <PropertyRef Name="PostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PostCategory_Categories">
+          <End Role="Categories" Type="SilverlightWeblogModel.Store.Categories" Multiplicity="1" />
+          <End Role="PostCategory" Type="SilverlightWeblogModel.Store.PostCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PostCategory">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PostCategory_Posts">
+          <End Role="Posts" Type="SilverlightWeblogModel.Store.Posts" Multiplicity="1" />
+          <End Role="PostCategory" Type="SilverlightWeblogModel.Store.PostCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PostCategory">
+              <PropertyRef Name="PostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Posts_Users">
+          <End Role="Users" Type="SilverlightWeblogModel.Store.Users" Multiplicity="0..1" />
+          <End Role="Posts" Type="SilverlightWeblogModel.Store.Posts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Posts">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SilverlightWeblogModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="EfContext">
+          <EntitySet Name="CategorySet" EntityType="SilverlightWeblogModel.Category" />
+          <EntitySet Name="BlogPostSet" EntityType="SilverlightWeblogModel.BlogPost" />
+          <EntitySet Name="UserSet" EntityType="SilverlightWeblogModel.User" />
+          <AssociationSet Name="FK_Posts_Users" Association="SilverlightWeblogModel.FK_Posts_Users">
+            <End Role="Users" EntitySet="UserSet" />
+            <End Role="Posts" EntitySet="BlogPostSet" />
+          </AssociationSet>
+          <EntitySet Name="PostCategory" EntityType="SilverlightWeblogModel.PostCategory" />
+          <AssociationSet Name="FK_PostCategory_Categories" Association="SilverlightWeblogModel.FK_PostCategory_Categories">
+            <End EntitySet="CategorySet" Role="Categories" />
+            <End EntitySet="PostCategory" Role="PostCategory" /></AssociationSet>
+          <AssociationSet Name="FK_PostCategory_Posts" Association="SilverlightWeblogModel.FK_PostCategory_Posts">
+            <End EntitySet="BlogPostSet" Role="Posts" />
+            <End EntitySet="PostCategory" Role="PostCategory" /></AssociationSet>
+          <AssociationSet Name="PostCategories1" Association="SilverlightWeblogModel.PostCategories1">
+            <End Role="Categories" EntitySet="CategorySet" />
+            <End Role="Posts" EntitySet="BlogPostSet" /></AssociationSet>
+          <AssociationSet Name="FK_Categories_Categories" Association="SilverlightWeblogModel.FK_Categories_Categories">
+            <End Role="Category" EntitySet="CategorySet" />
+            <End Role="Category1" EntitySet="CategorySet" /></AssociationSet>
+          <EntitySet Name="CommentSet" EntityType="SilverlightWeblogModel.Comment" />
+          <AssociationSet Name="FK_Comments_Comments" Association="SilverlightWeblogModel.FK_Comments_Comments">
+            <End Role="Comments" EntitySet="CommentSet" />
+            <End Role="Comments1" EntitySet="CommentSet" /></AssociationSet>
+          <AssociationSet Name="FK_Comments_Posts" Association="SilverlightWeblogModel.FK_Comments_Posts">
+            <End Role="BlogPost" EntitySet="BlogPostSet" />
+            <End Role="Comments" EntitySet="CommentSet" /></AssociationSet></EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PostCategory" Relationship="SilverlightWeblogModel.FK_PostCategory_Categories" FromRole="Categories" ToRole="PostCategory" />
+          <NavigationProperty Name="Posts" Relationship="SilverlightWeblogModel.PostCategories1" FromRole="Categories" ToRole="Posts" />
+          <NavigationProperty Name="ChildCategories" Relationship="SilverlightWeblogModel.FK_Categories_Categories" FromRole="Category" ToRole="Category1" />
+          <NavigationProperty Name="ParentCategory" Relationship="SilverlightWeblogModel.FK_Categories_Categories" FromRole="Category1" ToRole="Category" /></EntityType>
+        <EntityType Name="BlogPost">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="HTML" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Permlink" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="DateCreated" Type="DateTime" />
+          <NavigationProperty Name="User" Relationship="SilverlightWeblogModel.FK_Posts_Users" FromRole="Posts" ToRole="Users" />
+          <NavigationProperty Name="PostCategories" Relationship="SilverlightWeblogModel.FK_PostCategory_Posts" FromRole="Posts" ToRole="PostCategory" />
+          <NavigationProperty Name="Categories" Relationship="SilverlightWeblogModel.PostCategories1" FromRole="Posts" ToRole="Categories" />
+          <NavigationProperty Name="Comments" Relationship="SilverlightWeblogModel.FK_Comments_Posts" FromRole="BlogPost" ToRole="Comments" /></EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Posts" Relationship="SilverlightWeblogModel.FK_Posts_Users" FromRole="Users" ToRole="Posts" />
+          <Property Name="BlogTitle" Type="String" Nullable="true" />
+          <Property Name="Email" Type="String" Nullable="true" />
+          <Property Name="BlogName" Type="String" Nullable="true" />
+          <Property Name="IsDefaultBlog" Type="Boolean" Nullable="true" />
+          <Property Name="HomeUrl" Type="String" Nullable="true" /></EntityType>
+        <Association Name="FK_Posts_Users">
+          <End Role="Users" Type="SilverlightWeblogModel.User" Multiplicity="1" />
+          <End Role="Posts" Type="SilverlightWeblogModel.BlogPost" Multiplicity="*" />
+        </Association>
+        <EntityType Name="PostCategory">
+          <Key>
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="SilverlightWeblogModel.FK_PostCategory_Categories" FromRole="PostCategory" ToRole="Categories" />
+          <NavigationProperty Name="Post" Relationship="SilverlightWeblogModel.FK_PostCategory_Posts" FromRole="PostCategory" ToRole="Posts" /></EntityType>
+        <Association Name="FK_PostCategory_Categories">
+          <End Type="SilverlightWeblogModel.Category" Multiplicity="1" Role="Categories" />
+          <End Type="SilverlightWeblogModel.PostCategory" Multiplicity="*" Role="PostCategory" /></Association>
+        <Association Name="FK_PostCategory_Posts">
+          <End Type="SilverlightWeblogModel.BlogPost" Multiplicity="1" Role="Posts" />
+          <End Type="SilverlightWeblogModel.PostCategory" Multiplicity="*" Role="PostCategory" /></Association>
+        <Association Name="PostCategories1">
+          <End Type="SilverlightWeblogModel.Category" Role="Categories" Multiplicity="*" />
+          <End Type="SilverlightWeblogModel.BlogPost" Role="Posts" Multiplicity="*" /></Association>
+        <Association Name="FK_Categories_Categories">
+          <End Type="SilverlightWeblogModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="SilverlightWeblogModel.Category" Role="Category1" Multiplicity="*" /></Association>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="true" />
+          <Property Name="Url" Type="String" Nullable="true" />
+          <Property Name="Email" Type="String" Nullable="true" />
+          <Property Name="HTML" Type="String" Nullable="true" />
+          <NavigationProperty Name="ChildComments" Relationship="SilverlightWeblogModel.FK_Comments_Comments" FromRole="Comments" ToRole="Comments1" />
+          <NavigationProperty Name="ParentComment" Relationship="SilverlightWeblogModel.FK_Comments_Comments" FromRole="Comments1" ToRole="Comments" />
+          <NavigationProperty Name="BlogPost" Relationship="SilverlightWeblogModel.FK_Comments_Posts" FromRole="Comments" ToRole="BlogPost" /></EntityType>
+        <Association Name="FK_Comments_Comments">
+          <End Type="SilverlightWeblogModel.Comment" Role="Comments" Multiplicity="0..1" />
+          <End Type="SilverlightWeblogModel.Comment" Role="Comments1" Multiplicity="*" /></Association>
+        <Association Name="FK_Comments_Posts">
+          <End Type="SilverlightWeblogModel.BlogPost" Role="BlogPost" Multiplicity="0..1" />
+          <End Type="SilverlightWeblogModel.Comment" Role="Comments" Multiplicity="*" /></Association></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="SilverlightWeblogModelStoreContainer" CdmEntityContainer="EfContext">
+          <EntitySetMapping Name="CategorySet">
+            <EntityTypeMapping TypeName="IsTypeOf(SilverlightWeblogModel.Category)">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BlogPostSet">
+            <EntityTypeMapping TypeName="IsTypeOf(SilverlightWeblogModel.BlogPost)">
+              <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="HTML" ColumnName="HTML" />
+                <ScalarProperty Name="Permlink" ColumnName="Permlink" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSet">
+            <EntityTypeMapping TypeName="IsTypeOf(SilverlightWeblogModel.User)">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="HomeUrl" ColumnName="HomeUrl" />
+                <ScalarProperty Name="IsDefaultBlog" ColumnName="IsDefaultBlog" />
+                <ScalarProperty Name="BlogName" ColumnName="BlogName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="BlogTitle" ColumnName="BlogTitle" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_Posts_Users" TypeName="SilverlightWeblogModel.FK_Posts_Users" StoreEntitySet="Posts">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="ID" ColumnName="UserID" />
+            </EndProperty>
+            <EndProperty Name="Posts">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="PostCategory">
+            <EntityTypeMapping TypeName="IsTypeOf(SilverlightWeblogModel.PostCategory)">
+              <MappingFragment StoreEntitySet="PostCategory">
+                <ScalarProperty Name="ID" ColumnName="ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_PostCategory_Categories" TypeName="SilverlightWeblogModel.FK_PostCategory_Categories" StoreEntitySet="PostCategory">
+            <EndProperty Name="PostCategory">
+              <ScalarProperty Name="ID" ColumnName="ID" /></EndProperty>
+            <EndProperty Name="Categories">
+              <ScalarProperty Name="ID" ColumnName="CategoryID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_PostCategory_Posts" TypeName="SilverlightWeblogModel.FK_PostCategory_Posts" StoreEntitySet="PostCategory">
+            <EndProperty Name="PostCategory">
+              <ScalarProperty Name="ID" ColumnName="ID" /></EndProperty>
+            <EndProperty Name="Posts">
+              <ScalarProperty Name="ID" ColumnName="PostID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="PostCategories1" TypeName="SilverlightWeblogModel.PostCategories1" StoreEntitySet="PostCategories">
+            <EndProperty Name="Posts">
+              <ScalarProperty Name="ID" ColumnName="PostID" /></EndProperty>
+            <EndProperty Name="Categories">
+              <ScalarProperty Name="ID" ColumnName="CategoryID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Categories_Categories" TypeName="SilverlightWeblogModel.FK_Categories_Categories" StoreEntitySet="Categories">
+            <EndProperty Name="Category1">
+              <ScalarProperty Name="ID" ColumnName="ID" /></EndProperty>
+            <EndProperty Name="Category">
+              <ScalarProperty Name="ID" ColumnName="ParentID" /></EndProperty>
+            <Condition ColumnName="ParentID" IsNull="false" /></AssociationSetMapping>
+          <EntitySetMapping Name="CommentSet">
+            <EntityTypeMapping TypeName="IsTypeOf(SilverlightWeblogModel.Comment)">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="HTML" ColumnName="HTML" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Comments_Comments" TypeName="SilverlightWeblogModel.FK_Comments_Comments" StoreEntitySet="Comments">
+            <EndProperty Name="Comments1">
+              <ScalarProperty Name="ID" ColumnName="ID" /></EndProperty>
+            <EndProperty Name="Comments">
+              <ScalarProperty Name="ID" ColumnName="ParentID" /></EndProperty>
+            <Condition ColumnName="ParentID" IsNull="false" /></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Comments_Posts" TypeName="SilverlightWeblogModel.FK_Comments_Posts" StoreEntitySet="Comments">
+            <EndProperty Name="Comments">
+              <ScalarProperty Name="ID" ColumnName="ID" /></EndProperty>
+            <EndProperty Name="BlogPost">
+              <ScalarProperty Name="ID" ColumnName="PostID" /></EndProperty>
+            <Condition ColumnName="PostID" IsNull="false" /></AssociationSetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="WeblogEntities">
+        <EntityTypeShape EntityType="SilverlightWeblogModel.Category" Width="1.5" PointX="0.75" PointY="4.75" Height="1.4033821614583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SilverlightWeblogModel.BlogPost" Width="1.5" PointX="3" PointY="0.875" Height="2.1725878906250005" IsExpanded="true" />
+        <EntityTypeShape EntityType="SilverlightWeblogModel.User" Width="1.5" PointX="0.75" PointY="1" Height="1.9802864583333335" IsExpanded="true" />
+        <AssociationConnector Association="SilverlightWeblogModel.FK_Posts_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.2785953776041667" />
+          <ConnectorPoint PointX="3" PointY="2.2785953776041667" /></AssociationConnector>
+        <EntityTypeShape EntityType="SilverlightWeblogModel.PostCategory" PointX="2.625" PointY="4.75" Width="1.5" Height="1.5956835937499996" />
+        <AssociationConnector Association="SilverlightWeblogModel.FK_PostCategory_Categories">
+          <ConnectorPoint PointX="2.25" PointY="5.547841796875" />
+          <ConnectorPoint PointX="2.625" PointY="5.547841796875" />
+          </AssociationConnector>
+        <AssociationConnector Association="SilverlightWeblogModel.FK_PostCategory_Posts">
+          <ConnectorPoint PointX="3.5625" PointY="3.6244921875" />
+          <ConnectorPoint PointX="3.5625" PointY="4.75" />
+          </AssociationConnector>
+        <AssociationConnector Association="SilverlightWeblogModel.PostCategories1" >
+          <ConnectorPoint PointX="2.25" PointY="6.6653857421875" />
+          <ConnectorPoint PointX="4.34375" PointY="6.6653857421875" />
+          <ConnectorPoint PointX="4.34375" PointY="3.6244921875" /></AssociationConnector>
+        <AssociationConnector Association="SilverlightWeblogModel.FK_Categories_Categories" />
+        <EntityTypeShape EntityType="SilverlightWeblogModel.Comment" Width="1.5" PointX="5.25" PointY="1" Height="2.5571907552083335" />
+        <AssociationConnector Association="SilverlightWeblogModel.FK_Comments_Comments" >
+          <ConnectorPoint PointX="5.7819230769230767" PointY="3.5571907552083335" />
+          <ConnectorPoint PointX="5.7819230769230767" PointY="3.8071907552083335" />
+          <ConnectorPoint PointX="6.2284615384615378" PointY="3.8071907552083335" />
+          <ConnectorPoint PointX="6.2284615384615378" PointY="3.5571907552083335" /></AssociationConnector>
+        <AssociationConnector Association="SilverlightWeblogModel.FK_Comments_Posts" >
+          <ConnectorPoint PointX="4.5" PointY="2.2785953776041667" />
+          <ConnectorPoint PointX="5.25" PointY="2.2785953776041667" />
+          </AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

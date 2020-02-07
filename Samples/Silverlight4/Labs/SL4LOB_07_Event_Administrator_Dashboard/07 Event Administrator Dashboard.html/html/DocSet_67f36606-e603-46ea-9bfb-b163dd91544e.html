@@ -1,0 +1,151 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: “Toast” Notifications" />
+      <MSHelp:RLTitle Title="Exercise 2: “Toast” Notifications" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: “Toast” Notifications</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 7 - Out of Browser, Toasts, Native Integration Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: “Toast” Notifications</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this next stage, we’ll arrange for the application to show “toast” style notifications: small popup windows that appear briefly at the bottom right of the screen. Our administrator dashboard can provide these each time we get any new registrations needing to be acknowledged.</p>
+        <p>Silverlight 4 does not add any new feature aimed at arranging for this sort of notification to be passed from the server to the client. The focus of this part of the lab is simply the UI mechanism for displaying the notification to the end user. As for the architectural question of how the client knows when to do this, we’ll be using two distinctly lo-tech solutions. To start with we’ll just have a button to show it manually on demand, because that makes it easy to test. Then we’ll make the application poll the server. Every few seconds it will call the operation used in the previous section to fetch the list of unacknowledged items, and when new items appear, we’ll raise a notification.</p>
+        <p>In general, having a client poll a server every few seconds is not ideal because it does not scale well. In this particular application, we can get away with it because only event administrators will be using this feature, so the feature only needs to scale to however many administrators we have. We probably only have a handful, or maybe even just the one. </p>
+        <a name="_Toc256194237" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Creating the Toast Content</b>
+        </p>
+        <ol>
+          <li>Add a user control called NotificationContent to your EventAdministration project.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>We will set a notification window’s content to this user control.</td></tr></table><p /></div></li>
+          <br />
+          <li>Set its Width and Height to 150 and 90 respectively. </li>
+          <li>Remove the design-time width and height. These are hints to the design surface for elements that determine their size at runtime.</li>
+          <li>Put the following content inside the Grid:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Border BorderBrush="Navy" BorderThickness="1"&gt;    &lt;Border.Background&gt;        &lt;LinearGradientBrush StartPoint="0,0" EndPoint="0,1"&gt;            &lt;GradientStop Color="#DEF" /&gt;            &lt;GradientStop Offset="1" Color="#FFF" /&gt;        &lt;/LinearGradientBrush&gt;    &lt;/Border.Background&gt;&lt;/Border&gt;&lt;TextBlock    Text="New Subscribers"    HorizontalAlignment="Center"    VerticalAlignment="Top"    FontWeight="Bold"    FontSize="14"    Margin="0,3"    /&gt;&lt;StackPanel    Orientation="Horizontal"    HorizontalAlignment="Center"    VerticalAlignment="Center"    &gt;    &lt;TextBlock Text="{Binding Path=.}" /&gt;    &lt;TextBlock Text=" unprocessed" /&gt;&lt;/StackPanel&gt;</pre></td></tr></table></span></div></li>
+          <li>Note that one of the text blocks has its text data-bound to “.” so it will display whatever we put in the DataContext.</li>
+          <li>In OobUi.xaml.cs, add the following:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>NotificationWindow nw = new NotificationWindow();void ShowNotification(int count){    if (nw.Visibility == System.Windows.Visibility.Visible)    {        nw.Close();    }    nw.Content = new NotificationContent();    nw.Content.DataContext = count;    nw.Width = nw.Content.Width + 2;    nw.Height = nw.Content.Height + 2;    nw.Show(5000);}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This closes the notification window if it’s already visible. We need to do this because trying to show the window when it’s already open will cause an exception. <br />Notice that this code also sets the Width and Height properties to match those of the content. NotificationWindow will not automatically size to content. (Also, be aware that there are size restrictions. If you decide you’d like to use a more outlandish design than the one offered here, you’re limited to 400 pixels wide by 100 pixels high.) We add in 2 pixels of space because the NotificationWindow provides a 1 pixel border which uses some of the space we provide. (So that’s two pixels horizontally—one on either side, and likewise vertically.)</td></tr></table><p /></div></li>
+          <br />
+          <li>To test this, add a button to OobUi.xaml.cs. In the click handler call the ShowNotification method passing in any number.</li>
+          <li>Run the application and verify that the notification window appears when the button is pressed.</li>
+        </ol>
+        <a name="_Toc256194238" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Pop up the Toast</b>
+        </p>
+        <p>Next, we’ll put code in the view model to raise the notification when it needs to be raised. </p>
+        <ol>
+          <li>Open OobUiViewModel and add this using directive:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Windows.Threading;</pre></td></tr></table></span></div></li>
+          <li>then add this timer code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private DispatcherTimer dt;private Action&lt;int&gt; showNotification;public void Load(Action&lt;int&gt; notifyCallback){    showNotification = notifyCallback;    if (dt == null)    {        dt = new DispatcherTimer();        dt.Tick += NotifyTick;        dt.Interval = TimeSpan.FromSeconds(10);    }    dt.Start();}void NotifyTick(object sender, EventArgs e){    if (showNotification != null)    {        showNotification(DateTime.Now.Millisecond % 11);    }}public void Unload(){    dt.Stop();    showNotification = null;}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This sets up a timer to fire every 10 seconds, and calls a notification callback with a meaningless number. (We’ll put a real number in shortly.)</td></tr></table><p /></div></li>
+          <br />
+          <li>In the OobUi.xaml.cs code behind, add code in the constructor to hook up a handler to the Loaded event for <b>OobUi</b>. </li>
+          <li>Have the handler call the view model’s Load method, passing in the ShowNotification function to enable the view model to show the notification window:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>    this.Loaded += new RoutedEventHandler(OobUi_Loaded);...void OobUi_Loaded(object sender, RoutedEventArgs e){    viewModel.Load(ShowNotification);}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Although we wrote an Unload method for the view model, there’s nowhere we can call that here. Silverlight doesn’t offer an Unloaded event. In fact it’s not a problem because our OobUi view remains running for as long as the application runs. If we were to change this administration application to use navigation (like the SlEventManager application), we would have to call the Unload method in the handler for navigation away from the page. (And we’d call Load in the method that navigates to the page.)</td></tr></table><p /></div></li>
+          <br />
+          <li>Run the application. Every 10 seconds, a notification window should appear for 5 seconds.</li>
+        </ol>
+        <a name="_Toc256194239" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Check for Notifications</b>
+        </p>
+        <p>Next we need to do two things. First, we should check for new data in the timer tick, and second, we should show the notification only if something has changed. </p>
+        <ol>
+          <li>In <b>OobUiViewModel</b>, replace the body of NotifyTick with a call to OnGet. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This will fetch the data again. However, we’ll now run headlong into a problem that we were previously ignoring: the code to fetch the list fails if we try to run it before logging in, and does so most ungracefully. It will take out the entire application without an error. (The default behavior for unhandled exceptions is to leave the entire application as a blank white space.) So the first thing we should do is check for errors. </td></tr></table><p /></div></li>
+          <br />
+          <li>In each of the lambdas inside OnGet, we should exit if something went wrong, so add this code as the first line of the first lambda:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (loadUnackOp.HasError) { loadUnackOp.MarkErrorAsHandled(); return; }</pre></td></tr></table></span></div></li>
+          <li>Add this code as the first line of the second lambda:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (loadDetailsOp.HasError)     { loadDetailsOp.MarkErrorAsHandled();  return; }</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>While this may not be world class error reporting, we are actually expecting errors here as a matter of course until we log in, so it’s not totally unreasonable to swallow them. (A more sophisticated approach would be to check to see if we’re logged in before even attempting to poll. However, it’s conceivable that our login might have expired, so we need to be prepared for failure anyway.)</td></tr></table><p /></div></li>
+          <br />
+          <li>Next we need to check to see if anything changed when we get the data back. Just before the line of code that sets UnacknowledgedRegistrations to the results, add this code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (UnacknowledgedRegistrations != null){    int[] oldAttendeeEventIds = UnacknowledgedRegistrations.Select(        e =&gt; e.AttendeeEventID).Distinct().ToArray();    int[] newAttendeeEventIds = loadUnackOp.Entities.Select(        e =&gt; e.AttendeeEventID).Distinct().ToArray();    if (newAttendeeEventIds.Any(id =&gt; !oldAttendeeEventIds.Contains(id))        &amp;&amp; showNotification != null)    {        showNotification(newAttendeeEventIds.Length);    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The first time we fetch results, this won’t do anything, because UnacknowledgedRegistrations will be null. But each time after that, it looks as the set of AttendeeEvent row IDs. (That table contains one row for each registration.) It doesn’t do an exact comparison, because we expect rows to go away as registrations are acknowledged. So it just looks to see if the recently fetched list contains any IDs that weren’t there the last time we fetched the list. If so, that means new registrations are present.</td></tr></table><p /></div></li>
+          <br />
+          <li>There’s just one problem: this won’t compile, because the UnacknowledgedRegistrationViewModel class doesn’t contain an AttendeeEventID. But that’s easily fixed. Add a property of that name with type int. </li>
+          <li>Then in the LINQ query that initializes the UnacknowledgedRegistrationViewModel objects (which is immediately above the code you just added in OnGet) add an extra line to the object initializer in the select clause:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>AttendeeEventID = atev.AttendeeEventID,</pre></td></tr></table></span></div></li>
+          <li>Run the application again. Log in as the administrator user (P@ssw0rd).<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>To test this, you’ll need to add an extra event registration. You can use the web browser that opens when you debug the application. Right now it will be on EventAdministrationTestPage.html, showing the message indicating that the event admin dashboard needs to run out of browser. But if you modify the URL in the address bar, putting SlEventManagerTestPage.html on the end, you’ll be able to run the normal end user UI in the browser at the same time as you’re debugging the administration UI out-of-browser. </td></tr></table><p /></div></li>
+          <br />
+          <li>In the web brower, log in as the “ian” user (“P@ssw0rd”), and you should see three listed events, the third of which the user is not yet registered for. </li>
+          <li>Register for this event. After a few seconds, you should see a notification popup showing that there are now 3 unacknowledged event registrations.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td><a name="_GoBack" href="#"><span /></a>if you set breakpoints to follow the progress of the code, the focus changes that occur between Visual Studio and your application can end up dismissing the popup. It might vanish a fraction of a second after it appears, rather than staying up for the full 5 seconds. If you run without breaking in with the debugger you should see the full behavior.</td></tr></table><p /></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

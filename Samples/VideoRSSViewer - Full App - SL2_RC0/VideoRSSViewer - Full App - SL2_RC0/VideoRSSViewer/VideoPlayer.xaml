@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="VideoRSSViewer.VideoPlayer"
+    xmlns="http://schemas.microsoft.com/client/2007"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:VideoRSSViewer"
+    Width="360" Height="240">
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="backgroundRectangle" Fill="#FF000000" Grid.Row="0" Grid.Column="0" Grid.RowSpan="100%" Grid.ColumnSpan="100%"/>
+
+        <MediaElement x:Name="myME" Grid.Row="0" Grid.RowSpan="100%" Grid.ColumnSpan="100%" />
+        
+        <Rectangle Fill="#BB000000" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="100%"/>
+        <my:PlayPauseButton x:Name="myPlayPauseButton" Grid.Row="2" Grid.Column="1" />
+        <my:ProgressBar x:Name="myProgressBar" Grid.Row="2" Grid.Column="3"/>
+        <my:FullScreenButton x:Name="myFullScreenButton" Grid.Row="2" Grid.Column="5"/>
+        <my:WindowFrame x:Name="myWindowFrame" Grid.RowSpan="100%" Grid.ColumnSpan="100%"/>
+        <Ellipse x:Name="bufferingEllipse" Opacity="0" Grid.Row="0" Grid.Column="3" Width="35" Height="35" Fill="#FFE8F87F">
+            <Ellipse.Triggers>
+                <EventTrigger RoutedEvent="Ellipse.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard x:Name="bufferingEllipseAnimation" RepeatBehavior="Forever">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="bufferingEllipse">
+                                <SplineDoubleKeyFrame Value="1" KeyTime="0:0:0.5" KeySpline="0.5,0 0.5,1"/>
+                                <SplineDoubleKeyFrame Value="0" KeyTime="0:0:1" KeySpline="0.5,0 0.5,1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Ellipse.Triggers>
+        </Ellipse>
+    </Grid>
+</UserControl>

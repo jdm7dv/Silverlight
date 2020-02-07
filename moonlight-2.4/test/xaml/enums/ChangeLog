@@ -1,0 +1,49 @@
+2008-05-30  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* index.html: Add new test cases.
+	* fillbehavior-timeline.html: Test FillBehavior on Storyboard 
+	and DoubleAnimation
+	* visibility-shape.html: Test Visibility on all shapes.
+	* visibility-textblock.html: Test Visibility on TextBlock.
+
+2008-05-29  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* index.html: Add new test cases.
+	* sweepdirection-arcsegment.html: Test SweepDirection on 
+	ArcSegment
+	* textdecorations-inline.html,
+	* textdecorations-textblock.html: Test TextDecorations on
+	Inline and TextBlock.
+	* textwrapping-textblock.html: Test TextWrapping on TextBlock
+
+2008-05-23  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* index.html: Add new test cases.
+	* fillrule-geometry.html,
+	* fillrule-polygon.html,
+	* fillrule-polyline.html: Test FillRule on Geometry, Polygon and
+	Polyline. Tests shows problem on *Silverlight* so results are 
+	unsure.
+	* penlinecap-shape.html: Test PenLineCap on Shape (Polyline)
+	* penlinejoin-shape.html: Test PenLineJoin on Shape (Polyline)
+	* stretch-shape.html: Test Stretch on Shape (Rectangle)
+
+2008-05-22  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* index.html: main access page to all enum tests.
+	https://bugzilla.novell.com/show_bug.cgi?id=340799
+	* alignmentx-imagebrush.html: Test AlignmentX on ImageBrush
+	* alignmentx-videobrush.html: Test AlignmentX on VideoBrush
+	* alignmenty-imagebrush.html: Test AlignmentY on ImageBrush
+	* alignmenty-videobrush.html: Test AlignmentY on VideoBrush
+	* brushmappingmode-lineargradientbrush.html: Test 
+	BrushMappingMode on LinearGradientBrush
+	* brushmappingmode-radialgradientbrush.html: Test
+	BrushMappingMode on RadialGradientBrush
+	* gradientspreadmethod-lineargradientbrush.html: Test
+	GradientSpreadMethod on LinearGradientBrush
+	* gradientspreadmethod-radialgradientbrush.html: Test
+	GradientSpreadMethod on RadialGradientBrush
+	* stretch-imagebrush.html: Test Stretch on ImageBrush
+	* stretch-videobrush.html: Test Stretch on VideoBrush
+	* Silverlight.js: MS javascript file to create plugin

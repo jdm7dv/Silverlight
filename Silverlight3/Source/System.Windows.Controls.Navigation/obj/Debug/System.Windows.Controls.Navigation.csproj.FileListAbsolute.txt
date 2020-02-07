@@ -1,0 +1,11 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Navigation.XML
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Navigation.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Navigation.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Navigation.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Navigation.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Navigation\obj\Debug\System.Windows.Controls.Navigation.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Navigation\obj\Debug\System.Windows.Navigation.Resource.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Navigation\obj\Debug\System.Windows.Controls.Navigation.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Navigation\obj\Debug\System.Windows.Controls.Navigation.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Navigation\obj\Debug\System.Windows.Controls.Navigation.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Navigation\obj\Debug\System.Windows.Controls.Navigation.pdb

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="samp_LiveMessenger.tpButtonHelp"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    d:DesignWidth="52.336" d:DesignHeight="20" >
+	<UserControl.Resources>
+		<Storyboard x:Name="Hover">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="gl" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0.16"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="bord" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0.64"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="ws" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0.64"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Name="Normal"/>
+		<Storyboard x:Name="Selected"></Storyboard>
+	</UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+    	<Rectangle HorizontalAlignment="Stretch" Margin="0.984000027179718,0,1.18799996376038,0" VerticalAlignment="Stretch" RadiusX="3.715" RadiusY="3.715" Opacity="0.24" x:Name="FocusVisualElement" Visibility="Collapsed" Stroke="#FF8AA0A3" >
+    		<Rectangle.Fill>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="#FF000000"/>
+    				<GradientStop Color="#00FFFFFF" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<Rectangle HorizontalAlignment="Stretch" Margin="1.52799999713898,0.653999984264374,1.51900005340576,0.788999974727631" VerticalAlignment="Stretch" RadiusX="3.715" RadiusY="3.715" Stroke="#FFFFFFFF" Opacity="0" x:Name="ws"/>
+    	<Rectangle HorizontalAlignment="Stretch" Margin="0.984000027179718,0,1.18799996376038,0" VerticalAlignment="Stretch" Stroke="#FF8AA0A3" RadiusY="3.715" RadiusX="3.715" x:Name="bord" Opacity="0"/>
+    	<TextBlock Margin="8,3.38599991798401,0,0.462000012397766" Text="Help" TextWrapping="Wrap" FontSize="12" FontFamily="Arial" Width="27.567" HorizontalAlignment="Left" x:Name="txt" />
+    	<Path HorizontalAlignment="Left" Margin="39.5670013427734,7.61700010299683,0,7.01900005340576" VerticalAlignment="Stretch" Width="5.364" Fill="#FF000000" Stretch="Fill" Stroke="#FF000000" Data="M0.5,0.5 L12.902,0.5 L0.5,11.871 z"  RenderTransformOrigin="0.5,0.5" x:Name="da">
+    		<Path.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="-135.56"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Path.RenderTransform>
+    	</Path>
+    	<Rectangle Height="9.29" HorizontalAlignment="Stretch" Margin="1.52799999713898,0,1.51900005340576,0" VerticalAlignment="Top" RadiusX="2.953" RadiusY="2.953" Fill="#FFFFFFFF" Opacity="0" x:Name="gl"/>
+    </Grid>
+</UserControl>

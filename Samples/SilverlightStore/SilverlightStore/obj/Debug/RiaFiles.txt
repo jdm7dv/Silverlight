@@ -1,0 +1,2 @@
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore\Generated_Code\AppCode\Enums.shared.cs
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore\Generated_Code\SilverlightStore.Web.g.cs

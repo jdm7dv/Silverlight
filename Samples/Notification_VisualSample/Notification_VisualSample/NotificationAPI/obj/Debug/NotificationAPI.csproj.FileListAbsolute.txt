@@ -1,0 +1,36 @@
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\Bin\Debug\NotificationAPI.dll
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\Bin\Debug\NotificationAPI.pdb
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\Bin\Debug\AppManifest.xaml
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\Bin\Debug\NotificationAPI.xap
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\Bin\Debug\TestPage.html
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\obj\Debug\App.g.cs
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\obj\Debug\MainPage.g.cs
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\obj\Debug\NotificationAPI.g.resources
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\obj\Debug\NotificationAPI.dll
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\obj\Debug\NotificationAPI.pdb
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI\obj\Debug\XapCacheFile.xml
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\Bin\Debug\NotificationAPI.dll
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\Bin\Debug\NotificationAPI.pdb
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\Bin\Debug\AppManifest.xaml
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\Bin\Debug\NotificationAPI.xap
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\Bin\Debug\TestPage.html
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\obj\Debug\App.g.cs
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\obj\Debug\MainPage.g.cs
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\obj\Debug\NotificationAPI.g.resources
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\obj\Debug\NotificationAPI.dll
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\obj\Debug\NotificationAPI.pdb
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI\obj\Debug\XapCacheFile.xml
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\Bin\Debug\NotificationAPI.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\Bin\Debug\NotificationAPI.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\Bin\Debug\AppManifest.xaml
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\Bin\Debug\NotificationAPI.xap
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\Bin\Debug\TestPage.html
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\obj\Debug\ResolveAssemblyReference.cache
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\obj\Debug\App.g.cs
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\obj\Debug\MainPage.g.cs
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\obj\Debug\NotificationAPI.g.resources
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\obj\Debug\NotificationAPI.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\obj\Debug\NotificationAPI.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI\obj\Debug\XapCacheFile.xml

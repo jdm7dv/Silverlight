@@ -1,0 +1,193 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="WCF RIA Services" />
+      <MSHelp:RLTitle Title="WCF RIA Services" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>WCF RIA Services</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Overview - Technical Whitepaper</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">WCF RIA Services</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <a name="_Toc256192905" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Overview of WCF RIA Services in Silverlight 4</b>
+        </p>
+        <p>Silverlight can take advantage of WCF RIA Services and its features to help build business applications. WCF RIA Services makes n-tier development as simple as traditional two-tier development by including enterprise-class networking and data access for building n-tier applications with transactional support and data paging.  WCF RIA Services allows you to expose an object model on the server through an optimized .NET to .NET binary format as well as a set of open extensions to the ATOM formatted known as OData and an open JavaScript Object Notation (JSON) format to Silverlight application. It offers support for including metadata on the object model to describe validation requirements such as required fields and checking for valid ranges.  It also supports custom validation for a single property or across an entire class. In addition, WCF RIA Services has features to assist with change tracking on the client in Silverlight, user authentication, and personalization.  All of these features and others help WCF RIA Services make it easier to build business applications with Silverlight.</p>
+        <p>Microsoft WCF RIA Services simplifies the traditional n-tier application pattern by bringing together the ASP.NET and Silverlight platforms using the power of WCF for communication. WCF RIA Services provides a pattern to write application logic that runs on the mid-tier and controls access to data for queries, changes and custom operations. It also provides end-to-end support for common tasks such as data validation, authentication and authorization based on roles by integrating with Silverlight components on the client and ASP.NET on the mid-tier.</p>
+        <a name="_Toc256192906" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Key Problems Solved</b>
+        </p>
+        <p>Currently building a Rich Internet Application (RIA) involves a fair amount of plumbing. For a developer familiar with a web application or a 2-tier smart client application, there are additional concepts to deal with including managing state on the presentation tier, working with an asynchronous model and providing good validation capabilities. In addition to writing application logic specific to your domain, you have to think of the two parts of your application spread across tiers and manage the corresponding projects together.</p>
+        <a name="_Toc256192907" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Key Classes: DomainService and DomainContext</b>
+        </p>
+        <p>WCF RIA Services provides framework and tooling support for some of the common RIA patterns. A RIA developer authors a DomainService to define the application logic on the mid-tier that operates on a set of data classes called entities. RIA Services then generates the corresponding client-side entity proxies and DomainContext class on Silverlight. The generated classes allow a developer to retrieve data, work with it with rich binding and change tracking capabilities and submit a unit of work corresponding to application tasks completed by the end user of the application. The two parts of the application are weaved together in a single Visual Studio solution to simplify iterative development and testing. In addition, a set of common tasks such as validation, authentication and authorization are pre-plumbed and simplified through declarative attributes. </p>
+        <p>
+          <img src="images\16d4dcc7-37a0-43cb-81ec-211c6abf4337.png" />
+        </p>
+        <p>
+          <b>Figure 10</b>
+          <br />
+          <i>WCF RIA Services in an Architecture</i>
+        </p>
+        <p>Entities act as containers or data and associated validation information specified as attributes or external metadata. They are obtained via Data Access Layer (DAL) of your choice. Examples include Entity Framework, LINQ to SQL, web services, DataReader, or DataSet.</p>
+        <a name="_Toc256192908" href="#">
+          <span />
+        </a>
+        <p>
+          <b>DomainService Operations</b>
+        </p>
+        <p>The <b>DomainService</b> provides higher-level programming constructs by supporting a set of methods that can be used for authoring arbitrary application logic with entities. It also supports LINQ-enabled query methods that allow the presentation tier to formulate flexible queries while executing them most efficiently in the data tier (database or a web-service).</p>
+        <p>The DomainService supports data modifications through insert, update, delete methods for enabling the “unit of work” pattern and using transactions supported by the Data Access Layer (DAL). It can also contain a set of named update methods to capture change logic specific to your domain such as approving an expense report or cancelling an order.</p>
+        <p>When network load is a concern, server throttling can be achieved through regulating the per request load on the database server by specifying maximum result limit on a query method. </p>
+        <a name="_Toc256192909" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Endpoints</b>
+        </p>
+        <p>Endpoint configuration support is included in WCF RIA Services. By default, only binary endpoint will be exposed but we have made it really easy to add additional/different endpoints. OData endpoints are also supported in WCF RIA Services. You can point PowerPivot to a DomainService OData endpoint and analyze data by calling the appropriate query method. This is the first step in lighting up OData with WCF RIA Services.</p>
+        <a name="_Toc256192910" href="#">
+          <span />
+        </a>
+        <p>
+          <b>DomainContext Generation</b>
+        </p>
+        <p>On the Silverlight presentation tier the DomainContext class is generated for a DomainService. It enables asynchronous calls to the DomainService query methods to load data into EntityCollections (bindable collections of entities). The relationships between entities are also maintained and tracked on the client to significantly simplify the use of rich data models. When the user completes a logical unit of work, the client part of the application can submit the changes in one shot to the mid-tier. The mid-tier then validates the submitted entities and operations and invokes the developer-authored DomainService methods.</p>
+        <a name="_Toc256192911" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Authentication and Authorization</b>
+        </p>
+        <p>Authentication and role-based authorization attributes may be applied to the DomainService methods to enforce restricted access to the privileged data and operations on the mid-tier. WCF RIA Services enforces the authentication and authorization requirements and ensures that only permitted users/roles are allowed access. The <b>AuthorizationContext</b> class enables you to have more options for implementing custom authorization rules including entity-based authorization.</p>
+        <a name="_Toc256192912" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Validation and MetaData</b>
+        </p>
+        <p>Validation metadata can be applies to entities, their members, DomainService operations and their parameters. WCF RIA Services copies the validation rules to the client (unless they are designated as server-only rules). It also provides rich validation experience in the UI. Validation is also performed on the client for early detection of violations. The server independently enforces all validations when changes are submitted. </p>
+        <p>WCF RIA Services includes validation support based on Silverlight 4’s INotifyDataErrorInfo interface. This eliminates the former technique of throwing exceptions in property setters to handle validaiton. Instead, through INotifyDataErrorInfo support WCF RIA Services enables metadata driven validation as well as some server only validation scenarios.  </p>
+        <a name="_Toc256192913" href="#">
+          <span />
+        </a>
+        <p>
+          <b>DomainDataSource</b>
+        </p>
+        <p>The task of rich databinding and operations like filtering, sorting and paging is significantly simplified by the DomainDataSource (DDS). It can be used programmatically or through drag-and-drop from the <b>Data Sources</b> window for a rapid application development (RAD) experience. The DDS also supports the ICommand interface in Silverlight 4 for executing commands. DDS also has support for Load, SubmitChanges, RejectChanges, and integrates very nicely into binding in the Visual Studio 2010 designer.</p>
+        <a name="_Toc256192914" href="#">
+          <span />
+        </a>
+        <p>
+          <b>WCF RIA Services Toolkit</b>
+        </p>
+        <p>Similar to the Silverlight Toolkit, the WCF RIA Services Toolkit will have preview and experimental components. This provides a vehicle to ship components with lower overhead and get feedback while keeping the more mature components in the product.</p>
+        <a name="_Toc256192915" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Performance and Reliability</b>
+        </p>
+        <p>Key improvements have been made to optimize performance across all areas of WCF RIA Services. One such improvement is with optional count queries which are only executed when needed. WCF RIA Services has been enhanced to provide increased resilience, especially with server side components.</p>
+        <a name="_Toc256192916" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Notes</b>
+        </p>
+        <p>WCF RIA Services continues to be a part of Silverlight 4 Tools. The MIX 2010 build of WCF RIA Services will continue to support <b>bin</b> deployment and medium trust scenarios. It also supports server-only installation option, without the development tools, if desired. LINQ to SQL support and ASP.NET DomainDataSource (but not the Silverlight DomainDataSource) has moved to the toolkit</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The<b> </b>build of WCF RIA Services released at MIX 2010 will require .NET 4, Visual Studio 2010, and Silverlight 4. The PDC 2009 drop of WCF RIA Services is the last build that is targeted purely for developing for .NET 3.5 SP1, Visual Studio 2008, and Silverlight 3. The newer WCF RIA Services drops significantly benefit from and rely on the work done in .NET 4, Visual Studio 2010, Silverlight 4. This is a cost-benefit tradeoff in favor of longer term needs over near term expediency.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

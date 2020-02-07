@@ -1,0 +1,2 @@
+C:\Users\Jonathan Moore\Desktop\SilverlightLinkLabel-11245\LinkLabel\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\SilverlightLinkLabel-11245\LinkLabel\obj\Debug\LinkLabel.g.resources

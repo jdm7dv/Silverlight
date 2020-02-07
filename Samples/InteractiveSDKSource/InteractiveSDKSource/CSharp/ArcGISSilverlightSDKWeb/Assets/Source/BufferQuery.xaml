@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ArcGISSilverlightSDK.BufferQuery"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client"    
+    xmlns:esriSymbols="clr-namespace:ESRI.ArcGIS.Client.Symbols;assembly=ESRI.ArcGIS.Client">
+    <Grid x:Name="LayoutRoot" Background="White">
+        
+        <Grid.Resources>
+            <esriSymbols:PictureMarkerSymbol x:Name="DefaultMarkerSymbol" OffsetX="11" OffsetY="39" Source="/Assets/images/i_pushpin.png" />
+            <esriSymbols:SimpleFillSymbol x:Name="BufferSymbol" Fill="#66BB0000" BorderBrush="#88CC0000" BorderThickness="2"  />
+            <esriSymbols:SimpleFillSymbol x:Name="ParcelSymbol" Fill="#440000FF" BorderBrush="Blue" BorderThickness="2"  />
+        </Grid.Resources>
+        
+        <esri:Map x:Name="MyMap" Background="White" Extent="-122.692,45.5072,-122.6757,45.5148"
+              MouseClick="MyMap_MouseClick" >
+            <esri:Map.Layers>
+                <esri:ArcGISTiledMapServiceLayer ID="StreetMapLayer" 
+                      Url="http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer" />
+                <esri:GraphicsLayer ID="MyGraphicsLayer" />
+            </esri:Map.Layers>
+        </esri:Map>        
+        
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,15,0" >
+            <Rectangle Fill="#22000000" RadiusX="10" RadiusY="10" Margin="0,4,0,0" />
+            <Rectangle Fill="#775C90B2" Stroke="Gray" RadiusX="10" RadiusY="10"  Margin="0,0,0,5" />
+            <Rectangle Fill="#FFFFFFFF" Stroke="DarkGray" RadiusX="5" RadiusY="5" Margin="10,10,10,15" />
+            <TextBlock x:Name="InformationTextBlock" 
+                 Text="Click on map to set location. A buffer will used to display parcels within 100 feet of the location." 
+                 Width="200" Margin="30,20,30,25" HorizontalAlignment="Left" TextWrapping="Wrap" />
+        </Grid>
+
+    </Grid>
+</UserControl>

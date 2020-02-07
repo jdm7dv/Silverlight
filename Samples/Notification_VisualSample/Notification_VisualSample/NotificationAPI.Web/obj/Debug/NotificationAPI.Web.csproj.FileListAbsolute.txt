@@ -1,0 +1,15 @@
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI.Web\bin\NotificationAPI.Web.dll
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI.Web\bin\NotificationAPI.Web.pdb
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI.Web\obj\Debug\NotificationAPI.Web.dll
+C:\Users\CorrinaB\Desktop\NotificationVisual\NotificationAPI.Web\obj\Debug\NotificationAPI.Web.pdb
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI.Web\bin\NotificationAPI.Web.dll
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI.Web\bin\NotificationAPI.Web.pdb
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI.Web\obj\Debug\NotificationAPI.Web.dll
+C:\Users\CorrinaB\Desktop\Notification_VisualSample\NotificationAPI.Web\obj\Debug\NotificationAPI.Web.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI.Web\bin\NotificationAPI.Web.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI.Web\bin\NotificationAPI.Web.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI.Web\obj\Debug\ResolveAssemblyReference.cache
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI.Web\obj\Debug\NotificationAPI.Web.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\Notification_VisualSample\Notification_VisualSample\NotificationAPI.Web\obj\Debug\NotificationAPI.Web.pdb

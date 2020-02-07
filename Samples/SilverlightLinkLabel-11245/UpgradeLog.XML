@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="LinkLabel">
+</Property><Property Name="Solution File" Value="C:\Users\Jonathan Moore\Desktop\SilverlightLinkLabel-11245\LinkLabel.sln">
+</Property><Property Name="Date" Value="Tuesday, December 15, 2009">
+</Property><Property Name="Time" Value="22:54 PM">
+</Property></Properties><Event ErrorLevel="2" Project="LinkLabel" Source="LinkLabel\LinkLabel.csproj" Description="Project file is not writable: C:\Users\Jonathan Moore\Desktop\SilverlightLinkLabel-11245\LinkLabel\LinkLabel.csproj">
+</Event><Event ErrorLevel="0" Project="LinkLabel" Source="LinkLabel\LinkLabel.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="LinkLabel" Source="LinkLabel\LinkLabel.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="LinkLabelTest" Source="LinkLabelTest\LinkLabelTest.csproj" Description="Project file is not writable: C:\Users\Jonathan Moore\Desktop\SilverlightLinkLabel-11245\LinkLabelTest\LinkLabelTest.csproj">
+</Event><Event ErrorLevel="0" Project="LinkLabelTest" Source="LinkLabelTest\LinkLabelTest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="LinkLabelTest" Source="LinkLabelTest\LinkLabelTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LinkLabel.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="LinkLabel.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="LinkLabel" Source="LinkLabel\LinkLabel.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="LinkLabelTest" Source="LinkLabelTest\LinkLabelTest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

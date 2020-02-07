@@ -1,0 +1,117 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2 – Multi-touch on Windows 7" />
+      <MSHelp:RLTitle Title="Exercise 2 – Multi-touch on Windows 7" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2 – Multi-touch on Windows 7</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Multi Touch in Silverlight Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2 – Multi-touch on Windows 7</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>The goal of this exercise is to familiarize you with Multi-touch support as provided by Silverlight 4 under Windows 7. Multi-touch denotes a set of interaction techniques which allow Silverlight users to control the graphical user interface with more than one finger. Whilst a normal touch screen application allows you to drag or select visual elements with your finger, a multi-touch application allows you to do something such as resize a visual element, by stretching or squeezing it with two fingers. This functionality leverages Windows 7 multi-touch APIs and requires supported hardware. It works by subscribing to the frame reported event of the static <b>Touch</b> class – the event argument provides information about the collection of detected touch points. Within this collection, the A<b>PI wi</b>ll have marked the most pressed touch point as the primary touch point in the collection. Each touch point exposes various properties, such as timestamp (for applying comparative temporal logic between detected touch points), an action (which can be move, down, up), a source device and others.</p>
+        <a name="_Toc256193547" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Enabling Multi-touch support</b>
+        </p>
+        <p>In order to provide multi-touch support, the application must be aware of touch events reported by the Silverlight engine. We will add those events at two levels: at the level of a single photo (to make the photo active, much like clicking with the mouse) and at the level of the application surface (to move/rotate the photo objects).</p>
+        <ol>
+          <li>Close the browser window hosting the Silverlight application if it is still running, and go back to the Visual Studio development environment.</li>
+          <li>First we will add touch support to the Photo object. Open Photo.xaml.cs and locate the “IntializePhoto” function.  </li>
+          <li>Add subscription to touch events by adding the following code at the end of the InitializePhoto function body:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Touch.FrameReported += new TouchFrameEventHandler(Touch_FrameReported);</pre></td></tr></table></span></div></li>
+          <li>Create the event handler function:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>void Touch_FrameReported(object sender, TouchFrameEventArgs e){}</pre></td></tr></table></span></div></li>
+          <li>A Touch event is a bubbled Routed Event (thus it will travel up the visual tree from its originating element to the root of the control). This means that events will bubble up and be received at the level of Canvases and Rectangles in the control itself, and not at the level of the Photo control. In order to ease on operation with the photo control we need to know which Photo was touched rather than which element of its visual tree.  In addition, this event will arrive to all photo objects under the pressed point, an effect which is not desired, requiring a work around to suppress it. To detect the control instance, use a helper function to detect touch events emanating from the real Photo control from the provided child. Add the following code to the Photo class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private Photo GetContainer(DependencyObject theObj){DependencyObject obj = VisualTreeHelper.GetParent(theObj);if (obj is Photo)   return obj as Photo;elseif (null != obj)return GetContainer(obj);elsereturn null;}</pre></td></tr></table></span></div></li>
+          <li>Get back to the “Touch_FrameReported” function. The touch-points reported by the function arguments are provided in multiple ways. We will use a helper function to extract the primary touch point from all the touch points (in a collection). <i>Note: it is possible to understand from the selected element in a touch point’s collection if it is a primary point or not, but in this lab we will not iterate over the collection in order to do this</i>.</li>
+          <li>Add the following code at the beginning of “Touch_FrameReported” function body:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>TouchPointCollection points = e.GetTouchPoints(null);TouchPoint primaryPoint = e.GetPrimaryTouchPoint(null);</pre></td></tr></table></span></div></li>
+          <li>In order to deactivate mouse events while touching the screen (mouse events are not needed in a touch scenario), add the following lines after the previous code snippet in the “Touch_FrameReported” method:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (null != primaryPoint &amp;&amp; primaryPoint.Action == TouchAction.Down)e.SuspendMousePromotionUntilTouchUp();</pre></td></tr></table></span></div></li>
+          <li>Remember that a touch event is a routed event? Add the following code snippet at the end of the “Touch_FrameReported” function to get the Photo control from the primary touch point location, and apply some logic only if the event reported from the same instance of the control:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Photo photo = null;if (null != primaryPoint)photo = GetContainer(primaryPoint.TouchDevice.DirectlyOver);elsephoto = GetContainer(points[0].TouchDevice.DirectlyOver);if (this == photo){ }</pre></td></tr></table></span></div></li>
+          <li>In the case of the Photo instance, we are interested only on the “touchdown” action in order to “select” the photo instance. Add the following code, which will report the selection of the current Photo to the parent surface (much like in case of a mouse click event in a mouse-only scenario). Add the code snippet to the “if” block of the previous snippet:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>TouchPoint thePoint = null != primaryPoint ? primaryPoint : points[0];switch (thePoint.Action){case TouchAction.Down:_parent.SetActivePhoto(this, ActionType.Touching,           new Point(translateTransform.X +    rotateTransform.CenterX,                                        translateTransform.Y +    rotateTransform.CenterY),                 thePoint.Position);break;case TouchAction.Up:break;case TouchAction.Move:break;}</pre></td></tr></table></span></div></li>
+          <li>Open MainPage.xaml.cs. Locate the MainPage constructor and subscribe to the Touch.FrameReported event – add the following code snippet at the end of the constructor code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Touch.FrameReported += new TouchFrameEventHandler(Touch_FrameReported);</pre></td></tr></table></span></div></li>
+          <li>Create the event handler function and collect touch points and the primary point (using the same code as in Photo class) – add the following code to the MainPage.xaml.cs:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>void Touch_FrameReported(object sender, TouchFrameEventArgs e){TouchPointCollection points = e.GetTouchPoints(null);TouchPoint primaryPoint = e.GetPrimaryTouchPoint(null);if (null != primaryPoint &amp;&amp; primaryPoint.Action == TouchAction.Down)e.SuspendMousePromotionUntilTouchUp();}</pre></td></tr></table></span></div></li>
+          <li>Now add the following code to move and rotate the selected photo. Add following snippet into the handler function body after the “if” in the previous snippet:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (null != _activePhoto &amp;&amp; null != primaryPoint){// Perform the appropriate transform on the active photo     var position = primaryPoint.Position;     switch (_actionType)     {     case ActionType.Touching:           if (points.Count == 1 &amp;&amp; primaryPoint.Action == TouchAction.Move)             {             // Move it by the amount of the mouse move                    _activePhoto.Translate(position.X - _lastPosition.X,     position.Y - _lastPosition.Y);}             else if (points.Count &gt; 1 &amp;&amp;   primaryPoint.Action == TouchAction.Move)             {             // Rotate it according to the angle the mouse moved // around the photo's center                      var radiansToDegrees = 360 / (2 * Math.PI);                      var lastAngle = Math.Atan2(_lastPosition.Y - _photoCenter.Y, _lastPosition.X - _photoCenter.X) * radiansToDegrees;                      var currentAngle = Math.Atan2(position.Y - _photoCenter.Y, position.X - _photoCenter.X) * radiansToDegrees;                      _activePhoto.Rotate(currentAngle - lastAngle);                      // Scale it according to the distance the mouse   //moved relative to the photo's center                      var lastLength = Math.Sqrt(Math.Pow(_lastPosition.Y - _photoCenter.Y, 2) + Math.Pow(_lastPosition.X - _photoCenter.X, 2));                      var currentLength = Math.Sqrt(Math.Pow(position.Y - _photoCenter.Y, 2) + Math.Pow(position.X - _photoCenter.X, 2));                      _activePhoto.Scale(currentLength / lastLength);           }break;}_lastPosition = position;}</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application. Check the touch features of the application if you're on a touch-enabled device.<p><img src="images\ff2e15c8-538e-4dce-b9bc-374cf743b51f.png" /></p><p><b>Figure 13</b><br /><i> Finished Application</i></p></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

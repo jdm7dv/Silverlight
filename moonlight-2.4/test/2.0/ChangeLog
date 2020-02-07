@@ -1,0 +1,105 @@
+2009-12-03  Larry Ewing  <lewing@novell.com>
+
+	* Makefile.am: add FakeA11yBridge to SUBDIRS
+
+2009-12-03  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* FakeA11yBridge/Makefile.am: Add EXTRA_DISTs for sources
+
+2009-12-03  Larry Ewing  <lewing@novell.com>
+
+	* Makefile.am: add FakeA11yBridge to SUBDIRS
+
+2009-11-30  Andrés G. Aragoneses  <aaragoneses@novell.com>
+
+	* FakeA11yBridge/Makefile.am:
+	* FakeA11yBridge/AttackVector.cs: MOON_A11Y_INTERNAL_HACK is
+	  not needed anymore since the audit finished in r147098. r:
+	  spouliot
+
+2009-11-23  Andrés G. Aragoneses  <aaragoneses@novell.com>
+
+	* FakeA11yBridge/:
+	* FakeA11yBridge/AttackVector.cs:
+	* FakeA11yBridge/mono-uia.snk:
+	* FakeA11yBridge/Makefile.am: New assembly to be used by 
+	moon-unit and be bundled in its xap.
+
+	r: spouliot
+
+2009-07-02  Alan McGovern  <amcgovern@novell.com>
+
+	* NameTortureTest/rules: Update the namescope rules with info
+	  gleaned from moon-unit tests.
+
+2009-05-28  Andreia Gaita  <avidigal@novell.com>
+
+	* Threads/threads9: Added, tests if timers are stopped properly
+
+2009-05-25  Andreia Gaita  <avidigal@novell.com>
+
+	* Threads/*: Added. Bunch of tests for thread dispatching and
+	DispatcherTimer firing
+
+2009-04-07  Chris Toshok  <toshok@ximian.com>
+
+	* DefaultValues/Page.xaml.cs: output the tests as partial classes
+	instead of as 1 large DefaultValues class.  The method names
+	become more descriptive in this case, and we output 1 method per
+	type up the inheritance tree when we can.
+
+2009-04-06  Alan McGovern  <amcgovern@novell.com>
+
+	* PopupExample2/Page.xaml:
+	* PopupExample2/Page.xaml.cs: The test wasn't working because
+	  the layout root wasn't a canvas. I must've only fixed it in
+	  my VM as I know I noticed this and fixed it.
+
+2009-03-19  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Include Microsoft.SilverlightControls in the
+	  build.
+
+2009-03-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Mono.Moonlight.UnitTesting: Move classes used by several
+	  unit test assembles into a separate
+	  Mono.Moonlight.UnitTesting.dll.
+
+	* Makefile.am: Updated.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* moonlight.snk: Added. We use this key for assemblies which
+	  need to be signed, but it doesn't matter which key we use.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am:
+	* Microsoft.SilverlightControls: Include support for building
+	  MS' toolkit tests in our build.
+
+2009-02-27  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* Microsoft.Silverlight.Testing/Makefile.am: Fix smcs use
+	* Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight/Makefile.am: Fix smcs use
+
+2009-02-18  Jeffrey Stedfast  <fejj@novell.com>
+
+	* DefaultValues/Page.xaml.cs: Generate property getter tests and
+	check RLV/GV for inherited properties as well.
+
+2009-02-13  Jeffrey Stedfast  <fejj@novell.com>
+
+	* DefaultValues/Page.xaml.cs: Fixed the code up a bit more...
+
+2008-12-19  Jeffrey Stedfast  <fejj@novell.com>
+
+	* TextBoxExample/Page.xaml.cs: Added some useful VisualTree debug spew
+
+2008-11-20  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight: Initial
+	  (and almost empty) implementation of
+	  Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.
+

@@ -1,0 +1,1268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.Navigation</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Controls.Common.DependencyObjectExtensions">
+            <summary>
+            Utility class for DependencyObject/DependencyProperty related operations
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Frame">
+            <summary>
+            Represents a content control that supports navigation.
+            </summary>
+            <seealso cref="T:System.Windows.Controls.Page"/>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.Frame" /> class. 
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Frame.Navigated">
+            <summary>
+            Occurs when the content that is being navigated to has been found and is available.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Frame.Navigating">
+            <summary>
+            Occurs when a new navigation is requested.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Frame.NavigationFailed">
+            <summary>
+            Occurs when an error is encountered while navigating to the requested content.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Frame.NavigationStopped">
+            <summary>
+            Occurs when the <see cref="M:System.Windows.Controls.Frame.StopLoading" /> method is 
+            called, or when a new navigation is requested while the current navigation is in progress. 
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Frame.FragmentNavigation">
+            <summary>
+            Occurs when navigation to a content fragment begins.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Frame.SourceProperty">
+            <summary>
+            The DependencyProperty for the Source property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Frame.Source">
+            <summary>
+            Gets or sets the uniform resource identifier (URI) of the current
+            content or the content that is being navigated to.
+            </summary>
+            <remarks>
+            This value may be different from CurrentSource if you set Source and the
+            navigation has not yet completed.  CurrentSource reflects the page currently
+            in the frame at all times, even when an async loading operation is in progress.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.SourcePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when Source property is changed
+            </summary>
+            <param name="depObj">The dependency property</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="F:System.Windows.Controls.Frame.JournalOwnershipProperty">
+            <summary>
+            The DependencyProperty for the JournalOwnership property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Frame.JournalOwnership">
+            <summary>
+            Gets or sets whether a frame is responsible for managing its own navigation history,
+            or whether it integrates with the web browser journal.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Frame.CanGoBackProperty">
+            <summary>
+            The DependencyProperty for the CanGoBack property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Frame.CanGoBack">
+            <summary>
+            Gets a value that indicates whether there is at least one entry in the back navigation history.
+            </summary> 
+        </member>
+        <member name="F:System.Windows.Controls.Frame.CanGoForwardProperty">
+            <summary>
+            The DependencyProperty for the CanGoForward property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Frame.CanGoForward">
+            <summary>
+            Gets a value that indicates whether there is at least one entry in the forward navigation history.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Frame.CurrentSourceProperty">
+            <summary>
+            The DependencyProperty for the CurrentSource property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Frame.CurrentSource">
+            <summary>
+            Gets the uniform resource identifier (URI) of the content that was last navigated to.
+            </summary>
+            <remarks>
+            This value may be different from Source if you set Source and the
+            navigation has not yet completed.  CurrentSource reflects the page currently
+            in the frame at all times, even when an async loading operation is in progress.
+            </remarks>
+        </member>
+        <member name="F:System.Windows.Controls.Frame.UriMapperProperty">
+            <summary>
+            The DependencyProperty for the UriMapper property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Frame.UriMapper">
+            <summary>
+            Gets or sets the object to manage converting a uniform resource identifier (URI) 
+            to another URI for this frame.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Frame.CacheSizeProperty">
+            <summary>
+            The DependencyProperty for the CacheSize property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Frame.CacheSize">
+            <summary>
+            Gets or sets the number of pages that can be cached for the frame.
+            </summary> 
+        </member>
+        <member name="M:System.Windows.Controls.Frame.ApplyDeepLinks">
+            <summary>
+            This will check for deep link values in the URL if the Frame's 
+            Journal is integrated with the browser.
+            </summary>
+            <returns>A value indicating whether or not deep links were found.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.StopLoading">
+            <summary>
+            Stops further downloading of content for the current navigation request.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.GoBack">
+            <summary>
+            Navigates to the most recent entry in the back navigation history, if one exists.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.GoForward">
+            <summary>
+            Navigates to the most recent entry in the forward navigation history, if one exists.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.Navigate(System.Uri)">
+            <summary>
+            Navigates to the content specified by the uniform resource identifier (URI).
+            </summary>
+            <param name="source">The URI representing a page to display in the frame.</param>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.OnApplyTemplate">
+            <summary>
+            Called when the template generation for the visual tree is created.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.OnCreateAutomationPeer">
+            <summary>
+            Returns a <see cref="T:System.Windows.Automation.Peers.FrameAutomationPeer"/> for use by the Silverlight
+            automation infrastructure.
+            </summary>
+            <returns>A <see cref="T:System.Windows.Automation.Peers.FrameAutomationPeer"/> for the Frame object.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.OnReadOnlyPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when a Read-Only dependency property is changed
+            </summary>
+            <param name="depObj">The dependency object</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.Frame_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Called when the Frame.Loaded event fires.
+            </summary>
+            <param name="sender">The object raising the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.PART_nextButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Next button handler
+            </summary>
+            <param name="sender">The object raising the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:System.Windows.Controls.Frame.PART_previousButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Previous button handler
+            </summary>
+            <param name="sender">The object raising the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="T:System.Windows.Controls.Page">
+            <summary>
+            Encapsulates content that can be navigated to by a <see cref="T:System.Windows.Controls.Frame" />. 
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.Page.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.Page" /> class. 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Page.NavigationContext">
+            <summary>
+            Gets an object that contains information about the navigation request.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Page.NavigationService">
+            <summary>
+            Gets the service that the host used to navigate to this page.
+            </summary> 
+        </member>
+        <member name="P:System.Windows.Controls.Page.Title">
+            <summary>
+            Gets or sets the name for the page to display to the user in the navigation history.
+            </summary> 
+        </member>
+        <member name="P:System.Windows.Controls.Page.NavigationCacheMode">
+            <summary>
+            Gets or sets a value indicating whether this page should never be cached, should be cached
+            for an indefinite length of time, or should only be cached within the size limitations of
+            the cache.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Page.OnFragmentNavigation(System.Windows.Navigation.FragmentNavigationEventArgs)">
+            <summary>
+            This method is called when fragment navigation occurs on a page - either because a fragment
+            was present in the original Uri that navigated to this page, or because a later fragment
+            navigation occurs.
+            </summary>
+            <remarks>
+            This should be used rather than signing up for NavigationService.FragmentNavigation
+            because that event may be difficult to sign up for in time to get the first fragment navigation.
+            </remarks>
+            <param name="e">The event arguments, containing the fragment navigated to</param>
+        </member>
+        <member name="M:System.Windows.Controls.Page.OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs)">
+            <summary>
+            This method is called when a Page has been navigated to, and becomes the active Page in a Frame.
+            This method is the preferred place to inspect NavigationContext, and react to load-time
+            information and prepare the page for viewing.
+            </summary>
+            <remarks>
+            This should be used rather than Loaded because Loaded signifies you have been added to the visual
+            tree, but that could potentially happen more than once during a logical navigation event, in
+            some advanced scenarios.  This method is guaranteed to be called only once when the Page becomes
+            active.
+            </remarks>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:System.Windows.Controls.Page.OnNavigatingFrom(System.Windows.Navigation.NavigatingCancelEventArgs)">
+            <summary>
+            This method is called when a Page is about to be navigated away from.
+            </summary>
+            <remarks>
+            This is similar to signing up for NavigationService.Navigating, but this method is preferred
+            as then you do not need to remove the event handler from NavigationService to avoid object lifetime
+            issues.
+            </remarks>
+            <param name="e">The event arguments.  If Cancel is set to true, it will cancel the pending operation that triggered this method call.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Page.OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs)">
+            <summary>
+            This method is called when a Page has been navigated away from, and is no longer the active
+            Page in a Frame.  This is a good time to save dirty data or otherwise react to being
+            inactive.
+            </summary>
+            <remarks>
+            This is similar to signing up for NavigationService.Navigated, but this method is preferred
+            as then you do not need to remove the event handler from NavigationService to avoid object lifetime
+            issues.
+            </remarks>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationCacheMode">
+            <summary>
+            Used to describe how a <see cref="T:System.Windows.Controls.Page"/> should be cached when
+            used by a <see cref="T:System.Windows.Controls.Frame"/>
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.NavigationCacheMode.Disabled">
+            <summary>
+            The <see cref="T:System.Windows.Controls.Page"/> should never be cached, and a new
+            instance should be created on each navigation.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.NavigationCacheMode.Required">
+            <summary>
+            The <see cref="T:System.Windows.Controls.Page"/> should always be cached, and kept
+            around forever, reused in all subsequent navigations
+            to the same Uri.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.NavigationCacheMode.Enabled">
+            <summary>
+            The <see cref="T:System.Windows.Controls.Page"/> should be cached only within
+            the size of the cache on the <see cref="T:System.Windows.Controls.Frame"/>,
+            and thrown away if it would exceed that.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.FragmentNavigationEventArgs">
+            <summary>
+                 FragmentNavigationEventArgs exposes the fragment being navigated to
+                 in an event fired from NavigationService to notify a listening client
+                 that a navigation to fragment is about to occur.
+            </summary> 
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="P:System.Windows.Navigation.FragmentNavigationEventArgs.Fragment">
+            <summary>
+             The fragment part of the URI that was passed to the Navigate() API which initiated this navigation.
+             The fragment may be String.Empty.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigatingCancelEventArgs">
+            <summary>
+            Event data used to qualify navigating events.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigatingCancelEventArgs.#ctor(System.Uri,System.Windows.Navigation.NavigationMode)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="uri">A URI representing the navigation destination.</param>
+            <param name="mode">What type of navigation this is (New, Forward or Back)</param>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigatingCancelEventArgs.Uri">
+            <summary>
+            Gets the Uri that is being navigated to
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigatingCancelEventArgs.NavigationMode">
+            <summary>
+            Gets the type of navigation that has been initiated (New, Forward or Back)
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationContext">
+            <summary>
+            Represents the state of a navigation operation.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationContext.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="queryString">Dictionary of query string values.</param>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationContext.QueryString">
+            <summary>
+            Gets a dictionary of query string values.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigatingCancelEventHandler">
+            <summary>
+            Delegate for the Navigating event
+            </summary>
+            <param name="sender">The object sending this event</param>
+            <param name="e">The event arguments</param>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationFailedEventHandler">
+            <summary>
+            Delegate for the NavigationFailed event
+            </summary>
+            <param name="sender">The object sending this event</param>
+            <param name="e">The event arguments</param>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigatedEventHandler">
+            <summary>
+            Delegate for the Navigated event
+            </summary>
+            <param name="sender">The object sending this event</param>
+            <param name="e">The event arguments</param>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationStoppedEventHandler">
+            <summary>
+            Delegate for the NavigationStopped event
+            </summary>
+            <param name="sender">The object sending this event</param>
+            <param name="e">The event arguments</param>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="T:System.Windows.Navigation.FragmentNavigationEventHandler">
+            <summary>
+            Delegate for FragmentNavigation event
+            </summary>
+            <param name="sender">The object sending this event</param>
+            <param name="e">The event arguments</param>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationEventArgs">
+            <summary>
+            Event data used to qualify navigation events.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationEventArgs.#ctor(System.Object,System.Uri)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="content">A reference to the content being navigated to (if available).</param>
+            <param name="uri">A URI representing the navigation destination.</param>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationEventArgs.Content">
+            <summary>
+            Gets a reference to the content being navigated to (if available).
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationEventArgs.Uri">
+            <summary>
+            Gets a URI representing the navigation destination.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationFailedEventArgs">
+            <summary>
+            Event arguments used by the <see cref="E:System.Windows.Controls.Frame.NavigationFailed"/> and <see cref="E:System.Windows.Navigation.NavigationService.NavigationFailed"/> events.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationFailedEventArgs.#ctor(System.Uri,System.Exception)">
+            <summary>
+            Constructs a set of event arguments
+            </summary>
+            <param name="uri">The Uri to which navigation failed</param>
+            <param name="error">The error that occurred</param>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationFailedEventArgs.Uri">
+            <summary>
+            Gets the Uri that failed to be navigated to
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationFailedEventArgs.Exception">
+            <summary>
+            Gets the error that caused navigation to fail
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationFailedEventArgs.Handled">
+            <summary>
+            Gets or sets a value indicating whether this failure event has been handled.
+            If this is false after NavigationFailed completes, the exception will
+            be thrown.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.ContentLoaderBase">
+            <summary>
+            ContentLoaderBase serves as the base class for all content loaders that plug into NavigationService.
+            </summary>
+            <remarks>ContentLoaderBase types should always generate and load content asychronously.</remarks>
+            <seealso cref="T:System.Windows.Navigation.PageResourceContentLoader"/>
+        </member>
+        <member name="M:System.Windows.Navigation.ContentLoaderBase.BeginLoad(System.Uri,System.AsyncCallback,System.Object)">
+            <summary>
+            Begins asynchronous loading of the provided <paramref name="uri"/>.
+            </summary>
+            <param name="uri">A URI value to resolve and begin loading.</param>
+            <param name="userCallback">A callback function that will be called when this asynchronous request is ready to have <see cref="M:System.Windows.Navigation.ContentLoaderBase.EndLoad(System.IAsyncResult)"/> called on it.</param>
+            <param name="asyncState">A custom state object that will be returned in <see cref="P:System.IAsyncResult.AsyncState"/>, to correlate between multiple async calls.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that can be passed to <see cref="M:System.Windows.Navigation.ContentLoaderBase.CancelLoad(System.IAsyncResult)"/> at any time, or <see cref="M:System.Windows.Navigation.ContentLoaderBase.EndLoad(System.IAsyncResult)"/> after the <paramref name="userCallback"/> has been called.</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.ContentLoaderBase.CancelLoad(System.IAsyncResult)">
+            <summary>
+            Attempts to cancel a pending load operation.
+            </summary>
+            <param name="asyncResult">The <see cref="T:System.IAsyncResult"/> returned from <see cref="M:System.Windows.Navigation.ContentLoaderBase.BeginLoad(System.Uri,System.AsyncCallback,System.Object)"/> for the operation you wish to cancel.</param>
+        </member>
+        <member name="M:System.Windows.Navigation.ContentLoaderBase.EndLoad(System.IAsyncResult)">
+            <summary>
+            Completes the asynchronous loading of content
+            </summary>
+            <param name="asyncResult">The result returned from <see cref="M:System.Windows.Navigation.ContentLoaderBase.BeginLoad(System.Uri,System.AsyncCallback,System.Object)"/>, and passed in to the callback function.</param>
+            <returns>The content loaded, or null if content was not loaded</returns>
+        </member>
+        <member name="T:System.Windows.Navigation.PageResourceContentLoader">
+            <summary>
+            Default implementation of ContentLoaderBase that is capable of resolving URI values to XAML types located in the application deployment XAP.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.PageResourceContentLoader.GetLocalXaml(System.String)">
+            <summary>
+            Returns the XAML string of the page at the given path.
+            If that page cannot be found (path does not exist, etc.)
+            then it returns null.
+            </summary>
+            <param name="pagePathAndName">The path and name of the XAML (with the ".xaml" included)</param>
+            <returns>See summary</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.PageResourceContentLoader.BeginLoad(System.Uri,System.AsyncCallback,System.Object)">
+            <summary>
+            Begins asynchronous loading of the provided <paramref name="uri"/>.
+            </summary>
+            <param name="uri">A URI value to resolve and begin loading.</param>
+            <param name="userCallback">A callback function that will be called when this asynchronous request is ready to have <see cref="M:System.Windows.Navigation.PageResourceContentLoader.EndLoad(System.IAsyncResult)"/> called on it.</param>
+            <param name="asyncState">A custom state object that will be returned in <see cref="P:System.IAsyncResult.AsyncState"/>, to correlate between multiple async calls.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that can be passed to <see cref="M:System.Windows.Navigation.PageResourceContentLoader.CancelLoad(System.IAsyncResult)"/> at any time, or <see cref="M:System.Windows.Navigation.PageResourceContentLoader.EndLoad(System.IAsyncResult)"/> after the <paramref name="userCallback"/> has been called.</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.PageResourceContentLoader.CancelLoad(System.IAsyncResult)">
+            <summary>
+            Attempts to cancel a pending load operation.
+            </summary>
+            <param name="asyncResult">The <see cref="T:System.IAsyncResult"/> returned from <see cref="M:System.Windows.Navigation.PageResourceContentLoader.BeginLoad(System.Uri,System.AsyncCallback,System.Object)"/> for the operation you wish to cancel.</param>
+            <remarks>Cancellation is not guaranteed.  Check the result from EndLoad to determine if cancellation was successful.</remarks>
+        </member>
+        <member name="M:System.Windows.Navigation.PageResourceContentLoader.EndLoad(System.IAsyncResult)">
+            <summary>
+            Completes the asynchronous loading of content
+            </summary>
+            <param name="asyncResult">The result returned from <see cref="M:System.Windows.Navigation.PageResourceContentLoader.BeginLoad(System.Uri,System.AsyncCallback,System.Object)"/>, and passed in to the callback function.</param>
+            <returns>The content loaded, or null if content was not loaded</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.PageResourceContentLoader.PageResourceContentLoaderAsyncResult.#ctor(System.Uri,System.Object)">
+            <summary>
+            Constructs an instance of the <see cref="T:System.Windows.Navigation.PageResourceContentLoader.PageResourceContentLoaderAsyncResult"/>
+            </summary>
+            <param name="uri">The Uri that the <see cref="T:System.Windows.Navigation.PageResourceContentLoader"/> is loading.</param>
+            <param name="asyncState">The state object the user passed in to <see cref="M:System.Windows.Navigation.PageResourceContentLoader.BeginLoad(System.Uri,System.AsyncCallback,System.Object)"/></param>
+        </member>
+        <member name="T:System.Windows.Navigation.Journal">
+            <summary>
+            Journal used to manage a history list of JournalEntry items.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.Journal._syncLock">
+            <summary>
+            Synchronization lock object.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.Journal._suppressNavigationEvent">
+            <summary>
+            Used to indicate whether or not to suppress navigation events.
+            </summary>
+            <remarks>
+            This is used internally to avoid redundant browser navigation calls after deep link values are detected.
+            </remarks>
+        </member>
+        <member name="F:System.Windows.Navigation.Journal._weakRefEventHandler">
+            <summary>
+            Internal event handler reference used to sign up to the SilverlightHost.NavigationStateChanged event.
+            </summary>
+            <remarks>
+            The event handler constructed here will use a weak reference to self in order to allow for this instance to be collected.
+            </remarks>
+        </member>
+        <member name="P:System.Windows.Navigation.Journal.UseNavigationState">
+            <summary>
+            Gets a value indicating whether or not this journal instance is
+            using the NavigationState property of the Application class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Journal.CanGoBack">
+            <summary>
+            Gets a value indicating whether or not the Journal instance
+            can navigate backward.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Journal.CanGoForward">
+            <summary>
+            Gets a value indicating whether or not the Journal instance
+            can navigate forward.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Journal.CurrentEntry">
+            <summary>
+            Gets the current JournalEntry or null if no history items exist.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Journal.BackStack">
+            <summary>
+            Gets a stack of back entries in this journal
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Journal.ForwardStack">
+            <summary>
+            Gets a stack of forward entries in this journal
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.AddHistoryPoint(System.Windows.Navigation.JournalEntry)">
+            <summary>
+            Adds a new JournalEntry to the history stack.
+            </summary>
+            <param name="journalEntry">A new JournalEntry to add to the history stack.</param>
+            <remarks>
+            Any JournalEntry items existing on the ForwardStack will be removed.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.CheckForDeeplinks">
+            <summary>
+            Forces the Journal to check for deep-link values in 
+            the browser address URI.
+            </summary>
+            <returns>
+            A Boolean indicating whether or not a deep-link value was found.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.GoBack">
+            <summary>
+            Navigates the Journal instance back to the previous 
+            JournalEntry item in the history stack.
+            </summary>
+            <remarks>
+            If CanGoBack is false, this method will throw an InvalidOperationException.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.GoForward">
+            <summary>
+            Navigates the Journal instance forward to the next 
+            JournalEntry item in the history stack.
+            </summary>
+            <remarks>
+            If CanGoForward is false, this method will throw an InvalidOperationException.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.UpdateNavigationState(System.Windows.Navigation.JournalEntry)">
+            <summary>
+            Updates NavigationState to reflect the Journal state, if the Journal is using NavigationState.
+            </summary>
+            <param name="journalEntry">JournalEntry used to update the browser location.</param>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.Browser_Navigated(System.Object,System.EventArgs)">
+            <summary>
+            Occurs when the browser has navigated (usually due to the user hitting Back or Forward in the browser's UI).
+            </summary>
+            <param name="sender">Event sender.</param>
+            <param name="eventArgs">Empty event args.</param>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.AddHistoryPointIfDifferent(System.String)">
+            <summary>
+            Conditionally adds a new history point if the new state information differs from the current journal entry Uri value.
+            </summary>
+            <param name="newState">An updated state value to examine.</param>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.InitializeNavigationState">
+            <summary>
+            Signs up for the Application.NavigationStateChanged event using a weak-reference based event handler.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.OnNavigated(System.String,System.Uri,System.Windows.Navigation.NavigationMode)">
+            <summary>
+            Raises the Navigated event.
+            </summary>
+            <param name="name">A value representing a journal entry name.</param>
+            <param name="uri">A value representing a journal entry URI.</param>
+            <param name="mode">A value representing a journal entry navigation mode.</param>
+        </member>
+        <member name="M:System.Windows.Navigation.Journal.UpdateObservables(System.Windows.Navigation.JournalEntry,System.Windows.Navigation.NavigationMode)">
+            <summary>
+            Updates observable properties of the journal.
+            </summary>
+            <param name="currentEntry">The current journal entry.</param>
+            <param name="mode">The mode of navigation that triggered the update.</param>
+        </member>
+        <member name="T:System.Windows.Navigation.JournalEntry">
+            <summary>
+            A journal history entry.
+            </summary>
+            <seealso cref="T:System.Windows.Navigation.Journal"/>
+        </member>
+        <member name="M:System.Windows.Navigation.JournalEntry.#ctor(System.String,System.Uri)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="name">The journal entry name.</param>
+            <param name="uri">The journal entry URI value.</param>
+        </member>
+        <member name="F:System.Windows.Navigation.JournalEntry.NameProperty">
+            <summary>
+            An attached dependency property used to specify a name for a journal entry, which may be reflected in the browser window
+            if the journal is integrated with the browser.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.JournalEntry.Name">
+            <summary>
+            Gets or sets the journal entry name.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.JournalEntry.GetName(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="F:System.Windows.Navigation.JournalEntry.NameProperty"/> attached property on the <paramref name="obj"/>.
+            </summary>
+            <param name="obj">The object to inspect for a <see cref="F:System.Windows.Navigation.JournalEntry.NameProperty"/></param>
+            <returns>The value of the <see cref="F:System.Windows.Navigation.JournalEntry.NameProperty"/> attached property.</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.JournalEntry.SetName(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the value of the <see cref="F:System.Windows.Navigation.JournalEntry.NameProperty"/> attached property on the <paramref name="obje"/>.
+            </summary>
+            <param name="obj">The object to set the <see cref="F:System.Windows.Navigation.JournalEntry.NameProperty"/> on.</param>
+            <param name="name">The name to set</param>
+        </member>
+        <member name="F:System.Windows.Navigation.JournalEntry.NavigationContextProperty">
+            <summary>
+            An attached dependency property used to specify a <see cref="P:System.Windows.Navigation.JournalEntry.NavigationContext"/> for a piece of content which
+            has been navigated to.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.JournalEntry.NavigationContext">
+            <summary>
+            Gets or sets the <see cref="P:System.Windows.Navigation.JournalEntry.NavigationContext"/> for the journal entry
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.JournalEntry.GetNavigationContext(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="F:System.Windows.Navigation.JournalEntry.NavigationContextProperty"/> attached property on the <paramref name="obj"/>.
+            </summary>
+            <param name="obj">The object to inspect for a <see cref="F:System.Windows.Navigation.JournalEntry.NavigationContextProperty"/></param>
+            <returns>The value of the <see cref="F:System.Windows.Navigation.JournalEntry.NavigationContextProperty"/> attached property.</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.JournalEntry.SetNavigationContext(System.Windows.DependencyObject,System.Windows.Navigation.NavigationContext)">
+            <summary>
+            Sets the value of the <see cref="F:System.Windows.Navigation.JournalEntry.NavigationContextProperty"/> attached property on the <paramref name="obje"/>.
+            </summary>
+            <param name="obj">The object to set the <see cref="F:System.Windows.Navigation.JournalEntry.NavigationContextProperty"/> on.</param>
+            <param name="navigationContext">The navigation context to set</param>
+        </member>
+        <member name="P:System.Windows.Navigation.JournalEntry.Source">
+            <summary>
+            Gets or sets the Uri that for this journal entry
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.JournalEventArgs">
+            <summary>
+            Event arguments used to describe journaling events.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.JournalEventArgs.#ctor(System.String,System.Uri,System.Windows.Navigation.NavigationMode)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="name">A value representing a journal event name.</param>
+            <param name="uri">A value representing a journal event URI.</param>
+            <param name="mode">A value representing a journal event navigation mode.</param>
+        </member>
+        <member name="P:System.Windows.Navigation.JournalEventArgs.Name">
+            <summary>
+            Gets a value containing the journal event name.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.JournalEventArgs.Uri">
+            <summary>
+            Gets a value containing the journal event URI.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.JournalEventArgs.NavigationMode">
+            <summary>
+            Gets a value representing the journal event navigation mode.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.JournalOwnership">
+            <summary>
+            Used by the <see cref="T:System.Windows.Controls.Frame"/> to indicate what type of journal it should use.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="F:System.Windows.Navigation.JournalOwnership.Automatic">
+            <summary>
+            Indicates that the <see cref="T:System.Windows.Controls.Frame"/> should walk up the visual tree to determine if it is top-level.
+            If it is top-level, this is the same as <see cref="F:System.Windows.Navigation.JournalOwnership.UsesParentJournal"/>.
+            If it is not top-level, this is the same as <see cref="F:System.Windows.Navigation.JournalOwnership.OwnsJournal"/>.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.JournalOwnership.OwnsJournal">
+            <summary>
+            Indicates that the <see cref="T:System.Windows.Controls.Frame"/> should keep its own journal and not integrate with the browser.
+            This option can be set on any <see cref="T:System.Windows.Controls.Frame"/>
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.JournalOwnership.UsesParentJournal">
+            <summary>
+            Indicates that the <see cref="T:System.Windows.Controls.Frame"/> should integrate with the browser journal.  If this <see cref="T:System.Windows.Controls.Frame"/> is not
+            a top-level Frame, this is not valid and an exception will be thrown.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationMode">
+            <summary>
+            Enum describing the NavigationMode (New, Back, Forward)
+            where New means a new navigation, Forward, and Back mean 
+            the navigation was initiated from the GoForward or 
+            GoBack methods on <see cref="T:System.Windows.Controls.Frame"/>.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="F:System.Windows.Navigation.NavigationMode.New">
+            <summary>
+            New navigation.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.NavigationMode.Back">
+            <summary>
+            Navigating back in history.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.NavigationMode.Forward">
+            <summary>
+            Navigating forward in history.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationService">
+            <summary>
+            Used to programmatically initiate navigation, primarily from within a <see cref="T:System.Windows.Controls.Page"/>.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.#ctor(System.Windows.Controls.Frame)">
+            <summary>
+            Internal class used to host content and handles all navigations
+            </summary>
+            <param name="nav">
+            Parent navigator that uses and owns this NavigationService.
+            </param>
+        </member>
+        <member name="E:System.Windows.Navigation.NavigationService.NavigationFailed">
+            <summary>
+            Occurs when the an exception is raised during navigation.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Navigation.NavigationService.Navigating">
+            <summary>
+            Occurs when the NavigationService is starting to navigate.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:System.Windows.Navigation.NavigationService.Navigated">
+            <summary>
+            Occurs when the NavigationService has navigated.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:System.Windows.Navigation.NavigationService.NavigationStopped">
+            <summary>
+            Occurs when a navigation operation has been cancelled.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:System.Windows.Navigation.NavigationService.FragmentNavigation">
+            <summary>
+            Occurs when a navigation occurs within a page.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Navigation.NavigationService.NavigationServiceProperty">
+            <summary>
+            Attached DependencyProperty. It gives an element the NavigationService of the navigation container it's in.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.GetNavigationService(System.Windows.DependencyObject)">
+            <summary>
+            Gets NavigationService of the navigation container the given dependencyObject is in.
+            </summary>
+            <param name="dependencyObject">The object to retrieve the attached <see cref="T:System.Windows.Navigation.NavigationService"/> for</param>
+            <returns>The <see cref="T:System.Windows.Navigation.NavigationService"/> attached to the <paramref name="dependencyObject"/></returns>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.Source">
+            <summary>
+            Gets or sets the Uri of the content currently hosted in the Frame.
+            </summary>
+            <remarks>
+            This value may be different from CurrentSource if Source is set and the
+            navigation has not yet completed.  CurrentSource reflects the page currently
+            in the frame at all times, even when an async loading operation is in progress.
+            </remarks>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.CurrentSource">
+            <summary>
+            Gets the Uri of the content currently hosted in the Frame.
+            </summary>
+            <remarks>
+            This value may be different from Source if Source is set and the
+            navigation has not yet completed.  CurrentSource reflects the page currently
+            in the frame at all times, even when an async loading operation is in progress.
+            </remarks>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.CanGoForward">
+            <summary>
+            Gets a value used to determine if there are any entries on the forward stack
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.CanGoBack">
+            <summary>
+            Gets a value used to determine if there are any entries on the back stack
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.Navigate(System.Uri)">
+            <summary>
+            Navigate to source
+            </summary>
+            <param name="source">The Uri to begin navigating to</param>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.GoForward">
+            <summary>
+            Navigate to the next entry in the Journal
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.GoBack">
+            <summary>
+            Navigate to the previous entry in the Journal
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.StopLoading">
+            <summary>
+            StopLoading aborts asynchronous navigations that haven't been processed yet.
+            The <see cref="E:System.Windows.Navigation.NavigationService.NavigationStopped"/> event is raised only if the navigation was actually aborted - if navigation is
+            too far along to be canceled, then navigation may still complete and the <see cref="E:System.Windows.Navigation.NavigationService.Navigated"/> event
+            will be raised.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.RaiseNavigated(System.Object,System.Uri,System.Windows.Controls.Page,System.Windows.Controls.Page)">
+            <summary>
+            Raises the Navigated event synchronously.
+            </summary>
+            <param name="content">A reference to the object content that is being navigated to.</param>
+            <param name="uri">A URI value representing the navigation content.</param>
+            <param name="existingContentPage">The existing content cast to a Page</param>
+            <param name="newContentPage">The new content cast to a Page</param>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.RaiseNavigating(System.Uri,System.Windows.Navigation.NavigationMode,System.Boolean)">
+            <summary>
+            Raises the Navigating event synchronously.
+            </summary>
+            <param name="uri">A URI value representing the navigation content.</param>
+            <param name="mode">The mode of navigation being initiated (New, Forward or Back)</param>
+            <param name="isFragmentNavigationOnly">True if this navigation is only a fragment navigation on the existing page, false if it is any other type of navigation</param>
+            <returns>A value indicating whether or not to cancel the navigation operation.</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.RaiseNavigationFailed(System.Uri,System.Exception)">
+            <summary>
+            Raises the Failed event synchronously.
+            </summary>
+            <param name="uri">A URI value representing the navigation content.</param>
+            <param name="exception">The error that occurred</param>
+            <returns>true if the the exception should be re-thrown, false if it was handled</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.RaiseNavigationStopped(System.Object,System.Uri)">
+            <summary>
+            Raises the Stopped event synchronously.
+            </summary>
+            <param name="content">A reference to the object content that is being navigated to.</param>
+            <param name="uri">A URI value representing the navigation content.</param>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.RaiseFragmentNavigation(System.String)">
+            <summary>
+            Raises the Fragment Navigation event synchronously
+            </summary>
+            <param name="fragment">The fragment that was navigated to</param>
+        </member>
+        <member name="T:System.Windows.Navigation.NavigationService.NavigationOperation">
+            <summary>
+            Class used within the Frame to manage navigation operations.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.NavigationService.NavigationOperation.#ctor(System.Uri,System.Uri,System.Uri,System.Windows.Navigation.NavigationMode,System.Boolean)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="uri">The Uri after it was mapped</param>
+            <param name="uriBeforeMapping">The Uri before it was mapped</param>
+            <param name="uriForJournal">The Uri to use for the journal</param>
+            <param name="mode">The mode (new, forward, or back) of this operation</param>
+            <param name="suppressJournalUpdate">True if the journal shouldn't be updated by this operation, false otherwise</param>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.NavigationOperation.Uri">
+            <summary>
+            Gets or sets Uri used in the navigation operation, after passing through the UriMapper
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.NavigationOperation.Mode">
+            <summary>
+            Gets or sets NavigationMode used in the current operation.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.NavigationOperation.SuppressNotifications">
+            <summary>
+            Gets or sets a value indicating whether or not the operation is altering the Source property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.NavigationService.NavigationOperation.SuppressJournalAdd">
+            <summary>
+            Gets or sets a value indicating whether the Journal should be updated based on this navigation operation
+            </summary>
+        </member>
+        <member name="T:System.Windows.Navigation.UriMapperBase">
+            <summary>
+            Maps a URI into a new URI based on mapping rules defined in a concrete implementation.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Navigation.UriMapperBase.MapUri(System.Uri)">
+            <summary>
+            Maps a given URI and returns a mapped URI.
+            </summary>
+            <param name="uri">Original URI value to be mapped to a new URI.</param>
+            <returns>A URI derived from the <paramref name="uri"/> parameter.</returns>
+        </member>
+        <member name="T:System.Windows.Navigation.UriMapper">
+            <summary>
+            Default UriMapperBase implementation that uses a List of UriMapping 
+            objects to map and transform URI values.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Navigation.UriMapper.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.UriMapper.UriMappings">
+            <summary>
+            Gets a list of UriMapping objects.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.UriMapper.MapUri(System.Uri)">
+            <summary>
+            Maps a given URI and returns a mapped URI.
+            </summary>
+            <param name="uri">Original URI value to be mapped to a new URI.</param>
+            <returns>A URI derived from the <paramref name="uri"/> parameter.</returns>
+        </member>
+        <member name="T:System.Windows.Navigation.UriMapping">
+            <summary>
+            Defines a URI to URI mapping.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="P:System.Windows.Navigation.UriMapping.Uri">
+            <summary>
+            Gets or sets the original URI value or pattern.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.UriMapping.MappedUri">
+            <summary>
+            Gets or sets the mapped URI value or pattern.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Navigation.UriMapping.MapUri(System.Uri)">
+            <summary>
+            Attempts to process a Uri, if it matches the Uri template
+            </summary>
+            <param name="uri">The Uri to map</param>
+            <returns>The Uri after mapping, or null if mapping did not succeed</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.UriParsingHelper.InternalUriIsFragment(System.Uri)">
+            <summary>
+            Parses the Uri to determine if it is a fragment
+            </summary>
+            <param name="uri">The uri to parse</param>
+            <returns>True if this Uri is a fragment, false if it is not</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.UriParsingHelper.InternalUriGetFragment(System.Uri)">
+            <summary>
+            Parses the Uri to retrieve the fragment, if present
+            </summary>
+            <param name="uri">The uri to parse</param>
+            <returns>The fragment, or null if there is not one</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.UriParsingHelper.InternalUriGetAllButFragment(System.Uri)">
+            <summary>
+            Parses the Uri to strip off the fragment
+            </summary>
+            <param name="uri">The uri to parse</param>
+            <returns>The uri without the fragment</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.UriParsingHelper.InternalUriGetQueryString(System.Uri)">
+            <summary>
+            Parse the query string out of a Uri (the part following the '?')
+            </summary>
+            <param name="uri">The uri to parse for a query string</param>
+            <returns>The query string, without a leading '?'.  Empty string in the case of no query string present.</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.UriParsingHelper.InternalUriGetBaseValue(System.Uri)">
+            <summary>
+            Cut the query string off a given Uri, to process only the part before the '?', and strips off the fragment
+            </summary>
+            <param name="uri">The uri to parse</param>
+            <returns>The uri without its query string, and without its fragment</returns>
+        </member>
+        <member name="M:System.Windows.Navigation.UriParsingHelper.InternalUriParseQueryStringToDictionary(System.Uri,System.Boolean)">
+            <summary>
+            Parses the query string into name/value pairs
+            </summary>
+            <param name="uri">The Uri to parse the query string from</param>
+            <param name="decodeResults">True if the resulting dictionary should contain decoded values, false if not</param>
+            <returns>A dictionary containing one entry for each name/value pair in the query string</returns>
+        </member>
+        <member name="T:System.Windows.Navigation.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.CannotGoBack">
+            <summary>
+              Looks up a localized string similar to Cannot go back when {0} is false..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.CannotGoForward">
+            <summary>
+              Looks up a localized string similar to Cannot go forward when {0} is false..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.Frame_CacheSizeMustBeGreaterThanOrEqualToZero">
+            <summary>
+              Looks up a localized string similar to {0} must be greater than or equal to zero..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.Frame_DefaultContent">
+            <summary>
+              Looks up a localized string similar to ({0}).
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.NavigationService_ContentIsNotAUserControl">
+            <summary>
+              Looks up a localized string similar to The content loaded was of type {0}, which is not a subclass of {1}..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.NavigationService_FragmentNavigationRequiresContent">
+            <summary>
+              Looks up a localized string similar to Navigation to a fragment requires the {0} to have content currently..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.NavigationService_JournalOwnership_UsesParentJournal_OnlyTopLevel">
+            <summary>
+              Looks up a localized string similar to {0} can only be set to {1} if this is a top-level {2}..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.NavigationService_NavigationToANullUriIsNotSupported">
+            <summary>
+              Looks up a localized string similar to Navigation to a null URI is not supported..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.NavigationService_UriNotNavigable">
+            <summary>
+              Looks up a localized string similar to Navigation is only supported to relative URIs that are fragments, or begin with &apos;/&apos;, or which contain &apos;;component/&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.PageResourceContentLoader_InvalidComponentSyntax">
+            <summary>
+              Looks up a localized string similar to Attempted to load local XAML with an invalid syntax.  When a &apos;;component/&apos; is present, it must have the assembly name on the left side, and the page path and name on the right..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.PageResourceContentLoader_NoXAMLWasFound">
+            <summary>
+              Looks up a localized string similar to No XAML was found at the location &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.PageResourceContentLoader_TheTypeSpecifiedInTheXClassCouldNotBeFound">
+            <summary>
+              Looks up a localized string similar to The type &apos;{0}&apos;, specified in the x:Class of &apos;{1}&apos; could not be found in any loaded assembly..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.PageResourceContentLoader_XAMLWasUnloadable">
+            <summary>
+              Looks up a localized string similar to XAML at location &apos;{0}&apos; could not be loaded..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UnderlyingPropertyIsReadOnly">
+            <summary>
+              Looks up a localized string similar to {0} cannot be set because the underlying property is read only..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UriMapper_MustNotHaveANullUriMappingCollection">
+            <summary>
+              Looks up a localized string similar to {0} must not have a null {1}..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UriMapping_MappedUriCannotBeOnlyFragment">
+            <summary>
+              Looks up a localized string similar to {0} cannot be a URI fragment (cannot begin with &apos;#&apos;)..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UriMapping_MappedUriCannotBeOnlyQueryString">
+            <summary>
+              Looks up a localized string similar to {0} cannot be only a query string..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UriMapping_TemplateMustBeSpecified">
+            <summary>
+              Looks up a localized string similar to {0} template must be specified..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UriMapping_UriTemplateCannotContainTheSameIdentifierMoreThanOnce">
+            <summary>
+              Looks up a localized string similar to {0} template cannot contain the same identifier more than once..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UriMapping_UriTemplateCannotHaveAFragment">
+            <summary>
+              Looks up a localized string similar to {0} template cannot have a fragment..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Navigation.Resource.UriMapping_UriTemplateCannotHaveAQueryString">
+            <summary>
+              Looks up a localized string similar to {0} template cannot have a query string..
+            </summary>
+        </member>
+        <member name="T:System.Windows.Automation.Peers.FrameAutomationPeer">
+            <summary>
+            Exposes Frame types to UI Automation.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.FrameAutomationPeer.#ctor(System.Windows.Controls.Frame)">
+            <summary>
+            Initializes a new instance of the FrameAutomationPeer class.
+            </summary>
+            <param name="owner">The Frame.</param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.FrameAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Gets the control type for the element that is associated with the UI
+            Automation peer.
+            </summary>
+            <returns>The control type.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.FrameAutomationPeer.GetClassNameCore">
+            <summary>
+            Called by GetClassName that gets a human readable name that, in
+            addition to AutomationControlType, differentiates the control
+            represented by this AutomationPeer.
+            </summary>
+            <returns>The string that contains the name.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.FrameAutomationPeer.GetNameCore">
+            <summary>
+            Called by GetName.
+            </summary>
+            <returns>
+            Returns the first of these that is not null or empty:
+            - Value returned by the base implementation
+            - Name of the owning Frame
+            - Frame class name
+            </returns>
+        </member>
+    </members>
+</doc>

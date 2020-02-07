@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A7EA801B-926B-4D55-B2E1-F36EA33C358A}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Silverlight.Weblog.vsmdi = Silverlight.Weblog.vsmdi
+		Silverlight.Weblog1.vsmdi = Silverlight.Weblog1.vsmdi
+		DB\SilverlightWeblog.mdf = DB\SilverlightWeblog.mdf
+		DB\SilverlightWeblog_log.ldf = DB\SilverlightWeblog_log.ldf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight.Weblog.Shared.Common", "Silverlight.Weblog.Shared.Common", "{A0318C6B-8E69-4FF8-BB63-5823F158297E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Client.UI", "Silverlight.Weblog.UI\Silverlight.Weblog.Client.UI.csproj", "{2D2FDA40-C369-4A90-B95C-CAE56BB0DEE8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70} = {3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70} = {3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70} = {3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}
+	EndProjectSection
+EndProject
+Project("{00000000-0000-0000-0000-000000000000}") = "Silverlight.Weblog.Server.UI.Web", "Silverlight.Weblog.UI.Web\Silverlight.Weblog.Server.UI.Web.csproj", "{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Server.DAL", "Silverlight.Weblog.Server.DAL\Silverlight.Weblog.Server.DAL.csproj", "{6E87C1B2-DEFF-47DC-9D5B-D33E6372DE89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Common", "Silverlight.Weblog.Common\Silverlight.Weblog.Common.csproj", "{7E340686-648F-4E9F-B110-1B117B46C026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Shared.Common.Web", "Silverlight.Weblog.Shared.Common.Web\Silverlight.Weblog.Shared.Common.Web.csproj", "{277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Shared.Common", "Silverlight.Weblog.Shared.Common\Silverlight.Weblog.Shared.Common.csproj", "{C954CD35-77C1-4605-9F20-F74CBBD24C5F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64} = {277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Server.UI.Web.Testing", "Silverlight.Weblog.Server.UI.Web.Testing\Silverlight.Weblog.Server.UI.Web.Testing.csproj", "{15BF3B25-5000-416F-85A1-F6CE9909EFA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Server.DAL.Testing", "Silverlight.Weblog.Server.DAL.Testing\Silverlight.Weblog.Server.DAL.Testing.csproj", "{B3A1C853-49D9-472E-8F9F-D45AE3ABB9EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Client.Core", "Silverlight.Weblog.Client.DAL\Silverlight.Weblog.Client.Core.csproj", "{41B9C7C8-BD6E-4222-9FC0-7874E6751F25}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70} = {3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70} = {3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70} = {3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70} = {3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}
+		{6E87C1B2-DEFF-47DC-9D5B-D33E6372DE89} = {6E87C1B2-DEFF-47DC-9D5B-D33E6372DE89}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight.Weblog.Client.Default.Widgets", "Silverlight.Weblog.Client.Default.Widgets\Silverlight.Weblog.Client.Default.Widgets.csproj", "{E542B47D-7C76-4671-BA2E-3E5975FCE8E3}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Silverlight.Weblog1.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D2FDA40-C369-4A90-B95C-CAE56BB0DEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2FDA40-C369-4A90-B95C-CAE56BB0DEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2FDA40-C369-4A90-B95C-CAE56BB0DEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2FDA40-C369-4A90-B95C-CAE56BB0DEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CBC0493-ECBE-4D81-A595-BC2A1BFF1C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E87C1B2-DEFF-47DC-9D5B-D33E6372DE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E87C1B2-DEFF-47DC-9D5B-D33E6372DE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E87C1B2-DEFF-47DC-9D5B-D33E6372DE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E87C1B2-DEFF-47DC-9D5B-D33E6372DE89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E340686-648F-4E9F-B110-1B117B46C026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E340686-648F-4E9F-B110-1B117B46C026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E340686-648F-4E9F-B110-1B117B46C026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E340686-648F-4E9F-B110-1B117B46C026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C954CD35-77C1-4605-9F20-F74CBBD24C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C954CD35-77C1-4605-9F20-F74CBBD24C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C954CD35-77C1-4605-9F20-F74CBBD24C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C954CD35-77C1-4605-9F20-F74CBBD24C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BF3B25-5000-416F-85A1-F6CE9909EFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BF3B25-5000-416F-85A1-F6CE9909EFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BF3B25-5000-416F-85A1-F6CE9909EFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BF3B25-5000-416F-85A1-F6CE9909EFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A1C853-49D9-472E-8F9F-D45AE3ABB9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A1C853-49D9-472E-8F9F-D45AE3ABB9EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A1C853-49D9-472E-8F9F-D45AE3ABB9EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A1C853-49D9-472E-8F9F-D45AE3ABB9EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B9C7C8-BD6E-4222-9FC0-7874E6751F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B9C7C8-BD6E-4222-9FC0-7874E6751F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B9C7C8-BD6E-4222-9FC0-7874E6751F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B9C7C8-BD6E-4222-9FC0-7874E6751F25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E542B47D-7C76-4671-BA2E-3E5975FCE8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E542B47D-7C76-4671-BA2E-3E5975FCE8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E542B47D-7C76-4671-BA2E-3E5975FCE8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E542B47D-7C76-4671-BA2E-3E5975FCE8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{277DCA95-D6AA-4B27-8E5A-05FEDFDC1E64} = {A0318C6B-8E69-4FF8-BB63-5823F158297E}
+		{C954CD35-77C1-4605-9F20-F74CBBD24C5F} = {A0318C6B-8E69-4FF8-BB63-5823F158297E}
+	EndGlobalSection
+EndGlobal

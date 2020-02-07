@@ -1,0 +1,17 @@
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<MediaElement x:Name="ExampleVideo" Source="../media/video/timecode-short-wmv8.wmv"
+                      Opacity="0.0" IsHitTestVisible="False"/>
+
+        <TextBlock Text="TextBlock" FontSize="100" FontWeight="Bold">
+  	  <TextBlock.Foreground>
+		<VideoBrush SourceName="ExampleVideo" Stretch="UniformToFill"/>
+	  </TextBlock.Foreground>
+          <LineBreak/>
+          <Run FontSize="40" Foreground="black">Black-</Run>
+          <Run FontSize="40">Video-</Run>
+          <Run FontSize="40" Foreground="black">Black-</Run>
+          <Run FontSize="40">Video</Run>
+        </TextBlock>
+</Canvas>

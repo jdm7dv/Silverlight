@@ -1,0 +1,29 @@
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\VSM.dll
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\VSM.pdb
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\AppManifest.xaml
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\VSM.xap
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Default.html
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Debug\VSM.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Debug\VSM.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Debug\VSM.xap
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Debug\Default.html
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Debug\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Debug\VSM.g.resources
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Debug\VSM.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Debug\VSM.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Debug\XapCacheFile.xml
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\bin\Debug\VSM.dll
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\bin\Debug\VSM.pdb
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\bin\Debug\AppManifest.xaml
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\bin\Debug\VSM.xap
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\bin\Debug\Default.html
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\obj\Debug\ResolveAssemblyReference.cache
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\obj\Debug\App.g.cs
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\obj\Debug\Page.g.cs
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\obj\Debug\VSM.g.resources
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\obj\Debug\VSM.dll
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\obj\Debug\VSM.pdb
+G:\base\SDK\Samples\Samples\Silverlight\VSM\VSM\obj\Debug\XapCacheFile.xml

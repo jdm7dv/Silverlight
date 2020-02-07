@@ -1,0 +1,5 @@
+C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3D\ClientBin\Kit3D.dll
+C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3D\ClientBin\Kit3D.pdb
+C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3D\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3D\obj\Debug\Kit3D.dll
+C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3D\obj\Debug\Kit3D.pdb

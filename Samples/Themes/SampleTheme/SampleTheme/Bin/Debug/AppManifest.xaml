@@ -1,0 +1,11 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="SampleTheme" EntryPointType="SampleTheme.App" RuntimeVersion="2.0.31005.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="SampleTheme" Source="SampleTheme.dll" />
+    <AssemblyPart x:Name="Microsoft.Windows.Controls.DataVisualization" Source="Microsoft.Windows.Controls.DataVisualization.dll" />
+    <AssemblyPart x:Name="Microsoft.Windows.Controls" Source="Microsoft.Windows.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Windows.Controls.Input" Source="Microsoft.Windows.Controls.Input.dll" />
+    <AssemblyPart x:Name="Microsoft.Windows.Controls.Theming" Source="Microsoft.Windows.Controls.Theming.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Data" Source="System.Windows.Controls.Data.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
+  </Deployment.Parts>
+</Deployment>

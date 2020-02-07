@@ -1,0 +1,168 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2 –Text Services and Printing" />
+      <MSHelp:RLTitle Title="Exercise 2 –Text Services and Printing" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2 –Text Services and Printing</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight RichTextBox Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2 –Text Services and Printing</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this exercise we'll learn how we can perform operations such as using the clipboard to copy and paste text into the rich text area and print our rich text content.</p>
+        <a name="_Toc244134685" href="#">
+          <span />
+        </a>
+        <a name="_Toc256194581" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Clipboard Support</b>
+        </p>
+        <p>Silverlight 4 provides support for clipboard operations. In task we'll add functionality to support cut, copy and paste.</p>
+        <ol>
+          <li>Open the MainPage.xaml file, and locate the comment remark &lt;!-- TODO - Clipboard Buttons--&gt;. Add the following code for the Cut, Copy and Paste buttons.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Button x:Name="btnPaste" Margin="17,-22,33,24" Grid.Row="1"   HorizontalAlignment="Left"&gt;    &lt;ToolTipService.ToolTip&gt;        &lt;ToolTip FontSize="16" Content="Paste"/&gt;    &lt;/ToolTipService.ToolTip&gt;    &lt;Image Source="Images/Paste_big.png" Height="32" Width="29"/&gt;&lt;/Button&gt;&lt;Button x:Name="btnCut" Margin="0,0,17,0" HorizontalAlignment="Right" Width="22"   VerticalAlignment="Bottom"&gt;    &lt;ToolTipService.ToolTip&gt;        &lt;ToolTip FontSize="16" Content="Cut"/&gt;    &lt;/ToolTipService.ToolTip&gt;    &lt;Image Source="Images/Cut.png" d:IsLocked="True"/&gt;&lt;/Button&gt;&lt;Button x:Name="btnCopy" Margin="0,5,17,0" VerticalAlignment="Top" Grid.Row="1"   HorizontalAlignment="Right" Width="22"&gt;    &lt;ToolTipService.ToolTip&gt;        &lt;ToolTip FontSize="16" Content="Copy"/&gt;    &lt;/ToolTipService.ToolTip&gt;    &lt;Image Source="Images/Copy.png" d:IsLocked="True"/&gt;&lt;/Button&gt;</pre></td></tr></table></span></div></li>
+          <li>Add a default event handler for the Click event in each of the buttons above. </li>
+          <li>In order to access the clipboard, we'll use the Clipboard class introduced in Silverlight 4 which supports saving and loading strings in the clipboard. Add the following code to the event handler for <b>btnCopy</b> to allow saving strings in the clipboard:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Clipboard.SetText(rtb.Selection.Text);ReturnFocus();</pre></td></tr></table></span></div></li>
+          <li>Find the Click event handler for the <b>btnPaste</b> button and add the following code to read strings from the clipboard<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>rtb.Selection.Text = Clipboard.GetText();ReturnFocus();</pre></td></tr></table></span></div></li>
+          <li>Find the Click event handler for the <b>btnCut</b> button and add the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Clipboard.SetText(rtb.Selection.Text);rtb.Selection.Text = "";ReturnFocus();</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application by pressing F5. Add some text in the RichTextBox and press the Copy button. Open Notepad and paste the string (CTRL+V). </li>
+          <li>Return to the application, press the Create New document button (click OK if prompted) and then press the Paste button. The copied text will be pasted in the RichTextBox. The Text Editor application now has clipboard support. </li>
+          <br />
+        </ol>
+        <br />
+        <br />
+        <a name="_Toc244134686" href="#">
+          <span />
+        </a>
+        <a name="_Toc256194582" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Printing from Silverlight</b>
+        </p>
+        <p>Silverlight 4 enables developers to use installed printers in order to print application content. In this exercise we will use this functionality and print the document content.</p>
+        <ol>
+          <li>To print the contents of the RichTextBox we will use the PrintDocument class introduced in Silverlight 4. Open the MainPage.xaml file, and locate the comment remark &lt;!-- TODO - Print Buttons--&gt;. Add the following code for the Print button:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Button x:Name="btnPrint" Grid.Column="3" Margin="20,-22,0,24"   HorizontalAlignment="Left" Grid.Row="1"&gt;    &lt;ToolTipService.ToolTip&gt;        &lt;ToolTip FontSize="16" Content="{Binding tooltip_Print,            Source={StaticResource localizedStrings}}"/&gt;    &lt;/ToolTipService.ToolTip&gt;    &lt;Image Source="Images/Print_big.png" Width="30"/&gt;&lt;/Button&gt;</pre></td></tr></table></span></div></li>
+          <li>Add a default event handler for the Click event for the <b>Print</b> button.</li>
+          <li>Navigate to the event handler function and add the following code <div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>PrintDocument theDoc = new PrintDocument();string DocumentName = "Silverlight 4 Text Editor - Opened Document";theDoc.Print(DocumentName);</pre></td></tr></table></span></div></li>
+          <li>As you can see, we've called the Print method, but we haven't told it what to print. To set the printed area we'll need to handle the PrintDocument.PrintPage event. Add the following code to handle the event (place the code before calling the "Print" method)<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>theDoc.PrintPage += (s, args) =&gt;{    args.PageVisual = rtb;    args.HasMorePages = false;};</pre></td></tr></table></span></div></li>
+          <li>We'll also add a MessageBox to notify the user the printing was successful. Place the following code before calling the Print method:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>theDoc.EndPrint += (s, args) =&gt;{    MessageBox.Show("The document printed successfully", "Text Editor", MessageBoxButton.OK);};</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application by pressing F5. Enter text and add an image to the content, then press the Print button. </li>
+          <li>In the printing dialog, select one of the installed printers or print to the "Microsoft XPS Document Writer" printer. Save the file and after the printing is finished, open the .xps file. Examine how the printed content is similar to the content displayed in the rich text control. </li>
+        </ol>
+        <br />
+        <a name="_Toc256194583" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 – Highlight and XAML functionality </b>
+        </p>
+        <p>In this exercise we will build upon the controls added thus far. We will add highlight functionality to the RichTextBox. We will also add the ability to toggle between traditional rich text view and the Xaml markup generated for the contents of the RichTextBox.</p>
+        <ol>
+          <li>Open MainPage.xaml and locate the comment remark &lt;!-- TODO - Display, Highlight, Xaml Buttons--&gt;. Add the following code for the Highlight and Xaml buttons:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;!-- Highlight Button--&gt;&lt;ToggleButton x:Name="btnHighlight" Checked="btnHighlight_Checked"               Unchecked="btnHighlight_Checked" Margin="17,-22,15,24"                Grid.Column="5" Grid.Row="1" HorizontalAlignment="Left"&gt;    &lt;ToolTipService.ToolTip&gt;        &lt;ToolTip FontSize="16" Content="Show Highlight"/&gt;    &lt;/ToolTipService.ToolTip&gt;    &lt;Image Source="Images/Annotation_New.png"/&gt;&lt;/ToggleButton&gt;&lt;!-- Xaml Buttons--&gt;&lt;ToggleButton x:Name="btnMarkUp" Checked="btnMarkUp_Checked"               Unchecked="btnMarkUp_Checked" Margin="10,-22,10,24" Grid.Column="6"               Grid.Row="1" HorizontalAlignment="Left"&gt;    &lt;ToolTipService.ToolTip&gt;        &lt;ToolTip FontSize="16" Content="Show XAML"/&gt;    &lt;/ToolTipService.ToolTip&gt;    &lt;TextBlock FontSize="25" Text="&amp;lt;&amp;lt;&gt;&gt;"/&gt;&lt;/ToggleButton&gt;</pre></td></tr></table></span></div></li>
+          <li>Examine the code and above and note that the event handlers for Checked and Unchecked have already been assigned to each Toggle Button control.</li>
+          <li> Right-click on the Checked event handler for the Xaml Markup Button and navigate to the corresponding code in MainPage.xaml.cs. Place the following code into the event:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (btnMarkUp.IsChecked.Value){    xamlTb.Visibility = System.Windows.Visibility.Visible;    xamlTb.IsTabStop = true;    xamlTb.Text = rtb.Xaml;}else{    rtb.Xaml = xamlTb.Text;    xamlTb.Visibility = System.Windows.Visibility.Collapsed;    xamlTb.IsTabStop = false;}</pre></td></tr></table></span></div></li>
+          <li>Locate the Highlight Button's btnHighlight_Checked method in the code. As you study the code you'll see how the TextPointer tracks the current position of the caret to gain a starting point. The struct Rect is used to find the populated area of the rectangle that the user (using Mouse Events) placed over the text.</li>
+          <li>Compile and run the application by pressing F5. Enter text, click the Highlight Button, and as you enter the RichTextBox your mouse will highlight the current row you are on. Left mouse click and drag across some text and you can specifically highlight a certain part of the text. Clicking the Highlight Button again will turn off this feature. </li>
+          <li>Now click the Xaml Button. You will see Xaml markup code used to display the presentation version of the text within the RichTextBox.</li>
+        </ol>
+        <a name="_Toc256194584" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 4 – Drag and Drop Support</b>
+        </p>
+        <p>New to Silverlight 4 is the Drop Target API. In this exercise we will demonstrate the use of this API by adding drag and drop functionality of Word documents and text files right into the RichTextBox.</p>
+        <ol>
+          <li>Open MainPage.xaml file and locate the RichTextBox control named <b>rtb</b>.  Add the following attributes to it:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Drop="rtb_Drop" AllowDrop="True"</pre></td></tr></table></span></div></li>
+          <li>Open MainPage.xaml.cs and add the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void rtb_Drop(object sender, System.Windows.DragEventArgs e){    VisualStateManager.GoToState(this, "Normal", true);    if (e.Data != null)    {        IDataObject f = e.Data as IDataObject;        if (f != null)        {            object data = f.GetData(DataFormats.FileDrop);            FileInfo[] files = data as FileInfo[];            if (files != null)            {                foreach (FileInfo file in files)                {                    if (file != null)                    {                        if (file.Extension.Equals(".txt"))                        {                            try                            {                                Stream sr = file.OpenRead();                                string contents;                                using (StreamReader reader =                                   new StreamReader(sr))                                {                                    contents = reader.ReadToEnd();                                }                                rtb.Selection.Text = contents;                            }                            catch (IOException ex)                            {                                //check if message is for a File IO                                docOpenedError();                            }                        }                        else if (file.Extension.Equals(".docx"))                        {                            try                            {                                Stream sr = file.OpenRead();                                string contents;                                StreamResourceInfo zipInfo =                                    new StreamResourceInfo(sr, null);                                StreamResourceInfo wordInfo =                                  Application.GetResourceStream(zipInfo,                                  new Uri("word/document.xml", UriKind.Relative));                                using (StreamReader reader =                                   new StreamReader(wordInfo.Stream))                                {                                    contents = reader.ReadToEnd();                                }                                XDocument xmlFile = XDocument.Parse(contents);                                XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";                                var query = from xp in xmlFile.Descendants(w +                                             "p")                                            select xp;                                Paragraph p = null;                                Run r = null;                                foreach (XElement xp in query)                                {                                    p = new Paragraph();                                    var query2 = from xr in xp.Descendants(w +                                                  "r")                                                 select xr;                                    foreach (XElement xr in query2)                                    {                                        r = new Run();                                        var query3 = from xt in xr.Descendants()                                                     select xt;                                        foreach (XElement xt in query3)                                        {                                            if (xt.Name == (w + "t"))                                                r.Text = xt.Value.ToString();                                            else if (xt.Name == (w + "br"))                                                p.Inlines.Add(new LineBreak());                                        }                                        p.Inlines.Add(r);                                    }                                    p.Inlines.Add(new LineBreak());                                    rtb.Blocks.Add(p);                                }                            }                            catch (IOException ex)                            {                                //check if message is for a File IO                                docOpenedError();                            }                        }                    }                }            }        }    }    ReturnFocus();}private void docOpenedError(){    //check if message is for a File IO    MessageBox.Show("The document may already be open.  Please ensure no other application has the document opened or locked and try again", "Drag &amp; Drop Error", MessageBoxButton.OK);}</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application by pressing F5. Locate the "Helpers" folder contained within this Lab's folders (ie: ....\RichTextBox\Source\Helpers).  Drag and drop the file SampleTextFile.txt into the Rich Text Box control.  Now do the same for the file Hamlet.docx.</li>
+        </ol>
+        <br />
+        <br />
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

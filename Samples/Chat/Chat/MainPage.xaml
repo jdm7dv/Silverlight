@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="Chat.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="640" Height="Auto" d:DesignHeight="483.999" Margin="8,8,0,0" xmlns:Chat="clr-namespace:Chat">
+
+    <UserControl.Resources>
+        <Chat:ChatSession x:Key="ChatSessionDS" d:IsDataSource="True"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFD3D3E7"/>
+                <GradientStop Color="#FF4C669E" Offset="0.987"/>
+                <GradientStop Color="#FE8C8CC3" Offset="0.594"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="99.84"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95.839"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="104.16"/>
+        </Grid.RowDefinitions>
+        <Button HorizontalAlignment="Stretch" 
+		    Margin="8,8,8,8" VerticalAlignment="Stretch" Grid.Column="1" 
+		    Grid.Row="2" Content="Send" FontSize="18" FontFamily="Verdana" 
+		    FontWeight="SemiBold" x:Name="SendButton" Style="{StaticResource SendButton}" Click="SendButton_Click"/>
+        <Border HorizontalAlignment="Stretch" Margin="8,8,8,8" 
+		    VerticalAlignment="Stretch" Grid.Row="2" Background="#72FFFFFF" 
+		    BorderBrush="#FF000000" CornerRadius="5,5,5,5" 
+		    x:Name="BottomBorder">
+            <TextBox Height="Auto" Width="Auto" Text="" 
+			        Background="#00FFFFFF" BorderBrush="#00000000" 
+			        x:Name="InputText"   />
+        </Border>
+        <Border HorizontalAlignment="Stretch" Margin="8,8,8,8" 
+		    VerticalAlignment="Stretch" x:Name="TopBorder" 
+		    Background="#72FFFFFF" BorderBrush="#FF000000" 
+		    CornerRadius="5,5,5,5">
+            <TextBlock Height="Auto" Width="Auto" Text="{Binding RemoteUserName, Mode=OneWay, Source={StaticResource ChatSessionDS}}" 
+			        TextWrapping="Wrap" Margin="5,0,0,0" 
+			        FontFamily="Comic Sans MS" FontSize="48" x:Name="UserNameText"/>
+        </Border>
+        <Image Margin="4,4,4,4" Grid.Column="1" 
+		    Source="{Binding RemoteAvatarUrl, Mode=OneWay, Source={StaticResource ChatSessionDS}}" x:Name="UserImage" Stretch="Uniform"/>
+        <Border HorizontalAlignment="Stretch" Margin="8,8,8,8" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Grid.Row="1" Background="#FF03588D" CornerRadius="5,5,5,5" x:Name="CenterBorder">
+            <ListBox Height="Auto" Width="Auto" 
+			ItemsSource="{Binding MessageHistory, Mode=OneWay, 
+			Source={StaticResource ChatSessionDS}}" Style="{StaticResource MessageHistory}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <TextBlock FontFamily="Comic Sans MS" FontSize="16" Foreground="red" Text="{Binding UserName}"/>
+                            <TextBlock Text=":  "/>
+                            <TextBlock FontFamily="Comic Sans MS" FontSize="16" Text="{Binding Text}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+        </Border>
+        <TextBlock HorizontalAlignment="Right" Margin="0,-32.8390007019043,-40.8400001525879,116.838996887207" Width="200" Grid.Row="1" Text="{Binding RemoteUserName, Mode=OneWay, Source={StaticResource ChatSessionDS}}"/>
+    </Grid>
+</UserControl>

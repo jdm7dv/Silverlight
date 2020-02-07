@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VideoPlayerWeb", "VideoPlayerWeb", "{70C883B9-C343-420F-95D0-F77BCD43A5B7}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/VideoPlayerWeb"
+		Debug.AspNetCompiler.PhysicalPath = "VideoPlayerWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\VideoPlayerWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/VideoPlayerWeb"
+		Release.AspNetCompiler.PhysicalPath = "VideoPlayerWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\VideoPlayerWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1055"
+		DefaultWebSiteLanguage = "Visual C#"
+		ProjOutputReferences = "{89063F90-7E38-420B-83CF-448B8BFA8008}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoPlayer", "VideoPlayer\VideoPlayer.csproj", "{89063F90-7E38-420B-83CF-448B8BFA8008}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs02.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = VideoPlayer\\VideoPlayer.csproj
+		SccProjectName1 = VideoPlayer
+		SccLocalPath1 = VideoPlayer
+		SccWebProject2 = true
+		SccProjectUniqueName2 = VideoPlayerWeb
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = VideoPlayerWeb\\
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Debug|.NET.ActiveCfg = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Debug|.NET.Build.0 = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Release|.NET.ActiveCfg = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Release|.NET.Build.0 = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{70C883B9-C343-420F-95D0-F77BCD43A5B7}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Release|.NET.ActiveCfg = Release|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{89063F90-7E38-420B-83CF-448B8BFA8008}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

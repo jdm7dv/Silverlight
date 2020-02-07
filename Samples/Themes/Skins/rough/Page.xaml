@@ -1,0 +1,130 @@
+﻿<UserControl x:Class="Styles_Red.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+    xmlns:dSrc="clr-namespace:ListData;assembly=Styles_Red">
+    
+    <Grid>
+
+        <Grid Background="#FFE0E4C1">
+            <Grid.Resources>
+                <dSrc:peepsList x:Key="PeepsList"/>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="14*"/>
+                <RowDefinition Height="14*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="22*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1" Grid.Row="1" Margin="2" Height="26" Width="65" Content="button" Style="{StaticResource buttonStyle}">
+                <Button.ToolTip>
+                    <ToolTip Content="button tooltip" Style="{StaticResource toolTipStyle}"/>
+                </Button.ToolTip>
+            </Button>
+
+            <ToggleButton Grid.Column="1" Grid.Row="2" Margin="5" Height="26" Width="65" Content="toggle" Style="{StaticResource toggleStyle}">
+                <ToggleButton.ToolTip>
+                    <ToolTip Content="toggle tooltip" Style="{StaticResource toolTipStyle}"/>
+                </ToggleButton.ToolTip>
+            </ToggleButton>
+
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+
+                <CheckBox Content="Checkbox One" Grid.Row="1" IsThreeState="True" Style="{StaticResource checkBoxStyle}"/>
+                <CheckBox Content="Checkbox Two" Grid.Row="2" IsThreeState="True" Style="{StaticResource checkBoxStyle}"/>
+                <CheckBox Content="Checkbox Three" Grid.Row="3" IsThreeState="True" Style="{StaticResource checkBoxStyle}"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+
+                <RadioButton Content="Radio One" Grid.Row="1" Style="{StaticResource radioStyle}" GroupName="a"/>
+                <RadioButton Content="Radio Two" Grid.Row="2" Style="{StaticResource radioStyle}" GroupName="a"/>
+            </Grid>
+            
+            <TextBox Grid.Column="1" Grid.Row="5" Width="200" Height="25" Style="{StaticResource textBoxStyle}"/>
+
+            <Slider Grid.Column="1" Grid.Row="6" Style="{StaticResource sliderStyle}" />
+
+            <ListBox Grid.Row="7" Grid.Column="1" Margin="5,5,5,5" Height="100" Width="225" ItemContainerStyle="{StaticResource listBoxItemStyle}" ItemsSource="{StaticResource PeepsList}" Style="{StaticResource listBoxStyle}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="First Name:" Margin="5" Style="{StaticResource whiteText}"/>
+                                <TextBlock Text="{Binding Name}" Margin="2,5,5,5" Style="{StaticResource whiteText}"/>
+                                <TextBlock Text="Age:" Margin="5" Style="{StaticResource whiteText}"/>
+                                <TextBlock Text="{Binding Age}" Margin="2,5,5,5" Style="{StaticResource whiteText}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Calendar Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource calendarStyle}" DayStyle="{StaticResource dayButtonStyle}" MonthStyle="{StaticResource monthButtonStyle}" />
+
+            <DatePicker Grid.Column="3" Grid.Row="5" Grid.RowSpan="3" Margin="10" Style="{StaticResource datePickerStyle}" CalendarStyle="{StaticResource calendarStyle}"/>
+
+            <Grid Grid.Column="3" Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="This is a " Style="{StaticResource blackText}"/>
+                <HyperlinkButton Grid.Column="1" Content="hyperlink" Style="{StaticResource linkStyle}"/>
+            </Grid>
+
+            <Grid Grid.Column="4" Grid.Row="1" Grid.RowSpan="6" Grid.ColumnSpan="3" Margin="30">
+                <!-- AutoGeneratingColumn="dataGridInstance_AutoGeneratingColumn" is referenced in Page.xaml.cs to set grid content text as desired-->
+                <d:DataGrid x:Name="dataGridInstance"
+                    Style="{StaticResource dataGridStyle}"
+                    ColumnHeaderStyle="{StaticResource columnHeaderStyle}"
+                    RowHeaderStyle="{StaticResource rowHeaderStyle}"
+                    RowStyle="{StaticResource rowStyle}"
+                    AutoGenerateColumns="True" 
+                            
+                    AutoGeneratingColumn="dataGridInstance_AutoGeneratingColumn"
+                            
+                    GridlinesVisibility="None" 
+                    HeadersVisibility="Column"
+                    ColumnHeadersHeight="23">
+                    <d:DataGrid.ItemsSource>
+                        <dSrc:CustomerList/>
+                    </d:DataGrid.ItemsSource>
+                </d:DataGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+    
+</UserControl>

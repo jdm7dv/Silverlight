@@ -1,0 +1,59 @@
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\ResolveAssemblyReference.cache
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\App.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonMaximize.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_screens\scrHome.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_screens\scrLogin.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\Launcher.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonMinimize.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonClose.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucLogo.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucWindowsLiveLogo.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonHelp.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucAvatar.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonShowLogins.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucLoginTextbox.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonStatus.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonSignIn.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_popups\popupHelp.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_popups\popupStatus.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_popups\popupLogins.g.cs
+C:\JonathanMoore\TODO\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\samp_LiveMessenger.g.resources
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\App.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonMaximize.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_screens\scrHome.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_screens\scrLogin.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\Launcher.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonMinimize.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonClose.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucLogo.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucWindowsLiveLogo.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonHelp.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucAvatar.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonShowLogins.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_extendedControls\ucLoginTextbox.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonStatus.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_templates\tpButtonSignIn.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_popups\popupHelp.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_popups\popupStatus.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\uc_popups\popupLogins.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\samp_LiveMessenger.g.resources
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\samp_LiveMessenger.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\samp_LiveMessenger.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\AppManifest.xaml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\samp_LiveMessenger.xap
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\TestPage.html
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\System.Windows.Controls.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\System.Windows.Controls.xml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\ar\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\de\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\es\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\fr\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\it\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\ja\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\ko\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\zh-Hans\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\ClientBin\zh-Hant\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\samp_LiveMessenger.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\samp_LiveMessenger.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\LiveMessenger\LiveMessenger\samp_LiveMessenger\obj\Release\XapCacheFile.xml

@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="VideoRSSViewer.ProgressBar"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+    <Canvas x:Name="LayoutRoot">
+        <Canvas Canvas.Top="-5">
+            <TextBlock x:Name="positionText" Text="00:00:00" FontSize="18" Foreground="White" Canvas.Top="0.333" />
+            <Rectangle Height="10" Width="250" x:Name="sliderTrack" Canvas.Top="33.692" RadiusX="1.808" RadiusY="1.808">
+	            <Rectangle.Fill>
+	              <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+		            <GradientStop Color="#FF818588" Offset="0"/>
+		            <GradientStop Color="#FFEDEDED" Offset="1"/>
+	              </LinearGradientBrush>
+	            </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Height="10" Width="0" x:Name="downloadProgressRectangle" Canvas.Top="33.692" RadiusX="1.975" RadiusY="1.975" Cursor="Hand" Canvas.Left="-0.007">
+	            <Rectangle.Fill>
+	              <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+		            <GradientStop Color="#FF3E3F44" Offset="0"/>
+		            <GradientStop Color="#FF495077" Offset="0.329102"/>
+		            <GradientStop Color="#FF000000" Offset="1"/>
+	              </LinearGradientBrush>
+	            </Rectangle.Fill>
+            </Rectangle>
+            <Canvas Height="12" x:Name="sliderThumb" Cursor="Hand" Canvas.Top="28" RenderTransformOrigin="0.5,0.5" Canvas.Left="-0.02" Width="27">
+	            <Canvas.RenderTransform>
+	              <TranslateTransform X="0" Y="0"/>
+	            </Canvas.RenderTransform>
+	            <Rectangle Fill="#FFF9FF66" StrokeThickness="1" RadiusX="0" RadiusY="0" Width="5" Height="25.648" Canvas.Left="0.002" Canvas.Top="-2">
+	              <Rectangle.Stroke>
+		            <LinearGradientBrush EndPoint="0.586,1.123" StartPoint="0.586,0.65">
+		              <GradientStop Color="#FFF9FF66" Offset="0"/>
+		              <GradientStop Color="#FF818252" Offset="1"/>
+		            </LinearGradientBrush>
+	              </Rectangle.Stroke>
+	            </Rectangle>
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</UserControl>

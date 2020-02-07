@@ -1,0 +1,109 @@
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<MediaElement x:Name="ExampleVideo" Source="../media/video/timecode-short-wmv8.wmv"
+                      Opacity="0.0" IsHitTestVisible="False"/>
+	<Rectangle Width="100" Height="100" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="None"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Left="101" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Uniform"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Left="202" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="UniformToFill"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Left="303" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Fill"/>
+	</Rectangle.Fill>
+	</Rectangle>
+
+	<Rectangle Width="100" Height="100" Canvas.Top="101" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="None" AlignmentX="Left"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="101" Canvas.Left="101" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Uniform" AlignmentX="Left"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="101" Canvas.Left="202" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="UniformToFill" AlignmentX="Left"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="101" Canvas.Left="303" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Fill" AlignmentX="Left"/>
+	</Rectangle.Fill>
+	</Rectangle>
+
+	<Rectangle Width="100" Height="100" Canvas.Top="202" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="None" AlignmentX="Right"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="202" Canvas.Left="101" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Uniform" AlignmentX="Right"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="202" Canvas.Left="202" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="UniformToFill" AlignmentX="Right"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="202" Canvas.Left="303" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Fill" AlignmentX="Right"/>
+	</Rectangle.Fill>
+	</Rectangle>
+
+	<Rectangle Width="100" Height="100" Canvas.Top="303" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="None" AlignmentY="Top"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="303" Canvas.Left="101" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Uniform" AlignmentY="Top"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="303" Canvas.Left="202" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="UniformToFill" AlignmentY="Top"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="303" Canvas.Left="303" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Fill" AlignmentY="Top"/>
+	</Rectangle.Fill>
+	</Rectangle>
+
+	<Rectangle Width="100" Height="100" Canvas.Top="404" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="None" AlignmentY="Bottom"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="404" Canvas.Left="101" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Uniform" AlignmentY="Bottom"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="404" Canvas.Left="202" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="UniformToFill" AlignmentY="Bottom"/>
+	</Rectangle.Fill>
+	</Rectangle>
+	<Rectangle Width="100" Height="100" Canvas.Top="404" Canvas.Left="303" Stroke="blue">
+	<Rectangle.Fill>
+		<VideoBrush SourceName="ExampleVideo" Stretch="Fill" AlignmentY="Bottom"/>
+	</Rectangle.Fill>
+	</Rectangle>
+</Canvas>

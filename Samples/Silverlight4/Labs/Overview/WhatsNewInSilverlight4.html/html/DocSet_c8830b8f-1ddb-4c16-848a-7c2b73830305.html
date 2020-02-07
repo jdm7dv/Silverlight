@@ -1,0 +1,488 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Moving Beyond the Browser – Elevated Trust Applications" />
+      <MSHelp:RLTitle Title="Moving Beyond the Browser – Elevated Trust Applications" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Moving Beyond the Browser – Elevated Trust Applications</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Overview - Technical Whitepaper</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Moving Beyond the Browser – Elevated Trust Applications</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Silverlight introduces out of browser application with elevated trust. These applications require user consent at install time and run outside the browser with elevated trust. To enable a trusted application, the developer must first check the “Require elevated trust when running outside the browser” permissions checkbox in the Out-of-Browser settings for the Silverlight project as shown at the bottom of the image below.</p>
+        <p>
+          <img src="images\5ab836ea-a3ca-40a1-ba9c-3d6c468dd886.png" />
+        </p>
+        <p>
+          <b>Figure 25</b>
+          <br />
+          <i>Out of Browser Settings</i>
+        </p>
+        <p>Setting this checkbox allows the Silverlight application, when installing Out-of-Browser, to prompt the user to request permission to operate as a Trusted Application. You can check if the application is running with elevated permissions using the following code.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>if (App.Current.HasElevatedPermissions}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192957" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Native Integration</b>
+        </p>
+        <p>One feature of a Trusted Application is the ability to use native integration to perform automation operations such as COM Interop with Windows. This feature also has support for IEnumVARIANT; so you can foreach over a collection returned by the Automation server.</p>
+        <p>You can check if the application is running Out-of-Browser by checking the AppCurrent.IsRunningOutOfBrowser property. You should also check the AutomationFactory.IsAvailable property before using automation.</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>When checking the<b> AutomationFactory.IsAvailable </b>property, it will also make an internal call to<b> AutomationFactory.IsRunningOutOfBrowser</b>. So there is no need to explicitly call both.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <p>If both return true and Microsoft Office is installed, you can create an instance of an object such as Microsoft Word using the AutomationFactory.CreateObject method. Thanks to the new dynamic keyword in .NET 4 that allows you to create an object which is unknown at compile time, you can create an instance of Word and manipulate it. The code below shows how to do this.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>if (AutomationFactory.IsAvailable){    dynamic word = AutomationFactory.CreateObject("Word.Application");    word.Documents.Add();    word.Selection.Paste();    word.Quit();}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192958" href="#">
+          <span />
+        </a>
+        <p>
+          <b>File System Access</b>
+        </p>
+        <p>Another feature of a Trusted Application allows access to the file system; specifically the Documents, Videos, Pictures, and Music folders under the user’s profile. You can specify which folder you want to open by passing one of the Environment.SpecialFolder enumerator values to the Environment.GetFolderPath method. This method returns the path of the folder which can then be used to perform file operations, as shown in the code below:</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>var sampleFile = @"\sample.txt";var path = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures));if (System.IO.File.Exists(path + sampleFile)){    System.IO.File.Delete(path + sampleFile);}StreamWriter sw = File.CreateText(path + sampleFile);sw.WriteLine("&lt;root&gt;some data&lt;/root&gt;");sw.Close();</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192959" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Cross-Domain Networking Access</b>
+        </p>
+        <p>An Out-of-Browser Trusted Application can perform cross-domain network calls. This allows the Silverlight client to make calls to a domain other than that in which the Silverlight application is hosted. Twitter.com has a policy file in place that prohibits cross-domain access. Cross-domain calls must be made using the client networking stack, which can be done using the following code. </p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>var uriString =     string.Format(@"http://twitter.com/statuses/friends_timeline/{0}.xml?count=50",     username);WebClient request = new WebClient();WebRequest.RegisterPrefix("http://", WebRequestCreator.ClientHttp);request.DownloadStringCompleted += new     DownloadStringCompletedEventHandler(client_DownloadStringCompleted);request.DownloadStringAsync(new Uri(uriString));</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192960" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Full File Path on Open and Save Dialogs</b>
+        </p>
+        <p>Silverlight Trusted Applications also allows full access to the file path of the local computer. The OpenFileDialog and SaveFileDialog  objects both can allow access to the full file path so you can open, read, and save files as shown in the sample code below.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>OpenFileDialog dlg = new OpenFileDialog();dlg.ShowDialog();var file = dlg.File;if (file != null){    MessageBox.Show(file.DirectoryName);    FileStream fs = file.OpenRead();   //...}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td><b>Y</b>ou can access the full path as long as you have access to the location. So if you use the open dialog and pick an image file from c:\Foo\ you will not get the full path. But if you picked it from the Pictures folder, you would.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <a name="_Toc256192961" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Sockets Security </b>
+        </p>
+        <p>The sockets security restrictions do not apply when running a Silverlight 4 Trusted Application.</p>
+        <a name="_Toc256192962" href="#">
+          <span />
+        </a>
+        <p>
+          <b>XAP Signing</b>
+        </p>
+        <p>Elevated trust out-of-browser applications enable developers to take advantage of platform features that are inaccessible to sandboxed Silverlight applications. You can digitally sign your XAP files to reassure end users of the authenticity of an application’s publisher and that the code’s integrity is intact.  This feature only applies to trusted apps; sandboxed XAPs may be signed but doing so will have no effect on it.</p>
+        <p>When a user attempts to install an elevated trust out of browser application, the user will be presented with a dialog as shown below.</p>
+        <p>
+          <img src="images\1fe92eeb-3ff5-479b-a6ea-61fee42bea39.png" />
+        </p>
+        <p>
+          <b>Figure 26</b>
+          <br />
+          <i>Unverified Publisher Install Dialog on Windows</i>
+        </p>
+        <p>
+          <img src="images\b2367d75-9dc9-4d01-84ec-357c18e74302.png" />
+        </p>
+        <p>
+          <b>Figure 27</b>
+          <br />
+          <i>Unverified Publisher Install Dialog on Macintosh</i>
+        </p>
+        <p>A signed XAP would prompt the user with a dialog similar to the following:</p>
+        <p>
+          <img src="images\550add47-74e5-4044-a778-f8b06e976ced.png" />
+        </p>
+        <p>
+          <b>Figure 28</b>
+          <br />
+          <i>Verified Publisher Install Dialog on Windows</i>
+        </p>
+        <p>
+          <img src="images\07f6c484-94eb-463d-b2cd-23cfff9409d6.png" />
+        </p>
+        <p>
+          <b>Figure 29</b>
+          <br />
+          <i>Verified Publisher Install Dialog on Macintosh</i>
+        </p>
+        <p>XAP signing also affects an elevated trust application’s ability to update itself. For an update to be allowed, the installed XAP and the update candidate (the new XAP) must be signed with matching certificates that have not expired.</p>
+        <p>A XAP can be signed post-build using the SignTool.exe command line tool which is in the Windows SDK, as part of Visual Studio 2010 and a handful of other packages. XAPs must be signed using code signing certificates. </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>You can obtain a digitally signed certificate from various publishers. Prices range and most tend to be valid for 1 year before expiring.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <p>To sign a XAP using a test certificate for development purposes, open a Visual Studio Command Prompt and type the following to create a root certificate:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>Command Line</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>makecert -n "CN=My Root Certificate Authority" -r -a sha1 -sv c:\Demo\TestOOBRootCA.pvk c:\Demo\TestOOBRootCA.cer -sr LocalMachine -sky signature</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>When prompted for a password enter a password and write it down so you do not forget it. You'll be prompted to enter the password a few times. Enter the same password each time. Now type the following into the command window and press Enter to create a child certificate that can be used for code signing.  It will be signed by the root certificate created earlier.</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>We strongly recommend using a password that uses some combination of letters, numbers and special characters.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>Command Line</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>makecert -sv c:\Demo\TestOOBCodeSigningCA.pvk -iv c:\Demo\TestOOBRootCA.pvk -n "CN=Test OOB Crew Code Signing CA" -ic c:\Demo\TestOOBRootCA.cer c:\Demo\TestOOBCodeSigningCA.cer</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>Enter the password when prompted. Generate a PFX file (contains the password and the private key in one file for convenience). Note that the same password entered earlier is used. </p>
+        <p>Enter the following into the command window and press Enter:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>Command Line</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>pvk2pfx -pvk c:\Demo\TestOOBCodeSigningCA.pvk -spc c:\Demo\TestOOBCodeSigningCA.cer -pfx c:\Demo\TestOOBCodeSigningCA.pfx -po password</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>Enter the password when prompted. Now that you have a certificate you are ready to sign the XAP. If you purchased a digital certificate you would skip right to the next step where you sign the XAP. Type the following command to sign the XAP:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>Command Line</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>signtool sign /v /f c:\Demo\TestOOBCodeSigningCA.pfx /p password c:\Demo\SilverlightApplication2\SilverlightApplication2.Web\ClientBin\SilverlightApplication2.xap</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>If the XAP was successfully signed you'll see verbiage similar to the following in the command window.</p>
+        <p>
+          <img src="images\9b67a385-2992-4633-9a9c-183084ad6e8c.png" />
+        </p>
+        <p>
+          <b>Figure 30</b>
+          <br />
+          <i>Signing a XAP using signtool.exe</i>
+        </p>
+        <p>Every time an out of browser Silverlight project with elevated trust is built with Visual Studio 2010, a new XAP is created. This new XAP must be signed once again.  For development purposes you can add a post build event and perform the <b>signtool sign</b> command to sign the XAP after each build.</p>
+        <a name="_Toc256192963" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Silent Install with SLLauncher.exe</b>
+        </p>
+        <p>You can perform a silent installation using sllauncher.exe with Silverlight 4. Silent installs are useful for installing a Silverlight application directly on a machine using a command line, .bat file or from a DVD. The sllauncher.exe can be run using the /install switch to point to the location of the XAP file to install. Also, set the /origin switch to the URL where the XAP file is hosted. The /origin switch indicates where the XAP file will get any future updates from. The following example</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>Command Line</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>"C:\Program Files\Microsoft Silverlight\sllauncher.exe"     /install:"C:\Demo\OOBDemo.Web\ClientBin\OOBDemo.xap"     /origin:"http://localhost:49786/ClientBin/OOBDemo.xap"     /shortcut:desktop+startmenu     /overwrite</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192964" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Custom Window Chrome</b>
+        </p>
+        <p>When running a trusted out of browser application the window chrome can be customized. You can change the window chrome by opening the out of browser settings in Visual Studio and selecting the Window Style to be one of the options as shown in the figure below. </p>
+        <p>
+          <img src="images\041f11ad-3095-4786-b8cf-a7dfc717c203.png" />
+        </p>
+        <p>
+          <b>Figure 31</b>
+          <br />
+          <i>Customizing the Window Chrome</i>
+        </p>
+        <a name="_Toc256192965" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Full Keyboard in Full Screen Mode</b>
+        </p>
+        <a name="Setting_Full-screen_Mode" href="#">
+          <span />
+        </a>
+        <p>A Silverlight Trusted Application enables all keyboard input when in full screen mode. The Content.IsFullScreen property determines whether the Silverlight plug-in displays as a full-screen plug-in or as an embedded plug-in. If you set the IsFullScreen property to true, the Silverlight plug-in displays in full-screen mode. </p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>var isFull = this.Host.Content.IsFullScreen</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>When the screen is put into or taken out of full screen mode, the FullScreenChanged event fires. When a Silverlight plug-in displays in full-screen mode, it briefly displays the message "Press ESC to exit full-screen mode". This message alerts the user that the application is now in full-screen mode, and provides information about how to return to embedded mode.</p>
+        <p>
+          <img src="images\3e5fde5c-76fa-4d42-a619-10667b03d802.png" />
+        </p>
+        <p>
+          <b>Figure 32</b>
+          <br />
+          <i> Full Screen Mode Message</i>
+        </p>
+        <p>The Silverlight plug-in does not support OpenFileDialog and SaveFileDialog in full-screen mode, so you should exit full-screen mode before using these classes. Full-screen mode does not support multi-touch input either.</p>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

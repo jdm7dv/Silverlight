@@ -1,0 +1,72 @@
+﻿<Grid
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Name="parentCanvas"
+
+		
+        mc:Ignorable="d"
+		    HorizontalAlignment="Stretch"
+		    VerticalAlignment="Stretch"
+        >
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="*" />
+    <ColumnDefinition Width="1024" />
+    <ColumnDefinition Width="*" />
+  </Grid.ColumnDefinitions>
+  <Grid.RowDefinitions>
+    <RowDefinition Height="*" />
+    <RowDefinition Height="768" />
+    <RowDefinition Height="*" />
+  </Grid.RowDefinitions>
+
+  <Canvas Grid.Column="1" Grid.Row="1">
+    <Image Source="http://localhost/SilverlightWeblog/SplashScreen/SplashScreen.png" Stretch="Fill" Height="768" Width="1024"/>
+
+    <TextBlock Height="44" Width="77" Canvas.Left="464" Canvas.Top="351.337" x:Name="txt1" TextWrapping="NoWrap" Foreground="#FF7E7E7E" FontSize="29.333" Text="0%" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+      <TextBlock.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform/>
+          <SkewTransform/>
+          <RotateTransform Angle="3.412"/>
+          <TranslateTransform X="0.20183422150867614" Y="-3.7765717164301522"/>
+        </TransformGroup>
+      </TextBlock.RenderTransform>
+    </TextBlock>
+
+    <TextBlock Height="44" Width="77" Canvas.Left="462" Canvas.Top="354.337" x:Name="txt2" TextWrapping="NoWrap" Foreground="White" FontSize="29.333" Text="0%" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+      <TextBlock.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform/>
+          <SkewTransform/>
+          <RotateTransform Angle="3.412"/>
+          <TranslateTransform X="0.026833122241257" Y="-3.9009204479023607"/>
+        </TransformGroup>
+      </TextBlock.RenderTransform>
+    </TextBlock>
+
+    <TextBlock Height="44" Width="77" Canvas.Left="593" Canvas.Top="351.337" x:Name="txt3" TextWrapping="NoWrap" Foreground="#FF7E7E7E" FontSize="29.333" Text="0%" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+      <TextBlock.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform/>
+          <SkewTransform/>
+          <RotateTransform Angle="3.412"/>
+          <TranslateTransform X="-0.026833122241257" Y="3.9009204479023607"/>
+        </TransformGroup>
+      </TextBlock.RenderTransform>
+    </TextBlock>
+
+    <TextBlock Height="44" Width="77" Canvas.Left="591" Canvas.Top="354.337" x:Name="txt4" TextWrapping="NoWrap" Foreground="White" FontSize="29.333" Text="0%" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+      <TextBlock.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform/>
+          <SkewTransform/>
+          <RotateTransform Angle="3.412"/>
+          <TranslateTransform X="-0.20183422150867614" Y="3.7765717164301522"/>
+        </TransformGroup>
+      </TextBlock.RenderTransform>
+    </TextBlock>
+
+  </Canvas>
+
+</Grid>

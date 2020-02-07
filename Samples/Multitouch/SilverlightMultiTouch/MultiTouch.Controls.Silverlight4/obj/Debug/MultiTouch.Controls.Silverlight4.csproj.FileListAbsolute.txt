@@ -1,0 +1,26 @@
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Controls.Silverlight4.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Controls.Silverlight4.pdb
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Behaviors.Silverlight4.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\System.Windows.Input.Manipulations.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Behaviors.Silverlight4.pdb
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.pdb
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\MultiTouch.Controls.Silverlight4.g.resources
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\MultiTouch.Controls.Silverlight4.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\MultiTouch.Controls.Silverlight4.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Controls.Silverlight4.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Controls.Silverlight4.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Behaviors.Silverlight4.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\System.Windows.Interactivity.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\System.Windows.Input.Manipulations.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.Behaviors.Silverlight4.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\System.Windows.Interactivity.xml
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\MultiTouch.Controls.Silverlight4.g.resources
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\MultiTouch.Controls.Silverlight4.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.Controls.Silverlight4\obj\Debug\MultiTouch.Controls.Silverlight4.pdb

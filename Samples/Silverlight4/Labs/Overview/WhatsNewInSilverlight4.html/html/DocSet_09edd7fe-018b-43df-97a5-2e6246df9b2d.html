@@ -1,0 +1,980 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Enabling Business Application Development" />
+      <MSHelp:RLTitle Title="Enabling Business Application Development" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Enabling Business Application Development</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Overview - Technical Whitepaper</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Enabling Business Application Development</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <a name="_Toc256192873" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Printing </b>
+        </p>
+        <p>Silverlight adds printing support that allows developers to control whether their Silverlight application can print itself, how the content is formatted when printed, and determine the content that will appear. For example, you could add a print button to your Silverlight application that opens the Print dialog allows the user to choose the printer, and then prints the Silverlight content. </p>
+        <p>You can print content by first creating an instance of the PrintDocument class, then specifying the content to print, and finally writing code to handle the PrintPage event. You can print the entire Silverlight control by setting PrintPageEventArgs.PageVisual to the layout root of the Silverlight content. Alternatively, you can print a portion of the Silverlight content by setting PrintPageEventArgs<s>.</s>PageVisual to the named UIElement you wish to print. The following code sample prints all content within the UIElement named in the Silverlight application.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>PrintDocument pd = new PrintDocument();pd.PrintPage += (s, args) =&gt;  {      args.PageVisual = LayoutRoot;  };pd.Print();</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>After the PrintPage event occurs, the content from the PageVisual is sent to the selected printer to be printed. Content that is too large to fit in to the PrintableArea will be clipped. If HasMorePages is true, PrintPage occurs multiple times until HasMorePages is false. If you require customized printing options, you can write code for the StartPrint and EndPrint events to perform special handling. </p>
+        <p>You can print content that is not<i> </i>in the live visual tree. This allows you to make your printed content look different from your onscreen content. To do this, set PageVisual to a UIElement created in the PrintPage event without adding it to the live visual tree. Another tip to print elements which are not in the live tree  is to explicitly run layout on them by calling measure and arrange.</p>
+        <a name="_Toc256192874" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Localization with Bi-Directional and Script-Based Text and Right-to-Left Support</b>
+        </p>
+        <p>Silverlight introduces support for shaped and script languages that flow right to left, such as Arabic and Hebrew. The ability to change the direction of the flow is available to all Silverlight UI elements by setting the FlowDirection property to LeftToRight or RightToLeft. The default bi-directional (Bi-Di) FlowDirection property is from LeftToRight. Setting FlowDirection to RightToLeft on any element sets the alignment to the right, the reading order to right-to-left, and the layout of the control to flow from the right to the left. Most UIElement controls inherit the FlowDirection from their parent; however Image, MediaElement, MultiScaleImage, and Popup do not and remain LeftToRight unless overridden explicitly. When brushes and effects are applied to elements whose FlowDirection property is set RightToLeft, the result is flipped horizontally.</p>
+        <a name="_Toc256192875" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Extended Language Support</b>
+        </p>
+        <p>Silverlight 4 now supports several new languages including Thai and Vietnamese as well as multiple Indic scripts both for rendering and input. The following Indic scripts are now supported:</p>
+        <table style="">
+          <tr valign="top">
+            <th>
+              <p>Script</p>
+            </th>
+            <th>
+              <p>Languages</p>
+            </th>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Bengali</p>
+            </td>
+            <td>
+              <p>Bengali, Assamese, Manipuri </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Oriya</p>
+            </td>
+            <td>
+              <p>Oriya</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Malayalam</p>
+            </td>
+            <td>
+              <p>Malayalam</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Kannada</p>
+            </td>
+            <td>
+              <p>Kannada</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Tamil</p>
+            </td>
+            <td>
+              <p>Tamil</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Telugu</p>
+            </td>
+            <td>
+              <p>Telugu</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Gujarati</p>
+            </td>
+            <td>
+              <p>Gujarati</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Gurmukhi</p>
+            </td>
+            <td>
+              <p>Punjabi</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>Devanagari</p>
+            </td>
+            <td>
+              <p>Hindi, Marathi, Sanskrit, Konkani, Kashmiri, Nepali, Sindhi</p>
+            </td>
+          </tr>
+        </table>
+        <a name="_Toc256192876" href="#">
+          <span />
+        </a>
+        <p>
+          <b>RichTextBox Control </b>
+        </p>
+        <p>Silverlight adds the new RichTextBox control to the standard controls offered by Silverlight. Through the FlowDirection property, the RichTextBox has Bi-Directional (Bi-Di) support on content including Runs. It also allows hyperlinks, XAML content, embedding of images, changing the font size, foreground color, and making text bold, italicized, and underlined as well as many other rich text features. </p>
+        <p>The RichTextBox supports the “format then type” feature. For example, with this feature you can choose a format, such as bold or font color of green, and when you start typing the formatting selections you made are applied to the text you type. Text position and selection APIs are also supported.</p>
+        <p>Another feature of the RichTextBox control is paragraph blocks, which allows different formatting of blocks of text. Built-in keyboard commands can be used to allow shortcuts for clipboard and undo operations. The RichTextBox also supports mouse events, XAML to clipboard features, undo, and language localization. </p>
+        <p>The following image shows the RichTextBox control using the FlowDirection = RightToLeft and displaying Hebrew text.</p>
+        <p>
+          <img src="images\edc25894-84da-4b8d-8611-4501b3d90de3.png" />
+        </p>
+        <p>
+          <b>Figure 2</b>
+          <br />
+          <i>RichTextBox with FlowDirection of RightToLeft</i>
+        </p>
+        <p>The following image shows a sample application with a RichTextBox control containing several different types of content, including embedded images, an embedded Silverlight DataGrid, different font sizes, different fonts, foreground colors, bold, and italics.</p>
+        <p>
+          <img src="images\5de32c3a-bce1-40b3-8ed9-d4ac2c8908de.png" />
+        </p>
+        <p>
+          <b>Figure 3</b>
+          <br />
+          <i>RichTextBox Control</i>
+        </p>
+        <p>The RichTextBox has a Xaml property that supports serializing text content. You can get the Xaml from the RochTextBox’s Xaml property and save it to isolated storage or perhaps send it to a web service. You can also set the content of the RichTextBox control by setting the Xaml property. You can clear the content of a RichTextBox by calling the Blocks property’s Clear method.</p>
+        <a name="_Toc256192877" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Text Input</b>
+        </p>
+        <p>Silverlight now enhances its support for IME (Input Method Editors), which is a part of text input used when there are more glyphs than keyboard keys (as with East Asian languages). Enhancements include getting and setting IME conversion modes as well as getting and setting IME active state. In addition, the TextInputStart, TextInputUpdate, and TextInput events have been added to the UIElement controls. These events are effective at determining the text that users input when using IME.</p>
+        <p>Silverlight also has additional event handling for text input via the TextInput event. The TextInput event allows you to get an event from key press generated characters. This includes getting characters that require multiple keyboard presses in order to be entered, such as the “è” in the name “Claudè”.</p>
+        <a name="_Toc256192878" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Viewbox Control</b>
+        </p>
+        <p>Silverlight adds the Viewbox to its list of layout containers. The Viewbox allows precise positioning and flexible resizing support that stretches or scales a single child element to fit the available space.  A Viewbox can only contain a single element.</p>
+        <p>The Viewbox’s StretchDirection property determines how to scale its contents. It prevents the contents of the Viewbox from being scaled to a smaller or larger dimension than the original. Possible values are UpOnly, DownOnly and Viewbox Control Both. The Stretch property determines how the content of the Viewbox will be stretched to fill the Viewbox. Possible values are None, Fill, Uniform, and UniformToFill.</p>
+        <p>The example below shows a Viewbox control with the default settings of Stretch=Uniform and StretchDirection=Both. The image inside the Viewbox is 200x200 pixels and will be stretched uniformly to fill the entire smaller Viewbox. </p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;Grid x:Name="LayoutRoot" Background="Red" Width="100" Height="100" &gt;&lt;Viewbox Margin="5"&gt;&lt;Image Source="sl4 image.png"/&gt;&lt;/Viewbox&gt;&lt;/Grid&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>
+          <img src="images\77cf028e-050d-4dc0-80c6-edb9926a71e5.png" />
+        </p>
+        <p>
+          <b>Figure 4</b>
+          <br />
+          <i>Viewbox with Default Settings</i>
+        </p>
+        <p>If you set the StretchDirection to UpOnly, then the image will only stretch up in size. Since the container is smaller than the image, the image will not stretch and only the upper portion of the image will be visible.</p>
+        <p>
+          <img src="images\702d9e27-f7be-4d20-8a43-c34616367a40.png" />
+        </p>
+        <p>
+          <b>Figure 5</b>
+          <br />
+          <i>Viewbox with StretchDirection = UpOnly</i>
+        </p>
+        <a name="_Toc256192879" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Auto-Sizing Columns and Copy from DataGrid</b>
+        </p>
+        <p>Silverlight added several new features to the DataGrid control. Through auto-sizing columns, the DataGrid in Silverlight now has the ability to allow columns to share the remaining width of a DataGrid. This feature makes it easy to define specific widths for some columns in a DataGrid while allowing the other columns to share the remaining width of the DataGrid. For example, you might want to have fixed widths for columns for City, State, and the Postal Code. However, you may want the Name column to use 1/3 of the remaining space and the Address column to use 2/3 of it. The following code would accomplish this using * column widths:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>XAML&lt;data:DataGrid AutoGenerateColumns="False" x:Name="dataGrid2"                    HeadersVisibility="All"&gt;    &lt;data:DataGrid.Columns&gt;        &lt;data:DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/&gt;        &lt;data:DataGridTextColumn Header="Address" Binding="{Binding Address}"                                        Width="2*"/&gt;        &lt;data:DataGridTextColumn Header="City" Binding="{Binding City}" Width="100"/&gt;        &lt;data:DataGridTextColumn Header="State" Binding="{Binding State}"                    Width="50" /&gt;        &lt;data:DataGridTextColumn Header="Postal Code" Binding="{Binding PostalCode}"                                       Width="80"/&gt;    &lt;/data:DataGrid.Columns&gt;&lt;/data:DataGrid&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>
+          <img src="images\2ad48830-721a-41bc-83df-a6340499e399.png" />
+        </p>
+        <p>
+          <b>Figure 6</b>
+          <br />
+          <i>DataGrid with Auto Sizing Columns</i>
+        </p>
+        <p>The DataGrid now supports MouseWheel scrolling and the FlowDirection property. In addition, DataGrid supports row level copy. This means you can copy a row of a DataGrid to the clipboard and then paste it to another program.</p>
+        <a name="_Toc256192880" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Navigation Page Loading Extensibility </b>
+        </p>
+        <p>Silverlight 3 introduced page navigation that resolves URIs into pages. Every page had to have an associated XAML and navigating to that page required URIs with paths to those XAML files based upon your project’s file structure. Silverlight 4 adds a public ContentLoader property to the Frame control and the INavigationContentLoader interface. Together, these changes allow the developer to generate and initialize instances of pages from URIs using their own scheme, and enable scenarios such as authentication redirects, error pages, and MVC-style navigation. </p>
+        <a name="_Toc256192881" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Command Property on ButtonBase and Hyperlink</b>
+        </p>
+        <p>Silverlight adds commanding support commonly used in the Model-View-ViewModel (MVVM) pattern, which provides separation between the View (the Silverlight user control) and the ViewModel (the logic and bindings for the View). Silverlight adds support for commanding on controls that inherit from ButtonBase and Hyperlink. The Command and CommandParameter are exposed to allow binding from a View to a ViewModel without the need for code in the codebehind. You can implement a command by first creating your own DelegateCommand and binding to it from the XAML.</p>
+        <p>For example, a ViewModel may contain a LoadProducts command, which implements the ICommand interface. The LoadProductsCommand accepts a parameter that filters the products that start with a specific letter(s). The following XAML shows how a Button’s Command property could be bound to the LoadProductsCommand and how its CommandParameter property could be bound to a TextBox’s Text property.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;UserControl.Resources&gt;    &lt;local:ProductViewModel x:Key="vm"/&gt;&lt;/UserControl.Resources&gt;&lt;Grid DataContext="{StaticResource vm}" Name="LayoutRoot"&gt;&lt;TextBox x:Name="MyFilterTextBox"/&gt;&lt;Button Content="Load" Width="120"     Command="{Binding LoadProductsCommand}"     CommandParameter="{Binding Path=Text, ElementName=MyFilterTextBox}"/&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>This XAML binds the Button to the LoadProductsCommand in the ViewModel. You can enable or disable the Button depending on the Boolean return value from the command’s CanExecute method. </p>
+        <a name="_Toc256192882" href="#">
+          <span />
+        </a>
+        <p>
+          <b>SelectedValue and SelectedValuePath on the Selector</b>
+        </p>
+        <p>These properties enable the use of ComboBox as a look up table. When combining DisplayMemberPath with these you can display one thing but bind to another. All controls that inherit from the Selector class now have SelectedValue and SelectedValuePath properties. You can now set the SelectedValuePath property to the string name of the property of the SelectedItem. When this is set, the SelectedValue property will return the SelectedItem’s property with the matching name of the SelectedValuePath. </p>
+        <p>For example, you have a control that derives from Selector (such as the ComboBox control) and it is bound to a collection of Product classes. The Product class has ProductName and ProductId properties. If the SelectedValuePath is set to ProductName , when an item in the Selector control is selected, the SelectedValue property will return the value for the ProductName of the SelectedItem. The following XAML demonstrates this example.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;UserControl.Resources&gt;    &lt;local:ProductViewModel x:Key="vm"/&gt;    &lt;DataTemplate x:Key="ProductDataTemplate"&gt;    &lt;Grid&gt;   &lt;TextBlock TextWrapping="Wrap" Text="{Binding Path=ProductName}" /&gt;    &lt;/Grid&gt;    &lt;/DataTemplate&gt;&lt;/UserControl.Resources&gt;&lt;StackPanel x:Name="LayoutRoot"             Background="White" DataContext="{StaticResource vm}"             Orientation="Vertical" Margin="10"&gt;    &lt;ComboBox Height="23" Name="ProductComboBox" VerticalAlignment="Top" Width="120" <b>SelectedValuePath="ProductName"</b>            ItemsSource="{Binding Path=Products}"             ItemTemplate="{StaticResource ProductDataTemplate}" /&gt;    &lt;TextBlock Height="23" HorizontalAlignment="Left"            Name="SelectedPathTextBlock" Text="{Binding Path=SelectedValue,             ElementName=ProductComboBox}" VerticalAlignment="Top" Width="120" /&gt;&lt;/StackPanel&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The result of this XAML is that when you select a product, such as Strawberry, the ProductName of the SelectedItem is displayed in the TextBlock, as shown below.</p>
+        <p>
+          <img src="images\42bc60e2-2c43-415a-98fc-10233ccbafe9.png" />
+        </p>
+        <p>
+          <b>Figure 7</b>
+          <br />
+          <i>TextBlock Bound to SelectedValue of a ComboBox</i>
+        </p>
+        <p>Another valuable scenario is when a class, for example a Customer class, has a public string StateId {get;set;} which takes the value “WA” or “NV” etc. You want to display a picker that displays the full state name but when you pick a value pushes the short name into Customer.StateId. You can create a State object with LongName and ShortName and a collection of all the States called StatesCollection. Then you bind ComboBox.ItemsSource to StatesCollection with DisplayMemberPath=LongName, SelectedValuePath=ShortName and bind SelectedValue to the current Customer StateId property. In the end, you will display “Washington” but SelectedValue is “WA” and so Customer.StateId gets set to “WA”</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;StackPanel x:Name="LayoutRoot"             Background="White" DataContext="{StaticResource customerVM}" Orientation="Vertical" Margin="10"&gt;    &lt;ComboBox Height="23" Name="ProductComboBox" VerticalAlignment="Top" Width="120" SelectedValue=”StateId”DisplayMemberPath=”LongName” SelectedValuePath="ShortName"            ItemsSource="{Binding Source="{StaticResource statesCollection}}" ItemTemplate="{StaticResource ProductDataTemplate}" /&gt;&lt;/StackPanel&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192883" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Support for Referer Header</b>
+        </p>
+        <p>Silverlight allows the Referer request header for both in-browser and out-of-browser scenarios on all networking requests used by WebClient and HttpWebRequest when they use the Client networking stack. This enables services like Live Mesh to determine where the requests originated. The Referer header is a request header field that is automatically set to the base URI of the client from which the Request-URI was obtained. The Referer request header allows a server to generate lists of back links to resources for logging and caching optimization.  </p>
+        <a name="_Toc256192884" href="#">
+          <span />
+        </a>
+        <p>
+          <b>UDP Multicast Client Support</b>
+        </p>
+        <p>Silverlight enables UDP multicast for one-to-many communication over an IP infrastructure. This efficiently scales to a large receiver population. There are two key shapes for multicast groups:</p>
+        <ul>
+          <li>Single Source Multicast (one-to-many)System.Net.Sockets.UdpSingleSourceMulticastClient </li>
+          <li>Any Source Multicast (many-to-many)System.Net.Sockets.UdpAnySourceMulticastClient </li>
+        </ul>
+        <p>To make multicast group accessible to Silverlight, you need to expose a policy responder (just like Sockets and HTTP).</p>
+        <a name="_Toc256192885" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Networking Enhancements</b>
+        </p>
+        <p>Silverlight 4 adds the following features to the networking stack:</p>
+        <ul>
+          <li>UploadProgress support on the client networking stack now exists. This allows you to be notified as content is being uploaded so you can notify the user.</li>
+          <li>Caching support on the client networking stack has been added.</li>
+          <li>Sockets policy file retrieval via HTTP is also new.</li>
+          <li>Accept-Language header has been added.</li>
+        </ul>
+        <a name="_Toc256192886" href="#">
+          <span />
+        </a>
+        <p>
+          <b>WCF TCP-based Binding</b>
+        </p>
+        <p>WCF in Silverlight now offers a TCP-based binding, which enables communicating with WCF services configured with NetTcpBinding. Note that no security is supported in this release.</p>
+        <a name="_Toc256192887" href="#">
+          <span />
+        </a>
+        <p>
+          <b>WCF PollingDuplex Improvements</b>
+        </p>
+        <p>PollingDuplex now supports a new “multiple messages per poll” mode, where HTTP chunking is used to stream many messages in response to a client poll.</p>
+        <a name="_Toc256192888" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Authentication Support with ClientHttpWebRequest </b>
+        </p>
+        <p>Silverlight adds the ability to pass user credentials from the application to the server to support NTLM, Basic, and Digest authentication. This allows Silverlight applications to pass user credentials for authentication by services such as ADO.NET Data Services or Live Mesh.</p>
+        <p>A Silverlight application can now set the Credentials API with a username and password when Web sites require the authorization request header to be sent with a network request to properly authorize users. When a user has already logged in to the machine and the credentials have been saved to the OS, the client may use these default credentials to authenticate when making a client networking request. This makes the most sense in scenarios (such as SharePoint ) that use NTLM authentication.</p>
+        <p>The code below demonstrates how to pass network credentials using the new APIs. Notice that the UseDefaultCredentials property is set to false. When UseDefaultCredentials is set to true, the Credentials property is ignored and the credentials are retrieved from the local machine’s session. In the code above, the credentials are supplied in code, so the UseDefaultCredentials must be set to false.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>var username = "myTwitterId";var password = "myTwitterPassword";var twitterUri =           @"http://twitter.com/statuses/friends_timeline/{0}.xml?count=50";var uriString = string.Format(twitterUri, username);WebClient request = new WebClient();WebRequest.RegisterPrefix("http://", WebRequestCreator.ClientHttp);request.UseDefaultCredentials = false;request.Credentials = new NetworkCredential(username, password);request.DownloadStringCompleted += new         DownloadStringCompletedEventHandler(client_DownloadStringCompleted);request.DownloadStringAsync(new Uri(uriString));</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>Custom authentication is now supported for in browser and out of browser applications through programmatic access to the <b>Authorization</b> header via the <b>Headers</b> collection on WebRequest. Also, you will need the clientaccesspolicy.xml file to opt-in to the Authorization header being sent.</p>
+        <a name="_Toc256192889" href="#">
+          <span />
+        </a>
+        <p>
+          <b>IDataErrorInfo</b>
+        </p>
+        <p>Silverlight adds the IDataErrorInfo interface enables the reporting of validation errors that a user interface can bind to. When an entity implements this interface and the entity is involved in a binding operation, it invokes the indexer to validate the properties. The bound target properties in the UI will receive the error messages and display the validation states if the ValidatesOnDataErrors property is set to true.</p>
+        <p>The IDataErrorInfo interface exposes an Error property and a string indexer.  The Error property should return an error message explaining the error with the object. The indexer should return the error message for the property with the given name passed to the indexer. </p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>public interface IDataErrorInfo{string Error { get; }string this[string columnName] { get; }}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>You can implement validation by executing the IDataErrorInfo interface on an entity model as shown in the code sample below on the Employee.  The Employee has custom validation rules that execute when changes occur in the bound UI elements that have ValidatesOnDataErrors set to true.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>public class Employee : INotifyPropertyChanged, IDataErrorInfo    {        private ValidationHandler validationHandler = new ValidationHandler();        private string _FirstName;        public string FirstName        {            get { return _FirstName; }            set             {                 _FirstName = value;                 NotifyPropertyChanged("FirstName");                 bool valid = validationHandler.ValidateRule(                    "FirstName",                     "First Name must be at least 5 letters!",                      () =&gt; (value.Length &gt;= 5));            }        }        private float _TaxPercent;        public float TaxPercent        {            get { return _TaxPercent; }            set            {                if (_TaxPercent != value)                {                    if (value &gt;= 1)                        value /= 100;                    _TaxPercent = value;                    NotifyPropertyChanged("TaxPercent");                    bool valid = validationHandler.ValidateRule(                        "TaxPercent", "The tax has to be positive!",                          () =&gt; (value &gt; 0));                }            }        }        protected void NotifyPropertyChanged(string PropertyName)        {            if (null != PropertyChanged)                PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));        }        public event PropertyChangedEventHandler PropertyChanged;        public string Error        {            get { return null; }        }        public string this[string columnName]        {            get            {                if (this.validationHandler.BrokenRuleExists(columnName))                {                    return this.validationHandler[columnName];                }                return null;            }        }    }    public class ValidationHandler    {        private Dictionary&lt;string, string&gt; BrokenRules { get; set; }        public ValidationHandler()        {            BrokenRules = new Dictionary&lt;string, string&gt;();        }        public string this[string property]        {            get            {                return this.BrokenRules[property];            }        }        public bool BrokenRuleExists(string property)        {            return BrokenRules.ContainsKey(property);        }        public bool ValidateRule(string property,                     string message, Func&lt;bool&gt; ruleCheck)        {            if (!ruleCheck())            {                this.BrokenRules.Add(property, message);                return false;            }            else            {                RemoveBrokenRule(property);                return true;            }        }        public void RemoveBrokenRule(string property)        {            if (this.BrokenRules.ContainsKey(property))            {                this.BrokenRules.Remove(property);            }        }    }</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The XAML for these UI elements is shown below.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;TextBox x:Name="FirstNameTextBox"    Text="{Binding Path=FirstName, Mode=TwoWay,     ValidatesOnDataErrors=True}" /&gt;&lt;TextBox x:Name="TaxPercentTextBox"    Text="{Binding Path=TaxPercent, Mode=TwoWay,      ValidatesOnDataErrors=True}" /&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>When invalid values are entered into these controls, the validation kicks in and displays to the user as shown below.</p>
+        <p>
+          <img src="images\16c70363-f569-4a76-8ff0-b4c07e85651a.png" />
+        </p>
+        <p>
+          <b>Figure 8</b>
+          <br />
+          <i>Data Validation using IDataErrorInfo</i>
+        </p>
+        <a name="_Toc256192890" href="#">
+          <span />
+        </a>
+        <p>
+          <b>INotifyDataErrorInfo </b>
+        </p>
+        <p>IDataErrorInfo is limited to validating on a per property basis. However, Silverlight 4 also adds the INotifyDataErrorInfo interface that allows validation across properties of an entity. It also allows entity objects to enable notification of data errors in the UI. INotifyDataErrorInfo allows developers to provide custom, asynchronous validation support to access server-side validation logic. It exposes a HasErrors property to indicate if there are any errors and has a GetErrors method to retrieve the errors. The ErrorsChanged event is raised when new errors are added. If the binding property ValidatesOnNotifyDataErrors is set to true and the source object implements the interface, the binding engine in Silverlight will listen for the ErrorsChanged event. INotifyDataErrorInfo also provides entity level validation support to the DataGrid control. WCR RIA Services takes advantage of the INotifyDataErrorInfo interface to perform validation, too.</p>
+        <a name="_Toc256192891" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Grouping on CollectionViewSource</b>
+        </p>
+        <p>Silverlight adds capabilities to the CollectionViewSource class by enabling grouping over bound data within a Silverlight DataGrid control. A DataGrid’s ItemsSource can be bound to the CollectionViewSource and you can apply a grouping to it. The following code adds 2 new groups to the CollectionViewSource. When it is bound to the DataGrid, the DataGrid will group the items using the GradeLevel and Gender groups.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;UserControl.Resources&gt;    &lt;CollectionViewSource x:Key="cvs"&gt;        &lt;CollectionViewSource.GroupDescriptions&gt;            &lt;PropertyGroupDescription PropertyName="GradeLevel" /&gt;            &lt;PropertyGroupDescription PropertyName="Gender" /&gt;        &lt;/CollectionViewSource.GroupDescriptions&gt;    &lt;/CollectionViewSource&gt;&lt;/UserControl.Resources&gt;&lt;Grid x:Name="LayoutRoot"&gt;    &lt;DataGrid ItemsSource="{Binding Source={StaticResource cvs}}" /&gt;&lt;/Grid&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192892" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Editable CollectionView IEditableCollectionView</b>
+        </p>
+        <p>When a CollectionViewSource is used as the ItemsSource of both a Silverlight DataForm and a DataGrid, the DataForm can use its Add button to add items to the collection. Also, the item can be edited, cancelled, or committed.  The item also appears in the DataGrid, which the CollectionView keeps in sync with the DataForm.  You can cancel the editing an item in the DataGrid by hitting the escape key twice while editing a field.  Both the DataGrid and DataForm perform entity-level validations whenever CommitEdit() is called, giving the user immediate feedback.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;UserControl.Resources&gt;    &lt;CollectionViewSource x:Key="cvs"/&gt;&lt;/UserControl.Resources&gt;&lt;Grid x:Name="LayoutRoot"&gt;    &lt;DataGrid ItemsSource="{Binding Source={StaticResource cvs}}" /&gt;    &lt;DataForm ItemsSource="{Binding Source={StaticResource cvs}}" /&gt;&lt;/Grid&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192893" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Binding to String Indexers</b>
+        </p>
+        <p>Silverlight allows targets to be bound to string indexers. This means objects can define custom sets of properties and bind them to UIElements. An object that requires custom properties would expose an indexer that takes a string. This can be done either on the object itself or on a dictionary property. Each entry in the dictionary property represents a custom property.  The key in the dictionary describes the name of the property and the value corresponding to that key represents the value of that property.  The binding engine supports binding to string indexers, which enables binding to such a dictionary.  The XAML below demonstrates how to bind to a string indexer.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;TextBox Text="{Binding Path=CustomProperties[Nickname]}"/&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The DataContext is an Employee class that has a property named CustomProperties. CustomProperties contains a dictionary of keyed name value pairs.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>var emp = new Employee() { FirstName = "John" }emp.CustomProperties.Add("Nickname", "Johnny"); this.DataContext = emp;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The definition for the Employee class shows the CustomProperties property defined as a Dictionary.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>public class Employee : INotifyPropertyChanged{  private Dictionary&lt;string, Object&gt; _customProps;  public Dictionary&lt;string, Object&gt; CustomProperties  {    get    {      if (_customProps == null)        _customProps = new Dictionary&lt;string, object&gt;();      return _customProps;    }  }}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192894" href="#">
+          <span />
+        </a>
+        <p>
+          <b>TargetNullValue</b>
+        </p>
+        <p>Silverlight 4 introduces a new binding extension property for TargetNullValue. The TargetNullValue binding extension property applies its value to the target when the source value of the binding operation is Null. The example below will display 0 when the UnitsInStock bound property is Null.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;TextBox Text="{Binding Path=UnitsInStock, Mode=TwoWay, TargetNullValue=0}" /&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192895" href="#">
+          <span />
+        </a>
+        <p>
+          <b>StringFormat</b>
+        </p>
+        <p>In Silverlight 3, values were often formatted by creating a converter class that implements the IValueConverter interface. Silverlight 4 introduces the StringFormat binding extension property that formats a value using either a predefined format or a custom format without the need for a converter class. The examples below show how to format a bound value to a currency and to a percentage, respectively, using the StringFormat feature.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;TextBox Text="{Binding Path=UnitPrice, Mode=TwoWay, StringFormat=C}" /&gt;&lt;TextBox Text="{Binding Path=Discount, Mode=TwoWay, StringFormat=P}"/&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>You can also set the StringFormat to a custom format such as a date format. The example below shows an order date formatted as MM-dd-yyyy (for example: 11-18-2009).</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;TextBox Text="{Binding Path=OrderDate, Mode=TwoWay, StringFormat='MM-dd-yyyy'}"/&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192896" href="#">
+          <span />
+        </a>
+        <p>
+          <b>FallbackValue</b>
+        </p>
+        <p>The FallbackValue binding extension displays a value when the binding operation is unsuccessful. In the example below, the TextBox attempts to bind to a property ManagesEmployees. Assuming that the DataContext is set to a Manager class instance, this property may return a value. However if the DataContext is set to an Employee object that does not have a ManagesEmployees property, the FallbackValue will be displayed instead.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;TextBox     Text="{Binding Path=ManagesEmployees, Mode=TwoWay, FallbackValue=N/A}" /&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192897" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Databinding Support for Dependency Objects</b>
+        </p>
+        <p>Silverlight introduces the ability to bind properties on a DependencyObject (DO) and not just on FrameworkElements. For example, in Silverlight you can bind the rotation angle of a RotateTransform to a Slider control using the following XAML:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;Canvas Width="100" Height="100"         RenderTransformOrigin="0.5, 0.5" Background="#FF2B6092"&gt;    &lt;Canvas.RenderTransform&gt;        &lt;RotateTransform Angle="{Binding ElementName=slider, Path=Value}" /&gt;    &lt;/Canvas.RenderTransform&gt;&lt;/Canvas&gt;&lt;Slider x:Name="slider" Height="20" Margin="0,225,0,55" Minimum="0"         Maximum="360" /&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The following example shows how to bind the plane projection rotation angles to a series of Slider controls using the new DependencyObject binding feature:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;Canvas Width="100" Height="100" RenderTransformOrigin="0.5, 0.5" Background="#FF2B6092"&gt;            &lt;Canvas.Projection&gt;                &lt;PlaneProjection RotationX="{Binding ElementName=sliderX,Path=Value}"                                 RotationY="{Binding ElementName=sliderY,Path=Value}"                                 RotationZ="{Binding ElementName=sliderZ,Path=Value}"                /&gt;            &lt;/Canvas.Projection&gt;        &lt;/Canvas&gt;        &lt;Slider x:Name="sliderX" Height="20" Margin="0,10,0,55"             Minimum="0" Maximum="360" /&gt;        &lt;Slider x:Name="sliderY" Height="20" Margin="0,30,0,35"             Minimum="0" Maximum="360" /&gt;        &lt;Slider x:Name="sliderZ" Height="20" Margin="0,50,0,15"             Minimum="0" Maximum="360" /&gt;&lt;/Canvas&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>Also, Silverlight includes a DependencyObjectCollection which provides a way for third parties to define collection properties that contain DependencyObjects and have properties on those DependencyObjects in binding operations.</p>
+        <a name="_Toc256192898" href="#">
+          <span />
+        </a>
+        <p>
+          <b>XPath Support for XML</b>
+        </p>
+        <p>Silverlight provides the ability to parse XML using a variety of techniques including LINQ to XML and XPath support. XPath support, available in Silverlight 4’s SDK in the System.Xml.XPath.dll, is new to Silverlight 4. It is valuable for those who need to parse XML and already have extensive XPath libraries. </p>
+        <a name="_Toc256192899" href="#">
+          <span />
+        </a>
+        <p>
+          <b>ObservableCollection&lt;T&gt; Constructor Accepts IList and IEnumerable </b>
+        </p>
+        <p>Silverlight 4 also can take advantage of new constructor overloads that allow it to initialize an ObservableCollection&lt;T&gt; from an IEnumerable or IList. The example below shows a List&lt;string&gt; used to initialize the ObservableCollection&lt;string&gt;.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>List&lt;string&gt; ColorList = new List&lt;string&gt; { "red", "blue", "yellow" };ObservableCollection&lt;string&gt; ColorOC = new             ObservableCollection&lt;string&gt;(ColorList);</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192900" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Isolated Storage Enhancements</b>
+        </p>
+        <p>Isolated Storage is ideal for storing data on the local client where the Silverlight application can read and write to it. Performance improvements have been made to make accessing data in Isolated Storage faster. </p>
+        <a name="_Toc256192901" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Managed Extensibility Framework (MEF)</b>
+        </p>
+        <p>The Managed Extensibility Framework (MEF) enables you to build modularized applications whose components (Parts, as MEF calls them) can be added in an incrementally. MEF allows development teams to attach new functionality after the application has been deployed, including while the application is running. MEF allows you to deploy your application in multiple Silverlight applications (XAP) files. This allows the XAP files to be dynamically downloaded at runtime and greatly reduces the startup time of the application. MEF allows applications to be context-aware where the available parts change based on the state of the application. It also improves the general maintainability of your Silverlight applications by greatly reducing coupling between its components. MEF can be used anywhere, anytime within Silverlight development, including within elements created in XAML such as a custom user control. MEF can also be integrated into existing Silverlight applications without the need to rewrite them. </p>
+        <p>The code sample shows how to extend the Silverlight DataGrid to make it an extensible grid. In the grid, the CompositionInitializer.SatisfyImports static method allows the DataGrid to be composed by MEF through an ambient container. When SatisfyImports is called, a container is created that contains all the exports in the current XAP file. The [ImportMany] attribute tells MEF that it should supply all IGridExtension exports to the grid.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>public class ExtensibleDataGrid : DataGrid{public ExtensibleDataGrid(){        CompositionInitializer.SatisfyImports(this);foreach (IGridExtension extension in Extensions)extension.Initialize(this);}[ImportMany]public IEnumerable&lt;IGridExtension&gt; Extensions { get; set; }}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>This grid will receive all available IGridExtension exports at runtime. MEF discovers the extensions, creates them, and provides them to the grid. Below is an example of a simple grid extension that makes all fonts in the grid bold. The export attribute tells MEF that the BoldExtension class is a part that offers an export of type IGridExtension.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>public interface IGridExtension{void Initialize(DataGrid grid);}[Export(typeof(IGridExtension))]public class BoldExtension : IGridExtension{public void Initialize(DataGrid grid){grid.FontWeight = FontWeights.Bold;}}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>MEF allows you to keep your application decoupled so you can import and export parts as needed. This is ideal for a plug-in model or for simply keeping loosely coupled architecture. MEF can also dynamically load XAP files on demand, which is a great when you have a large application where the XAP size is larger than ideal. The code sample below loads the GridExtensions.xap. Any XAP file can be loaded as long as it is within the same ClientBin folder as the hosting XAP file. Once downloaded, the parts in the XAP are immediately available for import into the application. This is ideal when you have a large modular application. </p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>private void LoadGridExtensions(){    var catalog = new DeploymentCatalog("GridExtensions.xap");catalog.DownloadAsync();    catalog.DownloadProgressChanged +=         new EventHandler&lt;DownloadProgressChangedEventArgs&gt;(        catalog_DownloadProgressChanged);    catalog.DownloadCompleted += new EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;(        catalog_DownloadCompleted);}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192902" href="#">
+          <span />
+        </a>
+        <p>
+          <b>SDK Enhancements</b>
+        </p>
+        <p>Assemblies and namespace support have been added to Silverlight 4 to include MEF, frame and navigation refresh enhancements, and the System.Numerics.dll.</p>
+        <a name="_Toc256192903" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Microsoft Silverlight 4 Tools for Visual Studio 2010</b>
+        </p>
+        <p>This package is an add-on for Visual Studio 2010 that provides tooling for Microsoft Silverlight 4 and WCF RIA Services. It can be installed on top of either Visual Studio 2010 or Visual Web Developer 2010 Express. It extends the existing Silverlight 3 features and multi-targeting capabilities in Visual Studio 2010 to also support creating, designing, building and debugging Silverlight 4 applications.  The tooling supports:</p>
+        <ul>
+          <li>Elevated trust settings</li>
+          <li>Out of Browser window and chrome settings</li>
+          <li>Streamlined F5 for out of browser applications</li>
+        </ul>
+        <p>The tooling also includes design time support for WCF RIA Services with the following highlighted features:</p>
+        <ul>
+          <li>Implicit Styles</li>
+          <li>Databinding enhancements <ul><li>StringFormat</li><li>NullableValue</li></ul></li>
+          <li>Validation<ul><li>IDataErrorInfo</li><li>INotifyDataErrorInfo</li></ul></li>
+          <li>ICommand, CommandParameter  </li>
+          <li>RichTextBox, Viewbox and WebBrowser controls</li>
+          <li>Creating RTL pages</li>
+        </ul>
+        <p>
+          <img src="images\c8aa9198-dda9-445e-a35d-f8d43395c77b.png" />
+        </p>
+        <p>
+          <b>Figure 9</b>
+          <br />
+          <i>Visual Studio 2010 Tooling Support for Silverlight 4</i>
+        </p>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

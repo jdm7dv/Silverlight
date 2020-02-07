@@ -1,0 +1,10 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\Controls.Testing.Theming.csprojAssemblyReference.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\App.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\ImplicitStyleManager\UserControls\BasicScenario.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\ImplicitStyleManager\UserControls\ContentUserControl.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\ImplicitStyleManager\UserControls\ResourcesAboveMode.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\ImplicitStyleManager\UserControls\SubtreeDifferentMode.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\ImplicitStyleManager\UserControls\WithinTemplate.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\TagEditor.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\System.Windows.Controls.Testing.Theming.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Testing.Theming\obj\Debug\Controls.Testing.Theming.csproj.CoreCompileInputs.cache

@@ -1,0 +1,82 @@
+2009-09-07  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* trim.sh:
+	* create-7.1-avi.cmd: Added, forgot to commit this with the
+	other multi channel audio files.
+
+2009-06-29  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* BigBuckBunny*:
+	* test-all.html:
+	* test-all.js:
+	* README.multichannel: Added multi channel (5.1 and 7.1)
+	audio samples as well as 24 bit audio samples.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* drtlist.xml: Delete old-style drtlists.
+
+2008-11-03  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-media-ended.html, test-media-ended.xaml: Include another media
+	  file in this test.
+	* bip1.mp3: Added.
+
+2008-10-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-media-ended.html: Use our testplugin.js file instead of
+	  duplicating a lot of js in this file. Delay Play on the
+	  MediaElement till the source has loaded.
+
+2008-10-08  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added test-mp3-progressive-download.html.
+	* miguel-11.025kHz-16kbps.mp3, miguel-11.025kHz-16kbps-p.mp3,
+	  miguel-16kHz-56kbps.mp3, miguel-44.1kHz-56kbps.mp3,
+	  miguel-encode.sh, test-mp3-progressive-download.html: Added.
+	* test-mp3-media-properties.html: Improved to test all miguel*.mp3
+	  files.
+
+2008-09-16  Fernando Herrera  <fherrera@novell.com>
+
+	* drtlist.xml:
+	* test-seek-wma.html: Added a new test for wma
+
+2008-08-20  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-pause.html, drtlist.xml: Added new test.
+
+2008-07-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-mp3-media-properties.html: Remove Silverlight.js and reorder
+	  testplugin.js and utils.js.
+
+2008-06-24  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* test-seek-mp3.html: Remove Silverlight.js and include utils.js before
+	  testplugin.js.
+
+2008-06-21  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Updated ids to not conflict with any other media ids.
+
+2008-05-06  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* miguel.wma: Added wma version of this file.
+
+2008-04-29  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added test-mp3-media-properties and test-media-ended.
+	* media-ended.html, media-ended.xaml, test-media-ended.html,
+	  test-media-ended.xaml: Renamed to test-*.
+	* miguel.mp3, test-mp3-media-properties.html, test-seek-mp3.html:
+	  Added.
+
+2008-04-17  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* drtlist.xml: Added.
+
+2008-04-10  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* bip.mp3, media-ended.html, media-ended.xaml, Silverlight.js: Added test
+	  for MediaEnded event when audio-only media is used.

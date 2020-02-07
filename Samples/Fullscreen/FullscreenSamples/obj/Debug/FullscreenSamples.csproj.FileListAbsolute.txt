@@ -1,0 +1,78 @@
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\FullscreenSamples.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\FullscreenSamples.pdb
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\FullscreenSamples.xap
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\Bin\Debug\TestPage.html
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\App.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\Fullscreen1.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\Fullscreen2.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\FullscreenSamples.g.resources
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\FullscreenSamples.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\FullscreenSamples.pdb
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\GameLoopTest\GameLoopTest\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.pdb
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.xap
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\Bin\Debug\TestPage.html
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\App.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen1.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen2.g.cs
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.g.resources
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.dll
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.pdb
+C:\Documents and Settings\tfsSetup\My Documents\My Dropbox\Laumania\Learning Projects\FullscreenSamples\FullscreenSamples\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.dll
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.pdb
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.xap
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\Bin\Debug\TestPage.html
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen1.g.cs
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen2.g.cs
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.g.resources
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.dll
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.pdb
+C:\Users\Jonathan Moore\Desktop\FullscreenSamples\FullscreenSamples\obj\Debug\XapCacheFile.xml
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.dll
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.pdb
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\AppManifest.xaml
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.xap
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\TestPage.html
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\App.g.cs
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen1.g.cs
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen2.g.cs
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.g.resources
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.dll
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.pdb
+C:\v1.9\SphinxLogic\MIX\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\XapCacheFile.xml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\AppManifest.xaml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\FullscreenSamples.xap
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\Bin\Debug\TestPage.html
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\App.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen1.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\Fullscreen2.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.g.resources
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\FullscreenSamples.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\FullscreenSamples\FullscreenSamples\obj\Debug\XapCacheFile.xml
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\Bin\Debug\FullscreenSamples.dll
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\Bin\Debug\FullscreenSamples.pdb
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\Bin\Debug\AppManifest.xaml
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\Bin\Debug\FullscreenSamples.xap
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\Bin\Debug\TestPage.html
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\ResolveAssemblyReference.cache
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\App.g.i.cs
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\Fullscreen1.g.i.cs
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\Fullscreen2.g.i.cs
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\FullscreenSamples.g.resources
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\FullscreenSamples.dll
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\FullscreenSamples.pdb
+D:\SDK\Code Library\Web Development\Silverlight\Fullscreen\FullscreenSamples\obj\Debug\XapCacheFile.xml

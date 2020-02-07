@@ -1,0 +1,63 @@
+﻿<navigation:Page
+  x:Class="SlEventManager.Home" 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+  mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"  
+  Style="{StaticResource PageStyle}" xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices" xmlns:my="clr-namespace:SlEventManager.Web" xmlns:my1="clr-namespace:SlEventManager.Web.Services" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+  <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="443*" />
+        </Grid.RowDefinitions>
+        <riaControls:DomainDataSource AutoLoad="True" d:DataContext="{d:DesignInstance my:Event, CreateList=true}" Height="0" LoadedData="eventDomainDataSource_LoadedData" Name="eventDomainDataSource" QueryName="GetEventsQuery" Width="0" Margin="320,203,320,240" Grid.Row="1">
+            <riaControls:DomainDataSource.DomainContext>
+                <my1:EventManagerDomainContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+        <sdk:DataGrid AutoGenerateColumns="False" ItemsSource="{Binding ElementName=eventDomainDataSource, Path=Data}" Margin="12,3,12,12" Name="eventDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="1" SelectionChanged="eventDataGrid_SelectionChanged"
+                      SelectedItem="{Binding Path=SelectedEvent, Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="eventTitleColumn" Binding="{Binding Path=EventTitle}" Header="Event Title" Width="SizeToHeader" />
+                <sdk:DataGridTemplateColumn x:Name="eventStartDateColumn" Header="Event Start Date" Width="SizeToHeader">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:DatePicker SelectedDate="{Binding Path=EventStartDate, Mode=TwoWay, NotifyOnValidationError=true}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn x:Name="eventEndDateColumn" Header="Event End Date" Width="SizeToHeader">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:DatePicker SelectedDate="{Binding Path=EventEndDate, Mode=TwoWay, NotifyOnValidationError=true}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn x:Name="eventVenueNameColumn" Binding="{Binding Path=EventVenueName}" Header="Event Venue Name" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="eventDescriptionColumn" Binding="{Binding Path=EventDescription}" Header="Event Description" Width="*" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
+                    Visibility="{Binding Path=AdminButtonsVisibility}">
+            <Button x:Name="editCurrentButton" Content="Edit current event" Click="editCurrentButton_Click" IsEnabled="False" />
+            <Button x:Name="createNewEventButton" Content="Create new event" Click="createNewEventButton_Click" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
+                    Visibility="{Binding Path=AttendeeButtonsVisibility}">
+
+            <HyperlinkButton Content="User Picture" NavigateUri="/UserPicture" />
+            
+            <Button x:Name="registerForEventButton"
+                    Content="Register"
+                    Command="{Binding Path=RegisterCommand}" />
+            <Button x:Name="unregisterForEventButton"
+                    Content="Unregister"
+                    Command="{Binding Path=UnregisterCommand}" />
+        </StackPanel>
+    </Grid>
+
+</navigation:Page>

@@ -1,0 +1,14 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="NotificationAPI" EntryPointType="NotificationAPI.App" RuntimeVersion="4.0.50303.0">
+  <Deployment.OutOfBrowserSettings>
+    <OutOfBrowserSettings ShortName="NotificationAPI Application" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+      <OutOfBrowserSettings.Blurb>Sample application to show the Notification API</OutOfBrowserSettings.Blurb>
+      <OutOfBrowserSettings.WindowSettings>
+        <WindowSettings Title="NotificationAPI Samples" Height="480" Width="640" />
+      </OutOfBrowserSettings.WindowSettings>
+      <OutOfBrowserSettings.Icons />
+    </OutOfBrowserSettings>
+  </Deployment.OutOfBrowserSettings>
+  <Deployment.Parts>
+    <AssemblyPart x:Name="NotificationAPI" Source="NotificationAPI.dll" />
+  </Deployment.Parts>
+</Deployment>

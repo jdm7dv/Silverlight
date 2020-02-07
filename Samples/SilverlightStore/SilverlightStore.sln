@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightStore", "SilverlightStore\SilverlightStore.csproj", "{ECB0BC81-5318-4EED-942D-92E310A856A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{916AD0F2-A58E-4C65-A6F0-70337F0408F6} = {916AD0F2-A58E-4C65-A6F0-70337F0408F6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightStore.Web", "SilverlightStore.Web\SilverlightStore.Web.csproj", "{916AD0F2-A58E-4C65-A6F0-70337F0408F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C4BC28BA-F2F4-425A-858A-7D8D3B54E1F8}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+		SilverlightStore.snk = SilverlightStore.snk
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECB0BC81-5318-4EED-942D-92E310A856A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB0BC81-5318-4EED-942D-92E310A856A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB0BC81-5318-4EED-942D-92E310A856A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB0BC81-5318-4EED-942D-92E310A856A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916AD0F2-A58E-4C65-A6F0-70337F0408F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916AD0F2-A58E-4C65-A6F0-70337F0408F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916AD0F2-A58E-4C65-A6F0-70337F0408F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916AD0F2-A58E-4C65-A6F0-70337F0408F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

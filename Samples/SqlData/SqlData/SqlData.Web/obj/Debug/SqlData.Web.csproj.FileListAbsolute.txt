@@ -1,0 +1,42 @@
+c:\Source\SqlData\SqlData.Web\bin\SqlData.Web.dll
+c:\Source\SqlData\SqlData.Web\bin\SqlData.Web.pdb
+c:\Source\SqlData\SqlData.Web\bin\System.Web.Silverlight.dll
+c:\Source\SqlData\SqlData.Web\bin\de\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\bin\es\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\bin\fr\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\bin\it\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\bin\ja\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\bin\ko\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+c:\Source\SqlData\SqlData.Web\obj\Debug\ResolveAssemblyReference.cache
+c:\Source\SqlData\SqlData.Web\obj\Debug\SqlData.Web.dll
+c:\Source\SqlData\SqlData.Web\obj\Debug\SqlData.Web.pdb
+C:\WSSample\SqlData\SqlData.Web\bin\SqlData.Web.dll
+C:\WSSample\SqlData\SqlData.Web\bin\SqlData.Web.pdb
+C:\WSSample\SqlData\SqlData.Web\bin\System.Web.Silverlight.dll
+C:\WSSample\SqlData\SqlData.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\WSSample\SqlData\SqlData.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\WSSample\SqlData\SqlData.Web\obj\Debug\SqlData.Web.dll
+C:\WSSample\SqlData\SqlData.Web\obj\Debug\SqlData.Web.pdb
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\SqlData.Web.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\SqlData.Web.pdb
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\System.Web.Silverlight.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\obj\Debug\SqlData.Web.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData.Web\obj\Debug\SqlData.Web.pdb

@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="VideoRSSViewer.FullScreenButton"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="50" Height="50" Cursor="Hand">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Canvas>
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.66" ScaleY="1.66"/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Rectangle StrokeLineJoin="Round" StrokeThickness="1.33333" x:Name="playPauseButtonPlate" Width="30" Height="30" RadiusX="3" RadiusY="3">
+                <Rectangle.Fill>
+                    <RadialGradientBrush RadiusX="0.707103" RadiusY="0.707102" Center="0.290307,0.283889" GradientOrigin="0.290307,0.283889">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <RotateTransform CenterX="0.290307" CenterY="0.283889" Angle="47.5983"/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FDE1F26C" Offset="1"/>
+                        <GradientStop Color="#FDFDFFEA" Offset="0"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Stroke>
+                    <LinearGradientBrush StartPoint="0.290307,0.283889" EndPoint="0.269,1.111">
+                        <GradientStop Color="#FF726E5F" Offset="0"/>
+                        <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Stroke>
+            </Rectangle>
+            <Canvas x:Name="playFace" Canvas.Left="11" Canvas.Top="9" Opacity="1">
+                <Path Width="7.769" Height="10.248" Stretch="Fill" Data="F1 M 480.156,411.511L 480.156,432.622L 496.6,422.178" RenderTransformOrigin="0.497,0.518" Canvas.Left="9.705" Canvas.Top="9.177">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="39.592"/>
+                            <TranslateTransform X="-0.129" Y="-0.072"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.562,0.688" StartPoint="0.104,0.354">
+                            <GradientStop Color="#FF353A57" Offset="1"/>
+                            <GradientStop Color="#FF636A98" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Path Width="7.769" Height="10.248" Stretch="Fill" Data="F1 M 480.156,411.511L 480.156,432.622L 496.6,422.178" RenderTransformOrigin="0.497,0.518" Canvas.Left="-8.14" Canvas.Top="-7.658">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.562,0.688" StartPoint="0.104,0.354">
+                            <GradientStop Color="#FF353A57" Offset="1"/>
+                            <GradientStop Color="#FF636A98" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="-136.862"/>
+                            <TranslateTransform X="-0.129" Y="-0.072"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+        </Canvas>
+    </Grid>
+</UserControl>

@@ -1,0 +1,15 @@
+C:\_PE\Content\Demos\Silverlight4\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.dll
+C:\_PE\Content\Demos\Silverlight4\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.pdb
+C:\_PE\Content\Demos\Silverlight4\RichNotepad\RichNotepad.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\_PE\Content\Demos\Silverlight4\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.dll
+C:\_PE\Content\Demos\Silverlight4\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.pdb
+C:\Projects\Sandbox\PDC\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.dll
+C:\Projects\Sandbox\PDC\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.pdb
+C:\Projects\Sandbox\PDC\RichNotepad\RichNotepad.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Sandbox\PDC\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.dll
+C:\Projects\Sandbox\PDC\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.pdb
+C:\Users\Jonathan Moore\Desktop\RichNotepad\RichNotepad_CS\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.dll
+C:\Users\Jonathan Moore\Desktop\RichNotepad\RichNotepad_CS\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.pdb
+C:\Users\Jonathan Moore\Desktop\RichNotepad\RichNotepad_CS\RichNotepad\RichNotepad.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\RichNotepad\RichNotepad_CS\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.dll
+C:\Users\Jonathan Moore\Desktop\RichNotepad\RichNotepad_CS\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.pdb

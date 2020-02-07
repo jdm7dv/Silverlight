@@ -1,0 +1,8 @@
+﻿<Application x:Class="WpfMultiTouch.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="MultiTouchWindow.xaml">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>

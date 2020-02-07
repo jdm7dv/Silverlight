@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.Theming.WhistlerBlue</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Controls.Theming.WhistlerBlueTheme">
+            <summary>
+            Implicitly applies the Whistler blue theme to all of its descendent
+            FrameworkElements.
+            </summary>
+            <remarks>
+            The theme is applied using ImplicitStyleManager.
+            </remarks>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.Theming.WhistlerBlueTheme.#ctor">
+            <summary>
+            Initializes a new instance of the WhistlerBlueTheme class.
+            </summary>
+        </member>
+    </members>
+</doc>

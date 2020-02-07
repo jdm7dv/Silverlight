@@ -1,0 +1,17 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="TrustedFileAccess" EntryPointType="TrustedFileAccess.App" RuntimeVersion="4.0.41108.0">
+  <Deployment.OutOfBrowserSettings>
+    <OutOfBrowserSettings ShortName="TrustedFileAccess Application" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+      <OutOfBrowserSettings.Blurb>TrustedFileAccess Application on your desktop; at home, at work or on the go.</OutOfBrowserSettings.Blurb>
+      <OutOfBrowserSettings.WindowSettings>
+        <WindowSettings Title="TrustedFileAccess Application" Height="600" Width="400" />
+      </OutOfBrowserSettings.WindowSettings>
+      <OutOfBrowserSettings.SecuritySettings>
+        <SecuritySettings ElevatedPermissions="Required" />
+      </OutOfBrowserSettings.SecuritySettings>
+      <OutOfBrowserSettings.Icons />
+    </OutOfBrowserSettings>
+  </Deployment.OutOfBrowserSettings>
+  <Deployment.Parts>
+    <AssemblyPart x:Name="TrustedFileAccess" Source="TrustedFileAccess.dll" />
+  </Deployment.Parts>
+</Deployment>

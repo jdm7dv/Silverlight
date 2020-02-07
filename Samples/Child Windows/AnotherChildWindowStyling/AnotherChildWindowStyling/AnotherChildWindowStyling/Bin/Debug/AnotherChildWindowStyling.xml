@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AnotherChildWindowStyling
+</name>
+</assembly>
+<members>
+<member name="M:AnotherChildWindowStyling.App.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:AnotherChildWindowStyling.cwLawBot.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:AnotherChildWindowStyling.MainPage.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,17 @@
+﻿<v:ViewPage x:Class="SilverlightStore.Views.Home" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:v="clr-namespace:SilverlightStore.Views"
+    xmlns:nav="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" Title="Silverlight Store"
+    xmlns:navCore="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation">
+    <Grid>
+        <nav:Frame x:Name="Frame" Source="/Products" JournalOwnership="UsesParentJournal">
+            <nav:Frame.UriMapper>
+                <navCore:UriMapper>
+                    <navCore:UriMapping Uri="/Product/{Name}" MappedUri="/Views/ProductList.xaml?ProductName={Name}" />
+                    <navCore:UriMapping Uri="/Products" MappedUri="/Views/ProductList.xaml" />
+                </navCore:UriMapper>
+            </nav:Frame.UriMapper>
+        </nav:Frame>
+    </Grid>
+</v:ViewPage>

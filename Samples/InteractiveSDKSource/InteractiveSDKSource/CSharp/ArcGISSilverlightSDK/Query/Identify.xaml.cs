@@ -1,0 +1,135 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using ESRI.ArcGIS.Client;
+using ESRI.ArcGIS.Client.Tasks;
+using ESRI.ArcGIS.Client.Toolkit;
+using ESRI.ArcGIS.Client.Symbols;
+using System.Windows.Controls.Primitives;
+using System.Collections.ObjectModel;
+
+namespace ArcGISSilverlightSDK
+{
+    public partial class Identify : UserControl
+    {
+        private List<DataItem> _dataItems = null;
+
+        public Identify()
+        {
+            InitializeComponent();
+        }
+
+        private void QueryPoint_MouseClick(object sender, ESRI.ArcGIS.Client.Map.MouseEventArgs e)
+        {
+            ESRI.ArcGIS.Client.Geometry.MapPoint clickPoint = e.MapPoint;
+
+            ESRI.ArcGIS.Client.Tasks.IdentifyParameters identifyParams = new IdentifyParameters()
+            {
+                Geometry = clickPoint,
+                MapExtent = MyMap.Extent,
+                Width = (int)MyMap.ActualWidth,
+                Height = (int)MyMap.ActualHeight,
+                LayerOption = LayerOption.visible
+            };
+
+            IdentifyTask identifyTask = new IdentifyTask("http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/" +
+                "Demographics/ESRI_Census_USA/MapServer");
+            identifyTask.ExecuteCompleted += IdentifyTask_ExecuteCompleted;
+            identifyTask.Failed += IdentifyTask_Failed;
+            identifyTask.ExecuteAsync(identifyParams);
+
+            GraphicsLayer graphicsLayer = MyMap.Layers["MyGraphicsLayer"] as GraphicsLayer;
+            graphicsLayer.ClearGraphics();
+            ESRI.ArcGIS.Client.Graphic graphic = new ESRI.ArcGIS.Client.Graphic()
+            {
+                Geometry = clickPoint,
+                Symbol = DefaultPictureSymbol
+            };
+            graphicsLayer.Graphics.Add(graphic);
+        }
+
+        public void ShowFeatures(List<IdentifyResult> results)
+        {
+            _dataItems = new List<DataItem>();
+
+            if (results != null && results.Count > 0)
+            {
+                IdentifyComboBox.Items.Clear();
+                foreach (IdentifyResult result in results)
+                {
+                    Graphic feature = result.Feature;
+                    string title = result.Value.ToString() + " (" + result.LayerName + ")";
+                    _dataItems.Add(new DataItem()
+                    {
+                        Title = title,
+                        Data = feature.Attributes
+                    });
+                    IdentifyComboBox.Items.Add(title);
+                }
+
+                // Workaround for bug with ComboBox 
+                IdentifyComboBox.UpdateLayout();
+
+                IdentifyComboBox.SelectedIndex = 0;
+            }
+        }
+
+        void cb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = IdentifyComboBox.SelectedIndex;
+            if (index > -1)
+                IdentifyDetailsDataGrid.ItemsSource = _dataItems[index].Data;
+        }
+
+        private void IdentifyTask_ExecuteCompleted(object sender, IdentifyEventArgs args)
+        {
+            IdentifyDetailsDataGrid.ItemsSource = null;
+
+            if (args.IdentifyResults != null && args.IdentifyResults.Count > 0)
+            {
+                if (DataGridScrollViewer.Visibility == Visibility.Collapsed)
+                {
+                    DataGridScrollViewer.Visibility = Visibility.Visible;
+                    IdentifyGrid.Height = Double.NaN;
+                    IdentifyGrid.UpdateLayout();
+                }
+
+                ShowFeatures(args.IdentifyResults);
+            }
+            else
+            {
+                IdentifyComboBox.Items.Clear();
+                IdentifyComboBox.UpdateLayout();
+
+                if (DataGridScrollViewer.Visibility == Visibility.Visible)
+                {
+                    DataGridScrollViewer.Visibility = Visibility.Collapsed;
+                    IdentifyGrid.Height = Double.NaN;
+                    IdentifyGrid.UpdateLayout();
+                }
+            }
+        }
+
+        public class DataItem
+        {
+            public string Title { get; set; }
+            public IDictionary<string, object> Data { get; set; }
+        }
+
+        void IdentifyTask_Failed(object sender, TaskFailedEventArgs e)
+        {
+            MessageBox.Show("Identify failed. Error: " + e.Error);
+        }
+    }
+}
+

@@ -1,0 +1,208 @@
+﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  yuv-converter.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\yuv-converter.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  xap.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\xap.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  xaml.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\xaml.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  writeablebitmap.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\runtime.h(17): fatal error C1083: Cannot open include file: 'gtk/gtkwidget.h': No such file or directory
+  window-gtk.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\window-gtk.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  value.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\value.cpp(16): fatal error C1083: Cannot open include file: 'cairo.h': No such file or directory
+  validators.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\value.h(20): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  utils.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\utils.cpp(15): fatal error C1083: Cannot open include file: 'glib/gstdio.h': No such file or directory
+  usercontrol.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\usercontrol.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  uri.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\deployment.h(13): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  uielement.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\trigger.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  type.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\type.h(20): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  type-generated.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\animation.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  trigger.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\runtime.h(17): fatal error C1083: Cannot open include file: 'gtk/gtkwidget.h': No such file or directory
+  transform.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\transform.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  timesource.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\timesource.cpp(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  timemanager.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\clock.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  timeline.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\timeline.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  tilesource.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\dependencyobject.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  thickness.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\utils.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  Generating Code...
+  Compiling...
+  textbox.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\textbox.cpp(15): fatal error C1083: Cannot open include file: 'gdk/gdkkeysyms.h': No such file or directory
+  textblock.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\textblock.cpp(15): fatal error C1083: Cannot open include file: 'cairo.h': No such file or directory
+  template.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\template.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  tabnavigationwalker.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\control.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  stylus.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\stylus.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  style.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\style.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  size.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\size.h(15): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  shape.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\shape.cpp(15): fatal error C1083: Cannot open include file: 'cairo.h': No such file or directory
+  runtime.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\runtime.cpp(16): fatal error C1083: Cannot open include file: 'gtk/gtk.h': No such file or directory
+  resources.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\runtime.h(17): fatal error C1083: Cannot open include file: 'gtk/gtkwidget.h': No such file or directory
+  region.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\region.h(14): fatal error C1083: Cannot open include file: 'cairo.h': No such file or directory
+  rect.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\rect.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  provider.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\cbinding.h(8): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  popup.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\popup.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  point.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\point.cpp(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  playlist.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\playlist.cpp(14): fatal error C1083: Cannot open include file: 'expat.h': No such file or directory
+  pipeline.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\pipeline.cpp(17): fatal error C1083: Cannot open include file: 'glib/gstdio.h': No such file or directory
+  pipeline-ui.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\pipeline-ui.cpp(15): fatal error C1083: Cannot open include file: 'glib/gstdio.h': No such file or directory
+  pipeline-nocodec-ui.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\pipeline-nocodec-ui.cpp(18): fatal error C1083: Cannot open include file: 'gdk-pixbuf/gdk-pixbuf.h': No such file or directory
+  pipeline-logo.cpp
+  Generating Code...
+  Compiling...
+  pipeline-ffmpeg.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\pipeline-ffmpeg.cpp(20): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  pipeline-asf.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\pipeline.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  panel.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\canvas.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  openfile.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\openfile.h(20): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  namescope.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\namescope.cpp(11): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  multiscalesubimage.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\multiscalesubimage.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  multiscaleimage.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\cbinding.h(8): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  mp3.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\mp3.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  moonlightconfiguration.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\moonlightconfiguration.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  mms-downloader.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\mms-downloader.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  messagebox.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\messagebox.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  mediaplayer.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\mediaplayer.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  mediaelement.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\geometry.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  media.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\dependencyobject.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  list.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\list.cpp(15): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  layoutinformation.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\frameworkelement.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  layout.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\moon-path.h(18): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  keyboard.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\keyboard.cpp(13): fatal error C1083: Cannot open include file: 'gdk/gdkkeysyms.h': No such file or directory
+  imagesource.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\application.h(13): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  http-streaming.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\http-streaming.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  Generating Code...
+  Compiling...
+  grid.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\brush.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  glyphs.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\glyphs.cpp(15): fatal error C1083: Cannot open include file: 'cairo.h': No such file or directory
+  geometry.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\utils.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  frameworkelement.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\runtime.h(17): fatal error C1083: Cannot open include file: 'gtk/gtkwidget.h': No such file or directory
+  fonts.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\fonts.cpp(15): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  fontmanager.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\fontmanager.cpp(15): fatal error C1083: Cannot open include file: 'glib/gstdio.h': No such file or directory
+  file-downloader.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\file-downloader.cpp(17): fatal error C1083: Cannot open include file: 'glib/gstdio.h': No such file or directory
+  eventargs.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\eventargs.cpp(13): fatal error C1083: Cannot open include file: 'gdk/gdkkeysyms.h': No such file or directory
+  error.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\enums.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  enums.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\enums.cpp(13): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  easing.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\easing.cpp(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  downloader.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\downloader.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  dirty.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\dirty.cpp(15): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  deployment.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\deployment.cpp(12): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  dependencyproperty.g.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\animation.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  dependencyproperty.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\dependencyproperty.cpp(15): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+  dependencyobject.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\dependencyobject.cpp(15): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+  deepzoomimagetilesource.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\runtime.h(17): fatal error C1083: Cannot open include file: 'gtk/gtkwidget.h': No such file or directory
+  debug.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\runtime.h(17): fatal error C1083: Cannot open include file: 'gtk/gtkwidget.h': No such file or directory
+  cornerradius.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\utils.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  Generating Code...
+  Compiling...
+  control.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\rect.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  contentcontrol.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\application.h(13): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  color.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\color.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  collection.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\collection.cpp(13): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  clock.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\clock.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  cbinding.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\cbinding.h(8): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  canvas.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\rect.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  brush.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\brush.cpp(16): fatal error C1083: Cannot open include file: 'cairo.h': No such file or directory
+  border.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\geometry.h(17): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  bitmapsource.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\application.h(13): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  bitmapimage.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\bitmapimage.cpp(16): fatal error C1083: Cannot open include file: 'glib/gstdio.h': No such file or directory
+  audio.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\audio.cpp(15): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+  asf.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\asf\asf.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  asf-structures.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\asf\asf.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  asf-guids.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\asf\asf.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  asf-generated.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\asf\asf.h(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  asf-debug.cpp
+  applier.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\applier.h(14): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  application.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\application.cpp(16): fatal error C1083: Cannot open include file: 'glib/gstdio.h': No such file or directory
+  animation.cpp
+d:\jonathan_moore\career\source\microsoft\verve\app\silverlight\moonlight-2.4\src\animation.cpp(16): fatal error C1083: Cannot open include file: 'glib.h': No such file or directory
+  Generating Code...

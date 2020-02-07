@@ -1,0 +1,36 @@
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.dll
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.pdb
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\AppManifest.xaml
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.xap
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\Default.html
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\ResolveAssemblyReference.cache
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\App.g.cs
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\Page.g.cs
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.g.resources
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.dll
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.pdb
+C:\JonathanMoore\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\XapCacheFile.xml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\AppManifest.xaml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.xap
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\Default.html
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\App.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.g.resources
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Base\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\XapCacheFile.xml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\AppManifest.xaml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\VSM.xap
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\bin\Release\Default.html
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\App.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.g.resources
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\VSM.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Software\Platform SDK\Samples\Silverlight\VSM\VSM\obj\Release\XapCacheFile.xml

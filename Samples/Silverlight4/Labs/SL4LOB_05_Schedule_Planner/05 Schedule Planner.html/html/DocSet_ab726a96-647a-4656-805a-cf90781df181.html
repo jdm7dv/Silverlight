@@ -1,0 +1,193 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Showing Talks Grouped by Track" />
+      <MSHelp:RLTitle Title="Exercise 1: Showing Talks Grouped by Track" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Showing Talks Grouped by Track</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 5 - DataGrid, Grouping, Right Mouse Click Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Showing Talks Grouped by Track</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this part of the lab, you will create the page through which users will manage their schedule for an event, and incorporate it into the application’s navigation structure. You will then add a data grid showing the available talks, grouped by track using Silverlight 4’s grouped collection view source. </p>
+        <a name="_Toc256193976" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the Scheduler Planner View and ViewModel</b>
+        </p>
+        <ol>
+          <li>Open the SlEventManager solution in Visual Studio 2010.</li>
+          <li>In the SlEventManager project’s Views folder, add a new Silverlight Page called SchedulePlanner.</li>
+          <li>In the project’s <b>ViewModels</b> folder, add a corresponding view model class called SchedulePlannerViewModel. </li>
+          <li>Make this class derive from the ViewModelBase class you wrote in an earlier lab.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The schedule planner page will be used to plan a specific event. As with the event editor page in the earlier lab, we’ll use a query string parameter in the URL to indicate the event ID. But in that earlier lab, we weren’t yet using view models, so this will work a little differently. The view will need to indicate to the view model which event ID is in the URL. </td></tr></table><p /></div></li>
+          <li>Add the following method to the SchedulePlannerViewModel:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public void Load(int eventId){    // Will be filled in later in the lab}</pre></td></tr></table></span></div></li>
+          <li>In the SchedulePlanner.xaml.cs code behind, add and initialize a field to hold the view model:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>SchedulePlannerViewModel _viewModel = new SchedulePlannerViewModel();</pre></td></tr></table></span></div></li>
+          <li>Add a using directive for the SlEventManager.ViewModels namespace </li>
+          <li>In the constructor, after the call to InitializeComponent, put the view model in the DataContext:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>this.DataContext = _viewModel;</pre></td></tr></table></span></div></li>
+          <li>Find the OnNavigatedTo method that Visual Studio created in your page’s code behind</li>
+          <li>Implement the OnNavigatedTo method as shown here:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>protected override void OnNavigatedTo(NavigationEventArgs e){    string eventId = NavigationContext.QueryString["EventID"];    _viewModel.Load(int.Parse(eventId));}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>We need to make it possible for the user to navigate to this page. In an earlier lab, you wrote code to do something similar where administrators can navigate to the EditEvent page. However, you wrote that before adding a view model for the Home page. This time we’re going to see how the view model can make navigation decisions. This is slightly challenging because ultimately, navigation operations happen in the view, because the relevant NavigationService and NavigationContext properties belong to the view. We could make the view pass the NavigationService into the view model, but that would make the view model dependent on a view being available in order to run; since one of the main reasons for having a view model in the first place is so that it can be tested in isolation from a real view, this would defeat the purpose. So we’ll take a different approach.<br />The view model will raise events to tell its hosting view when it wants navigation to occur. This allows the decision-making process to reside in the view model, but for the mechanics of executing navigation to live in the view. By using an event, we minimize the amount that the view model demands of the view. Just as the view model offers properties that it assumes that the view will bind to, it can offer events that it assumes the view will handle.<br />We’ll need a custom class derived from EventArgs to hold the event data, because this event will need to indicate the ID to be put in the target page. </td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193977" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create a Navigation Helper EventArg</b>
+        </p>
+        <ol>
+          <li>Add a class to the Helpers folder of your project and name it NavigateToEntityEventArgs. </li>
+          <li>Implement it as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class NavigateToEntityEventArgs : EventArgs{    public NavigateToEntityEventArgs(int id)    {        EntityID = id;    }    public int EntityID { get; private set; }}</pre></td></tr></table></span></div></li>
+          <li>Open the HomeViewModel class (This is the one that will decide when to navigate to the schedule planner)</li>
+          <li>Add the <b>SlEventManager.Helpers</b> namespace reference to the using statements.</li>
+          <li>Add the following code to the <b>HomeViewModel</b> class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public event EventHandler&lt;NavigateToEntityEventArgs&gt; NavigateToSchedulePlanner;</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc256193978" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add Commanding</b>
+        </p>
+        <ol>
+          <li>Provide a command for the button in the HomeViewModel:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private readonly RelayCommand _plannerCommand;public ICommand PlannerCommand { get { return _plannerCommand; } }</pre></td></tr></table></span></div></li>
+          <li>Add this method to see whether the user has currently selected an event, and if they have, to raise the navigation event:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void OnPlanner(){    if (SelectedEvent != null &amp;&amp; NavigateToSchedulePlanner != null)    {        NavigateToSchedulePlanner(this,            new NavigateToEntityEventArgs(SelectedEvent.EventID));    }}</pre></td></tr></table></span></div></li>
+          <li>In the <b>UpdateRegistrationButtons</b> method, add the following code to make sure the command is enabled and disabled at the appropriate time:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>_plannerCommand.IsEnabled = _unregisterCommand.IsEnabled;</pre></td></tr></table></span></div></li>
+          <li>In the HomeViewModel constructor, add the following code before the call to <b>UpdateForUserRole</b> to create the command object and wire it up to this handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>_plannerCommand = new RelayCommand(OnPlanner);</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Our home page’s view model now contains the code needed to decide when and where to navigate, but our view needs to do two things: we need a link button to invoke the command, and we need code to handle the navigation event. </td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193979" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the Buttons and Bind them to Commands</b>
+        </p>
+        <ol>
+          <li>In Home.xaml, find the StackPanel that contains the attendee-specific buttons (the User Picture hyperlink, and the Register and Unregister buttons)</li>
+          <li>Add this XAML inside that panel:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;HyperlinkButton Command="{Binding Path=PlannerCommand}"     Content="Planner" /&gt;</pre></td></tr></table></span></div></li>
+          <li>In the Home.xaml.cs code behind go into the constructor and add a handler for the _viewModel.NavigateToSchedulePlanner event. </li>
+          <li>Add the following using statement:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Helpers;</pre></td></tr></table></span></div></li>
+          <li>In this handler, navigate to the entity requested by the view model with the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>void _viewModel_NavigateToSchedulePlanner(object sender,                                          NavigateToEntityEventArgs e){    NavigationService.Navigate(new Uri("/SchedulePlanner?EventID=" + e.EntityID,                                       UriKind.Relative));}</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+          <li>Log in with username of ian <b>and</b> password of P@ssw0rd, and check the box to remain logged in.</li>
+          <li>In the event list, select an event for which you are registered.</li>
+          <li>Click the Planner link. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The application should navigate to the new page (which is currently empty). The URL should contain an EventID= item in the query string indicating the ID of the event you selected.</td></tr></table><p /></div></li>
+          <li>Hit the <b>Back</b> button on the browser.</li>
+          <li>Choose a different event (registering for it if necessary).</li>
+          <li>Click Planner again and you should see a different event ID.</li>
+          <li>To verify that the relevant ID is getting through to where we need it, put a breakpoint on the ScheduleEventPlannerViewModel class’s Load method. </li>
+          <li>Run the application in the debugger.</li>
+          <li>Verify that this method’s eventId contains the appropriate value whenever you navigate to the planner page for an event.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Now that the navigation is wired up, we need our SchedulePlannerViewModel to provide the view with a list of available talks to populate the grid. </td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193980" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Load the Bound Collections</b>
+        </p>
+        <ol>
+          <li>Add the following using declarations to the SchedulePlannerViewModel:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Collections.Generic;using System.Linq;using SlEventManager.Web;using SlEventManager.Web.Services;using System.ServiceModel.DomainServices.Client;</pre></td></tr></table></span></div></li>
+          <li>Add this property:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private IList&lt;Talk&gt; _allTalks;public IList&lt;Talk&gt; AllTalks{    get { return _allTalks; }    set    {        if (value != _allTalks)        {            _allTalks = value;            OnPropertyChanged("AllTalks");        }    }}</pre></td></tr></table></span></div></li>
+          <li>Add the EventTitle property:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private string _eventTitle;public string EventTitle{    get { return _eventTitle; }    set    {        if (value != _eventTitle)        {            _eventTitle = value;            OnPropertyChanged("EventTitle");        }    }}</pre></td></tr></table></span></div></li>
+          <li>Add the following field to the class so we can talk to our service and populate this and the other properties our view model:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private EventManagerDomainContext _context;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The EventManagerDomainContext is the WCF RIA Services domain context for our class, remember. This enables us to use our service code.<br />This page needs a complete list of all the tracks and talks associated with an event. We already added a suitable query to the domain service to support the EditEvent page, so our view model can just reuse that same operation.</td></tr></table><p /></div></li>
+          <li> Go to the (currently empty) Load method and implement it like this:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public void Load(int eventId){    _context = new EventManagerDomainContext();    var eventQuery = from ev in _context.GetEventsWithTracksAndTalksQuery()                     where ev.EventID == eventId                     select ev;    _context.Load(eventQuery, (loadOp) =&gt;    {        var talkQuery = from ev in loadOp.Entities                        from track in ev.EventTracks                        from talk in track.Talks                        select talk;        AllTalks = talkQuery.ToList();        EventTitle = loadOp.Entities.Select(ev =&gt; ev.EventTitle).FirstOrDefault();    }, null);}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This builds a LINQ query to filter the events down to just the event whose schedule is being planned, and then calls the domain context’s Load method to fetch the data. As with all networking operations in Silverlight, this runs asynchronously, so we use a lambda to provide a completion callback. The object representing the operation (called loadOp here) returns the query results in its Entities property—because the query focuses on events, this will be a collection of events (containing just the one event here), so we need another LINQ query to extract all the talk objects.<br />These two LINQ queries operate quite differently. The first one exploits WCF RIA Service’s ‘composable’ query feature: when a domain service operation returns an IQueryable&lt;T&gt;, a client can perform certain LINQ queries on it in a way that effectively causes the query itself to be sent to, and executed on the server. So the where clause in this code is handled on the server, even though this is client-side code. But the second query here is using normal LINQ to Objects—it runs on the client side, after the server has returned us all the tracks and talks for the event. This is exactly what we want in both cases: in the first case, we only want the server to return us data for a single event, but in the second case, we’re just restructuring the data to suit our view and so it makes sense for that work to happen on the client, because it has enabled us to reuse a domain operation we wrote earlier.</td></tr></table><p /></div></li>
+          <li>Now that our view model is providing data, open the SchedulePlanner.xaml file. </li>
+          <li>In the root page element, add the following XAML namespace declarations, which we’ll need to use the data grid:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"xmlns:scm="clr-namespace:System.ComponentModel;assembly=System.Windows"</pre></td></tr></table></span></div></li>
+          <li>In the same element, add the following to the XAML to bind the view model to the page:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>DataContext="{Binding}"</pre></td></tr></table></span></div></li>
+          <li>As the first child of the root element (directly before the Grid) add the following:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;navigation:Page.Resources&gt;    &lt;CollectionViewSource x:Key="eventEventTalksByTrackViewSource"                          Source="{Binding Path=AllTalks}"&gt;        &lt;CollectionViewSource.GroupDescriptions&gt;            &lt;PropertyGroupDescription PropertyName="EventTrack" /&gt;        &lt;/CollectionViewSource.GroupDescriptions&gt;    &lt;/CollectionViewSource&gt;&lt;/navigation:Page.Resources&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This defines a data source that uses your view model’s AllTalks property, but which groups the talks by their EventTrack property.</td></tr></table><p /></div></li>
+          <li>To display this set of talks, and also the event title, add the following inside the Grid:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.ColumnDefinitions&gt;    &lt;ColumnDefinition Width="1*" /&gt;    &lt;ColumnDefinition Width="36" /&gt;    &lt;ColumnDefinition Width="1*" /&gt;&lt;/Grid.ColumnDefinitions&gt;&lt;TextBlock    x:Name="eventTitleTextBlock"    Text="{Binding Path=EventTitle}"    VerticalAlignment="Top"    /&gt;&lt;data:DataGrid    x:Name="eventTrackList"    Margin="12,56,9,12"    ItemsSource="{Binding Source={StaticResource eventEventTalksByTrackViewSource}}"    &gt;    &lt;data:DataGrid.Columns&gt;        &lt;data:DataGridTextColumn x:Name="talkTitleColumn"                                 Binding="{Binding Path=TalkTitle}"                                 Header="Title" /&gt;        &lt;data:DataGridTextColumn x:Name="talkTimeColumn"                                 Binding="{Binding Path=TalkStartTime}"                                 Header="Start Time" /&gt;        &lt;data:DataGridTextColumn x:Name="talkAbstractColumn"                                  Binding="{Binding Path=TalkAbstract}"                                  Header="Abstract" /&gt;    &lt;/data:DataGrid.Columns&gt;&lt;/data:DataGrid&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+          <li>Go to the event scheduler page.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>If it doesn’t work and you see a blank grid, make sure you are selecting an event that has tracks. The “Obsessive Compulsive UI” event has a track.</td></tr></table><p /></div></li>
+          <li>You should see a grid, showing all the talks grouped by track:<p><img src="images\e6c5aa51-0c8f-4e7e-a7b6-a56a8c18e294.png" /></p><p><b>Figure 1</b><br /><i>Talks and Tracks</i></p></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

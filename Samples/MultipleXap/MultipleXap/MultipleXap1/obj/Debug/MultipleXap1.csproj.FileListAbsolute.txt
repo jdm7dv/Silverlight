@@ -1,0 +1,21 @@
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\MultipleXap1.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\MultipleXap1.pdb
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\AppManifest.xaml
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\MultipleXap1.xap
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\TestPage.html
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\System.Windows.Controls.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\System.Windows.Controls.Extended.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\System.Windows.Controls.Extended.xml
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\System.Windows.Controls.xml
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\ja\System.Windows.Controls.Extended.resources.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\ClientBin\ja\System.Windows.Controls.resources.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\obj\Debug\MultipleXap1.g.resources
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\obj\Debug\App.g.cs
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\obj\Debug\Page.g.cs
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\obj\Debug\MultipleXap1.dll
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\obj\Debug\MultipleXap1.pdb
+C:\Users\joel\Source\Silverlight\MultipleXap\MultipleXap1\obj\Debug\XapCacheFile.xml
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap1\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap1\obj\Debug\MultipleXap1.g.resources
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\MultipleXap\MultipleXap\MultipleXap1\obj\Debug\MultipleXap1.dll

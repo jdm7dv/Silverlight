@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="samp_LiveMessenger.tpButtonSignIn"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+    d:DesignWidth="68.167" d:DesignHeight="21.666">
+	<UserControl.Resources>
+		<Storyboard x:Name="Hover">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="b2" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00" Duration="00:00:00.0010000">
+				<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="b3" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00" Duration="00:00:00.0010000">
+				<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+    	<Path Stretch="Fill" Data="F1 M 480.333,540.667L 541,540.667C 543.209,540.667 545,542.458 545,544.667L 545,557.667C 545,559.876 543.209,561.667 541,561.667L 480.333,561.667C 478.124,561.667 476.333,559.876 476.333,557.667L 476.333,544.667C 476.333,542.458 478.124,540.667 480.333,540.667 Z " HorizontalAlignment="Stretch" Margin="0.300000011920929,0,0.3,0" VerticalAlignment="Stretch" x:Name="bg">
+    		<Path.Fill>
+    			<LinearGradientBrush StartPoint="-0.00728156,0.5" EndPoint="1.00728,0.5">
+    				<GradientStop Color="#B8B8E0F8" Offset="0"/>
+    				<GradientStop Color="#B8B8E0F8" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Text="Sign in" TextWrapping="Wrap" x:Name="tx"/>
+    	<Rectangle Stretch="Fill" Fill="#4EFFFFFF" Height="10.167" HorizontalAlignment="Stretch" Margin="0.899999976158142,1.49899995326996,0.9,0" VerticalAlignment="Top"  x:Name="gl"/>
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#F74878A0" Data="F1 M 480.416,540.5L 541.083,540.5C 543.292,540.5 545.083,542.291 545.083,544.5L 545.083,557.5C 545.083,559.71 543.292,561.5 541.083,561.5L 480.416,561.5C 478.207,561.5 476.416,559.71 476.416,557.5L 476.416,544.5C 476.416,542.291 478.207,540.5 480.416,540.5 Z " HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" x:Name="b1"/>
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#E828D0F8" Data="F1 M 480.917,541.333L 540.25,541.333C 542.459,541.333 544.25,543.124 544.25,545.333L 544.25,556.667C 544.25,558.876 542.459,560.667 540.25,560.667L 480.917,560.667C 478.708,560.667 476.917,558.876 476.917,556.667L 476.917,545.333C 476.917,543.124 478.708,541.333 480.917,541.333 Z " HorizontalAlignment="Stretch" Margin="0.418000012636185,0.666999995708466,0.4,0.75" VerticalAlignment="Stretch" x:Name="b2"/>
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#BC70D8F8" Data="F1 M 481.417,542L 539.583,542C 541.792,542 543.583,543.791 543.583,546L 543.583,556C 543.583,558.209 541.792,560 539.583,560L 481.417,560C 479.207,560 477.417,558.209 477.417,556L 477.417,546C 477.417,543.791 479.207,542 481.417,542 Z " HorizontalAlignment="Stretch" Margin="1.2,1.20000004768372,1.20000004768372,1.20000004768372" VerticalAlignment="Stretch" x:Name="b3"/>
+    </Grid>
+</UserControl>

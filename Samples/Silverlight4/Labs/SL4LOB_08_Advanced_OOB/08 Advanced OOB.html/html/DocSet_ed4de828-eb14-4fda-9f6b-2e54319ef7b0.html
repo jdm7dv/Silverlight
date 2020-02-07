@@ -1,0 +1,154 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 4: MEF" />
+      <MSHelp:RLTitle Title="Exercise 4: MEF" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 4: MEF</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 8 - Advanced OOB, Custom Window Chrome, Silent Installs, Digital Signing, and MEF Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 4: MEF</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>The Managed Extensibility Framework (MEF) is a .NET Framework library feature designed to help build extensibility into applications. We’ll use this to enable multiple different mechanisms for sending email to be built into the application.</p>
+        <a name="_Toc256194273" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Sending Email via MEF</b>
+        </p>
+        <ol>
+          <li>Open the SlEventManager solution. (If you haven’t completed the first part of this lab, copy the solution in the Completed\Exercise 1 folder and use that copy as your starting point.)</li>
+          <li>Right click on the References for the <b>EventAdministration</b> project and choose Add Reference… Add references to the following two components:<ol><li>System.ComponentModel. Composition</li><li>System.ComponentModel. Composition.Initialization</li></ol></li>
+          <li>The services that composable components—“parts”, as MEF calls them—provide are typically represented as interfaces. This is not strictly necessary, but if you want to have multiple implementations of a single service, defining an interface to represent the service makes sense. So add a new interface to the EventAdministration project called ISendEmail. (The current preview of the Silverlight 4 Tools for Visual Studio 2010 do not appear to include an Interface template, so you can use the Class template, and then change the class to an interface.) Define the interface as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public interface ISendEmail{   void SendEmail(string recipientAddress, string eventTitle);}</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Add a new class to the EventAdministration project called SendEmailViaOutlook.</li>
+          <li>Add using directives for the System.Runtime.InteropServices.Automation and System.ComponentModel.Composition namespaces.</li>
+          <li>Implement the ISendEmail interface on the SendEmailViaOutlook class. Use the following implementation for SendEmail, which is a slightly modified version of the code from exercise 1 in this lab:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public void SendEmail(string recipientAddress, string eventTitle){    dynamic outlook =        AutomationFactory.CreateObject("Outlook.Application");    dynamic mailItem = outlook.CreateItem(0);    mailItem.To = recipientAddress;    mailItem.Subject = "Registration Confirmation";    mailItem.HTMLBody = "Thank you for registering for " + eventTitle;    mailItem.Display();}</pre></td></tr></table></span></div></li>
+          <li>Add the following attribute to the class, to let MEF know that it is a provide for the ISendEmail service:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Export(typeof(ISendEmail))]</pre></td></tr></table></span></div></li>
+          <li>Open the OobUiViewModel.cs file.</li>
+          <li>Add a using directive for the System.ComponentModel.Composition namespace.</li>
+          <li>Add the following property to the class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Import] public ISendEmail SendEmail { get; set; }</pre></td></tr></table></span></div></li>
+          <li>Find the OnAcknowledge method. This currently contains code that uses Outlook to send email. Replace this with the following code, which uses the email sender provided by MEF:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public void OnAcknowledge(){    if (SelectedItem != null &amp;&amp; SendEmail != null)    {        SendEmail.SendEmail(SelectedItem.UserEmail, SelectedItem.EventTitle);    }}</pre></td></tr></table></span></div></li>
+          <li>Finally, we need to tell MEF to match the viewmodel’s imports to available exports. Do this by adding the following constructor to the OobUiViewModel class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public OobUiViewModel(){    CompositionInitializer.SatisfyImports(this);    }</pre></td></tr></table></span></div></li>
+          <li>Ensure the application is deployed for offline use. (You can do this by running the web application first, going to the EventAdministrationTestPage.html page and installing the application if it hasn’t already been installed.) Run the application in the debugger.</li>
+          <li>In the out-of-browser EventAdministration application, log in as administrator (P@ssw0rd), and click Get to get the list of unacknowledged registrations. In Visual Studio, put a breakpoint on the OnAcknowledge method, then select an item in the data grid and click Acknowledge…</li>
+          <li>Step through the code, and you should be able to step into the call to SendEmail, and it will go into the SendEmailViaOutlook class you just wrote, even though the OobUiViewModel class has no direct knowledge of that class. It will attempt to create and display a new email in Outlook as it did in exercise 1 of this lab.</li>
+        </ol>
+        <a name="_Toc256194274" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Multiple Email Providers</b>
+        </p>
+        <p>We’ve not gained much yet by using MEF. The only real benefit is that by abstracting the email sending code out, it would be slightly easier to write unit tests for the view model, because we could write a test that provided a fake IEmailSender implementation. But to demonstrate MEF’s ability to provide runtime flexibility, we’re going to extend the example to support multiple providers.</p>
+        <p>We will present this in the user interface by offering multiple buttons, one for each provider. We’ll begin by defining a per-item view model for this list of buttons.</p>
+        <ol>
+          <li>In the OobUiViewModel class, Comment out the [Import] attribute on the SendEmail property. (The availability of multiple exports will cause MEF to throw an exception when it encounters a singular import.)</li>
+          <li>Copy the RelayCommand.cs file from the SlEventManager project to the EventAdministration project.</li>
+          <li>Add a new class called EmailSenderViewModel in the ViewModels folder, implemented as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class EmailSenderViewModel{    public string ButtonContent { get; set; }    public RelayCommand SendCommand { get; set; }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The ButtonContent property will contain the text to be displayed on the button. This will need some content to distinguish the various email sender providers from one another. So our UI will need more than a list of available providers—it will need some information about each of the providers. We can use MEF’s metadata support—we can define an interface to represent the metadata we require.</td></tr></table><p /></div></li>
+          <br />
+          <li>Add a new interface called IEmailSenderData, defined as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public interface ISendEmailData{    string DisplayText { get; }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>You do not normally need to implement this interface. Its purpose is merely to define the properties you need—MEF will implement it for you. We tell MEF what property values are required by annotating our exporter classes with a suitable attribute.</td></tr></table><p /></div></li>
+          <br />
+          <li>Add the following attribute to the SendEmailViaOutlook class, to tell MEF what value we want it to provide in its implementation of ISendEmailData for this part:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[ExportMetadata("DisplayText", "via Outlook")] </pre></td></tr></table></span></div></li>
+          <li>In the OobUiViewModel class, add the following properties. The first uses MEF’s ImportMany attribute to be able to accept multiple providers. The second will act as a data source for an element in the UI.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[ImportMany] public IEnumerable&lt;Lazy&lt;ISendEmail, ISendEmailData&gt;&gt; EmailSenders{    set    {        var sendItemViewModels = from provider in value                                 select new EmailSenderViewModel                                 {                                     ButtonContent = "Send email " +                                           provider.Metadata.DisplayText,                                     SendCommand = new RelayCommand(() =&gt;                                       {                                         if (SelectedItem != null)                                         {                                           provider.Value.SendEmail(                                             SelectedItem.UserEmail,                                             SelectedItem.EventTitle);                                         }                                       }                                       )                                     {                                         IsEnabled = true                                     }                                };        EmailSenderButtons = sendItemViewModels.ToList();    }}public IList&lt;EmailSenderViewModel&gt; EmailSenderButtons { get; set; }</pre></td></tr></table></span></div></li>
+          <li>Open OobUi.xaml.</li>
+          <li>After the opening Grid tag, add the following:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.RowDefinitions&gt;    &lt;RowDefinition Height="*" /&gt;    &lt;RowDefinition Height="Auto" /&gt;&lt;/Grid.RowDefinitions&gt;</pre></td></tr></table></span></div></li>
+          <li>Just before the closing /Grid tag, add the following:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;ItemsControl     Grid.Row="1"    Margin="12,0,0,12"    Height="23"    ItemsSource="{Binding Path=EmailSenderButtons}"&gt;    &lt;ItemsControl.ItemsPanel&gt;        &lt;ItemsPanelTemplate&gt;            &lt;StackPanel Orientation="Horizontal" /&gt;        &lt;/ItemsPanelTemplate&gt;    &lt;/ItemsControl.ItemsPanel&gt;    &lt;ItemsControl.ItemTemplate&gt;        &lt;DataTemplate&gt;            &lt;Button                Content="{Binding Path=ButtonContent}"                Command="{Binding Path=SendCommand}"                /&gt;        &lt;/DataTemplate&gt;    &lt;/ItemsControl.ItemTemplate&gt;&lt;/ItemsControl&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application again, and you should now see an extra button saying “Send email via Outlook”.</li>
+          <li>We still only have one provider, but the UI is now ready to accept more. Add a new class to the project called SendEmailViaWebService.</li>
+          <li>Add a namespace directive for the System.ComponentModel.Composition namespace.</li>
+          <li>Implement the class as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Export(typeof(ISendEmail))][ExportMetadata("DisplayText", "via Web Service")]public class SendEmailViaWebService : ISendEmail{    public void SendEmail(string recipientAddress, string eventTitle)    {        MessageBox.Show(string.Format("Email: {0}, {1}",                            recipientAddress, eventTitle));    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td><a name="_GoBack" href="#"><span /></a>This doesn’t do anything of course. It’s just a stub to verify that the UI can use multiple different providers.</td></tr></table><p /></div></li>
+          <br />
+          <li>Run the application again. This time you should see two buttons, one saying Send email via Outlook, and one saying Send email via Web Service.</li>
+          <li>In the out-of-browser EventAdministration application, log in as administrator (P@ssw0rd), and click Get to get the list of unacknowledged registrations.</li>
+          <li>Select an item in the data grid then click the Send email via Web Service button.</li>
+          <li>A MessageBox should appear showing the email and event name, as a result of the SendEmailViaWebService handler being used.</li>
+          <li>Dismiss the dialog, and verify that the Send email via Outlook button continues to use the Outlook provider.</li>
+        </ol>
+        <br />
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

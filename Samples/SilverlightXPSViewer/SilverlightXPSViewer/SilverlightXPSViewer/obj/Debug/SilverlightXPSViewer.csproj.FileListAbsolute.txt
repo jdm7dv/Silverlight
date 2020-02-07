@@ -1,0 +1,37 @@
+\\softech-238\D$\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.dll
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.pdb
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\AppManifest.xaml
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.xap
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\TestPage.html
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\App.g.cs
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\MainPage.g.cs
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.g.resources
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.dll
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.pdb
+D:\Projects\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\XapCacheFile.xml
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.dll
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.pdb
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\AppManifest.xaml
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.xap
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\TestPage.html
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\App.g.i.cs
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\MainPage.g.i.cs
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.g.resources
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.dll
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.pdb
+D:\Projects\2010\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.dll
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.pdb
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\SilverlightXPSViewer.xap
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\Bin\Debug\TestPage.html
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\App.g.i.cs
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\MainPage.g.i.cs
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.g.resources
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.dll
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\SilverlightXPSViewer.pdb
+C:\Users\Jonathan Moore\Desktop\SilverlightXPSViewer\SilverlightXPSViewer\SilverlightXPSViewer\obj\Debug\XapCacheFile.xml

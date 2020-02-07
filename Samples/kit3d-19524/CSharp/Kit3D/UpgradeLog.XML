@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Kit3D">
+</Property><Property Name="Solution File" Value="C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3D.sln">
+</Property><Property Name="Date" Value="Friday, November 13, 2009">
+</Property><Property Name="Time" Value="22:50 PM">
+</Property></Properties><Event ErrorLevel="2" Project="Kit3D" Source="Kit3D\Kit3D.csproj" Description="Project file is not writable: C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3D\Kit3D.csproj">
+</Event><Event ErrorLevel="0" Project="Kit3D" Source="Kit3D\Kit3D.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Kit3D" Source="Kit3D\Kit3D.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="Kit3DTest" Source="Kit3DTest\Kit3DTest.csproj" Description="Project file is not writable: C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3DTest\Kit3DTest.csproj">
+</Event><Event ErrorLevel="0" Project="Kit3DTest" Source="Kit3DTest\Kit3DTest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Kit3DTest" Source="Kit3DTest\Kit3DTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WebTestingWeb" Source="WebTestingWeb\WebTestingWeb.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="WebTestingWeb" Source="WebTestingWeb\WebTestingWeb.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="2" Project="TestApp" Source="Kit3DTestApp\TestApp.csproj" Description="Project file is not writable: C:\v1.9\SphinxLogic\WinX\base\samples\Web Development\Silverlight\kit3d-19524\CSharp\Kit3D\Kit3DTestApp\TestApp.csproj">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="Kit3DTestApp\TestApp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TestApp" Source="Kit3DTestApp\TestApp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Kit3D.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="Kit3D.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Kit3D" Source="Kit3D\Kit3D.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Kit3DTest" Source="Kit3DTest\Kit3DTest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="TestApp" Source="Kit3DTestApp\TestApp.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

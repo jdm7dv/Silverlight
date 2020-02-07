@@ -1,0 +1,76 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="samp_LiveMessenger.tpButtonClose"
+	d:DesignWidth="45.816" d:DesignHeight="20">
+	<UserControl.Resources>
+		<Storyboard x:Key="MouseOver State">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="h_1" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="h_b1" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="h_b2" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Name="Clicked">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="h_2" Storyboard.TargetProperty="(UIElement.Opacity)" BeginTime="00:00:00" Duration="00:00:00.0010000">
+				<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+ <!-- CLOSE -->
+	<Grid x:Name="RootElement" >
+		<Rectangle HorizontalAlignment="Stretch" Margin="0,0,1.11199998855591,1.10000002384186" VerticalAlignment="Stretch" x:Name="h_1" Visibility="Visible" Opacity="0">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="1.00999999046326,0.495000004768372" StartPoint="-0.00999999977648258,0.5">
+					<GradientStop Color="#FFC02008"/>
+					<GradientStop Color="#FFC02008" Offset="1"/>
+					<GradientStop Color="#FFF82800" Offset="0.688"/>
+					<GradientStop Color="#FFF82800" Offset="0.366"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Rectangle HorizontalAlignment="Stretch" Margin="0,0,1.11199998855591,1.10000002384186" VerticalAlignment="Stretch" x:Name="h_2" Visibility="Visible" Opacity="0">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="1.00999999046326,0.495000004768372" StartPoint="-0.00999999977648258,0.5">
+					<GradientStop Color="#FF500800"/>
+					<GradientStop Color="#FF500800" Offset="1"/>
+					<GradientStop Color="#FF901000" Offset="0.688"/>
+					<GradientStop Color="#FF901000" Offset="0.366"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Rectangle Height="2" HorizontalAlignment="Stretch" Margin="0,0,4.86399984359741,0" VerticalAlignment="Bottom" Fill="#FF881000" Stroke="#FF881000" x:Name="h_b1" Visibility="Visible" Opacity="0"/>
+		<Rectangle HorizontalAlignment="Right" Margin="0,0,-0.125,4.98899984359741" VerticalAlignment="Stretch" Width="2" Fill="#FF881000" Stroke="#FF881000" x:Name="h_b2" Visibility="Visible" Opacity="0"/>
+		<Path Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FF881000" Data="F1 M 2752,256C 2752,277.333 2752,298.667 2741.33,309.333C 2730.67,320 2709.33,320 2688,320" Height="6.786" HorizontalAlignment="Right" Margin="0,0,-0.112000003457069,0" VerticalAlignment="Bottom" Width="6.865" x:Name="h_b3" Opacity="0"  />
+		<Path HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Fill="#FFFFFFFF" Stretch="Fill" Stroke="#FFFFFFFF" Data="M1.4999998,1.5000001 L1.4999998,16.5 L26.5,16.5 L26.5,1.5000001 L1.4999998,1.5000001 z M0.5,0.5 L1.4999998,0.5 L1.4999998,0.50000042 L26.5,0.50000042 L26.5,0.5 L27.5,0.5 L27.5,0.50000042 L27.5,1.5000001 L27.5,16.5 L27.5,17.5 L26.5,17.5 L1.4999998,17.5 L0.5,17.5 L0.5,16.5 L0.5,1.5000001 L0.5,0.50000042 L0.5,0.5 z" Opacity="0.135" x:Name="wb" Visibility="Visible"/>
+		<Path Height="14.665" HorizontalAlignment="Stretch" Margin="14.4549999237061,3.33500003814697,17.0839996337891,2" VerticalAlignment="Stretch" RenderTransformOrigin="0.500000059604645,0.500000059604645" Stretch="Fill" Stroke="#FF686868" Data="M6.6849689,0.5 L9.9887857,1.1063633 L9.1542997,5.6531219 L13.777,5.6531219 L13.777,9.0121222 L8.5378075,9.0121222 L7.5920334,14.165243 L4.2882166,13.55888 L5.1227026,9.0121222 L0.5,9.0121222 L0.5,5.6531219 L5.7391944,5.6531219 L6.6849689,0.5 z" x:Name="ico">
+			<Path.Fill>
+				<LinearGradientBrush EndPoint="0.762000024318695,0.850000023841858" StartPoint="0.226999998092651,0.149000003933907">
+					<GradientStop Color="#FFDDDDDD" Offset="1"/>
+					<GradientStop Color="#FFFFFFFF" Offset="0"/>
+				</LinearGradientBrush>
+			</Path.Fill>
+			<Path.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="37.839"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Path.RenderTransform>
+		</Path>
+		<Rectangle HorizontalAlignment="Right" Margin="0,0,0.0120000001043081,6" VerticalAlignment="Stretch" Width="1.1" Fill="#FF718083" Stroke="#FF718083" StrokeThickness="0" x:Name="b_1" Opacity="0.635"/>
+		<Path Stretch="Fill" StrokeThickness="1.1" StrokeLineJoin="Round" Stroke="#FF718083" Data="F1 M 2752,256C 2752,277.333 2752,298.667 2741.33,309.333C 2730.67,320 2709.33,320 2688,320" Height="6.786" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="6.865" x:Name="b_2" Opacity="0.635"/>
+		<Rectangle Height="1.1" HorizontalAlignment="Stretch" Margin="0,0,5.875,0" VerticalAlignment="Bottom" Fill="#FFFFFFFF" Stroke="#FF718083" StrokeThickness="1" x:Name="b_3" Opacity="0.635"/>
+		<Rectangle HorizontalAlignment="Stretch" Margin="0,0,2,0" x:Name="glass" VerticalAlignment="Top" Opacity="0.16" Fill="#FFFFFFFF" Height="5"/>
+
+
+	</Grid>
+</UserControl>

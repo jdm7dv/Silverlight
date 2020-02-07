@@ -1,0 +1,116 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Showing the User’s Session Schedule" />
+      <MSHelp:RLTitle Title="Exercise 2: Showing the User’s Session Schedule" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Showing the User’s Session Schedule</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 5 - DataGrid, Grouping, Right Mouse Click Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Showing the User’s Session Schedule</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <a name="_Toc256193982" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Overview </b>
+        </p>
+        <p>As well as showing the available talks, the session planner needs to show which talks the user has selected. We’ll use grouping again, but this time we’ll group chosen talks by time slot, so the user can see when they’ve picked multiple talks that clash. (We’re not going to treat that as an error—the user may not yet have decided which talks to go to in certain slots, with the intention of keeping their options open until the day of the event.) We’ll use an ordinary basic items control. The data grid is a good way to pack a lot of information onto the screen, but it’s probably a bit too dense here, and the clarity of a simpler UI component will make it easier for users to see their schedule at a glance.</p>
+        <p>The second list we’re about to add displays talks, but unlike the grid we added in the previous part, this list will only show those talks the user has added to their schedule. Our view model doesn’t yet provide that information. It will need some help from the service because of the way we’re authenticating users. Our application relies on ASP.NET’s authentication mechanisms under the covers, as wrapped by WCF RIA Services. The AuthenticationService generated by the project template handles this, and makes a User object available on the client side to represent the logged in user. However, that’s part of the set of tables in the database managed by ASP.NET. In order to accommodate user-specific data required by our application, we have our own Account entity.</p>
+        <p>The client doesn’t have a way to work out which Account corresponds to the logged in user. And that’s probably as it should be. We don’t really want the client-side code to be able to ask for any old Account, and you would probably remove the generated domain service operations that allow the client to manipulate the Account objects directly. The code in earlier labs that manipulated user-specific information (registering and unregistering for events) let the server work out what accounts to use, and it will be the same here. So we’ll need to add a domain service operation to retrieve the set of talks the user has added to their schedule for a given event. This will be very similar to the operation you added in an earlier lab to get the set of events for which the user is registered. </p>
+        <a name="_Toc256193983" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Show User’s Talks</b>
+        </p>
+        <ol>
+          <li>In the SlEventManager.Web application’s Services folder, open the EventManagerDomainService.cs file.</li>
+          <li>Add the following operation:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Invoke]public IEnumerable&lt;int&gt; FetchTalksUserHasInScheduleForEvent(int eventID){    MembershipUser mu = Membership.GetUser();    if (mu == null)    {        return new int[0];    }    var q = from atSchTalk in this.ObjectContext.AttendeeScheduleTalks            where atSchTalk.Attendee.AspNetUserId == (Guid) mu.ProviderUserKey            select atSchTalk.TalkID;    return q;}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This method just returns the IDs of the talks. That’s all we need here. Our view model already fetched a complete set of Talk entities to populate the grid of available talks, so there’s no sense in writing an operation that returns entities here because we’d end up sending duplicate copies. (That would work: the client-side domain context object would recognize that these were entities it had seen before. But it would be inefficient to transfer multiple copies of the talk entities across the network.)</td></tr></table><p /></div></li>
+          <li>Add the following using declaration to the <b>SchedulePlannerViewModel</b>:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Collections.ObjectModel;</pre></td></tr></table></span></div></li>
+          <li>Add the following property so <b>SchedulePlannerViewModel</b> can make the chosen talks available for data binding:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private ObservableCollection&lt;Talk&gt; _subscribedTalks;public ObservableCollection&lt;Talk&gt; SubscribedTalks{    get { return _subscribedTalks; }    set    {        if (value != _subscribedTalks)        {            _subscribedTalks = value;            OnPropertyChanged("SubscribedTalks");        }    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>We’re using an ObservableCollection here because the contents of the list will change as the user adds or removes talks. (It may seem like overkill to support both list-level notification and also property-level notification. But we need property change notification because this property is null to start with. And then we need list notifications once the list has been created.)</td></tr></table><p /></div></li>
+          <li>In the Load method, inside the lambda that populates the AllTalks and EventTitle properties, add the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>_context.FetchTalksUserHasInScheduleForEvent(eventId, (talkIdLoadOp) =&gt;{    var chosenTalks = from talk in AllTalks                      where talkIdLoadOp.Value.Contains(talk.TalkID)                      select talk;    SubscribedTalks = new ObservableCollection&lt;Talk&gt;(chosenTalks);}, null);</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This retrieves the list of talks in the user’s schedule, using the domain operation you just wrote, and then finds the Talk entities (as previously fetched with the GetEventsWithTracksAndTalksQuery operation) whose IDs are in the list returned.<br />We’re using a feature added in Silverlight 4 here. The ObservableCollection&lt;T&gt; constructor that accepts an IEnumerable&lt;T&gt; was not previously available.<br />Now our view model provides the set of subscribed talks, we need our view to show them. Open ScheduleManager.xaml and find the CollectionViewSource you added earlier. That first source shows all the talks, so we need a second source to show just the user’s chosen talks. </td></tr></table><p /></div></li>
+          <li>Add the following XAML after the first <b>CollectionViewSource</b> inside <b>SchedulePlanner.xaml</b>:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;CollectionViewSource x:Key="eventEventTalksByStartTimeViewSource"                      Source="{Binding Path=SubscribedTalks}"&gt;    &lt;CollectionViewSource.GroupDescriptions&gt;        &lt;PropertyGroupDescription PropertyName="TalkStartTime" /&gt;    &lt;/CollectionViewSource.GroupDescriptions&gt;    &lt;CollectionViewSource.SortDescriptions&gt;        &lt;scm:SortDescription PropertyName="TalkStartTime" /&gt;    &lt;/CollectionViewSource.SortDescriptions&gt;&lt;/CollectionViewSource&gt;</pre></td></tr></table></span></div></li>
+          <li>Further down in the XAML after the DataGrid, add this XAML:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;ScrollViewer    Grid.Column="2"    Margin="15,62,12,6"    HorizontalScrollBarVisibility="Disabled"    VerticalScrollBarVisibility="Auto"    &gt;    &lt;ItemsControl        VerticalAlignment="Top"        ItemsSource="{Binding Path=Groups,                         Source={StaticResource eventEventTalksByStartTimeViewSource}}"        &gt;        &lt;ItemsControl.ItemTemplate&gt;            &lt;DataTemplate&gt;                &lt;Grid&gt;                    &lt;Grid.RowDefinitions&gt;                        &lt;RowDefinition Height="20" /&gt;                        &lt;RowDefinition Height="Auto" /&gt;                    &lt;/Grid.RowDefinitions&gt;                    &lt;TextBlock Text="{Binding Path=Name, StringFormat=HH:mm}" /&gt;                    &lt;ItemsControl                        Grid.Row="1"                        ItemsSource="{Binding Path=Items}"&gt;                        &lt;ItemsControl.ItemTemplate&gt;                            &lt;DataTemplate&gt;                                &lt;Grid                                    &gt;                                    &lt;Grid.RowDefinitions&gt;                                        &lt;RowDefinition Height="Auto" /&gt;                                        &lt;RowDefinition MaxHeight="40" /&gt;                                    &lt;/Grid.RowDefinitions&gt;                                    &lt;TextBlock                                        Text="{Binding Path=TalkTitle}"                                        FontWeight="Bold"                                        /&gt;                                    &lt;TextBlock                                        Grid.Row="1"                                        Text="{Binding Path=TalkAbstract}"                                        TextWrapping="Wrap"                                        TextTrimming="WordEllipsis"                                        MaxHeight="40"                                        &gt;                                        &lt;ToolTipService.ToolTip&gt;                                            &lt;TextBlock Text="{Binding Path=TalkAbstract}"                                                       Width="200" TextWrapping="Wrap" /&gt;                                        &lt;/ToolTipService.ToolTip&gt;                                    &lt;/TextBlock&gt;                                &lt;/Grid&gt;                            &lt;/DataTemplate&gt;                        &lt;/ItemsControl.ItemTemplate&gt;                    &lt;/ItemsControl&gt;                &lt;/Grid&gt;            &lt;/DataTemplate&gt;        &lt;/ItemsControl.ItemTemplate&gt;    &lt;/ItemsControl&gt;&lt;/ScrollViewer&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The ItemsControl base class does not provide direct support for grouping (and neither, therefore, do the ListBox or ComboBox which derive from it directly). This is not a problem in this example, because we can simply bind the ItemsControl directly to the Groups property provided by any grouping CollectionViewSource. And then inside this we have a nested ItemsControl that binds to the Items property exposed by each group object.</td></tr></table><p /></div></li>
+          <li>Run the application.</li>
+          <li>Log in as the user <b>ian</b> with a password of <b>P@ssw0rd</b></li>
+          <li>Go to the planner page for the first event. You should see the following:<p><img src="images\a03cf9f6-5bb1-4e43-95dc-a9d23a5115c7.png" /></p><p><b>Figure 3</b><br /><i>Planner Page Details</i></p><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Notice that the abstracts are being truncated to a couple of lines using a feature added in Silverlight 4: the TextTrimming property lets us crop text at a word boundary to make it fit. This XAML sets the TextTrimming property to WordEllipsis<br />The XAML also includes a ToolTip, enabling the user to see the full description when they move the mouse over the text.</td></tr></table><p /></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Sending Email" />
+      <MSHelp:RLTitle Title="Exercise 1: Sending Email" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Sending Email</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 8 - Advanced OOB, Custom Window Chrome, Silent Installs, Digital Signing, and MEF Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Sending Email</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>The main goal of this administration UI is to provide a way to acknowledgement event registration requests. We need to send email to attendees confirming their registration. So now that we can display which users have outstanding registrations, we need to add the code to email them.</p>
+        <p>We will be using Outlook to create email, controlling it with the COM automation interop feature added in Silverlight 4. Normal Silverlight applications cannot do this. They need to run with elevated privilege, so the first thing we need to do is modify the application to request elevation.</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>To be clear, this does not mean administrative privileges. It simply means that Silverlight imposes fewer restrictions of its own; all the usual Windows security mechanisms will still apply.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <p>Elevation is a choice made at installation time, so first, we need to uninstall the application so that we can reinstall it with elevation. </p>
+        <ol>
+          <li>Run the application. </li>
+          <li>Right-click on the UI, and choose the option to remove the application. </li>
+          <li>Close the application and browser. The application is now uninstalled.</li>
+          <li>Open the Properties page for the EventAdministration project go to the Silverlight tab.</li>
+          <li>Click the Out-of-Browser Settings… button. </li>
+          <li>At the bottom of the dialog that opens, check the Require elevated trust when running outside the browser checkbox:<p><img src="images\bb9ecd13-9263-4e6b-b44c-2183a2dae455.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 1</b>
+          <br />
+          <i>Requiring Elevated Trust</i>
+        </p>
+        <br />
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>If you try to run the application again, Visual Studio will get confused because we configured it for out-of-browser debugging, but the application is no longer installed for out-of-browser operation. So just once, we need to launch the web application on its own. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>In the Solution Explorer, right click on the SlEventManager.Web project and choose Debug → Start new instance. This debugs just the web application. </li>
+          <li>Make sure the EventAdministrationTestPage.html page is showing, and install the application. </li>
+          <li>This time you will get a different dialog, asking you if you are happy to let the application run elevated. Accept this. </li>
+          <li>Close the web browser. The application is now installed for elevated out-of-browser operation, and we can go back to debugging it like before for the remainder of this lab.</li>
+          <li>The view model will need to know which item is selected in order to send an email. So add a suitable property to OobUiViewModel:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public UnacknowledgedRegistrationViewModel SelectedItem { get; set; }</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>We can use a simple auto property here because the view model will never change the selection of its own accord, and so we don’t need to raise change notifications. Nor do we need code in the set accessor. We don’t need to take action when an event is selected. We just need to know which item is selected when the administrator decides to send an email.</td></tr></table><p /></div></li>
+          <br />
+          <li>Add a using declaration for the System.Runtime.InteropServices.Automation namespace to the view models’ file.</li>
+          <li>Add the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public void OnAcknowledge(){    if (SelectedItem != null)    {        dynamic outlook =            AutomationFactory.CreateObject("Outlook.Application");        dynamic mailItem = outlook.CreateItem(0);        mailItem.To = SelectedItem.UserEmail;        mailItem.Subject = "Registration Confirmation";        mailItem.HTMLBody = "Thank you for registering for " +                               SelectedItem.EventTitle;        mailItem.Display();    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This uses Outlook’s automation API to create and display an email with the subject, to, and body prepopulated. The administrator can review the email before sending it.</td></tr></table><p /></div></li>
+          <br />
+          <li>The code won’t compile yet. Support for the new dynamic keyword depends on a library that is not referenced by default. Add a reference to Microsoft.CSharp, which is found in the Silverlight SDK, at either<ol><li>32 bit<ol><li>C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\</li></ol></li><li>64-bit <ol><li>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\</li></ol></li></ol></li>
+          <li>In OobUi.xaml, add a button with a caption of “Acknowledge Registration…”.</li>
+          <li>Add a Click handler for this button, and in it, call the view model’s OnAcknowledge method.</li>
+          <li>In OobUi.xaml, add this attribute to the data grid:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"</pre></td></tr></table></span></div></li>
+          <li>Run the application. </li>
+          <li>Log in.</li>
+          <li>Click Get to fetch the items.</li>
+          <li>Select an item and click the button to acknowledge the registration. </li>
+        </ol>
+        <p>Outlook should start. (If you’re running on a machine for which you’ve not configured email, this might not get you very far. Outlook may start to show its installation user interface. But as long as it’s configured correctly, you should see a new email window.) The new email window’s To, Subject and body should be prepopulated.</p>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<Canvas xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Width="320" Height="240"
+	Background="White">
+  <Canvas.RenderTransform>
+    <ScaleTransform x:Name="Scaler" CenterX="320" ScaleX="0" />
+  </Canvas.RenderTransform>
+  <Canvas.Triggers>
+    <EventTrigger RoutedEvent="Canvas.Loaded">
+      <BeginStoryboard>
+        <Storyboard x:Name="Movement">
+          <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Scaler" Storyboard.TargetProperty="ScaleX">
+            <SplineDoubleKeyFrame KeyTime="00:00:1" Value="0"/>
+            <SplineDoubleKeyFrame KeyTime="00:00:4" Value="1"/>
+          </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+      </BeginStoryboard>
+    </EventTrigger>
+  </Canvas.Triggers>
+  <TextBlock Canvas.Left="60" Canvas.Top="100" FontFamily="Arial" FontSize="18" FontWeight="Bold" Text="Moonlight in 21 Days" />
+</Canvas>

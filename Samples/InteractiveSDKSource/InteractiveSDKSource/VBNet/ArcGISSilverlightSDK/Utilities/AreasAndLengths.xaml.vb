@@ -1,0 +1,76 @@
+﻿Imports Microsoft.VisualBasic
+Imports System
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Net
+Imports System.Windows
+Imports System.Windows.Controls
+Imports System.Windows.Documents
+Imports System.Windows.Input
+Imports System.Windows.Media
+Imports System.Windows.Media.Animation
+Imports System.Windows.Shapes
+Imports ESRI.ArcGIS.Client
+Imports ESRI.ArcGIS.Client.Symbols
+Imports ESRI.ArcGIS.Client.Geometry
+Imports ESRI.ArcGIS.Client.Tasks
+
+Namespace ArcGISSilverlightSDK
+    Partial Public Class AreasAndLengths
+        Inherits UserControl
+        Private MyDrawObject As Draw
+
+        Public Sub New()
+            InitializeComponent()
+            MyDrawObject = New Draw(MyMap) With {.DrawMode = DrawMode.Polygon, .IsEnabled = True, .FillSymbol = DefaultFillSymbol}
+            AddHandler MyDrawObject.DrawComplete, AddressOf MyDrawObject_DrawComplete
+            AddHandler MyDrawObject.DrawBegin, AddressOf MyDrawObject_DrawBegin
+
+        End Sub
+
+        Private Sub MyDrawObject_DrawBegin(ByVal sender As Object, ByVal args As EventArgs)
+            Dim graphicsLayer As GraphicsLayer = TryCast(MyMap.Layers("MyGraphicsLayer"), GraphicsLayer)
+            graphicsLayer.ClearGraphics()
+        End Sub
+
+        Private Sub MyDrawObject_DrawComplete(ByVal sender As Object, ByVal args As DrawEventArgs)
+            Dim polygon As ESRI.ArcGIS.Client.Geometry.Polygon = TryCast(args.Geometry, ESRI.ArcGIS.Client.Geometry.Polygon)
+            polygon.SpatialReference = MyMap.SpatialReference
+            Dim graphic As New Graphic() With {.Symbol = DefaultFillSymbol, .Geometry = polygon}
+
+            Dim geometryService As New GeometryService("http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/" & "Geometry/GeometryServer")
+            AddHandler geometryService.ProjectCompleted, AddressOf GeometryService_ProjectCompleted
+            AddHandler geometryService.Failed, AddressOf GeometryService_Failed
+
+            Dim graphicsLayer As GraphicsLayer = TryCast(MyMap.Layers("MyGraphicsLayer"), GraphicsLayer)
+            graphicsLayer.Graphics.Add(graphic)
+
+            Dim graphicList As New List(Of Graphic)()
+            graphicList.Add(graphic)
+
+            ' GeometryService.AreasAndLengths returns distances and areas in the units of the spatial reference.
+            ' The units in the map view's projection is decimal degrees. 
+            ' Use the Project method to convert graphic points to a projection that uses a measured unit (e.g. meters).
+            ' If the map units are in measured units, the call to Project is unnecessary. 
+            ' Important: Use a projection appropriate for your area of interest.
+            geometryService.ProjectAsync(graphicList, New SpatialReference(32611))
+        End Sub
+
+        Private Sub GeometryService_ProjectCompleted(ByVal sender As Object, ByVal args As ESRI.ArcGIS.Client.Tasks.GraphicsEventArgs)
+            Dim geometryService As New GeometryService("http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/" & "Geometry/GeometryServer")
+            AddHandler geometryService.AreasAndLengthsCompleted, AddressOf GeometryService_AreasAndLengthsCompleted
+            geometryService.AreasAndLengthsAsync(args.Results)
+        End Sub
+
+        Private Sub GeometryService_AreasAndLengthsCompleted(ByVal sender As Object, ByVal args As AreasAndLengthsEventArgs)
+            ' convert results from meters into miles and sq meters into sq miles for our display
+            Dim miles As Double = args.Results.Lengths(0) * 0.0006213700922
+            Dim sqmi As Double = Math.Abs(args.Results.Areas(0)) * 0.0000003861003
+            ResponseTextBlock.Text = String.Format("Polygon area: {0} sq. miles" & Constants.vbLf & "Polygon perimeter: {1} miles.", Math.Round(sqmi, 3), Math.Round(miles, 3))
+        End Sub
+
+        Private Sub GeometryService_Failed(ByVal sender As Object, ByVal e As TaskFailedEventArgs)
+            MessageBox.Show("Geometry Service error: " & e.Error.Message)
+        End Sub
+    End Class
+End Namespace

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="InkPresenter">
+</Property><Property Name="Solution File" Value="W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter.sln">
+</Property><Property Name="Date" Value="Tuesday, February 22, 2011">
+</Property><Property Name="Time" Value="7:27 AM">
+</Property></Properties><Event ErrorLevel="0" Project="InkPresenter" Source="InkPresenter\InkPresenter.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="InkPresenter" Source="InkPresenter\InkPresenter.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="InkPresenter.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="InkPresenter.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InkPresenter" Source="InkPresenter\InkPresenter.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

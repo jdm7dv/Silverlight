@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustedFileAccess", "TrustedFileAccess\TrustedFileAccess.csproj", "{BFB8729E-5E2A-4C1F-9494-709E6CEF60A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustedFileAccess.Web", "TrustedFileAccess.Web\TrustedFileAccess.Web.csproj", "{C2A910E8-940F-4D29-ADA8-C8411A0A6222}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFB8729E-5E2A-4C1F-9494-709E6CEF60A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB8729E-5E2A-4C1F-9494-709E6CEF60A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB8729E-5E2A-4C1F-9494-709E6CEF60A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB8729E-5E2A-4C1F-9494-709E6CEF60A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A910E8-940F-4D29-ADA8-C8411A0A6222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A910E8-940F-4D29-ADA8-C8411A0A6222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A910E8-940F-4D29-ADA8-C8411A0A6222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A910E8-940F-4D29-ADA8-C8411A0A6222}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

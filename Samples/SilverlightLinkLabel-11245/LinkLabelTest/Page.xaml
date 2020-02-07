@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="LinkLabelTest.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CompletIT.Windows.Controls;assembly=LinkLabel"
+    Width="608" Height="350">
+    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Padding="4">
+        <StackPanel x:Name="LayoutRoot" Background="Transparent" Orientation="Vertical">
+            <StackPanel>
+                <TextBlock Text="Input" Foreground="Green" />
+                <TextBox Height="125" x:Name="TextToProccess" TextWrapping="Wrap" AcceptsReturn="True">
+                    <TextBox.Text>LinkLabel control represents a Silverlight TextBlock control that can contain 
+[link=&quot;http://www.silverlightshow.net&quot; target=&quot;_blank&quot;]links[/link]
+defined either by a user defined pattern
+or with their URI like
+http://www.silverlightshow.net
+It also gives you the ability to define [link=&quot;LinkLabel rocks!&quot;]custom actions[/link] when a link is clicked.
+                    </TextBox.Text>
+                </TextBox>
+                <Button Content="Process" Click="Process" x:Name="ProccessText" />
+            </StackPanel>
+            <StackPanel Margin="0, 10, 0, 0">
+                <TextBlock Text="Output" Foreground="Red" />
+                <ScrollViewer Width="600" Height="125" VerticalScrollBarVisibility="Auto">
+                    <ContentControl>
+                        <local:LinkLabel x:Name="MyLinkLabel" LinkMatchMethod="ByUriAndLinkPattern" LineBreakElementWidth="600">
+                        </local:LinkLabel>
+                    </ContentControl>
+                </ScrollViewer>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

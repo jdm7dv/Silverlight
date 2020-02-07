@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60929B2B-B85C-45B1-BE80-D892DD3EB1EE}</ProjectGuid>
+    <RootNamespace>libmoon</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBMOON_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBMOON_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBMOON_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBMOON_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\animation.cpp" />
+    <ClCompile Include="..\..\src\application.cpp" />
+    <ClCompile Include="..\..\src\applier.cpp" />
+    <ClCompile Include="..\..\src\asf\asf-debug.cpp" />
+    <ClCompile Include="..\..\src\asf\asf-generated.cpp" />
+    <ClCompile Include="..\..\src\asf\asf-guids.cpp" />
+    <ClCompile Include="..\..\src\asf\asf-structures.cpp" />
+    <ClCompile Include="..\..\src\asf\asf.cpp" />
+    <ClCompile Include="..\..\src\audio.cpp" />
+    <ClCompile Include="..\..\src\bitmapimage.cpp" />
+    <ClCompile Include="..\..\src\bitmapsource.cpp" />
+    <ClCompile Include="..\..\src\border.cpp" />
+    <ClCompile Include="..\..\src\brush.cpp" />
+    <ClCompile Include="..\..\src\canvas.cpp" />
+    <ClCompile Include="..\..\src\cbinding.cpp" />
+    <ClCompile Include="..\..\src\clock.cpp" />
+    <ClCompile Include="..\..\src\collection.cpp" />
+    <ClCompile Include="..\..\src\color.cpp" />
+    <ClCompile Include="..\..\src\contentcontrol.cpp" />
+    <ClCompile Include="..\..\src\control.cpp" />
+    <ClCompile Include="..\..\src\cornerradius.cpp" />
+    <ClCompile Include="..\..\src\debug.cpp" />
+    <ClCompile Include="..\..\src\deepzoomimagetilesource.cpp" />
+    <ClCompile Include="..\..\src\dependencyobject.cpp" />
+    <ClCompile Include="..\..\src\dependencyproperty.cpp" />
+    <ClCompile Include="..\..\src\dependencyproperty.g.cpp" />
+    <ClCompile Include="..\..\src\deployment.cpp" />
+    <ClCompile Include="..\..\src\dirty.cpp" />
+    <ClCompile Include="..\..\src\downloader.cpp" />
+    <ClCompile Include="..\..\src\easing.cpp" />
+    <ClCompile Include="..\..\src\enums.cpp" />
+    <ClCompile Include="..\..\src\error.cpp" />
+    <ClCompile Include="..\..\src\eventargs.cpp" />
+    <ClCompile Include="..\..\src\file-downloader.cpp" />
+    <ClCompile Include="..\..\src\fontmanager.cpp" />
+    <ClCompile Include="..\..\src\fonts.cpp" />
+    <ClCompile Include="..\..\src\frameworkelement.cpp" />
+    <ClCompile Include="..\..\src\geometry.cpp" />
+    <ClCompile Include="..\..\src\glyphs.cpp" />
+    <ClCompile Include="..\..\src\grid.cpp" />
+    <ClCompile Include="..\..\src\http-streaming.cpp" />
+    <ClCompile Include="..\..\src\imagesource.cpp" />
+    <ClCompile Include="..\..\src\keyboard.cpp" />
+    <ClCompile Include="..\..\src\layout.cpp" />
+    <ClCompile Include="..\..\src\layoutinformation.cpp" />
+    <ClCompile Include="..\..\src\list.cpp" />
+    <ClCompile Include="..\..\src\media.cpp" />
+    <ClCompile Include="..\..\src\mediaelement.cpp" />
+    <ClCompile Include="..\..\src\mediaplayer.cpp" />
+    <ClCompile Include="..\..\src\messagebox.cpp" />
+    <ClCompile Include="..\..\src\mms-downloader.cpp" />
+    <ClCompile Include="..\..\src\moon-curves.c" />
+    <ClCompile Include="..\..\src\moon-path.c" />
+    <ClCompile Include="..\..\src\moonlightconfiguration.cpp" />
+    <ClCompile Include="..\..\src\mp3.cpp" />
+    <ClCompile Include="..\..\src\multiscaleimage.cpp" />
+    <ClCompile Include="..\..\src\multiscalesubimage.cpp" />
+    <ClCompile Include="..\..\src\namescope.cpp" />
+    <ClCompile Include="..\..\src\openfile.cpp" />
+    <ClCompile Include="..\..\src\panel.cpp" />
+    <ClCompile Include="..\..\src\pipeline-asf.cpp" />
+    <ClCompile Include="..\..\src\pipeline-ffmpeg.cpp" />
+    <ClCompile Include="..\..\src\pipeline-logo.cpp" />
+    <ClCompile Include="..\..\src\pipeline-nocodec-ui.cpp" />
+    <ClCompile Include="..\..\src\pipeline-ui.cpp" />
+    <ClCompile Include="..\..\src\pipeline.cpp" />
+    <ClCompile Include="..\..\src\playlist.cpp" />
+    <ClCompile Include="..\..\src\point.cpp" />
+    <ClCompile Include="..\..\src\popup.cpp" />
+    <ClCompile Include="..\..\src\provider.cpp" />
+    <ClCompile Include="..\..\src\rect.cpp" />
+    <ClCompile Include="..\..\src\region.cpp" />
+    <ClCompile Include="..\..\src\resources.cpp" />
+    <ClCompile Include="..\..\src\runtime.cpp" />
+    <ClCompile Include="..\..\src\security.c" />
+    <ClCompile Include="..\..\src\shape.cpp" />
+    <ClCompile Include="..\..\src\size.cpp" />
+    <ClCompile Include="..\..\src\style.cpp" />
+    <ClCompile Include="..\..\src\stylus.cpp" />
+    <ClCompile Include="..\..\src\tabnavigationwalker.cpp" />
+    <ClCompile Include="..\..\src\template.cpp" />
+    <ClCompile Include="..\..\src\textblock.cpp" />
+    <ClCompile Include="..\..\src\textbox.cpp" />
+    <ClCompile Include="..\..\src\thickness.cpp" />
+    <ClCompile Include="..\..\src\tilesource.cpp" />
+    <ClCompile Include="..\..\src\timeline.cpp" />
+    <ClCompile Include="..\..\src\timemanager.cpp" />
+    <ClCompile Include="..\..\src\timesource.cpp" />
+    <ClCompile Include="..\..\src\transform.cpp" />
+    <ClCompile Include="..\..\src\trigger.cpp" />
+    <ClCompile Include="..\..\src\type-generated.cpp" />
+    <ClCompile Include="..\..\src\type.cpp" />
+    <ClCompile Include="..\..\src\uielement.cpp" />
+    <ClCompile Include="..\..\src\uri.cpp" />
+    <ClCompile Include="..\..\src\usercontrol.cpp" />
+    <ClCompile Include="..\..\src\utils.cpp" />
+    <ClCompile Include="..\..\src\validators.cpp" />
+    <ClCompile Include="..\..\src\value.cpp" />
+    <ClCompile Include="..\..\src\window-gtk.cpp" />
+    <ClCompile Include="..\..\src\writeablebitmap.cpp" />
+    <ClCompile Include="..\..\src\xaml.cpp" />
+    <ClCompile Include="..\..\src\xap.cpp" />
+    <ClCompile Include="..\..\src\yuv-converter.cpp" />
+    <ClCompile Include="..\..\src\zip\ioapi.c" />
+    <ClCompile Include="..\..\src\zip\unzip.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\animation.h" />
+    <ClInclude Include="..\..\src\application.h" />
+    <ClInclude Include="..\..\src\applier.h" />
+    <ClInclude Include="..\..\src\asf\asf-debug.h" />
+    <ClInclude Include="..\..\src\asf\asf-generated.h" />
+    <ClInclude Include="..\..\src\asf\asf-guids.h" />
+    <ClInclude Include="..\..\src\asf\asf-structures.h" />
+    <ClInclude Include="..\..\src\asf\asf-test.h" />
+    <ClInclude Include="..\..\src\asf\asf.h" />
+    <ClInclude Include="..\..\src\audio.h" />
+    <ClInclude Include="..\..\src\bitmapimage.h" />
+    <ClInclude Include="..\..\src\bitmapsource.h" />
+    <ClInclude Include="..\..\src\border.h" />
+    <ClInclude Include="..\..\src\brush.h" />
+    <ClInclude Include="..\..\src\canvas.h" />
+    <ClInclude Include="..\..\src\cbinding.h" />
+    <ClInclude Include="..\..\src\clock.h" />
+    <ClInclude Include="..\..\src\codec-url.h" />
+    <ClInclude Include="..\..\src\collection.h" />
+    <ClInclude Include="..\..\src\color.h" />
+    <ClInclude Include="..\..\src\contentcontrol.h" />
+    <ClInclude Include="..\..\src\control.h" />
+    <ClInclude Include="..\..\src\cornerradius.h" />
+    <ClInclude Include="..\..\src\debug.h" />
+    <ClInclude Include="..\..\src\deepzoomimagetilesource.h" />
+    <ClInclude Include="..\..\src\dependencyobject.h" />
+    <ClInclude Include="..\..\src\dependencyproperty.h" />
+    <ClInclude Include="..\..\src\deployment.h" />
+    <ClInclude Include="..\..\src\dirty.h" />
+    <ClInclude Include="..\..\src\downloader.h" />
+    <ClInclude Include="..\..\src\easing.h" />
+    <ClInclude Include="..\..\src\enums.h" />
+    <ClInclude Include="..\..\src\error.h" />
+    <ClInclude Include="..\..\src\eventargs.h" />
+    <ClInclude Include="..\..\src\file-downloader.h" />
+    <ClInclude Include="..\..\src\fontfamily.h" />
+    <ClInclude Include="..\..\src\fontmanager.h" />
+    <ClInclude Include="..\..\src\fonts.h" />
+    <ClInclude Include="..\..\src\fontsource.h" />
+    <ClInclude Include="..\..\src\fontstretch.h" />
+    <ClInclude Include="..\..\src\fontstyle.h" />
+    <ClInclude Include="..\..\src\fontweight.h" />
+    <ClInclude Include="..\..\src\frameworkelement.h" />
+    <ClInclude Include="..\..\src\fullscreen.h" />
+    <ClInclude Include="..\..\src\geometry.h" />
+    <ClInclude Include="..\..\src\glyphs.h" />
+    <ClInclude Include="..\..\src\grid.h" />
+    <ClInclude Include="..\..\src\http-streaming.h" />
+    <ClInclude Include="..\..\src\imagesource.h" />
+    <ClInclude Include="..\..\src\internal-downloader.h" />
+    <ClInclude Include="..\..\src\keyboard.h" />
+    <ClInclude Include="..\..\src\layout.h" />
+    <ClInclude Include="..\..\src\layoutinformation.h" />
+    <ClInclude Include="..\..\src\libmoon.h" />
+    <ClInclude Include="..\..\src\list.h" />
+    <ClInclude Include="..\..\src\media.h" />
+    <ClInclude Include="..\..\src\mediaelement.h" />
+    <ClInclude Include="..\..\src\mediaplayer.h" />
+    <ClInclude Include="..\..\src\messagebox.h" />
+    <ClInclude Include="..\..\src\mms-downloader.h" />
+    <ClInclude Include="..\..\src\moon-curves.h" />
+    <ClInclude Include="..\..\src\moon-path.h" />
+    <ClInclude Include="..\..\src\moonlightconfiguration.h" />
+    <ClInclude Include="..\..\src\mp3.h" />
+    <ClInclude Include="..\..\src\multiscaleimage.h" />
+    <ClInclude Include="..\..\src\multiscalesubimage.h" />
+    <ClInclude Include="..\..\src\mutex.h" />
+    <ClInclude Include="..\..\src\namescope.h" />
+    <ClInclude Include="..\..\src\openfile.h" />
+    <ClInclude Include="..\..\src\panel.h" />
+    <ClInclude Include="..\..\src\pipeline-asf.h" />
+    <ClInclude Include="..\..\src\pipeline-ffmpeg.h" />
+    <ClInclude Include="..\..\src\pipeline-nocodec-ui.h" />
+    <ClInclude Include="..\..\src\pipeline-ui.h" />
+    <ClInclude Include="..\..\src\pipeline.h" />
+    <ClInclude Include="..\..\src\playlist.h" />
+    <ClInclude Include="..\..\src\point.h" />
+    <ClInclude Include="..\..\src\popup.h" />
+    <ClInclude Include="..\..\src\propertypath.h" />
+    <ClInclude Include="..\..\src\provider.h" />
+    <ClInclude Include="..\..\src\ptr.h" />
+    <ClInclude Include="..\..\src\rect.h" />
+    <ClInclude Include="..\..\src\region.h" />
+    <ClInclude Include="..\..\src\resources.h" />
+    <ClInclude Include="..\..\src\runtime.h" />
+    <ClInclude Include="..\..\src\security.h" />
+    <ClInclude Include="..\..\src\shape.h" />
+    <ClInclude Include="..\..\src\size.h" />
+    <ClInclude Include="..\..\src\style.h" />
+    <ClInclude Include="..\..\src\stylus.h" />
+    <ClInclude Include="..\..\src\tabnavigationwalker.h" />
+    <ClInclude Include="..\..\src\template.h" />
+    <ClInclude Include="..\..\src\textblock.h" />
+    <ClInclude Include="..\..\src\textbox.h" />
+    <ClInclude Include="..\..\src\thickness.h" />
+    <ClInclude Include="..\..\src\tilesource.h" />
+    <ClInclude Include="..\..\src\timeline.h" />
+    <ClInclude Include="..\..\src\timemanager.h" />
+    <ClInclude Include="..\..\src\timesource.h" />
+    <ClInclude Include="..\..\src\transform.h" />
+    <ClInclude Include="..\..\src\trigger.h" />
+    <ClInclude Include="..\..\src\type.h" />
+    <ClInclude Include="..\..\src\uielement.h" />
+    <ClInclude Include="..\..\src\uri.h" />
+    <ClInclude Include="..\..\src\usercontrol.h" />
+    <ClInclude Include="..\..\src\utils.h" />
+    <ClInclude Include="..\..\src\validators.h" />
+    <ClInclude Include="..\..\src\value.h" />
+    <ClInclude Include="..\..\src\window-gtk.h" />
+    <ClInclude Include="..\..\src\window.h" />
+    <ClInclude Include="..\..\src\writeablebitmap.h" />
+    <ClInclude Include="..\..\src\xaml.h" />
+    <ClInclude Include="..\..\src\xap.h" />
+    <ClInclude Include="..\..\src\yuv-converter.h" />
+    <ClInclude Include="..\..\src\zip\crypt.h" />
+    <ClInclude Include="..\..\src\zip\ioapi.h" />
+    <ClInclude Include="..\..\src\zip\unzip.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

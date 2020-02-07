@@ -1,0 +1,154 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2 - Signing a XAP Assembly and Performing Silent Installations" />
+      <MSHelp:RLTitle Title="Exercise 2 - Signing a XAP Assembly and Performing Silent Installations" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2 - Signing a XAP Assembly and Performing Silent Installations</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Out of Browser with COM Interop Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2 - Signing a XAP Assembly and Performing Silent Installations</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>The introduction of elevated trust out-of-browser applications in Silverlight 4 will enable developers to push the limits of what was previously capable in the plug-in and take advantage of platform privileges that are in-accessible to sandboxed Silverlight apps. Along with this privilege comes more risk for an application to do harm to an end user’s machine.  XAP signing is introduced to offer protection from and educate end user’s on applications that may be potentially harmful. </p>
+        <p>XAP signing reassures end users of the authenticity of an application’s publisher and that the code has not been tampered with.  It has an effect on the app install experience and restricts the scenarios for update of elevated trust applications. Upon installation of an elevated trust application end user’s will be presented with dialogs as shown in Figure 4 and Figure 5.</p>
+        <p>
+          <img src="images\439f7ae8-7bd0-4a1f-9798-75fb423fa288.png" />
+        </p>
+        <p>
+          <b>Figure 4 </b>
+          <br />
+          <i>Unverified Publisher Install Dialog</i>
+        </p>
+        <p>
+          <img src="images\2b87b02a-6a95-4364-8ab6-79499beccba7.png" />
+        </p>
+        <p>
+          <b>Figure 5</b>
+          <br />
+          <i>Verified Publisher Install Dialog</i>
+        </p>
+        <p>A XAP can be signed post-build using the SignTool.exe command line tool which is present in the Windows SDK, as part of Visual Studio 2010 and a handful of other packages. XAPs must be signed using code signing certificates.</p>
+        <p>In addition to XAP signing, Silverlight out-of-browser applications can also be installed silently using sllauncher.exe. This allows applications to be installed using a .bat file or from a CD or DVD. We'll create a silent installer .bat file in Task 2 of this exercise.</p>
+        <a name="_Toc256193394" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Signing a XAP File</b>
+        </p>
+        <p>In this task you'll go through the process of signing a XAP file using the SignTool.exe command line tool.</p>
+        <ol>
+          <li>Locate the Visual Studio Command Prompt by going to Start  All Programs  Visual Studio 2010  Visual Studio Tools  Visual Studio Command Prompt.</li>
+          <li>Right-click on Visual Studio Command Prompt and select <b>Run as administrator</b>.</li>
+          <li>Type the following into the command window and then press [Enter] to go back to the root of the c drive: </li>
+          <li><b>cd \</b></li>
+          <li>Type the following into the command window and press [Enter] to create a self-signed root certificate using makecert.exe. If you get any type of arguments error after hitting [Enter] double-check what you typed against the text below.</li>
+          <li><b>makecert –n “CN=My Root Certificate Authority” –r –a sha1–sr LocalMachine –sky signature –sv OOBRootCA.pvk OOBRootCA.cer</b></li>
+          <li>When prompted for a password use <b>P@ssw0rd</b>. You'll be prompted to enter the password a few times – enter the same password each time.</li>
+          <li>Type the following into the command window and press [Enter] to create a child certificate that can be used for code signing.  It will be signed by the root certificate created earlier.</li>
+          <li><b>makecert -sv OOBCodeSigningCA.pvk -iv OOBRootCA.pvk -n "CN=OOB Code Signing CA" -ic OOBRootCA.cer OOBCodeSigningCA.cer</b></li>
+          <li>Enter <b>P@ssw0rd</b> for the password when prompted.</li>
+          <li>Generate a PFX file (contains the password and the private key in one file for convenience). Note that the same password entered earlier is used. Enter the following into the command window and press [Enter]:</li>
+          <li><b>pvk2pfx –pvk OOBCodeSigningCA.pvk –spc OOBCodeSigningCA.cer –pfx OOBCodeSigningCA.pfx –po P@ssw0rd</b></li>
+          <li>Enter <b>P@ssw0rd</b> for the password when prompted.</li>
+          <li>Copy all of the certificate files that were generated from the root c:\ folder to the lab's Ex02\begin\OOBWindows.Web\ClientBin folder.</li>
+          <li>Navigate to the <b>Ex02\begin\OOBWindows.Web\ClientBin </b>folder in the Visual Studio Command Prompt window (example command syntax: cd [Lab Folder Path]\Source\Ex02\begin\OOBWindows.Web\ClientBin).</li>
+          <li>Type the following into the command window and press [Enter] to sign the XAP file:</li>
+          <li><b>signtool sign /v /f OOBCodeSigningCA.pfx /p P@ssw0rd OOBWindows.xap</b></li>
+          <li>If the XAP was successfully signed you'll see verbiage similar to the following in the command window.<p><img src="images\94d435fc-3eb5-4d09-b26c-5e0d44344247.png" /></p><p><b>Figure 6</b><br /><i>Signing a XAP using signtool.exe</i></p></li>
+        </ol>
+        <a name="_Toc256193395" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Performing a Silent Installation</b>
+        </p>
+        <p>In this task you will create a .bat file that can be used to perform a silent installation using sllauncher.exe.  Silent installs are useful for installing a Silverlight application directly on a machine using a .bat file or from a CD or DVD.</p>
+        <ol>
+          <li>Open Windows Explorer and navigate to the lab's Source\Ex02\begin\OOBWindows.Web\ClientBin folder.</li>
+          <li>Right-click in the ClientBin folder and select New  Text Document from the menu. Name the document <b>SilentInstaller.bat</b>.</li>
+          <li>Start Visual Studio 2010 (close the existing solution if one is already open).</li>
+          <li>On the <b>File</b> menu click <b>Open</b><b>Project/Solution…</b><ol><li>Alternatively, from Visual Studio Start Page click “<b>Open Project…</b>”</li></ol></li>
+          <li> At the “Open Project” dialog navigate to the Lab folder</li>
+          <li>Navigate to “Source\Ex02\begin” folder</li>
+          <li>Click the “OOBWindows.sln” file and then click the “<b>Open</b>” button</li>
+          <li>Right-click the <b>OOBWindows.Web</b> project and select "Start as Startup Project" from the menu.</li>
+          <li>Press F5 to run the project. </li>
+          <li>Once the browser loads, note the port number that is being used in the URL.</li>
+          <li>Go back to Windows Explorer, right-click on <b>SilentInstaller.bat</b>, and select Edit from the menu.</li>
+          <li>Enter the following into the <b>SilentInstaller.bat</b> file and save the file when done. Adjust the /install switch path to point to the location of the OOBWindows.xap file and the URL defined using the /origin switch to use the port where your XAP file is hosted when the application is run in the browser.</li>
+          <li><b>"C:\Program Files\Microsoft Silverlight\sllauncher.exe" /install:"C:\[Path to Lab Folder]\Source\Ex02\end\OOBWindows.Web\ClientBin\OOBWindows.xap" /origin:"http://localhost:49786/ClientBin/OOBWindows.xap" /shortcut:desktop+startmenu /overwrite</b></li>
+          <li>Click the SilentInstaller.bat file in Windows Explorer to execute it. The OOBWindows application should be installed and an icon for it should show on the desktop.</li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

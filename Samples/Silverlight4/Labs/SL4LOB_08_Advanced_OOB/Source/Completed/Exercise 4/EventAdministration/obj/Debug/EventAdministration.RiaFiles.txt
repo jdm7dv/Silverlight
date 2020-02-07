@@ -1,0 +1,2 @@
+C:\Silverlight4\Labs\SL4LOB_08_Advanced_OOB\Source\Completed\Exercise 4\EventAdministration\Generated_Code\SlEventManager.Web.g.cs
+C:\Silverlight4\Labs\SL4LOB_08_Advanced_OOB\Source\Completed\Exercise 4\EventAdministration\Generated_Code\Models\Shared\User.shared.cs

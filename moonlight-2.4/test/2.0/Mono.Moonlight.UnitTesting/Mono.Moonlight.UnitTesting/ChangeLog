@@ -1,0 +1,31 @@
+2009-11-04  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Testing.cs:
+	* MoonLogProvider.cs: Add some debug spew.
+
+	r: alan
+
+2009-04-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Testing.cs: Add support for testing unhandled exceptions by
+	  temporarily removing the unhandled exception handler from
+	  the harness.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* TestLogger.cs:
+	* TestPlugin.cs: Add some helper classes/functions.
+
+2009-03-18  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* MoonLogProvider.cs: Add a cwl for the harness.
+
+2009-03-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* ChangeLog:
+	* Testing.cs:
+	* MoonLogProvider.cs:
+	* MoonlightBugAttribute.cs:
+	* SilverlightBugAttribute.cs: Move classes used by several
+	  unit test assembles into a separate
+	  Mono.Moonlight.UnitTesting.dll.

@@ -1,0 +1,4 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.DataVisualization.Toolkit.Expression.Design\obj\Debug\Controls.DataVisualization.Toolkit.Expression.Design.csprojAssemblyReference.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.DataVisualization.Toolkit.Expression.Design\obj\Debug\System.Windows.Controls.DataVisualization.Design.Properties.Resources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.DataVisualization.Toolkit.Expression.Design\obj\Debug\Controls.DataVisualization.Toolkit.Expression.Design.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.DataVisualization.Toolkit.Expression.Design\obj\Debug\Controls.DataVisualization.Toolkit.Expression.Design.csproj.CoreCompileInputs.cache

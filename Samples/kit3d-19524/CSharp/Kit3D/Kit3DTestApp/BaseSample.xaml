@@ -1,0 +1,7 @@
+﻿<UserControl x:Class="TestApp.BaseSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TextBlock Foreground="Black" x:Name="DebugText" Text="Debug Text"></TextBlock>
+    </Grid>
+</UserControl>

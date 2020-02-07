@@ -1,0 +1,161 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Printing a Schedule across Multiple Pages" />
+      <MSHelp:RLTitle Title="Exercise 2: Printing a Schedule across Multiple Pages" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Printing a Schedule across Multiple Pages</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 6 - Multipage Printing Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Printing a Schedule across Multiple Pages</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Although a schedule is fairly likely to fit comfortably onto a single page, and we can force it to fit uncomfortably if necessary thanks to the Viewbox, squashing things to fit on one page is not a good general-purpose solution. In practice, splitting content across multiple pages is often necessary, so we’ll modify the printing code to support this.</p>
+        <a name="_Toc256194034" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Pagination Concerns</b>
+        </p>
+        <ol>
+          <li>Run the application</li>
+          <li>Go into the schedule planner and subscribe to lots of talks. </li>
+          <li>Print the talks.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>If you added a lot of talks, you may notice the content’s font is getting smaller when printed (there is no page 2). If you get 3 or more talks in every time slot for the whole day, you’ll see that when you print, the list of talks starts to get narrower, as the Viewbox has to shrink it down to make it fit vertically. This ensures we have enough items in the schedule to make paging important.<br />To paginate the content, we’ll need to take control of how many items we show on screen at once. This means we need to stop relying on the ItemsControl to display the top-level list of groups.</td></tr></table><p /></div></li>
+          <li>Stop the application.</li>
+        </ol>
+        <a name="_Toc256194035" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add Logic for Pagination</b>
+        </p>
+        <ol>
+          <li>Add a new user control to the Views folder called ScheduleTimeSlotPrintView. </li>
+          <li>Replace ScheduleTimeSlotPrintView<b>’s</b> Grid named <b>LayoutRoot</b> with the following content:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>    &lt;Grid Margin="20,5"&gt;        &lt;Grid.RowDefinitions&gt;            &lt;RowDefinition Height="20" /&gt;            &lt;RowDefinition Height="Auto" /&gt;        &lt;/Grid.RowDefinitions&gt;        &lt;TextBlock Text="{Binding Path=Name, StringFormat=HH:mm}" /&gt;        &lt;StackPanel            x:Name="talkPanel"            Grid.Row="1"            /&gt;    &lt;/Grid&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Notice the StackPanel<b>. W</b>e are going to populate that with the talks for the time group, so this fills the role that was previously taken by the inner ItemsControl. So we’re getting rid of both ItemsControls. We’re not actually going to split individual time slots across page boundaries. All the talks from a given slot will be on the same page. However, we still can’t use the ItemsControl to generate the individual talks within a slot, albeit for a slightly different reason. <br />We’re avoiding ItemsControl at the top level so that we can paginate, but we’re avoiding a nested ItemsControl here simply because it doesn’t work. A databound ItemsControl defers the generation of its child items. While the information will be available in time to print, it won’t be available at the point at which we try to work out how many items will fit on a page. If the information for the nested items control isn’t available at that point, we can’t know how big it’s going to be. If we ask the ItemsControl how big it wants to be at that point, it will return a preferred height of 0. Since our pagination calculations need to know how big this control will be, we can’t use ItemsControl. Instead we’ll have to populate the panel manually. </td></tr></table><p /></div></li>
+          <li>Add the following using statements to the ScheduleTimeSlotPrintView.xaml.cs codebehind:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Web;using System.Windows.Data;</pre></td></tr></table></span></div></li>
+          <li>Add the following to the ScheduleTimeSlotPrintView.xaml.cs codebehind:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public void SetData(CollectionViewGroup cvg){    this.DataContext = cvg;    foreach (Talk item in cvg.Items)    {        talkPanel.Children.Add(new TextBlock        {            Text = item.TalkTitle,            FontWeight = FontWeights.Bold        });        talkPanel.Children.Add(new TextBlock        {            Text = item.TalkAbstract,            TextWrapping = TextWrapping.Wrap        });    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>For each talk this will generate a title and an abstract, just like the template we had previously been using did.</td></tr></table><p /></div></li>
+          <li>Open SchedulePrintView.xaml, find the Viewbox. </li>
+          <li>Delete the <b>Viewbox</b> and its contents. Replace it with the following <b>Border</b>:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Border    x:Name="timeSlotContainer"    Grid.Row="2"    /&gt;</pre></td></tr></table></span></div></li>
+          <li>Add the following using statements to the SchedulePrintView.xaml.cs codebehind:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Windows.Data;</pre></td></tr></table></span></div></li>
+          <li>In the SchedulePrintView.xaml.cs code behind, add this method which builds a panel containing the talks:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public int PopulatePage(IEnumerable&lt;object&gt; items, int startingPoint){    double containerWidth = timeSlotContainer.ActualWidth;    double containerHeight = timeSlotContainer.ActualHeight;    StackPanel timeSlotPanel = new StackPanel();    timeSlotPanel.Width = containerWidth;    timeSlotContainer.Child = timeSlotPanel;    int itemsAdded = 0;    this.UpdateLayout();    foreach (object item in items.Skip(startingPoint))    {        ScheduleTimeSlotPrintView uc = new ScheduleTimeSlotPrintView();        uc.SetData((CollectionViewGroup) item);        uc.DataContext = item;        timeSlotPanel.Children.Add(uc);        this.UpdateLayout();        timeSlotPanel.Measure(new Size(containerWidth, double.PositiveInfinity));        if (timeSlotPanel.DesiredSize.Height &gt; containerHeight &amp;&amp; itemsAdded &gt; 0)        {            timeSlotPanel.Children.Remove(uc);            break;        }        itemsAdded += 1;    }    return itemsAdded;}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The purpose of this code is to put as many items onto the current page as will fit. The code relies on Silverlight’s layout system to do most of the work. It creates a StackPanel (timeSlotPanel), which will contain the items to be printed for this page, and adds child items one at a time. Each time round the loop, we call this.UpdateLayout() to get Silverlight to lay the page out based on its current content. <br />Then we find out how much space is required by the items we’ve added so far by calling Measure on the StackPanel. It’s fairly unusual to call this directly, because Silverlight calls Measure for you on all your UI elements as part of the layout mechanism to find out how much space they would like. But even though Measure will have been called here during UpdateLayout, the layout process goes on to do further work, and by the time UpdateLayout returns, we will know how much space the StackPanel has been allocated in the final layout, whereas what we really want to know is how much it wanted: it may have been allocated less space than it desired. (And if that happens, it means we’ve tried to put more items on the page than will fit.)<br />We call Measure ourselves, passing in double.PositiveInfinity as the height. This requests a vertically unconstrained layout:  a mode of layout in which the element is required to work out how much space it would like in an ideal world, if there were no constraints. (Note that we constrain the width—we are essentially asking “If you were this wide, how tall would you need to be for all your contents to fit?”) If the StackPanel would like more space than is actually available, we know that adding this last item pushed us just past the point where the items will fit. We remove the last item to get back to a point where we’ve not overfilled the page, and then break out of the loop. The code returns the number of items that it added, so that the calling code knows whether it needs to print more pages, and if so, what item it should start at for the next page.</td></tr></table><p /></div></li>
+          <li>In SchedulePlanner.xaml.cs, find the print button click handler. </li>
+          <li>Add this variable to the start of the method (this tracks the number of items that have been printed so far)<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>int totalItemsPrinted = 0;</pre></td></tr></table></span></div></li>
+          <li>Then immediately after the line that sets the PageVisual property, add this code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>totalItemsPrinted += printView.PopulatePage(    printViewModel.Talks.Groups, totalItemsPrinted);pe.HasMorePages = totalItemsPrinted &lt; printViewModel.Talks.Groups.Count;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This calls the code you just added to populate the current page, and then works out whether it needs more pages after this one.</td></tr></table><p /></div></li>
+          <li>Run the application and print the schedule to an XPS file. You should now find it prints across two pages:<p><img src="images\f993a2ec-871c-4b2e-8234-fd5c842fb7f8.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 2</b>
+          <br />
+          <i>Printing Multiple Pages of Content</i>
+        </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>With multipage printouts it’s often useful to add page numbers. This is relatively straightforward to achieve. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <a name="_Toc256194036" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Page Numbering</b>
+        </p>
+        <ol>
+          <li>Open the SchedulePrintViewModel class add the following property:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public int PageNumber { get; set; }</pre></td></tr></table></span></div></li>
+          <li>In SchedulePlanner.xaml.cs, go to the print click handler. </li>
+          <li>After the totalItemsPrinted variable, add another variable to track the current page:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>int currentPage = 1;</pre></td></tr></table></span></div></li>
+          <li>Find the code that constructs a SchedulePrintViewModel using the C# object initializer to set the properties.</li>
+          <li>Add one more property initializer to set the PageNumber property to currentPage++. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The increment operator will ensure the page number goes up each time.</td></tr></table><p /></div></li>
+          <li>In SchedulePrintView.xaml, find the Grid.RowDefinitions section near the top.</li>
+          <li> Add a fourth RowDefinition with a Height of Auto. </li>
+          <li>Inside the <b>Grid</b>, add the following <b>TextBox</b>:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;TextBlock    Grid.Row="3"    Text="{Binding Path=PageNumber}"    HorizontalAlignment="Center"    /&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application and print again. This time you should see page numbers at the bottom of the page.</li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

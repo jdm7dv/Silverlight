@@ -1,0 +1,18 @@
+<Canvas xmlns="http://schemas.microsoft.com/client/2007"   
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Loaded="onCanvasLoaded"
+        KeyUp="OnKeyUp" >
+
+  <Canvas.Resources>
+    <Storyboard x:Name="AnimationLoop" Completed="AnimationManager_OnFrameComplete" Duration="0:0:0.016" />
+  </Canvas.Resources>
+
+  <Canvas x:Name="RenderTarget" Visibility="Visible" Canvas.Top="0" Canvas.Left="0" Width="800" Height="800"
+                MouseMove="OnCanvasMouseMove" Background="Black">
+        </Canvas>
+
+        <TextBlock Visibility="Visible" x:Name="Info123" Foreground="White" Text="Press space to reload images (make sure to click the canvas first)" ></TextBlock>
+        
+        <TextBlock Visibility="Collapsed" x:Name="FrameRateCounter"></TextBlock>
+        <TextBlock Visibility="Collapsed" x:Name="DebugText" Foreground="White"></TextBlock>
+</Canvas>

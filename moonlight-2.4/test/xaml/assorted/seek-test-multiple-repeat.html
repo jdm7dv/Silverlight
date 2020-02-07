@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Seeking on animation with SpeedRatio</title>
+<meta></meta>
+</head>
+<body>
+
+<script type="text/javascript">
+function OnMousePressed (sender, eventArgs)
+{
+	sender.findName ("animation").Begin ();
+	sender.findName ("animation").Seek ("00:00:6.5");
+}
+</script>
+
+<object type="application/x-silverlight" data="data:," id="slControl" width="640" height="480">
+<param name="background" value="#FFFFFF"/>
+<param name="source" value="#xamlContent"/>
+</object>
+
+<script type="text/xaml" id="xamlContent">
+<?xml version="1.0"?>
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+
+  <Rectangle Canvas.Top="0" Canvas.Left="0" Width="120" Height="30" Fill="#eeeeee"/>  
+	<Rectangle Canvas.Left="50" Canvas.Top="7" Width="20" Height="3" Fill="Black"/>
+  <Rectangle x:Name="rect" Canvas.Top="10" Canvas.Left="0" Width="20" Height="10" Fill="#020880" MouseLeftButtonDown="OnMousePressed"/>  
+
+	<Canvas.Resources>
+ <Storyboard x:Name="animation" 
+          BeginTime="0:0:0"
+        >
+          <DoubleAnimation
+            Storyboard.TargetName="rect"
+            Storyboard.TargetProperty="(Canvas.Left)"
+            Duration="00:00:01"
+            AutoReverse="true"
+            RepeatBehavior="4x"
+            From="0" To="100" 
+          />
+        </Storyboard>
+
+	</Canvas.Resources>
+</Canvas>
+</script>
+
+</body>
+</html>

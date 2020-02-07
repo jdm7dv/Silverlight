@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Kit3D : 3D Javascript engine for Silverlight : 3D photo viewer</title>
+    
+    <script language="javascript" src="..\..\Kit3D\core\Silverlight.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Camera.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\GeometryModel.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\SceneGraph.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\SceneNode.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Vertex.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Viewport.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\Face.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\Core\DebugHelper.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\XamlFactory.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\AnimationManager.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\core\IdGenerator.js"></script>
+    <script language="javascript" src="..\..\Kit3D\core\InputManager.js"></script>
+    <script language="javascript" src="..\..\Kit3D\core\GeometryManager.js"></script>
+    <script language="javascript" src="..\..\Kit3D\math\Frustum.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\MathHelper.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Matrix3x3.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Matrix4x4.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Plane.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Vector3.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\math\Vector4.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\materials\TextureMaterial.js" ></script>
+    <script language="javascript" src="..\..\Kit3D\materials\SolidMaterial.js" ></script>
+    
+    <script language="javascript">    
+    
+    //Called each time a frame completes
+    var g_startingFrame = -1;
+    function OnDemoFrameCompleted(frameCount)
+    {        
+        if(g_loadImages)
+        {
+            if(g_startingFrame == -1)
+            {
+                g_startingFrame = frameCount;
+            }
+            LoadImages(frameCount - g_startingFrame);
+        }
+        
+        //Every frame need to render the new scene
+        g_viewPort.Render();
+    }
+    
+    //Indicates the last entered geometry node
+    var g_lastEnteredTile = null
+    
+    //The trasnform that makes the picture pop forwards
+    var g_popTransform = Matrix4x4_ScalingMatrix(1.7, 1.7, 1).Multiply(Matrix4x4_TranslateMatrix(0,0,-45));
+    var g_restoreTransform = Matrix4x4_ScalingMatrix(1.0/1.7, 1.0/1.7, 1).Multiply(Matrix4x4_TranslateMatrix(0,0,45));
+    
+    //Called when the user mouses over a geometry face
+    function OnTileMouseEnter(geometryModel, mouseEventArgs)
+    {
+       var sceneNode = geometryModel.GetSceneNode();
+
+        //If there is already a tile that is popped up, need to 
+        //put it back
+        if(g_lastEnteredTile != null)
+        {
+            RestoreTilePosition(g_lastEnteredTile);
+        }
+       
+        g_lastEnteredTile = geometryModel;
+       
+        //Make the tile pop forwards
+        sceneNode.SetLocalTransform(g_popTransform.Multiply(sceneNode.GetLocalTransform()));
+    }
+    
+    function RestoreTilePosition(geometryModel)
+    {
+        var sceneNode = geometryModel.GetSceneNode();
+
+        //Restore the tile to its original location in world space
+        sceneNode.SetLocalTransform(g_restoreTransform.Multiply(sceneNode.GetLocalTransform()));
+    }
+    
+    //This is the object that creates all of the media tiles, the grid
+    //holds all of the images
+    function MediaGrid(width, height, columnCount, rowCount, columnMargin, rowMargin, imageList)
+    {
+        this._gridWidth = width;
+        this._gridHeight = height;
+        this._columnCount = columnCount;
+        this._rowCount = rowCount;
+        
+        //Create the scene graph that will hold all of the tiles
+        this._sceneGraph = new SceneGraph();        
+        
+        //Contains all of the tile instances
+        this._mediaTiles = new Array(rowCount * columnCount);
+        
+        //Need to calculate the width/height of an individual tile
+        //based on the width of the grid and the space between the tiles
+        var tileWidth = (this._gridWidth - (this._columnCount-2) * columnMargin) / this._columnCount;
+        var tileHeight = (this._gridHeight - (this._rowCount-2) * rowMargin) / this._rowCount;
+        
+        //Create all of the tiles.
+        for(var x=0; x<this._columnCount; ++x)
+        {
+            for(var y=0; y<this._rowCount; ++y)
+            {
+                //We want to center around 0,0 since this will be our pivot point
+                var top = (y * tileHeight + y * rowMargin) - (this._gridHeight / 2);
+                var left = (x * tileWidth + x * columnMargin) - (this._gridWidth / 2);
+                
+                this._mediaTiles[x*this._columnCount + y] = new MediaTile(tileWidth,
+                                                                          tileHeight,
+                                                                          top,
+                                                                          left,
+                                                                          this._sceneGraph.Root,
+                                                                          imageList[x*this._columnCount + y]);
+            }
+        }
+    }
+    
+    MediaGrid.prototype = 
+    {
+        GetSceneGraph: function()
+        {
+            return this._sceneGraph;
+        },
+        
+        GetMediaTiles: function()
+        {
+            return this._mediaTiles;
+        }
+    }
+    
+    //This is an individual tile in the media grid
+    function MediaTile(tileWidth, tileHeight, top, left, parentNode, mediaUri)
+    {
+        this._width = tileWidth;
+        this._height = tileHeight;
+
+        //Create the geometry model representation of the tile
+        this._geometryModel = GeometryManager_GetInstance().CreateGeometry();
+        
+        //Need to define the individual points, these will be in a local space
+        //centered around the middle of the tile at 0,0
+        var vertices = new Array();
+        vertices[vertices.length] = new Vertex(new Vector3(-10, -10, 10), 255, 0, 0, 0.0, 1.0);
+        vertices[vertices.length] = new Vertex(new Vector3(10, 10, 10), 255, 0, 0, 1.0, 0.0);
+        vertices[vertices.length] = new Vertex(new Vector3(10, -10, 10), 255, 0, 0, 1.0, 1.0);
+        vertices[vertices.length] = new Vertex(new Vector3(-10, -10, 10), 255, 0, 0, 0.0, 1.0);
+        vertices[vertices.length] = new Vertex(new Vector3(-10, 10, 10), 255, 0, 0, 0.0, 0.0);
+        vertices[vertices.length] = new Vertex(new Vector3(10, 10, 10), 255, 0, 0, 1.0, 0.0);
+        this._geometryModel.SetVertices(vertices);
+        
+        //We want the tile to have a texture material containg the picture of the URL
+        //passed into the constructor
+        this._geometryModel.SetFrontMaterial(new TextureMaterial(mediaUri, 226,169));
+        
+        
+        //Front Face - face normals are determined using the left hand rule, so pass in vertices
+        //in a clockwise order to set the face normal to point towards the camera
+        this._geometryModel.AddFace(0, 1, 2);
+        this._geometryModel.AddFace(3, 4, 5);
+        this._sceneNode = new SceneNode(this._geometryModel);
+        
+        //Set the local transform, to move each tile to the correct location
+        //in world space, each tile will have a different z value to show off
+        //the 3D effect
+        var z = Math.random() * 50;
+        this._originalTransform = Matrix4x4_ScalingMatrix(tileWidth/20, tileHeight/20, 1).Multiply(
+                                            Matrix4x4_TranslateMatrix(left, top, -z));
+        
+        this.ResetPosition();           
+        
+        //Add this tile to the overall scene
+        parentNode.AddChild(this._sceneNode);
+    }
+    
+    MediaTile.prototype = 
+    {        
+        GetSceneNode: function()
+        {
+            return this._sceneNode;
+        },
+        
+        ResetPosition: function()
+        {
+            this._sceneNode.SetLocalTransform(this._originalTransform);
+        }
+    }
+
+    function pageLoaded()
+    {
+        //As soon as the page is loaded we will create the silverlight control
+        //then once this control loads we will create all of the Javascript goodness
+        Silverlight.createObjectEx(
+            {source: 'Kit3DCanvas.xaml', 
+             parentElement:document.getElementById('silverlightControl'), 
+             id:'Ag1', 
+             properties:{width:'800', 
+                         height:'800', 
+                         background:'#fff0f0f0', 
+                         isWindowless:'true', 
+                         version:'0.90.0'}, 
+             events:{onError:null, 
+                     onLoad:null}, 
+                     context:null});
+    }
+   
+    //Called once the Silverlight control is loaded
+    var g_viewPort = null;
+    var g_mediaGrid = null;
+    
+    function onCanvasLoaded(sender, eventArgs)
+    {        
+        //Need to call this once to initialize it, otherwise
+        //elements cannot be added to the silverlight host, you
+        //must call this before doing anything
+        XamlFactory_GetInstance(sender);
+
+        //Create a list of images
+        var gridColumnCount = 6;
+        var gridRowCount = 6;
+        var imageList = CreateImageList(gridColumnCount * gridRowCount);
+        
+        //Create the media grid that holds all of the image tiles
+        g_mediaGrid = new MediaGrid(250, 250, gridColumnCount, gridRowCount, 1, 1, imageList);
+        
+        //Need to create a viewport and render the contents
+        var camera = new Camera(new Vector3(0, 0, -450),
+                                new Vector3(0, 0, 0),
+                                new Vector3(0, 1, 0),
+                                Math.PI / 4);
+        g_viewPort = new Viewport(0, 0, 800, 800, camera);
+        
+        //Have the set the content that we want rendered
+        g_viewPort.SetSceneGraph(g_mediaGrid.GetSceneGraph());
+        
+        //Setup the function we want to call when the user enters a tile with
+        //the mouse cursor
+        InputManager_GetInstance().SetOnMouseEnterCallback(OnTileMouseEnter);
+        
+        //Start the animation, we also need to set the method we want
+        //to call each time a frame completes, this will be used to
+        //animate our models in some way
+        AnimationManager_GetInstance().SetOnFrameCompleteCallback(OnDemoFrameCompleted);
+        AnimationManager_GetInstance().SetFrameRate(20);
+        AnimationManager_GetInstance().Start();
+    }
+    
+    //Creates a list of images the user wants to view
+    //NOTE: You can change this function to show your own pics
+    function CreateImageList(imageCount)
+    {
+        var imageList = new Array(imageCount);
+        
+        //We have upto 36 unique images
+        for(var i=0; i<Math.min(36, imageCount); ++i)
+        {
+            imageList[i] = 'pics/pic' + (i+1) + '.jpg'
+        }
+        
+        //If user wants more, just use random images between 1 and 36
+        //see pics dir for images
+        if(imageCount > 36)
+        {
+            for(var i=0; i<imageCount-36; ++i)
+            {
+                var randomIndex = 1 + Math.floor(Math.random() * 35);
+                imageList[36+i] = 'pics/pic' + randomIndex + '.jpg'
+            }
+        }
+        
+        return imageList;
+    }
+    
+    function LoadImages(frameCount)
+    {
+        //Loop through each scene node moving it down
+        var mediaTiles = g_mediaGrid.GetMediaTiles();
+        
+        if(frameCount > 50)
+        {
+            for(var i=0; i<mediaTiles.length; ++i)
+            {
+                mediaTiles[i].ResetPosition(); 
+            }
+            
+            g_startingFrame = -1;
+            g_loadImages = false;
+            
+        }
+        else
+        {      
+            //Make the tiles fall of the bottom of the screen in a delayed
+            //motion
+            for(var i=0; i<mediaTiles.length; ++i)
+            {
+                mediaTiles[i].GetSceneNode().SetLocalTransform(mediaTiles[i].GetSceneNode().GetLocalTransform().Multiply(Matrix4x4_TranslateMatrix(0,-1 * frameCount,0)));
+                if(frameCount % 50 < i) return;
+                
+                if(i == mediaTiles.length)
+                {
+                    g_loadImages = false;
+                }
+            }
+        }
+    }
+    
+    //When the mouse moves, we want to move the camera around which
+    //makes the grid look like it is moving
+    function OnCanvasMouseMove(sender, mouseEventArgs)
+    {
+        var cameraPosition = g_viewPort.GetCamera().Position;
+        var x = mouseEventArgs.getPosition(null).x;
+        var y = mouseEventArgs.getPosition(null).y;
+        
+        //When the mouse moves, we want to move the camera around, we will also
+        //move the camer backwards and forwards as well to make the grid move further
+        //away from the viewer as the mouse moves to the extreme of the viewport                  
+        g_viewPort.SetCamera(new Camera(new Vector3(1.5*(x-400), -1.5*(y-300), -450 - Math.abs(x-300) * 0.1),
+                             new Vector3(0, 0, 0),
+                             new Vector3(0, 1, 0),
+                             Math.PI / 4));
+                                
+        //IMPORTANT: Don't try to call Render here, there are two many
+        //mouse events for the rendering to keep up, only call Render
+        //inside the animation loop, which has a steady controlled framerate
+    }
+    
+    var g_loadImages = false;
+    function OnKeyUp(sender, keyEventArgs)
+    {
+        if (keyEventArgs.key == 9)
+        {
+            //This indicates to the OnframeCompleted event we want 
+            //to reload the images
+            g_loadImages = true;
+        }
+    }
+
+    </script>
+</head>
+
+<body onload="pageLoaded();">
+    <div id="silverlightControl" style="width:600px; height:600px;">
+    </div>
+</body>
+</html>

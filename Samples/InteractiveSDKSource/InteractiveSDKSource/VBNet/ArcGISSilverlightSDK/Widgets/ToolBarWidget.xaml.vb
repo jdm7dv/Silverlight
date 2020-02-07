@@ -1,0 +1,163 @@
+﻿Imports System
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Net
+Imports System.Windows
+Imports System.Windows.Controls
+Imports System.Windows.Documents
+Imports System.Windows.Input
+Imports System.Windows.Media
+Imports System.Windows.Media.Animation
+Imports System.Windows.Shapes
+Imports ESRI.ArcGIS.Client
+Imports ESRI.ArcGIS.Client.Geometry
+
+Namespace ArcGISSilverlightSDK
+    Partial Public Class ToolBarWidget
+        Inherits UserControl
+        Private _toolMode As String = ""
+        Private _extentHistory As New List(Of Envelope)()
+        Private _currentExtentIndex As Integer = 0
+        Private _newExtent As Boolean = True
+
+        Private _previousExtentImage As Image
+        Private _nextExtentImage As Image
+        Private MyDrawObject As Draw
+
+        Public Sub New()
+            InitializeComponent()
+            MyDrawObject = New Draw(MyMap) With {.FillSymbol = DefaultFillSymbol, .DrawMode = DrawMode.Rectangle}
+
+            AddHandler MyDrawObject.DrawComplete, AddressOf myDrawObject_DrawComplete
+        End Sub
+
+        Private Sub MyToolbar_Loaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
+            _previousExtentImage = TryCast(MyToolbar.Items(3).Content, Image)
+            _nextExtentImage = TryCast(MyToolbar.Items(4).Content, Image)
+        End Sub
+
+        Private Sub MyToolbar_ToolbarItemClicked(ByVal sender As Object, ByVal e As ESRI.ArcGIS.Client.Toolkit.SelectedToolbarItemArgs)
+            MyDrawObject.IsEnabled = False
+            _toolMode = ""
+            Select Case e.Index
+                Case 0 ' ZoomIn Layers
+                    MyDrawObject.IsEnabled = True
+                    _toolMode = "zoomin"
+                Case 1 ' Zoom Out
+                    MyDrawObject.IsEnabled = True
+                    _toolMode = "zoomout"
+                Case 2 ' Pan
+                Case 3 ' Previous Extent
+                    If _currentExtentIndex <> 0 Then
+                        _currentExtentIndex -= 1
+
+                        If _currentExtentIndex = 0 Then
+                            _previousExtentImage.Opacity = 0.3
+                            _previousExtentImage.IsHitTestVisible = False
+                        End If
+
+                        _newExtent = False
+
+                        MyMap.IsHitTestVisible = False
+                        MyMap.ZoomTo(_extentHistory(_currentExtentIndex))
+
+                        If _nextExtentImage.IsHitTestVisible = False Then
+                            _nextExtentImage.Opacity = 1
+                            _nextExtentImage.IsHitTestVisible = True
+                        End If
+                    End If
+                Case 4 ' Next Extent
+                    If _currentExtentIndex < _extentHistory.Count - 1 Then
+                        _currentExtentIndex += 1
+
+                        If _currentExtentIndex = (_extentHistory.Count - 1) Then
+                            _nextExtentImage.Opacity = 0.3
+                            _nextExtentImage.IsHitTestVisible = False
+                        End If
+
+                        _newExtent = False
+
+                        MyMap.IsHitTestVisible = False
+                        MyMap.ZoomTo(_extentHistory(_currentExtentIndex))
+
+                        If _previousExtentImage.IsHitTestVisible = False Then
+                            _previousExtentImage.Opacity = 1
+                            _previousExtentImage.IsHitTestVisible = True
+                        End If
+                    End If
+                Case 5 ' Full Extent
+                    MyMap.ZoomTo(MyMap.Layers.GetFullExtent())
+                Case 6 ' Full Screen
+                    Application.Current.Host.Content.IsFullScreen = Not Application.Current.Host.Content.IsFullScreen
+            End Select
+        End Sub
+
+        Private Sub MyToolbar_ToolbarIndexChanged(ByVal sender As Object, ByVal e As ESRI.ArcGIS.Client.Toolkit.SelectedToolbarItemArgs)
+            StatusTextBlock.Text = e.Item.Text
+        End Sub
+
+        Private Sub myDrawObject_DrawComplete(ByVal sender As Object, ByVal args As DrawEventArgs)
+            If _toolMode = "zoomin" Then
+                MyMap.ZoomTo(TryCast(args.Geometry, ESRI.ArcGIS.Client.Geometry.Envelope))
+            ElseIf _toolMode = "zoomout" Then
+                Dim currentExtent As Envelope = MyMap.Extent
+
+                Dim zoomBoxExtent As Envelope = TryCast(args.Geometry, Envelope)
+                Dim zoomBoxCenter As MapPoint = zoomBoxExtent.GetCenter()
+
+                Dim whRatioCurrent As Double = currentExtent.Width / currentExtent.Height
+                Dim whRatioZoomBox As Double = zoomBoxExtent.Width / zoomBoxExtent.Height
+
+                Dim newEnv As Envelope = Nothing
+
+                If whRatioZoomBox > whRatioCurrent Then
+                    ' use width
+                    Dim mapWidthPixels As Double = MyMap.Width
+                    Dim multiplier As Double = currentExtent.Width / zoomBoxExtent.Width
+                    Dim newWidthMapUnits As Double = currentExtent.Width * multiplier
+                    newEnv = New Envelope(New MapPoint(zoomBoxCenter.X - (newWidthMapUnits / 2), zoomBoxCenter.Y), New MapPoint(zoomBoxCenter.X + (newWidthMapUnits / 2), zoomBoxCenter.Y))
+                Else
+                    ' use height
+                    Dim mapHeightPixels As Double = MyMap.Height
+                    Dim multiplier As Double = currentExtent.Height / zoomBoxExtent.Height
+                    Dim newHeightMapUnits As Double = currentExtent.Height * multiplier
+                    newEnv = New Envelope(New MapPoint(zoomBoxCenter.X, zoomBoxCenter.Y - (newHeightMapUnits / 2)), New MapPoint(zoomBoxCenter.X, zoomBoxCenter.Y + (newHeightMapUnits / 2)))
+                End If
+
+                If newEnv IsNot Nothing Then
+                    MyMap.ZoomTo(newEnv)
+                End If
+            End If
+        End Sub
+
+        Private Sub MyMap_ExtentChanged(ByVal sender As Object, ByVal e As ExtentEventArgs)
+            If e.OldExtent Is Nothing Then
+                _extentHistory.Add(e.NewExtent.Clone())
+                Return
+            End If
+
+            If _newExtent Then
+                _currentExtentIndex += 1
+
+                If _extentHistory.Count - _currentExtentIndex > 0 Then
+                    _extentHistory.RemoveRange(_currentExtentIndex, (_extentHistory.Count - _currentExtentIndex))
+                End If
+
+                If _nextExtentImage.IsHitTestVisible = True Then
+                    _nextExtentImage.Opacity = 0.3
+                    _nextExtentImage.IsHitTestVisible = False
+                End If
+
+                _extentHistory.Add(e.NewExtent.Clone())
+
+                If _previousExtentImage.IsHitTestVisible = False Then
+                    _previousExtentImage.Opacity = 1
+                    _previousExtentImage.IsHitTestVisible = True
+                End If
+            Else
+                MyMap.IsHitTestVisible = True
+                _newExtent = True
+            End If
+        End Sub
+    End Class
+End Namespace

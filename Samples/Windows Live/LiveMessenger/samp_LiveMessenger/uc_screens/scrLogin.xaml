@@ -1,0 +1,121 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="samp_LiveMessenger.scrLogin"
+	d:DesignWidth="640" d:DesignHeight="880" 
+    xmlns:samp_LiveMessenger="clr-namespace:samp_LiveMessenger"
+    MouseLeftButtonDown="Page_MouseLeftButtonDown"
+    >
+
+	<Grid x:Name="LayoutRoot" Background="White" >
+		<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="100"/>
+    		<ColumnDefinition Width="400"/>
+    		<ColumnDefinition Width="*"/>
+    	</Grid.ColumnDefinitions>
+		<Grid Height="Auto" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1">
+			<Grid.RowDefinitions>
+    			<RowDefinition Height="20"/>
+    			<RowDefinition Height="*"/>
+    			<RowDefinition Height="30"/>
+    		</Grid.RowDefinitions>
+			<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="1" ShowGridLines="False" x:Name="grdMessenger">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="130"/>
+				</Grid.RowDefinitions>
+                
+                <!-- HEADER -->
+                <Path HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Data="M5.0000019,0 L380,0 C382.76141,4.3213367E-07 385,2.2385767 385,5.0000019 L385,34 L385,41 L385,73 L0,73 L0,41 L0,34 L0,5.0000019 C0,2.2385767 2.2385762,4.3213367E-07 5.0000019,0 z" Stretch="Fill">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFB4CFDC"/>
+                            <GradientStop Color="#FFBFE3F4" Offset="0.103"/>
+                            <GradientStop Color="#FFE6F5FB" Offset="0.92900002002716064"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" ShowGridLines="False" x:Name="grdHeader">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="120"/>
+					</Grid.ColumnDefinitions>
+					<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" ShowGridLines="False" Grid.Column="1" x:Name="grdHeaderRight">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.367*"/>
+							<RowDefinition Height="0.633*"/>
+						</Grid.RowDefinitions>
+						<Grid x:Name="grdTopButtons" Grid.Row="0" Margin="5,0,10,2.01999998092651" >
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="25"/>
+								<ColumnDefinition Width="25"/>
+								<ColumnDefinition Width="45.18"/>
+                                <ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+                            <Button HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Content="Button" x:Name="butMin" Template="{StaticResource MSNMinimize}" />
+                            <Button HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="2" Content="Button" x:Name="butClose" Template="{StaticResource MSNClose}" />
+                            <Button HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1" Content="Button" x:Name="butMax" Template="{StaticResource MSNMaximize}" />
+                        </Grid>
+						<Button HorizontalAlignment="Right" Margin="0,5,10,0" VerticalAlignment="Top" Grid.Row="1" Content="Button" Width="52" Height="20" Template="{StaticResource MSNHelp}" MouseLeftButtonDown="showHelpPre" MouseLeftButtonUp="showHelpPost" x:Name="butHelp"/>
+					</Grid>
+					<samp_LiveMessenger:ucLogo Margin="2,3,0,0" VerticalAlignment="Top" Width="250" Height="17" HorizontalAlignment="Left"/>
+				</Grid>
+
+                <!-- BODY -->
+                <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="1" RadiusX="0" RadiusY="0" Fill="#FFE6F5FB"/>
+                <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="1" ShowGridLines="False" d:LayoutOverrides="GridBox" x:Name="grdBody">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" MinHeight="130" />
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                	<samp_LiveMessenger:ucAvatar Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                	<StackPanel HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Row="1" Width="250" Height="100">
+                		<TextBlock Height="14" Text="E-mail address:" TextWrapping="Wrap" FontFamily="Arial" FontSize="11" VerticalAlignment="Stretch"/>
+                		<samp_LiveMessenger:ucLoginTextbox Height="20" x:Name="txtLogin"/>
+                		<TextBlock Height="20" Text="Password:" TextWrapping="Wrap" FontFamily="Arial" FontSize="11" VerticalAlignment="Stretch" Padding="0,6,0,0"/>
+                		<TextBox Height="20" Text="" FontFamily="Arial" FontSize="12" x:Name="txtPassword" BorderBrush="#FFA5A5A5"/>
+                		<StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="30">
+                			<TextBlock Height="14" Text="Sign in as:" TextWrapping="Wrap" FontFamily="Arial" FontSize="11"/>
+                			<Button Height="20" Width="105" Content="Button" x:Name="butStatus" Template="{StaticResource MSNStatus}" MouseLeftButtonDown="showStatusPre" MouseLeftButtonUp="showStatusPost"  />
+                		</StackPanel>
+
+                	</StackPanel>
+                	<StackPanel HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Row="2" Width="250">
+                		<CheckBox Height="20" Content="Remember me" x:Name="chkRememberMe" HorizontalAlignment="Stretch" Margin="4,0,0,0" FontFamily="Arial" HorizontalContentAlignment="Left"/>
+                		<HyperlinkButton Height="20" x:Name="hlkForgetMe" MouseEnter="hlk_MouseEnter" MouseLeave="hlk_MouseLeave" Content="(Forget me)" Margin="24,7,0,0"/>
+                		<CheckBox HorizontalContentAlignment="Left" Height="20" x:Name="chkRememberMyPassword" Content="Remember my password" FontFamily="Arial" Margin="4,2,0,0"/>
+                		<CheckBox HorizontalContentAlignment="Left" Height="20" x:Name="chkAutoSignIn" Content="Sign me in automatically" FontFamily="Arial" Width="Auto" Margin="4,7,0,0"/>
+                	</StackPanel>
+                	<Button Height="20" HorizontalAlignment="Left" Margin="155.875,18.1499996185303,0,0" Template="{StaticResource MSNSignIn}" VerticalAlignment="Top" Grid.Row="3" Content="Sign in" x:Name="butSignIn" Width="70"/>
+                </Grid>
+
+
+                <!-- FOOTER -->
+                <Path HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Data="M0,0 L400,0 L400,16.999996 L400,39.999996 L400,76 C400,78.761421 397.76141,81 395,81 L5.000001,81 C2.2385762,81 0,78.761421 0,76 L0,39.999996 L0,16.999996 L0,0 z" Fill="#FFE6F5FB" Stretch="Fill" Grid.Row="2"/>
+				<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="2" ShowGridLines="False" x:Name="grdFooter">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="25"/>
+					</Grid.RowDefinitions>
+					<samp_LiveMessenger:ucWindowsLiveLogo HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top" Grid.Row="1" Width="200" Height="20"/>
+					<StackPanel HorizontalAlignment="Center" Margin="0,10,0,19" VerticalAlignment="Center" Width="250">
+						<HyperlinkButton Height="18" x:Name="hlkForgotPassword" Content="Forgot your password?" MouseEnter="hlk_MouseEnter" MouseLeave="hlk_MouseLeave" NavigateUri="https://account.live.com/ResetPassword.aspx?mkt=EN-US"/>
+						<HyperlinkButton Height="18" x:Name="hlkServiceStatus" Content="Service status" MouseEnter="hlk_MouseEnter" MouseLeave="hlk_MouseLeave" NavigateUri="http://g.msn.com/5meen_ms/55"/>
+						<HyperlinkButton Height="18" x:Name="hlkSignUp" Content="Sign up for a Windows Live ID" MouseEnter="hlk_MouseEnter" MouseLeave="hlk_MouseLeave" NavigateUri="http://get.live.com/getlive/overview"/>
+						<HyperlinkButton Height="18" x:Name="hlkPrivacyStatement" Content="Privacy statement" MouseEnter="hlk_MouseEnter" MouseLeave="hlk_MouseLeave" NavigateUri="http://privacy.microsoft.com/en-us/default.aspx"/>
+					</StackPanel>
+				</Grid>
+                
+
+			</Grid>
+		</Grid>
+		<Rectangle Height="26" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Column="2" Fill="#FFFFB800" Width="114"/>
+		<HyperlinkButton Height="17" HorizontalAlignment="Right" Margin="0,8,8,0" x:Name="hlkBackToBlog" VerticalAlignment="Top" Grid.Column="2" Content="Back to Blog" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFFFFFF" NavigateUri="http://www.cynergysystems.com/blogs/page/josefajardo?entry=live_messenger_login_screen_ui"/>
+	</Grid>
+</UserControl>

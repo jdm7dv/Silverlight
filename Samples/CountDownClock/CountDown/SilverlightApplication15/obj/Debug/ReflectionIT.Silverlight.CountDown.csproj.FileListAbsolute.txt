@@ -1,0 +1,30 @@
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\Bin\Debug\favicon.ico
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\Bin\Debug\ReflectionIT.Silverlight.CountDown.dll
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\Bin\Debug\ReflectionIT.Silverlight.CountDown.pdb
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\Bin\Debug\AppManifest.xaml
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\Bin\Debug\ReflectionIT.Silverlight.CountDown.xap
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\Bin\Debug\TestPage.html
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\App.g.i.cs
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\FlipClock.g.i.cs
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\Flipper.g.i.cs
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\MainPage.g.i.cs
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\ReflectionIT.Silverlight.CountDown.g.resources
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\ReflectionIT.Silverlight.CountDown.dll
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\ReflectionIT.Silverlight.CountDown.pdb
+D:\Projects\Silverlight\v4\CountDown\SilverlightApplication15\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\Bin\Debug\favicon.ico
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\Bin\Debug\TestPage.html
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\App.g.i.cs
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\FlipClock.g.i.cs
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\Flipper.g.i.cs
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\MainPage.g.i.cs
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\Bin\Debug\Silverlight.CountDown.xap
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\Bin\Debug\ReflectionIT.Silverlight.CountDown.dll
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\Bin\Debug\ReflectionIT.Silverlight.CountDown.pdb
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\ReflectionIT.Silverlight.CountDown.g.resources
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\ReflectionIT.Silverlight.CountDown.dll
+C:\Users\Jonathan Moore\Desktop\CountDownClock\CountDown\SilverlightApplication15\obj\Debug\ReflectionIT.Silverlight.CountDown.pdb

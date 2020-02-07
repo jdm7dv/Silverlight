@@ -1,0 +1,24 @@
+﻿<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+     <script type="text/javascript">
+         function openEditor() {
+             document.location.href = ("RichNotepadTestPage.aspx?Culture=" + document.getElementById("ddlCulture").value);             
+         }
+    </script>
+</head>
+<body>
+   
+   <div>
+    Please select the language you want to use in the editor: &nbsp;&nbsp;   
+    <select ID="ddlCulture">
+     <Option value="en-US">English</Option>
+    <Option value="ar-SA">Arabic</Option>
+    <Option value="he-IL">Hebrew</Option>
+    </select>&nbsp;&nbsp; &nbsp;&nbsp; 
+    <input type="button" onclick="openEditor();" value="Open Editor"></input>
+    </div>
+</body>
+</html>

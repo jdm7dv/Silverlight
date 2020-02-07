@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArcGISSilverlightSDK>
+  <Category>
+    <name>Mapping</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>ArcGIS Tiled Layer</id>
+        <xaml>ArcGISSilverlightSDK.Map</xaml>
+        <source>Assets/Source/Map.xaml</source>
+        <code>Assets/Source/Map.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>ArcGIS Dynamic Layer</id>
+        <xaml>ArcGISSilverlightSDK.DynamicMap</xaml>
+        <source>Assets/Source/DynamicMap.xaml</source>
+        <code>Assets/Source/DynamicMap.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Dynamic and Tiled Layers</id>
+        <xaml>ArcGISSilverlightSDK.DynamicAndTile</xaml>
+        <source>Assets/Source/DynamicAndTile.xaml</source>
+        <code>Assets/Source/DynamicAndTile.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Define Map Projection</id>
+        <xaml>ArcGISSilverlightSDK.DefineMapProjection</xaml>
+        <source>Assets/Source/DefineMapProjection.xaml</source>
+        <code>Assets/Source/DefineMapProjection.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Show Map Extent</id>
+        <xaml>ArcGISSilverlightSDK.MapExtent</xaml>
+        <source>Assets/Source/MapExtent.xaml</source>
+        <code>Assets/Source/MapExtent.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Show Mouse Coordinates</id>
+        <xaml>ArcGISSilverlightSDK.MouseCoords</xaml>
+        <source>Assets/Source/MouseCoords.xaml</source>
+        <code>Assets/Source/MouseCoords.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Switching Map Layers</id>
+        <xaml>ArcGISSilverlightSDK.SwitchMap</xaml>
+        <source>Assets/Source/SwitchMap.xaml</source>
+        <code>Assets/Source/SwitchMap.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Toggling Layer Visibility</id>
+        <xaml>ArcGISSilverlightSDK.MapLayersOnOff</xaml>
+        <source>Assets/Source/MapLayersOnOff.xaml</source>
+        <code>Assets/Source/MapLayersOnOff.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Add Layer at Runtime</id>
+        <xaml>ArcGISSilverlightSDK.AddLayerDynamically</xaml>
+        <source>Assets/Source/AddLayerDynamically.xaml</source>
+        <code>Assets/Source/AddLayerDynamically.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Media Layer</id>
+        <xaml>ArcGISSilverlightSDK.MediaLayer</xaml>
+        <source>Assets/Source/MediaLayer.xaml</source>
+        <code>Assets/Source/MediaLayer.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Element Layer</id>
+        <xaml>ArcGISSilverlightSDK.ElementLayer</xaml>
+        <source>Assets/Source/ElementLayer.xaml</source>
+        <code>Assets/Source/ElementLayer.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>ArcGIS Image Layer</id>
+        <xaml>ArcGISSilverlightSDK.UsingImageServer</xaml>
+        <source>Assets/Source/UsingImageServer.xaml</source>
+        <code>Assets/Source/UsingImageServer.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Adjust Map Animation</id>
+        <xaml>ArcGISSilverlightSDK.MapAnimation</xaml>
+        <source>Assets/Source/MapAnimation.xaml</source>
+        <code>Assets/Source/MapAnimation.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Show Progress Bar</id>
+        <xaml>ArcGISSilverlightSDK.ProgressBar</xaml>
+        <source>Assets/Source/ProgressBar.xaml</source>
+        <code>Assets/Source/ProgressBar.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Scalebar</id>
+        <xaml>ArcGISSilverlightSDK.Scalebar</xaml>
+        <source>Assets/Source/Scalebar.xaml</source>
+        <code>Assets/Source/Scalebar.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Toolkit</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Toolbar</id>
+        <xaml>ArcGISSilverlightSDK.ToolBarWidget</xaml>
+        <source>Assets/Source/ToolBarWidget.xaml</source>
+        <code>Assets/Source/ToolBarWidget.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Magnify</id>
+        <xaml>ArcGISSilverlightSDK.Magnify</xaml>
+        <source>Assets/Source/Magnify.xaml</source>
+        <code>Assets/Source/Magnify.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>MagnifyingGlass</id>
+        <xaml>ArcGISSilverlightSDK.MagnifyingGlass</xaml>
+        <source>Assets/Source/MagnifyingGlass.xaml</source>
+        <code>Assets/Source/MagnifyingGlass.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Navigation</id>
+        <xaml>ArcGISSilverlightSDK.Navigation</xaml>
+        <source>Assets/Source/Navigation.xaml</source>
+        <code>Assets/Source/Navigation.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Bookmarks</id>
+        <xaml>ArcGISSilverlightSDK.Bookmarks</xaml>
+        <source>Assets/Source/Bookmarks.xaml</source>
+        <code>Assets/Source/Bookmarks.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>MapTips</id>
+        <xaml>ArcGISSilverlightSDK.MapTipWidget</xaml>
+        <source>Assets/Source/MapTipWidget.xaml</source>
+        <code>Assets/Source/MapTipWidget.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>OverviewMap</id>
+        <xaml>ArcGISSilverlightSDK.OverviewMap</xaml>
+        <source>Assets/Source/OverviewMap.xaml</source>
+        <code>Assets/Source/OverviewMap.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Graphics</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Add using XAML</id>
+        <xaml>ArcGISSilverlightSDK.AddGraphicsXAML</xaml>
+        <source>Assets/Source/AddGraphicsXAML.xaml</source>
+        <code>Assets/Source/AddGraphicsXAML.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Add using code</id>
+        <xaml>ArcGISSilverlightSDK.AddGraphics</xaml>
+        <source>Assets/Source/AddGraphics.xaml</source>
+        <code>Assets/Source/AddGraphics.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Add interactively</id>
+        <xaml>ArcGISSilverlightSDK.DrawGraphics</xaml>
+        <source>Assets/Source/DrawGraphics.xaml</source>
+        <code>Assets/Source/DrawGraphics.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Simple Clusterer</id>
+        <xaml>ArcGISSilverlightSDK.SimpleClusterer</xaml>
+        <source>Assets/Source/SimpleClusterer.xaml</source>
+        <code>Assets/Source/SimpleClusterer.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Custom Clusterer</id>
+        <xaml>ArcGISSilverlightSDK.CustomClusterer</xaml>
+        <source>Assets/Source/CustomClusterer.xaml</source>
+        <code>Assets/Source/CustomClusterer.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Custom Symbols</id>
+        <xaml>ArcGISSilverlightSDK.CustomSymbols</xaml>
+        <source>Assets/Source/CustomSymbols.xaml</source>
+        <code>Assets/Source/CustomSymbols.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Add MapTips</id>
+        <xaml>ArcGISSilverlightSDK.GraphicsMapTip</xaml>
+        <source>Assets/Source/MapTip.xaml</source>
+        <code>Assets/Source/MapTip.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Add Renderers using XAML</id>
+        <xaml>ArcGISSilverlightSDK.RenderersXAML</xaml>
+        <source>Assets/Source/RenderersXAML.xaml</source>
+        <codevb>Assets/Source/RenderersXAML.xaml.vb.txt</codevb>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Thematic Rendering</id>
+        <xaml>ArcGISSilverlightSDK.Thematic_Interactive</xaml>
+        <source>Assets/Source/Thematic_Interactive.xaml</source>
+        <code>Assets/Source/Thematic_Interactive.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Feature Layer</id>
+        <xaml>ArcGISSilverlightSDK.FeatureLayer</xaml>
+        <source>Assets/Source/FeatureLayer.xaml</source>
+        <code>Assets/Source/FeatureLayer.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Query</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Query only</id>
+        <xaml>ArcGISSilverlightSDK.QueryWithoutMap</xaml>
+        <source>Assets/Source/QueryWithoutMap.xaml</source>
+        <code>Assets/Source/QueryWithoutMap.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Attribute Query</id>
+        <xaml>ArcGISSilverlightSDK.AttributeQuery</xaml>
+        <source>Assets/Source/AttributeQuery.xaml</source>
+        <code>Assets/Source/AttributeQuery.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Spatial Query</id>
+        <xaml>ArcGISSilverlightSDK.SpatialQuery</xaml>
+        <source>Assets/Source/SpatialQuery.xaml</source>
+        <code>Assets/Source/SpatialQuery.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Identify</id>
+        <xaml>ArcGISSilverlightSDK.Identify</xaml>
+        <source>Assets/Source/Identify.xaml</source>
+        <code>Assets/Source/Identify.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Find</id>
+        <xaml>ArcGISSilverlightSDK.Find</xaml>
+        <source>Assets/Source/Find.xaml</source>
+        <code>Assets/Source/Find.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Query with a Buffer</id>
+        <xaml>ArcGISSilverlightSDK.BufferQuery</xaml>
+        <source>Assets/Source/BufferQuery.xaml</source>
+        <code>Assets/Source/BufferQuery.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Show GeoRSS Feed</id>
+        <xaml>ArcGISSilverlightSDK.GeoRSS</xaml>
+        <source>Assets/Source/GeoRSS.xaml</source>
+        <code>Assets/Source/GeoRSS.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Address Matching</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Find an Address</id>
+        <xaml>ArcGISSilverlightSDK.AddressToLocation</xaml>
+        <source>Assets/Source/AddressToLocation.xaml</source>
+        <code>Assets/Source/AddressToLocation.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Address of a Location</id>
+        <xaml>ArcGISSilverlightSDK.LocationToAddress</xaml>
+        <source>Assets/Source/LocationToAddress.xaml</source>
+        <code>Assets/Source/LocationToAddress.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Routing</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Routing</id>
+        <xaml>ArcGISSilverlightSDK.Routing</xaml>
+        <source>Assets/Source/Routing.xaml</source>        
+        <code>Assets/Source/LocationToAddress.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Routing with Barriers</id>
+        <xaml>ArcGISSilverlightSDK.RoutingBarriers</xaml>
+        <source>Assets/Source/RoutingBarriers.xaml</source>        
+        <code>Assets/Source/LocationToAddress.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Driving Directions</id>
+        <xaml>ArcGISSilverlightSDK.RoutingDirections</xaml>
+        <source>Assets/Source/RoutingDirections.xaml</source>
+        <code>Assets/Source/LocationToAddress.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Geoprocessing</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Message in a Bottle</id>
+        <xaml>ArcGISSilverlightSDK.MessageInABottle</xaml>
+        <source>Assets/Source/MessageInABottle.xaml</source>
+        <code>Assets/Source/MessageInABottle.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Drive Times</id>
+        <xaml>ArcGISSilverlightSDK.DriveTimes</xaml>
+        <source>Assets/Source/DriveTimes.xaml</source>
+        <code>Assets/Source/DriveTimes.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Surface Profile</id>
+        <xaml>ArcGISSilverlightSDK.SurfaceProfile</xaml>
+        <source>Assets/Source/SurfaceProfile.xaml</source>
+        <code>Assets/Source/SurfaceProfile.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Calculate Viewshed</id>
+        <xaml>ArcGISSilverlightSDK.ViewShed</xaml>
+        <source>Assets/Source/ViewShed.xaml</source>
+        <code>Assets/Source/ViewShed.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Clip Features</id>
+        <xaml>ArcGISSilverlightSDK.ClipFeatures</xaml>
+        <source>Assets/Source/ClipFeatures.xaml</source>
+        <code>Assets/Source/ClipFeatures.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Utilities</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Measure Distances</id>
+        <xaml>ArcGISSilverlightSDK.Lengths</xaml>
+        <source>Assets/Source/Lengths.xaml</source>
+        <code>Assets/Source/Lengths.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Area and Perimeter</id>
+        <xaml>ArcGISSilverlightSDK.AreasAndLengths</xaml>
+        <source>Assets/Source/AreasAndLengths.xaml</source>
+        <code>Assets/Source/AreasAndLengths.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Buffer a Point</id>
+        <xaml>ArcGISSilverlightSDK.BufferPoint</xaml>
+        <source>Assets/Source/BufferPoint.xaml</source>
+        <code>Assets/Source/BufferPoint.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Geometry Relation</id>
+        <xaml>ArcGISSilverlightSDK.Relation</xaml>
+        <source>Assets/Source/Relation.xaml</source>
+        <code>Assets/Source/Relation.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Label Point Positions</id>
+        <xaml>ArcGISSilverlightSDK.LabelPoints</xaml>
+        <source>Assets/Source/LabelPoints.xaml</source>
+        <code>Assets/Source/LabelPoints.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+      <item>
+        <id>Simplify</id>
+        <xaml>ArcGISSilverlightSDK.Simplify</xaml>
+        <source>Assets/Source/Simplify.xaml</source>
+        <code>Assets/Source/Simplify.xaml.vb.txt</code>
+        <icon>Assets/images/small_bullet.png</icon>
+      </item>
+    </items>
+  </Category>
+</ArcGISSilverlightSDK>

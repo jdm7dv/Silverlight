@@ -1,0 +1,12 @@
+﻿# This file provides hints and instructions to search engine crawlers.
+# For more information, see http://www.robotstxt.org/.
+
+# Allow all
+User-agent: *
+
+# Prevent crawlers from indexing static resources (images, XAPs, etc)
+Disallow: /ClientBin/
+Disallow: /Static/
+
+# Register your sitemap(s) here.
+Sitemap: /Sitemap.aspx

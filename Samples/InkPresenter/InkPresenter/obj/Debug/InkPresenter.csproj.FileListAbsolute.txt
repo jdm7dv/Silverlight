@@ -1,0 +1,36 @@
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.dll
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.pdb
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.xap
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\Bin\Debug\TestPage.html
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\obj\Debug\Page.g.cs
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\obj\Debug\InkPresenter.g.resources
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\obj\Debug\InkPresenter.dll
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\obj\Debug\InkPresenter.pdb
+C:\Users\Jonathan Moore\Desktop\InkPresenter\InkPresenter\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.xap
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\Bin\Debug\TestPage.html
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\obj\Debug\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\obj\Debug\InkPresenter.g.resources
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\obj\Debug\InkPresenter.dll
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\obj\Debug\InkPresenter.pdb
+C:\Users\Jonathan Moore\v1.8\SphinxLogic\Windows\base\Program Files\SphinxLogic SDKs\Platform\Samples\Silverlight\InkPresenter\InkPresenter\obj\Debug\XapCacheFile.xml
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.dll
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.pdb
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\Bin\Debug\AppManifest.xaml
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\Bin\Debug\InkPresenter.xap
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\Bin\Debug\TestPage.html
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\obj\Debug\ResolveAssemblyReference.cache
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\obj\Debug\App.g.i.cs
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\obj\Debug\Page.g.i.cs
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\obj\Debug\InkPresenter.g.resources
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\obj\Debug\InkPresenter.dll
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\obj\Debug\InkPresenter.pdb
+W:\VisualStudio\Windows\CSDK\Samples\web\Silverlight\InkPresenter\InkPresenter\obj\Debug\XapCacheFile.xml

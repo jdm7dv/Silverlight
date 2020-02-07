@@ -1,0 +1,4 @@
+<ASX version="3.0">
+  <BASE HREF="rtsp://moon-perf/media/video/" />
+  <ENTRYREF HREF="timecode-short.wmv" />
+</ASX>

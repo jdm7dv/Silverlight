@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="FullscreenSamples.Fullscreen1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Canvas x:Name="LayoutRoot" Background="Black" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Canvas.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform x:Name="layoutScale" ScaleX="1" ScaleY="1" />
+                <TranslateTransform x:Name="layoutTranslate" X="0" Y="0" />
+            </TransformGroup>
+        </Canvas.RenderTransform>
+        <Ellipse x:Name="ellipse" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="Transparent" Stroke="White" />
+        <TextBlock x:Name="DebugText" Width="Auto" Height="Auto" Foreground="White" />
+        <Button x:Name="FullScreenButton" Canvas.Top="100" Width="120" Height="50" Content="Fullscreen" Click="FullScreenButton_Click" />
+    </Canvas>
+</UserControl>

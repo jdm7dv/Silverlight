@@ -1,0 +1,165 @@
+* {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BODY {
+	FONT-SIZE: 11px; BACKGROUND: url(images/background.gif) #000000 repeat-x; MARGIN: 0px auto; TEXT-ALIGN: center
+}
+TD {
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,arial,verdana
+}
+TH {
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,arial,verdana
+}
+DIV {
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,arial,verdana
+}
+A {
+	COLOR: #aa0000; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #aa0000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #aa0000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #999999; TEXT-DECORATION: underline
+}
+.Normal {
+	FONT-SIZE: 11px; COLOR: #000000
+}
+.Normal UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 0px 10px 0px 25px; PADDING-TOP: 5px
+}
+#container {
+	BACKGROUND: url(images/allback.gif); MARGIN: 0px auto; WIDTH: 915px; TEXT-ALIGN: center
+}
+#top {
+	BACKGROUND: url(images/topback.gif) no-repeat; WIDTH: 915px; HEIGHT: 71px
+}
+#topleft {
+	FONT-SIZE: 26px; FLOAT: left; WIDTH: 350px; COLOR: #ffffff; PADDING-TOP: 35px; FONT-FAMILY: "trebuchet ms", tahoma,arial,verdana; HEIGHT: 35px
+}
+#topright {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FLOAT: right; WIDTH: 350px; COLOR: #ffffff; PADDING-TOP: 48px; FONT-FAMILY: tahoma,arial,verdana; HEIGHT: 23px
+}
+#topright A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#topimage {
+	BACKGROUND: url(images/topimage.jpg) no-repeat; WIDTH: 915px; HEIGHT: 203px; TEXT-ALIGN: left
+}
+#logo {
+	MARGIN-TOP: 30px; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 50px; WIDTH: 400px; HEIGHT: 170px
+}
+#menu {
+	BACKGROUND: url(images/menuback.gif) repeat-x; WIDTH: 915px; HEIGHT: 38px
+}
+#left {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 9px; WIDTH: 198px; PADDING-TOP: 0px
+}
+.right {
+	BACKGROUND: url(images/rightback.gif) repeat-x
+}
+#bottom {
+	CLEAR: both
+}
+#footer {
+	FONT-SIZE: 10px; BACKGROUND: url(images/footerback.gif) no-repeat; WIDTH: 915px; COLOR: #ffffff; LINE-HEIGHT: 26px; FONT-FAMILY: tahoma, arial, verdana; HEIGHT: 32px
+}
+.footerclass {
+	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: tahoma,arial,verdana
+}
+A.footerclass:link {
+	FONT-SIZE: 10px; COLOR: #d0dce5; FONT-FAMILY: tahoma,arial,verdana; TEXT-DECORATION: underline
+}
+A.footerclass:active {
+	FONT-SIZE: 10px; COLOR: #d0dce5; FONT-FAMILY: tahoma,arial,verdana; TEXT-DECORATION: underline
+}
+A.footerclass:visited {
+	FONT-SIZE: 10px; COLOR: #d0dce5; FONT-FAMILY: tahoma,arial,verdana; TEXT-DECORATION: underline
+}
+A.footerclass:hover {
+	COLOR: #990000
+}
+#reflexion {
+	BACKGROUND: url(images/reflexion.gif) no-repeat; WIDTH: 915px; HEIGHT: 54px
+}
+#hometextbox {
+	CLEAR: right; FONT-SIZE: 12px; FLOAT: left; PADDING-BOTTOM: 15px; WIDTH: 459px; COLOR: #455058; LINE-HEIGHT: 18px; MARGIN-RIGHT: 5px; PADDING-TOP: 15px; FONT-FAMILY: tahoma,arial,verdana
+}
+.interiortextbox {
+	CLEAR: right; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 12px; FLOAT: left; PADDING-BOTTOM: 15px; COLOR: #455058; LINE-HEIGHT: 18px; PADDING-TOP: 15px; FONT-FAMILY: tahoma,arial,verdana
+}
+#contentarea {
+	BACKGROUND: url(images/allback.gif); WIDTH: 915px
+}
+.MainMenu_MenuContainer {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 100%
+}
+.MainMenu_MenuBar {
+	
+}
+.MainMenu_RootMenuArrow {
+	DISPLAY: none
+}
+.MainMenu_MenuArrow {
+	DISPLAY: none
+}
+.MainMenu_MenuIcon {
+	DISPLAY: none
+}
+.ModuleTitle_MenuItemSel {
+	BACKGROUND-COLOR: transparent
+}
+.MainMenu_MenuItemSel {
+	BACKGROUND-COLOR: transparent
+}
+.MainMenu_MenuBreak {
+	BORDER-TOP: #31383e 0px solid; MARGIN-TOP: 0px; DISPLAY: block; BORDER-BOTTOM: #31383e 1px solid; BACKGROUND-COLOR: #31383e
+}
+.MainMenu_MenuItem {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 6px; BORDER-TOP: #000 0px solid; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 4px; BORDER-LEFT: 0px; COLOR: #fff; PADDING-TOP: 4px; BORDER-BOTTOM: #000 1px solid
+}
+.submenu {
+	BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 0px; Z-INDEX: 1000; BACKGROUND: #596772; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #000 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #000 1px solid
+}
+.submenuover {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 6px; BORDER-TOP: #000 0px solid; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: #fff; PADDING-BOTTOM: 4px; MARGIN: 0px; BORDER-LEFT: 0px; COLOR: #000; PADDING-TOP: 4px; BORDER-BOTTOM: #000 1px solid
+}
+.mainmenu TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.mainmenu TD DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.mainmenu TD DIV DIV {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.mainmenu TD DIV DIV DIV {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: -13px 0px; COLOR: #ffffff; LINE-HEIGHT: 25px; PADDING-TOP: 4px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; HEIGHT: 36px
+}
+.mainmenuover TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.mainmenuoveractive TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.mainmenuover TD DIV {
+	BACKGROUND: url(images/mainbuttonright.gif) no-repeat right top
+}
+.mainmenuoveractive TD DIV {
+	BACKGROUND: url(images/mainbuttonright.gif) no-repeat right top
+}
+.mainmenuover TD DIV DIV {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BACKGROUND: url(images/mainbuttonleft.gif) no-repeat left top; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.mainmenuoveractive TD DIV DIV {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BACKGROUND: url(images/mainbuttonleft.gif) no-repeat left top; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.mainmenuover TD DIV DIV DIV {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BACKGROUND: url(images/mainbuttonback.gif) repeat-x center top; PADDING-BOTTOM: 0px; MARGIN: -13px 0px; COLOR: #ffffff; LINE-HEIGHT: 25px; PADDING-TOP: 4px; HEIGHT: 36px
+}
+.mainmenuoveractive TD DIV DIV DIV {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BACKGROUND: url(images/mainbuttonback.gif) repeat-x center top; PADDING-BOTTOM: 0px; MARGIN: -13px 0px; COLOR: #ffffff; LINE-HEIGHT: 25px; PADDING-TOP: 4px; HEIGHT: 36px
+}

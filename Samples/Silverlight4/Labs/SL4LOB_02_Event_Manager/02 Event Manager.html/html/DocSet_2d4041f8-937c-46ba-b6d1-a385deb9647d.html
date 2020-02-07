@@ -1,0 +1,263 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 4: Track and Session Hierarchy" />
+      <MSHelp:RLTitle Title="Exercise 4: Track and Session Hierarchy" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 4: Track and Session Hierarchy</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 2 - WCF RIA Services, Creating and Editing Data, and Data Binding</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 4: Track and Session Hierarchy</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Events won’t be very interesting if they have no sessions for attendees to listen to. So our event editing page also needs to provide a list of the tracks in the event, along with the sessions for each track. So we’ll need to add two data grids to our event editor, but we also need to modify the service to ensure that all the necessary entities are available.</p>
+        <p>The domain service operation our Silverlight application currently uses to get event information only returns Event entities. The GetEvents method in the EventManagerDomainService just returns the ObjectContext.Events query, and by default, the Entity Framework does not automatically fetch related entities. (It can perform automatic deferred fetching, but by the time the entities have been returned back to the Silverlight client it’s too late for this to happen because the Entity Framework is no longer in the picture. Its work is already done by then.) </p>
+        <p>For the Home.xaml, this is what we want. Our page shows a list of all the events, so we really don’t want to fetch all related data for all events as it would make the page too slow to load. However, for the individual event editing page, we do need to fetch the related track and session items.</p>
+        <a name="_Toc256193866" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Creating a Custom Domain Service Query</b>
+        </p>
+        <ol>
+          <li>Find the GetEvents method in EventManagerDomainService (in the SlEventManager.Web project’s Services folder).</li>
+          <li>Make a copy called GetEventsWithTracksAndTalks. </li>
+          <li>Modify its implementation as shown below:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public IQueryable&lt;Event&gt; GetEventsWithTracksAndTalks(){    return this.ObjectContext.Events.Include("EventTracks.Talks");}</pre></td></tr></table></span></div></li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The Include method tells the Entity Framework which navigation properties we are planning to use on the entities it returns. This causes it to fetch all of the EventTracks and Talks up front for each Event entity returned. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Open EditEvent.xaml in the Silverlight project.</li>
+          <li>Add split the main into Grid into two columns.</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td><b>You can do this by</b> clicking in the blue bar along the top of the design surface to split the UI into two roughly equal-sized columns.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Open the Data Sources panel if it’s not already open. </li>
+          <li>Expand the Event entity, and notice that it has an EventTracks item inside it. </li>
+          <li>Expand the <b>EventTracks</b> child item, and notice that it in turn contains a Talks item. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>These items behave differently than the EventTrack and Talk entities that are directly underneath the EventManagedDomainController element. Entity collections shown as children of another entity collection in the Data Sources window represent specifically those entities that are related to the parent (as opposed to all the entities of that type). If you drag the EventTracks item from inside the Event entity onto the UI, it will produce a <b>DataGrid</b> that shows only the tracks related to the current Event, rather than showing all the EventTrack entities. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Drag the EventTracks item (the one under the Event item) onto the UI.</li>
+          <li>Arrange the DataGrid so it is at the bottom left hand side.</li>
+          <li>Set the layout to resize as the containing window resizes.</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Inspect the XAML, and notice that Visual Studio has done something slightly different with this entity collection. It has not added an extra DomainDataSource <b>but instead</b><b>i</b>t has added a CollectionViewSource which refers to the existing DomainDataSource, so that it can show items related to the current Event. We’re not yet using the new query operation so there will be no data in the EventTracks <b>DataGrid</b> yet. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>In the XAML for EditEvents.xaml, find the DomainDataSource. </li>
+          <li>Change the QueryName property to use the GetEventsWithTracksAndTalksQuery to use the new operation you just added.</li>
+          <li>Run the application.</li>
+          <li>Select the first event and edit it. Be sure to select the first event in the list, as this one has some tracks configured.)</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This will <i>fail</i>. The Tracks <b>DataGrid</b> you just added will be empty. You just asked to edit an event that has tracks in, you bound a data grid to the tracks for the selected event, and you used a service operation that asked the Entity Framework to fetch related tracks and talks. Despite all that, nothing appeared.<br />The reason this just failed is that it’s not enough to tell the Entity Framework that we want it to fetch certain related entities. We also need to tell WCF RIA Services that we need those entities to be brought across to the client. By default, it will only bring across those entities that it can see need to be returned based on the signature of the domain service operation. Since our GetEventsWithTracksAndTalks method’s signature only mentions Event entities, that is all we get back.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <a name="_Toc256193867" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Allow Related Objects to be Serialized</b>
+        </p>
+        <ol>
+          <li>Open the EventManagerDomainService.metadata.cs file in the Services folder of the SlEventManager.Web project.</li>
+          <li>Find the EventMetadata class. </li>
+          <li>Add an [Include] attribute to the EventTracks field.</li>
+          <li>Run the application again. </li>
+          <li>Select the first event again and edit it. This time you should see some tracks show up in the track list.</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>You might be wondering why we need to tell both the Entity Framework and WCF RIA Services to include the related entities. There is a good reason for it. WCF RIA Services needs to be conservative, and only expose the information we tell it too, as otherwise it would be hard to control what it made available—it might reveal information we don’t necessarily want revealed. <br />The [Include] attributes need to be there. But we can’t depend entirely on those attributes, because we might want to include different sets of entities in different circumstances. For example, our application now has two domain operations for returning Event entities, one of which returns related tracks and talks, while the other does not. If inclusion of related entities was entirely down to the [Include] attribute we would not have been able to do this.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Go to the <b>Data Sources</b> window.</li>
+          <li>Drag the Talks from inside the EventTracks inside the <b>Event</b> onto the bottom right of the UI of EditEvents.xaml.</li>
+          <li>Add the [Include] attribute to the EventTrackMetadata class’s Talks field. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>When you drag the new <b>Grid</b> on you’ll find an extra DomainDataSource has been added called eventDomainDataSource1. What’s happened here is that Visual Studio has been confused by us changing the QueryName. <b>I</b>t makes it think that our XAML no longer contains a suitable DomainDataSource for the Event entities, so it has added another. (And it has also added two new CollectionViewSource items, when we only wanted it to add one.) But this will stop everything working. So you’ll need to delete the new DomainDataSource, and point things (the CollectionViewSource, for example) back at the original DomainDataSource. You will also need to delete the duplicate CollectionViewSource that was created.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Delete the new DomainDataSource1 (see note above).</li>
+          <li>Delete the duplicate CollectionViewSource, called eventEventTracksViewSource1. You should now have 2 CollectionViewSource entries.</li>
+          <li>Point the CollectionViewSource called eventEventTracksTalksViewSource back at the original CollectionViewSource by modifying the Binding expression’s Source property—make it refer to eventEventTracksViewSource instead of eventEventTracksViewSource1.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;sdk:Page.Resources&gt;    &lt;CollectionViewSource x:Key="eventEventTracksViewSource"       Source="{Binding Path=Data.EventTracks,       ElementName=eventDomainDataSource}" /&gt;    &lt;CollectionViewSource x:Key="eventEventTracksTalksViewSource"       Source="{Binding Path=Talks, Source={StaticResource       eventEventTracksViewSource}}" /&gt;&lt;/sdk:Page.Resources&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application again. </li>
+          <li>Select the first event. There’s only one talk configured right now, so you’ll only see one listed, and only one the first track is selected.</li>
+        </ol>
+        <a name="_Toc256193868" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Implement Adding Tracks and Talks </b>
+        </p>
+        <ol>
+          <li>Add two more buttons to the UI for EditEvents.xaml labeled New Track and New Talk.</li>
+          <li>Name the new buttons newTrackButton and newTalkButton respectively. </li>
+          <li>Add Click handlers for each and implement them as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void newTrackButton_Click(object sender, RoutedEventArgs e){    Event currentEvent =         eventDomainDataSource.Data.Cast&lt;Event&gt;().Single();    currentEvent.EventTracks.Add(new EventTrack         { EventTrackTitle = "New Track" });}private void newTalkButton_Click(object sender, RoutedEventArgs e){    EventTrack track =         eventTracksDataGrid.SelectedItem as EventTrack;    if (track != null)    {        track.Talks.Add(new Talk { TalkTitle = "New Talk" });    }}</pre></td></tr></table></span></div></li>
+          <li> You will need to add the following using declarations:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Web;using SlEventManager.Web.Services;</pre></td></tr></table></span></div></li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>This code works a little differently than the code to add a new Event. That’s because this time we do want the DomainDataSource to be in on the act: we want the data grids to show the newly added tracks. We are going to let the DomainDataSource remain in charge of the updates. Newly added tracks and talks will get added to the database at the same time as any other changes when the user clicks the Save Changes button added earlier. But there are a couple of other complications caused by the fact that we are not simply adding new items out of the blue. We are adding new items that are related to existing items.<br />For example, the new EventTrack belongs to an Event. So instead of adding it to the domain context’s EventTrack collection, we add it to the current Event object’s EventTracks. (The first line of code in the first handler discovers the current Event. It’s a little eccentric because the DomainDataSource is designed to hold collections of objects, but this particular page has just a single Event. So we need to unwrap it from its collection.)<br />The second handler does something similar, but just grabs the currently selected Track from the track data grid. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Run the application.</li>
+          <li>Select an event you created and edit it. </li>
+          <li>Click the button to add a new Track. It should appear immediately in the <b>DataGrid</b>. You can use grid to edit the properties of the track.</li>
+          <li>Ensure the track is selected.</li>
+          <li>Add some talks to the track, and again edit them in the grid. </li>
+          <li>Click the Save Changes button. </li>
+        </ol>
+        <p>This will write all the new items to the database. You should see all the ID columns change at this point, because the database-generated IDs get passed back once the data has been inserted. You should find that if you go back to the home page and then go back into your event, the newly added tracks and talks are now visible.</p>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

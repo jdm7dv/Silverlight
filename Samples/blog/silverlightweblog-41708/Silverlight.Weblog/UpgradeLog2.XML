@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Silverlight.Weblog">
+</Property><Property Name="Solution File" Value="C:\Users\Jonathan Moore\Desktop\silverlightweblog-41708\Silverlight.Weblog\Silverlight.Weblog.sln">
+</Property><Property Name="Date" Value="Monday, December 28, 2009">
+</Property><Property Name="Time" Value="16:17:51 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="Silverlight.Weblog.Client.Core" Source="Silverlight.Weblog.Client.DAL\Silverlight.Weblog.Client.Core.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Silverlight.Weblog.Client.Core" Source="Silverlight.Weblog.Client.DAL\Silverlight.Weblog.Client.Core.csproj" Description="Converted">
+</Event></UpgradeLog>

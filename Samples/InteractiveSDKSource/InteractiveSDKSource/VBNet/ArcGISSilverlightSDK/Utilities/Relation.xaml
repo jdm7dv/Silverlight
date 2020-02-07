@@ -1,0 +1,95 @@
+<UserControl x:Class="ArcGISSilverlightSDK.Relation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client"
+    xmlns:esriGeometry="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client"
+    xmlns:esriSymbols="clr-namespace:ESRI.ArcGIS.Client.Symbols;assembly=ESRI.ArcGIS.Client"
+    xmlns:esriConverters="clr-namespace:ESRI.ArcGIS.Client.ValueConverters;assembly=ESRI.ArcGIS.Client">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.Resources>
+            <esriSymbols:PictureMarkerSymbol x:Name="DefaultPointMarkerSymbol" OffsetX="0" OffsetY="23" Source="/Assets/images/flag-red-24x24.png" />
+            <esriSymbols:SimpleFillSymbol x:Name="DefaultPolygonFillSymbol" Fill="#660000FF" BorderBrush="Blue" BorderThickness="4" />
+            <esriConverters:DictionaryConverter x:Name="MyDictionaryConverter" />
+        </Grid.Resources>
+
+        <esri:Map x:Name="MyMap" MouseClick="MyMap_MouseClick" Extent="-118,32,-116,35">
+            <esri:Map.Layers>
+
+                <esri:ArcGISTiledMapServiceLayer ID="StreetMapLayer" Url="http://services.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer" />
+
+                <esri:GraphicsLayer ID="MyPolygonGraphicsLayer">
+                    <esri:GraphicsLayer.Graphics >
+                        <esri:Graphic x:Name="Graphic0" Symbol="{StaticResource DefaultPolygonFillSymbol}">
+                            <esriGeometry:Polygon x:Name="Polygon_0">
+                                <esriGeometry:Polygon.Rings>
+                                    <esriGeometry:PointCollection>-117.823,34.075 -117.5568,34.107 -117.540,34.173 -117.414,34.180 -117.450,34.030 -117.677,33.891 -117.806,33.848 -117.823,34.075</esriGeometry:PointCollection>
+                                </esriGeometry:Polygon.Rings>
+                            </esriGeometry:Polygon>
+                        </esri:Graphic>
+                        <esri:Graphic x:Name="Graphic1" Symbol="{StaticResource DefaultPolygonFillSymbol}">
+                            <esriGeometry:Polygon x:Name="Polygon_1">
+                                <esriGeometry:Polygon.Rings>
+                                    <esriGeometry:PointCollection>-117.661,33.875 -117.600,33.9078 -117.543,33.845 -117.543,33.720 -117.592,33.624 -117.773,33.626 -117.875,33.724 -117.661,33.875</esriGeometry:PointCollection>
+                                </esriGeometry:Polygon.Rings>
+                            </esriGeometry:Polygon>
+                        </esri:Graphic>
+                        <esri:Graphic x:Name="Graphic2" Symbol="{StaticResource DefaultPolygonFillSymbol}">
+                            <esriGeometry:Polygon x:Name="Polygon_2">
+                                <esriGeometry:Polygon.Rings>
+                                    <esriGeometry:PointCollection>-117.298,33.811 -117.046,33.797 -117.054,34.014 -117.046,34.160 -117.285,34.196 -117.372,33.998 -117.298,33.811</esriGeometry:PointCollection>
+                                </esriGeometry:Polygon.Rings>
+                            </esriGeometry:Polygon>
+                        </esri:Graphic>
+                        <esri:Graphic x:Name="Graphic3" Symbol="{StaticResource DefaultPolygonFillSymbol}">
+                            <esriGeometry:Polygon x:Name="Polygon_3">
+                                <esriGeometry:Polygon.Rings>
+                                    <esriGeometry:PointCollection>-117.309,33.720 -116.919,33.717 -116.974,33.560 -117.131,33.436 -117.433,33.452 -117.537,33.562 -117.482,33.711 -117.309,33.720</esriGeometry:PointCollection>
+                                </esriGeometry:Polygon.Rings>
+                            </esriGeometry:Polygon>
+                        </esri:Graphic>
+                        <esri:Graphic x:Name="Graphic4" Symbol="{StaticResource DefaultPolygonFillSymbol}">
+                            <esriGeometry:Polygon x:Name="Polygon_4">
+                                <esriGeometry:Polygon.Rings>
+                                    <esriGeometry:PointCollection>-117.721,33.930 -117.430,34.012 -117.430,33.841 -117.570,33.747 -117.721,33.930</esriGeometry:PointCollection>
+                                </esriGeometry:Polygon.Rings>
+                            </esriGeometry:Polygon>
+                        </esri:Graphic>
+                    </esri:GraphicsLayer.Graphics>
+                    <esri:GraphicsLayer.MapTip>
+                        <Grid Background="LightYellow">
+                            <StackPanel Orientation="Vertical" Margin="5">
+                                <TextBlock Text="{Binding Converter={StaticResource MyDictionaryConverter}, ConverterParameter=Name, Mode=OneWay}" HorizontalAlignment="Left" />
+                                <TextBlock Text="{Binding Converter={StaticResource MyDictionaryConverter}, ConverterParameter=Relation, Mode=OneWay}" HorizontalAlignment="Left" />
+                            </StackPanel>
+                            <Border BorderBrush="Black" BorderThickness="1" />
+                        </Grid>
+                    </esri:GraphicsLayer.MapTip>
+                </esri:GraphicsLayer>
+
+                <esri:GraphicsLayer ID="MyPointGraphicsLayer">
+                    <esri:GraphicsLayer.MapTip>
+                        <Grid Background="LightYellow">
+                            <StackPanel Orientation="Vertical" Margin="5">
+                                <TextBlock Text="{Binding Converter={StaticResource MyDictionaryConverter}, ConverterParameter=Name, Mode=OneWay}" HorizontalAlignment="Left" />
+                                <TextBlock Text="{Binding Converter={StaticResource MyDictionaryConverter}, ConverterParameter=Relation, Mode=OneWay}" HorizontalAlignment="Left" />
+                            </StackPanel>
+                            <Border BorderBrush="Black" BorderThickness="1" />
+                        </Grid>
+                    </esri:GraphicsLayer.MapTip>
+                </esri:GraphicsLayer>
+
+            </esri:Map.Layers>
+        </esri:Map>
+
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,15,0" >
+            <Rectangle RadiusX="10" RadiusY="10" Fill="#22000000" Margin="0,4,0,0" />
+            <Rectangle Stroke="Gray"  RadiusX="10" RadiusY="10" Fill="#775C90B2" Margin="0,0,0,5" />
+            <Rectangle Fill="#FFFFFFFF" Stroke="DarkGray" RadiusX="5" RadiusY="5" Margin="10,10,10,15" />
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="30,20,30,30" >
+                <TextBlock x:Name="InformationText" Width="200" Text="Add points by clicking on map.  Click Execute to compute the relation between the points and the polygons. The results will be displayed by hovering over the polygons or markers." TextAlignment="Left"  TextWrapping="Wrap" />
+                <Button x:Name="ExecuteRelationButton" Content="Execute" Click="ExecuteRelationButton_Click" Width="100" Visibility="Visible" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>

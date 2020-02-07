@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="86.7388" Height="37.2534" Clip="F1 M 0,0L 86.7388,0L 86.7388,37.2534L 0,37.2534L 0,0">
+	<Canvas x:Name="Layer_1" Width="799.592" Height="600.082" Canvas.Left="0" Canvas.Top="0">
+		<Canvas x:Name="Group" Width="86.7388" Height="37.2534" Canvas.Left="0" Canvas.Top="1.52588e-005">
+			<Rectangle x:Name="Rectangle" Width="50.2542" Height="16.277" Canvas.Left="-1.52588e-005" Canvas.Top="11.2113" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFFFFC00"/>
+			<Path x:Name="Path" Width="38.3967" Height="37.2534" Canvas.Left="48.3421" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFFFFC00" Data="F1 M 86.2388,18.6267L 48.8421,0.5L 48.8421,36.7534L 86.2388,18.6267 Z "/>
+		</Canvas>
+	</Canvas>
+</Canvas>

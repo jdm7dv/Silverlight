@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkLabel", "LinkLabel\LinkLabel.csproj", "{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkLabelTest", "LinkLabelTest\LinkLabelTest.csproj", "{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LinkLabelWeb", "LinkLabelWeb", "{948750FE-C937-439B-B751-46E1BE89CD07}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/LinkLabelWeb"
+		Debug.AspNetCompiler.PhysicalPath = "LinkLabelWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LinkLabelWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LinkLabelWeb"
+		Release.AspNetCompiler.PhysicalPath = "LinkLabelWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LinkLabelWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "18393"
+		DefaultWebSiteLanguage = "Visual C#"
+		ProjOutputReferences = "{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs08.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LinkLabel\\LinkLabel.csproj
+		SccProjectName1 = LinkLabel
+		SccLocalPath1 = LinkLabel
+		SccProjectUniqueName2 = LinkLabelTest\\LinkLabelTest.csproj
+		SccProjectName2 = LinkLabelTest
+		SccLocalPath2 = LinkLabelTest
+		SccWebProject3 = true
+		SccProjectUniqueName3 = LinkLabelWeb
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = LinkLabelWeb\\
+		SccProjectEnlistmentChoice3 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Release|.NET.ActiveCfg = Release|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BD2E71AB-F8C8-42EE-8EF0-0B5854B146CE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Release|.NET.ActiveCfg = Release|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BF51700E-5E70-41ED-BFF2-EEC66FCB620F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Debug|.NET.ActiveCfg = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Debug|.NET.Build.0 = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Release|.NET.ActiveCfg = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Release|.NET.Build.0 = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{948750FE-C937-439B-B751-46E1BE89CD07}.Release|Mixed Platforms.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

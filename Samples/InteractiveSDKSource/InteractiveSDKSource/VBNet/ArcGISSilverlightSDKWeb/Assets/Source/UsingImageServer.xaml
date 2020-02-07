@@ -1,0 +1,15 @@
+<UserControl x:Class="ArcGISSilverlightSDK.UsingImageServer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client">
+    <Grid x:Name="LayoutRoot" Background="White">
+        
+        <esri:Map x:Name="MyMap" Background="White" >
+            <esri:Map.Layers>
+                <esri:ArcGISImageServiceLayer ID="ImageServiceLayer" 
+                    Url="http://serverapps.esri.com/ArcGIS/rest/services/SamplesNET/SanFranciscoImage/ImageServer" />
+            </esri:Map.Layers>
+        </esri:Map>
+    
+    </Grid>
+</UserControl>

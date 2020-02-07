@@ -1,0 +1,115 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="Chat.App"
+             >
+    <Application.Resources>
+        <Style x:Key="MessageHistory" TargetType="ListBox">
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="ListBox">
+                        <Grid>
+                            <ScrollViewer x:Name="ScrollViewerElement" 
+                                          VerticalScrollBarVisibility="Auto" 
+                                          HorizontalScrollBarVisibility="Auto">
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </Grid>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key='SendButton' TargetType='Button'>
+            <Setter Property='Template'>
+                <Setter.Value>
+
+                    <ControlTemplate TargetType='Button'>
+
+                        <Grid x:Name='RootElement'>
+
+                            <Grid.Resources>
+
+                                <!-- Normal Button State -->
+                                <Storyboard x:Name="Normal State"/>
+
+                                <!-- Animation when Button is Moused over -->
+                                <Storyboard x:Name="MouseOver State">
+                                    <ColorAnimationUsingKeyFrames 
+                                        Storyboard.TargetName="path" 
+                                        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" BeginTime="00:00:00">
+                                        <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFEAEAEA"/>
+                                    </ColorAnimationUsingKeyFrames>
+                                </Storyboard>
+
+                                <!-- Animation when Button is Pressed -->
+                                <Storyboard x:Name="Pressed State">
+                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="path" 
+                                        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" BeginTime="00:00:00">
+                                        <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFEAEAEA"/>
+                                    </ColorAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Content" 
+                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].
+                                    (TranslateTransform.Y)" BeginTime="00:00:00">
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="3"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+
+                            </Grid.Resources>
+
+                            <Path HorizontalAlignment="Stretch" Margin="1.5,2.337,0.92,6.228" Data="M127.08,31.301502 C127.08,48.312702 98.744102,62.103004 63.790001,62.103004 C54.025806,62.103004 44.778046,61.026909 36.520126,59.105114 C36.215462,58.970238 7.5079122,80.599533 6.7650447,79.856949 C6.4517422,79.54377 20.863649,54.603107 20.453203,53.749561 C8.1706877,48.131233 0.5,40.152325 0.5,31.301502 C0.5,14.290302 28.835897,0.5 63.790001,0.5 C98.744102,0.5 127.08,14.290302 127.08,31.301502 z" Fill="#54000000" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform X="1" Y="4.9"/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+
+                            <Grid x:Name='Content' RenderTransformOrigin="0.5,0.5">
+                                <Grid.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Grid.RenderTransform>
+                                <Path HorizontalAlignment="Stretch" Margin="1.5,2.337,0.92,6.228" 
+                                VerticalAlignment="Stretch" 
+                                Data="M127.08,31.301502 C127.08,48.312702 98.744102,62.103004 63.790001,62.103004 C54.025806,62.103004 44.778046,61.026909 36.520126,59.105114 C36.215462,58.970238 7.5079122,80.599533 6.7650447,79.856949 C6.4517422,79.54377 20.863649,54.603107 20.453203,53.749561 C8.1706877,48.131233 0.5,40.152325 0.5,31.301502 C0.5,14.290302 28.835897,0.5 63.790001,0.5 C98.744102,0.5 127.08,14.290302 127.08,31.301502 z" 
+                                Fill="{TemplateBinding Background}" 
+                                Stretch="Fill" Stroke="#FF000000" StrokeThickness="2" x:Name='path'/>
+                                <ContentControl  Margin='0,0,0,15' 
+									Content="{TemplateBinding Content}"
+									ContentTemplate="{TemplateBinding ContentTemplate}"
+									FontFamily="{TemplateBinding FontFamily}"
+									FontSize="{TemplateBinding FontSize}"
+									FontStretch="{TemplateBinding FontStretch}"
+									FontStyle="{TemplateBinding FontStyle}"
+									FontWeight="{TemplateBinding FontWeight}"
+									Foreground="{TemplateBinding Foreground}"
+									HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+									Padding="{TemplateBinding Padding}"
+									VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                <Ellipse HorizontalAlignment="Stretch" Margin="16.003,8,13.657,40">
+                                    <Ellipse.Fill>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#9FFFFFFF"/>
+                                            <GradientStop Color="#00FFFFFF" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property='Background' Value='#FFBBB9B9'/>
+
+        </Style>
+    </Application.Resources>
+</Application>

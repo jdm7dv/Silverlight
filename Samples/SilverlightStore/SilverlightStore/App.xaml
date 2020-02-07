@@ -1,0 +1,16 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:view="clr-namespace:SilverlightStore.Views"
+             xmlns:services="clr-namespace:SilverlightStore.Services"
+             x:Class="SilverlightStore.App">
+    <Application.RootVisual>
+        <view:Home Title="Silverlight Store" />
+    </Application.RootVisual>
+    <Application.ApplicationLifetimeObjects>
+        <services:ClipboardService x:Name="ClipboardService" />
+        <services:DeepLinkService x:Name="DeepLinkService" />
+    </Application.ApplicationLifetimeObjects>
+    <Application.Resources>
+        
+    </Application.Resources>
+</Application>

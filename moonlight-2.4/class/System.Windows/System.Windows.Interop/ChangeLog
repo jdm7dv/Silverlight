@@ -1,0 +1,116 @@
+2009-12-03  Jeffrey Stedfast  <fejj@novell.com>
+
+	* Content.cs (ZoomFactor): Implemented.
+	(Zoomed event): Implemented.
+
+2009-11-18  Chris Toshok  <toshok@ximian.com>
+
+	* Settings.cs: stub out EnableGPUAcceleration.
+
+2009-11-05  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* Content.cs: Add null-check in RegisterEvent (a null value
+	would cause bad side effects). Reduce UnregisterEvent visibility.
+
+	r: rolf
+
+2009-10-05  Sebastien Pouliot  <sebastien@ximian.com> 
+
+	* Settings.cs: Add comment about refresh rate validation
+
+	r: alan
+
+2009-10-01  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* SilverlightHost.cs (IsVersionSupported): Fix unit test
+
+	r: alan
+
+2009-09-23  Chris Toshok  <toshok@ximian.com>
+
+	* Content.cs: use the new event registration stuff.
+
+	r: spouliot, andriea
+
+2009-06-18  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* PluginHost.cs: Remove RootUri - it did not work (e.g. a relative
+	path in the source or an absolute source URI) and is not needed
+	anymore.
+	* SilverlightHost.cs: Use the "original" (before any redirection)
+	URI for source using new p/invokes.
+
+2009-06-12  Alan McGovern  <amcgovern@novell.com>
+
+	* Content.cs: Ensure that the handlers for Resized and
+	  FullScreen are only registered once.
+
+2009-04-09  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* PluginHost.cs: Initialize "xap_uri" when we set the plugin 
+	handle. This makes it available sooner (than Application) to
+	use WebClient in Deployement.
+	* SilverlightHost.cs: Use PluginHost to return Source Uri.
+
+2009-04-14  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* PluginHost.cs:
+	* SilverlightHost.cs: Generate all P/Invoke methods.
+
+2009-04-09  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* Content.cs (IsFullScreen): Remove MonoTODO and FIXME since this 
+	check already exists in the runtime.
+
+2009-04-03  Sebastien Pouliot  <sebastien@ximian.com> 
+
+	* Settings.cs: Implement EnableHTMLAccess and Windowless properties
+	and add MonoTODO on the other, non-implemented, properties.
+
+2009-03-25  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* SilverlightHost.cs: Implement IsLoaded, Background and
+	  IsVersionSupported.
+
+2009-02-06  Sebastien Pouliot  <sebastien@ximian.com> 
+
+	* BrowserHost.cs: Remove file
+	* Content.cs: Move some logic from (old) BrowserHost here
+
+2009-02-03  Geoff Norton  <gnorton@novell.com>
+
+	* Content.cs: Wire up Resize and FullScreenChange events.
+
+2009-01-30  Geoff Norton  <gnorton@novell.com>
+
+	* Content.cs: Implement IsFullscreen.
+
+2009-01-26  Geoff Norton  <gnorton@novell.com>
+
+	* Settings.cs: Surface lives in Deployment now.
+
+2008-12-11  Andreia Gaita  <shana@jitted.com>
+
+	* Settings, SilverlightHost.cs: Settings getter implementation, for
+	  using the MaxFrameRate property
+
+2008-11-19  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* HostingRenderTargetBitmap.cs: Added InputMethod, ICommand,
+	  HostingRenderTargetBitmap. Corcompare fixes.
+
+2008-09-11  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* Content.cs: Don't typecast int into uint when we return doubles.
+	Added note for IsFullscreen setter which needs to work only when
+	called from user generated keyboard and mouse events.
+
+2008-09-10  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* SilverlightHost.cs: Fix to call the right p/invoke that returns
+	the URI to the XAP file.
+
+2008-08-14  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Settings.cs, Content.cs, SilverlightHost.cs: Gui-compare fixes.
+

@@ -1,0 +1,158 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 4: Removing Sessions from the Schedule" />
+      <MSHelp:RLTitle Title="Exercise 4: Removing Sessions from the Schedule" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 4: Removing Sessions from the Schedule</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 5 - DataGrid, Grouping, Right Mouse Click Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 4: Removing Sessions from the Schedule</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Finally, we need to provide the user with a way to remove items from the schedule. We’ll do this through a popup UI shown by right-clicking on an item.</p>
+        <a name="_Toc256193988" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create a Context Menu</b>
+        </p>
+        <ol>
+          <li>Open the SchedulePlanner.xaml file in Visual Studio.</li>
+          <li>Near the bottom of the page, find the closing &lt;/Grid&gt; tag, and just before that tag, add the following:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Canvas    x:Name="popupContainer"    Grid.ColumnSpan="3"    &gt;            &lt;Popup                x:Name="menuPopup"                HorizontalAlignment="Left"                VerticalAlignment="Top"                &gt;        &lt;Border            BorderBrush="Black"            BorderThickness="1"            CornerRadius="10"            Background="#ddf"            Padding="7"            &gt;            &lt;StackPanel&gt;                &lt;TextBlock Text="{Binding Path=TalkTitle}" /&gt;                &lt;Button Content="Remove" /&gt;            &lt;/StackPanel&gt;        &lt;/Border&gt;    &lt;/Popup&gt;&lt;/Canvas&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The Popup contains the UI elements that will make up our ad-hoc context ‘menu’. The purpose of the containing Canvas is to be able to detect mouse clicks outside of the menu in order to close the menu. (We’ll add event handlers to do that later.)<br />Notice that we’re using a data binding expression to show the title of a talk. This XAML assumes that the popup’s data context will be set to refer to a Talk entity. We’ll do that when we show the menu.<br />Further up the XAML file find the &lt;ItemsControl.ItemTemplate&gt; for the second <br />ItemsControl. (If you did the optional part of the last exercise, you will have changed this to a &lt;ListBox.ItemTemplate&gt;, so find that instead.) Inside this there will be a &lt;DataTemplate&gt; containing a &lt;Grid&gt; element. This element contains all the content representing a single talk in the user’s chosen schedule. We’ll attach the right mouse button handlers to this, but first, we need to make sure that the whole of the Grid is clickable. By default, panels have no value in their Background properties, meaning that mouse input falls through to the element behind. </td></tr></table><p /></div></li>
+          <li>Set the Background of the Grid inside the ItemTemplate for the innermost ItemsControl to "Transparent".</li>
+        </ol>
+        <a name="_Toc256193989" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add Right Click Support</b>
+        </p>
+        <ol>
+          <li>Add two event handlers to this Grid element, for the MouseRightButtonDown and MouseRightButtonUp events. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Context menus are normally opened on the right mouse button up event, but Silverlight won’t give us that event unless we marked the down event as handled, so we need both handlers.</td></tr></table><p /></div></li>
+          <li>In the code behind, find the MouseRightButtonDown handler you just added.</li>
+          <li>Set the MouseButtonEventArgs (‘e’) argument’s Handled property to true.</li>
+          <li>Implement the MouseRightButtonUp handler as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void Grid_MouseRightButtonUp(object sender, MouseButtonEventArgs e){    Point mousePosition = e.GetPosition(popupContainer);    Canvas.SetLeft(menuPopup, mousePosition.X);    Canvas.SetTop(menuPopup, mousePosition.Y);    FrameworkElement itemTemplateInstance = (FrameworkElement) sender;    menuPopup.DataContext = itemTemplateInstance.DataContext;    menuPopup.IsOpen = true;}</pre></td></tr></table></span></div></li>
+          <li>Run the application. </li>
+          <li>Right-click on an item in the list on the right. You will see the popup appear:<p><img src="images\a73ba7f3-631d-425e-b316-99a131a8bdb2.png" /></p><p><b>Figure 6</b><br /><i>Context Menu</i></p></li>
+        </ol>
+        <a name="_Toc256193990" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Closing the Popup Menu</b>
+        </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The popup doesn’t go away yet when you click elsewhere. We need to handle clicks outside of the popup. For that, we need to make sure that the containing canvas is able to receive mouse clicks.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Add the following code at the end of the MouseRightButtonUp handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>popupContainer.Background = new SolidColorBrush(Colors.Transparent);</pre></td></tr></table></span></div></li>
+          <li>Back in the XAML, go to the popupContainer Canvas.</li>
+          <li>Add a single event handler function for left and right mouse button down events, and make it do the following:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>popupContainer.Background = null;menuPopup.IsOpen = false;</pre></td></tr></table></span></div></li>
+          <li>Run the application again. You should now be able to dismiss the menu by clicking outside of it within the Silverlight application.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>We need to wire our button into some behavior. For this, we’ll need an extra method on the server. </td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193991" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add Support for Removing a Session</b>
+        </p>
+        <ol>
+          <li>In the EventManagerDomainService, add the following method:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Invoke]public void RemoveTalkFromUserSchedule(int talkID){    Attendee attendee = GetOrCreateAttendeeForCurrentUser();    var astQuery = from entry in attendee.AttendeeScheduleTalks                   where entry.TalkID == talkID                   select entry;    AttendeeScheduleTalk ast = astQuery.SingleOrDefault();    if (ast != null)    {        this.ObjectContext.DeleteObject(ast);        this.ObjectContext.SaveChanges();    }}</pre></td></tr></table></span></div></li>
+          <li>Open the SchedulePlannerViewModel class. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This time we won’t be adding a command because the menu XAML doesn’t have direct access to the view model; its data context is a Talk entity. (It would be reasonable to add a separate per-item view model for each talk in the list and make that the source instead, but for now we’re going to take a short cut.) </td></tr></table><p /></div></li>
+          <li>Add a method named <b>RemoveTalk</b>:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public void RemoveTalk(Talk talk){    _context.RemoveTalkFromUserSchedule(talk.TalkID, removeOp =&gt;    {        SubscribedTalks.Remove(talk);        UpdateCommandStatus();    }, null);}</pre></td></tr></table></span></div></li>
+          <li>In the XAML, find the Button for your menu.</li>
+          <li>Add a Click event handler. </li>
+          <li>In the code behind add the following using directive:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Web;</pre></td></tr></table></span></div></li>
+          <li>Implement the <b>Click</b> handler like this:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void Button_Click(object sender, RoutedEventArgs e){    Button btn = (Button) sender;    Talk talk = (Talk) btn.DataContext;    _viewModel.RemoveTalk(talk);}</pre></td></tr></table></span></div></li>
+          <li>Run the application. You should now find you can remove items from the schedule by right-clicking and then clicking the Remove button.</li>
+          <li>Add a line of code inside the <b>Button_Click</b> handler to hide the context menu. (Use the same code used in the popupContainer mouse button down handling to hide the menu.)</li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\Theme.xaml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.ExpressionDark.XML
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.ExpressionDark.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.ExpressionDark.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.ExpressionDark.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.ExpressionDark.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.Toolkit.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.Toolkit.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\ClientBin\System.Windows.Controls.Theming.Toolkit.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\obj\Debug\System.Windows.Controls.Theming.ExpressionDark.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\obj\Debug\Controls.Theming.ExpressionDark.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\obj\Debug\Controls.Theming.ExpressionDark.csproj.CopyComplete
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\obj\Debug\System.Windows.Controls.Theming.ExpressionDark.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.ExpressionDark\obj\Debug\System.Windows.Controls.Theming.ExpressionDark.pdb

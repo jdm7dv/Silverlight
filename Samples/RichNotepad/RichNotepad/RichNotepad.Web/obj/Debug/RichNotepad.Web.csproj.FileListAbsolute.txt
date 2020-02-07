@@ -1,0 +1,10 @@
+C:\Users\Jonathan_Moore\Desktop\RichNotepad\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.dll
+C:\Users\Jonathan_Moore\Desktop\RichNotepad\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.pdb
+C:\Users\Jonathan_Moore\Desktop\RichNotepad\RichNotepad\RichNotepad.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan_Moore\Desktop\RichNotepad\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.dll
+C:\Users\Jonathan_Moore\Desktop\RichNotepad\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.pdb
+J:\Science\Computer\Software\Operating Systems\Windows\F5RDK\Samples\TODO\web2\Silverlight\RichNotepad\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.dll
+J:\Science\Computer\Software\Operating Systems\Windows\F5RDK\Samples\TODO\web2\Silverlight\RichNotepad\RichNotepad\RichNotepad.Web\bin\RichNotepad.Web.pdb
+J:\Science\Computer\Software\Operating Systems\Windows\F5RDK\Samples\TODO\web2\Silverlight\RichNotepad\RichNotepad\RichNotepad.Web\obj\Debug\ResolveAssemblyReference.cache
+J:\Science\Computer\Software\Operating Systems\Windows\F5RDK\Samples\TODO\web2\Silverlight\RichNotepad\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.dll
+J:\Science\Computer\Software\Operating Systems\Windows\F5RDK\Samples\TODO\web2\Silverlight\RichNotepad\RichNotepad\RichNotepad.Web\obj\Debug\RichNotepad.Web.pdb

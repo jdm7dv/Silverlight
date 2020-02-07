@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.Theming.RainierPurple</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Controls.Theming.RainierPurpleTheme">
+            <summary>
+            Implicitly applies the Rainier purple theme to all of its descendent
+            FrameworkElements.
+            </summary>
+            <remarks>
+            The theme is applied using ImplicitStyleManager.
+            </remarks>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.Theming.RainierPurpleTheme.#ctor">
+            <summary>
+            Initializes a new instance of the RainierPurpleTheme class.
+            </summary>
+        </member>
+    </members>
+</doc>

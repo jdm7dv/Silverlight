@@ -1,0 +1,13 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Data.Input.XML
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Data.Input.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Data.Input.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Data.Input.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Controls.Data.Input.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Data.Input.csprojAssemblyReference.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Data.Input.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Resources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Data.Input.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Data.Input.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Data.Input.csproj.CopyComplete
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Data.Input.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Controls.Data.Input\obj\Debug\System.Windows.Controls.Data.Input.pdb

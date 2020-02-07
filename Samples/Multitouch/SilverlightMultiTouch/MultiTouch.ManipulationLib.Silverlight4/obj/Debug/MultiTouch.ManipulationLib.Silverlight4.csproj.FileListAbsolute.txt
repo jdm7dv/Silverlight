@@ -1,0 +1,10 @@
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.pdb
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\obj\Debug\MultiTouch.ManipulationLib.Silverlight4.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\obj\Debug\MultiTouch.ManipulationLib.Silverlight4.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\Bin\Debug\MultiTouch.ManipulationLib.Silverlight4.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\obj\Debug\MultiTouch.ManipulationLib.Silverlight4.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\MultiTouch.ManipulationLib.Silverlight4\obj\Debug\MultiTouch.ManipulationLib.Silverlight4.pdb

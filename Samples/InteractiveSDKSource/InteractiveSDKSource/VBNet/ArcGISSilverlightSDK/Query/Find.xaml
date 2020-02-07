@@ -1,0 +1,62 @@
+<UserControl x:Class="ArcGISSilverlightSDK.Find"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client"
+    xmlns:esriSymbols="clr-namespace:ESRI.ArcGIS.Client.Symbols;assembly=ESRI.ArcGIS.Client"
+    xmlns:esriConverters="clr-namespace:ESRI.ArcGIS.Client.ValueConverters;assembly=ESRI.ArcGIS.Client"
+    xmlns:slData="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data">
+    <Grid x:Name="LayoutRoot" Background="#FF5C90B2">
+        
+        <Grid.Resources>
+            <esriSymbols:SimpleMarkerSymbol x:Name="DefaultMarkerSymbol" Size="8" Color="Red" Style="Circle" />
+            <esriSymbols:SimpleLineSymbol x:Name="DefaultLineSymbol" Color="Red" Width="6"  />
+            <esriSymbols:SimpleFillSymbol x:Name="DefaultFillSymbol" BorderBrush="Red" BorderThickness="2" Fill="#50FF0000"/>
+            <esriConverters:DictionaryConverter x:Name="MyDictionaryConverter" />
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+        
+        <Border BorderBrush="Black" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" Background="#FF5C90B2" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <TextBlock Text="Search for" Foreground="Black" 
+                           HorizontalAlignment="Center" Height="24" VerticalAlignment="Center" 
+                           FontWeight="Bold" FontSize="12" Margin="20,8,5,0"/>
+                <TextBox x:Name="FindText" Background="White" Text="River" Height="23" Width="100" HorizontalContentAlignment="Center" />
+                <TextBlock Text="in the attributes of States or Counties:" Foreground="Black" 
+                           HorizontalAlignment="Center" Height="24" VerticalAlignment="Center" 
+                           FontWeight="Bold" FontSize="12" Margin="5,8,5,0"/>
+                <Button x:Name="ExecuteButton" Content="Find" Width="75" Height="24" VerticalAlignment="Center" Click="ExecuteButton_Click"  
+                        Margin="5,0,5,0" Cursor="Hand" />
+            </StackPanel>
+        </Border>
+        
+        <esri:Map x:Name="MyMap" Background="White" Grid.Row="1" Extent="-125, 25, -65, 55">
+            <esri:Map.Layers>
+                <esri:ArcGISTiledMapServiceLayer ID="TopoLayer" 
+                    Url="http://server.arcgisonline.com/ArcGIS/rest/services/NGS_Topo_US_2D/MapServer"/>
+                <esri:ArcGISDynamicMapServiceLayer ID="DemographicLayer" Opacity="0.2"
+                    Url="http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Census_USA/MapServer" VisibleLayers="4,5" />    		
+                <esri:GraphicsLayer ID="MyGraphicsLayer" />
+            </esri:Map.Layers>
+        </esri:Map>        
+        
+        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="1" >
+            <slData:DataGrid x:Name="FindDetailsDataGrid" AutoGenerateColumns="False" HeadersVisibility="All" Background="White" BorderBrush="Black" BorderThickness="1" 
+                             SelectionChanged="FindDetails_SelectionChanged" >
+                <slData:DataGrid.Columns>
+                    <slData:DataGridTextColumn Binding="{Binding Path=LayerId}" Header="Layer ID" />
+                    <slData:DataGridTextColumn Binding="{Binding Path=LayerName}" Header="Layer Name"/>
+                    <slData:DataGridTextColumn Binding="{Binding Path=FoundFieldName}" Header="Found Field" />
+                    <slData:DataGridTextColumn Binding="{Binding Path=Value}" Header="Value"/>
+                    <slData:DataGridTextColumn Binding="{Binding Converter={StaticResource MyDictionaryConverter},
+                        ConverterParameter=STATE_NAME, Mode=OneWay, Path=Feature.Attributes}" Header="State Name"/>
+                </slData:DataGrid.Columns>
+            </slData:DataGrid>
+        </ScrollViewer>
+        
+    </Grid>
+</UserControl>

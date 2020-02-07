@@ -1,0 +1,103 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="samp_LiveMessenger.scrHome"
+	>
+
+<Grid x:Name="LayoutRoot" Background="White">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="100"/>
+    		<ColumnDefinition Width="400"/>
+    		<ColumnDefinition Width="*"/>
+    	</Grid.ColumnDefinitions>
+    	<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1">
+    		<Grid.RowDefinitions>
+    			<RowDefinition Height="80"/>
+    			<RowDefinition Height="*"/>
+    			<RowDefinition Height="30"/>
+    		</Grid.RowDefinitions>
+    		<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="1" Width="Auto" x:Name="grdMessenger">
+    			<Grid.RowDefinitions>
+    				<RowDefinition Height="130"/>
+    				<RowDefinition Height="35"/>
+    				<RowDefinition Height="35"/>
+    				<RowDefinition Height="*"/>
+    				<RowDefinition Height="140"/>
+    			</Grid.RowDefinitions>
+    			<Path HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Stretch="Fill" Data="M4.0000005,0 L197,0 C199.20914,8.7916851E-07 201,1.7908618 201,4.0000005 L201,11.000002 L201,25 L201,29 L197,29 L4.0000005,29 L0,29 L0,25 L0,11.000002 L0,4.0000005 C0,1.7908618 1.790861,8.7916851E-07 4.0000005,0 z">
+    				<Path.Fill>
+    					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    						<GradientStop Color="#FF559CD4"/>
+    						<GradientStop Color="#FF296DA3" Offset="0.629"/>
+    						<GradientStop Color="#FF2B6593" Offset="0.638"/>
+    						<GradientStop Color="#FF226FAB" Offset="1"/>
+    					</LinearGradientBrush>
+    				</Path.Fill>
+    			</Path>
+    			<Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="1">
+    				<Rectangle.Fill>
+    					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    						<GradientStop Color="#FF77AFDA"/>
+    						<GradientStop Color="#FF68B3EE" Offset="1"/>
+    						<GradientStop Color="#FF29608C" Offset="0.491"/>
+    						<GradientStop Color="#FF4886B7" Offset="0.121"/>
+    						<GradientStop Color="#FF4A90C8" Offset="0.933"/>
+    					</LinearGradientBrush>
+    				</Rectangle.Fill>
+    			</Rectangle>
+    			<Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="2">
+    				<Rectangle.Fill>
+    					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    						<GradientStop Color="#FF000000"/>
+    						<GradientStop Color="#FFFFFFFF" Offset="0.179"/>
+    					</LinearGradientBrush>
+    				</Rectangle.Fill>
+    			</Rectangle>
+    			<Path HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="4" Fill="#FFD9E9F5" Stretch="Fill" Data="M0,0 L161.875,0 L161.875,14.999999 L161.875,59.375 L161.875,68.125 C161.875,69.850891 160.47589,71.25 158.75,71.25 L3.1250002,71.25 C1.3991102,71.25 0,69.850891 0,68.125 L0,59.375 L0,14.999999 L0,0 z"/>
+    			<Rectangle HorizontalAlignment="Stretch" Margin="53.8040008544922,0,54.3479995727539,55.6520004272461" VerticalAlignment="Stretch" Opacity="0.65">
+    				<Rectangle.Fill>
+    					<RadialGradientBrush GradientOrigin="0.497000008821487,0.122000001370907">
+    						<RadialGradientBrush.RelativeTransform>
+    							<TransformGroup>
+    								<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="0.933" ScaleY="1.622"/>
+    								<SkewTransform CenterX="0.5" CenterY="0.5"/>
+    								<RotateTransform CenterX="0.5" CenterY="0.5"/>
+    								<TranslateTransform X="0.004" Y="-0.33"/>
+    							</TransformGroup>
+    						</RadialGradientBrush.RelativeTransform>
+    						<GradientStop Color="#00FFFFFF" Offset="1"/>
+    						<GradientStop Color="#7AFFFFFF" Offset="0"/>
+    					</RadialGradientBrush>
+    				</Rectangle.Fill>
+    			</Rectangle>
+    			<Rectangle HorizontalAlignment="Stretch" Margin="53.8040008544922,0,54.3479995727539,0" VerticalAlignment="Bottom" Opacity="0.4" Height="51.652" d:LayoutOverrides="Height">
+    				<Rectangle.Fill>
+    					<RadialGradientBrush GradientOrigin="0.497000008821487,0.122000001370907">
+    						<RadialGradientBrush.RelativeTransform>
+    							<TransformGroup>
+    								<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="-0.765" ScaleY="-1.424"/>
+    								<SkewTransform CenterX="0.5" CenterY="0.5"/>
+    								<RotateTransform CenterX="0.5" CenterY="0.5"/>
+    								<TranslateTransform X="-0.012" Y="0.356"/>
+    							</TransformGroup>
+    						</RadialGradientBrush.RelativeTransform>
+    						<GradientStop Color="#00FFFFFF" Offset="1"/>
+    						<GradientStop Color="#7AFFFFFF" Offset="0"/>
+    					</RadialGradientBrush>
+    				</Rectangle.Fill>
+    			</Rectangle>
+    			<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="3">
+    				<Grid.ColumnDefinitions>
+    					<ColumnDefinition Width="0.082*"/>
+    					<ColumnDefinition Width="0.918*"/>
+    				</Grid.ColumnDefinitions>
+    				<Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Fill="#FFD9E9F5"/>
+    			</Grid>
+    		</Grid>
+    	</Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,34 @@
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\SilverlightStore.Web.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\SilverlightStore.Web.pdb
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\Microsoft.Web.Extensions.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.WebControls.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.Ria.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.DynamicData.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.DynamicData.xml
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.WebControls.xml
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.ComponentModel.DataAnnotations.xml
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.xml
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\Microsoft.Web.Extensions.xml
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\bin\System.Web.Ria.xml
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\obj\Release\SilverlightStore.Web.dll
+C:\Users\Jonathan Moore\Downloads\Microsoft\Silverlight\RIA Services\Samples\SilverlightStore\SilverlightStore\SilverlightStore.Web\obj\Release\SilverlightStore.Web.pdb
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\SilverlightStore.Web.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\SilverlightStore.Web.pdb
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\Microsoft.Web.Extensions.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.WebControls.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.Ria.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.DynamicData.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.DynamicData.xml
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.WebControls.xml
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.ComponentModel.DataAnnotations.xml
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.DomainServices.xml
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\Microsoft.Web.Extensions.xml
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\bin\System.Web.Ria.xml
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\obj\Release\SilverlightStore.Web.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\SilverlightStore\SilverlightStore.Web\obj\Release\SilverlightStore.Web.pdb

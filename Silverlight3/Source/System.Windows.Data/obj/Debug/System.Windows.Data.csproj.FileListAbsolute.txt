@@ -1,0 +1,10 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Data.XML
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Data.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Data.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Data.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Binaries\Debug\Silverlight\System.Windows.Data.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Data\obj\Debug\System.Windows.Data.PagedCollectionView.PagedCollectionViewResources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Data\obj\Debug\System.Windows.Data.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Data\obj\Debug\System.Windows.Data.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Data\obj\Debug\System.Windows.Data.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\System.Windows.Data\obj\Debug\System.Windows.Data.pdb

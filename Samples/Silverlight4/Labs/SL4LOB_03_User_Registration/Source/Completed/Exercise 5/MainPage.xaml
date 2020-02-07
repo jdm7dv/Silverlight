@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="RichTextApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Grid.Column="1" Grid.RowSpan="2">
+            <TextBlock x:Name="textAsXaml" TextWrapping="Wrap" />
+        </ScrollViewer>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="boldButton" Content="Bold" Click="boldButton_Click" />
+            <Button x:Name="italicButton" Content="Italic" Click="italicButton_Click" />
+        </StackPanel>
+
+        <RichTextBox
+            x:Name="rtb"
+            VerticalScrollBarVisibility="Visible"
+            TextWrapping="Wrap"
+            ContentChanged="rtb_ContentChanged">
+            <Paragraph>
+                <Run Text="This is   some text." />
+                <Bold>This is some bold text.</Bold>
+            </Paragraph>
+            <Paragraph FontStyle="Italic">
+                This is italic.
+                <Bold>This is bold italic.</Bold>
+            </Paragraph>
+            <Paragraph>
+                <Bold FontSize="20">
+                    Bold
+                    <Italic>Italic</Italic>.
+                    Bold,
+                    <Span FontFamily="Georgia">and in a different font.</Span>
+                </Bold>
+            </Paragraph>
+            
+            <Paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat arcu dignissim erat rhoncus mattis. Sed faucibus erat a justo dignissim nec tristique risus iaculis. Vivamus vel condimentum felis. Etiam elementum odio a dolor tincidunt fermentum. Praesent sed leo eu ante scelerisque lobortis. Morbi vel odio dui, vitae vestibulum elit. Sed velit nibh, hendrerit at iaculis eget, congue et ipsum. Praesent viverra gravida porta. Duis dapibus, risus in pharetra suscipit, nunc lectus gravida risus, ut sollicitudin justo ligula eu augue. Etiam et lectus lectus, volutpat lobortis enim. Phasellus lobortis molestie fermentum.
+            </Paragraph>
+            <Paragraph>
+                Sed eleifend, ipsum sed tristique sodales, nunc lectus posuere erat, ac posuere dui turpis id odio. Suspendisse potenti. Etiam et diam in tortor elementum semper. Phasellus dignissim nunc a risus iaculis pretium. Quisque mollis lacinia tristique. Duis quis elementum nisi. Mauris porta luctus orci, ut tincidunt velit tincidunt nec. Aenean ipsum quam, sagittis id lobortis vitae, aliquet quis odio. Nam condimentum blandit suscipit. Duis erat eros, ullamcorper ut vestibulum ac, tempor eu velit. Suspendisse congue felis quis justo eleifend placerat. In vitae nulla sem. Ut sed enim eget sapien cursus rutrum. Praesent cursus tortor quis felis interdum sit amet convallis justo condimentum. Etiam non orci a enim placerat pharetra sit amet eu mi. Ut sollicitudin hendrerit tortor.
+            </Paragraph>
+            <Paragraph>
+                Praesent in semper turpis. Suspendisse diam massa, pellentesque sit amet placerat at, fermentum vel mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu risus eu ligula feugiat consectetur. Donec at dolor nulla. Donec et quam quam, non rutrum velit. Ut sed facilisis purus. Sed sit amet risus sed urna ullamcorper dictum a vel elit. Praesent aliquet neque at dui porttitor egestas. Ut dui eros, hendrerit id hendrerit ac, porttitor vel libero. Vestibulum congue varius ornare. Nam in magna sapien, in volutpat purus. Donec semper diam in lacus sodales ut bibendum augue lobortis. Sed turpis enim, malesuada nec egestas eu, fermentum non lacus. Nulla ut posuere purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Suspendisse justo velit, luctus nec varius sed, fringilla in quam. Ut lacinia dignissim dictum.
+            </Paragraph>
+            <Paragraph>
+                Phasellus ut quam dolor. In fermentum tellus vel nisl malesuada mollis mollis sapien egestas. Nunc non nibh dui. Suspendisse ante velit, pretium eu laoreet eget, aliquam vitae odio. Nulla facilisi. Suspendisse potenti. Etiam malesuada vestibulum ultrices. Duis dolor massa, tempus a commodo non, facilisis blandit diam. Donec id odio purus, vel imperdiet erat. Morbi tempor tellus vel est euismod posuere. Proin nisi ante, auctor blandit dignissim non, lobortis vel dui.
+            </Paragraph>
+            <Paragraph>
+                Aliquam porttitor condimentum nibh sit amet vehicula. Morbi eu quam ac felis viverra fringilla. Sed egestas porta facilisis. Donec molestie, urna vel convallis laoreet, ante odio feugiat dolor, a semper nunc augue ut orci. Proin sed ante enim. Ut accumsan posuere neque at elementum. Morbi egestas felis at tellus eleifend quis faucibus purus eleifend. Integer tempor, elit congue lobortis consequat, velit felis tincidunt nibh, eget lobortis tellus ante vel turpis. Sed dapibus, libero non vehicula hendrerit, nulla quam porta leo, vel pretium leo erat vel elit. Vestibulum orci magna, ullamcorper in mattis eget, sollicitudin elementum eros. Donec nulla nibh, scelerisque ac tincidunt in, imperdiet id felis. Curabitur nulla quam, venenatis et aliquet at, auctor vitae eros. Morbi a ipsum id massa vehicula fringilla sit amet et mauris.
+            </Paragraph>
+        </RichTextBox>
+
+    </Grid>
+</UserControl>

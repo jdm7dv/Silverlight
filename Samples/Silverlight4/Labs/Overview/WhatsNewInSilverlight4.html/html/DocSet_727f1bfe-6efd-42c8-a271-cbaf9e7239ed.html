@@ -1,0 +1,212 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Key Expression Blend Features" />
+      <MSHelp:RLTitle Title="Key Expression Blend Features" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Key Expression Blend Features</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Overview - Technical Whitepaper</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Key Expression Blend Features</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Expression Blend has added several fantastic new features. This section highlights some of the key features including a PathListBox which visually changes the way you think about the ListBox control. Also covered are enhancements to integrate MVVM development, new design time data features, binding enhancements, and new behaviors.</p>
+        <a name="_Toc256192941" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Interoperability with Visual Studio 2010</b>
+        </p>
+        <p>Expression Blend 4 Beta and Visual Studio 2010 use the same project format. Expression Blend 4 Beta can convert a Visual Studio 2008 project for you in order to work with it.</p>
+        <a name="_Toc256192942" href="#">
+          <span />
+        </a>
+        <p>
+          <b>PathListBox Control</b>
+        </p>
+        <p>The PathListBox is a new control that introduces a new and flexible way to layout multiple items.  Maintaining the selection and binding features of the traditional ListBox, the layout of the items is determined by defining one or more UIElements as LayoutPaths.  Many properties are made available to customize the positioning and orientation of the items along the paths.  Additionally, individual PathListBoxItems may be modified directly to change their appearance or layout.</p>
+        <p>The image below demonstrates a dataset of years bound to the Items property of a PathListBox and the red arcing path is defined as the LayoutPath for the PathListBox.</p>
+        <p>
+          <img src="images\1d833242-d7a2-4822-bde9-ee7d7b1ec48d.png" />
+        </p>
+        <p>
+          <b>Figure 17</b>
+          <br />
+          <i>PathListBox Control</i>
+        </p>
+        <p>Create your own PathListBox by following the steps below:</p>
+        <ol>
+          <li>Add one or two paths to your scene.  The Path, Ellipse, Rectangle and Shape controls work well as LayoutPaths.</li>
+          <li>Add a PathListBox control.</li>
+          <li>Add items to the PathListBox manually or by databinding. Without a LayoutPath defined, the items will all be positioned in the same spot.</li>
+          <li>With the PathListBox selected, find the Items Layout pane on the Properties Panel. Use the pick widget, with the target icon, to select one or more objects to use as the LayoutPaths.</li>
+          <li>The items of the PathListBox will be arranged along the selected path or paths. </li>
+        </ol>
+        <a name="_Toc256192943" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Transition Effects</b>
+        </p>
+        <p>Transition Effects blend two visuals using a pixel effect over time and are applied in Blend 4 when configuring Visual State transitions. The TransitionEffects dropdown can be found under the “fx” and arrow icon, in the States panel on each transition.  If a TransitionEffect is applied to a transition between States, the transition will be visible and animated with other changed properties during the State change.</p>
+        <p>TransitionEffects available include the following:</p>
+        <p>
+          <img src="images\779167b0-59b4-43d7-a0bd-0d7ca0510b91.png" />
+        </p>
+        <p>
+          <b>Figure 18</b>
+          <br />
+          <i>Transition Effects</i>
+        </p>
+        <a name="_Toc256192944" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Conditional Behaviors</b>
+        </p>
+        <p>Any Action can now be associated with a set of conditions that must be met in order to execute the Action. This means that with Expression Blend 4 Beta you can now build conditional logic into your prototypes and production applications without the need to write code. </p>
+        <a name="_Toc256192945" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Bindable Properties</b>
+        </p>
+        <p>Properties of behaviors are now bindable in the same way as FrameworkElement properties. This allows behaviors to be more dynamic and aware of the current context. To create a quick sample and see this new feature in action follow the steps below:</p>
+        <p>
+          <img src="images\d881a1c9-3235-4fc7-84bd-6b2302f1ec62.png" />
+        </p>
+        <p>
+          <b>Figure 19</b>
+          <br />
+          <i>Bindable Behavior Properties</i>
+        </p>
+        <ol>
+          <li>Add a Rectangle to your scene.</li>
+          <li>Create a Storyboard animating the Rectangle’s position across the screen.</li>
+          <li>Add a ControlStoryboardAction to the Rectangle and set the Storyboard property to the one you just created.</li>
+          <li>Add a Checkbox to your scene.</li>
+          <li>Show the advanced properties in the Common Properties pane</li>
+          <li>Click the Advanced properties button to the right of the IsEnabled property and select the “Element Property Binding…” option.</li>
+          <li>Using the new pick widget, select the Checkbox and from the Create Data Binding dialog select the IsChecked property.</li>
+          <li>Now when you run the project, the Storyboard should only play when you click on the Rectangle and the Checkbox is checked.</li>
+        </ol>
+        <a name="_Toc256192946" href="#">
+          <span />
+        </a>
+        <p>
+          <b>New Behaviors</b>
+        </p>
+        <p>Adding to the original set of eight behaviors, seven new behaviors have been added with a strong focus on interacting with data. Additionally the FluidMoveBehavior has been updated to provide more functionality than before. The new behaviors include the following:</p>
+        <ul>
+          <li><b>CallMethodAction</b> – Calls a method on the target object.  This can be very useful when your control has a custom class set as the DataContext. For example, when using MVVM the View may need to invoke a method on the ViewModel. If the ViewModel is set as the DataContext for the View, the View can easily call a method on the ViewModel using data bindings through the CallMethodAction behavior.</li>
+          <li><b>DataStateBehavior</b> – Toggles between two states based on a conditional statement. This is a simple merge of the DataTrigger and the GoToStateAction into a single Behavior.</li>
+          <li><b>DataTrigger</b> – Any time the bound property changes, the trigger compares this value to the Value property. If the two values match, the trigger fires.</li>
+          <li><b>DataStoreChangeTrigger</b> – Fires when a specified property in the Data Store changes.</li>
+          <li><b>FluidMoveBehavior</b> – Enhanced with additional properties to expand its scope beyond a single container. By setting a tag property, an element’s current state can be used to dynamically animate discrete properties of the element. FluidMoveBehavior is optimized for two main scenarios; animating list items from one list to another list and animating from a master list to a detail view.</li>
+          <li><b>FluidMoveSetTagBehavior</b> – Sets a tag property to act as a pointer that can be referenced by a FluidMoveBehavior instance.  In a Master/Detail scenario, the elements of a master list may only need to broadcast their position. The detail view can then be animated from that position using the recorded values.</li>
+          <li><b>InvokeCommandAction</b> – Invokes a specified ICommand.  This can be very useful when your control has a custom class set as the DataContext. For example, when using MVVM and the ViewModel is set as the DataContext of the View, the View can invoke command on the ViewModel through data bindings and the InvokeCommandAction behavior.</li>
+          <li><b>SetDataStoreValueAction</b> – Changes the value of a property and optionally animates the change over a duration of time. Properties are found in the new Data Store explained below.</li>
+        </ul>
+        <a name="_Toc256192947" href="#">
+          <span />
+        </a>
+        <p>
+          <b>MVVM Project and Item Templates</b>
+        </p>
+        <p>The MVVM templates are meant to be a starting point that illustrates some of the designer techniques available in Blend against a data model. They are not meant to teach developers about their architecture. In order to enable designers to work against a “real” data model, the data model needs to have a façade that is reasonably close to a real design pattern: our focus is on the techniques a designer would use to connect to a business data model and connections, rather than the implementation of the data models and backend logic themselves.  </p>
+        <p>
+          <img src="images\ca3eb45a-9722-425d-8752-86b9f2fce4ef.png" />
+        </p>
+        <p>
+          <b>Figure 20</b>
+          <br />
+          <i>MVVM Templates</i>
+        </p>
+        <p>Along with the new templates, new behaviors have been added to enable MVVM-based development. The CallMethodAction and InvokeCommandAction behaviors are a valuable asset when working with the interaction between Views and ViewModels.</p>
+        <a name="_Toc256192948" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Design-time data from CLR types</b>
+        </p>
+        <p>In addition to sample data based on XML, you can now create design-time sample data from your CLR types. Even if a type has no public constructor, or it has properties with no public setter, it can still be made into design-time sample data with the “Create Sample Data from Existing Class” command on the Data panel.</p>
+        <p>The Data panel provides a view of an object’s DataContext, whether design-time or run-time, and allows you to drag properties and Commands onto the design surface to bind your UI to them.</p>
+        <a name="_Toc256192949" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Design-time ViewModels</b>
+        </p>
+        <p>If your application uses the MVVM pattern then you can use the “Create Sample Data from Existing Class” command on the Data panel to generate design-time sample ViewModels so that you can continue to design your application in the context of this data.</p>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1 – Getting Started" />
+      <MSHelp:RLTitle Title="Exercise 1 – Getting Started" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1 – Getting Started</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Validation, Binding, DataForm and DataGrid Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1 – Getting Started</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>The goal of this exercise is to familiarize the student with the existing starter application and enhance it with new features (DataGrid Column width settings, and grouping support).  </p>
+        <ol>
+          <li>Start Visual Studio 2010 </li>
+          <li>On the <b>File</b> menu click <b>Open</b><b>Project/Solution…</b><ol><li>Alternatively, from Visual Studio Start Page click “<b>Open Project…</b>”</li></ol></li>
+          <li> At “Open Project” dialog navigate to the Lab installation folder</li>
+          <li>Navigate to “EmployeeManager\Source\Ex01\begin” folder</li>
+          <li>Click “EmployeeManager.sln” file and the click “<b>Open</b>” button</li>
+          <li>Take some time to familiarize yourself with the Starter application<ol><li>Points of interest here are:<ul><li>Employee.cs</li><li>EmployeesManager.cs</li><li>MainPage.xaml</li><li>MainPage.xaml.cs (nested under MainPage.xaml in the Solution Explorer)</li></ul></li></ol></li>
+          <li>Set the EmployeeManager.Web project as the startup project, by right clicking the project in the Solution Explorer and selecting “Set as Startup Project”</li>
+          <li>Press<b> F5 </b>or click <b>Debug</b><b>Start Debugging</b> to Run the application</li>
+          <li>Use the application to familiarize yourself with it. When finished close the browser window.</li>
+        </ol>
+        <a name="_Toc256193475" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Reshaping a DataGrid Column</b>
+        </p>
+        <ol>
+          <li>If you have not opened the Starter project please open it now (see previous section for detailed instructions).</li>
+          <li>Open the file "MainPage.xaml" (double click on filename in the Solution Explorer)</li>
+          <li>Locate the DataGrid control name "dg" and change the "AutoGenerateColumns" attribute to "False" and the "IsReadOnly" attribute to "True"<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;DataControls:DataGrid x:Name="dg" ItemsSource="{Binding}"Margin="3" IsReadOnly="True" AutoGenerateColumns="False" HeadersVisibility="Column"&gt;&lt;/DataControls:DataGrid&gt;</pre></td></tr></table></span></div></li>
+          <li>Now let's set the columns we want to display and set their size. Add the following XAML nested inside the DataGrid's XAML:  Place cursor in source code press "space bar" to engage intellisense<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;DataControls:DataGrid.Columns&gt;    &lt;DataControls:DataGridTextColumn Binding="{Binding FirstName}"                                      Header="First Name" /&gt;    &lt;DataControls:DataGridTextColumn Binding="{Binding LastName}"                                      Header="Last Name" /&gt;&lt;/DataControls:DataGrid.Columns&gt;</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application. You'll see that the columns are not spread across the entire width of the browser. Close the browser and return to Visual Studio.</li>
+          <li>Add the "Width" property to the each of the DataGridTextColumn elements you've added, and set their width to "0.4*" (40% width) and "0.6*" (60%) respectively. The code should look as follows:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;DataControls:DataGridTextColumn Binding="{Binding FirstName}"                                  Header="First Name" Width="0.4*" /&gt;&lt;DataControls:DataGridTextColumn Binding="{Binding LastName}"                                  Header="Last Name" Width="0.6*" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application. Now the columns cover the entire width of the control.</li>
+        </ol>
+        <a name="_Toc256193476" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – DataGrid Grouping Support</b>
+        </p>
+        <ol>
+          <li>If the Lab application is running, please stop it now.</li>
+          <li>To support grouping in the DataGrid, we'll need to change the data source to a more flexible data source – CollectionViewSource. This class was introduced in Silverlight 3, but in Silverlight 4 it has added the capability to group data. Open the file "MainPage.xaml", and add the following XAML to the UserControl Resources element:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;CollectionViewSource x:Key="employeeManagerEmployeesViewSource"Source="{Binding Path=Employees,   Source={StaticResource employeeManagerViewSource}}" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Locate the Grid named "LayoutRoot" and change the "DataContext" attribute to the following Binding (replace the existing "DataContext" attribute).<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>DataContext="{StaticResource employeeManagerEmployeesViewSource}"</pre></td></tr></table></span></div></li>
+          <li>Now that we can use the CollectionViewSource to group data, we'll need to add some operation buttons to the application. First of all, we need to change the layout of our application. Add the following column and row definitions to the "LayoutRoot" Grid.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.ColumnDefinitions&gt;    &lt;ColumnDefinition Width="400"/&gt;    &lt;ColumnDefinition Width="*"/&gt;&lt;/Grid.ColumnDefinitions&gt;&lt;Grid.RowDefinitions&gt;    &lt;RowDefinition Height="*"/&gt;    &lt;RowDefinition Height="Auto"/&gt;&lt;/Grid.RowDefinitions&gt;</pre></td></tr></table></span></div></li>
+          <li>Next, add a StackPanel to hold all the operation buttons we need. Inside the "LayoutRoot" Grid, paste the following XAML:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;StackPanel Orientation="Horizontal" Margin="3" Grid.Row="1"&gt;    &lt;Button Content="New" x:Name="btnNew"/&gt;    &lt;Button Content="Update" x:Name="btnUpdate"/&gt;    &lt;Button Content="Delete" x:Name="btnDelete"/&gt;    &lt;Button Content="Group" x:Name="btnGroup"/&gt;    &lt;Button Content="UnGroup" x:Name="btnUnGroup"/&gt;&lt;/StackPanel&gt;</pre></td></tr></table></span></div></li>
+          <li>For now we'll implement the Grouping buttons. The other buttons will be implemented in the next exercise. Edit the "btnGroup" button and add a new "Click" event handler to it (use the default name by double-clicking the "New Event Handler" option in the drop down which will add "btnGroup_Click" automatically. Alternatively you can double-click the button in the designer to create the event handler.):<p><img src="images\d03b2765-bf72-479f-874f-cad68d484ca5.png" /></p><p><b>Figure 1</b><br /><i>Event Handler Generation from XAML Editor</i></p></li>
+          <li>Right click the newly created attribute and choose "Navigate to Event Handler" from the context menu.<p><img src="images\697c087b-53f9-4c1b-afb0-77bda5007e8f.png" /></p><p><b>Figure 2</b><br /><i>Navigate to Event Handler from XAML Editor</i></p></li>
+          <li>The last action will take you to the source code editor, to the event handler function (located in MainPage.xaml.cs):<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void btnGroup_Click(object sender, RoutedEventArgs e){}</pre></td></tr></table></span></div></li>
+          <li>We'll create a group description that will allow us to group objects of type "Employee" by their "Group" property. To create the grouping, we'll use the CollectionViewSource object created previously in step 2. Add the following code to the event handler function:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>System.Windows.Data.CollectionViewSource cvs =     this.Resources["employeeManagerEmployeesViewSource"] as System.Windows.Data.CollectionViewSource;if (cvs.View.GroupDescriptions.Count == 0)    cvs.View.GroupDescriptions.Add(      new System.Windows.Data.PropertyGroupDescription("Group"));else    cvs.View.Refresh();</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Compile and run the application – press the "Group" button and notice how the data is grouped into 4 groups ("IT", "Students", "Managers" and a group with no name) based on the Employee class’ Group property.</li>
+          <li>Return to Visual Studio and open the file "EmployeesManager.cs. This file contains the initialization code for the list of employees. Examine how the same groups we saw in the data grid appear as in the "Group" property of each employee.</li>
+          <li>In "MainPage.xaml" and locate the "btnUnGroup" button. Add the default event handler for the button's "Click" event and navigate to its event handler. Add the following code to allow the data grid to be ungrouped:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>System.Windows.Data.CollectionViewSource cvs =     this.Resources["employeeManagerEmployeesViewSource"] as System.Windows.Data.CollectionViewSource;cvs.View.GroupDescriptions.Clear();</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application. Press the "Group" button, and then the "Ungroup" button and the data grid will group the data and then ungroup it.</li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

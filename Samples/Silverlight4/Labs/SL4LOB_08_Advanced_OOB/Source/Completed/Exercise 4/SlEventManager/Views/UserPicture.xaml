@@ -1,0 +1,35 @@
+﻿<navigation:Page x:Class="SlEventManager.Views.UserPicture" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="UserPicture Page">
+
+    <Grid x:Name="LayoutRoot"
+          AllowDrop="True"
+          Drop="LayoutRoot_Drop"
+          Background="White">
+
+        <ListBox Height="62" HorizontalAlignment="Left" Margin="12,25,0,0" Name="cameraList" VerticalAlignment="Top" Width="157" SelectionChanged="cameraList_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=FriendlyName}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Border
+          x:Name="webcamLivePreview" 
+          Height="150" Width="150" 
+          HorizontalAlignment="Left" VerticalAlignment="Top"
+          Margin="378,25,0,0"
+          BorderBrush="Silver" BorderThickness="2" CornerRadius="10"></Border>
+        <Button Content="Take Picture" Height="23" HorizontalAlignment="Left" Margin="261,25,0,0" Name="takePictureButton" VerticalAlignment="Top" Width="75" Click="takePictureButton_Click" />
+        <Border BorderBrush="Silver" BorderThickness="2" CornerRadius="10" Height="150" Name="userPictureBorder" Width="150" Margin="12,117,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Content="Save Picture" Height="23" HorizontalAlignment="Left" Margin="261,207,0,0" Name="savePictureButton" VerticalAlignment="Top" Width="75" Click="savePictureButton_Click" />
+        <Button Content="Load Picture" Height="23" HorizontalAlignment="Left" Margin="261,244,0,0" Name="loadPictureButton" VerticalAlignment="Top" Width="75" Click="loadPictureButton_Click" />
+    </Grid>
+</navigation:Page>

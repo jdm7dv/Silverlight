@@ -1,0 +1,573 @@
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DEE9C1F-5D4B-4944-8654-1698B707B28E}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mono.Moonlight</RootNamespace>
+    <AssemblyName>moon-unit</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>moon-unit.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Mono.Moonlight.UnitTesting.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;NET_2_1;TEST</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Mono.Moonlight.UnitTesting\Mono.Moonlight.UnitTesting\MoonlightBugAttribute.cs">
+      <Link>MoonlightBugAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Mono.Moonlight.UnitTesting\Mono.Moonlight.UnitTesting\MoonLogProvider.cs">
+      <Link>MoonLogProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Mono.Moonlight.UnitTesting\Mono.Moonlight.UnitTesting\SilverlightBugAttribute.cs">
+      <Link>SilverlightBugAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Mono.Moonlight.UnitTesting\Mono.Moonlight.UnitTesting\Testing.cs">
+      <Link>Testing.cs</Link>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingXaml.xaml.cs">
+      <DependentUpon>BindingXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="../../../class/System.Windows.Browser/System.Windows.Browser.Net/BaseDomainPolicy.cs">
+      <Link>BaseDomainPolicy.cs</Link>
+    </Compile>
+    <Compile Include="../../../class/System.Windows.Browser/System.Windows.Browser.Net/ClientAccessPolicy.cs">
+      <Link>ClientAccessPolicy.cs</Link>
+    </Compile>
+    <Compile Include="../../../class/System.Windows.Browser/System.Windows.Browser.Net/ClientAccessPolicyParser.cs">
+      <Link>ClientAccessPolicyParser.cs</Link>
+    </Compile>
+    <Compile Include="../../../class/System.Windows.Browser/System.Windows.Browser.Net/CrossDomainPolicyManager.cs">
+      <Link>CrossDomainPolicyManager.cs</Link>
+    </Compile>
+    <Compile Include="../../../class/System.Windows.Browser/System.Windows.Browser.Net/FlashCrossDomainPolicy.cs">
+      <Link>FlashCrossDomainPolicy.cs</Link>
+    </Compile>
+    <Compile Include="../../../class/System.Windows.Browser/System.Windows.Browser.Net/FlashCrossDomainPolicyParser.cs">
+      <Link>FlashCrossDomainPolicyParser.cs</Link>
+    </Compile>
+    <Compile Include="../../../class/System.Windows.Browser/System.Windows.Browser.Net/ICrossDomainPolicy.cs">
+      <Link>ICrossDomainPolicy.cs</Link>
+    </Compile>
+    <Compile Include="misc\DefaultValues.cs" />
+    <Compile Include="misc\Events\EventTest.cs" />
+    <Compile Include="Mono.Moonlight.UnitTesting\Tester.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="security\DelegateTest.cs" />
+    <Compile Include="security\MiscTest.cs" />
+    <Compile Include="security\ReflectionEmitTest.cs" />
+    <Compile Include="security\ReflectionTest.cs" />
+    <Compile Include="security\SecurityCriticalTest.cs" />
+    <Compile Include="security\SecuritySafeCriticalTest.cs" />
+    <Compile Include="security\SocketPolicyTest.cs" />
+    <Compile Include="security\WebBasePolicyTest.cs" />
+    <Compile Include="security\WebFlashPolicyTest.cs" />
+    <Compile Include="security\WebSilverlightPolicyTest.cs" />
+    <Compile Include="System.Collections.ObjectModel\ObservableCollectionTest.cs" />
+    <Compile Include="System.Collections.Specialized\NotifyCollectionChangedEventArgsTest.cs" />
+    <Compile Include="System.ComponentModel\DesignerPropertiesTest.cs" />
+    <Compile Include="System.Diagnostics\StackFrameTest.cs" />
+    <Compile Include="System.IO.IsolatedStorage\IsolatedStorageFileStreamTest.cs" />
+    <Compile Include="System.IO.IsolatedStorage\IsolatedStorageFileTest.cs" />
+    <Compile Include="System.IO.IsolatedStorage\IsolatedStorageSettingsTest.cs" />
+    <Compile Include="System.Net.Sockets\SocketAyncEventArgsTest.cs" />
+    <Compile Include="System.Net.Sockets\SocketTest.cs" />
+    <Compile Include="System.Net\DnsEndPointTest.cs" />
+    <Compile Include="System.Net\EndPointTest.cs" />
+    <Compile Include="System.Net\HttpWebRequestTest.cs" />
+    <Compile Include="System.Net\IPEndPointTest.cs" />
+    <Compile Include="System.Net\WebClientTest.cs" />
+    <Compile Include="System.Net\WebHeaderCollectionTest.cs" />
+    <Compile Include="System.Net\WebRequestTest.cs" />
+    <Compile Include="System.Threading\InterlockedTest.cs" />
+    <Compile Include="System.Threading\ThreadTest.cs" />
+    <Compile Include="System.Threading\TimerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\AutomationControlTypeTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\AutomationEventsTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\AutomationOrientationTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\AutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ButtonAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ButtonBaseAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\CalendarAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\CalendarButtonAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\CalendarDayButtonAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\CheckBoxAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ComboBoxAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\MultiScaleImageAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\PasswordBoxAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\FrameworkElementAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\HyperlinkButtonAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ImageAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ItemAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ItemsControlAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ListBoxAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ListBoxItemAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\MediaElementAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\PatternInterfaceTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\PopupAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ProgressBarAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\RadioButtonAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\RangeBaseAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\RepeatButtonAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ScrollBarAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ScrollViewerAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\SelectorAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\SelectorItemAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\SliderAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\TabControlAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\TabItemAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\TextBlockAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\TextBoxAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ThumbAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation.Peers\ToggleButtonAutomationPeerTest.cs" />
+    <Compile Include="System.Windows.Automation\AutomationElementIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\AutomationPropertiesTest.cs" />
+    <Compile Include="System.Windows.Automation\DockPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\DockPositionTest.cs" />
+    <Compile Include="System.Windows.Automation\ExpandCollapsePatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\ExpandCollapseStateTest.cs" />
+    <Compile Include="System.Windows.Automation\GridItemPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\GridPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\MultipleViewPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\RangeValuePatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\RowOrColumnMajorTest.cs" />
+    <Compile Include="System.Windows.Automation\ScrollAmountTest.cs" />
+    <Compile Include="System.Windows.Automation\ScrollPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\SelectionItemPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\SelectionPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\TableItemPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\TablePatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\TogglePatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\ToggleStateTest.cs" />
+    <Compile Include="System.Windows.Automation\TransformPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\ValuePatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\WindowInteractionStateTest.cs" />
+    <Compile Include="System.Windows.Automation\WindowPatternIdentifiersTest.cs" />
+    <Compile Include="System.Windows.Automation\WindowVisualStateTest.cs" />
+    <Compile Include="System.Windows.Browser\HtmlObjectTest.cs" />
+    <Compile Include="System.Windows.Browser\HtmlPageTest.cs" />
+    <Compile Include="System.Windows.Browser\HtmlWindowTest.cs" />
+    <Compile Include="System.Windows.Browser\ScriptableTest.cs" />
+    <Compile Include="System.Windows.Browser\ScriptObjectTest.cs" />
+    <Compile Include="System.Windows.Controls.Primitives\ButtonBaseTest.cs" />
+    <Compile Include="System.Windows.Controls.Primitives\PopupTest.cs" />
+    <Compile Include="System.Windows.Controls.Primitives\RangeBaseTest.cs" />
+    <Compile Include="System.Windows.Controls.Primitives\RepeatButtonTest.cs" />
+    <Compile Include="System.Windows.Controls.Primitives\SelectorTest.cs" />
+    <Compile Include="System.Windows.Controls.Primitives\ThumbTest.cs" />
+    <Compile Include="System.Windows.Controls.Primitives\ToggleButtonTest.cs" />
+    <Compile Include="System.Windows.Controls\BorderTest.cs" />
+    <Compile Include="System.Windows.Controls\ButtonTest.cs" />
+    <Compile Include="System.Windows.Controls\CanvasTest.cs" />
+    <Compile Include="System.Windows.Controls\ColumnDefinitionTest.cs" />
+    <Compile Include="System.Windows.Controls\ComboBoxTest.cs" />
+    <Compile Include="System.Windows.Controls\ContentControlTest.cs" />
+    <Compile Include="System.Windows.Controls\ContentPresenterTest.cs" />
+    <Compile Include="System.Windows.Controls\ControlTemplateTest.cs" />
+    <Compile Include="System.Windows.Controls\ControlTest.cs" />
+    <Compile Include="System.Windows.Controls\GridTest.cs" />
+    <Compile Include="System.Windows.Controls\GridTestAuto.cs" />
+    <Compile Include="System.Windows.Controls\GridTestOrdering.cs" />
+    <Compile Include="System.Windows.Controls\ImageTest.cs" />
+    <Compile Include="System.Windows.Controls\InkPresenterTest.cs" />
+    <Compile Include="System.Windows.Controls\ItemCollectionTest.cs" />
+    <Compile Include="System.Windows.Controls\ItemsControlTestBase.cs" />
+    <Compile Include="System.Windows.Controls\ItemsControlTest.cs" />
+    <Compile Include="System.Windows.Controls\ListBoxTest.cs" />
+    <Compile Include="System.Windows.Controls\MediaElementTest.cs" />
+    <Compile Include="System.Windows.Controls\MediaElementTest.SlowStream.cs" />
+    <Compile Include="System.Windows.Controls\MultiScaleImageTest.cs" />
+    <Compile Include="System.Windows.Controls\OpenFileDialogTest.cs" />
+    <Compile Include="System.Windows.Controls\PanelTest.cs" />
+    <Compile Include="System.Windows.Controls\PasswordBoxTest.cs" />
+    <Compile Include="System.Windows.Controls\ProgressBarTest.cs" />
+    <Compile Include="System.Windows.Controls\RadioButtonTest.cs" />
+    <Compile Include="System.Windows.Controls\RowDefinitionTest.cs" />
+    <Compile Include="System.Windows.Controls\ScrollViewerTest.cs" />
+    <Compile Include="System.Windows.Controls\SliderTest.cs" />
+    <Compile Include="System.Windows.Controls\StackPanelTest.cs" />
+    <Compile Include="System.Windows.Controls\TabControlTests.cs" />
+    <Compile Include="System.Windows.Controls\TextBlockTest.cs" />
+    <Compile Include="System.Windows.Controls\TextBoxTest.cs" />
+    <Compile Include="System.Windows.Controls\UIElementCollectionTest.cs" />
+    <Compile Include="System.Windows.Controls\UserControlTest.cs" />
+    <Compile Include="System.Windows.Data\BindingConverter.xaml.cs">
+      <DependentUpon>BindingConverter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="System.Windows.Data\BindingTest.cs" />
+    <Compile Include="System.Windows.Data\IValueConverterTest.cs" />
+    <Compile Include="System.Windows.Documents\FontSourceTest.cs" />
+    <Compile Include="System.Windows.Documents\GlyphsTest.cs" />
+    <Compile Include="System.Windows.Documents\InlineTest.cs" />
+    <Compile Include="System.Windows.Documents\LineBreakTest.cs" />
+    <Compile Include="System.Windows.Documents\RunTest.cs" />
+    <Compile Include="System.Windows.Input\CursorsTest.cs" />
+    <Compile Include="System.Windows.Input\InputMethodTest.cs" />
+    <Compile Include="System.Windows.Input\StylusDeviceTest.cs" />
+    <Compile Include="System.Windows.Input\StylusPointCollectionTest.cs" />
+    <Compile Include="System.Windows.Interop\ContentTest.cs" />
+    <Compile Include="System.Windows.Interop\SettingsTest.cs" />
+    <Compile Include="System.Windows.Interop\SilverlightHostTest.cs" />
+    <Compile Include="System.Windows.Markup\XamlReaderTest.cs" />
+    <Compile Include="System.Windows.Markup\XmlLanguageTest.cs" />
+    <Compile Include="System.Windows.Media.Animation\RepeatBehaviorTest.cs" />
+    <Compile Include="System.Windows.Media.Animation\StoryboardTest.cs" />
+    <Compile Include="System.Windows.Media.Imaging\BitmapImageTest.cs" />
+    <Compile Include="System.Windows.Media\BrushTest.cs" />
+    <Compile Include="System.Windows.Media\ColorTest.cs" />
+    <Compile Include="System.Windows.Media\DoubleCollectionTest.cs" />
+    <Compile Include="System.Windows.Media\GeometryTest.cs" />
+    <Compile Include="System.Windows.Media\GradientBrushTest.cs" />
+    <Compile Include="System.Windows.Media\ImageBrushTest.cs" />
+    <Compile Include="System.Windows.Media\LinearGradientBrushTest.cs" />
+    <Compile Include="System.Windows.Media\LineGeometryTest.cs" />
+    <Compile Include="System.Windows.Media\MatrixTest.cs" />
+    <Compile Include="System.Windows.Media\MatrixTransformTest.cs" />
+    <Compile Include="System.Windows.Media\MediaStreamSourceTest.cs" />
+    <Compile Include="System.Windows.Media\RadialGradientBrushTest.cs" />
+    <Compile Include="System.Windows.Media\RectangleGeometryTest.cs" />
+    <Compile Include="System.Windows.Media\SolidColorBrushTest.cs" />
+    <Compile Include="System.Windows.Media\TileBrushTest.cs" />
+    <Compile Include="System.Windows.Media\TransformGroupTest.cs" />
+    <Compile Include="System.Windows.Media\VideoBrushTest.cs" />
+    <Compile Include="System.Windows.Media\VisualTreeHelperTest.cs" />
+    <Compile Include="System.Windows.Resources\StreamResourceInfoTest.cs" />
+    <Compile Include="System.Windows.Shapes\EllipseTest.cs" />
+    <Compile Include="System.Windows.Shapes\LineTest.cs" />
+    <Compile Include="System.Windows.Shapes\PathTest.cs" />
+    <Compile Include="System.Windows.Shapes\PolygonTest.cs" />
+    <Compile Include="System.Windows.Shapes\PolylineTest.cs" />
+    <Compile Include="System.Windows.Shapes\RectangleTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="System.Windows.Shapes\ShapeTest.cs" />
+    <Compile Include="System.Windows.Threading\CrossThreadAccessTest.cs" />
+    <Compile Include="System.Windows.Threading\DispatcherTest.cs" />
+    <Compile Include="System.Windows\ApplicationTest.cs" />
+    <Compile Include="System.Windows\AssemblyPartCollectionTest.cs" />
+    <Compile Include="System.Windows\AssemblyPartTest.cs" />
+    <Compile Include="System.Windows\CornerRadiusTest.cs" />
+    <Compile Include="System.Windows\DataTemplateTests.cs" />
+    <Compile Include="System.Windows\DependencyObjectTest.cs" />
+    <Compile Include="System.Windows\DependencyPropertyAttachedTest.cs" />
+    <Compile Include="System.Windows\DependencyPropertyTest.cs" />
+    <Compile Include="System.Windows\DeploymentTest.cs" />
+    <Compile Include="System.Windows\DurationTest.cs" />
+    <Compile Include="System.Windows\FontStretchesTest.cs" />
+    <Compile Include="System.Windows\FontStylesTest.cs" />
+    <Compile Include="System.Windows\FontWeigthsTest.cs" />
+    <Compile Include="System.Windows\FrameworkElementTest.cs" />
+    <Compile Include="System.Windows\GridLengthTest.cs" />
+    <Compile Include="System.Windows\LoadedTest.cs" />
+    <Compile Include="System.Windows\LogicalTreeTest.cs" />
+    <Compile Include="System.Windows\MessageBoxTest.cs" />
+    <Compile Include="System.Windows\PointTest.cs" />
+    <Compile Include="System.Windows\PropertyPathTest.cs" />
+    <Compile Include="System.Windows\PresentationFrameworkCollectionTest.cs" />
+    <Compile Include="System.Windows\RectTest.cs" />
+    <Compile Include="System.Windows\ResourceDictionaryTest.cs" />
+    <Compile Include="System.Windows\RoutedEventArgsTest.cs" />
+    <Compile Include="System.Windows\SetterBaseCollectionTest.cs" />
+    <Compile Include="System.Windows\SetterTest.cs" />
+    <Compile Include="System.Windows\SizeTest.cs" />
+    <Compile Include="System.Windows\StyleTest.cs" />
+    <Compile Include="System.Windows\StyleTest2.cs" />
+    <Compile Include="System.Windows\StyleTest3.cs" />
+    <Compile Include="System.Windows\StyleTest4.cs" />
+    <Compile Include="System.Windows\StyleTest5.cs" />
+    <Compile Include="System.Windows\TemplatePartAttributeTest.cs" />
+    <Compile Include="System.Windows\TextDecorationsTest.cs" />
+    <Compile Include="System.Windows\ThicknessTest.cs" />
+    <Compile Include="System.Windows\UIElementTest.cs" />
+    <Compile Include="System.Windows\VisualStateManagerTest.cs" />
+    <Compile Include="System.Windows\VisualStateTest.cs" />
+    <Compile Include="System.Windows\VSMControl.xaml.cs">
+      <DependentUpon>VSMControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="System.Xml\XmlReaderSettingsTest.cs" />
+    <Compile Include="System.Xml\XmlReaderTest.cs" />
+    <Compile Include="System.Xml\XmlResolverTest.cs" />
+    <Compile Include="System.Xml\XmlXapResolverTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Silverlight.Testing\UnitTestHarness\UnitTestHarness.csproj">
+      <Project>{FBACE883-73A3-45C6-BDBF-72C34EF57334}</Project>
+      <Name>UnitTestHarness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.csproj">
+      <Project>{01D5C633-B082-4D14-AE78-CFCF7CC5699B}</Project>
+      <Name>Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BindingXaml.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_A1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_A2.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_A3.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_B1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_B2.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_B3.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_C1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_C2.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_C3.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_D1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_D2.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_D3.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_D4.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_E1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_E2.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_F1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_F2.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_F3.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\DependencyPropertyTest_ManagedTest_F4.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Ex_Derived3.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Ex_Derived2.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Ex_Derived.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_CaseMismatch.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Internal.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Protected.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Private.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_MouseArgs.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_DO.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_OverloadedInvalid.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_OverloadedValid.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_NonVoid.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_3.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_0.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_ObjectObject.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_RoutedEventArgs.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Basic.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="misc\Events\Event_Exact.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="misc\Events\Event_InexistentResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="misc\Events\Event_ExactCaseMismatch.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="System.Windows.Controls\ControlTemplateTest.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="System.Windows.Data\BindingConverter.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="System.Windows\VSMControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="System.Windows\XamlStyle.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="System.Windows\ResourceDictionarySourcePropertyTest.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System.Windows.Ink\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight\v2.0\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

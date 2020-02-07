@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.Theming.BubbleCreme</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Controls.Theming.BubbleCremeTheme">
+            <summary>
+            Implicitly applies the Bubble Creme theme to all of its descendent
+            FrameworkElements.
+            </summary>
+            <remarks>
+            The theme is applied using ImplicitStyleManager.
+            </remarks>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.Theming.BubbleCremeTheme.#ctor">
+            <summary>
+            Initializes a new instance of the BubbleCremeTheme class.
+            </summary>
+        </member>
+    </members>
+</doc>

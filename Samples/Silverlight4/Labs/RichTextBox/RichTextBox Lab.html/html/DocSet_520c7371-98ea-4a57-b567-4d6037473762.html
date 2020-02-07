@@ -1,0 +1,135 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 3 – Multilingual Support" />
+      <MSHelp:RLTitle Title="Exercise 3 – Multilingual Support" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 3 – Multilingual Support</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight RichTextBox Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 3 – Multilingual Support</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Bi-Directional (BiDi) support is new in Silverlight 4 and allows applications to display controls in both left-to-right flow and in right-to-left (for languages such as Arabic, Persian or Hebrew). Silverlight 4 also supports Bi-Directional input to allows users to input text written from right to left (for example, Hebrew text). </p>
+        <p>In this exercise we will learn how to use the application's culture to determine the direction of the controls and how we can use culture based resources.</p>
+        <br />
+        <a name="_Toc244134688" href="#">
+          <span />
+        </a>
+        <a name="_Toc256194586" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 –BiDi (Bi-Directional) Support</b>
+        </p>
+        <p>Silverlight 4 adds support for bi-directional text. In this exercise we will add support for Right-To-Left languages such as Hebrew and Arabic.</p>
+        <ol>
+          <li>Close the existing solution in Visual Studio if one is currently open</li>
+          <li>On the <b>File</b> menu click <b>Open</b><b>Project/Solution…</b></li>
+          <li>At the Open Project dialog navigate to the Lab installation folder</li>
+          <li>Navigate to <b>RichTextBox\Source\Ex03\Begin</b> folder</li>
+          <li>Click the <b>RichTextBox.sln</b> file and then click the <b>Open</b> button</li>
+          <li>Open MainPage.xaml and search for a Border control that contains the FlowDirection attribute – a new property which belongs to the FrameworkElement class. The attribute is bound to a property called IsRTL. </li>
+          <li>Open MainPage.xaml.cs and examine the property code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>#region Propertiespublic bool IsRTL{    get { return (bool)GetValue(IsRTLProperty); }    set { SetValue(IsRTLProperty, value); }}// Using a DependencyProperty as the backing store for IsRTL.  This enables animation, styling, binding, etc...public static readonly DependencyProperty IsRTLProperty =    DependencyProperty.Register("IsRTL", typeof(bool),                                typeof(MainPage),                                null);</pre></td></tr></table></span></div></li>
+          <li>Next, we'll add a ToggleButton that will be responsible for changing the property's value. Open MainPage.xaml and locate the comment &lt;!-- TODO - Display, Highlight, Xaml Buttons--&gt;. Add the following code below the comment:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;ToggleButton x:Name="btnRTL" Checked="btnRTL_Checked"               Unchecked="btnRTL_Checked" Grid.Column="4" Margin="15,-22,0,24"               HorizontalAlignment="Center" Grid.Row="1"&gt;    &lt;ToolTipService.ToolTip&gt;        &lt;ToolTip FontSize="16" Content="Text Direction"/&gt;    &lt;/ToolTipService.ToolTip&gt;    &lt;Image Source="Images/ltr.png" Width="30"/&gt;&lt;/ToggleButton&gt;</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Right-click on the Checked event handler name and select <b>Navigate to Event Handler</b> to go to it in MainPage.xaml.cs. Add the following code into the event handler to handle showing different images based upon the value of the IsRTL property:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>IsRTL = !IsRTL;if (IsRTL)    btnRTL.Content = CreateImageFromUri(        new Uri("/RichNotepad;component/images/rtl.png",             UriKind.RelativeOrAbsolute), 30, 32);else    btnRTL.Content = CreateImageFromUri(        new Uri("/RichNotepad;component/images/ltr.png",             UriKind.RelativeOrAbsolute), 30, 32);ReturnFocus(); </pre></td></tr></table></span></div></li>
+          <li>Compile and run the application by pressing F5. Enter some text and then press the LTR toggle button – The entire RichTextBox control's content is now right aligned – buttons, controls, and grids are all aligned to the right. Now our application is BiDi aware and takes in account the direction of the text and changes to the FlowDirection property.</li>
+        </ol>
+        <a name="_Toc244134689" href="#">
+          <span />
+        </a>
+        <a name="_Toc256194587" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 –Culture based UI with Resources</b>
+        </p>
+        <p>In this task, we'll use 3 cultures – en-US (English), ar-SA (Arabic) and he-IL (Hebrew) and will dynamically change the UI culture of our application according to the user's language setting.</p>
+        <ol>
+          <li>The first thing we'll do is decide whether the flow direction of the application should be LTR (left-to-right) or RTL (right-to-left), according to the selected culture. Open MainPage.xaml.cs and observe the following in the constructor:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>IsRTL = Thread.CurrentThread.CurrentUICulture.Parent.Name.ToLower() == "he" ||Thread.CurrentThread.CurrentUICulture.Parent.Name.ToLower() == "ar";</pre></td></tr></table></span></div></li>
+          <br />
+          <li>In the Solution Explorer, expand the content of the RichTextBox.Web project, right-click the SelectCulture.htm file and select Set As Start Page.</li>
+          <li>Open SelectCulture.htm file in the code editor window. You'll see that the html page contains a ComboBox and a Button – pressing the button makes the browser navigate to the Silverlight page with the selected culture as part of the URL.</li>
+          <li>Open RichTextBoxTestPage.aspx and look at the culture parameter passed to the Silverlight object (bottom of the page). This is how we pass the selected culture from the URL to the Silverlight Control.</li>
+          <li>Compile and run the application by pressing F5. You'll see the following page<p><img src="images\c7213100-804b-42e3-8765-1e13162e1889.png" /></p><p><b>Figure 5</b><br /><i>Language Selection Page in Browser</i></p></li>
+          <li>Select English and press the Open Editor Button. The application will open with LTR mode enabled.</li>
+          <li>Run the application again, this time select either Hebrew or Arabic. Notice how the application changes its flow to RTL. </li>
+        </ol>
+        <br />
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

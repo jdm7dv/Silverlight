@@ -1,0 +1,29 @@
+2009-03-18  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Added more files to clean.
+
+2009-03-17  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Use Mono.Moonlight.UnitTesting.dll when
+	  building with Moonlight so the test results gets logged.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Resign System.Windows.Controls[.Data].dll and
+	  System.Xml.Linq.dll with a key for which we have the private
+	  key (so that SL loads the assemblies).
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Fix dependencies and clean and install targets.
+
+2009-03-16  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* site:
+	* ChangeLog:
+	* Makefile.am:
+	* Controls.Data.Test:
+	* Controls.Test.Common:
+	* Controls.Extended.Test: Include support for building MS'
+	  toolkit tests in our build.
+

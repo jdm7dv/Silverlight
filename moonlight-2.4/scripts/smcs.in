@@ -1,0 +1,2 @@
+#!/bin/sh
+MONO_PATH=@prefix@/lib/moonlight/2.0:$MONO_PATH exec @prefix@/bin/mono $MONO_OPTIONS --runtime=moonlight --security=temporary-smcs-hack @prefix@/lib/moonlight/2.0/smcs.exe "$@"

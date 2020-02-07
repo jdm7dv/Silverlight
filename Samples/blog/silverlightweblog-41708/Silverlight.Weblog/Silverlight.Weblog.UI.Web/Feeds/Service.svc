@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Silverlight.Weblog.UI.Web.Feeds.Feed" Factory="Silverlight.Weblog.UI.Web.Feeds.CustomHostFactory" CodeBehind="Service.svc.cs" %>

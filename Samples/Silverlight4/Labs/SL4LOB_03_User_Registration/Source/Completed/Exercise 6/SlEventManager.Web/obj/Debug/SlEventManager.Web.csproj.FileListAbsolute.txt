@@ -1,0 +1,9 @@
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\bin\SlEventManager.Web.dll
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\bin\SlEventManager.Web.pdb
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\obj\Debug\SlEventManager.Web.Resources.ErrorResources.resources
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\obj\Debug\SlEventManager.Web.Resources.RegistrationDataResources.resources
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\obj\Debug\SlEventManager.Web.dll
+C:\Silverlight4\Labs\SL4LOB_03_User_Registration\Source\Completed\Exercise 6\SlEventManager.Web\obj\Debug\SlEventManager.Web.pdb

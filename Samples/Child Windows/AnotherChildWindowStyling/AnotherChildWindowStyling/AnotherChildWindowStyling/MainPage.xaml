@@ -1,0 +1,59 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AnotherChildWindowStyling.MainPage"
+             Width="560"
+             Height="600"
+             Background="White"
+             Foreground="#FFB9D0FA">
+
+ <Grid x:Name="LayoutRoot"
+       Background="#FF000328">
+  <Button x:Name="btClick"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+          Width="120"
+          Content="Click"
+          Height="28" />
+  <TextBlock HorizontalAlignment="Center"
+             VerticalAlignment="Top"
+             Text="A new ChildWindow Styling"
+             TextWrapping="Wrap"
+             Margin="0,169,0,0"
+             Foreground="#FFB9D0FA"
+             FontFamily="Verdana"
+             FontSize="21.333">
+			<TextBlock.Effect>
+				<DropShadowEffect Color="#FF323B6A" />
+			</TextBlock.Effect>
+  </TextBlock>
+  <TextBlock HorizontalAlignment="Center"
+             Margin="0,214,0,0"
+             VerticalAlignment="Top"
+             FontFamily="Verdana"
+             FontSize="16"
+             Foreground="#6BFFFFFF"
+             Text="including an Accordion Styling"
+             TextWrapping="Wrap">
+			<TextBlock.Effect>
+				<DropShadowEffect Color="#FF195C7C" />
+			</TextBlock.Effect>
+  </TextBlock>
+  <TextBlock HorizontalAlignment="Center"
+             VerticalAlignment="Top"
+             Text="A LawBot Solution 2010"
+             TextWrapping="Wrap"
+             Margin="0,471,0,0"
+             Foreground="#FFB9D0FA" />
+  <Path Stretch="Fill"
+        Stroke="White"
+        Height="1"
+        Margin="216,0,215.5,114"
+        VerticalAlignment="Bottom"
+        UseLayoutRounding="False"
+        Data="M216.5,485.5 L343,485.5">
+   <Path.Effect>
+    <BlurEffect Radius="11" />
+   </Path.Effect>
+  </Path>
+ </Grid>
+</UserControl>

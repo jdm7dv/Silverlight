@@ -1,0 +1,149 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Custom Window Chrome" />
+      <MSHelp:RLTitle Title="Exercise 2: Custom Window Chrome" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Custom Window Chrome</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 8 - Advanced OOB, Custom Window Chrome, Silent Installs, Digital Signing, and MEF Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Custom Window Chrome</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this part of the lab, you will create a Silverlight application that disables the standard window borders when running out of browser, enabling you to provide a more distinctive-looking window.</p>
+        <a name="_Toc256194269" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Configuring the Application for Custom Chrome</b>
+        </p>
+        <ol>
+          <li>Open Visual Studio 2010.</li>
+          <li>In Visual Studio 2010, press <b>Ctrl+Shift+N</b>, or use the <b>File→New→Project...</b> menu item.</li>
+          <li><b>Select</b><b>Visual C#→Silverlight in the treeview on the left.</b></li>
+          <li><b>In the center, select the Silverlight Application template.</b></li>
+          <li><b>Name the project CustomChrome.</b></li>
+          <li><b>Ensure the </b>“Create directory for solution” checkbox is checked.</li>
+          <li>In the <b>New Silverlight Application</b> dialog, let Visual Studio create a new web project to host the application.</li>
+          <li>Double click on the <b>CustomChrome</b> project’s <b>Properties</b> node in the Solution Explorer.</li>
+          <li>Select the <b>Silverlight</b> tab.</li>
+          <li>Check the “<b>Enable running application out of the browser</b>” checkbox.</li>
+          <li>Click the <b>Out-of-Browser Settings…</b> button.</li>
+          <li>Check the “<b>Require elevated trust when running outside the browser</b>” checkbox.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>You can only disable the standard window borders in an elevated trust application.</td></tr></table><p /></div></li>
+          <br />
+          <li>Set a fixed window Width and Height of 400 and 300 respectively.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>You might expect the settings for configuring the window border style to live in this dialog. However, the current preview version of the Silverlight 4 tools does not in fact offer any UI for controlling this.</td></tr></table><p /></div></li>
+          <br />
+          <li>Click OK to close the Out-of Browser Settings dialog.</li>
+          <li>Build the project.</li>
+          <li>Right click the CustomChrome project and open its property window.</li>
+          <li>Click the Out of Browser button.</li>
+          <li>Select the Window Style to be <b>Borderless Rounded Corners</b>, as shown in the figure below.<p><img src="images\b8bd3aee-f9b8-4dc9-9e33-49093600b976.png" /></p><p><b>Figure 2</b><br /><i>Customizing the Window Chrome</i></p></li>
+          <br />
+          <li>Run the application. Install it for out-of-browser operation. When the OOB version appears, it will be a blank white rectangle with no content and no borders. (It might not even be that easy to see, depending on what else is on your screen.) You won’t be able to move, resize or close the window in the usual way yet. Get rid of it by right clicking, and choosing to remove the application.</li>
+        </ol>
+        <a name="_Toc256194270" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Handling Move, Resize and Close Manually</b>
+        </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Since we’ll be turning off the normal window borders, we’ll need to provide our own UI for moving, resizing, and closing the window.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>In MainPage.xaml, add the following XAML inside the root grid:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.RowDefinitions&gt;    &lt;RowDefinition Height="15" /&gt;    &lt;RowDefinition Height="*" /&gt;    &lt;RowDefinition Height="15" /&gt;&lt;/Grid.RowDefinitions&gt;&lt;Grid.ColumnDefinitions&gt;    &lt;ColumnDefinition Width="15" /&gt;    &lt;ColumnDefinition Width="*" /&gt;    &lt;ColumnDefinition Width="15" /&gt;&lt;/Grid.ColumnDefinitions&gt;&lt;Rectangle x:Name="topLeft"           Grid.Column="0" Grid.Row="0"           Fill="#ff8080ff" /&gt;&lt;Rectangle x:Name="top"           Grid.Column="1" Grid.Row="0"           Fill="#ff80ffff" /&gt;&lt;Rectangle x:Name="topRight"           Grid.Column="2" Grid.Row="0"           Fill="#ff8080ff" /&gt;&lt;Rectangle x:Name="left"           Grid.Column="0" Grid.Row="1"           Fill="#ff80ffff" /&gt;&lt;Rectangle x:Name="right"           Grid.Column="2" Grid.Row="1"           Fill="#ff80ffff" /&gt;&lt;Rectangle x:Name="bottomLeft"           Grid.Column="0" Grid.Row="2"           Fill="#ff8080ff" /&gt;&lt;Rectangle x:Name="bottom"           Grid.Column="1" Grid.Row="2"           Fill="#ff80ffff" /&gt;&lt;Rectangle x:Name="bottomRight"           Grid.Column="2" Grid.Row="2"           Fill="#ff8080ff" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Add a MouseLeftButtonDown event handler to the topLeft rectangle. Implement it with the following code:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void topLeft_MouseLeftButtonDown(object sender, MouseButtonEventArgs e){    App.Current.MainWindow.DragResize(WindowResizeEdge.TopLeft);}</pre></td></tr></table></span></div></li>
+          <li>Add similar handlers for all the other rectangles you just added, picking the WindowResizeEdge enumeration that corresponds to the rectangle name.</li>
+          <li>Drag a button onto the XAML design surface.</li>
+          <li>Set the button content to Close. Call the button closeButton.</li>
+          <li>Add a Click handler for the button. Inside the Click handler, add this code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>App.Current.MainWindow.Close();</pre></td></tr></table></span></div></li>
+          <li>Add a MouseLeftButtonDown event handler to the root Grid element. Add the following code to that handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>App.Current.MainWindow.DragMove();</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+          <li>Right-click on the application and install it to run out of browser.</li>
+          <li>Once the application has been installed and is running, try dragging the bars at the edges and corners of the window. You should be able to resize the window with them. You should be able to move the window around by dragging on the main area. And you can close it by clicking the Close button.</li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

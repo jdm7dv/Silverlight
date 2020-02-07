@@ -1,0 +1,175 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Acquiring Pictures with a Webcam" />
+      <MSHelp:RLTitle Title="Exercise 1: Acquiring Pictures with a Webcam" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Acquiring Pictures with a Webcam</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 4 - Webcam, Drag and Drop, and Clipboard Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Acquiring Pictures with a Webcam</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this part of the lab, you will create a new page for adding a picture to a logged-in attendee’s account. This page will show a live preview image from a camera, along with a button to capture a still image.</p>
+        <a name="_Toc256193945" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Get the List of Devices</b>
+        </p>
+        <ol>
+          <li>Open the SlEventManager solution in Visual Studio 2010.</li>
+          <li>In the SlEventManager project’s Views folder, add a new Silverlight Page called UserPicture.</li>
+          <li>In the Home.xaml file, find the StackPanel that contains the attendee-specific buttons (the Register and Unregister buttons)</li>
+          <li>Add the following before those buttons inside the panel:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;HyperlinkButton Content="User Picture" NavigateUri="/UserPicture" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>You will need to be logged in each time you run the application in this part of the lab, because the user picture feature should only be available to logged in attendees. So you might find it helpful to check the checkbox to remain logged in. This will set a persistent cookie that should mean you won’t need to log in every single time you run. The cookie has a fairly short lifetime, but it’s better than logging in each time you rerun the application.<br />When you log in, you should see a User Picture link next to the Register and Unregister buttons, and clicking this will take you to the new (currently blank) UserPicture view.<br />Silverlight’s webcam API is designed to cope with machines that have multiple webcams attached. From a developer’s perspective, the most straightforward option is to present this is as a list of cameras in the UI.<br />A more sophisticated approach would be to design three different UIs, one for when there are no webcams available, one for when there is exactly one, and one for when there are multiple cameras. The first two cases are far more common than the third, so you’d want them to work well, and you especially wouldn’t want to compromise the ease of use in these two common cases. If supporting the unusual multiple camera case means complicating the UI, it’s probably best only to show the complex version of the UI when you really need to. But since the focus here is working with the webcam API itself we’ll take the simple approach, rather than making you build three versions of the UI.</td></tr></table><p /></div></li>
+          <li>In the UserPicture.xaml file, drag a ListBox onto the page.</li>
+          <li>Position it at the top left, and make it large enough to hold about three lines before needing to scroll. </li>
+          <li>Name this ListBox cameraList.</li>
+          <li>In the UserPicture.xaml.cs code behind, add the following to the constructor after the call to InitializeComponent:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>cameraList.ItemsSource =    CaptureDeviceConfiguration.GetAvailableVideoCaptureDevices();</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+        </ol>
+        <a name="_Toc256193946" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Acquire a Capture Source</b>
+        </p>
+        <ol>
+          <li>If you are not logged in, log in now.</li>
+          <li>Go to the UserPicture page.( Any cameras that show up will not be presented in a particularly useful fashion)<p><img src="images\617c6c3e-71e2-43dc-87c5-a18426bd75e7.png" /></p><p><b>Figure 1</b><br /><i>Video Capture Devices</i></p><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>To present the name of the device, you’ll need to add an item template to the ListBox. This template displays the FriendlyName property of each video device, which is the appropriate name to show to end users to represent the camera. </td></tr></table><p /></div></li>
+          <li>Add the following inside the ListBox element in UserPicture.xaml.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;ListBox.ItemTemplate&gt;  &lt;DataTemplate&gt;    &lt;TextBlock Text="{Binding Path=FriendlyName}" /&gt;  &lt;/DataTemplate&gt;&lt;/ListBox.ItemTemplate&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application again, and you should see more user-friendly names for any cameras on your system.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>When the user selects a camera, we want to show whatever the camera is looking at, so the user can get into a suitable pose ready for taking the picture. So you will need a UI element to show this preview. The webcam features of Silverlight 4 support this kind of live preview with an image source, which lets you use an Image element, and it also supports rendering webcam content through a VideoBrush, meaning you can paint any element that offers Brush properties. We’ll use a Border, painting its Background property (which is of type Brush) with the webcam picture. </td></tr></table><p /></div></li>
+          <li>Add a Border to your XAML and name it <b>webcamLivePreview</b>:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Border  x:Name="webcamLivePreview"   Height="150" Width="150"   HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="378,25,0,0"  BorderBrush="Silver" BorderThickness="2" CornerRadius="10"  /&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Feel free to adjust the size and position if this clashes with the ListBox you already added.</td></tr></table><p /></div></li>
+          <li>Double click on the ListBox in the design surface to add a SelectionChanged event handler.</li>
+          <li>Add field of type <b>CaptureSource</b> to your code behind class. This allows you to acquire images from a webcam.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>CaptureSource cs;</pre></td></tr></table></span></div></li>
+          <li>In the SelectionChanged handler for the ListBox, add the following code<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (cs != null){    cs.Stop();}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This ensures that if a CaptureSource was already running (perhaps the user had already selected one camera and is now selecting a different one) we stop it before attempting to attach it to the newly-selected camera:</td></tr></table><p /></div></li>
+          <li>Add the following code to check whether the user has selected a device, and to set it up if they have.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>VideoCaptureDevice videoDevice = cameraList.SelectedItem as VideoCaptureDevice;if (videoDevice != null){    // We need user permission to use the webcam.    if (CaptureDeviceConfiguration.AllowedDeviceAccess ||        CaptureDeviceConfiguration.RequestDeviceAccess())    {        if (cs == null)        {            cs = new CaptureSource();            VideoBrush vb = new VideoBrush();            vb.SetSource(cs);            vb.Stretch = Stretch.UniformToFill;            webcamLivePreview.Background = vb;        }        cs.VideoCaptureDevice = videoDevice;        cs.Start();    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This ensures we have the user’s permission to use the webcam. It also creates a CaptureSource if one hasn’t already been created, along with a VideoBrush to paint the video into our preview Border. Finally, this code associates the CaptureSource with the chosen camera, and starts capturing video.</td></tr></table><p /></div></li>
+          <li>Run the application and go to the UserPicture view.</li>
+          <li>Select a video camera in the list, and you should see the permission dialog appear:<p><img src="images\2c3d88a2-2741-469e-8e87-623e6cc60843.png" /></p><p><b>Figure 2</b><br /><i>Registration Validation</i></p></li>
+          <li>Click Yes. You should start seeing an image from the camera within a few seconds.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>There’s a slight issue with the code as it stands. If you navigate away to a different page, the camera doesn’t get released. If your camera has an activity light, you’ll see that it stays on if you navigate back to the Home view. This could cause a problem, as it could prevent your program (or other programs) from using the camera correctly later on, and in any case, it may disturb the user to see the activity light stay on. We need to ensure that the camera is released when users navigate away. </td></tr></table><p /></div></li>
+          <li>Add the code shown below to the OnNavigatedFrom method to stop the webcam if the user navigates away from the page:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>protected override void OnNavigatedFrom(NavigationEventArgs e){    if (cs != null)    {        cs.Stop();        cs = null;    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>If the user navigates completely out of your Silverlight application to another web page, or just closes the browser, the Silverlight plug-in will automatically release the camera for you. This code is only to ensure that you release the camera when the user navigates to some other part of your application.</td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193947" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Take a Snapshot</b>
+        </p>
+        <ol>
+          <li>Add a button called takePictureButton</li>
+          <li><b>Set the button’s</b> caption to Take Picture</li>
+          <li>Add another Border with the same dimensions and appearance as the existing one.</li>
+          <li>Name the new <b>Border</b> userPictureBorder and position it below the list of cameras.</li>
+          <li>Double click on the Take Picture button to add a Click event handler. </li>
+          <li>Put the following code in the <b>Client</b> event handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (cs == null) return;cs.CaptureImageCompleted += (s, pe) =&gt;{    var bmp = pe.Result;    ImageBrush brush = new ImageBrush();    brush.ImageSource = bmp;    brush.Stretch = Stretch.UniformToFill;    userPictureBorder.Background = brush;};cs.CaptureImageAsync();</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+          <li>Go to the User Picture view.</li>
+          <li>Select a camera</li>
+          <li>Click the Take Picture button. A still image from the camera should appear in the new Border element.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The next question is: how do we get this still image out of the UI and into the database? This is not entirely straightforward because Silverlight’s image handling only knows how to load bitmaps from streams, not how to create new bitmap streams from existing images. Fortunately, the .NET Image Tools project on codeplex (available from <a href="http://imagetools.codeplex.com/">http://imagetools.codeplex.com/</a>) offers a solution, licensed under the Ms-PL (Microsoft Public License). A copy of this code can be found in the ImageTools folder in this lab’s folder. </td></tr></table><p /></div></li>
+          <li>In your SlEventManager project, add references to the DLLs in the <b>ImageTools</b> folder.</li>
+          <li>Add the following using declarations to your UserPicture.xaml.cs code behind:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.IO;using ImageTools;using ImageTools.IO.Png;</pre></td></tr></table></span></div></li>
+          <li>Add the following field to the code behind. This will hold the encoded bytes of the image:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>byte[] imageBytes;</pre></td></tr></table></span></div></li>
+          <li>Go to the Take Picture button’s Click event handler</li>
+          <li>Add the following code after the line that sets the userPictureBorder.Background property<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>PngEncoder encoder = new PngEncoder();using (MemoryStream ms = new MemoryStream()){    var itImage = bmp.ToImage();    encoder.Encode(itImage, ms);    imageBytes = ms.ToArray();}</pre></td></tr></table></span></div></li>
+          <li>In the SlEventManager.Web project, open the EventManagerDomainService.cs file in the Services folder.</li>
+          <li>And add the following method:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Invoke]public void SetCurrentUserImage(byte[] imageBytes){    Attendee att = GetOrCreateAttendeeForCurrentUser();    att.UserPicture = imageBytes;    ObjectContext.SaveChanges();}</pre></td></tr></table></span></div></li>
+          <li>Add one more button to the user interface called savePictureButton.</li>
+          <li>Set the caption to Save Picture. </li>
+          <li>Add a Click event handler. </li>
+          <li>Add the following using declaration to the code behind:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Web.Services;</pre></td></tr></table></span></div></li>
+          <li>Implement the Click handler:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (imageBytes != null){    savePictureButton.IsEnabled = false;    var context = new EventManagerDomainContext();    context.SetCurrentUserImage(imageBytes, operation =&gt;        {            savePictureButton.IsEnabled = true;        }, null);}</pre></td></tr></table></span></div></li>
+          <li>Run the application.</li>
+          <li>Acquire an image.</li>
+          <li>Save the image. </li>
+          <li>In Visual Studio, go to the Server Explorer panel, expand the Data Connections</li>
+          <li>Expand the Tables <b>item.</b></li>
+          <li>Right-click on the Attendee table and select Show Table Data. This should show that the UserPicture column for the attendee is no longer null. </li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

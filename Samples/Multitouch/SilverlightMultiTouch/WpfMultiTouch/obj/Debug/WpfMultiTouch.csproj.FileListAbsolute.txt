@@ -1,0 +1,32 @@
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\WpfMultiTouch.exe.config
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\WpfMultiTouch.exe
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\WpfMultiTouch.pdb
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\MultiTouch.Controls.WPF.dll
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\MultiTouch.Controls.WPF.pdb
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\MultiTouchWindow.baml
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\MultiTouchWindow.g.cs
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch_MarkupCompile.cache
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.g.resources
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.Properties.Resources.resources
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.exe
+C:\Users\Jonathan Moore\Desktop\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\WpfMultiTouch.exe.config
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.exe
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\WpfMultiTouch.exe
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\WpfMultiTouch.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\MultiTouch.Controls.WPF.dll
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\bin\Debug\MultiTouch.Controls.WPF.pdb
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\MultiTouchWindow.baml
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\MultiTouchWindow.g.cs
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\App.g.cs
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch_MarkupCompile.cache
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.g.resources
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\WpfMultiTouch.Properties.Resources.resources
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\GenerateResource.read.1.tlog
+C:\v1.9\SphinxLogic\base\SDK\code library\Web Development\Silverlight\multitouch-53457\SilverlightMultiTouch\WpfMultiTouch\obj\Debug\GenerateResource.write.1.tlog

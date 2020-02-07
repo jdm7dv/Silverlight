@@ -1,0 +1,4 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\RiaClient.Tests.NavigationUnitTests1\obj\Debug\NavigationUnitTests1.csprojAssemblyReference.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\RiaClient.Tests.NavigationUnitTests1\obj\Debug\Page1.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\RiaClient.Tests.NavigationUnitTests1\obj\Debug\Microsoft.AppFx.UnitTests.Silverlight.NavigationUnitTests1.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\RiaClient.Tests.NavigationUnitTests1\obj\Debug\NavigationUnitTests1.csproj.CoreCompileInputs.cache

@@ -1,0 +1,127 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Starter Solution" />
+      <MSHelp:RLTitle Title="Starter Solution" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Starter Solution</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Webcam in Silverlight Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Starter Solution</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Open the MagicMirror solution for this lab in Visual Studio 2010.  The solution file is located at "MagicMirror\Source\StarterSolution\begin".</p>
+        <p>Set the MagicMirror.Web project as the startup project, by right clicking the project in the Solution Explorer and selecting “Set as Startup Project”.</p>
+        <p>The solution consists of 2 projects, a Silverlight 4 project and an ASP.NET server host application. During this lab we will be modifying the Silverlight project only. </p>
+        <p>
+          <img src="images\5d93fa42-a5db-4d20-83f4-52e6e363c0ba.png" />
+        </p>
+        <p>
+          <b>Figure  1</b>
+          <br />
+          <i>Project Structure</i>
+        </p>
+        <p>The Silverlight project contains the following items:</p>
+        <p>An App.xaml file and its associated code-behind App.xaml.cs file. The <b>Application</b><b>Resources</b> dictionary declaratively defines a <b>Style</b> resource which we will use to implicitly style the Buttons within the application.</p>
+        <p>A MainPage.xaml file and its associated code-behind MainPage.xaml.cs file. This defines the MainPage <b>UserControl</b>, which is the <b>Application</b><b>RootVisual</b>. In the declarative template, note the following elements:</p>
+        <ul>
+          <li>A <b>StackPanel</b> of <b>Button</b> controls – their event handlers are wired up, and during this lab, we will implement appropriate business logic here for controlling the application.</li>
+          <li>A <b>Canvas</b> of border effects containing multiple <b>Path</b> elements – these paths define the background vector graphic of the application.</li>
+        </ul>
+        <p>The code-behind contains the following stubs, which will be modified during this lab:</p>
+        <ul>
+          <li>Button_Click – several Buttons hook up to this event handler – it contains a switch case statement to detect the sender name and handle the appropriate action. We will use this event handler for applying Shader effects and starting animations.</li>
+          <li>StopAnimations – this method will be called to stop any running <b>Storyboard</b> resources.</li>
+          <li>btnRotate_Click – this event handler will toggle the running state of the <b>Perspective</b> rotation <b>Storyboard.</b></li>
+          <li>btnStart_Click - this event handler will enable / disable the webcam video <b>CaptureSource.</b></li>
+          <li>btnCapture_Click - this event handler will capture the current video frame as a bitmap for printing via a <b>ChildWindow</b> dialog.</li>
+        </ul>
+        <p>A CaptureImage.xaml file and its associated code-behind CaptureImage.xaml.cs file. This defines the CaptureImage<b> ChildWindow</b>, which will be used to display and print a video frame captured as a bitmap. Its buttons are labeled “Close” and “Print”. During Exercise 2 Task 3, we will implement logic in the print button event handler to print a page from Silverlight.</p>
+        <p>Sample.png image file – the build action of this included file is set to resource, so that it is compiled into the project .xap file.</p>
+        <p>A Shaders solution folder – this contains 4 pre-constructed pixel shader effects: InvertColorEffect, PixelateEffect, RippleEffect, and SwirlEffect. Pixel shader effects will be discussed in Exercise 1 Task 2.</p>
+        <a name="_Toc256175665" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add a default image display</b>
+        </p>
+        <ol>
+          <li>Open MainPage.xaml file </li>
+          <li>Add an<b> ImageBrush</b> UserControl Resource – pointing to a .png file resource.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;ImageBrush x:Name="imageBrush" ImageSource="Sample.png" Stretch="Fill" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Locate the final <b>Path</b> element (the one at the bottom of the XAML file) with an x:Name of ”TO_FILL”.  Set its <b>Fill</b> attribute to bind to the ImageBrush resource. We will dynamically change the Fill to display a <b>VisualBrush</b> wrapping the Webcam capture during Exercise 2 Task 1.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Fill="{Binding Source={StaticResource imageBrush}}"</pre></td></tr></table></span></div></li>
+          <li>Run the application. You should see the background vector graphics, a horizontal StackPanel of Buttons and an image which is filling the topmost path.</li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

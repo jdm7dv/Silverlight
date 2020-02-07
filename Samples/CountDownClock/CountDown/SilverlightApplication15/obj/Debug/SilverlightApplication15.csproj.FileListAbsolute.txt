@@ -1,0 +1,53 @@
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\AppManifest.xaml
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\favicon.ico
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\SilverlightApplication15.dll
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\SilverlightApplication15.pdb
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\SilverlightApplication15.xap
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\TestPage.html
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\obj\Debug\App.g.cs
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\obj\Debug\MainPage.g.cs
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\obj\Debug\SilverlightApplication15.g.resources
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\obj\Debug\SilverlightApplication15.dll
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\obj\Debug\SilverlightApplication15.pdb
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\obj\Debug\XapCacheFile.xml
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\System.Windows.Interactivity.dll
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\System.Windows.Interactivity.xml
+D:\Users\Fons Sonnemans\Documents\Expression\Blend 3\Projects\SilverlightApplication15\SilverlightApplication15\Bin\Debug\Microsoft.Expression.Interactions.xml
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\AppManifest.xaml
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\favicon.ico
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\SilverlightApplication15.dll
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\SilverlightApplication15.pdb
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\SilverlightApplication15.xap
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\TestPage.html
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\Microsoft.Expression.Interactions.dll
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\System.Windows.Interactivity.dll
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\System.Windows.Interactivity.xml
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\Microsoft.Expression.Interactions.xml
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\ResolveAssemblyReference.cache
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\App.g.cs
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\MainPage.g.cs
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\SilverlightApplication15.g.resources
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\SilverlightApplication15.dll
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\SilverlightApplication15.pdb
+\\azerty\DSchijf\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\XapCacheFile.xml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\App.g.cs
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\MainPage.g.cs
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\SilverlightApplication15.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\SilverlightApplication15.pdb
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\Flipper.g.cs
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\SilverlightApplication15.g.resources
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\AppManifest.xaml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\favicon.ico
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\SilverlightApplication15.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\SilverlightApplication15.pdb
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\SilverlightApplication15.xap
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\TestPage.html
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\System.Windows.Interactivity.dll
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\System.Windows.Interactivity.xml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\Bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\XapCacheFile.xml
+D:\Projects\Silverlight\v3\Flipper\SilverlightApplication15\obj\Debug\FlipClock.g.cs

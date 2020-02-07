@@ -1,0 +1,129 @@
+<UserControl x:Class="ArcGISSilverlightSDK.SpatialQuery"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client"    
+    xmlns:esriToolkit="clr-namespace:ESRI.ArcGIS.Client.Toolkit;assembly=ESRI.ArcGIS.Client.Toolkit"
+    xmlns:esriSymbols="clr-namespace:ESRI.ArcGIS.Client.Symbols;assembly=ESRI.ArcGIS.Client"
+    xmlns:codeBehind="clr-namespace:ArcGISSilverlightSDK"
+    xmlns:slData="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows">
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <Grid.Resources>
+            <esriSymbols:SimpleMarkerSymbol x:Name="DefaultMarkerSymbol" Color="Red" Size="12" Style="Circle" />
+            <esriSymbols:CartographicLineSymbol x:Name="DefaultLineSymbol" Color="Red" Width="4" />
+            <esriSymbols:SimpleMarkerSymbol x:Name="NormalMarkerSymbol" Color="#FFFF0000" Size="12"/>
+            <esriSymbols:SimpleFillSymbol x:Name="DefaultFillSymbol" Fill="#66FF0000" BorderBrush="Red" BorderThickness="1" >
+                <esriSymbols:SimpleFillSymbol.ControlTemplate>
+                    <ControlTemplate>
+                        <Path x:Name="Element" IsHitTestVisible="False" Fill="{Binding Symbol.Fill}" 
+                            Stroke="{Binding Symbol.BorderBrush}"  StrokeThickness="{Binding Symbol.BorderThickness}"/>
+                    </ControlTemplate>
+                </esriSymbols:SimpleFillSymbol.ControlTemplate>
+            </esriSymbols:SimpleFillSymbol>
+            <esriSymbols:SimpleFillSymbol x:Name="ResultsFillSymbol" Fill="#880000FF" BorderBrush="Blue" 
+                BorderThickness="2">
+                <esriSymbols:SimpleFillSymbol.ControlTemplate>
+                    <ControlTemplate x:Name="CustomPolygonTemplate">
+                        <Grid>
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="Element"
+                                                Storyboard.TargetProperty="(Fill).(Color)"
+                                                To="#880000FF" Duration="0:0:0.1" />
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="Element"
+                                                Storyboard.TargetProperty="(Fill).(Color)"
+                                                To="#8800FFFF" Duration="0:0:0.1" />
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+                            <Path x:Name="Element" Stroke="{Binding Symbol.BorderBrush}"
+                                StrokeStartLineCap="Round" StrokeThickness="{Binding Symbol.BorderThickness}"
+                                StrokeLineJoin="Round" StrokeEndLineCap="Round" Fill="{Binding Symbol.Fill}" />
+                        </Grid>
+                    </ControlTemplate>
+                </esriSymbols:SimpleFillSymbol.ControlTemplate>
+            </esriSymbols:SimpleFillSymbol>
+        </Grid.Resources>
+
+        <esri:Map x:Name="MyMap" Extent="-130,10,-70,60" >
+            <esri:Map.Layers>
+                <esri:ArcGISTiledMapServiceLayer ID="StreetMapLayer" 
+                    Url="http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"/>
+                <esri:GraphicsLayer ID="MySelectionGraphicsLayer" />
+                <esri:GraphicsLayer ID="MyDrawGraphicsLayer" />
+            </esri:Map.Layers>
+        </esri:Map>
+
+        <Canvas Width="350" Height="110" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,15,0" >
+            <Rectangle Fill="#22000000" RadiusX="10" RadiusY="10"  Canvas.Left="0" Canvas.Top="4" Width="350" Height="110" />
+            <Rectangle Fill="#775C90B2" Stroke="Gray"  RadiusX="10" RadiusY="10"  Canvas.Left="0" Canvas.Top="0" Width="350" Height="110" />
+            <Rectangle Fill="#FFFFFFFF" Stroke="DarkGray" RadiusX="5" RadiusY="5" Canvas.Left="10" Canvas.Top="10" Width="330" Height="90"  />
+            <TextBlock x:Name="ToolTextBlock" Text="Use these tools to select states from the map." Foreground="Black" Width="300" 
+                TextAlignment="Center" FontSize="9" FontWeight="Bold" Canvas.Left="20" Canvas.Top="10" />
+            <StackPanel Orientation="Vertical" Canvas.Top="5" Canvas.Left="20">
+                <esriToolkit:Toolbar x:Name="esriTools" MaxItemHeight="80" MaxItemWidth="80"
+                    Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
+                    ToolbarItemClicked="esriTools_ToolbarItemClicked"                     
+                    Width="300" Height="80">
+                    <esriToolkit:Toolbar.Items>
+                        <esriToolkit:ToolbarItemCollection>
+                            <esriToolkit:ToolbarItem Text="Select by clicking at point location">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/DrawPoint.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Select by clicking a Polyline">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/DrawPolyline.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Select by clicking a Polygon">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/DrawPolygon.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Select by dragging a Rectangle">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/DrawRectangle.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                            <esriToolkit:ToolbarItem Text="Cancel Selection Tools">
+                                <esriToolkit:ToolbarItem.Content>
+                                    <Image Source="/Assets/images/StopDraw.png" Stretch="UniformToFill" Margin="5" />
+                                </esriToolkit:ToolbarItem.Content>
+                            </esriToolkit:ToolbarItem>
+                        </esriToolkit:ToolbarItemCollection>
+                    </esriToolkit:Toolbar.Items>
+                </esriToolkit:Toolbar>
+                <TextBlock x:Name="StatusTextBlock" Text="" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Canvas>
+
+        <Canvas x:Name="ResultsDisplay" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="400" Height="200" Margin="0,0,15,15" Visibility="Visible" >
+            <Rectangle Fill="#22000000" RadiusX="10" RadiusY="10" Canvas.Left="0" Canvas.Top="4" Width="400" Height="200" />
+            <Rectangle Fill="#DD5C90B2" Stroke="Gray"  RadiusX="10" RadiusY="10" Canvas.Left="0" Canvas.Top="0" Width="400" Height="200" />
+            <TextBlock x:Name="DataDisplayTitle" Text="Search Results" Foreground="Black" FontSize="9" Canvas.Left="10" Canvas.Top="4" FontWeight="Bold" />
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Canvas.Left="10" Canvas.Top="20" Width="380" Height="170" >
+                <slData:DataGrid x:Name="QueryDetailsDataGrid" AutoGenerateColumns="False" HeadersVisibility="Column" Background="White" >
+                    <slData:DataGrid.Columns>
+                        <codeBehind:GraphicAttributeColumn AttributeName="STATE_NAME" Header="State Name"/>
+                        <codeBehind:GraphicAttributeColumn AttributeName="SUB_REGION" Header="Region"/>
+                        <codeBehind:GraphicAttributeColumn AttributeName="STATE_FIPS" Header="FIPS"/>
+                        <codeBehind:GraphicAttributeColumn AttributeName="STATE_ABBR" Header="Abbreviation"/>
+                        <codeBehind:GraphicAttributeColumn AttributeName="POP2000" Header="Population 2000"/>
+                        <codeBehind:GraphicAttributeColumn AttributeName="POP2007" Header="Population 2007"/>
+                    </slData:DataGrid.Columns>
+                </slData:DataGrid>
+            </ScrollViewer>
+        </Canvas>
+
+    </Grid>
+</UserControl>

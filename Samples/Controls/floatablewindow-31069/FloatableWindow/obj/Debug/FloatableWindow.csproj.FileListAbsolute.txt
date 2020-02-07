@@ -1,0 +1,13 @@
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\Bin\Debug\FloatableWindow.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\Bin\Debug\FloatableWindow.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\Bin\Debug\FloatableWindow.dll.CodeAnalysisLog.xml
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\Bin\Debug\FloatableWindow.dll.lastcodeanalysissucceeded
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\ResolveAssemblyReference.cache
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\FloatableWindow.g.resources
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\FloatableWindow.Properties.Resources.resources
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\GenerateResource-ResGen.read.1.tlog
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\GenerateResource-ResGen.write.1.tlog
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\FloatableWindow.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\FloatableWindow.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\GenerateResource.read.1.tlog
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\floatablewindow-31069\FloatableWindow\obj\Debug\GenerateResource.write.1.tlog

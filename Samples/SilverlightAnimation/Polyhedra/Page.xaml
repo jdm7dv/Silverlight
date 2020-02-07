@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="Polyhedra.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="1280" Height="800">
+
+   <Canvas x:Name="LayoutRoot" Background="White">
+      <Canvas.Resources>
+         <Storyboard x:Name="animationTimer">
+            <DoubleAnimation Duration="00:00:00.01" Storyboard.TargetName="bogusTimerTarget" Storyboard.TargetProperty="Width" />
+         </Storyboard>
+      </Canvas.Resources>
+
+      <Canvas Name="bogusTimerTarget">
+      </Canvas>
+
+      <Image Source="bg.jpg" Width="1280" Height="800" Canvas.ZIndex="-9999"/>
+      <Canvas x:Name="Canvas1" Width="116.376" Height="116.376" Canvas.Left="651.911" Canvas.Top="454.679" MouseEnter="TriggerMouseEnter" MouseLeave="TriggerMouseLeave">
+         <Canvas.Resources>
+            <Storyboard x:Name="Canvas1MouseEnter">
+               
+               <DoubleAnimation Duration="00:00:00.7" Storyboard.TargetName="Model1Scale" Storyboard.TargetProperty="ScaleX" From="0.7" To="1.0" />
+               <DoubleAnimation Duration="00:00:00.7" Storyboard.TargetName="Model1Scale" Storyboard.TargetProperty="ScaleY" From="0.7" To="1.0" />
+            </Storyboard>
+            <Storyboard x:Name="Canvas1MouseLeave">
+               <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="Ring1" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" />
+               <DoubleAnimation Duration="00:00:00.7" Storyboard.TargetName="Model1" Storyboard.TargetProperty="Opacity" From="1.0" To="0.7" />
+               <DoubleAnimation Duration="00:00:00.7" Storyboard.TargetName="Model1Scale" Storyboard.TargetProperty="ScaleX" From="1.0" To="0.7" />
+               <DoubleAnimation Duration="00:00:00.7" Storyboard.TargetName="Model1Scale" Storyboard.TargetProperty="ScaleY" From="1.0" To="0.7" />
+            </Storyboard>
+         </Canvas.Resources>
+         <Canvas x:Name="Model1" Opacity="0.7" Width="116.376" Height="116.376" >
+            <Canvas.RenderTransform>
+               <ScaleTransform x:Name="Model1Scale" CenterX="58.188" CenterY="58.188" ScaleX="0.7" ScaleY="0.7"/>
+            </Canvas.RenderTransform>
+
+            <Polygon Canvas.ZIndex="-16858892" Fill="#FFCC4400" Stroke="#000000" StrokeThickness="1" Points="86.272,64.165 53.977,43.568 29.496,72.531 63.010,96.624 "/>
+            <Polygon Canvas.ZIndex="-16482865" Fill="#FFCC4400" Stroke="#000000" StrokeThickness="1" Points="53.977,43.568 86.272,64.165 89.247,42.206 53.557,20.843 "/>
+            <Polygon Canvas.ZIndex="-12890830" Fill="#FFCC4400" Stroke="#000000" StrokeThickness="1" Points="53.557,20.843 89.247,42.206 63.568,76.367 26.384,50.952 "/>
+            <Polygon Canvas.ZIndex="-16045047" Fill="#FFCC4400" Stroke="#000000" StrokeThickness="1" Points="29.496,72.531 53.977,43.568 53.557,20.843 26.384,50.952 "/>
+            <Polygon Canvas.ZIndex="-13266858" Fill="#FFCC4400" Stroke="#000000" StrokeThickness="1" Points="63.010,96.624 29.496,72.531 26.384,50.952 63.568,76.367 "/>
+            <Polygon Canvas.ZIndex="-13704675" Fill="#FFCC4400" Stroke="#000000" StrokeThickness="1" Points="86.272,64.165 63.010,96.624 63.568,76.367 89.247,42.206 "/>
+
+         </Canvas>
+         <Ellipse x:Name="Ring1" Opacity="0" Stroke="#FFB47C0D" StrokeThickness="4" Width="116.376" Height="116.376" />
+      </Canvas>
+      <Canvas x:Name="Animation" Canvas.ZIndex="-1" Canvas.Left="70" Canvas.Top="70" Width="200" Height="200"/>
+
+      <Canvas x:Name="Info" Canvas.Left="850" Canvas.Top="20" Visibility="Collapsed">
+
+         <TextBlock Foreground="#FFB47C0D" Canvas.Top="10" Text="Polyhedron"  FontSize="30" FontWeight="ExtraBold" />
+      <TextBlock x:Name="PolyhedronNameInfo" Foreground="#000033" Canvas.Top="45" FontSize="20" FontWeight="Bold" />
+      <TextBlock Foreground="#FFB47C0D" Canvas.Top="75" Text="Faces"  FontSize="30" FontWeight="ExtraBold" />
+      <TextBlock x:Name="FaceTypesInfo" Foreground="#000033" Canvas.Top="110" FontSize="20" FontWeight="Bold" />
+
+      <Canvas x:Name="CycleButton" Canvas.Top="250"  MouseLeftButtonDown="CycleButtonLeftMouseDown" >
+         <Path x:Name="Cycle" Stroke="#000033" Fill="#FFB47C0D" Canvas.Left="10" Canvas.Top="10"
+       Data="M 25,35 A 10,10 180 1 0 25,15 L 25,20 L 12.5,10 L 25,0 L 25,5 A 10,10 180 1 1 25,45 Z" Width="50" Height="50">
+            <Path.RenderTransform>
+               <RotateTransform x:Name="CycleRotate" Angle="0" CenterX="25" CenterY="25"/>
+            </Path.RenderTransform>
+            <Path.Resources>
+               <Storyboard x:Name="CycleLatched">
+                  <DoubleAnimation  Storyboard.TargetName="CycleRotate" Storyboard.TargetProperty="Angle" From="360" To="0" Duration="00:00:02" RepeatBehavior="Forever"/>
+               </Storyboard>
+            </Path.Resources>
+         </Path>
+         <TextBlock x:Name="CycleCaption" Canvas.Left="65" Canvas.Top="10" Foreground="#FFB47C0D" FontSize="30" FontWeight="Bold" Text="Cycle" />
+         <Rectangle Width="200" Height="70" RadiusX="30" RadiusY="30" Stroke="#FFB47C0D" StrokeThickness="4" Fill="Transparent"/>
+      </Canvas>
+   </Canvas>
+   </Canvas>
+</UserControl>

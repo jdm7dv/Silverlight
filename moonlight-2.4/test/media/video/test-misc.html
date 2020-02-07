@@ -1,0 +1,210 @@
+<html>
+  <head>
+      <title>Moonlight Test Page</title>
+
+		<script type="text/xaml" id="xaml">
+			<Canvas xmlns="http://schemas.microsoft.com/client/2007" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="Blue">
+			<MediaElement x:Name="media1" Source="timecode-long.wmv" AutoPlay="False"
+				MediaOpened="OnMediaOpened" 
+				MediaFailed="OnMediaFailed" 
+				MediaEnded="OnMediaEnded"
+				CurrentStateChanged="OnCurrentStateChanged" 
+				BufferingProgressChanged="OnBufferingProgressChanged"
+				DownloadProgressChanged="OnDownloadProgressChanged"
+				MarkerReached="OnMarkerReached"/>
+			<MediaElement x:Name="media2" Source="timecode-long.wmv" AutoPlay="False"
+				MediaOpened="OnMediaOpened" 
+				MediaFailed="OnMediaFailed" 
+				MediaEnded="OnMediaEnded"
+				CurrentStateChanged="OnCurrentStateChanged" 
+				BufferingProgressChanged="OnBufferingProgressChanged"
+				DownloadProgressChanged="OnDownloadProgressChanged"
+				MarkerReached="OnMarkerReached"/>
+			<MediaElement x:Name="media3" Source="timecode-long.wmv" AutoPlay="False"
+				MediaOpened="OnMediaOpened" 
+				MediaFailed="OnMediaFailed" 
+				MediaEnded="OnMediaEnded"
+				CurrentStateChanged="OnCurrentStateChanged" 
+				BufferingProgressChanged="OnBufferingProgressChanged"
+				DownloadProgressChanged="OnDownloadProgressChanged"
+				MarkerReached="OnMarkerReached"/>
+			</Canvas>
+		</script>
+
+		<script language="javascript" src="../../js/js/utils.js"></script>
+		<script language="javascript" src="../../js/js/testplugin.js"></script>
+		<script language="javascript">
+
+		/*
+			We use 3 media elements, one for each property, because SL2 (not SL1) has a bug where the first exception sets the exception message,
+			and subsequent exceptions (on the same media element), gets the same message as the first exception.
+		*/
+
+		var mediaElement1 = null;
+		var mediaElement2 = null;
+		var mediaElement3 = null;
+		var failed = false;
+		var DownloadProgressChanged = 0;
+		var MarkerReached = 1;
+		var BufferingProgressChanged = 2;
+		var CurrentStateChanged = 3;
+		var MediaOpened = 4;
+		var MediaFailed = 5;
+		var MediaEnded = 6;
+		var events = [0, 0, 0, 0, 0, 0, 0];
+		var names = ["DownloadProgressChanged", "MarkerReached", "BufferingProgressChanged", "CurrentStateChanged", "MediaOpened", "MediaFailed", "MediaEnded"];
+		var test1 = [0, 0, 0, 0, 0, 0, 0];
+		var opened_events = 0;
+		
+		function RunTests ()
+		{
+			Test1 ();
+			
+			TestLogger.LogResult (failed ? -1 : 1);
+			SignalShutdown ();
+		}
+
+		function Test1 ()
+		{
+			var msg;
+
+			ClearEvents ();
+			try {
+				mediaElement1.BufferingProgress = 0.5;
+				LogError ("Was able to set BufferingProgress, an exception should have been raised");
+			} catch (ex) {
+				msg = ExceptionToString (ex);
+				if (msg.indexOf ("AG_E_RUNTIME_SETVALUE : BufferingProgress") < 0)
+					LogError ("1 Expected exception message to contain: 'AG_E_RUNTIME_SETVALUE : BufferingProgress" + "', but got '" + msg + "'");
+			}
+			AssertEvents (test1);
+
+			ClearEvents ();
+			try {
+				mediaElement2.DownloadProgress = 0.5;
+				LogError ("Was able to set DownloadProgress, an exception should have been raised");
+			} catch (ex) {
+				msg = ExceptionToString (ex);
+				if (msg.indexOf ("AG_E_RUNTIME_SETVALUE : DownloadProgress") < 0)
+					LogError ("2 Expected exception message to contain: 'AG_E_RUNTIME_SETVALUE : DownloadProgress', but got '" + msg + "'");
+			}
+			AssertEvents (test1);
+
+			ClearEvents ();
+			try {
+				mediaElement3.CurrentState = "Closed";
+				LogError ("Was able to set CurrentState, an exception should have been raised");
+			} catch (ex) {
+				msg = ExceptionToString (ex);
+				if (msg.indexOf ("AG_E_RUNTIME_SETVALUE : CurrentState") < 0)
+					LogError ("3 Expected exception message to contain: 'AG_E_RUNTIME_SETVALUE : CurrentState', but got '" + msg + "'");
+			}
+			AssertEvents (test1);
+		}
+
+		function AssertEvents (expected)
+		{
+			for (var i = 0; i < events.length; i++) {
+				if (events [i] != expected [i]) {
+					LogError ("Expected " + expected [i] + " " + names [i] + ", but got " + events [i] + " " + names [i]);
+				}
+			}
+		}
+
+		function ClearEvents ()
+		{
+			events = [0, 0, 0, 0, 0, 0, 0];
+		}
+
+		function OnDownloadProgressChanged (sender, args)
+		{
+			events [DownloadProgressChanged]++;
+			TestLogger.LogDebug ("OnDownloadProgressChanged: current DownloadProgress: " + sender.DownloadProgress);
+		}
+		
+		function OnMarkerReached (sender, args)
+		{
+			events [MarkerReached]++;
+			TestLogger.LogDebug ("OnMarkerReached");
+		}
+
+		function OnBufferingProgressChanged (sender, args)
+		{
+			events [BufferingProgressChanged]++;
+			TestLogger.LogDebug ("OnBufferingProgressChanged: current BufferingProgress: " + sender.BufferingProgress);
+		}
+
+		function OnCurrentStateChanged (sender, args)
+		{
+			events [CurrentStateChanged]++;
+			TestLogger.LogDebug ("OnCurrentStateChanged: current state: " + sender.CurrentState);
+		}
+
+		function OnMediaOpened (sender, args)
+		{
+			events [MediaOpened]++;
+			TestLogger.LogDebug ("OnMediaOpened");
+			
+			opened_events++;
+			if (opened_events == 3)
+				RunTests ();
+		}
+
+		function OnMediaFailed (sender, args)
+		{
+			events [MediaFailed]++;
+			TestLogger.LogError ("OnMediaFailed: " + ErrorEventArgsToOneLineString (args));
+		}
+
+		function OnMediaEnded (sender, args)
+		{
+			events [MediaEnded]++;
+			TestLogger.LogDebug ("OnMediaEnded");
+		}
+
+		function OnPluginLoad (sender, args)
+		{
+			TestLogger.LogDebug ("OnPluginLoad");
+			mediaElement1 = sender.findName ("media1");
+			mediaElement2 = sender.findName ("media2");
+			mediaElement3 = sender.findName ("media3");
+			setTimeout ("timeOut ();", 30000);
+		}
+
+		function OnPluginError (sender, args)
+		{
+			TestLogger.LogError ("Plugin failed to initialize: " + args.ErrorMessage);
+			TestLogger.LogResult (-1);
+			SignalShutdown ();
+		}
+		
+		function timeOut ()
+		{
+			TestLogger.LogError ("Nothing happened, test timed out");
+			TestLogger.LogResult (-1);
+			SignalShutdown ();
+		}
+
+		function LogError (msg)
+		{
+			failed = true;
+			TestLogger.LogError (msg);
+		}
+
+		</script>
+	</head>
+
+  <body>
+    <div>
+        <embed type="application/x-silverlight"
+             width="200"
+             height="200"
+             id="_MoonlightControl" Source="#xaml" OnError="OnPluginError" OnLoad="OnPluginLoad"
+             style="position:absolute; left:0px; top:0px"
+             background="green" >
+        </embed>
+    </div>
+  </body>
+</html>
+
+

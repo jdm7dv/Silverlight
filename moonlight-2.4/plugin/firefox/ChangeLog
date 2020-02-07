@@ -1,0 +1,73 @@
+2010-04-28  Andreia Gaita  <avidigal@novell.com>
+
+	* Makefile.am: remove ff36 bridge.
+
+2010-01-28  Andreia Gaita  <avidigal@novell.com>
+
+	* Makefile.am: Add FF3.6 bridge
+
+2009-05-27  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* browser-http.inc: Implement support for disabling cache and getting response
+	  headers.
+
+2009-04-06  Andreia Gaita  <avidigal@novell.com>
+
+	* ff-common.h: add new header for common structs and dom includes
+	for ff2/3-dom and bridge
+
+2009-03-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* browser-http.inc: FF2/3DownloaderResponse: propagate the
+	  ref/unref to the AddRef/Release implementation
+
+2009-01-21  Geoff Norton  <gnorton@novell.com>
+
+	* browser-http.inc: Ensure the DownloaderResponse is aware of the DownloaderRequest
+
+2008-11-25  Geoff Norton  <gnorton@novell.com>
+
+	* browser-http.inc: Expose the status code and status text to the
+	DownloaderResponse object.
+
+2008-08-19  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* browser-http.inc: Add a request field to DownloaderResponse, and a
+	  response field to DownloaderRequest. When a request is aborted,
+	  also abort the response. This fixes a crash when we aborted the
+	  request before receiving a response, the response had no idea the
+	  request had been aborted (since the request didn't store the
+	  response after creating it, it couldn't notify the response of the
+	  abort), and happily accessed deleted objects.
+
+2008-08-17  Geoff Norton  <gnorton@novell.com>
+	
+	* browser-http.inc: Implement support for DownloaderReponse::SetHeaderVisitor
+
+2008-06-27  Geoff Norton  <gnorton@novell.com>
+
+	* browser-http.inc: Set the failure condition for the finished event based
+	on the nsresult send by mozilla.
+
+2008-06-10  Geoff Norotn  <gnorton@novell.com>
+	
+	* browser-http.inc: Dont raise Started/Stopped if we've been aborted.
+
+2008-06-10  Geoff Norotn  <gnorton@novell.com>
+
+	* browser-http.inc: SetRequestHeader should merge instead of replace.
+	Partially fixes MMS seeking.
+
+2008-06-05  Geoff Norotn  <gnorton@novell.com>
+
+	* browser-http.inc: SetBody takes a void instead of char to support the future
+	possibility of POSTing data.
+
+2008-05-23  Geoff Norton  <gnorton@novell.com>
+	
+	* browser-http.inc: Re-introduce the Abort decl in FF*Browser(Request|Response)
+
+2008-05-23  Geoff Norton  <gnorton@novell.com>
+
+	* browser-mmsh.inc: Drop from the build
+	* browser-http.inc: Include the new generic browser-http.inc in the build

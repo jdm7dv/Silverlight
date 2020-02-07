@@ -1,0 +1,13 @@
+/bin
+/example-simpleclock
+/Makefile
+/Makefile.in
+/*.dll
+/*.mdb
+/App.xaml.g.cs
+/AppManifest.xaml
+/default.xaml.g.cs
+/simpleclock.g.resources
+/simpleclock.html
+/simpleclock.xap
+

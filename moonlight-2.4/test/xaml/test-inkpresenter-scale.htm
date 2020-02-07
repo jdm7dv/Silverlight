@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Moonlight Inpresenter Scale Test</title>
+		<script type="text/javascript" src="../js/js/utils.js"></script>
+		<script type="text/javascript" src="../js/js/testplugin.js"></script>
+
+
+      <script language="javascript">
+	var control;
+ 
+	function OnLoaded(sender, eventArgs)
+        {
+                if (document.body == null || !TestPluginReady) {
+                        setTimeout (function(){ OnLoaded(sender, eventArgs)}, 100);
+                        return;
+                }
+	        
+                setTimeout (function(){ RunTest(sender, eventArgs)}, 1000);
+        }
+	
+        function RunTest (sender, eventArgs)
+        {
+	       var inky = sender.findName ("inky");
+	       var strans = sender.findName ("strans");
+
+               inky.SetValue ("Canvas.Top", 50);
+               inky.width = 200;
+
+	       strans.scalex = 1;
+	       strans.scaley = 1;
+
+	       setTimeout ("Finish ()", 100);
+        }
+
+	function Finish ()
+	{
+		TakeSingleSnapshotAndShutdown ("", "test-inkpresenter-scale.htm.png", 500, 500);	
+	}
+
+        function ErrorHandler (sender, args)
+        {
+	alert (args.ErrorMessage);
+        }
+      </script>
+  </head>
+
+<body scroll="no" style='border-width: 0px'>
+    <div>
+        <embed type="application/x-silverlight"
+             width="500"
+             height="500"
+             id="_MoonlightControl" Source="test-inkpresenter-scale.xaml" OnError="ErrorHandler" 
+             style="position:absolute; left:0px; top:0px" >
+        </embed>
+    </div>
+  </body>
+</html>
+
+

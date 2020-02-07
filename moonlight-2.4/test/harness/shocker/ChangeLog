@@ -1,0 +1,190 @@
+2010-01-25  Andreia Gaita  <avidigal@novell.com>
+
+	* shocker.cpp: NPAPI symbol renaming
+
+2009-11-11  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker.cpp: Remove dead code which causes compile errors on OS 11.2.
+
+2009-11-05  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* plugin.cpp|h: Try to make XY coordinates resilient against moving the
+	window/plugin after creating it.
+
+	r: lewing
+
+2009-10-20  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shutdown-manager.cpp: Up the timeout for the backup shutdown
+	mechanism (exit) from 2.5 seconds to 25 seconds. This might prevent the
+	resource loader tests from crashing.
+
+	r: sde
+
+2009-07-27  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker.mdp: Use Makefile integration.
+
+2009-07-17  Alan McGovern  <amcgovern@novell.com>
+
+	* input.cpp: Make the delay 3ms not 4ms, otherwise 786 times
+	  out.
+
+2009-07-17  Alan McGovern  <amcgovern@novell.com>
+
+	* input.cpp: Instead of using usleep and mouse moves with no
+	  delay, use the delay property of XTestFakeMotionEvent to
+	  ensure the mouse moves to the right location without
+	  blocking the main loop. This allows 786 to complete
+	  successfully.
+
+2009-07-01  Alan McGovern  <amcgovern@novell.com>
+
+	* input.cpp: Ensure that we don't flip-flop around the target
+	  point by moving closer by 1 pixel at a time when within 10
+	  pixels of it. Fixes drt 551 (and maybe others?)
+
+2009-07-01  Jeffrey Stedfast  <fejj@novell.com>
+
+	* shutdown-manager.cpp: #include stdlib.h and unistd.h for exit()
+	and getenv().
+
+	* plugin.cpp (Plugin_New): Fixed to actually return the value it
+	was obviously meant to return. Also fixed undefined types errors.
+
+	* input.cpp (SendKeyInput): There is no uint32, use guint32
+	instead.
+
+2009-07-01  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am: Include the plugins moz-sdk directory.
+
+2009-07-01  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* netscape.h: Include npfunctions.h instead of npupp.h. Seems
+	to fix build after installing ff 3.5.
+
+	* browser.cpp: Just call the function instead of calling the
+	CallNPP_* macros.
+
+2009-06-29  Alan McGovern  <amcgovern@novell.com>
+
+	* input.cpp: Speed up logarithmic mouse moving significantly
+	  otherwise 557 can never pass. It currently times out less
+	  than 50% of the way through the test as we spend too long
+	  moving the mouse.
+
+2009-06-19  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* Makefile.am:
+	* shocker.mdp: Updated with new files.
+
+	* harness.cpp|h: Add a method to communicate with our test harness.
+
+	* shocker.cpp: Implement CompareImages.
+
+2009-06-17  Alan McGovern  <amcgovern@novell.com>
+
+	* input.h:
+	* input.cpp: Add VK_KP_ADD to the key map.
+
+2009-06-01  Chris Toshok  <toshok@ximian.com>
+
+	* shocker.cpp (GetTestDirectory): at the very least return a valid
+	path (and the valid type).
+
+2009-05-02  Andreia Gaita  <avidigal@novell.com>
+
+	* shocker.cpp: fix define check
+
+2009-05-02  Andreia Gaita  <avidigal@novell.com>
+
+	* shocker.cpp: added hack to track down the actual script error msgs
+	that gecko insists on swallowing for some unfathomable reason. Only
+	activated on debug mode and only if DEBUG_ERROR_GECKO is defined
+
+2009-05-02  Andreia Gaita  <avidigal@novell.com>
+
+	* input.cpp: reset numlock back to false when done
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shocker.mdp: Add a project for each tool, and clean up some
+	  of the existing projects.
+
+2009-04-13  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* image-capture.h:
+	* image-capture.cpp: Add pinvokable CaptureSingleImage method.
+
+	* logging.h:
+	* logging.cpp: Add pinvokable log methods.
+
+	* shocker.h:
+	* shocker.cpp: Updated according to new logger api.
+
+	* shutdown-manager.h:
+	* shutdown-manager.cpp: Add pinvokable SignalShutdown method.
+
+2009-04-07  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* logging.h:
+	* logging.cpp:
+	* shocker.cpp: Add new logging and plugin methods.
+
+2009-04-07  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* logging.h:
+	* logging.cpp: Remove file and dbus logging, and always log to
+	  stdout.
+
+2009-04-07  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* input.h: Add license.
+
+2009-04-03  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* netscape.cpp: Prevent firefox from unloading us in all
+	  cases.
+
+	* plugin.h:
+	* plugin.cpp: Fetch the browser's toplevel window.
+
+	* shocker.cpp: CaptureMultipleImages: only use the test path
+	  as the destination filename if a path wasn't provided.
+
+	* shutdown-manager.h:
+	* shutdown-manager.cpp: Be nice to the browser and shut it
+	  down in a clean way.
+
+2009-04-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* image-capture.cpp: For multiple image capture don't assume
+	  the requested file name doesn't have a tif extension, and
+	  put the tif in MOONLIGHT_HARNESS_OUTPUT_DIR if set.
+
+2009-04-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* netscape.h: Add license.
+
+2009-04-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* logging.cpp: Initialize dbus_proxy to null.
+
+2009-04-02  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* logging.cpp: Don't print a lot of warnings if we can't
+	  connect to dbus, and if we can't connect to dbus write to
+	  stdout.
+
+2009-03-31  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* input.h:
+	* input.cpp: Move VirtualKeys into the header.
+
+2009-03-23  Rolf Bjarne Kvinge  <RKvinge@novell.com>
+
+	* shutdown-manager.cpp: Prevent firefox from unloading
+	  libshocker while we're executing code on another thread.
+
+	* ChangeLog: Added.

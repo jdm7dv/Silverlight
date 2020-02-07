@@ -1,0 +1,501 @@
+﻿body 
+{
+	font-family:Segoe UI, Verdana, Arial, Sans-Serif;
+	background:#003dbb url(../images/background.png) repeat;
+	padding:0px;
+	color:#525051;	
+	margin: 0;
+}
+
+#dpelogo
+{
+	position:absolute;
+	top: 180px;
+	left: 10px;
+}
+
+#header
+{
+  	background:url(../images/backgroundheader.png) repeat-x;
+  	padding: 10px 10px 10px 80px;
+}
+
+#header .title
+{
+    color: White;
+    font-size: 1.5em;
+    margin: 10px 5px 5px 5px; 
+}
+
+#footer
+{
+    /*background: black;
+	width:989px;
+	margin-left: 2px;
+	float:left;
+	border: solid 1px black;
+	background: white url(../images/DPEbanner.png) no-repeat;
+	background-position: right;
+	height: 121px;
+*/
+height: 20px;
+}
+
+#main
+{
+	width:993px; 
+	text-align:left;
+	float:left;
+	margin: 0px 0px 0px 80px;
+}
+
+#content
+{
+    background: white;
+	width:989px;
+	margin-left: 2px;
+	float:left;
+	min-height: 470px;
+	border: solid 1px black;
+}
+
+#securityMessage
+{
+    padding:10px;
+    background-color: #FFFFE1;
+    width: 400px;
+    border: solid 3px black;
+    position: absolute;
+    top: 20px;
+    left: 300px;
+}
+
+#securityMessageImage
+{
+    border: solid 1px black;
+}
+
+#securityMessage .exclamation
+{
+    float:left;
+    margin: 10px;
+}
+
+#logos
+{
+    float: left;
+    width: 225px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#logos img
+{
+    margin-bottom: 15px;
+}
+
+
+
+h2
+{
+	font-size: 1em;
+	font-weight: bolder;
+	margin: 0.5em 0px 0px 0px;
+	padding: 0px 0px 0.25em 0px;
+}
+
+h2
+{
+	font-size: 0.9em;
+	font-weight: bolder;
+	margin: 0.5em 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+a
+{
+    color: #39547F;
+}
+
+.links
+{
+	margin: 1em 0em 0em 0em;
+	font-size: 0.75em;
+}
+
+.links img
+{
+	padding-left: 1em;
+}
+
+/*-------------------START right_cell ---------------------*/
+
+#right_cell
+{
+    float: right;
+    width: 740px;
+   	line-height:1.4em;
+}
+
+#right_cell li
+{
+    margin-left: 20px;
+    padding-left: 34px;
+    padding-top: 3px;
+    background: url(../images/arrowbullet.png) no-repeat;
+    list-style-type: none;
+    min-height: 34px;
+}
+
+#right_cell .folder
+{
+    background: url(../images/Stuffed_Folder.png) no-repeat;
+}
+
+#right_cell .related
+{
+    color: #BBD888;
+    background: url(../images/greenbullet.png) no-repeat;
+    margin-left: 20px;
+    padding-left: 25px;
+    padding-top: 2px;
+    list-style-type: none;
+    min-height: 12px;
+    font-size: 0.75em;
+}
+
+#right_cell h1
+{
+	font-size: 1.5em;
+	font-weight: bolder;
+	margin: 1em 0px 0px 0px;
+	background: #F0F0F0;
+	line-height: 1.5em;
+	padding-left: 0.5em;
+}
+
+#right_cell .item
+{
+    padding-left: 20px;
+}
+
+#right_cell .section
+{
+	margin: 0 17px 0 10px;
+	margin-bottom: 2em;
+}
+
+/*-------------------START left_cell---------------------*/
+
+#left_cell
+{
+    float: left;
+    width: 225px;
+    min-height: 1000px;
+    padding-left: 10px;
+    font-size: 0.75em;
+}
+
+#left_cell .unit
+{
+    margin-top: 1em;
+}
+
+#left_cell .unit .title
+{
+    font-weight: bold;
+    color: Black;
+}
+
+#left_cell .presentations
+{
+   	background:url(../images/powerpointsidebar.png) no-repeat;
+   	padding-left: 7px;
+   	padding-top: 5px;
+   	margin-top: 5px;
+   	min-height: 23px;
+}
+
+#left_cell .labs
+{
+   	background:url(../images/labsidebar.png) no-repeat;
+   	padding-left: 7px;
+   	padding-top: 5px;
+   	margin-top: 5px;
+   	min-height: 23px;
+}
+
+#left_cell .demos
+{
+   	background:url(../images/demosidebar.png) no-repeat;
+   	padding-left: 7px;
+   	padding-top: 5px;
+   	margin-top: 5px;
+   	min-height: 23px;
+}
+
+#left_cell .item
+{
+    padding-bottom: 0.25em;
+    margin-left: 0.5em;
+}
+
+#left_cell .item a
+{
+    text-decoration: none;
+    color: #45628F;
+    text-indent: -0.5em;
+}
+
+#left_cell .item a:hover
+{
+    text-decoration: underline;
+    color: Black;
+}
+
+#left_cell .item .description
+{
+    width: 360px;
+    position: absolute;
+    display: none;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    left: 300px;
+}
+
+#left_cell .item .description .top
+{
+    height: 33px;
+    background: url(../images/BalloonTop.png) no-repeat;
+    padding: 0px 0px 0px 75px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #39547F;
+}
+
+
+#left_cell .item .description .middle
+{
+    background: url(../images/BalloonMiddle.png) repeat-y;
+    padding: 0px 25px 0px 75px;
+}
+
+
+#left_cell .item .description .bottom
+{
+    height: 23px;
+    background: url(../images/BalloonBottom.png) no-repeat;
+}
+
+
+#left_cell .unitMenuTop
+{
+    height: 30px;
+    background: url(../images/SidebarUnitsTop.png) no-repeat;
+    margin: 10px 0px 0px 0px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 0px 0px 10px; 
+}
+
+#left_cell .unitMenu
+{
+    background: url(../images/SidebarUnitsMiddle.png) repeat-y;
+    margin: 0px;
+    padding: 5px 0px 0px 5px;
+    font-size: 1.25em;
+}
+
+#left_cell .unitMenu a
+{
+    text-decoration: none;
+    color: Black;
+    width: 200px;
+}
+
+#left_cell .unitMenu_hover
+{
+    background: url(../images/SidebarUnitsMiddle_hover.png) repeat-y;
+    margin: 0px;
+    padding: 5px 0px 0px 5px;
+    font-size: 1.25em;
+}
+
+#left_cell .unitMenu_hover a
+{
+    text-decoration: none;
+    color: Black;
+    width: 200px;
+}
+
+#left_cell .unitMenuBottom
+{
+    background: url(../images/SidebarUnitsBottom.png) no-repeat;
+    height: 21px;
+}
+
+/*-------------------START overview box ---------------------*/
+
+#overview
+{
+  	background:url(../images/infobackground.png);
+  	float: left;
+    height: 360px;
+    width: 955px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.75em;
+    line-height: 1.2em;
+}
+
+#overview .column
+{
+    float: left; 
+    width: 450px;
+    height: 180px;
+    margin: 5px 10px 5px 10px;
+  	background:url(../images/backgroundheader.png) repeat-x;
+}
+
+#overview .title
+{
+    color: White;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 4px;
+}
+
+#overview .text
+{
+    color: #C0C0C0;
+    font-size: 1em;
+    padding-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#overview li
+{
+    color: #BBD888;
+    background: url(../images/greenbullet.png) no-repeat;
+    margin-left: 20px;
+    padding-left: 25px;
+    padding-top: 2px;
+    list-style-type: none;
+    min-height: 10px;
+}
+
+#overview a
+{
+    color: #BBD888;
+}
+
+#overview .more
+{
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: right;
+    position: relative;
+    top: -30px;
+}
+
+#overview .more a
+{
+    color: white;
+}
+
+/*-------------------START navigation---------------------*/
+#TopNavigation
+{
+	height:48px;
+	padding-left:20px;
+	text-align:left;
+	width:993px;
+	background-image:url(../images/NavBar.png);
+	background-repeat:no-repeat;
+}
+
+.topnav_item
+{
+	padding-top:7px;
+	cursor:pointer;
+	float:left;
+	width:auto;
+	height:41px;
+}
+
+.topnav_item a:hover
+{
+    text-decoration: none;    
+    color:#E8E8E8;
+}
+
+.topnav_item_divider
+{
+	float:left;
+	width:2px;
+	height:37px;
+	background-image:url(../images/NavBarDivider.png);
+	background-repeat:no-repeat;
+	margin-left:13px;
+	margin-right:13px;
+	margin-top: 9px;
+}
+
+.topnav_item_left, .topnav_item_left_selected, .topnav_item_left_hover
+{
+	float:left;
+	width:2px;
+	height:31px;
+	margin-top:7px;	
+}
+
+.topnav_item_middle, .topnav_item_middle_selected, .topnav_item_middle_hover
+{
+	float:left;
+	padding: 0 9px;
+	height:31px;
+	margin-top:7px;
+}
+
+.topnav_item_right, .topnav_item_right_selected, .topnav_item_right_hover
+{
+	float:left;
+	width:2px;
+	height:31px;
+	margin-top:7px;
+}
+
+.topnav_item_left_selected{background-image:url(../images/NavBarButtonLeft.png);
+}
+
+.topnav_item_middle_selected{background-image:url(../images/NavBarButtonMiddle.png);
+}
+
+.topnav_item_right_selected{background-image:url(../images/NavBarButtonRight.png);
+}
+
+.topnav_item_left_hover{background-image:url(../images/NavBarButtonLeft_hover.png);
+}
+
+.topnav_item_middle_hover{background-image:url(../images/NavBarButtonMiddle_hover.png);
+}
+
+.topnav_item_right_hover{background-image:url(../images/NavBarButtonRight_hover.png);
+}
+
+.topnav_item_text{width:100%;text-align:center;line-height:28px;}
+
+.topnav_item a
+{
+	font-size:0.9em;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+.topnav_item a:hover{text-decoration:none;}
+
+.topnav_item a span { display: block !important; }

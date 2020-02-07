@@ -1,0 +1,73 @@
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\AppManifest.xaml
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\VideoPlayer.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\VideoPlayer.pdb
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\VideoPlayer.xap
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\TestPage.html
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\System.Windows.Controls.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\System.Xml.Linq.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\System.Xml.Linq.xml
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\System.Windows.Controls.xml
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\de\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\es\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\fr\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\it\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\ja\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\ko\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\zh-Hans\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\zh-Hant\System.Xml.Linq.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\de\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\es\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\fr\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\it\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\ja\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\ko\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\ClientBin\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\closedCaption.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\Marker.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\spinner.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\Page.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\mediaControl.g.cs
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\VideoPlayer.g.resources
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\VideoPlayer.dll
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\VideoPlayer.pdb
+C:\Users\Jonathan Moore\v1.8\TODO\Silverlight\sl2videoplayer-18184\VideoPlayer\obj\Debug\XapCacheFile.xml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\VideoPlayer.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\VideoPlayer.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\AppManifest.xaml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\VideoPlayer.xap
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\TestPage.html
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\System.Windows.Controls.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\System.Xml.Linq.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\System.Windows.Controls.xml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\System.Xml.Linq.xml
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\ar\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\de\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\es\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\fr\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\it\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\ja\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\ko\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\zh-Hans\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\zh-Hant\System.Windows.Controls.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\de\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\es\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\fr\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\it\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\ja\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\ko\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\zh-Hans\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\ClientBin\zh-Hant\System.Xml.Linq.resources.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\App.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\closedCaption.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\Marker.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\spinner.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\Page.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\mediaControl.g.cs
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\VideoPlayer.g.resources
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\VideoPlayer.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\VideoPlayer.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\Video Player\VideoPlayer\obj\Debug\XapCacheFile.xml

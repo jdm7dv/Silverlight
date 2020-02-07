@@ -1,0 +1,626 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Empowering Richer Experiences" />
+      <MSHelp:RLTitle Title="Empowering Richer Experiences" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Empowering Richer Experiences</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Overview - Technical Whitepaper</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Empowering Richer Experiences</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <a name="_Toc256192918" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Hardware Accelerated PlaneProjection</b>
+        </p>
+        <p>The PlaneProjection can now be hardware accelerated like the other transform types (Scale, Skew, Rotate, and Translate) in Silverlight. </p>
+        <a name="_Toc256192919" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Word Based Text Trimming (trailing ellipses)</b>
+        </p>
+        <p>The TextBlock has a new TextTrimming property that accepts either of the TextTrimming enumerator values of None or WordEllipsis. When this property is set to WordEllipsis and the text in the TextBlock exceeds the visible limit, the text appears truncated with a trailing three ellipsis. The example below shows the XAML for two TextBlocks with the same text. The first TextBlock sets the TextTrimming to WordEllipsis while the second TextBlock does not.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;TextBlock Height="23" HorizontalAlignment="Left" VerticalAlignment="Top"    Text="The quick brown fox jumped over the tall white fence"     TextTrimming="WordEllipsis" Width="120" /&gt;&lt;TextBlock Height="23" HorizontalAlignment="Left" VerticalAlignment="Top"    Text="The quick brown fox jumped over the tall white fence"     Width="120" /&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>When the application runs, the TextBlock controls appear as shown below:</p>
+        <p>
+          <img src="images\847ed152-1952-4034-bb1a-ca8a9a8afaad.png" />
+        </p>
+        <p>
+          <b>Figure 11</b>
+          <br />
+          <i>TextTrimming with WordEllipsis</i>
+        </p>
+        <a name="_Toc256192920" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Implicit Styles</b>
+        </p>
+        <p>Silverlight 4 introduces new styling features that allow you to create a style as a resource that can be used implicitly by all elements of a target type. This allows application developers to customize the look across multiple instances of a control and modify the appearance of these control instances by changing the implicit style.  </p>
+        <p>An implicit style can be created by creating a style, omitting the x:Key name, and setting the TargetType. The XAML below shows an implicit style for all Button controls that makes the foreground red. When this implicit style exists for the Button control, it will be applied automatically without having to set the style to each button.</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;Style TargetType="Button"&gt;&lt;Setter Property="Foreground" Value="Red" /&gt;&lt;/Style&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>Implicit styles can be used to declare a style and apply it to a particular control as shown above or to style commonly used properties such as FontFamily, FontSize, Foreground (font color), and Background. If you create an implicit style at the application level, whether embedded in the App.xaml or in a resource dictionary, the style will be applied to all controls that match the target type within your application.</p>
+        <a name="_Toc256192921" href="#">
+          <span />
+        </a>
+        <p>
+          <b>MouseWheel Support</b>
+        </p>
+        <p>Silverlight has support for responding to mouse wheel events on controls where scrolling is appropriate. The Silverlight ScrollViewer automatically handles the MouseWheel event so the ListBox, ComboBox, TextBox, and ScrollViewers automatically scroll. For example, when the mouse wheel scrolls over a ListBox, the ListBox begins to scroll. Silverlight can also use MouseWheel events to perform custom functionality. For example, you can configure the MouseWheel event so that when a user turns the mouse wheel the application zooms in and out using a scale transform.</p>
+        <p>The MouseWheel event exists on all UIElements. This event fires when the mouse wheel is turned while the mouse pointer is over a UIElement. The MouseWheelEventArgs expose a Handled property. Since this event occurs synchronously it can be marked as handled to prevent the HTML event from being raised. The Delta property of the MouseWheelEventArgs indicates the relative change that occurred in the mouse wheel rotation. A positive Delta indicates a forward turn of the mouse wheel while a negative Delta indicates a backward turn.</p>
+        <p>The snippet below demonstrates event handler coding for the MouseWheel event. This handler applies the turns in the mouse wheel to a slider control.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>private void OnMouseWheel(object sender, MouseWheelEventArgs e){    if (e.Delta &gt; 0)        slider_X.Value += slider_X.LargeChange;    else        slider_X.Value -= slider_X.LargeChange;}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192922" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Right Mouse Click</b>
+        </p>
+        <p>Silverlight 4 adds the ability to right click a visual element to perform custom actions such as displaying a menu that provides contextual commands or invoking commands for a Silverlight game.  The MouseRightButtonDown and the MouseRightButtonUp events are now exposed on all UIElement controls. These events allow you to handle the right-mouse-click events and display a custom context menu instead of the default Silverlight menu. The events are routed to a particular element and use the same MouseButtonEventArgs that the MouseLeftButtonUp and MouseLeftButtonDown events use so you can determine which element was affected and where on that element a right mouse button event occurred in order to show a context menu at that location.</p>
+        <p>When the MouseRightButtonDown event is handled and the MouseButtonEventArgs.Handled property is set to true, the default Silverlight configuration menu will not be displayed. The MouseButtonEventArgs.StylusDevice.DeviceType property will report the source device type for the event such as mouse, stylus, or touch.</p>
+        <p>
+          <img src="images\598a6253-6d26-44e8-94cc-2b1d2838e99c.png" />
+        </p>
+        <p>
+          <b>Figure 12 </b>
+          <br />
+          <i>Right Click Displaying a Custom Context Menu</i>
+        </p>
+        <p>The code example below shows how to implement the right click functionality and display a custom menu control. </p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>public MainPage(){    InitializeComponent();    mediaElement.MouseRightButtonDown +=         new MouseButtonEventHandler(MouseRightButtonDownHandler);    mediaElement.MouseRightButtonUp +=         new MouseButtonEventHandler(MouseRightButtonUpHandler);}private void MouseRightButtonDownHandler(object sender, MouseButtonEventArgs e){    e.Handled = true;}private void MouseRightButtonUpHandler(object sender, MouseButtonEventArgs e){    var menu = new MyCustomMenuControl(mediaElement);    menu.Show(e.GetPosition(LayoutRoot));}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192923" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Programmatic Clipboard Access</b>
+        </p>
+        <p>Silverlight 4 adds the ability to programmatically access the clipboard to format and modify data during copy, cut, and paste operations. To copy data from a Silverlight application to the clipboard use the Clipboard.SetText method:</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>Clipboard.SetText(rtb.Selection.Text);</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>Once the text is copied to the clipboard, it can be retrieved from the clipboard using the Clipboard.GetText method:</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>rtb.Selection.Text = Clipboard.GetText();</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>This effectively performs a copy and paste operation. To perform a cut operation, simple use the Clipboard.SetText method and set the source of the cut operation to an empty string.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>Clipboard.SetText(rtb.Selection.Text);rtb.Selection.Text = "";</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The SetText and GetText methods of the clipboard object can only be invoked in the context of a user initiated action. </p>
+        <p>When an attempt is made to programmatically access the clipboard for the first time, Silverlight will prompt the user to request permission. </p>
+        <p>
+          <img src="images\57333996-79de-42d8-ac94-aea92400331a.png" />
+        </p>
+        <p>
+          <b>Figure 13</b>
+          <br />
+          <i>Clipboard Access Prompt</i>
+        </p>
+        <a name="_Toc256192924" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Silverlight as a Drop Target</b>
+        </p>
+        <p>Silverlight now supports being a drop-target for the common drag-and-drop practice of clicking on a virtual object and dragging it to a different location or onto another virtual object. Both Windows and Mac platforms support this feature. Silverlight only supports dragging of file(s) from local client and dropping them onto a Silverlight application. It does not support dragging of folders (directories). If multiple files need to be dragged, you can select those files and drag them as a group.  You must forward the relevant DOM events from HTML-level scripting to the specific API of the control (see attached doc).</p>
+        <p>The AllowDrop property of the UIElement must be set to true and its Visibility property must be set to Visibility.Visible for the UIElement to be a drop target. Once these are set, the following events can be handled to implement the drop target features:</p>
+        <ul>
+          <li>DragEnter – Fires when the source is dragged from the local client and it enters the boundary of the UIElement that is the drop target.</li>
+          <li>DragLeave – Fires when the file(s) being dragged from the client’s local files leaves the boundary of the UIElement</li>
+          <li>DragOver – Fires when the input system reports a drag event with this element as the potential drop target. </li>
+          <li>Drop – Fires when an object is dropped within a UIElement’s boundary.</li>
+        </ul>
+        <p>When handled, these events contain a DragEventsArg that contains a Data property of type IDataObject. The Data property contains information associated with the corresponding drag or drop event. Data will return null when it is accessed outside the context of the OnDrop event and when the item dropped is not a file. When a valid drop has occurred you can access the list of file(s) that were dropped using the GetData method and passing it the DataFormats.FileDrop enumerator. This returns an array of files that can then be accessed for file name, size, and be opened if needed.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>IDataObject data = e.Data;if (data.GetDataPresent(DataFormats.FileDrop)){       FileInfo[] files = data.GetData(DataFormats.FileDrop) as FileInfo[];       foreach (var file in files)       {       //FileStream reader = file.OpenRead();}}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192925" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Handle Drag-and-Drop Events for Macintosh</b>
+        </p>
+        <br />
+        <p>Drag-and-drop events for applications hosted by Safari on Macintosh require that you forward the relevant DOM events from your own HTML-level scripting to the specific API of the control. This is a requirement because the plug-in model for this architecture does not provide these events to plug-ins such as the Silverlight runtime. The following is an excerpt of the embed/object tagging you would use to define DOM event handlers for the HTML element that instantiates the Silverlight plug-in:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;embed id="AgControl1"...  ondragenter="handleDragEnter(event)"  ondragover="handleDragOver(event)"  ondragleave="handleDragLeave(event)"  ondrop="handleDropEvent(event)" .../&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The following is an example of an event handler that you write in JavaScript to account for event forwarding of drag-drop events on Safari / Macintosh. You should write one handler for each of the drag-related DOM events dragEnter, dragLeave, dragOver, and drop. This is the example for dragEnter. Note the getElementById call to return the Silverlight plug-in instance, which is the object where you forward the HTML DOM level handling to. </p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>JavaScript</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>function handleDragEnter(oEvent) {  // Prevent default operations in DOM  oEvent.preventDefault();  agControl = document.getElementById("AgControl1");  var flag = agControl.dragEnter(oEvent);    // If handled, then stop propagation of event in DOM    if (flag) oEvent.stopPropagation();}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>The FireFox architecture for Mac OSX distributions of FireFox restricts access to object-level access to the drop event. For this reason, the workaround suggested above for Safari might not function for FireFox.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <a name="_Toc256192926" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Webcam and Microphone Support</b>
+        </p>
+        <p>Silverlight now has webcam and microphone support. Through its device capture API Silverlight can determine which video and audio devices are connected to the computer. The API exposes features to retrieve the devices, prompt the user for permission to access the devices, and use to the devices to capture audio and/or video.</p>
+        <p>The System.Windows.Media namespace exposes several classes for hardware device capture. The CaptureDeviceConfiguration class’s AllowedDeviceAccess property returns true if the user has already granted access to the devices during the current session. The CaptureDeviceConfiguration.RequestDeviceAccess method requests access to the devices from the user. This will display a dialog to the user asking for permission, as shown below.</p>
+        <p>
+          <img src="images\0d13917a-badf-47ea-8f11-43021d8a1dca.png" />
+        </p>
+        <p>
+          <b>Figure 14</b>
+          <br />
+          <i>Device Access User Prompt</i>
+        </p>
+        <p>Once access has been granted to the devices they can be retrieved using the API. The CaptureDeviceConfiguration class’s GetDefaultVideoCaptureDevice method gets the default video device and the GetDefaultAudioCaptureDevice method gets the default audio device. Once the video device is retrieved, the video capture can be initiated by creating a new instance of the CaptureSource class and setting its VideoCaptureDevice property to the video device. At this point, the video capture can be started by using the CaptureSource’s Start method. The code sample below shows the basic steps to request access to the devices, begin the video capture process, and paint the video using a VideoBrush.  </p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>if (CaptureDeviceConfiguration.AllowedDeviceAccess         || CaptureDeviceConfiguration.RequestDeviceAccess()){    VideoCaptureDevice vcd =         CaptureDeviceConfiguration.GetDefaultVideoCaptureDevice();    AudioCaptureDevice acd =                 CaptureDeviceConfiguration.GetDefaultAudioCaptureDevice();    if (null != vcd &amp;&amp; null != acd)    {        cs = new CaptureSource();        cs.VideoCaptureDevice = vcd;        cs.AudioCaptureDevice = acd;        cs.Start();        VideoBrush videoBrush = new VideoBrush();        videoBrush.Stretch = Stretch.Uniform;        videoBrush.SetSource(cs);        TO_FILL.Fill = videoBrush;    }    else        MessageBox.Show("Error initializing Webcam or Microphone.");}</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>The CaptureSource class points to specific devices and starts and stops capture. The CaptureDeviceConfiguration class provides the CaptureSource with the configured VideoCaptureDevice and AudioCaptureDevice. Set the default video and audio devices for the Silverlight application by right clicking the Silverlight application and going to the Webcam/Mic tab as shown below.</p>
+        <p>
+          <img src="images\55fb0ed5-3f99-4a12-9da0-baa91ce8960e.png" />
+        </p>
+        <p>
+          <b>Figure 15</b>
+          <br />
+          <i>Default Capture Devices</i>
+        </p>
+        <p>Silverlight 4’s configuration window adds new support for webcam and microphone previews, as shown in the figure above. Notice that the figure shows the selected webcam and microphone both displaying a preview of their inputs.</p>
+        <p>The capture process can be used to grab a bitmap from the webcam. This can be done by first handling the CaptureImageCompleted event and then executing the CaptureImageAsync method. The code sample below shows the capture of an image from the CaptureSource.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>cs.CaptureImageCompleted += (s, pe) =&gt;{    var bmp = pe.Result;    ImageBrush brush = new ImageBrush();    brush.ImageSource = bmp;    brush.Stretch = Stretch.UniformToFill;    someBorder.Background = brush;};cs.CaptureImageAsync();</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192927" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Webcam and Microphone Permissions</b>
+        </p>
+        <p>Silverlight 4’s configuration window also adds new support for viewing permissions. Figure 16 shows that the webcam and microphone access has been requested and allowed by the user. If a user decides they want to change the permissions they can allow, deny or simply remove the permissions from this tab of the configuration window.</p>
+        <p>
+          <img src="images\fdfeb333-796f-40e0-9a6a-5d9e9ac9d523.png" />
+        </p>
+        <p>
+          <b>Figure 16</b>
+          <br />
+          <i>Permissions</i>
+        </p>
+        <a name="_Toc256192928" href="#">
+          <span />
+        </a>
+        <p>
+          <b>CompositeTransform</b>
+        </p>
+        <p>Silverlight adds a CompositeTransform type that enables the creation of transform groups with one XAML node.  This new transform type reduces XAML and collapses all of the types of transform that can be in a TransformGroup into a single node that applies the combined transform in the common order.</p>
+        <p>For example, this XAML as written in Silverlight 3:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;Rectangle Height="100" Width="100" Fill="Red"&gt;    &lt;Rectangle.RenderTransform&gt;    &lt;TransformGroup&gt;    &lt;ScaleTransform ScaleX="2"/&gt;    &lt;RotateTransform Angle="45"/&gt;    &lt;TranslateTransform Y="42"/&gt;        &lt;/TransformGroup&gt;    &lt;/Rectangle.RenderTransform&gt;&lt;/Rectangle&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <p>could instead be written like this:</p>
+        <div class="code">
+          <span codeLanguage="other">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>XAML</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>&lt;Rectangle Height="100" Width="100" Fill="Red"&gt;    &lt;Rectangle.RenderTransform&gt;    &lt;CompositeTransform ScaleX="2" Rotation="45" TranslateY="42"/&gt;    &lt;/Rectangle.RenderTransform&gt;&lt;/Rectangle&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192929" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Support for all PNG Formats</b>
+        </p>
+        <p>Silverlight 4 adds support to display all PNG image formats with proper transparency. </p>
+        <a name="_Toc256192930" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Offline Digital Rights Management</b>
+        </p>
+        <p>Silverlight now allows you to use Digital Rights Management (DRM) in content that your Silverlight applications can access offline. This allows you to better protect and more securely deliver content cross-platform for a variety of scenarios, including streaming, progressive download, rentals, and subscriptions. The Silverlight client can use two forms of DRM protected content: the traditional Windows Media Digital Rights Management 10 (WMDRM 10) and the newer PlayReady that uses the Advanced Encryption Standard (AES).</p>
+        <p>The next major wave of PlayReady innovation being built into Silverlight focuses on meeting the top media customer ask for the Silverlight DRM client – support for Offline scenarios.  The three key business models targeted for this release of the Silverlight DRM client are Rental, Subscription, and Purchase.  The Silverlight PlayReady ecosystem has several features that are valuable for these business models.</p>
+        <ul>
+          <li>PlayReady licenses can be persisted for use by the Silverlight Offline client when accessing PlayReady protected content in the disconnected state (offline).</li>
+          <li>Content access policies such as an Expiration Date and an Expire-after-first-play time value support for rental and subscription scenarios</li>
+          <li>Managed APIs to request a license given only the content header or a key identifier support for the pre-fetching of licenses</li>
+          <li>Support for license chaining can improve the customer experience during subscription renewal by only requiring one license, the root license, to be renewed in order to light up their entire library of subscription content bound to that root license</li>
+          <li>PlayReady Domain support to enable content portability and limiting playback to a certain number of PlayReady clients</li>
+        </ul>
+        <a name="_Toc256192931" href="#">
+          <span />
+        </a>
+        <p>
+          <b>MP4 Playback Protected DRM</b>
+        </p>
+        <p>Silverlight 4 can play back H264 and AAC-LC content protected using PlayReady DRM via Silverlight’s MediaStreamSource.</p>
+        <a name="_Toc256192932" href="#">
+          <span />
+        </a>
+        <p>
+          <b>WMS Multicast</b>
+        </p>
+        <p>Silverlight’s MediaElement can now take in a Windows Media Station file (.nsc) to enable delivery of media files via multicast, which saves bandwidth on multicast capable networks. Multicast streaming is very similar to traditional over-the-air radio or TV broadcast where a single signal is transmitted and individual receivers “tune in” to the program.  WMS Multicast is compatible with existing WMS-based Multicast for easy migration from WMP to Silverlight. It is the lowest cost and the most scalable of all streaming types. In IP Multicast, routers that are multicast-enabled replicate the media stream and broadcast it over a network port where clients can tune in.  </p>
+        <p>Multicast streaming is the most efficient way to deliver audio and video over a network as it scales in a non-linear way.  That is, each new viewer does not increase the amount of bandwidth required. In Silverlight 3, Multicast is enabled only through an open source plug-in developed in cooperation with Microsoft by Qumu.  Silverlight 4 does not break compatibility with the plug-in although the plug-in is now unnecessary.</p>
+        <a name="_Toc256192933" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Output Protection</b>
+        </p>
+        <p>Silverlight 4 adds the capability to read Output Protection policies inside of PlayReady licenses and to engage output protections based on those policies. This enables content providers and developers to protect content from the output ports of the Graphics card to Input port of a display device.</p>
+        <a name="_Toc256192934" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Parser Enhancements</b>
+        </p>
+        <p>The parser in Silverlight 4 adds performance and stability improvements to the parser engine, support for setting order dependent properties, and the XmlnsPrefix and XmlnsDefinition attributes. New valid XAML constructs are now accepted and there is better validation of XAML errors.  For example, direct content is now handled properly, making the following XAML behave just as it would in WPF: “&lt;Button&gt;Hello, World!&lt;/Button&gt;”.   In addition, custom dictionaries are now supported in Silverlight XAML (using x:Key to add items).</p>
+        <p>The new parser provides significant improvements to runtime error reporting in XAML.  With the newly rearchitected parser, far more error messages provide useful information about what went wrong and on what line/column the error occurred within the XAML document.</p>
+        <br />
+        <p>The parser has also added support for XmlnsDefinition, allowing you to eliminate the plethora of xmlns declarations in every XAML document.  You can take advantage of intellisense across all of your referenced control libraries and namespaces using a single XML namespace.  The Silverlight SDK and Toolkit have been updated to take advantage of this functionality, meaning any toolkit control can be accessed with the prefix “toolkit:” (or “sdk:” for SDK controls), and only one xmlns declaration at the top of your document.</p>
+        <p>Support has been enabled for components that implement ISupportInitialize, too. This allows such components to be notified when the parser is done setting properties so that order-dependent property setting can be handled appropriately.</p>
+        <a name="_Toc256192935" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Deep Zoom</b>
+        </p>
+        <p>Deep Zoom’s code base has been updated with support for hardware acceleration, resulting in increased performance. </p>
+        <a name="_Toc256192936" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Google Chrome Support</b>
+        </p>
+        <p>Silverlight 4 adds support for Google Chrome browser, in addition to the Safari, FireFox and Internet Explorer. </p>
+        <a name="_Toc256192937" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Private Mode Browsing</b>
+        </p>
+        <p>Private mode browsing, supported by many web browsers, is now supported by Silverlight 4. </p>
+        <a name="_Toc256192938" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Pinned Full-Screen Mode on Secondary Display</b>
+        </p>
+        <p>Silverlight 4 now supports pinning an application to full screen mode when the application is not in focus. This is useful when you have more than 1 display monitor and you are watching a video in full screen mode on a monitor and interacting with other applications in another monitor.  The following code sets the application to allow full screen when not in focus.</p>
+        <div class="code">
+          <span codeLanguage="CSharp">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th>C#</th>
+                <th>
+                  <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                    <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <pre>Application.Current.Host.Content.FullScreenOptions =     FullScreenOptions.StaysFullScreenWhenUnfocused;Application.Current.Host.Content.IsFullScreen = true;</pre>
+                </td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <a name="_Toc256192939" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Media Updates</b>
+        </p>
+        <p>Several updates have been made to the media stack in Silverlight 4. Silverlight 4 provides more descriptive MediaSourceStream errors. Instead of seeing 4001 AG_E_NETWORK error for the MediaStreamSource, you will now have the improved support for seeing information about the error that is more relevant to the media pipeline.</p>
+        <p>Content protection updates are included in Silverlight 4. The MediaSourceStream is able to use the sub sample encryption mechanism for protecting Mp4 content as described in the PIFF specification. Also, there is now support for the CGMS-A analog output protection mechanism. </p>
+        <p>As an additional layer of security when engaging output protections as required by content providers, the graphics card will be checked to make sure it is appropriately up-to-date.</p>
+        <p>Digital Constraint Token support exists as a new output protection policy that is based on both the frame quality (High-Def or Standard-Def) as well as the desired protection level. This allows content owners to protect their content under adaptive streaming.</p>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

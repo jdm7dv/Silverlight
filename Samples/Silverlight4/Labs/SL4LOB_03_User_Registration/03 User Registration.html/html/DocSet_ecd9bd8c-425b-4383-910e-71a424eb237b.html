@@ -1,0 +1,161 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 5: RichTextBox" />
+      <MSHelp:RLTitle Title="Exercise 5: RichTextBox" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 5: RichTextBox</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 3 - Authentication, Validation, MVVM, Implicit Styles and RichTextBox Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 5: RichTextBox</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>One way we could enhance user registration would be to enable users to supply some sort of text about themselves—if we wanted to add some sort of forum system to the site, the ability to provide a more detailed online identity would be important. We could add a simple text box to hold such information, but that’s a little limited. It might be better to use the RichTextBox added in Silverlight 4, which provides a way to display and edit formatted text—unlike the plain TextBox, the edited text can contain a mixture of plain, bold, or italic text, with different font sizes, colors, and typefaces if you choose. And the RichTextBox offers a read-only mode enabling such formatted text to be displayed easily. (It was possible to render formatted text in earlier versions of Silverlight, but the RichTextBox makes it much easier.)</p>
+        <p>In fact we could use this feature in other places. For example, the event description itself is currently just plain text, but could be enhanced with the use of more flexibly styled text. Since the RichTextBox is very broadly applicable, this part of the lab will look at it in isolation, rather than wiring it into a specific part of the example application, so that we can focus on the details of using the RichTextBox itself.</p>
+        <ol>
+          <li>Open Visual Studio 2010.</li>
+          <li>In Visual Studio 2010, press Ctrl+Shift+N, or use the File→New→Project... menu item.</li>
+          <li><b>Select</b> Visual C#→Silverlight <b>in the treeview on the left.</b></li>
+          <li><b>In the center, select the Silverlight Application template.</b></li>
+          <li><b>Name the project </b>RichTextApp<b>.</b><p><img src="images\0b5e33bd-e827-4e25-8cce-efb5b566eb2d.png" /></p><p><b>Figure 2</b><br /><i>Add New Silverlight Application Project</i></p></li>
+          <li>This project does not need a web site, so uncheck the “Create directory for solution” checkbox.</li>
+          <li>Click OK.</li>
+          <li>In the New Silverlight Application dialog that appears, uncheck the checkbox labeled Host the Silverlight application in a new Web site. Click OK.</li>
+          <li>In the MainPage.xaml file that appears in Visual Studio, add the following inside the Grid:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;RichTextBox x:Name="rtb"&gt;&lt;/RichTextBox&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application. The empty rich text box will be filling the whole browser frame. Click in it and try typing something—at this stage it will behave in the same way as an ordinary TextBox. (It does not automatically handle common shortcuts such as Ctrl+B, so at this stage, you can’t exploit the ‘rich’ in rich text box.)</li>
+          <li>A RichTextBox can be pre-loaded with formatted content. Inside the &lt;RichTextBox&gt; element, add the following XAML:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Paragraph&gt;    This is some text.    &lt;Bold&gt;This is some bold text.&lt;/Bold&gt;&lt;/Paragraph&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application. You will see a mixture of normal and bold text. You can edit the text, and whatever text you type will be in the same style as the surrounding text.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The design surface in the Release Candidate of Visual Studio 2010 is not completely consistent with what you’ll see at runtime. It handles whitespace differently. If you look closely, you’ll see that in Visual Studio, there is no space between the period at the end of the first sentence, and the start of the next sentence. But when you run the application, there is a space.<br />The rules for whitespace handling in XAML are somewhat complex, but they are designed to provide the results you are most likely to want most of the time while letting you indent your XAML to reflect its structure. (They are similar in spirit to HTML’s whitespace handling.) For example, although both lines containing text in the XAML are indented, those indentation spaces do not appear at runtime. A run of whitespace in the middle of mixed content typically collapses down to a single space—so although the XAML has a new line, and space for indentation before the &lt;Bold&gt; tag, at runtime this is reduced to one space, which is what we want here. Whitespace at the beginning and end is handled differently—the whitespace between the opening &lt;Paragraph&gt; tag and the first bit of text is collapsed down to nothing, as is the whitespace between the closing &lt;/Bold&gt; and the closing &lt;/Paragraph&gt; tag.<br />Although the whitespace handling usually does what you what, it’s occasionally necessary to take more control, so the next few steps will show the two ways to do this in XAML.</td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193912" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Whitespace Handling</b>
+        </p>
+        <ol>
+          <li>In the XAML, add a couple of extra spaces between the words “is” and “some” on the first line of text. Notice that this has no effect, either in the designer or when you run the application.</li>
+          <li>Add an xml:space="preserve" attribute to the opening &lt;Paragraph&gt; tag. The extra spaces you added will now be faithfully reproduced. So will any new lines—the two pieces of text new appear on two separate lines. More subtly, there’s a blank line at the start, because the opening &lt;Paragraph&gt; tag is followed immediately by a new line, and that has also been preserved. Moreover, the indentation has carefully been maintained too, which is not especially useful here.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The xml:space attribute is a standard feature of XML, and you can add it to any XML document. The XML specification deliberately leaves some latitude for how applications use this attribute, and XAML’s whitespace rules explicitly take this attribute into account. So while this is a standard attribute, there is some XAML-specific behavior here.</td></tr></table><p /></div></li>
+          <li>Remove the xml:space attribute you just added.</li>
+          <li>Inside the &lt;Paragraph&gt; element, replace the first line of text with this:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Run Text="This is   some text." /&gt;</pre></td></tr></table></span></div></li>
+          <li>Note that these extra spaces are honored for this particular run of text, but the other whitespace is collapsed as before. This is the usual technique for taking fine-grained control of whitespace when you only need precise control in a specific area.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This works because the whitespace processing rules are applied to plain text when it appears as element content, but not to text inside attribute values.<br />Be aware that if you don’t specify a Run explicitly as we just have, the XAML compiler converts plain textual content into Run elements for you—Run is the only type in the RichTextBox text object model that is capable of containing text. If you look at the properties offered by types such as Paragraph or Bold, you’ll see that that the only things these elements are capable of containing are other text elements. Only Run has a Text property. So you will end up with Run elements whether or not you put them explicitly in the XAML. </td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193913" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Nested Formatting</b>
+        </p>
+        <ol>
+          <li>Formatting tags can be nested within one another, and their settings combine. And you can also apply text formatting attributes to the Paragraph container. Copy this XAML inside your RichTextBox to see this in action:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Paragraph FontStyle="Italic"&gt;    This is italic.    &lt;Bold&gt;This is bold italic.&lt;/Bold&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;    &lt;Bold FontSize="20"&gt;        Bold        &lt;Italic&gt;Italic&lt;/Italic&gt;.        Bold,        &lt;Span FontFamily="Georgia"&gt;and in a different font.&lt;/Span&gt;    &lt;/Bold&gt;&lt;/Paragraph&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The &lt;Span&gt; element here is similar to &lt;Bold&gt; and &lt;Italic&gt; in that it can be used to apply formatting to a range of text. In fact the Bold and Italic classes both derive from Span. The difference is that Span has no intrinsic formatting of its own—it has no visible effect unless you set one or more font properties. The Bold element is essentially just a Span that sets the FontWeight to Bold for you.<br />Because Span supports the FontWeight and FontStyle properties, you can use a Span to do anything you could do with Bold or Italic. Those elements are only provided for convenience. </td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193914" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Read-only RichTextBox</b>
+        </p>
+        <ol>
+          <li>Add an IsReadOnly="True" attribute to the RichTextBox element. Run the application again. Observe that the text is displayed but can no longer be edited. Instead, it can be selected and copied.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This mode is useful for displaying formatted text. If you are familiar with WPF, you would normally use one of the flow document reader controls for this purpose, but Silverlight combines editing and viewing functionality into the one control, RichTextBox.</td></tr></table><p /></div></li>
+          <li>When using a RichTextBox in this way, it is common to want to support scrolling to show more text than will fit. This is built in. Add a VerticalScrollBarVisibility="Visible" attribute to the RichTextBox, and add some more paragraphs to the content so that you have enough text to make a scrollbar necessary. Run the application to verify that the scrollbar works as you’d expect.</li>
+          <li>When displaying large volumes of text, you will typically want text wrapping enabled. This is disabled by default—add a long paragraph and you’ll see that it gets cropped rather than flowing across multiple lines. Add a TextWrapping="Wrap" property to the RichTextBox to fix this.</li>
+        </ol>
+        <a name="_Toc256193915" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Programming the RichTextBox</b>
+        </p>
+        <ol>
+          <li>To enable the end user to apply formatting, we need to provide some additional UI and code. Add the following XAML at the <b>top</b> of the Grid (before the RichTextBox).<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.RowDefinitions&gt;    &lt;RowDefinition Height="*" /&gt;    &lt;RowDefinition Height="Auto" /&gt;&lt;/Grid.RowDefinitions&gt;&lt;StackPanel Orientation="Horizontal" Grid.Row="1"&gt;    &lt;Button x:Name="boldButton" Content="Bold" /&gt;    &lt;Button x:Name="italicButton" Content="Italic" /&gt;&lt;/StackPanel&gt;</pre></td></tr></table></span></div></li>
+          <li>Add Click event handlers to both buttons.</li>
+          <li>In the code behind, add this helper:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void ToggleSetting(DependencyProperty property,                           object onValue, object offValue){    object currentValue = rtb.Selection.GetPropertyValue(property);    bool alreadyApplied =  currentValue.ToString() == onValue.ToString();    rtb.Selection.ApplyPropertyValue(property,                                     alreadyApplied ? offValue : onValue);}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This detects whether a particular property is already applied across the current selection in the RichTextBox. If it is not already present, then that property is applied. If it is already present, then the ‘off’ value is applied instead. (We cannot just remove the property. For one thing, the selection object does not offer a method for doing that, but in any case, the property may be inherited from a containing element. For example, the entire Paragraph might be bold, but we might want to unbold some selected text. So the absence of a property on the selection is not enough—we need to explicitly apply a property forcing the property back to normal to be able to override formatting applied at a containing scope.</td></tr></table><p /></div></li>
+          <li>Implement the bold button’s click handler like this:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void boldButton_Click(object sender, RoutedEventArgs e){    ToggleSetting(TextElement.FontWeightProperty,                  FontWeights.Bold, FontWeights.Normal);}</pre></td></tr></table></span></div></li>
+          <li>Similarly, implement the italic button like this:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void italicButton_Click(object sender, RoutedEventArgs e){    ToggleSetting(TextElement.FontStyleProperty,                  FontStyles.Italic, FontStyles.Normal);}</pre></td></tr></table></span></div></li>
+          <li>In the XAML, remove the IsReadOnly attribute from the RichTextBox.</li>
+          <li>Run the application, select some text in the RichTextBox, and verify that the Bold and Italic buttons toggle the bold and italic appearance of the text.</li>
+          <li>Finally, the ability to edit formatted text wouldn’t be much use if we couldn’t get hold of the current contents, so we’ll see how to retrieve the formatted text. The RichTextBox makes this available as XAML. Add the following to the XAML, after the Grid.RowDefinitions element, but before the StackPanel:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid.ColumnDefinitions&gt;    &lt;ColumnDefinition Width="*" /&gt;    &lt;ColumnDefinition Width="*" /&gt;&lt;/Grid.ColumnDefinitions&gt;&lt;ScrollViewer Grid.Column="1" Grid.RowSpan="2"&gt;    &lt;TextBlock x:Name="textAsXaml" TextWrapping="Wrap" /&gt;&lt;/ScrollViewer&gt;</pre></td></tr></table></span></div></li>
+          <li>Add a handler for the RichTextBox element’s ContentChanged event. Implement it as follows:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void rtb_ContentChanged(object sender, ContentChangedEventArgs e){    textAsXaml.Text = rtb.Xaml;}</pre></td></tr></table></span></div></li>
+          <li>Run the application, and make a modification to the contents of the RichTextBox. The right-hand side of the UI should show the Xaml for the RichTextBox’s current contents.</li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

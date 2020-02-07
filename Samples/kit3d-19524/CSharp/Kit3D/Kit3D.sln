@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kit3D", "Kit3D\Kit3D.csproj", "{6B859412-A938-4142-8AD5-3D9BFEF9FD73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kit3DTest", "Kit3DTest\Kit3DTest.csproj", "{BB19B786-B8B9-4F95-B985-BD89953340FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTestingWeb", "WebTestingWeb\WebTestingWeb.csproj", "{18FC5BED-4605-4506-9F6B-D143309210BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "Kit3DTestApp\TestApp.csproj", "{77A7A5F6-880C-48BC-8689-8CC6E2E4AF99}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs02.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Kit3D\\Kit3D.csproj
+		SccProjectName1 = Kit3D
+		SccLocalPath1 = Kit3D
+		SccProjectUniqueName2 = Kit3DTest\\Kit3DTest.csproj
+		SccProjectName2 = Kit3DTest
+		SccLocalPath2 = Kit3DTest
+		SccProjectUniqueName3 = WebTestingWeb\\WebTestingWeb.csproj
+		SccProjectName3 = WebTestingWeb
+		SccLocalPath3 = WebTestingWeb
+		SccProjectUniqueName4 = Kit3DTestApp\\TestApp.csproj
+		SccProjectName4 = Kit3DTestApp
+		SccLocalPath4 = Kit3DTestApp
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B859412-A938-4142-8AD5-3D9BFEF9FD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B859412-A938-4142-8AD5-3D9BFEF9FD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B859412-A938-4142-8AD5-3D9BFEF9FD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B859412-A938-4142-8AD5-3D9BFEF9FD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB19B786-B8B9-4F95-B985-BD89953340FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB19B786-B8B9-4F95-B985-BD89953340FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB19B786-B8B9-4F95-B985-BD89953340FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB19B786-B8B9-4F95-B985-BD89953340FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FC5BED-4605-4506-9F6B-D143309210BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FC5BED-4605-4506-9F6B-D143309210BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FC5BED-4605-4506-9F6B-D143309210BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FC5BED-4605-4506-9F6B-D143309210BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A7A5F6-880C-48BC-8689-8CC6E2E4AF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A7A5F6-880C-48BC-8689-8CC6E2E4AF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A7A5F6-880C-48BC-8689-8CC6E2E4AF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A7A5F6-880C-48BC-8689-8CC6E2E4AF99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

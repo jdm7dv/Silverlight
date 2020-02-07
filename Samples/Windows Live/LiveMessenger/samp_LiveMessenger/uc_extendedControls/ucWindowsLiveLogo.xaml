@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="samp_LiveMessenger.ucWindowsLiveLogo"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    d:DesignWidth="200" d:DesignHeight="20" >
+    <Grid x:Name="LayoutRoot">
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFBEBEBE" Data="F1 M 396.87,292.315L 407.62,292.649L 407.37,297.065L 404.454,302.899L 401.537,305.899" Height="14.583" HorizontalAlignment="Left" Margin="6.70300006866455,0,0,3.73499989509583" VerticalAlignment="Bottom" Width="11.75" d:LayoutOverrides="Height"/>
+    	<Path Stretch="Fill" Data="F1 M 397.561,291.895L 405.861,295.153C 406.375,295.355 406.629,295.936 406.427,296.45L 402.041,307.619C 401.84,308.133 401.259,308.386 400.745,308.184L 392.445,304.926C 391.931,304.724 391.678,304.143 391.88,303.629L 396.265,292.46C 396.467,291.946 397.047,291.693 397.561,291.895 Z " Height="16.429" HorizontalAlignment="Left" Margin="1.81099998950958,0,0,1.77900004386902" VerticalAlignment="Bottom" Width="14.686" d:LayoutOverrides="Width, Height">
+    		<Path.Fill>
+    			<RadialGradientBrush RadiusX="0.769275" RadiusY="0.875573" Center="0.414828,0.0626717" GradientOrigin="0.414828,0.0626717">
+    				<RadialGradientBrush.RelativeTransform>
+    					<TransformGroup>
+    						<SkewTransform CenterX="0.414828" CenterY="0.0626717" AngleX="-6.65132" AngleY="0"/>
+    						<RotateTransform CenterX="0.414828" CenterY="0.0626717" Angle="75.105"/>
+    					</TransformGroup>
+    				</RadialGradientBrush.RelativeTransform>
+    				<GradientStop Color="#FF88B0E0" Offset="0"/>
+    				<GradientStop Color="#FF0858B8" Offset="1"/>
+    			</RadialGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Path Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 392.87,300.815L 399.037,300.982L 398.954,302.315L 402.12,299.399L 398.87,296.565L 398.87,297.815L 394.287,297.482L 392.87,300.815 Z " HorizontalAlignment="Left" Margin="3.01200008392334,6.90199995040894,0,7.34800004959106" VerticalAlignment="Stretch" Width="9.25"/>
+    	<TextBlock Margin="20.8509998321533,3.46600008010864,5.27600002288818,-4.89300012588501" TextWrapping="Wrap" FontFamily="Arial" Text="Windows Live ID" FontSize="12" Foreground="#FF4E4D4D" VerticalAlignment="Stretch" Height="21.427" />
+    </Grid>
+</UserControl>

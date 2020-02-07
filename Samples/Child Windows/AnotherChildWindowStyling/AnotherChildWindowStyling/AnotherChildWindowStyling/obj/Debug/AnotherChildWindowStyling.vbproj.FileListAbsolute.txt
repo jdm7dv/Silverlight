@@ -1,0 +1,115 @@
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\ResolveAssemblyReference.cache
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\App.g.vb
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\MainPage.g.vb
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.g.resources
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AppManifest.xaml
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\favicon.ico
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.pdb
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.xml
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.xap
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\TestPage.html
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Input.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Reactive.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Layout.Toolkit.xml
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\de\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\es\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\fr\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\it\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ja\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ko\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hans\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hant\System.Windows.Controls.Input.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.dll
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.xml
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.pdb
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\XapCacheFile.xml
+C:\Entwicklungsprojekte Expression 3\Silverlight3Labs\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\cwLawBot.g.vb
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\favicon.ico
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.pdb
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.xml
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Input.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Reactive.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.xml
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Input.xml
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Layout.Toolkit.xml
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\de\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\es\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\fr\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\it\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ja\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ko\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hans\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hant\System.Windows.Controls.Input.resources.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\App.g.vb
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\cwLawBot.g.vb
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\MainPage.g.vb
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.g.resources
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.dll
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.xml
+C:\Users\Jonathan Moore\Desktop\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.pdb
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\favicon.ico
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.pdb
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\AnotherChildWindowStyling.xml
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Input.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Reactive.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.xml
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Input.xml
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Layout.Toolkit.xml
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\System.Windows.Controls.Toolkit.xml
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\de\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\es\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\fr\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\it\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ja\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ko\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\de\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\es\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\fr\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\it\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ja\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\ko\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hans\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\Bin\Debug\zh-Hant\System.Windows.Controls.Input.resources.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\ResolveAssemblyReference.cache
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\App.g.vb
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\cwLawBot.g.vb
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\MainPage.g.vb
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.g.resources
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.dll
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.xml
+G:\base\Shared\Windows\Program Files\SDK\Samples\Web Development\Silverlight\Child Windows\AnotherChildWindowStyling\AnotherChildWindowStyling\AnotherChildWindowStyling\obj\Debug\AnotherChildWindowStyling.pdb

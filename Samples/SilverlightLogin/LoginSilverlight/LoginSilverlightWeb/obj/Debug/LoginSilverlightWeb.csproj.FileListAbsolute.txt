@@ -1,0 +1,10 @@
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\bin\LoginSilverlightWeb.dll
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\bin\LoginSilverlightWeb.pdb
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\obj\Debug\LoginSilverlightWeb.dll
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\obj\Debug\LoginSilverlightWeb.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\bin\LoginSilverlightWeb.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\bin\LoginSilverlightWeb.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\obj\Debug\ResolveAssemblyReference.cache
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\obj\Debug\LoginSilverlightWeb.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlightWeb\obj\Debug\LoginSilverlightWeb.pdb

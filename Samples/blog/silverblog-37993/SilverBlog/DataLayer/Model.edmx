@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Entries" EntityType="Model.Store.Entries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categories" EntityType="Model.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comments" EntityType="Model.Store.Comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Authors" EntityType="Model.Store.Authors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="Model.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EntryCategory" EntityType="Model.Store.EntryCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuthorRole" EntityType="Model.Store.AuthorRole" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_EntryCategory_Entry" Association="Model.Store.FK_EntryCategory_Entry">
+      <End Role="Entry" EntitySet="Entries" />
+      <End Role="EntryCategory" EntitySet="EntryCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntryCategory_Category" Association="Model.Store.FK_EntryCategory_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="EntryCategory" EntitySet="EntryCategory" />
+    </AssociationSet>
+    <AssociationSet Name="CommentEntry" Association="Model.Store.CommentEntry">
+      <End Role="Comment" EntitySet="Comments" />
+      <End Role="Entry" EntitySet="Entries" />
+    </AssociationSet>
+    <AssociationSet Name="EntryAuthor" Association="Model.Store.EntryAuthor">
+      <End Role="Entry" EntitySet="Entries" />
+      <End Role="Author" EntitySet="Authors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AuthorRole_Author" Association="Model.Store.FK_AuthorRole_Author">
+      <End Role="Author" EntitySet="Authors" />
+      <End Role="AuthorRole" EntitySet="AuthorRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AuthorRole_Role" Association="Model.Store.FK_AuthorRole_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="AuthorRole" EntitySet="AuthorRole" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Entries">
+    <Key>
+      <PropertyRef Name="EntryId" />
+    </Key>
+    <Property Name="EntryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Created" Type="datetime" Nullable="true" />
+    <Property Name="Rating" Type="decimal" Nullable="true" Precision="29" Scale="29" />
+    <Property Name="Published" Type="bit" Nullable="true" />
+    <Property Name="CommentsEnabled" Type="bit" Nullable="true" />
+    <Property Name="Modified" Type="datetime" Nullable="true" />
+    <Property Name="Author_AuthorId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommentText" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Created" Type="datetime" Nullable="true" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Entry_EntryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Authors">
+    <Key>
+      <PropertyRef Name="AuthorId" />
+    </Key>
+    <Property Name="AuthorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="EntryCategory">
+    <Key>
+      <PropertyRef Name="Entries_EntryId" />
+      <PropertyRef Name="Categories_CategoryId" />
+    </Key>
+    <Property Name="Entries_EntryId" Type="int" Nullable="false" />
+    <Property Name="Categories_CategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuthorRole">
+    <Key>
+      <PropertyRef Name="Authors_AuthorId" />
+      <PropertyRef Name="Roles_RoleId" />
+    </Key>
+    <Property Name="Authors_AuthorId" Type="int" Nullable="false" />
+    <Property Name="Roles_RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CommentEntry">
+    <End Role="Comment" Type="Model.Store.Comments" Multiplicity="*" />
+    <End Role="Entry" Type="Model.Store.Entries" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Entry">
+        <PropertyRef Name="EntryId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="Entry_EntryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EntryAuthor">
+    <End Role="Entry" Type="Model.Store.Entries" Multiplicity="*" />
+    <End Role="Author" Type="Model.Store.Authors" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="AuthorId" />
+      </Principal>
+      <Dependent Role="Entry">
+        <PropertyRef Name="Author_AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntryCategory_Entry">
+    <End Role="Entry" Type="Model.Store.Entries" Multiplicity="1" />
+    <End Role="EntryCategory" Type="Model.Store.EntryCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entry">
+        <PropertyRef Name="EntryId" />
+      </Principal>
+      <Dependent Role="EntryCategory">
+        <PropertyRef Name="Entries_EntryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntryCategory_Category">
+    <End Role="EntryCategory" Type="Model.Store.EntryCategory" Multiplicity="*" />
+    <End Role="Category" Type="Model.Store.Categories" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="EntryCategory">
+        <PropertyRef Name="Categories_CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AuthorRole_Author">
+    <End Role="Author" Type="Model.Store.Authors" Multiplicity="1" />
+    <End Role="AuthorRole" Type="Model.Store.AuthorRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="AuthorId" />
+      </Principal>
+      <Dependent Role="AuthorRole">
+        <PropertyRef Name="Authors_AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AuthorRole_Role">
+    <End Role="AuthorRole" Type="Model.Store.AuthorRole" Multiplicity="*" />
+    <End Role="Role" Type="Model.Store.Roles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="AuthorRole">
+        <PropertyRef Name="Roles_RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self">
+        <EntityContainer Name="ModelContainer" >
+          <EntitySet Name="Entries" EntityType="Model.Entry" />
+          <EntitySet Name="Categories" EntityType="Model.Category" />
+          <AssociationSet Name="EntryCategory" Association="Model.EntryCategory">
+            <End Role="Entry" EntitySet="Entries" />
+            <End Role="Category" EntitySet="Categories" /></AssociationSet>
+          <EntitySet Name="Comments" EntityType="Model.Comment" />
+          <EntitySet Name="Authors" EntityType="Model.Author" />
+          <AssociationSet Name="CommentEntry" Association="Model.CommentEntry">
+            <End Role="Comment" EntitySet="Comments" />
+            <End Role="Entry" EntitySet="Entries" /></AssociationSet>
+          <AssociationSet Name="EntryAuthor" Association="Model.EntryAuthor">
+            <End Role="Entry" EntitySet="Entries" />
+            <End Role="Author" EntitySet="Authors" /></AssociationSet>
+          <EntitySet Name="Roles" EntityType="Model.Role" />
+          <AssociationSet Name="AuthorRole" Association="Model.AuthorRole">
+            <End Role="Author" EntitySet="Authors" />
+            <End Role="Role" EntitySet="Roles" /></AssociationSet></EntityContainer>
+        <EntityType Name="Entry">
+          <Key>
+            <PropertyRef Name="EntryId" /></Key>
+          <Property Type="Int32" Name="EntryId" Nullable="false" store:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="true" />
+          <NavigationProperty Name="Categories" Relationship="Model.EntryCategory" FromRole="Entry" ToRole="Category" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="String" Name="Content" Nullable="true" />
+          <Property Type="DateTime" Name="Created" Nullable="true" Precision="29" />
+          <Property Type="Decimal" Name="Rating" Nullable="true" Precision="29" Scale="29" />
+          <Property Type="Boolean" Name="Published" Nullable="true" />
+          <Property Type="Boolean" Name="CommentsEnabled" Nullable="true" />
+          <Property Type="DateTime" Name="Modified" Nullable="true" Precision="29" />
+          <NavigationProperty Name="Comments" Relationship="Model.CommentEntry" FromRole="Entry" ToRole="Comment" />
+          <NavigationProperty Name="Author" Relationship="Model.EntryAuthor" FromRole="Entry" ToRole="Author" />
+          </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" /></Key>
+          <Property Type="Int32" Name="CategoryId" Nullable="false" store:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="true" />
+          <NavigationProperty Name="Entries" Relationship="Model.EntryCategory" FromRole="Category" ToRole="Entry" /></EntityType>
+        <Association Name="EntryCategory">
+          <End Type="Model.Entry" Role="Entry" Multiplicity="*" />
+          <End Type="Model.Category" Role="Category" Multiplicity="*" /></Association>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentId" /></Key>
+          <Property Type="Int32" Name="CommentId" Nullable="false" store:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CommentText" Nullable="true" />
+          <Property Type="DateTime" Name="Created" Nullable="true" Precision="29" />
+          <Property Type="String" Name="Name" Nullable="true" />
+          <NavigationProperty Name="Entry" Relationship="Model.CommentEntry" FromRole="Comment" ToRole="Entry" /></EntityType>
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="AuthorId" /></Key>
+          <Property Type="Int32" Name="AuthorId" Nullable="false" store:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Entries" Relationship="Model.EntryAuthor" FromRole="Author" ToRole="Entry" />
+          <NavigationProperty Name="Roles" Relationship="Model.AuthorRole" FromRole="Author" ToRole="Role" /></EntityType>
+        <Association Name="CommentEntry">
+          <End Type="Model.Comment" Role="Comment" Multiplicity="*" />
+          <End Type="Model.Entry" Role="Entry" Multiplicity="1" /></Association>
+        <Association Name="EntryAuthor">
+          <End Type="Model.Entry" Role="Entry" Multiplicity="*" />
+          <End Type="Model.Author" Role="Author" Multiplicity="0..1" /></Association>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" /></Key>
+          <Property Type="Int32" Name="RoleId" Nullable="false" store:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="true" />
+          <NavigationProperty Name="Authors" Relationship="Model.AuthorRole" FromRole="Role" ToRole="Author" /></EntityType>
+        <Association Name="AuthorRole">
+          <End Type="Model.Author" Role="Author" Multiplicity="*" />
+          <End Type="Model.Role" Role="Role" Multiplicity="*" /></Association></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ModelContainer">
+    <EntitySetMapping Name="Entries">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Entry)">
+        <MappingFragment StoreEntitySet="Entries">
+          <ScalarProperty Name="EntryId" ColumnName="EntryId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="CommentsEnabled" ColumnName="CommentsEnabled" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Category)">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Comment)">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="CommentId" ColumnName="CommentId" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Author)">
+        <MappingFragment StoreEntitySet="Authors">
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Role)">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EntryCategory" TypeName="Model.EntryCategory" StoreEntitySet="EntryCategory">
+      <EndProperty Name="Entry">
+        <ScalarProperty Name="EntryId" ColumnName="Entries_EntryId" />
+      </EndProperty>
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryId" ColumnName="Categories_CategoryId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CommentEntry" TypeName="Model.CommentEntry" StoreEntitySet="Comments">
+      <EndProperty Name="Entry">
+        <ScalarProperty Name="EntryId" ColumnName="Entry_EntryId" />
+      </EndProperty>
+      <EndProperty Name="Comment">
+        <ScalarProperty Name="CommentId" ColumnName="CommentId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EntryAuthor" TypeName="Model.EntryAuthor" StoreEntitySet="Entries">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="AuthorId" ColumnName="Author_AuthorId" />
+      </EndProperty>
+      <EndProperty Name="Entry">
+        <ScalarProperty Name="EntryId" ColumnName="EntryId" />
+      </EndProperty>
+      <Condition ColumnName="Author_AuthorId" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorRole" TypeName="Model.AuthorRole" StoreEntitySet="AuthorRole">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="AuthorId" ColumnName="Authors_AuthorId" />
+      </EndProperty>
+      <EndProperty Name="Role">
+        <ScalarProperty Name="RoleId" ColumnName="Roles_RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="True" /></DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="Model" >
+        <EntityTypeShape EntityType="Model.Entry" Width="2.75" PointX="3.625" PointY="1.125" Height="3.1340950520833335" />
+        <EntityTypeShape EntityType="Model.Category" Width="1.5" PointX="9.25" PointY="0.875" Height="1.4033821614583331" />
+        <AssociationConnector Association="Model.EntryCategory">
+          <ConnectorPoint PointX="6.375" PointY="1.797841796875" />
+          <ConnectorPoint PointX="9.25" PointY="1.797841796875" />
+          </AssociationConnector>
+        <EntityTypeShape EntityType="Model.Comment" Width="1.5" PointX="1.125" PointY="4.125" Height="1.7879850260416665" />
+        <EntityTypeShape EntityType="Model.Author" Width="1.5" PointX="8.125" PointY="4" Height="1.5956835937499996" />
+        <AssociationConnector Association="Model.CommentEntry">
+          <ConnectorPoint PointX="2.625" PointY="5.182191255208334" />
+          <ConnectorPoint PointX="5" PointY="5.182191255208334" />
+          <ConnectorPoint PointX="5" PointY="4.2590950520833335" /></AssociationConnector>
+        <AssociationConnector Association="Model.EntryAuthor">
+          <ConnectorPoint PointX="6.375" PointY="4.2256982421875" />
+          <ConnectorPoint PointX="8.125" PointY="4.2256982421875" />
+          </AssociationConnector>
+        <EntityTypeShape EntityType="Model.Role" Width="1.5" PointX="11.875" PointY="4" Height="1.4033821614583326" />
+        <AssociationConnector Association="Model.AuthorRole">
+          <ConnectorPoint PointX="9.625" PointY="4.7016910807291659" />
+          <ConnectorPoint PointX="11.875" PointY="4.7016910807291659" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

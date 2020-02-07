@@ -1,0 +1,80 @@
+<publishData>
+  <publishTarget publishUrl="C:\Temp\">
+    <file relUrl="Static/Images/Windows/Windows Vista Home Premium - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Office/Office Professional 2007 - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Office/Office Small Business 2007.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 7000.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Windows/Windows Vista Ultimate - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 3000 - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Product.aspx" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Windows/Windows Vista Home Premium.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 5000 - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Development/Visual Studio Team System 2008 - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Development/Expression Studio.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Robots.txt" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.Web.DomainServices.xml" publishTime="07/06/2009 13:25:24" />
+    <file relUrl="Static/Images/Office/Office Ultimate 2007 - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Site.Master" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.Web.DynamicData.dll" publishTime="06/26/2009 00:02:14" />
+    <file relUrl="Static/Images/Office/Office Standard 2007 - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Windows/Windows Vista Home Basic.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Development/Visual Studio Professional 2008 - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Windows/Windows Vista Home Basic - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Windows/Windows Vista Business.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Silverlight.js" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 3000.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.Web.DynamicData.xml" publishTime="04/28/2009 00:03:24" />
+    <file relUrl="Sitemap.aspx" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 8000 - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 7000 - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Office/Office Professional 2007.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Development/Visual Studio Team System 2008.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.Web.DomainServices.dll" publishTime="07/06/2009 13:26:44" />
+    <file relUrl="Static/Images/Development/Visual Studio Team System 2008 - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Office/Office Professional 2007 - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Office/Office Ultimate 2007.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 8000.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Development/Expression Studio - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 7000 - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Windows/Windows Vista Business - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="App_Data/Products.xml" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 7000 - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Web.config" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 7000.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Office/Office Standard 2007 - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Windows/Windows Vista Business - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 5000 - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Windows/Windows Vista Home Premium - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="bin/SilverlightStore.Web.dll" publishTime="07/18/2009 09:38:58" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 3000 - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.ComponentModel.DataAnnotations.xml" publishTime="06/12/2009 14:55:02" />
+    <file relUrl="bin/SilverlightStore.Web.pdb" publishTime="07/18/2009 09:38:58" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 2.0.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Development/Expression Studio - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Mouse Wireless 5000.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.Web.Ria.xml" publishTime="07/06/2009 13:25:30" />
+    <file relUrl="Static/Images/Office/Office Small Business 2007 - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Office/Office Ultimate 2007 - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Windows/Windows Vista Ultimate.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="ClientBin/SilverlightStore.xap" publishTime="07/18/2009 09:38:25" />
+    <file relUrl="Static/Images/Development/Visual Studio Professional 2008 - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 7000 - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.Web.DomainServices.WebControls.xml" publishTime="06/26/2009 00:02:14" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 2.0 - Large.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 8000 - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/Microsoft.Web.Extensions.xml" publishTime="04/28/2009 00:03:24" />
+    <file relUrl="Static/Images/Office/Office Standard 2007.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Hardware/Keyboard Wireless 2.0 - Logo.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.ComponentModel.DataAnnotations.dll" publishTime="07/06/2009 13:26:44" />
+    <file relUrl="Static/Images/install-silverlight.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/System.Web.DomainServices.WebControls.dll" publishTime="06/26/2009 00:02:14" />
+    <file relUrl="Static/Images/Office/Office Small Business 2007 - Logo.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Images/Windows/Windows Vista Ultimate - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Static/Site.css" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="Static/Images/Development/Visual Studio Professional 2008.png" publishTime="07/18/2009 09:17:08" />
+    <file relUrl="bin/Microsoft.Web.Extensions.dll" publishTime="06/26/2009 00:02:14" />
+    <file relUrl="bin/System.Web.Ria.dll" publishTime="07/06/2009 13:26:44" />
+    <file relUrl="Static/Images/Windows/Windows Vista Home Basic - Large.png" publishTime="07/18/2009 09:17:09" />
+    <file relUrl="Default.aspx" publishTime="07/18/2009 09:17:08" />
+  </publishTarget>
+</publishData>

@@ -1,0 +1,145 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Commands and the ViewModel" />
+      <MSHelp:RLTitle Title="Exercise 2: Commands and the ViewModel" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Commands and the ViewModel</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 3 - Authentication, Validation, MVVM, Implicit Styles and RichTextBox Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Commands and the ViewModel</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>One of the goals of a ViewModel is to minimize the amount of code in the view, in order to facilitate unit testing. The first part of this lab illustrated how data binding makes it possible for a ViewModel to update properties of elements in the view. But what about when we need things to flow in the other direction? How does the ViewModel discover user activity such as button clicks?</p>
+        <p>One solution is to have ordinary event handlers in the view’s code behind, and have those call into methods on the ViewModel. For example, the ViewModel could define an OnRegisterButtonClicked method to be called by the view. While this doesn’t quite meet the ideal of avoiding all code in the view, that’s not a huge problem, because the only code required in the view is a single method call through to the ViewModel. However, Silverlight 4 introduces a feature that was previously only available on the desktop with WPF, which can help us do better: commands.</p>
+        <p>Commands are an abstraction representing an operation that can be invoked through some user action such as a button click. You can data bind a Button’s Command property to a command object exposed by a ViewModel, which avoids the need for a Click handler in the code behind. The button is able to invoke the command directly. But it adds an additional benefit: the command abstraction (represented by the ICommand interface) also supports the idea that a command may be enabled or disabled from time to time. This means the ViewModel also has a way of controlling whether the button associated with a command is enabled or disabled. (Of course, we could have done that by offering a bool property on the ViewModel and binding a button’s IsEnabled property to that. But commands let us kill two birds with one stone: by binding just the one property: Button.Command, we can have the ViewModel both handle button clicks and set the enabled state of the button.</p>
+        <p>In this exercise, we’ll use this technique for the Register and Unregister buttons you added in the previous part.</p>
+        <a name="_Toc256193906" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Commanding</b>
+        </p>
+        <ol>
+          <li>Add a new class to the SlEventManager project called RelayCommand, with the following implementation:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>While Silverlight defines the ICommand interface, it doesn’t provide any implementations. So the first thing we need to do is provide our own. The most flexible approach is to write one class that simply relays the command invocation onto a delegate. That way we can use one command implementation to implement any number of commands. </td></tr></table><p /></div><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class RelayCommand : ICommand{    private Action _handler;    public RelayCommand(Action handler)    {        _handler = handler;    }    private bool _isEnabled;    public bool IsEnabled    {        get { return _isEnabled; }        set        {            if (value != _isEnabled)            {                _isEnabled = value;                if (CanExecuteChanged != null)                {                    CanExecuteChanged(this, EventArgs.Empty);                }            }        }    }    public bool CanExecute(object parameter)    {        return IsEnabled;    }    public event EventHandler CanExecuteChanged;    public void Execute(object parameter)    {        _handler();    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>There are other common implementations of this general idea you can find on the Internet that are also called RelayCommand. The variations are in details such as whether they use the command parameter. This example doesn’t need it a command parameter, so we just ignore it. Another variation is whether the CanExecute status is handled with a property or a callback. But the basic principle is the same.</td></tr></table><p /></div></li>
+          <li>Add two methods OnRegister and OnUnregister to the HomeViewModel.cs ViewModel class. These will be used as handlers for the commands:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void OnRegister(){}private void OnUnregister(){}</pre></td></tr></table></span></div></li>
+          <li>Add the following property and field definitions to the HomeViewModel.cs ViewModel class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private readonly RelayCommand _registerCommand;public ICommand RegisterCommand { get { return _registerCommand; } }private readonly RelayCommand _unregisterCommand;public ICommand UnregisterCommand { get { return _unregisterCommand; } }</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>While these properties will be used for data binding, they never change, so there’s no need to for set accessors nor any need to raise change notifications.</td></tr></table><p /></div></li>
+          <li>In the constructor, add the following code to initialize these command fields with RelayCommand objects referring to the two handlers. Put these at the <i>start</i> of the constructor before the call to UpdateUserForRole.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>_registerCommand = new RelayCommand(OnRegister);_unregisterCommand = new RelayCommand(OnUnregister);</pre></td></tr></table></span></div></li>
+          <li>Add a property to track the current selection.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td><b>W</b>e need to write the logic that will determine whether these commands should be enabled. This requires two things: we need to know events for which the user is already registered, and we need to know which event has currently been selected in the grid.</td></tr></table><p /></div><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private Event _selectedEvent;public Event SelectedEvent{    get { return _selectedEvent; }    set    {        _selectedEvent = value;        UpdateRegistrationButtons();    }}private void UpdateRegistrationButtons(){}</pre></td></tr></table></span></div></li>
+          <li>Add the following using directive:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.Web;</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc256193907" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Add Authentication Based Custom Domain Service Methods</b>
+        </p>
+        <ol>
+          <li>Add the following using directive in the EventManagerDomainService class in the SlEventManager.Web project:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Web.Security;</pre></td></tr></table></span></div></li>
+          <li>Add this method, which will retrieve the IDs of the events for which the current user is registered. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This uses the ASP.NET Membership class to discover the current user, so there’s no need for any parameters.</td></tr></table><p /></div><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Invoke]public IEnumerable&lt;int&gt; FetchEventsForWhichCurrentUserIsRegistered(){    MembershipUser mu = Membership.GetUser();    if (mu == null)    {        return new int[0];    }    var q = from attendeeEvent in this.ObjectContext.AttendeeEvents            where attendeeEvent.Attendee.AspNetUserId == (Guid) mu.ProviderUserKey            select attendeeEvent.EventID;    return q;}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The <i>[Invoke]</i> attribute tells WCF RIA Services that this method does not attempt to return any entities. By default, when a domain service method returns an <i>IEnumerable&lt;T&gt;</i>, RIA Services presumes that the method intends to act as a query over some domain entities.  That would cause it to report an error here, because this method enumerates ints, which are not valid entities. Declaring that this is simply an invocation-style operation avoids the error.</td></tr></table><p /></div></li>
+          <li>A the following methods to handle registering and unregistering the current user for events:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[Invoke]public void RegisterCurrentUserForEvent(int eventId){    Attendee attendee = GetOrCreateAttendeeForCurrentUser();    if (!attendee.AttendeeEvents.Any(ev =&gt; ev.EventID == eventId))    {        attendee.AttendeeEvents.Add(new AttendeeEvent { EventID = eventId });    }    this.ObjectContext.SaveChanges();}[Invoke]public void UnregisterCurrentUserForEvent(int eventId){    Attendee attendee = GetOrCreateAttendeeForCurrentUser();    AttendeeEvent av = attendee.AttendeeEvents.SingleOrDefault(                           x =&gt; x.EventID == eventId);    if (av != null)    {        attendee.AttendeeEvents.Remove(av);    }    this.ObjectContext.SaveChanges();}private Attendee GetOrCreateAttendeeForCurrentUser(){    MembershipUser mu = Membership.GetUser();    if (mu == null)    {        throw new InvalidOperationException("User not logged in");    }    Attendee at = this.ObjectContext.Attendees.FirstOrDefault(                      x =&gt; x.AspNetUserId == (Guid) mu.ProviderUserKey);    if (at == null)    {        at = new Attendee        {            AspNetUserId = (Guid) mu.ProviderUserKey        };        this.ObjectContext.AddToAttendees(at);    }    return at;}</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc256193908" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Implement the Bindings</b>
+        </p>
+        <ol>
+          <li>Add the following using declarations to HomeViewModel.cs <b>so t</b>he ViewModel can use these methods and remember which events the current user belongs to.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Collections.Generic;using SlEventManager.Web.Services;</pre></td></tr></table></span></div></li>
+          <li>Add the following field to the ViewModel:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private HashSet&lt;int&gt; _currentUserRegisteredEventIds;</pre></td></tr></table></span></div></li>
+          <li>Implement the UpdateRegistrationButton method that we added earlier.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This updates the button command status based on the current set of event ids:</td></tr></table><p /></div><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void UpdateRegistrationButtons(){    _registerCommand.IsEnabled = _currentUserRegisteredEventIds != null &amp;&amp;         SelectedEvent != null &amp;&amp;        !_currentUserRegisteredEventIds.Contains(SelectedEvent.EventID);    _unregisterCommand.IsEnabled = _currentUserRegisteredEventIds != null &amp;&amp;         SelectedEvent != null &amp;&amp;        _currentUserRegisteredEventIds.Contains(SelectedEvent.EventID);}</pre></td></tr></table></span></div></li>
+          <li>Add the following code at the end of the <b>UpdateForUserRole</b> method to populate the set of registered events:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (isLoggedIn){    var ctx = new EventManagerDomainContext();    ctx.FetchEventsForWhichCurrentUserIsRegistered((op) =&gt;    {        if (!op.HasError)        {            var items = op.Value;            _currentUserRegisteredEventIds = new HashSet&lt;int&gt;(items);            UpdateRegistrationButtons();        }    }, null);}else{    _currentUserRegisteredEventIds = null;    UpdateRegistrationButtons();}</pre></td></tr></table></span></div></li>
+          <li>Implement the button command handlers we previously added empty methods for:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void OnRegister(){    if (SelectedEvent != null)    {        var ctx = new EventManagerDomainContext();        ctx.RegisterCurrentUserForEvent(SelectedEvent.EventID, (op) =&gt;            {                UpdateForUserRole();            }, null);    }}private void OnUnregister(){    if (SelectedEvent != null)    {        var ctx = new EventManagerDomainContext();        ctx.UnregisterCurrentUserForEvent(SelectedEvent.EventID, (op) =&gt;        {            UpdateForUserRole();        }, null);    }}</pre></td></tr></table></span></div></li>
+          <li>Wire the view up to the commands. By binding the Command properties of the two buttons to the command objects exposed by the ViewModel:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Button x:Name="registerForEventButton" Content="Register"        Command="{Binding Path=RegisterCommand}" /&gt;&lt;Button x:Name="unregisterForEventButton" Content="Unregister"        Command="{Binding Path=UnregisterCommand}" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Bind the SelectedItem property of the data grid by adding the following attribute to the data grid:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>SelectedItem="{Binding Path=SelectedEvent, Mode=TwoWay}"</pre></td></tr></table></span></div></li>
+          <li>Run the application. </li>
+          <li>Log in as a non-admin user (e.g., ian, P@ssw0rd). <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>In the example database, the ian user is registered for the third event, so when you select that event the Register button should become disabled and the Unregister button should be enabled. For all other events, it should be the other way around. You should be able to us the buttons to register and unregister the user for events in the list.</td></tr></table><p /></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+2009-12-04  Alan McGovern  <amcgovern@novell.com>
+
+	* Inline.cs: Don't bother storing a copy of the Name property
+	  locally - just use FrameworkElement.NameProperty.
+
+2009-04-09  Jeffrey Stedfast  <fejj@novell.com>
+
+	* FontSource.cs: Changed to keep a StreamWrapper internally. We'll
+	need this for marashalling to unmanaged code.
+
+2009-02-17  Jeffrey Stedfast  <fejj@novell.com>
+
+	* Inline.cs (Name): Implemented.
+
+2009-02-08  Jeffrey Stedfast  <fejj@novell.com>
+
+	* InlineCollection.cs (Add): Implemented.
+
+2009-02-04  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* FontSource.cs: Add MonoTODO since this does *nothing* right now
+
+2008-11-19  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Inline.cs, InlineCollection.cs: Corcompare.
+
+2008-11-18  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* InlineCollection.cs: Corcompare work.
+
+2008-08-13  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* InlineCollection.cs: More DO generation.
+
+2008-08-12  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Glyphs.cs, Inline.cs, LineBreak.cs, Run.cs: Generate public ctor,
+	  internal ctor and GetKind for classes inheriting from
+	  DependencyObject.
+
+2008-08-12  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Inline.cs, Run.cs, Glyphs.cs: Implement DP accessor generation.
+
+2008-08-12  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Glyphs.cs, Inline.cs, LineBreak.cs, Run.cs: Make classes partial and
+	  remove DP registration, which is now generated.
+
+2008-07-29  Jeffrey Stedfast  <fejj@novell.com>
+
+	* Glyphs.cs: FontUriProperty is not of type string, change it to
+	Uri. Also, do not do conversion in the property accessors.
+
+	* Inline.cs: Added Language property and fixed ctor.
+
+	* FontSource.cs: Added
+
+2008-07-28  Chris Toshok  <toshok@ximian.com>
+
+	* InlineCollection.cs: stub out PresentationFrameworkCollection<T>
+	overrides.
+
+2008-07-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Inline.cs: Updated TextDecoration* according to SL2B2.
+
+2008-07-23  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* Inline.cs: Implement Font(Style|Weight|Stretch).
+
+2008-07-21  Jeffrey Stedfast  <fejj@novell.com>
+
+	* InlineCollection.cs: New. Maps to Silverlight 1.0 "Inlines"
+	unmanaged collection class.
+
+2007-09-27  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* LineBreak.cs, Inline.cs, Run.cs, Glyphs.cs: Don't ref ourself if we're
+	  created using a *_new function, the creation itself already gives us a
+	  ref.
+
+2007-09-26  Zoltan Varga  <vargaz@gmail.com>
+
+	* Inline.cs: Use our own properties instead of the TextBlock ones.
+
+2007-07-31  Chris Toshok  <toshok@ximian.com>
+
+	* Glyphs.cs: StyleSimulations has switched types from string to
+	StyleSimulations.
+
+2007-06-19  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* LineBreak.cs: Implement constructor.
+
+2007-06-18  Rolf Bjarne Kvinge <RKvinge@novell.com> 
+
+	* LineBreak.cs, Run.cs: Implement construction.
+	* Inline.cs: Fix property types.
+
+2007-06-18  Atsushi Enomoto  <atsushi@ximian.com>
+
+	* Glyphs.cs  Inline.cs  LineBreak.cs  Run.cs : new.

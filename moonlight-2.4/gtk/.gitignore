@@ -1,0 +1,11 @@
+/Makefile
+/Makefile.in
+/*.dll
+/*.mdb
+/*.pc
+/moonlight-gtk.xml
+/moonlight-gtk.tree
+/moonlight-gtk.zip
+/mopen.exe
+/mopen
+/docs

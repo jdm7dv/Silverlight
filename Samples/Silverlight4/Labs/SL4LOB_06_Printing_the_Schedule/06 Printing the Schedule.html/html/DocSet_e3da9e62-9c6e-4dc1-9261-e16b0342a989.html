@@ -1,0 +1,158 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Printing the Schedule on One Page" />
+      <MSHelp:RLTitle Title="Exercise 1: Printing the Schedule on One Page" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Printing the Schedule on One Page</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 6 - Multipage Printing Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Printing the Schedule on One Page</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this part of the lab, you will add the ability to print an attendee’s schedule for an event. In this first part, the output will all be on a single page. The structure of the code and XAML will be very similar in some respects to what you created in the earlier lab for the schedule planner. But there are a few differences in the detail for printing that warrant building a separate view rather than attempting to print using the existing components.</p>
+        <a name="_Toc256194030" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the Printing ViewModel and View</b>
+        </p>
+        <ol>
+          <li>Open the SlEventManager solution in Visual Studio 2010.</li>
+          <li>In the SlEventManager project’s ViewModels folder add a new class called SchedulePrintViewModel. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This will act as the source data for the XAML file that will ultimately define the layout for the printed document.</td></tr></table><p /></div></li>
+          <li>Add the following using directive:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.ComponentModel;</pre></td></tr></table></span></div></li>
+          <li>Implement <b>SchedulePrintViewModel</b> class like this:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class SchedulePrintViewModel{    public string EventTitle { get; set; }    public string AttendeeName { get; set; }    public ICollectionView Talks { get; set; }    public double PrintWidth { get; set; }}</pre></td></tr></table></span></div></li>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td>The PrintWidth property will hold the width of the printable area. We’ll need this to impose a layout constraint, as you’ll see.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <li>In the SlEventManager project’s Views folder, add a new Silverlight User Control called SchedulePrintView. </li>
+          <li>Add the following Gr<b> to the </b>SchedulePrintView:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid&gt;    &lt;Grid.RowDefinitions&gt;        &lt;RowDefinition Height="Auto" /&gt;        &lt;RowDefinition Height="Auto" /&gt;        &lt;RowDefinition Height="*" /&gt;    &lt;/Grid.RowDefinitions&gt;    &lt;TextBlock        FontSize="20"        FontWeight="Bold"        HorizontalAlignment="Center"        Text="{Binding Path=EventTitle}"        /&gt;    &lt;StackPanel        Grid.Row="1"        Orientation="Horizontal"        HorizontalAlignment="Center"                    &gt;        &lt;TextBlock Text="Schedule for " /&gt;        &lt;TextBlock Text="{Binding Path=AttendeeName}" /&gt;    &lt;/StackPanel&gt;    &lt;Viewbox        VerticalAlignment="Top"        StretchDirection="DownOnly"        Grid.Row="2"        &gt;        &lt;ItemsControl            Width="{Binding Path=PrintWidth}"            ItemsSource="{Binding Path=Talks.Groups}"        &gt;            &lt;ItemsControl.ItemTemplate&gt;                &lt;DataTemplate&gt;                    &lt;Grid Margin="20,5"&gt;                        &lt;Grid.RowDefinitions&gt;                            &lt;RowDefinition Height="20" /&gt;                            &lt;RowDefinition Height="Auto" /&gt;                        &lt;/Grid.RowDefinitions&gt;                        &lt;TextBlock Text="{Binding Path=Name, StringFormat=HH:mm}" /&gt;                        &lt;ItemsControl                            Grid.Row="1"                            ItemsSource="{Binding Path=Items}"                            &gt;                            &lt;ItemsControl.ItemTemplate&gt;                                &lt;DataTemplate&gt;                                    &lt;Grid&gt;                                        &lt;Grid.RowDefinitions&gt;                                            &lt;RowDefinition Height="Auto" /&gt;                                            &lt;RowDefinition MaxHeight="40" /&gt;                                        &lt;/Grid.RowDefinitions&gt;                                        &lt;TextBlock                                            Text="{Binding Path=TalkTitle}"                                            FontWeight="Bold"                                            /&gt;                                        &lt;TextBlock                                            Grid.Row="1"                                            Text="{Binding Path=TalkAbstract}"                                            TextWrapping="Wrap"                                            /&gt;                                    &lt;/Grid&gt;                                &lt;/DataTemplate&gt;                            &lt;/ItemsControl.ItemTemplate&gt;                        &lt;/ItemsControl&gt;                    &lt;/Grid&gt;                &lt;/DataTemplate&gt;            &lt;/ItemsControl.ItemTemplate&gt;        &lt;/ItemsControl&gt;    &lt;/Viewbox&gt;&lt;/Grid&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This is similar to the markup you created for the schedule planner, but with a few subtle differences. We can’t use tooltips in printed output because tooltips rely on mouse interaction, something that doesn’t work too well on paper. On screen, we use tooltips to show the full abstract, enabling us to truncate in the usual view, but when printing, we need to show the whole abstract up front rather than trimming it. (Also, if you did the optional Fluid UI section in the previous lab, you’ll notice that we’re not using a ListBox any longer because we only added that for the entry and exit animations.)<br />Also note that we’ve wrapped the ItemsControl in a Viewbox, a new feature in Silverlight 4. This can enlarge or shrink items to fit the available space. We’ve set the StretchDirection to DownOnly meaning this particular Viewbox will never try to enlarge the content—if it’s smaller than the space available it just won’t fill it. But if there’s too much content, it will be shrunk, to fit it on the page. (In the planner UI we were able to deal with this problem by using a ScrollViewer, but of course that’s another UI element type that’s not a great choice for printed output.)<br />The Viewbox is the reason we needed the ViewModel to make the PrintWidth available. Notice that the outer ItemsControl’s Width is constrained to be PrintWidth. Without that, the Viewbox would allow the ItemsControl to grow as wide as it liked—the Viewbox performs unconstrained layout on its children. The result would be that all each talk abstract would occupy a single, possibly very long line—the absence of a constraint would mean the text would never be wrapped because the line of text could grow indefinitely long. The Viewbox would then shrink everything to fit. The result would be tiny text with very long talk abstract lines. By forcing the ItemsControl not to get wider than PrintWidth, word wrapping kicks in, and the Viewbox only does its job once the content becomes too tall to fit.</td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256194031" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Hook up the Print Button</b>
+        </p>
+        <ol>
+          <li>Open SchedulePlanner.xaml.</li>
+          <li>Add a new button to the UI at the top right. </li>
+          <li>Set its content to Print… </li>
+          <li>Name the button printButton. </li>
+          <li>Add a Click event handler for <b>printButton</b>.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>There’s a slight challenge to getting this button to behave well in layout. In an earlier lab you added a Canvas that covers the whole UI, to make it possible to remove the context menu when the user clicks outside the menu. Because this Canvas is on top, Visual Studio will add new elements to that when you drop them onto the design surface. But because of how this layout resizes, the button would be better off being in the Grid. You can either edit the XAML manually to put it where you need it, or you could use Blend, which has more sophisticated support for working with multiple overlapping layers of content, and deeply nested containers. Or you could temporarily remove the Canvas while you position the button. Or you could just live with the fact that it won’t appear quite where you want when you resize the UI.</td></tr></table><p /></div></li>
+          <li>In the SchedulePlanner.xaml.cs code behind file, add these using directives:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Windows.Printing;using System.Windows.Data;using System.ComponentModel;</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc256194032" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Set the Printable Content</b>
+        </p>
+        <ol>
+          <li>In the Click handler you just added, write this code to create a PrintDocument<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>PrintDocument pd = new PrintDocument();</pre></td></tr></table></span></div></li>
+          <li>Write the following code to set the PrintPage event handler<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>pd.PrintPage += (s, pe) =&gt;{};</pre></td></tr></table></span></div></li>
+          <li>Inside the lambda, create an instance of the <b>SchedulePrintView</b><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>    SchedulePrintView printView = new SchedulePrintView();</pre></td></tr></table></span></div></li>
+          <li>Create an instance of the <b>SchedulePrintViewModel </b>and initialize its properties as shown in the code below.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>    SchedulePrintViewModel printViewModel = new SchedulePrintViewModel    {        EventTitle = _viewModel.EventTitle,        AttendeeName = WebContext.Current.User.FriendlyName,        Talks = (new CollectionViewSource        {            Source = _viewModel.SubscribedTalks,            GroupDescriptions =             {                new PropertyGroupDescription("TalkStartTime")            },            SortDescriptions =            {                new SortDescription("TalkStartTime", ListSortDirection.Ascending)            }        }).View,        PrintWidth = pe.PrintableArea.Width    };    printView.DataContext = printViewModel;    pe.PageVisual = printView;</pre></td></tr></table></span></div></li>
+          <li>After the PrintPage handler, invoke the <b>Print</b> method of the <b>PrintDocument</b><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>pd.Print("Schedule");</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This creates a PrintDocument, and attaches a handler for its PrintPage event. That handler creates the print view and view model.<br />We’re creating the CollectionViewSource in code here and putting its View property directly into the view model. We’re doing this because in the current preview, putting a CollectionViewSource in XAML doesn’t appear to work when printing. The grouped data does not appear to be available for binding at the point at which printing happens. (The data binding system often defers loading of data. This is usually not a problem on screen, because the screen will update as soon as the information becomes available. But with printing it can be a problem: if you don’t have the data by the time you print, it won’t make it onto the page.) By putting this in code and extracting the view source’s View property directly, we seem to get the grouped data when needed.</td></tr></table><p /></div></li>
+          <li>Run the application.</li>
+          <li>Log in as the user <b>ian</b> and password of <b>P@ssw0rd</b></li>
+          <li>Go to the event planner for the first event. </li>
+          <li>Click the Print… button. You should see the print dialog appear. </li>
+          <li>Select a printer. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>You might want to use the Microsoft XPS Document Writer because that way, if things aren’t perfect first time, you won’t waste paper printing things out for real.</td></tr></table><p /></div></li>
+          <li>Print the document, and if you printed to an XPS file, find it and open it. You should see the schedule printed out.<p><img src="images\9944b6b0-52f2-4b90-b270-0e199c8bab73.png" /></p></li>
+        </ol>
+        <p>
+          <b>Figure 1</b>
+          <br />
+          <i>Printing the Content</i>
+        </p>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

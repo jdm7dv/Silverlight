@@ -1,0 +1,5 @@
+C:\Silverlight4\Labs\RichTextBox\Source\Ex03\End\RichTextBox.Web\bin\RichNotepad.Web.dll
+C:\Silverlight4\Labs\RichTextBox\Source\Ex03\End\RichTextBox.Web\bin\RichNotepad.Web.pdb
+C:\Silverlight4\Labs\RichTextBox\Source\Ex03\End\RichTextBox.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Silverlight4\Labs\RichTextBox\Source\Ex03\End\RichTextBox.Web\obj\Debug\RichNotepad.Web.dll
+C:\Silverlight4\Labs\RichTextBox\Source\Ex03\End\RichTextBox.Web\obj\Debug\RichNotepad.Web.pdb

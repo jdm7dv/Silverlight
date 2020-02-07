@@ -1,0 +1,14 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\Theme.xaml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.BubbleCreme.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.BubbleCreme.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.BubbleCreme.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.BubbleCreme.dll.CodeAnalysisLog.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.BubbleCreme.dll.lastcodeanalysissucceeded
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.Toolkit.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.Toolkit.pdb
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\ClientBin\System.Windows.Controls.Theming.Toolkit.xml
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\obj\Debug\System.Windows.Controls.Theming.BubbleCreme.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\obj\Debug\Controls.Theming.BubbleCreme.csproj.CoreCompileInputs.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\obj\Debug\Controls.Theming.BubbleCreme.csproj.CopyComplete
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\obj\Debug\System.Windows.Controls.Theming.BubbleCreme.dll
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Theming.BubbleCreme\obj\Debug\System.Windows.Controls.Theming.BubbleCreme.pdb

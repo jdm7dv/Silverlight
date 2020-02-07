@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="VideoRSSViewer.PlayPauseButton"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="50" Height="50">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Canvas>
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.66" ScaleY="1.66"/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Rectangle StrokeLineJoin="Round" StrokeThickness="1.33333" x:Name="playPauseButtonPlate" Width="30" Height="30" RadiusX="3" RadiusY="3">
+                <Rectangle.Fill>
+                    <RadialGradientBrush RadiusX="0.707103" RadiusY="0.707102" Center="0.290307,0.283889" GradientOrigin="0.290307,0.283889">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <RotateTransform CenterX="0.290307" CenterY="0.283889" Angle="47.5983"/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FDE1F26C" Offset="1"/>
+                        <GradientStop Color="#FDFDFFEA" Offset="0"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Stroke>
+                    <LinearGradientBrush StartPoint="0.290307,0.283889" EndPoint="0.269,1.111">
+                        <GradientStop Color="#FF726E5F" Offset="0"/>
+                        <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Stroke>
+            </Rectangle>
+            <Canvas x:Name="playFace" Canvas.Left="10" Canvas.Top="9" Opacity="0">
+                <Path Width="12" Height="12" Stretch="Fill" Data="F1 M 480.156,411.511L 480.156,432.622L 496.6,422.178" Fill="#2C000000" Canvas.Left="1.5" Canvas.Top="0.5"/>
+                <Path Width="12" Height="12" Stretch="Fill" Data="F1 M 480.156,411.511L 480.156,432.622L 496.6,422.178">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.562,0.688" StartPoint="0.104,0.354">
+                            <GradientStop Color="#FF353A57" Offset="1"/>
+                            <GradientStop Color="#FF636A98" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+            </Canvas>
+            <Canvas x:Name="pauseFace" Canvas.Left="11" Canvas.Top="9" Opacity="1">
+                <Path Canvas.Left="-2" Width="5" Height="12" Stretch="Fill" Data="F1 M 478.156,411.289L 478.156,432.622L 484.156,432.622L 484.156,411.511">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                            <GradientStop Color="#FF636A98" Offset="0"/>
+                            <GradientStop Color="#FF353A57" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Path Canvas.Left="6" Width="5" Height="12" Stretch="Fill" Data="F1 M 488.6,411.622L 488.6,432.956L 494.6,432.956L 494.6,411.844">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                            <GradientStop Color="#FF636A98" Offset="0"/>
+                            <GradientStop Color="#FF353A57" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+            </Canvas>
+            <Canvas x:Name="stopFace" Canvas.Left="9.078" Canvas.Top="9" Opacity="0" >
+                <Path Width="12.021" Height="12" Stretch="Fill" Data="F1 M480.156,411.511 L480.156,432.622 496.62855,432.62201 496.62831,411.51099" Fill="#2C000000" Canvas.Left="1.5" Canvas.Top="0.5"/>
+                <Path Width="12.125" Height="12.125" Stretch="Fill" Data="F1 M480.156,411.511 L480.156,432.622 496.7713,432.84192 496.7713,411.51099">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.562,0.688" StartPoint="0.104,0.354">
+                            <GradientStop Color="#FF353A57" Offset="1"/>
+                            <GradientStop Color="#FF636A98" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+            </Canvas>
+        </Canvas>
+    </Grid>
+</UserControl>

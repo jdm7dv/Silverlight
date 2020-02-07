@@ -1,0 +1,226 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1 – Getting Started" />
+      <MSHelp:RLTitle Title="Exercise 1 – Getting Started" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1 – Getting Started</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Multi Touch in Silverlight Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1 – Getting Started</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>The goal of this exercise is to familiarize the student with the existing starter application and enhance it with new features (Drag and Drop, Native Right Mouse Click support, and printing support).  </p>
+        <ol>
+          <li>Start Visual Studio 2010 </li>
+          <li>On the <b>File</b> menu click <b>Open</b><b>Project/Solution…</b><ol><li>Alternatively, from Visual Studio Start Page click “<b>Open Project…</b>”</li></ol></li>
+          <li> At “Open Project” dialog navigate to the Lab installation folder</li>
+          <li>Navigate to “MultiTouchAndDropTargets\Source\Ex01-GettingStarted\begin” folder</li>
+          <li>Click “ImageGallery.sln” file and the click “<b>Open</b>” button</li>
+          <li>Take some time to familiarize yourself with the Starter application<ol><li>Points of interest here are:<ul><li>Photo.xaml</li><li>Photo.xaml.cs</li><li>MainPage.xaml.cs</li></ul></li></ol></li>
+          <li>Set the ImageGallery.Web project as the startup project, by right clicking the project in the Solution Explorer and selecting “Set as Startup Project”</li>
+          <li>Press<b> F5 </b>or click <b>Debug</b><b>Start Debugging</b> to Run the application</li>
+          <li>Use the application to familiarize yourself with it. When finished close the browser window</li>
+        </ol>
+        <br />
+        <a name="_Toc256193542" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Adding Drag and Drop Support</b>
+        </p>
+        <ol>
+          <li>If you have not opened the Starter project please open it now (see previous section for detailed instructions)</li>
+          <li>Open MainPage.xaml (double click on the filename in the Solution Explorer)</li>
+          <li>Add <b>AllowDrop=”True”</b> to the UserControl just before the closing of the tag “&gt;”</li>
+          <li>Add a new “<b>Drop</b>” event handler (use the default name)<p><img src="images\506fddb5-f3ff-482c-966e-4f3792e1ab23.png" /></p><p><b>Figure 1</b><br /><i>Event Handler Generation from XAML Editor</i></p></li>
+          <li>The resulting state of UserControl tag should look like follows<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;UserControl x:Class="ImageGallery.MainPage"    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"xmlns:mc=http://schemas.openxmlformats.org/markup-compatibility/2006 mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="400" AllowDrop="True" Drop="UserControl_Drop"&gt;</pre></td></tr></table></span></div></li>
+          <li>Right click on “UserControl_Drop” and from the context menu choose “Navigate to Event Handler”<p><img src="images\15790194-6cf7-4730-95d3-44ad16f63d4e.png" /></p><p><b>Figure 2</b><br /><i>Navigate to Event Handler from XAML Editor</i></p></li>
+          <li>The last action will take you to the source code editor, to the event handler function:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void UserControl_Drop(object sender, DragEventArgs e){}</pre></td></tr></table></span></div></li>
+          <li>To receive a dropped object (that is dragged onto the designer surface of the UIElement from outside the Silverlight application), use the <b>Data</b> property of <b>DragEventArgs</b>. Drag and Drop is capable of supporting any data file format. In this lab we create an image file Drag and Drop mechanism, so we are interested in Data from the “FileDrop” format. The user could drop more than one file, in which case we will handle the “FileDrop” data as a list of files. To get the <b>IDataObject</b> and check if such data is present, add the following lines inside the function body:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>IDataObject theDo = e.Data;if (theDo.GetDataPresent("FileDrop")){FileInfo[] files = theDo.GetData("FileDrop") as FileInfo[];}</pre></td></tr></table></span></div></li>
+          <li>Now, after getting the list of dropped files (a user may drop more than one file), iterate over the list, checking that the file matches the supported extension (in our case we will support JPG and PNG only), then open the file and create a <b>BitmapImage</b> instance from it. Paste the following lines inside the “if” block, after the <b>FileInfo[]</b> files = … line:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>foreach (var file in files){if (file.Name.ToLower().Contains(".jpg") ||    file.Name.ToLower().Contains(".png")){FileStream reader = file.OpenRead();byte[] array = new byte[reader.Length];int count = reader.Read(array, 0, (int)reader.Length);MemoryStream str = new MemoryStream(array);BitmapImage img = new BitmapImage();img.SetSource(str);//Initialize new instance of Photo with received image}}</pre></td></tr></table></span></div></li>
+          <li>The last thing to do is to initialize a new instance of the Photo class with the received image. The implementation of Photo receives only the filename and loads it from the originating web server. In order to support a dropped image, add an overloaded constructor to the Photo class. Open Photo.xaml.cs and add following code to the class to create the overloaded constructor:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public Photo(MainPage parent, BitmapImage photo, string name){InitializeComponent();intializePhoto(parent);_name = name;image.Source = photo;// Position and rotate the photo randomlyTranslate(random.Next((int)(this._parent.ActualWidth - Width)),    random.Next((int)(this._parent.ActualHeight - Height)));Rotate(random.Next(-30, 30));// Add the photo to the parent and play the display animation_parent.LayoutRoot.Children.Add(this);display.Begin();}</pre></td></tr></table></span></div></li>
+          <li>Go back to the MainPage.xaml.cs and create new instance of Photo and call the overloaded constructor. To do it add the following lines of code right after the “//Initialize new instance…” remark:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>new Photo(this, img, file.Name);</pre></td></tr></table></span></div></li>
+          <li>Compile and Run the application</li>
+          <li>Open a new Windows Browser, locate and navigate to the “Sample Pictures” folder (or any other folder with pictures). Select one or more pictures from this folder, and Drag and Drop them to the surface of the running Lab application.</li>
+        </ol>
+        <a name="_Toc256193543" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Creating Context Menu Custom Control</b>
+        </p>
+        <p>In order to remove the pictures from the application’s surface and print the images collage, we need to provide an image context menu. </p>
+        <ol>
+          <li>If the Lab application is still running, stop it now.</li>
+          <li>Add a new project to the solution by right clicking on Solution (in Solution Explorer) and select <b>Add</b><b>New Project…</b></li>
+          <li>At the “Add New project” dialog, select “Silverlight Class Library” item, and name it ContextMenu<p><img src="images\1dee4e94-23e9-45da-91d2-3749ddda4522.png" /></p><p><b>Figure 3</b><br /><i> Add New Project Dialog</i></p></li>
+          <li>Click OK when done</li>
+          <li>Make sure the that correct version of Silverlight is selected at “Add Silverlight Class Library” dialog and click OK<p><img src="images\5677d465-2dd5-43ba-9d56-7b311fa0f01e.png" /></p><p><b>Figure 4</b><br /><i>Silverlight Version Selector</i></p></li>
+          <li>Delete the Class.cs from the project by right clicking on it and selecting <b>Delete</b><p><img src="images\f10228c5-2979-4d2e-8984-d3c910f54ccd.png" /></p><p><b>Figure 5</b><br /><i> Delete Default Class</i></p></li>
+          <li>Add a new item into the ContextMenu project item by right clicking on the project and selecting <b>Add</b><b>New Item…</b><p><img src="images\6d66e751-a504-43b1-9b05-08b2da941314.png" /></p><p><b>Figure 6</b><br /><i> Add New Item To the Project</i></p></li>
+          <li>From “Add New Item - ContextMenu” dialog select “Silverlight Templated Control”, name it ContextMenu.cs and click “Add”<p><img src="images\cdb75d64-06a1-4203-a886-df5534e62731.png" /></p><p><b>Figure 7</b><br /><i> Add New Item Dialog Box</i></p></li>
+          <li>Change the base class for the ContextMenu class from “Control” to “ItemsControl”:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class ContextMenu : ItemsControl</pre></td></tr></table></span></div></li>
+          <li>Add additional “Silverlight Templated Control” to the project and name it MenuItem.cs<p><img src="images\302bb3dc-b8aa-4bbd-972f-92c1807c2840.png" /></p><p><b>Figure 8</b><br /><i> Add New Item Dialog Box</i></p></li>
+          <li>Declare an additional namespace reference – add the following code after the last “using” statement at the beginning of the class (before the namespace):<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.Windows.Controls.Primitives;</pre></td></tr></table></span></div></li>
+          <li>Change the base class for created MenuItem from “Control” to “ButtonBase”:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class MenuItem : ButtonBase</pre></td></tr></table></span></div></li>
+          <li>Open the Generic.xaml file located in the “Themes” folder (automatically created by Visual Studio while adding new Templated Controls)</li>
+          <li>Locate the Style for ContextMenu, and add the following content inside the ControlTemplate’s <b>Border</b> markup (add the markup inside the Border element):<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Border.Effect&gt;&lt;DropShadowEffect ShadowDepth=".2" Opacity="1"/&gt;&lt;/Border.Effect&gt;&lt;ItemsPresenter x:Name="ItemsPanel" Margin="3"/&gt;</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Locate the style for MenuItem and replace the <b>Border</b> in ControlTemplate with following markup:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Grid x:Name="LayoutRoot"&gt;  &lt;VisualStateManager.VisualStateGroups&gt;    &lt;VisualStateGroup x:Name="CommonStates"&gt;      &lt;VisualState x:Name="Normal"/&gt; &lt;VisualState x:Name="MouseOver"&gt;   &lt;Storyboard&gt;          &lt;DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="Opacity"&gt;  &lt;SplineDoubleKeyFrame KeyTime="0" Value="1"/&gt;                                          &lt;/DoubleAnimationUsingKeyFrames&gt;                                           &lt;ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)"&gt;      &lt;SplineColorKeyFrame KeyTime="0" Value="#F2FFFFFF"/&gt;    &lt;/ColorAnimationUsingKeyFrames&gt;         &lt;ColorAnimationUsingKeyFrames   Storyboard.TargetName="BackgroundGradient"  Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)"&gt; &lt;SplineColorKeyFrame KeyTime="0" Value="#CCFFFFFF"/&gt;                                           &lt;/ColorAnimationUsingKeyFrames&gt;        &lt;ColorAnimationUsingKeyFrames  Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)"&gt;         &lt;SplineColorKeyFrame KeyTime="0" Value="#7FFFFFFF"/&gt;  &lt;/ColorAnimationUsingKeyFrames&gt;&lt;/Storyboard&gt;    &lt;/VisualState&gt;    &lt;VisualState x:Name="Disabled"&gt;      &lt;Storyboard&gt;        &lt;DoubleAnimationUsingKeyFrames     Storyboard.TargetName="DisabledVisualElement"     Storyboard.TargetProperty="Opacity"&gt;     &lt;SplineDoubleKeyFrame KeyTime="0" Value=".55"/&gt;                                       &lt;/DoubleAnimationUsingKeyFrames&gt;      &lt;/Storyboard&gt;    &lt;/VisualState&gt;  &lt;/VisualStateGroup&gt;&lt;/VisualStateManager.VisualStateGroups&gt;&lt;Border x:Name="Background" CornerRadius="3" Background="White" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"&gt;  &lt;Grid Background="{TemplateBinding Background}" Margin="0"&gt;    &lt;Border Opacity="0" x:Name="BackgroundAnimation"  Background="#FF448DCA" /&gt;      &lt;Rectangle x:Name="BackgroundGradient" &gt;   &lt;Rectangle.Fill&gt;          &lt;LinearGradientBrush StartPoint=".7,0" EndPoint=".7,1"&gt; &lt;GradientStop Color="#FFFFFFFF" Offset="0" /&gt; &lt;GradientStop Color="#F9FFFFFF" Offset="0.375" /&gt; &lt;GradientStop Color="#E5FFFFFF" Offset="0.625" /&gt; &lt;GradientStop Color="#C6FFFFFF" Offset="1" /&gt;          &lt;/LinearGradientBrush&gt;        &lt;/Rectangle.Fill&gt; &lt;/Rectangle&gt;    &lt;/Grid&gt;&lt;/Border&gt;&lt;StackPanel Orientation="Horizontal" Margin="2"&gt;  &lt;Image x:Name="MenuItemIcon" Width="20" Height="20"    Source="{Binding MenuItemImage}" Margin="0,0,2,0"/&gt;  &lt;ContentPresenter x:Name="MenuItemContent"                    Content="{Binding ItemContent}"       Margin="0,0,0,1" VerticalAlignment="Center"/&gt;&lt;/StackPanel&gt;&lt;Rectangle x:Name="DisabledVisualElement" RadiusX="3" RadiusY="3" Fill="#FFFFFFFF" Opacity="0" IsHitTestVisible="false" /&gt;&lt;/Grid&gt;</pre></td></tr></table></span></div></li>
+          <li>Open MenuItem.cs</li>
+          <li>Add  the following <b>TemplatePart</b> class attributes to the class definition (just before the class declaration):<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[TemplatePart(Name = "LayoutRoot", Type = typeof(Grid)), TemplatePart(Name = "MenuItemIcon", Type = typeof(Image)), TemplatePart(Name = "MenuItemContent", Type = typeof(ContentPresenter))]</pre></td></tr></table></span></div></li>
+          <li>Create private variables to hold the instances of template parts. Add following code in the class (before the constructor code):<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Grid layoutRoot;Image itemImage;ContentPresenter itemContent;</pre></td></tr></table></span></div></li>
+          <li>Set the <b>DataContext</b> of the control to enable self binding. Add the code to the Constructor, right after the first (and only) line:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>this.DataContext = this;</pre></td></tr></table></span></div></li>
+          <li>Create a Dependency Property “ItemContent” of type string. This will be used to bind to the content for the menu item. Add the following code to the class, after the constructor:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public string ItemContent{get { return (string)GetValue(ItemContentProperty); }set { SetValue(ItemContentProperty, value); }}public static readonly DependencyProperty ItemContentProperty =DependencyProperty.Register("ItemContent", typeof(string),  typeof(MenuItem), null);</pre></td></tr></table></span></div></li>
+          <li>Create an additional Dependency Property “MenuItemImage” of type ImageSource. This will be used to bind to the image for the menu item. Add the following code after the previously added lines:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public ImageSource MenuItemImage{get { return (ImageSource)GetValue(MenuItemImageProperty); }set { SetValue(MenuItemImageProperty, value); }}public static readonly DependencyProperty MenuItemImageProperty =DependencyProperty.Register("MenuItemImage", typeof(ImageSource), typeof(MenuItem), null);</pre></td></tr></table></span></div></li>
+          <li>Create a helper function to change the Visual State of the control when the IsEnable property changes. Add the following code after  the created  dependency properties:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void HandleEnabledVisualAid(){if (!this.IsEnabled)VisualStateManager.GoToState(this, "Disabled", true);elseVisualStateManager.GoToState(this, "Normal", true);}</pre></td></tr></table></span></div></li>
+          <li>Override the “OnApplyTemplate” function. This function will initialize template part variables and subscribe and handle the control events like MouseEnter and MouseLeave by applying visual states to them. Add the following code at the bottom of the class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public override void OnApplyTemplate(){base.OnApplyTemplate();layoutRoot = GetTemplateChild("LayoutRoot") as Grid;itemImage = GetTemplateChild("MenuItemIcon") as Image;itemContent = GetTemplateChild("MenuItemContent") as ContentPresenter;layoutRoot.MouseEnter += (s, e) =&gt;{VisualStateManager.GoToState(this, "MouseOver", true);};layoutRoot.MouseLeave += (s, e) =&gt;{VisualStateManager.GoToState(this, "Normal", true);};this.IsEnabledChanged += (s, e) =&gt;{HandleEnabledVisualAid();};HandleEnabledVisualAid();}</pre></td></tr></table></span></div></li>
+          <li>Compile the solution. </li>
+        </ol>
+        <a name="_Toc256193544" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 – Native Right Mouse Click Support</b>
+        </p>
+        <ol>
+          <li>Back to the ImageGallery project - add the reference to the created custom control to the ImageGallery project by right clicking the References  Add Reference…<p><img src="images\3a9e7ca1-f8b7-4242-a725-055ba6382645.png" /></p><p><b>Figure 9</b><br /><i> Add Reference to the Project</i></p></li>
+          <li>At “Add Reference” dialog click on the “Projects” tab and select ContextMenu<p><img src="images\3adc9255-c56c-48eb-8fe0-e9d932a7afa9.png" /></p><p><b>Figure 10</b><br /><i> Reference Selection Dialog Box</i></p></li>
+          <li>Open MainPage.xaml and add a “<b>MouseRightButtonDown</b>” event handler to the canvas named “LayoutRoot”. Accept the default name of the handler function. Resulting markup should look as follows:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Canvas x:Name="LayoutRoot" Background="Gray" MouseRightButtonDown="LayoutRoot_MouseRightButtonDown"&gt;&lt;/Canvas&gt;</pre></td></tr></table></span></div></li>
+          <li>Add a “<b>MouseLeftButtonDown</b>” event handler to the UserControl. Accept the default name for the handler function. Resulting markup should look as follows:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;UserControl x:Class="ImageGallery.MainPage"    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="400" AllowDrop="True" Drop="UserControl_Drop" MouseLeftButtonDown="UserControl_MouseLeftButtonDown"&gt;</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Switch to the code (MainMenu.xaml.cs)</li>
+          <li>Import the control’s namespace – add the following line after the last “using” statement in the class (before the namespace):<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using ContextMenu;</pre></td></tr></table></span></div></li>
+          <li>Add a class level variable of type ContextMenu and name it contextMenu:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>ContextMenu.ContextMenu contextMenu;</pre></td></tr></table></span></div></li>
+          <li>Navigate to the created event handlers. In the body of “UserControl_MouseLeftButtonDown” function,  add the following code to close the context menu when user clicks away from it:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>if (null != contextMenu)LayoutRoot.Children.Remove(contextMenu);</pre></td></tr></table></span></div></li>
+          <li>Create helper function to generate and show the context menu by adding following code to the class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void GenerateContextMenu(Point pos){contextMenu = new ContextMenu.ContextMenu();contextMenu.SetValue(Canvas.LeftProperty, pos.X);contextMenu.SetValue(Canvas.TopProperty, pos.Y);contextMenu.Visibility = Visibility.Visible;MenuItem menuItem1 = new MenuItem();menuItem1.ItemContent = "Delete";menuItem1.MenuItemImage = new BitmapImage(new  Uri("Images/Delete.png", UriKind.RelativeOrAbsolute));menuItem1.Click += DeleteMenuItem_Click;if (null == _lastActivePhoto)menuItem1.IsEnabled = false;contextMenu.Items.Add(menuItem1);MenuItem menuItem2 = new MenuItem();menuItem2.ItemContent = "Print";menuItem2.MenuItemImage = new BitmapImage(new  Uri("Images/Print.png", UriKind.RelativeOrAbsolute));menuItem2.Click += PrintMenuItem_Click;contextMenu.Items.Add(menuItem2);LayoutRoot.Children.Add(contextMenu);}</pre></td></tr></table></span></div></li>
+          <li>Create an event handler function for the Delete command – add the following lines to the class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void DeleteMenuItem_Click(object sender, RoutedEventArgs e){LayoutRoot.Children.Remove(contextMenu);LayoutRoot.Children.Remove(_lastActivePhoto);}</pre></td></tr></table></span></div></li>
+          <li>Create an event handler function for the Print command – add the following lines to the class:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void PrintMenuItem_Click(object sender, RoutedEventArgs e){}</pre></td></tr></table></span></div></li>
+          <li>Add the following line to the “LayoutRoot_MouseRightButtonDown” function body:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>e.Handled = true;Point pos = e.GetPosition(null);if (null != contextMenu)LayoutRoot.Children.Remove(contextMenu);GenerateContextMenu(pos);</pre></td></tr></table></span></div></li>
+          <li>Create a new folder in the ImageGallery project and name it <b>Images</b> – right click on the ImageGallery project, and select <b>Add</b><b>New Folder</b> from the context menu.<p><img src="images\954ff8ef-56c2-45ec-8bda-12170fc9a5e4.png" /></p><p><b>Figure 11</b><br /><i> Add New Folder to the Project</i></p></li>
+          <li>Open Windows Explorer and navigate to the Lab installation folder. Navigate to “\Helpers\Images” folder and select all images there. Press Ctrl-C (or right click and choose <b>Copy</b> command)</li>
+          <li>Get back to the Visual Studio, right click on <b>Images</b> folder in ImageBrowser project and click <b>Paste</b><p><img src="images\82a4261d-b76c-434b-b559-ff933143163f.png" /></p><p><b>Figure 12</b><br /><i> Paste Selection to the Project</i></p></li>
+          <li>Compile and run the application. Select an image. Then place your cursor over one of the images and right-click. The context menu will appear. Next, click the <b>Delete</b> menu option and the image disappears.</li>
+        </ol>
+        <br />
+        <br />
+        <br />
+        <br />
+        <a name="_Toc256193545" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 4 – Printing Support</b>
+        </p>
+        <ol>
+          <li>Close the application if it's still running</li>
+          <li>Navigate to the “PrintMenuItem_Click” handler function in MainPage.xaml.cs</li>
+          <li>In order to provide printing functionality, Silverlight 4 adds new a class called <b>PrintDocument</b>. It works by issuing events such as <b>StartPrint</b>, <b>EndPrint</b>, and <b>PrintPage</b>. We will use the <b>PrintPage</b> event in order to provide the visuals to print. Add the following code to the “PrintMenuItem_Click” function:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>//First, close the context menuLayoutRoot.Children.Remove(contextMenu);PrintDocument pd = new PrintDocument();//Subscribe to the PrintPage eventpd.PrintPage += (s, args) =&gt;{//Handle printing event};//Begin print – will show standard Windows Print Dialogpd.Print("PrintDocument");</pre></td></tr></table></span></div></li>
+          <li>Every time Silverlight is ready to send a new page to the printer it will fire PrintPage event. The event arguments enable the developer to specify the size of the <b>PrintableArea</b>, define which UIElement will be printed and identify whether there will be additional pages.</li>
+          <li>Add the following code after the “Handle printing event” comment:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>args.PageVisual = LayoutRoot;args.HasMorePages = false;</pre></td></tr></table></span></div></li>
+          <li>Compile and run the application. Check that printing function works by right clicking the control and choosing “Print”.</li>
+        </ol>
+        <br />
+        <br />
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

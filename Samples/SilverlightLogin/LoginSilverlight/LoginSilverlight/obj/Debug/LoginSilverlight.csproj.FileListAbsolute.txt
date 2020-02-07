@@ -1,0 +1,26 @@
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\LoginSilverlight.dll
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\LoginSilverlight.pdb
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\LoginSilverlight.xap
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\TestPage.html
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginPage.g.cs
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\Page1.g.cs
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginSilverlight.g.resources
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginSilverlight.dll
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginSilverlight.pdb
+C:\Users\Jonathan Moore\Desktop\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\XapCacheFile.xml
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\LoginSilverlight.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\LoginSilverlight.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\AppManifest.xaml
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\LoginSilverlight.xap
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\Bin\Debug\TestPage.html
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\ResolveAssemblyReference.cache
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\App.g.cs
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginPage.g.cs
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\Page1.g.cs
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginSilverlight.g.resources
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginSilverlight.dll
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\LoginSilverlight.pdb
+G:\SphinxLogic\base\SDK\code library\Web Development\Silverlight\SilverlightLogin\LoginSilverlight\LoginSilverlight\obj\Debug\XapCacheFile.xml

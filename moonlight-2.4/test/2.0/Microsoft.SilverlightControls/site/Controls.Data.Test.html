@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<title>Controls.Test</title>
+		<script language="javascript" src="../../../js/js/utils.js"></script>
+		<script language="javascript" src="../../../js/js/testplugin.js"></script>
+		<script language="javascript">
+			function OnPluginLoad (sender, args)
+			{
+				TestLogger.LogDebug ("OnPluginLoad");
+			}
+	
+			function OnPluginError (sender, args)
+			{
+				TestLogger.LogError ("Plugin failed to initialize: " + args.ErrorMessage);
+				TestLogger.LogResult (-1);
+				SignalShutdown ();
+			}
+			
+			function ShutdownHarness ()
+			{
+				TestLogger.LogDebug ("ShutdownHarness.");
+				SignalShutdown ();
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<embed type="application/x-silverlight-2" width="1600" height="1200" id="testID" source="Controls.Data.Test.xap" OnError="OnPluginError" background="yellow" ></embed>
+		</div>
+	</body>
+</html>

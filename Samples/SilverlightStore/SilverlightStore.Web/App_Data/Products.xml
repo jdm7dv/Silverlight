@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+  <!-- HARDWARE -->
+  <Product>
+    <Name>Wireless Keyboard 2.0</Name>
+    <Description>
+      <Summary>Work your own way in comfort and style</Summary>
+      <Details>Wireless Optical Desktop Pro 2.0 lets you work your own way in comfort and style. You get wireless technology, ergonomic design, one-touch features, programmable keys, and Microsoft Wireless IntelliMouse® Explorer with Tilt Wheel Technology.</Details>
+    </Description>
+    <Images>
+      <Small width="204" height="146">Keyboard Wireless 2.0.png</Small>
+      <Large width="342" height="310">Keyboard Wireless 2.0 - Large.png</Large>
+      <Logo width="257" height="69">Keyboard Wireless 2.0 - Logo.png</Logo>
+    </Images>
+    <Category>Hardware</Category>
+    <Price>$79.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Wireless-Optical-Desktop-Pro-2-0/product/43E36096</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Wireless Keyboard 7000</Name>
+    <Description>
+      <Summary>Elegant design, advanced functionality, happy hands</Summary>
+      <Details>This dazzling duo brings the beauty of Windows Aero to your desktop with a translucent design, floating keys, and instant access to Windows Flip 3D. Your hands will be amazed at the ergonomically advanced Comfort Curve keyboard and rechargeable high definition laser mouse.</Details>
+    </Description>
+    <Images>
+      <Small width="204" height="146">Keyboard Wireless 7000.png</Small>
+      <Large width="342" height="310">Keyboard Wireless 7000 - Large.png</Large>
+      <Logo width="257" height="69">Keyboard Wireless 7000 - Logo.png</Logo>
+    </Images>
+    <Category>Hardware</Category>
+    <Price>$129.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Wireless-Laser-Desktop-7000/product/BC83F615</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Wireless Keyboard 8000</Name>
+    <Description>
+      <Summary>The first-ever rechargeable keyboard and mouse</Summary>
+      <Details>Wireless Entertainment Desktop 8000 is the ultimate rechargeable keyboard and mouse for Windows Vista and PC entertainment. It is designed to make it easier than ever to control PC media from your desk, your lap, or from the comfort of your couch.</Details>
+    </Description>
+    <Images>
+      <Small width="204" height="146">Keyboard Wireless 8000.png</Small>
+      <Large width="342" height="310">Keyboard Wireless 8000 - Large.png</Large>
+      <Logo width="257" height="69">Keyboard Wireless 8000 - Logo.png</Logo>
+    </Images>
+    <Category>Hardware</Category>
+    <Price>$299.99</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Wireless-Entertainment-Desktop-8000/product/A8F5E7D6</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Wireless Mouse 3000</Name>
+    <Description>
+      <Summary>A practical mouse for home and travel</Summary>
+      <Details>This practical optical mouse features a tiny snap-in receiver that plugs into your notebook when you're ready to work, and snaps into your mouse when you're on the go. Extended battery life lets you work longer without interruption.</Details>
+    </Description>
+    <Images>
+      <Small width="204" height="146">Mouse Wireless 3000.png</Small>
+      <Large width="342" height="310">Mouse Wireless 3000 - Large.png</Large>
+      <Logo width="257" height="69">Mouse Wireless 3000 - Logo.png</Logo>
+    </Images>
+    <Category>Hardware</Category>
+    <Price>$29.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Wireless-Notebook-Optical-Mouse-3000-Slate/product/04AC79C0</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Bluetooth Notebook Mouse 5000</Name>
+    <Description>
+      <Summary>Transceiver-free, exclusively for Microsoft Bluetooth notebook PCs</Summary>
+      <Details>Microsoft Bluetooth Notebook Mouse 5000 is our most portable wireless notebook mouse. It connects directly to a Bluetooth® PC without a transceiver, freeing up USB ports for other devices.</Details>
+    </Description>
+    <Images>
+      <Small width="204" height="146">Mouse Wireless 5000.png</Small>
+      <Large width="342" height="310">Mouse Wireless 5000 - Large.png</Large>
+      <Logo width="257" height="69">Mouse Wireless 5000 - Logo.png</Logo>
+    </Images>
+    <Category>Hardware</Category>
+    <Price>$49.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Bluetooth-Notebook-Mouse-5000/product/7C5A8C7A</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Wireless Mouse 7000</Name>
+    <Description>
+      <Summary>Everything you could want in a mouse</Summary>
+      <Details>Reward your fingers with this remarkable right-handed rechargeable mouse. Inside its striking design is 2.4 GHz wireless technology, high definition laser, and advanced productivity features—everything you could want in a mouse.</Details>
+    </Description>
+    <Images>
+      <Small width="204" height="146">Mouse Wireless 7000.png</Small>
+      <Large width="342" height="310">Mouse Wireless 7000 - Large.png</Large>
+      <Logo width="257" height="69">Mouse Wireless 7000 - Logo.png</Logo>
+    </Images>
+    <Category>Hardware</Category>
+    <Price>$69.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Wireless-Laser-Mouse-7000/product/807DE1FD</PurchaseUrl>
+  </Product>
+  <!-- DEVELOPMENT -->
+  <Product>
+    <Name>Expression Studio</Name>
+    <Description>
+      <Summary>Design for Windows and the Web</Summary>
+      <Details>Design the next generation of user interfaces for Microsoft Windows and the Web. It includes five products: Microsoft Expression Web 2, Expression Blend 2, Expression Design 2, Expression Media 2, Expression Encoder 2, and Visual Studio Standard 2008.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Expression Studio.png</Small>
+      <Large width="342" height="403">Expression Studio - Large.png</Large>
+      <Logo width="257" height="69">Expression Studio - Logo.png</Logo>
+    </Images>
+    <Category>Development</Category>
+    <Price>$699.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Expression-Studio-2-Full/product/524ABA6C</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Visual Studio Professional 2008</Name>
+    <Description>
+      <Summary>A comprehensive set of tools to turn a developer's vision into reality</Summary>
+      <Details>Microsoft Visual Studio 2008 Professional Edition is a comprehensive set of tools that accelerates the process of turning the developer's vision into reality. Visual Studio 2008 Professional Edition was engineered to support development projects that target the Web (including ASP.NET AJAX), Windows Vista, Windows Server 2008, The 2007 Microsoft Office system, SQL Server 2008, and Windows Mobile devices.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Visual Studio Professional 2008.png</Small>
+      <Large width="342" height="403">Visual Studio Professional 2008 - Large.png</Large>
+      <Logo width="257" height="69">Visual Studio Professional 2008 - Logo.png</Logo>
+    </Images>
+    <Category>Development</Category>
+    <Price>$799.00</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Visual-Studio-2008-Professional-Edition-Full/product/5443D1A2</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Visual Studio Team System 2008</Name>
+    <Description>
+      <Summary>An integrated collaboration server for Microsoft Visual Studio Team System</Summary>
+      <Details>Visual Studio Team System 2008 Team Foundation Server is an integrated collaboration server for Visual Studio Team System. It combines team portal, version control, work item tracking, build management, process guidance and business intelligence into a unified server. It allows everyone on the team to collaborate more effectively and deliver better quality software.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Visual Studio Team System 2008.png</Small>
+      <Large width="342" height="403">Visual Studio Team System 2008 - Large.png</Large>
+      <Logo width="257" height="69">Visual Studio Team System 2008 - Logo.png</Logo>
+    </Images>
+    <Category>Development</Category>
+    <Price>$2,799.00</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Visual-Studio-Team-System-2008-Team-Foundation-Server/product/55F56593</PurchaseUrl>
+  </Product>
+  <!-- OFFICE -->
+  <Product>
+    <Name>Office Professional 2007</Name>
+    <Description>
+      <Summary>Create dynamic business documents, spreadsheets, and presentations</Summary>
+      <Details>Microsoft Office Professional 2007 is a complete suite of productivity and database software that will help you save time and stay organized. Create dynamic business documents, spreadsheets, and presentations, and build databases with no prior experience or technical staff.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Office Professional 2007.png</Small>
+      <Large width="342" height="403">Office Professional 2007 - Large.png</Large>
+      <Logo width="257" height="69">Office Professional 2007 - Logo.png</Logo>
+    </Images>
+    <Category>Office</Category>
+    <Price>$499.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Office-Professional-2007-Full/product/864B504C</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Office Small Business 2007</Name>
+    <Description>
+      <Summary>Save time, stay organized, and focus efforts on sales, marketing, and customers</Summary>
+      <Details>Microsoft Office Small Business 2007 is a powerful and easy-to-use suite of productivity and contact management software with new tools to help you save time, stay organized, and deliver better customer service. Easily manage your prospect and customer information in one place.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Office Small Business 2007.png</Small>
+      <Large width="342" height="403">Office Small Business 2007 - Large.png</Large>
+      <Logo width="257" height="69">Office Small Business 2007 - Logo.png</Logo>
+    </Images>
+    <Category>Office</Category>
+    <Price>$449.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Office-Small-Business-2007-Full/product/D3C4B532</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Office Standard 2007</Name>
+    <Description>
+      <Summary>The essential office software for small business and home computer users</Summary>
+      <Details>Microsoft Office Standard 2007 is the essential software suite for homes and small businesses that enables you to quickly and easily create great-looking documents, spreadsheets, and presentations, and manage e-mail.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Office Standard 2007.png</Small>
+      <Large width="342" height="403">Office Standard 2007 - Large.png</Large>
+      <Logo width="257" height="69">Office Standard 2007 - Logo.png</Logo>
+    </Images>
+    <Category>Office</Category>
+    <Price>$399.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Office-Standard-2007-Full/product/43340A05</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Office Ultimate 2007</Name>
+    <Description>
+      <Summary>A comprehensive set of tools</Summary>
+      <Details>Microsoft Office Ultimate 2007 provides people at home or work with a comprehensive toolset to gather and consolidate virtually any type of information, which they can easily share with others across geographical or organizational boundaries to deliver better results faster.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Office Ultimate 2007.png</Small>
+      <Large width="342" height="403">Office Ultimate 2007 - Large.png</Large>
+      <Logo width="257" height="69">Office Ultimate 2007 - Logo.png</Logo>
+    </Images>
+    <Category>Office</Category>
+    <Price>$679.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Office-Ultimate-2007-Full/product/16E681F4</PurchaseUrl>
+  </Product>
+  <!-- WINDOWS -->
+  <Product>
+    <Name>Windows Vista Business</Name>
+    <Description>
+      <Summary>The definitive choice for your business—today and tomorrow</Summary>
+      <Details>Windows Vista Business is the first Windows operating system designed specifically to meet the needs of small businesses. You'll empower your entire business to work more efficiently with a stunning and improved, simple-to-use interface that makes it easier to search and find the information you need quickly and easily, both on your PCs and on the web.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Windows Vista Business.png</Small>
+      <Large width="342" height="403">Windows Vista Business - Large.png</Large>
+      <Logo width="257" height="69">Windows Vista Business - Logo.png</Logo>
+    </Images>
+    <Category>Windows</Category>
+    <Price>$299.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Windows-Vista-Business-with-SP1-32-bit-Full/product/223F2245</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Windows Vista Home Basic</Name>
+    <Description>
+      <Summary>Ideal for the basics of home computing</Summary>
+      <Details>Windows Vista Home Basic is the edition of Windows for basic home computing needs. If you only want to use your PC for tasks like browsing the Internet, using e-mail, or viewing photos, then Windows Vista Home Basic may be the right edition for you. While it won't provide as many benefits as Windows Vista Home Premium, it will help you use your PC more easily and more safely than you could with Windows XP.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Windows Vista Home Basic.png</Small>
+      <Large width="342" height="403">Windows Vista Home Basic - Large.png</Large>
+      <Logo width="257" height="69">Windows Vista Home Basic - Logo.png</Logo>
+    </Images>
+    <Category>Windows</Category>
+    <Price>$199.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Windows-Vista-Home-Basic-with-SP1-32-bit-Full/product/566D3FD3</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Windows Vista Home Premium</Name>
+    <Description>
+      <Summary>The preferred edition of Windows Vista for home desktop and mobile PCs</Summary>
+      <Details>You'll see the difference with a breakthrough design, easy-to-use search and organization tools, and a safer online experience. The built-in Windows Media Center and new mobility features give you more ways to enjoy your favorite digital entertainment at home or on the go. And like all editions of Windows Vista, it is compatible with the widest range of software, devices, and services that you use and trust.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Windows Vista Home Premium.png</Small>
+      <Large width="342" height="403">Windows Vista Home Premium - Large.png</Large>
+      <Logo width="257" height="69">Windows Vista Home Premium - Logo.png</Logo>
+    </Images>
+    <Category>Windows</Category>
+    <Price>$239.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Windows-Vista-Home-Premium-with-SP1-32-bit-Full/product/28C6A36F</PurchaseUrl>
+  </Product>
+  <Product>
+    <Name>Windows Vista Ultimate</Name>
+    <Description>
+      <Summary>The choice for those who want to have it all</Summary>
+      <Details>When you want to have it all, including the ability to shift smoothly between the worlds of play and productivity, there's Windows Vista Ultimate. You'll never have to worry about having the most advanced capabilities-they're all here. This edition of Windows Vista offers an advanced, business-focused infrastructure, mobile productivity, and a premium home digital entertainment experience, all in a single offering.</Details>
+    </Description>
+    <Images>
+      <Small width="112" height="112">Windows Vista Ultimate.png</Small>
+      <Large width="342" height="403">Windows Vista Ultimate - Large.png</Large>
+      <Logo width="257" height="69">Windows Vista Ultimate - Logo.png</Logo>
+    </Images>
+    <Category>Windows</Category>
+    <Price>$319.95</Price>
+    <PurchaseUrl>http://store.microsoft.com/microsoft/Windows-Vista-Ultimate-with-SP1-32-bit-Full/product/EB0EB5C5</PurchaseUrl>
+  </Product>
+</Products>

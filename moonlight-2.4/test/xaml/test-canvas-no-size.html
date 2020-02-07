@@ -1,0 +1,71 @@
+<html>
+  <head>
+      <title>Moonlight Test Page</title>
+		<script type="text/javascript" src="../js/js/utils.js"></script>
+		<script type="text/javascript" src="../js/js/testplugin.js"></script>
+
+		<script type="text/xaml" id="xaml">
+			<Canvas xmlns="http://schemas.microsoft.com/client/2007" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Loaded="OnLoaded" Background="Blue">
+				<MediaElement Source="../media/video/timecode-mini-caption-all.wmv" MediaOpened="OnMediaOpened" MediaFailed="OnMediaFailed" AutoPlay="False" />
+			</Canvas>
+		</script>
+
+		<script language="javascript" src="Silverlight.js"></script>
+		<script language="javascript">
+		var media_loaded = false;
+
+		createTestPlugin ();
+		QueueTestReady ();
+
+		function QueueTestReady ()
+		{
+			if (document.body == null || !media_loaded || !TestPluginReady) {
+				window.setTimeout ("QueueTestReady ()", 100);
+				return;
+			}
+			window.resizeTo (screen.availWidth, screen.availHeight);
+			window.moveTo (0, 0);
+			window.setTimeout ("RunTest ()", 1000);
+		}
+
+		function RunTest ()
+		{
+			TakeSingleSnapshotAndShutdown ("", "test-canvas-no-size.html.png", 300, 300);
+		}
+
+		function OnMediaOpened ()
+		{
+			media_loaded = true;
+			QueueTestReady ();
+		}
+
+		function OnMediaFailed ()
+		{
+			TestLogger.LogError ("Media failed to load.");
+			TestLogger.LogResult (-1);
+			SignalShutdown ();
+		}
+
+		function ErrorHandler (sender, args)
+		{
+			TestLogger.LogError ("Error raised by moonlight: " + args.ErrorMessage);
+			TestLogger.LogResult (-1)
+			SignalShutdown ();
+		}
+		</script>
+	</head>
+
+<body scroll="no" style='border-width: 0px'>
+    <div>
+        <embed type="application/x-silverlight"
+             width="200"
+             height="200"
+             id="_MoonlightControl" Source="#xaml" OnError="ErrorHandler"
+             style="position:absolute; left:0px; top:0px"
+             background="green" >
+        </embed>
+    </div>
+  </body>
+</html>
+
+

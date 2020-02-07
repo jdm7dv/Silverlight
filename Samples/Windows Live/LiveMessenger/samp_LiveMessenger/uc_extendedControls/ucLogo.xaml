@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="samp_LiveMessenger.ucLogo"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    d:DesignWidth="250" d:DesignHeight="17.713" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+    	<Ellipse HorizontalAlignment="Left" Margin="6.54899978637695,1.32599997520447,0,0" VerticalAlignment="Stretch" Width="16.768" StrokeThickness="1.5" d:LayoutOverrides="Width">
+    		<Ellipse.Stroke>
+    			<RadialGradientBrush>
+    				<GradientStop Color="#FFBFE0EE" Offset="0.915"/>
+    				<GradientStop Color="#FF49768A" Offset="1"/>
+    				<GradientStop Color="#FFFFFFFF" Offset="0.871"/>
+    			</RadialGradientBrush>
+    		</Ellipse.Stroke>
+    		<Ellipse.Fill>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="#FF88B0D0" Offset="0.473"/>
+    				<GradientStop Color="#FFFFFFFF" Offset="0.696"/>
+    				<GradientStop Color="#FFFFFFFF" Offset="0.237"/>
+    			</LinearGradientBrush>
+    		</Ellipse.Fill>
+    	</Ellipse>
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFCC5A35" Data="F1 M 37.5833,18.8333L 51.4167,14L 54.25,13.8333L 58.5833,13.5L 64.3333,13.6667L 68.9166,14.1667L 74.75,16.1667L 80.5833,19.3333L 83.5833,22.1667L 70.9166,62.6667L 58.75,56.1667L 55.25,55L 40.4167,55.1667L 36.0833,56.5L 25.9167,60L 37.5833,18.8333 Z " Height="3.495" HorizontalAlignment="Left" Margin="10.7349996566772,5.27199983596802,0,0" VerticalAlignment="Top" Width="4.714" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, Width, Height" StrokeThickness="0.5">
+    		<Path.Fill>
+    			<RadialGradientBrush RadiusX="0.889325" RadiusY="0.853554" Center="0.775018,0.900212" GradientOrigin="0.775018,0.900212">
+    				<RadialGradientBrush.RelativeTransform>
+    					<TransformGroup>
+    						<SkewTransform CenterX="0.775018" CenterY="0.900212" AngleX="8.94839" AngleY="0"/>
+    						<RotateTransform CenterX="0.775018" CenterY="0.900212" Angle="234.657"/>
+    					</TransformGroup>
+    				</RadialGradientBrush.RelativeTransform>
+    				<GradientStop Color="#FFF4D614" Offset="0"/>
+    				<GradientStop Color="#FFBC0E05" Offset="1"/>
+    			</RadialGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF476E1D" Data="F1 M 91.1979,24.6771L 90.4782,26.5191L 79.0833,66L 90.5833,73.8333L 95.5833,75.1667L 112.25,75.5L 126.583,70L 139.917,27.6667L 128.026,32.1771L 121.276,33.4271L 104.276,32.4271L 91.8854,24.6771L 90.9166,25" Height="3.61" HorizontalAlignment="Left" Margin="15.0139999389648,6.05000019073486,0,0" VerticalAlignment="Top" Width="4.969" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, Width, Height" StrokeThickness="0.5">
+    		<Path.Fill>
+    			<RadialGradientBrush RadiusX="1.01696" RadiusY="1.10936" Center="0.956593,0.126255" GradientOrigin="0.956593,0.126255">
+    				<RadialGradientBrush.RelativeTransform>
+    					<TransformGroup>
+    						<SkewTransform CenterX="0.956593" CenterY="0.126255" AngleX="-8.58175" AngleY="0"/>
+    						<RotateTransform CenterX="0.956593" CenterY="0.126255" Angle="147.197"/>
+    					</TransformGroup>
+    				</RadialGradientBrush.RelativeTransform>
+    				<GradientStop Color="#FF2D651A" Offset="0"/>
+    				<GradientStop Color="#FFCEE47F" Offset="1"/>
+    			</RadialGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF12497F" Data="F1 M 35.776,65.8438L 23.6094,70.3438L 11.6094,112.01L 25.9427,108.344L 32.9427,107.677L 42.276,107.844L 49.1094,110.01L 56.4427,114.844L 69.9427,73.6771L 58.1094,66.3438L 54.4427,64.8438L 39.6094,64.6771L 35.776,65.8438 Z " Height="3.564" HorizontalAlignment="Left" Margin="9.58800029754639,8.83800029754639,0,0" VerticalAlignment="Top" Width="4.768" d:LayoutOverrides="VerticalAlignment, Width, Height" StrokeThickness="0.5">
+    		<Path.Fill>
+    			<RadialGradientBrush RadiusX="1.01211" RadiusY="1.09021" Center="0.937143,0.187708" GradientOrigin="0.937143,0.187708">
+    				<RadialGradientBrush.RelativeTransform>
+    					<TransformGroup>
+    						<SkewTransform CenterX="0.937143" CenterY="0.187708" AngleX="-7.21484" AngleY="0"/>
+    						<RotateTransform CenterX="0.937143" CenterY="0.187708" Angle="147.875"/>
+    					</TransformGroup>
+    				</RadialGradientBrush.RelativeTransform>
+    				<GradientStop Color="#FFCBDFE6" Offset="0"/>
+    				<GradientStop Color="#FF254A91" Offset="1"/>
+    			</RadialGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Path Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFDA9E1A" Data="F1 M 75.4427,76.3333L 63.776,117.667L 71.776,123.167L 81.1094,126.667L 96.776,126.5L 106.109,124.5L 112.609,121.167L 124.609,80.6667L 123.443,79.6667L 112.443,83.3333L 105.609,84.5L 90.776,83.8333L 82.776,80.6667L 76.4427,75.8333L 75.4427,76.3333 Z " Height="3.611" HorizontalAlignment="Left" Margin="13.7650003433228,9.60499954223633,0,0" VerticalAlignment="Top" Width="4.969" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, Width, Height" StrokeThickness="0.5">
+    		<Path.Fill>
+    			<RadialGradientBrush RadiusX="0.801152" RadiusY="0.764944" Center="0.243836,0.1625" GradientOrigin="0.243836,0.1625">
+    				<RadialGradientBrush.RelativeTransform>
+    					<TransformGroup>
+    						<SkewTransform CenterX="0.243836" CenterY="0.1625" AngleX="10.0842" AngleY="0"/>
+    						<RotateTransform CenterX="0.243836" CenterY="0.1625" Angle="54.9343"/>
+    					</TransformGroup>
+    				</RadialGradientBrush.RelativeTransform>
+    				<GradientStop Color="#FFFAEFA0" Offset="0"/>
+    				<GradientStop Color="#FFF7A30C" Offset="0.860169"/>
+    				<GradientStop Color="#FFF18000" Offset="1"/>
+    			</RadialGradientBrush>
+    		</Path.Fill>
+    	</Path>
+
+    	<Path HorizontalAlignment="Left" Margin="6.95900011062622,2.44799995422363,0,0" VerticalAlignment="Top" Width="15.168" Opacity="0.125" Fill="#FF1E1717" Stretch="Fill" StrokeThickness="3" Data="M9.2920351,20.353983 L12.38938,13.274336 L17.700087,8.4076586 L23.453135,5.7530208 L31.419245,5.7530208 L37.172218,8.4079123 L42.482895,13.717269 L45.138027,18.584181 L45.138027,21.681305 L45.138027,23.894009 L37.614601,23.451363 L30.533968,20.796644 L24.338415,20.796644 L15.930163,21.239098 L11.504768,23.451363 L8.8495312,23.451363 z" Height="7.265" d:LayoutOverrides="VerticalAlignment, Width, Height"/>
+    	<TextBlock Margin="26.1270008087158,2.44799995422363,15.5329999923706,-6.16200017929077" TextWrapping="Wrap" FontFamily="Arial" Text="Windows Live Messenger" FontSize="12" Foreground="#FF4E4D4D" VerticalAlignment="Stretch" d:LayoutOverrides="Height" Height="21.427" />
+
+
+    </Grid>
+</UserControl>

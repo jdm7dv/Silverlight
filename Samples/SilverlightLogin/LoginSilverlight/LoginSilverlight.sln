@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginSilverlight", "LoginSilverlight\LoginSilverlight.csproj", "{966A8731-9BD1-4122-A08D-9E84E74A57F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginSilverlightWeb", "LoginSilverlightWeb\LoginSilverlightWeb.csproj", "{8170CDA7-38B8-475D-8FFF-69DE3899DE90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{966A8731-9BD1-4122-A08D-9E84E74A57F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966A8731-9BD1-4122-A08D-9E84E74A57F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966A8731-9BD1-4122-A08D-9E84E74A57F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966A8731-9BD1-4122-A08D-9E84E74A57F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8170CDA7-38B8-475D-8FFF-69DE3899DE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8170CDA7-38B8-475D-8FFF-69DE3899DE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8170CDA7-38B8-475D-8FFF-69DE3899DE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8170CDA7-38B8-475D-8FFF-69DE3899DE90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

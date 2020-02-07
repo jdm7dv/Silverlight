@@ -1,0 +1,51 @@
+C:\DiggSample\DiggSample_WebServer\bin\DiggSample_WebServer.dll
+C:\DiggSample\DiggSample_WebServer\bin\DiggSample_WebServer.pdb
+C:\DiggSample\DiggSample_WebServer\bin\System.Web.Silverlight.dll
+C:\DiggSample\DiggSample_WebServer\bin\ja\System.Web.Silverlight.resources.dll
+C:\DiggSample\DiggSample_WebServer\obj\Debug\ResolveAssemblyReference.cache
+C:\DiggSample\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.dll
+C:\DiggSample\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.pdb
+C:\DiggSample\DiggSample\DiggSample_WebServer\bin\DiggSample_WebServer.dll
+C:\DiggSample\DiggSample\DiggSample_WebServer\bin\DiggSample_WebServer.pdb
+C:\DiggSample\DiggSample\DiggSample_WebServer\bin\System.Web.Silverlight.dll
+C:\DiggSample\DiggSample\DiggSample_WebServer\bin\ja\System.Web.Silverlight.resources.dll
+C:\DiggSample\DiggSample\DiggSample_WebServer\obj\Debug\ResolveAssemblyReference.cache
+C:\DiggSample\DiggSample\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.dll
+C:\DiggSample\DiggSample\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.pdb
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\DiggSample_WebServer.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\DiggSample_WebServer.pdb
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\System.Web.Silverlight.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.dll
+C:\Users\scottgu\Desktop\Digg\diggsample\DiggSample\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.pdb
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\DiggSample_WebServer.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\DiggSample_WebServer.pdb
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.dll
+C:\Users\Jonathan Moore\Desktop\Volcano\Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.pdb
+C:\Users\Jonathan Moore\Documents\Visual Studio 2008\Projects\Platform\Web\Volcano\_Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\DiggSample_WebServer.dll
+C:\Users\Jonathan Moore\Documents\Visual Studio 2008\Projects\Platform\Web\Volcano\_Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\DiggSample_WebServer.pdb
+C:\Users\Jonathan Moore\Documents\Visual Studio 2008\Projects\Platform\Web\Volcano\_Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Documents\Visual Studio 2008\Projects\Platform\Web\Volcano\_Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.dll
+C:\Users\Jonathan Moore\Documents\Visual Studio 2008\Projects\Platform\Web\Volcano\_Demos\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\DiggSample_WebServer.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\bin\DiggSample_WebServer.pdb
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\ResolveAssemblyReference.cache
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.dll
+C:\v1.9\SphinxLogic\base\code library\Web Development\Silverlight\diggsample\DiggSample\DiggSample_CSharp\DiggSample_WebServer\obj\Debug\DiggSample_WebServer.pdb

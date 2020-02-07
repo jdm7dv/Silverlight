@@ -1,0 +1,66 @@
+c:\Source\SqlData\SqlData\Bin\Debug\AppManifest.xaml
+c:\Source\SqlData\SqlData\Bin\Debug\SqlData.dll
+c:\Source\SqlData\SqlData\Bin\Debug\SqlData.pdb
+c:\Source\SqlData\SqlData\Bin\Debug\SqlData.xap
+c:\Source\SqlData\SqlData\Bin\Debug\TestPage.html
+c:\Source\SqlData\SqlData\obj\Debug\ResolveAssemblyReference.cache
+c:\Source\SqlData\SqlData\obj\Debug\App.g.cs
+c:\Source\SqlData\SqlData\obj\Debug\Page.g.cs
+c:\Source\SqlData\SqlData\obj\Debug\SqlData.g.resources
+c:\Source\SqlData\SqlData\obj\Debug\SqlData.dll
+c:\Source\SqlData\SqlData\obj\Debug\SqlData.pdb
+c:\Source\SqlData\SqlData\obj\Debug\XapCacheFile.xml
+c:\Source\SqlData\SqlData\Bin\Debug\System.Windows.Controls.Data.dll
+c:\Source\SqlData\SqlData\Bin\Debug\System.Windows.Controls.Data.xml
+c:\Source\SqlData\SqlData\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+c:\Source\SqlData\SqlData\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+c:\Source\SqlData\SqlData\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+c:\Source\SqlData\SqlData\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+c:\Source\SqlData\SqlData\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+c:\Source\SqlData\SqlData\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+c:\Source\SqlData\SqlData\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+c:\Source\SqlData\SqlData\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\AppManifest.xaml
+C:\WSSample\SqlData\SqlData\Bin\Debug\SqlData.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\SqlData.pdb
+C:\WSSample\SqlData\SqlData\Bin\Debug\SqlData.xap
+C:\WSSample\SqlData\SqlData\Bin\Debug\TestPage.html
+C:\WSSample\SqlData\SqlData\Bin\Debug\System.Windows.Controls.Data.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\System.Windows.Controls.Data.xml
+C:\WSSample\SqlData\SqlData\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+C:\WSSample\SqlData\SqlData\obj\Debug\ResolveAssemblyReference.cache
+C:\WSSample\SqlData\SqlData\obj\Debug\App.g.cs
+C:\WSSample\SqlData\SqlData\obj\Debug\Page.g.cs
+C:\WSSample\SqlData\SqlData\obj\Debug\SqlData.g.resources
+C:\WSSample\SqlData\SqlData\obj\Debug\SqlData.dll
+C:\WSSample\SqlData\SqlData\obj\Debug\SqlData.pdb
+C:\WSSample\SqlData\SqlData\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\SqlData.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\SqlData.pdb
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\SqlData.xap
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\TestPage.html
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\System.Windows.Controls.Data.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\System.Windows.Controls.Data.xml
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\obj\Debug\App.g.cs
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\obj\Debug\Page.g.cs
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\obj\Debug\SqlData.g.resources
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\obj\Debug\SqlData.dll
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\obj\Debug\SqlData.pdb
+C:\Users\Jonathan Moore\Desktop\SqlData\SqlData\SqlData\obj\Debug\XapCacheFile.xml

@@ -1,0 +1,3 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\RiaClient.Tests.NavigationUnitTests2\obj\Debug\Page1.g.cs
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\RiaClient.Tests.NavigationUnitTests2\obj\Debug\Microsoft.AppFx.UnitTests.Silverlight.NavigationUnitTests2.g.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\RiaClient.Tests.NavigationUnitTests2\obj\Debug\NavigationUnitTests2.csproj.CoreCompileInputs.cache

@@ -1,0 +1,241 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1 – Pixel Shaders and Implicit Styles" />
+      <MSHelp:RLTitle Title="Exercise 1 – Pixel Shaders and Implicit Styles" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1 – Pixel Shaders and Implicit Styles</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Webcam in Silverlight Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1 – Pixel Shaders and Implicit Styles</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>During this exercise, we will apply implicit styles, a new feature in Silverlight 4 which allows a style to be applied to all elements of matching type.  Following this, we will apply pixel shader effects to an image and animate various properties of these effects. These custom effects include Ripple, Invert, Swirl and Pixelate. Finally we will apply a perspective transform to the canvas and animate it to yield a 3D planar effect. </p>
+        <a name="_Toc256175667" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 - Implicit Styles</b>
+        </p>
+        <p>In Silverlight 4 you can create Implicit Styles in addition to Explicit Styles. This new feature allows programmers to override default styles for common and third party controls with their own style, without the need to use explicit keys. In this exercise we will use supplied style and change the default look and feel of the application.</p>
+        <ol>
+          <li>In App.xaml, in the Application resources section, locate the Style element. Remove the <b>x:Key</b> attribute and run the application. <div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Style TargetType="Button"&gt;    …</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Notice how the Button controls implicitly pick up the style via its <b>TargetType</b>, without having to explicitly specify the Style key resource, or rely on the implicit style manager.   The style contains an associated <b>ControlTemplate</b>, which threads the Button contents through a <b>ContentPresenter</b>.</td></tr></table><p /></div></li>
+          <li>Open MainPage.xaml, select the “Swirl” Button and explicitly set its Style to null, to opt out of the explicit style.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Button Content="Swirl" Click="Button_Click" Style="{x:Null}"/&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application again – notice that the particular button is no longer picking up the style.</li>
+        </ol>
+        <a name="_Toc256175668" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 - Pixel Shader Effects </b>
+        </p>
+        <p>Silverlight 3 introduced Pixel Shader Effects, including the ability to add custom effects. Silverlight 3 supports 2 native effects – the blur effect and the drop shadow effect. Every <b>UIElement</b> has an <b>Effect</b> property. An effect outputs a modification of the pixel that is at the same location in the input texture as its destination in the output texture, manipulate color but not position. The Effect class contains an <b>EffectMapping</b> method, which must be overridden by derived methods to return a <b>GeneralTransform</b> that takes a position and returns the post-effect corresponding position.</p>
+        <p>In order to create a custom effect, use the effects compiler (fxc.exe) from the DirectX SDK to compile a high level shading language (HLSL) <b>.fx</b> file into a <b>.ps</b> file, which is included in the Silverlight project, with its Build Action set to Resource. A .NET class must be created to represent the custom effect, which derives from <a href="http://msdn.microsoft.com/en-us/library/system.windows.media.effects.shadereffect.aspx"><b>ShaderEffect</b></a> and provides a default constructor to initialize the effect.</p>
+        <p>The WPF Pixel Shader Effects library is available from <a href="http://wpffx.codeplex.com/">http://wpffx.codeplex.com/</a> and can be adapted to work with Silverlight. Pixel Shader Effects are exposed via the <b>System.Windows.Media.Effects</b> namespace.</p>
+        <p>Open the Shaders solution folder. Note that there are 8 items in the folder: 4 *.ps files and 4 matching class files. These comprise 4 pixel shader effects:  InvertColorEffect,  RippleEffect, InvertEffect and SwirlEffect.</p>
+        <p>
+          <img src="images\c9c2252c-58c5-493e-a7ae-82cfef044bbc.png" />
+        </p>
+        <p>
+          <b>Figure 1</b>
+          <br />
+          <i> Pixel Shares in Project Structure</i>
+        </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>A <b>ShaderEffect</b> class provides a custom bitmap effect using a <b>PixelShader</b>. Each custom Pixel Shader Effect inherits from <b>ShaderEffect</b> and loads a shader model 2 pixel shader. Dependency properties declared in this class are mapped to registers defined in an associated *.ps file. The constructor points to the *.ps file as a relative Uri and creates an instance of the PixelShader. The <b>UpdateShaderValue</b> method notifies the effect that the shader constant or sampler corresponding to the specified dependency property should be updated.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <ol>
+          <li>Open the InvertColorEffect and examine the class contents.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>namespace MagicMirror.ShaderEffectLibrary{    using System;    using System.Windows;    using System.Windows.Media;    using System.Windows.Media.Effects;    using System.Diagnostics;    public class InvertColorEffect : ShaderEffect    {        #region Dependency Properties        public static readonly DependencyProperty InputProperty = ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(InvertColorEffect), 0);        #endregion        #region Member Data        private static PixelShader pixelShader;        #endregion        #region Constructors        static InvertColorEffect()        {            pixelShader = new PixelShader();            pixelShader.UriSource = new  Uri("/MagicMirror;component/Shaders/InvertColor.ps", UriKind.Relative);        }        public InvertColorEffect()        {            this.PixelShader = pixelShader;            UpdateShaderValue(InputProperty);        }        #endregion        public Brush Input        {            get { return (Brush)GetValue(InputProperty); }            set { SetValue(InputProperty, value); }        }    }}</pre></td></tr></table></span></div></li>
+          <li>Open MainPage.xaml.cs and locate the Button_Click event handler.  It contains a <b>switch</b> statement for determining the selected button. We are going to fill in the body of each case, in order to set the pixel shader effect applied to the <b>Path Fill</b> image, and to start a storyboard which will animate tweening of appropriate effect properties.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void Button_Click(object sender, RoutedEventArgs e){  switch ((sender as Button).Content.ToString())  {    case "Pixelate":      //TODO: start storyboard and set Path's effect      break;    case "Swirl":      //TODO: start storyboard and set Path's effect      break;    case "Invert":      //TODO: start storyboard and set Path's effect      break;    case "Ripple":      //TODO: start storyboard and set Path's effect      break;    default:      TO_FILL.Effect = null;      break;  }}</pre></td></tr></table></span></div></li>
+          <li>In MainPage.xaml, add a XAML namespace mapping for the .NET namespace containing the custom shader effects:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>xmlns:shaders="clr-namespace:MagicMirror.ShaderEffectLibrary"</pre></td></tr></table></span></div></li>
+          <li>We are now ready to utilize the custom pixel shader effects within the application.</li>
+        </ol>
+        <a name="_Toc256175669" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 - InvertColorEffect</b>
+        </p>
+        <ol>
+          <li>In MainPage.xaml, in “UserControl.Resources” section, declaratively add the InvertColorEffect, giving it a name. Save the file.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;shaders:InvertColorEffect x:Name="effectInvert" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Open MainPage.xaml.cs and locate the Button_Click event handler.  In the Invert case, set the Path’s Effect to the InvertColorEffect.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>case "Invert":      TO_FILL.Effect = effectInvert;      break;</pre></td></tr></table></span></div></li>
+          <li>Run the application and click the Invert button. Notice that the image colors are inverted.</li>
+        </ol>
+        <a name="_Toc256175670" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 4 - PixelateEffect </b>
+        </p>
+        <ol>
+          <li>In MainPage.xaml, in “UserControl.Resources” section, declaratively add the PixelateEffect, giving it a name, and values for its <b>HorizontalPixelCount</b> and <b>VerticallPixelCount</b> properties. Save the file.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;shaders:PixelateEffect x:Name="effectPixelate" HorizontalPixelCounts="48" VerticalPixelCounts="48"/&gt;</pre></td></tr></table></span></div></li>
+          <li>Create a Storyboard with 2 animations for animating these properties.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Storyboard x:Name="sbPixelate" Storyboard.TargetName="effectPixelate" AutoReverse="True" RepeatBehavior="Forever"&gt;    &lt;DoubleAnimation Duration="00:00:04"  Storyboard.TargetProperty="HorizontalPixelCounts" From="48" To="256" /&gt;    &lt;DoubleAnimation Duration="00:00:04" Storyboard.TargetProperty="VerticalPixelCounts" From="48" To="256" /&gt;&lt;/Storyboard&gt;</pre></td></tr></table></span></div></li>
+          <li>Open MainPage.xaml.cs and locate the Button_Click event handler.  In the Pixelate case, set the Path’s Effect to the PixelateEffect, and start the Storyboard animation.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>case "Pixelate":      sbPixelate.Begin();      TO_FILL.Effect = effectPixelate;      break;</pre></td></tr></table></span></div></li>
+          <li>Run the application and click the Pixelate button. Notice that the image appears to be pixilated in an animated fashion.</li>
+        </ol>
+        <a name="_Toc256175671" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 5 - SwirlEffect</b>
+        </p>
+        <ol>
+          <li>In MainPage.xaml, in “UserControl.Resources” section, declaratively add the SwirlEffect, giving it a name. Save the file.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;shaders:SwirlEffect x:Name="effectSwirl" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Create a Storyboard with an animation for animating the Swirl.Factor property.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Storyboard x:Name="sbSwirl" Storyboard.TargetName="effectSwirl"  RepeatBehavior="Forever" AutoReverse="True"&gt;    &lt;DoubleAnimation Duration="00:00:02" Storyboard.TargetProperty="Factor" From="-2" To="2" /&gt;&lt;/Storyboard&gt;</pre></td></tr></table></span></div></li>
+          <li>Open MainPage.xaml.cs and locate the Button_Click event handler.  In the Swirl case, set the Path’s Effect to the SwirlEffect, and start the Storyboard animation.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>case "Swirl":      sbSwirl.Begin();      TO_FILL.Effect = effectSwirl;      break;</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc256175672" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 6 - RippleEffect</b>
+        </p>
+        <ol>
+          <li>In MainPage.xaml, in “UserControl.Resources” section, declaratively add the RippleEffect, giving it a name. Save the file.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;shaders:RippleEffect x:Name="effectRipple" /&gt;</pre></td></tr></table></span></div></li>
+          <li>Create a Storyboard with an animation for animating the RippleEffect.Phase property.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Storyboard x:Name="sbRipple" Storyboard.TargetName="effectRipple"  Storyboard.TargetProperty="Phase"&gt;    &lt;DoubleAnimation From="30.0" To="0" Duration="00:00:10" RepeatBehavior="Forever" /&gt;&lt;/Storyboard&gt;</pre></td></tr></table></span></div></li>
+          <li>Add a <b>MouseMove</b> event handler to the canvas named “borderEffects” and create the corresponding event handler for the event: <div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>MouseMove="borderEffects_MouseMove"</pre></td></tr></table></span></div></li>
+          <li>On the corresponding code behind page, set the RippleEffect.Center property according to MouseMoveEventArgs.GetPosition, which returns the (x,y) coordinate position (as a Point struct) evaluated against the supplied Canvas UIElement.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void borderEffects_MouseMove(object sender, MouseEventArgs e){  Point mousePt = e.GetPosition(this);  effectRipple.Center = new Point(mousePt.X / this.ActualWidth,                                  mousePt.Y / this.ActualHeight);}</pre></td></tr></table></span></div></li>
+          <li>In  <b>MainPage.xaml.cs</b> locate the <b>Button_Click</b> event handler.  In the Ripple case, set the Path’s Effect to the RippleEffect, and start the Storyboard animation.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>case "Ripple":      sbRipple.Begin();      TO_FILL.Effect = effectRipple;      break;</pre></td></tr></table></span></div></li>
+          <li>Run the application and click the Ripple button<b>.</b></li>
+          <li>Move the mouse over the image<b> </b>and observe the ripple effect (repeated by the storyboard) and that its center is set according to the mouse position.</li>
+        </ol>
+        <a name="_Toc256175673" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 7 - Stop Animations</b>
+        </p>
+        <ol>
+          <li>Open MainPage.xaml.cs.</li>
+          <li>Add the following code into the stopAnimations() method: <div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void stopAnimations(){  sbPixelate.Stop();  sbRipple.Stop();  sbSwirl.Stop();}</pre></td></tr></table></span></div></li>
+          <li>At the end of this task, the complete Button_Click  method should look like this:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void Button_Click(object sender, RoutedEventArgs e){  stopAnimations();  switch ((sender as Button).Content.ToString())  {    case "Pixelate":      sbPixelate.Begin();      TO_FILL.Effect = effectPixelate;      break;    case "Swirl":      sbSwirl.Begin();      TO_FILL.Effect = effectSwirl;      break;    case "Invert":      TO_FILL.Effect = effectInvert;      break;    case "Ripple":      sbRipple.Begin();      TO_FILL.Effect = effectRipple;      break;    default:      TO_FILL.Effect = null;      break;  }}</pre></td></tr></table></span></div></li>
+          <li>At the end of this exercise we have pixel shader effects applied to the picture in the frame. We just learned how to use the provided pixel shader effects in order to provide the end user with live picture processing functionality and enrich the application’s UI.</li>
+        </ol>
+        <a name="_Toc256175674" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 8 - Projection</b>
+        </p>
+        <p>Silverlight 3 introduced a <b>Projection</b> property on <b>UIElement</b> which can be set to a <b>PlaneProjection</b>, an implementation of a 3D <b>PerspectiveTransform</b>. The UIElement that is projected into this 3D scene is interactive even if projected. Both front and back are interactive.  The transforms that <b>PlaneProjection</b> applies to its <b>UIElement</b> are:  </p>
+        <ul>
+          <li>A TranslateTransform exposed via LocalOffsetX, LocalOffsetY, LocalOffsetZ in PlaneProjection. </li>
+          <li>A set of RotateTransform represented by the CenterOfRotationX, CenterOfRotationY and CenterOfRotationZ  and the RotationX, RotationY and RotationZ properties. </li>
+          <li>A TranslateTransform(3D), exposed via GlobalOffsetX, GlobalOffsetY, GlobalOffsetZ.</li>
+        </ul>
+        <p>In this exercise we will apply plane projection for our application.</p>
+        <ol>
+          <li>In MainPage.xaml , Add a <b>Canvas.Projection</b> then create a <b>PlaneProjection</b> and give it a name as shown next: <div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Canvas x:Name="borderEffects" MouseMove="borderEffect_MouseMove"&gt;    &lt;Canvas.Projection&gt;        &lt;PlaneProjection x:Name="borderProjection"/&gt;    &lt;/Canvas.Projection&gt;    …</pre></td></tr></table></span></div></li>
+          <li>Create a Storyboard that targets the <b>PlaneProjection</b>. Use this to animate the following 3 properties: <b>RotationX, RotationY, </b>a<b>  RotationZ.</b><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Storyboard x:Name="sbPerspective" Storyboard.TargetName="borderProjection"&gt;    &lt;DoubleAnimation AutoReverse="False" RepeatBehavior="Forever"                     From="0" To="360" Duration="00:00:05"  Storyboard.TargetProperty="RotationX"/&gt;    &lt;DoubleAnimation AutoReverse="False" RepeatBehavior="Forever"                     From="0" To="360" Duration="00:00:05"   Storyboard.TargetProperty="RotationY"/&gt;    &lt;DoubleAnimation AutoReverse="False" RepeatBehavior="Forever"                     From="0" To="360" Duration="00:00:05"   Storyboard.TargetProperty="RotationZ"/&gt;&lt;/Storyboard&gt;</pre></td></tr></table></span></div></li>
+          <li>In MainPage.xaml.cs , locate the btnRotate event handler and implement logic to Start / stop the storyboard.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void btnRotate_Click(object sender, RoutedEventArgs e){    if (btnRotate.Content.ToString() == "Rotate")    {        btnRotate.Content = "Stop";        sbPerspective.Begin();    }    else    {        btnRotate.Content = "Rotate";        sbPerspective.Stop();    }}</pre></td></tr></table></span></div></li>
+          <li>Run the application. Select a pixel shader effect and click the Rotate button. The perspective rotation starts swirling around.</li>
+          <li>Set the Canvas.CacheMode to BitmapCache.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;Canvas x:Name="borderEffects" MouseMove="borderEffects_MouseMove"   CacheMode="BitmapCache"&gt;</pre></td></tr></table></span></div></li>
+          <li>Run the application again. Select a pixel shader effect and click the Rotate button. The perspective rotation starts swirling around. </li>
+        </ol>
+        <br />
+        <br />
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

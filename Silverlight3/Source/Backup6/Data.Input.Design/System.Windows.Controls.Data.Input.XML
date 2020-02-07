@@ -1,0 +1,1042 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.Data.Input</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Automation.Peers.DescriptionViewerAutomationPeer">
+            <summary>
+            Exposes <see cref="T:System.Windows.Controls.DescriptionViewer" /> types to UI Automation.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.DescriptionViewerAutomationPeer.#ctor(System.Windows.Controls.DescriptionViewer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Automation.Peers.DescriptionViewerAutomationPeer" /> class.
+            </summary>
+            <param name="owner">
+            The <see cref="T:System.Windows.Controls.DescriptionViewer" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.DescriptionViewerAutomationPeer" />.
+            </param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.DescriptionViewerAutomationPeer.GetClassNameCore">
+            <summary>
+            Called by GetClassName that gets a human readable name that, in addition to AutomationControlType, 
+            differentiates the control represented by this AutomationPeer.
+            </summary>
+            <returns>The string that contains the name.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.DescriptionViewerAutomationPeer.GetNameCore">
+            <summary>
+            Called by GetName that gets a human readable name that, in addition to AutomationControlType, 
+            differentiates the control represented by this AutomationPeer.
+            </summary>
+            <returns>The string that contains the name.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.DescriptionViewerAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Gets the control type for the element that is associated with the UI Automation peer.
+            </summary>
+            <returns>The control type.</returns>
+        </member>
+        <member name="T:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer">
+            <summary>
+            Exposes <see cref="T:System.Windows.Controls.ValidationSummary" /> types to UI Automation.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer.#ctor(System.Windows.Controls.ValidationSummary)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer" /> class.
+            </summary>
+            <param name="owner">
+            The <see cref="T:System.Windows.Controls.ValidationSummary" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer" />.
+            </param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer.GetClassNameCore">
+            <summary>
+            Called by GetClassName that gets a human readable name that, in addition to AutomationControlType, 
+            differentiates the control represented by this AutomationPeer.
+            </summary>
+            <returns>The string that contains the name.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer.GetNameCore">
+            <summary>
+            Called by GetName that gets a human readable name that, in addition to AutomationControlType, 
+            differentiates the control represented by this AutomationPeer.
+            </summary>
+            <returns>The string that contains the name.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+            <summary>
+            Gets the control pattern that is associated with the specified System.Windows.Automation.Peers.PatternInterface.
+            </summary>
+            <param name="patternInterface">A value from the System.Windows.Automation.Peers.PatternInterface enumeration.</param>
+            <returns>The object that supports the specified pattern, or null if unsupported.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Gets the control type for the element that is associated with the UI Automation peer.
+            </summary>
+            <returns>The control type.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.ValidationSummaryAutomationPeer.System#Windows#Automation#Provider#IInvokeProvider#Invoke">
+            <summary>
+            Invoke a selection on the current item, simulating a click.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Common.Extensions">
+            <summary>
+            Utility class for operations.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Data.Input.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Data.Input.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Data.Input.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Data.Input.Resources.UnderlyingPropertyIsReadOnly">
+            <summary>
+              Looks up a localized string similar to {0} cannot be set because the underlying property is read only..
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Data.Input.Resources.ValidationSummaryHeaderError">
+            <summary>
+              Looks up a localized string similar to 1 Error.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Data.Input.Resources.ValidationSummaryHeaderErrors">
+            <summary>
+              Looks up a localized string similar to {0} Errors.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Data.Input.Resources.ValidationSummaryItem">
+            <summary>
+              Looks up a localized string similar to {0}: {1}.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Data.Input.Resources.ValidationSummarySampleError">
+            <summary>
+              Looks up a localized string similar to Sample Error.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.DescriptionViewer">
+            <summary>
+            Displays a description and tracks error state for a control.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.#ctor">
+            <summary>
+            Initializes a new instance of the DescriptionViewer class.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.DataContextProperty">
+            <summary>
+            Identifies the DataContext dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.DescriptionProperty">
+            <summary>
+            Identifies the Description dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.Description">
+            <summary>
+            Gets or sets the description text displayed by the viewer.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.OnDescriptionPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handle the Description field property change event.  This will update the the VSM state.
+            </summary>
+            <param name="depObj">The DescriptionViewer that changed its Description value.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs for this event.</param>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.GlyphTemplateProperty">
+            <summary>
+            Identifies the GlyphTemplate dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.GlyphTemplate">
+            <summary>
+            Gets or sets the template that is used to display the description viewer glyph.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.ToolTipStyleProperty">
+            <summary>
+            Identifies the ToolTipStyle dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.ToolTipStyle">
+            <summary>
+            Gets or sets the style used to display tooltips.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.IsFocusedProperty">
+            <summary>
+            Identifies the IsFocused dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.IsFocused">
+            <summary>
+              Gets a value that indicates whether the <see cref="P:System.Windows.Controls.DescriptionViewer.Target" /> 
+              of the <see cref="T:System.Windows.Controls.DescriptionViewer" /> has focus. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.IsValidProperty">
+            <summary>
+            Identifies the IsValid dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.IsValid">
+            <summary>
+              Gets a value that indicates whether the <see cref="P:System.Windows.Controls.DescriptionViewer.Target" /> field data is valid. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.PropertyPathProperty">
+            <summary>
+            Identifies the PropertyPath dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.PropertyPath">
+            <summary>
+              Gets or sets the path to the dependency property on the <see cref="P:System.Windows.FrameworkElement.DataContext" /> 
+              of the <see cref="P:System.Windows.Controls.Label.Target" /> control that 
+              this <see cref="T:System.Windows.Controls.DescriptionViewer" /> is associated with. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.DescriptionViewer.TargetProperty">
+            <summary>
+            Identifies the Target dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.Target">
+            <summary>
+              Gets or sets the control that this <see cref="T:System.Windows.Controls.DescriptionViewer" /> is associated with. 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.ValidationMetadata">
+            <summary>
+            Internally get or set the ValidationMetadata.  
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.DescriptionViewer.Initialized">
+            <summary>
+            Gets a value indicating whether the control has been initialized.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.OnApplyTemplate">
+            <summary>
+            When the template is applied, this loads all the template parts
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.Refresh">
+            <summary>
+            Reload the metadata from the source target or DomainContext
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.OnCreateAutomationPeer">
+            <summary>
+            Creates AutomationPeer (<see cref="M:System.Windows.UIElement.OnCreateAutomationPeer"/>)
+            </summary>
+            <returns>The AutomationPeer associated with this DescriptionViewer.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.DescriptionViewer_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Perform initialization code
+            </summary>
+            <param name="sender">The DescriptionViewer that has loaded.</param>
+            <param name="e">The RoutedEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.DescriptionViewer_IsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            IsEnabled property change handler
+            </summary>
+            <param name="sender">The DescriptionViewer that had its IsEnabled value changed.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.LoadMetadata(System.Boolean)">
+            <summary>
+            Load meta data and update the UI. 
+            </summary>
+            <param name="forceUpdate">If true, metadata will not be loaded from cache.</param>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.ParseTargetValidState">
+            <summary>
+            Parse the target error state and update the IsValid property
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.Target_BindingValidationError(System.Object,System.Windows.Controls.ValidationErrorEventArgs)">
+            <summary>
+            Event handler for target control's BindingValidationError event.
+            </summary>
+            <param name="sender">The sender of the BindingValidationError event.</param>
+            <param name="e">The ValidationErrorEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.Target_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Event handler for the target control's GotFocus event.
+            </summary>
+            <param name="sender">The sender of the GotFocus event.</param>
+            <param name="e">The RoutedEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.Target_LostFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Event handler for the target control's LostFocus event.
+            </summary>
+            <param name="sender">The sender of the LostFocus event.</param>
+            <param name="e">The RoutedEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.UpdateCommonState">
+            <summary>
+            Update the Common VSM state
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.UpdateDescriptionState">
+            <summary>
+            Update the required field VSM state based on the description property.  
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.DescriptionViewer.UpdateValidationState">
+            <summary>
+            When updating the validation state, check the focus state and update the VSM accordingly
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.ValidationSummary">
+            <summary>
+            Displays a summary of validation errors on a form.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="E:System.Windows.Controls.ValidationSummary.FocusingInvalidControl">
+            <summary>
+            Event triggered when an Error is clicked on.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.ValidationSummary.SelectionChanged">
+            <summary>
+            Event triggered when the selected error has changed.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.#ctor">
+            <summary>
+            Initializes a new instance of the ValidationSummary class.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.ShowErrorsInSummaryProperty">
+            <summary>
+            Gets or sets a value indicating whether the field errors belonging to the input control should be shown in the ValidationSummary. 
+            Errors are added to the DisplayedErrors list depending on this flag.  The base Errors list, however, will always contain all
+            the errors.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.GetShowErrorsInSummary(System.Windows.DependencyObject)">
+            <summary>
+            Gets the ShowErrorsInSummary property of the specified DependencyObject.
+            </summary>
+            <param name="inputControl">The input control to get the ShowErrorsInSummary property from.</param>
+            <returns>The value indicating whether errors on the input control should be shown.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.SetShowErrorsInSummary(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the ShowErrorsInSummary property of the specified DependencyObject.
+            </summary>
+            <param name="inputControl">The input control with which to associate the specified dependency property.</param>
+            <param name="value">The value indicating whether errors on the input control should be shown.</param>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.ErrorStyleProperty">
+            <summary>
+            Identifies the ErrorStyle dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.ErrorStyle">
+            <summary>
+            Gets or sets the style used for the error's item container.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.FilterProperty">
+            <summary>
+            Identifies the Filter dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.Filter">
+            <summary>
+            Gets or sets a value that indicates which types of errors are displayed.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.FocusControlsOnClickProperty">
+            <summary>
+            Identifies the FocusControlsOnClick dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.FocusControlsOnClick">
+            <summary>
+            Gets or sets a value that indicates whether focus is set on the 
+            input control when an error message is clicked.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.HasErrorsProperty">
+            <summary>
+            Identifies the HasErrors dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.HasErrors">
+            <summary>
+              Gets or sets a value that indicates whether the <see cref="T:System.Windows.Controls.ValidationSummary" /> has errors. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.HasDisplayedErrorsProperty">
+            <summary>
+            Identifies the HasDisplayedErrors dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.HasDisplayedErrors">
+            <summary>
+              Gets or sets a value that indicates whether the 
+              <see cref="T:System.Windows.Controls.ValidationSummary" /> has displayed errors. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.HeaderProperty">
+            <summary>
+            Identifies the Header dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.Header">
+            <summary>
+            Gets or sets the content of the <see cref="T:System.Windows.Controls.ValidationSummary" /> header. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.HeaderTemplateProperty">
+            <summary>
+            Identifies the HeaderTemplate dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.HeaderTemplate">
+            <summary>
+            Gets or sets the template that is used to display the content of the header.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.SummaryListBoxStyleProperty">
+            <summary>
+            Identifies the SummaryListBoxStyle dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.SummaryListBoxStyle">
+            <summary>
+            Gets or sets the style applied to the <see cref="T:System.Windows.Controls.ListBox" /> that displays the errors. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummary.TargetProperty">
+            <summary>
+            Identifies the Target dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.Target">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.UIElement" /> for 
+            which validation errors will be displayed in the summary. 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.Errors">
+            <summary>
+            Gets the collection of errors.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.DisplayedErrors">
+            <summary>
+            Gets the collection of errors that are displayed after 
+            the <see cref="P:System.Windows.Controls.ValidationSummary.Filter" /> is applied. 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.Initialized">
+            <summary>
+            Gets a value indicating whether the ValidationSummary is initialized.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.ErrorsListBoxInternal">
+            <summary>
+            Gets the ErrorsListBox template part
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummary.HeaderContentControlInternal">
+            <summary>
+            Gets the HeaderContentControl template part
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.CompareValidationSummaryItems(System.Windows.Controls.ValidationSummaryItem,System.Windows.Controls.ValidationSummaryItem)">
+            <summary>
+            Compare ValidationSummaryItems for display in the ValidationSummary
+            </summary>
+            <param name="x">The first reference used for comparison.</param>
+            <param name="y">The second reference used for comparison.</param>
+            <returns>The result of the comparison check between the two references.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.TryCompareReferences(System.Object,System.Object,System.Int32@)">
+            <summary>
+            Try to compare two references, but only if they they are comparable
+            </summary>
+            <param name="x">The first reference to compare.</param>
+            <param name="y">The second reference to compare.</param>
+            <param name="returnVal">The comparison value.</param>
+            <returns>Returns true if the two references were able to be compared.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.ReferencesAreValid(System.Object,System.Object,System.Int32@)">
+            <summary>
+            Perform a null comparison check if one (or both) are null
+            </summary>
+            <param name="x">The first reference to compare.</param>
+            <param name="y">The second reference to compare.</param>
+            <param name="val">The comparison value.</param>
+            <returns>Returns true if both references are non-null</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.UpdateDisplayedErrorsOnAllValidationSummaries(System.Windows.DependencyObject)">
+            <summary>
+            When one of the input controls has its ShowErrorsInSummary property changed, we have to go through all the ValidationSummaries on the page and update them
+            </summary>
+            <param name="parent">The parent ValidationSummary</param>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.OnApplyTemplate">
+            <summary>
+            When the template is applied, this loads all the template parts
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.OnFocusingInvalidControl(System.Windows.Controls.FocusingInvalidControlEventArgs)">
+            <summary>
+            OnErrorClicked is invoked when an error in the ValidationSummary is clicked, via either the mouse or keyboard.
+            </summary>
+            <param name="e">The FocusingInvalidControlEventArgs for the event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.OnCreateAutomationPeer">
+            <summary>
+            Creates AutomationPeer (<see cref="M:System.Windows.UIElement.OnCreateAutomationPeer"/>)
+            </summary>
+            <returns>The AutomationPeer associated with this ValidationSummary.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.ExecuteClickInternal">
+            <summary>
+            Simulate a click
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummary.SortByVisualTreeOrdering(System.Windows.DependencyObject,System.Windows.DependencyObject)">
+            <summary>
+            Sort two dependency objects based on their relative positions within the VisualTree.  
+            </summary>
+            <param name="controlX">The first control being compared.</param>
+            <param name="controlY">The second value being compared.</param>
+            <returns>The sort value indicating the ordering between the two controls.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.ValidationSummaryFilters">
+            <summary>
+            An enum to specify the error filtering level.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummaryFilters.None">
+            <summary>
+            None of the errors are displayed in the ValidationSummary
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummaryFilters.ObjectErrors">
+            <summary>
+            ValidationSummary only displays the object level errors
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummaryFilters.PropertyErrors">
+            <summary>
+            ValidationSummary only displays the property level errors
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummaryFilters.All">
+            <summary>
+            ValidationSummary displays all errors
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.ValidationSummaryItem">
+            <summary>
+            Represents an individual validation error.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItem.#ctor">
+            <summary>
+            Initializes a new instance of the ValidationSummaryItem class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ValidationSummaryItem class.
+            </summary>
+            <param name="message">The error message.</param>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItem.#ctor(System.String,System.String,System.Windows.Controls.ValidationSummaryItemType,System.Windows.Controls.ValidationSummaryItemSource,System.Object)">
+            <summary>
+            Initializes a new instance of the ValidationSummaryItem class.
+            </summary>
+            <param name="message">The error message.</param>
+            <param name="messageHeader">The header/prefix of the item, such as the property name.</param>
+            <param name="itemType">The type of error, such as Property or Entity level.</param>
+            <param name="source">The source of the error message, including the originating control and/or property name.</param>
+            <param name="context">Context from which the error occurred.  This general property can be used as a container to keep track of the entity, for instance.</param>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummaryItem.Context">
+            <summary>
+            Gets or sets the object that is the context in which the error occurred.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummaryItem.ItemType">
+            <summary>
+            Gets a value that specifies whether the error originated from an object or a property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummaryItem.Message">
+            <summary>
+            Gets or sets the text of the error message.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummaryItem.MessageHeader">
+            <summary>
+            Gets the reference to the input control that resulted in this error
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummaryItem.Sources">
+            <summary>
+            Gets the sources of the error.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItem.ToString">
+            <summary>
+            The string representation of the error.
+            </summary>
+            <returns>The string representation of the ValidationSummaryItem.</returns>
+        </member>
+        <member name="E:System.Windows.Controls.ValidationSummaryItem.PropertyChanged">
+            <summary>
+            This event is raised when any of the properties on the object change
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.ValidationSummaryItemSource">
+            <summary>
+            The source of a ValidationSummaryItem, indicating the PropertyName and/or Control.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItemSource.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ValidationSummaryItemSource class.
+            </summary>
+            <param name="propertyName">The name of the property associated with this error.</param>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItemSource.#ctor(System.String,System.Windows.Controls.Control)">
+            <summary>
+            Initializes a new instance of the ValidationSummaryItemSource class.
+            </summary>
+            <param name="propertyName">The name of the property associated with this error.</param>
+            <param name="control">The control associated with this error.</param>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummaryItemSource.PropertyName">
+            <summary>
+            Gets the PropertyName.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationSummaryItemSource.Control">
+            <summary>
+            Gets the Control.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItemSource.Equals(System.Object)">
+            <summary>
+            Implements the equality check against the PropertyName and Control.
+            </summary>
+            <param name="obj">The ValidationSummaryItem being compared.</param>
+            <returns>A value indicating whether the two references are equal in value.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationSummaryItemSource.GetHashCode">
+            <summary>
+            Returns a HashCode based on the PropertyName and Control Name
+            </summary>
+            <returns>The hash value of the ValidationSummaryItemSource.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.ValidationSummaryItemType">
+            <summary>
+            The source of the error, for error management
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummaryItemType.ObjectError">
+            <summary>
+            The error came from object level validation
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationSummaryItemType.PropertyError">
+            <summary>
+            The error came from the binding engine, which exposes only a single error at a time
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.FocusingInvalidControlEventArgs">
+            <summary>
+            Provides data for the ErrorClicked event.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.FocusingInvalidControlEventArgs.#ctor(System.Windows.Controls.ValidationSummaryItem,System.Windows.Controls.ValidationSummaryItemSource)">
+            <summary>
+            Initializes a new instance of the ValidationSummaryItemEventArgs class.
+            </summary>
+            <param name="item">The selected ValidationSummaryItem</param>
+            <param name="target">The target is the ValidationSummaryItemSource that will be focused.</param>
+        </member>
+        <member name="P:System.Windows.Controls.FocusingInvalidControlEventArgs.Handled">
+            <summary>
+            Gets or sets a value indicating whether the focusing was handled.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.FocusingInvalidControlEventArgs.Item">
+            <summary>
+            Gets the error message string
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.FocusingInvalidControlEventArgs.Target">
+            <summary>
+            Gets or sets the target ValidationSummaryItemSource.  If this value is changed, it will be the new current source 
+            and will be focused.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Label">
+            <summary>
+            Displays a caption, required field indicator, and validation error indicator for a control.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:System.Windows.Controls.Label.#ctor">
+            <summary>
+            Initializes a new instance of the Label class.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Label.ContentInternalProperty">
+            <summary>
+            Identifies the ContentInternal dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Label.ContentInternal">
+            <summary>
+            Gets or sets the ContentInternal property of the Label.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Label.DataContextProperty">
+            <summary>
+            Identifies the DataContext dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Label.IsRequiredProperty">
+            <summary>
+            Identifies the IsRequired dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Label.IsRequired">
+            <summary>
+              Gets or sets a value that indicates whether 
+              the <see cref="P:System.Windows.Controls.Label.Target" /> field is required. 
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Label.OnIsRequiredPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handle the IsRequired field property change event.
+            </summary>
+            <param name="depObj">The Label that had its IsRequired value changed.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs for this event.</param>
+        </member>
+        <member name="F:System.Windows.Controls.Label.IsValidProperty">
+            <summary>
+            Identifies the IsValid dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Label.IsValid">
+            <summary>
+              Gets a value that indicates whether 
+              the <see cref="P:System.Windows.Controls.Label.Target" /> field data is valid. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Label.PropertyPathProperty">
+            <summary>
+            Identifies the PropertyPath dependency property
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Label.PropertyPath">
+            <summary>
+              Gets or sets the path to the dependency property on the 
+              <see cref="P:System.Windows.FrameworkElement.DataContext" /> of the 
+              <see cref="P:System.Windows.Controls.Label.Target" /> control that this 
+              <see cref="T:System.Windows.Controls.Label" /> is associated with. 
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Label.TargetProperty">
+            <summary>
+            Identifies the Target dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Label.Target">
+            <summary>
+              Gets or sets the control that this <see cref="T:System.Windows.Controls.Label" /> is associated with. 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Label.ValidationMetadata">
+            <summary>
+            Internally get or set the ValidationMetadata.  
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Label.Initialized">
+            <summary>
+            Gets a value indicating whether the control has been initialized.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Label.OnApplyTemplate">
+            <summary>
+            When the template is applied, this loads all the template parts
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Label.Refresh">
+            <summary>
+            Reload the metadata from the source target or DataContext
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Label.OnContentChanged(System.Object,System.Object)">
+            <summary>
+            Called when the value of the System.Windows.Controls.Label.Content property changes.
+            </summary>
+            <param name="oldContent">The old value of the System.Windows.Controls.Label.Content property.</param>
+            <param name="newContent">The new value of the System.Windows.Controls.Label.Content property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Label.Label_IsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            IsEnabled property change handler
+            </summary>
+            <param name="sender">The Label that had its IsEnabled value changed.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Label.Label_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Perform initialization code
+            </summary>
+            <param name="sender">The Label that has loaded.</param>
+            <param name="e">The RoutedEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Label.LoadMetadata(System.Boolean)">
+            <summary>
+            Load meta data and update the UI. 
+            </summary>
+            <param name="forceUpdate">If true, metadata will not be loaded from cache.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Label.ParseTargetValidState">
+            <summary>
+            Parse the target error state and update the IsValid property
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Label.Target_BindingValidationError(System.Object,System.Windows.Controls.ValidationErrorEventArgs)">
+            <summary>
+            Event handler for target control's BindingValidationError event.
+            </summary>
+            <param name="sender">The target that had a BindingValidationError event.</param>
+            <param name="e">The ValidationErrorEventArgs for this event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Label.UpdateCommonState">
+            <summary>
+            Update the Common VSM state
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Label.UpdateRequiredState">
+            <summary>
+            Update the required field VSM state based on the IsRequired property.  
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Label.UpdateValidationState">
+            <summary>
+            Update the validation VSM state
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.ValidationItemCollection">
+            <summary>
+            Represents all of the validation items associated with a given input control
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationItemCollection.ClearErrors(System.Windows.Controls.ValidationSummaryItemType)">
+            <summary>
+            Clears errors of the given source type
+            </summary>
+            <param name="errorType">The type of the error (Entity or Property)</param>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationItemCollection.ClearItems">
+            <summary>
+            Clears all the ValidationSummaryItemTypes from the collection.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.ValidationHelper.ValidationMetadataProperty">
+            <summary>
+            Gets or sets the ValidationMetadata, which represents all of the metadata associated with the binding path of the input control.  This includes
+            IsFieldRequired, RequiredFieldMessage, Caption, and Description.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationHelper.GetValidationMetadata(System.Windows.DependencyObject)">
+            <summary>
+            Gets the ValidationMetadata property for the input control
+            </summary>
+            <param name="inputControl">The input control to get the ValidationMetadata property from.</param>
+            <returns>The ValidationMetadata associated with the input control.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationHelper.SetValidationMetadata(System.Windows.DependencyObject,System.Windows.Controls.ValidationMetadata)">
+            <summary>
+            Sets the ValidationMetadata property for the input control
+            </summary>
+            <param name="inputControl">The input control to set the ValidationMetadata property on.</param>
+            <param name="value">The ValidationMetadata to associate with the input control.</param>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationHelper.ParseMetadata(System.Windows.FrameworkElement,System.Boolean,System.Object@,System.Windows.Data.BindingExpression@)">
+            <summary>
+            Parse metadata from a target FrameworkElement.  This will cache the metadata on the element as an attached property.
+            </summary>
+            <param name="element">The target FrameworkElement to pull metadata from.</param>
+            <param name="forceUpdate">If set, will not pull metadata from cache.</param>
+            <param name="entity">The entity used.</param>
+            <param name="bindingExpression">The bindingExpression used.</param>
+            <returns>Returns the metadata associated with the element.  Will be null if no metadata was found.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationHelper.ParseMetadata(System.String,System.Object)">
+            <summary>
+            Parse metadata given a binding path and entity object.
+            </summary>
+            <param name="bindingPath">The bindingPath is the name of the property on the entity from which to pull metadata from.  This supports dot notation.</param>
+            <param name="entity">The entity object from which to pull metadata from.</param>
+            <returns>The validation metadata associated with the entity and binding path.  This will return null if none exists.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.ValidationHelper.GetProperty(System.Type,System.String)">
+            <summary>
+            Get the PropertyInfo for a given entity type.  Supports dot notation to represent nested objects.
+            </summary>
+            <param name="entityType">The type of the object.</param>
+            <param name="propertyPath">The property path, supporting dot notation.</param>
+            <returns>The PropertyInfo corresponding to the final property.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.ValidationMetadata">
+            <summary>
+            Encapsulates metadata info for a given property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationMetadata.IsRequired">
+            <summary>
+            Gets or sets a value indicating whether the field is required
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationMetadata.Description">
+            <summary>
+            Gets or sets the property description
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.ValidationMetadata.Caption">
+            <summary>
+            Gets or sets the caption
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.ValidationMetadata.PropertyChanged">
+            <summary>
+            This event is raised when any of the properties on the object change
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.GroupValidation">
+            <summary>
+            VSM Group for validation, containing focus details.  These details are not orthogonal and thus were combined.   See TextBox validation for precedence.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateValid">
+            <summary>
+            VSM State for Valid
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateInvalid">
+            <summary>
+            VSM STate for Invalid
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateValidFocused">
+            <summary>
+            VSM State for Valid and Focused (DescriptionViewer specific)
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateValidUnfocused">
+            <summary>
+            VSM State for Valid and Unfocused (DescriptionViewer specific)
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateInvalidFocused">
+            <summary>
+            VSM State for Invalid and Focused (DescriptionViewer specific)
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateInvalidUnfocused">
+            <summary>
+            VSM State for Invalid and Focused (DescriptionViewer specific)
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateEmpty">
+            <summary>
+            VSM State for no errors (ValidationSummary specific)
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateHasErrors">
+            <summary>
+            VSM State for containing errors (ValidationSummary specific)
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.GroupCommon">
+            <summary>
+            VSM Group for common states, such as Normal or Disabled
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateNormal">
+            <summary>
+            VSM state for Normal (enabled)
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateDisabled">
+            <summary>
+            VSM state for Disabled
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.GroupRequired">
+            <summary>
+            VSM group for required states
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateNotRequired">
+            <summary>
+            VSM state for not required
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateRequired">
+            <summary>
+            VSM state for required
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.GroupDescription">
+            <summary>
+            VSM group for description states
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateNoDescription">
+            <summary>
+            VSM state for no description defined
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.VisualStates.StateHasDescription">
+            <summary>
+            VSM state for having a description defined
+            </summary>
+        </member>
+    </members>
+</doc>

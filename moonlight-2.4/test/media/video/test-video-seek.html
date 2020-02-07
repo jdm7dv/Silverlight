@@ -1,0 +1,180 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Video seek test</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <script src="../../js/js/utils.js"></script>
+      <script src="../../js/js/testplugin.js"></script>
+</head>
+<body scroll="no" style='border-width: 0px'>
+
+<script type="text/xaml" id="xaml">
+	<?xml version="1.0"?>
+	<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="1280" Height="720">
+		   <MediaElement x:Name="TestVideo" Width="1280" Height="720" MediaOpened="OnMediaOpened" MediaFailed="OnMediaFailed"/> 
+	</Canvas>
+</script>
+
+<script type="text/javascript">
+	var done = false;
+	var seeked = false;
+	var result = true;
+	var ready = true;
+	var mediaElement = null;
+	var plugin = null;
+	var seeks_done = 0;
+	var seek_interval = 4.567;
+	var max_pos = 30.000;
+	var current_pos_string = "";
+	var current_pos = -seek_interval;
+
+	function doubleDigit (number)
+	{
+		if (number < 10)
+			return "0" + number;
+		else
+			return number + "";
+	}
+
+	function tripleDigit (number)
+	{
+		if (number < 10)
+			return "00" + number;
+		else if (number < 100)
+			return "0" + number;
+		else
+			return "" + number;
+	}
+
+	function logResult ()
+	{
+		TestLogger.LogDebug ("logResult, seeked: " + seeked + ", ready: " + ready + ", current_pos: " + current_pos + ", max_pox: " + max_pos);
+		if (!(seeked && ready)) {
+			setTimeout ("logResult ();", 250);
+			return;
+		}
+
+		//TestHost.CaptureSingleImage (".", "video-seek.html." + doubleDigit (seeks_done) + "-" + current_pos_string.replace (/:/g, "_") + ".png", 0, 0, 1200, 800);
+
+		if (done) {
+			if (result) {
+				TestLogger.LogResult (1);
+			} else {
+				TestLogger.LogResult (-1);
+			}
+			TestHost.SignalShutdown (document.name);
+			TestLogger.LogDebug ("logResult: DONE");
+		} else {
+			setTimeout ("doSeek ();", 5);
+		}
+	}
+	
+	function doSeek ()
+	{
+		var diff;
+
+		TestLogger.LogDebug ("doSeek, seeks_done: " + seeks_done + ", seek_interval: " + seek_interval);
+
+		if (done) {
+			logResult ();
+			result;
+		}
+
+		current_pos += seek_interval;
+
+		if (current_pos > max_pos) {
+			done = true;
+			current_pos = max_pos;
+		}
+
+		current_pos_string = "00:00:" + doubleDigit (Math.floor (current_pos)) + "." + tripleDigit (Math.floor((current_pos - Math.floor(current_pos)) * 1000)) + "";
+
+		TestLogger.LogDebug ("Seeking to: '" + current_pos_string + "'");
+		try {
+			mediaElement.Position = current_pos_string;
+		} catch (ex) {
+			TestLogger.LogDebug ("Couldn't set position to: '" + current_pos_string + "': " + ex);
+		}
+
+		if (current_pos > 0) {
+			if (mediaElement.BufferingProgress != 1.0) {
+				TestLogger.LogError ("Expected BufferingProgress to be 1.0, but it's " + mediaElement.BufferingProgress);
+				result = false;
+			} else {
+				TestLogger.LogDebug ("BufferingProgress correct after seek (1.0)");
+			}
+		}
+		
+		diff = Math.abs (mediaElement.Position.Seconds - current_pos);
+
+		if (diff < 0.00001) {
+			result &= true;
+			TestLogger.LogDebug ("Set position to " + current_pos + " and successfully got back " + mediaElement.Position.Seconds + " (diff: " + diff + ")");
+		} else {
+			result = false;
+			TestLogger.LogError ("Expected " + current_pos + " seconds, got " + mediaElement.Position.Seconds + " seconds (diff: " + diff + ")");
+		}
+		seeked = true;
+
+		seeks_done++;
+		setTimeout ("logResult ();", 500);
+	}
+
+	function OnTestPluginReady ()
+	{
+		TestLogger.LogDebug ("OnTestPluginReady");
+		ready = true;
+	}
+
+	function OnPluginError (sender, args)
+	{
+		TestLogger.LogError (ErrorEventArgsToOneLineString (args));
+		TestLogger.LogResult (-1);
+		TestHost.SignalShutdown (document.name);
+	}
+
+	function OnPluginLoaded (o, e)
+	{
+		TestLogger.LogDebug ("OnPluginLoaded");
+		plugin = document.getElementById ("_MoonlightControl");
+		mediaElement = plugin.content.findName ("TestVideo");
+		mediaElement.addEventListener ("MediaOpened", "onMediaOpened");
+		mediaElement.AutoPlay = false;
+		mediaElement.Source = "timecode-long.wmv";
+		TestLogger.LogDebug ("OnPluginLoaded: Done");
+	}
+
+	function OnMediaOpened (me, e)
+	{
+		TestLogger.LogDebug ("OnMediaOpened");
+		mediaElement.Pause ();
+		doSeek ();
+	}
+
+	function OnMediaFailed (obj, args)
+	{
+		TestLogger.LogDebug ("OnMediaFailed");
+		TestLogger.LogError (ErrorEventArgsToOneLineString (args));
+		TestLogger.LogResult (-1)
+		TestHost.SignalShutdown (document.name);
+	}
+</script>
+
+<div>
+<embed type="application/x-silverlight" width="1280" height="720"
+     id="_MoonlightControl" Source="#xaml" OnError="OnPluginError" OnLoad="OnPluginLoaded"
+     style="position:absolute; left:0px; top:0px" background="#CCCCCC">
+</embed>
+</div>
+
+<!--
+<embed id="_TestPlugin" width="0" height="0" type="application/x-jolttest" 
+>
+</embed>
+-->
+</body>
+
+</html>
+
+
+
+

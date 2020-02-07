@@ -1,0 +1,3 @@
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Toolkit.VisualStudio.Design\obj\Debug\System.Windows.Controls.Design.Properties.Resources.resources
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Toolkit.VisualStudio.Design\obj\Debug\Controls.Toolkit.VisualStudio.Design.csproj.GenerateResource.cache
+D:\Jonathan_Moore\Career\Source\Microsoft\VERVE\app\Silverlight\Silverlight3\Source\Controls.Toolkit.VisualStudio.Design\obj\Debug\Controls.Toolkit.VisualStudio.Design.csproj.CoreCompileInputs.cache

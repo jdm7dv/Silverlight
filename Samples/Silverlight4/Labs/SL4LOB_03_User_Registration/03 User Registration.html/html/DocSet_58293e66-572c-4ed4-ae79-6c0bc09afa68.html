@@ -1,0 +1,156 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Introducing MVVM and Customizing the UI by UI Role" />
+      <MSHelp:RLTitle Title="Exercise 1: Introducing MVVM and Customizing the UI by UI Role" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Introducing MVVM and Customizing the UI by UI Role</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/javascript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/javascript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Silverlight Business Apps: Module 3 - Authentication, Validation, MVVM, Implicit Styles and RichTextBox Lab</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Introducing MVVM and Customizing the UI by UI Role</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+      <table width="100%" id="bottomTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0" style="cursor:default;display:none;">
+              <img id="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../local/collall.gif" />
+              <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label>
+              <label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span id="languageFilterToolTip" onmouseover="languageFilterImage.src=dropDownHoverImage.src;" onmouseout="languageFilterImage.src=dropDownImage.src;" tabindex="0" style="cursor:default;">
+              <img id="languageFilterImage" alt="DropDown image" src="../local/drpdown.gif" />
+              <label id="showAllLabel" for="languageFilterImage" style="display: none;">Language Filter: All</label>
+              <label id="multipleLabel" for="languageFilterImage" style="display: none;">Language Filter: Multiple</label>
+              <label id="vbLabel" for="languageFilterImage" style="display: none;">Language Filter: Visual Basic</label>
+              <label id="csLabel" for="languageFilterImage" style="display: none;">Language Filter: C#</label>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div id="languageSpan">
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="vbUsageCheckbox" />
+        <label class="languageFilter" for="vbUsageCheckbox">Visual Basic Usage</label>
+        <br />
+        <input type="checkbox" name="languageFilter" onclick="SetLanguage(this)" id="csCheckbox" />
+        <label class="languageFilter" for="csCheckbox">C#</label>
+        <br />
+      </div>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>This exercise will add a ViewModel to the application’s home screen (view) while introducing MVVM practices. Authentication features will be modified to check against the sample database’s user and roles tables.</p>
+        <a name="_Toc256193902" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Setup Authentication</b>
+        </p>
+        <ol>
+          <li>Open the SlEventManager solution in Visual Studio 2010 (copy the Starting Point solution).<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This lab uses the aspnet_ tables and ASP.NET authentication. You can see the tables in the application’s database  by following the steps below.<br />Expand the App_Data folder and double click SlEventManager.mdf. This will show the Server Explorer panel, and will expand the Data Connections entry for your project’s database. Expand the Tables item for this database, and you’ll see various tables whose names begin with aspnet_. <br />Right click on aspnet_Users and select Show Table Data, and it will show the contents of the table. You should see two rows, representing two user accounts (ian and administrator) that are present in the database provided for this example project.<br />These aspnet_ tables are standard ones recognized by various ASP.NET features for working with users, role-based security, and profiles. It’s common for these tables to end up in an auto-generated SQL Express database called ASPNETDB.MDF—Visual Studio can arrange for this database to be generated for you. (And in fact it will hide it by default, so it’s not always obvious that it’s done it.) But we’re not going to use a generated database. We’re going to use the tables already present in the SlEventManager.mdf database, for two reasons. First, the database is preloaded with some user accounts and roles that you’ll be using in this lab. Second, keeping everything in one database is simpler for deployment reasons.<br />The one downside is that we need to configure the ASP.NET web application to use our database. By default it will go ahead and generate one for you. In fact, if you’ve already been playing with the login controls that the Silverlight Business Application template adds to new applications, it’s possible that this has already happened. Select the App_Data folder and then click the Show All Files button at the top of Solution Explorer, and if you see an ASPNETDB.MDF, that means the automatic generation has already happened. Not that this is a problem. We’ll switch to the example database now.</td></tr></table><p /></div></li>
+          <li>Open the SlEventManager.Web project’s web.config file.</li>
+          <li>Find the &lt;system.web&gt; element.</li>
+          <li>Delete the &lt;roleManager enabled="true" /&gt; element.</li>
+          <li>Delete the <b>&lt;profile&gt;</b> element and all its children.</li>
+          <li>Inside the &lt;system.web&gt; element, add the following:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;membership defaultProvider="SlEventManagerMembershipProvider" userIsOnlineTimeWindow="15"&gt;  &lt;providers&gt;    &lt;clear /&gt;    &lt;add name="SlEventManagerMembershipProvider"         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"         connectionStringName="SlEventManagerDb" applicationName="/SlEventManager" enablePasswordRetrieval="false"         enablePasswordReset="true" requiresQuestionAndAnswer="true" requiresUniqueEmail="true"         passwordFormat="Hashed" /&gt;  &lt;/providers&gt;&lt;/membership&gt;&lt;roleManager enabled="true" defaultProvider="SlEventManagerRoleProvider"&gt;  &lt;providers&gt;    &lt;clear /&gt;    &lt;add name="SlEventManagerRoleProvider"         type="System.Web.Security.SqlRoleProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"         connectionStringName="SlEventManagerDb" applicationName="/SlEventManager" /&gt;  &lt;/providers&gt;&lt;/roleManager&gt;&lt;profile enabled="true" defaultProvider="SlEventManagerProfileProvider"&gt;  &lt;providers&gt;    &lt;clear /&gt;    &lt;add name="SlEventManagerProfileProvider" connectionStringName="SlEventManagerDb"         applicationName="/SlEventManager"         type="System.Web.Profile.SqlProfileProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" /&gt;  &lt;/providers&gt;  &lt;properties&gt;    &lt;add name="FriendlyName" /&gt;  &lt;/properties&gt;&lt;/profile&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The editorial process has split some of the lines to fit them on the page. If you copy and paste this in you should be fine, but don’t try to reproduce the line breaks in the middle of the type attributes.<br />This explicitly configures Membership, Role, and Profile providers. Silverlight Business Applications use all three of these. (The Membership feature is the one that deals with user logins, by the way.) <br />This explicit configuration lets us do two things. First, it lets us specify an applicationName; this scopes the user accounts, roles, and profiles to our application, and it’s considered good practice always to set this. Second, it lets us specify the database connection string to be used for each of these features, which is how ASP.NET will know to use our database. All three are using the SlEventManagerDb connection string.</td></tr></table><p /></div></li>
+          <li>Find the &lt;connectionStrings&gt; section of the web.config. Add another entry for the authentication database:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;add name="SlEventManagerDb"     connectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\SlEventManager.mdf;Integrated Security=True;User Instance=True;MultipleActiveResultSets=True"     providerName="System.Data.SqlClient" /&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The connectionString should not have any line breaks in your web.config.</td></tr></table><p /></div></li>
+          <li>Run the application. </li>
+          <li>Click on the login link at the top right of the page. A login UI will appear.</li>
+          <li>Log in with a username of administrator, and a password of P@ssw0rd (that’s a number zero after the w). <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The login should succeed, verifying that your application is successfully using the aspnet_Users table (and associated tables such as aspnet_Membership) to for managing logins. (Feel free to verify that it’s not simply allowing <i>any</i> credentials, by trying to log in with a non-existent account, or the wrong password. The login should fail when you try that.)</td></tr></table><p /></div></li>
+          <li>Close the application.</li>
+          <li>Back in Visual Studio, inspect the data in the aspnet_Roles table. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This contains two rows, defining two roles: Event Administrators and Registered Users. (In the database supplied, the administrator account belongs to both roles, while the ian account belongs only to the second. Role membership is defined in the aspnet_UsersInRoles table.) The Registered Users role is one you’ll typically get by default in this sort of application, because the Silverlight Business Application template includes code to generate it.<br />The AddUser method in the SlEventManager.Web project’s UserRegistrationService.cs file uses the ASP.NET Roles class to create the Registered Users role if it doesn’t already exist, and automatically adds newly-created users to that role. </td></tr></table><p /></div></li>
+          <li>Run the application</li>
+          <li>If the application still shows you as being logged in, log out. </li>
+          <li>Use the login UI to create a new user account (all the code for registering as a new user is built into the template). <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Once you’ve done this you should see new entries in the aspnet_Users, aspnet_Membership, and aspnet_UsersInRoles tables, representing your new account, and its membership of the Registered Users role.</td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc256193903" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create Registration Buttons</b>
+        </p>
+        <ol>
+          <li>Go to Home.xaml in the SlEventManager project’s Views folder. </li>
+          <li>Add the following StackPanel after the existing one:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>XAML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;StackPanel Orientation="Horizontal" HorizontalAlignment="Right"&gt;  &lt;Button x:Name="registerForEventButton" Content="Register" /&gt;  &lt;Button x:Name="unregisterForEventButton" Content="Unregister" /&gt;&lt;/StackPanel&gt;</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Right now both panels will be visible at once, but we’ll fix that with a ViewModel that will provide bindable properties to control the visibility of these two panels.</td></tr></table><p /></div></li>
+          <li>Add a new class to your SlEventManager project (with Shift+Alt+C or the Add→Class… context menu in the Solution Explorer) called ViewModelBase.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>A ViewModel needs to notify Silverlight whenever its properties change so that and data binding expressions that connect to the ViewModel know to update the target UI element. The usual way to do this is to implement INotifyPropertyChanged. So it’s common to define a base class to provide a common implementation of this interface for all ViewModels. </td></tr></table><p /></div></li>
+          <li>Add this using declaration:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using System.ComponentModel;</pre></td></tr></table></span></div></li>
+          <br />
+          <li>Implement the class as shown here:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class ViewModelBase : INotifyPropertyChanged{    public event PropertyChangedEventHandler PropertyChanged;    protected void OnPropertyChanged(string propertyName)    {        if (PropertyChanged != null)        {            PropertyChanged(this,                 new PropertyChangedEventArgs(propertyName));        }    }}</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc256193904" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Create the ViewModel</b>
+        </p>
+        <ol>
+          <li>Add a new folder to the SlEventManager project called ViewModels. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>ViewModels are typically designed either for a particular view (i.e. a particular XAML file and its code behind) or some part of the view (e.g., an individual item in a list inside a view). You will be defining a ViewModel for the Home.xaml view. </td></tr></table><p /></div></li>
+          <li>Add a class called HomeViewModel in the ViewModels folder. </li>
+          <li>Make this new class derive from the ViewModelBase class you created.</li>
+          <li>The ViewModel needs to determine the visibility of the administrator buttons, so add the following property definition:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private Visibility _adminButtonsVisibility;public Visibility AdminButtonsVisibility{    get { return _adminButtonsVisibility; }    set    {        if (_adminButtonsVisibility != value)        {            _adminButtonsVisibility = value;            OnPropertyChanged("AdminButtonsVisibility");        }    }}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This is the typical boilerplate implementation for a property that raises change notifications. This particular property’s type is Visibility—that’s because we’re going bind this to one of the StackPanels’ Visibility properties.</td></tr></table><p /></div></li>
+          <li>Add another similar property called AttendeeButtonsVisibility.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private Visibility _attendeeButtonsVisibility;public Visibility AttendeeButtonsVisibility{    get { return _attendeeButtonsVisibility; }    set    {        if (_attendeeButtonsVisibility != value)        {            _attendeeButtonsVisibility = value;            OnPropertyChanged("AttendeeButtonsVisibility");        }    }}</pre></td></tr></table></span></div></li>
+          <li>Add the following code to have the ViewModel set these properties :<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private void UpdateForUserRole(){    bool isLoggedIn = WebContext.Current.User.IsAuthenticated;    bool isAdmin = isLoggedIn &amp;&amp;                   WebContext.Current.User.IsInRole("Event Administrators");    AdminButtonsVisibility = isAdmin ?        Visibility.Visible : Visibility.Collapsed;    AttendeeButtonsVisibility = (isLoggedIn &amp;&amp; !isAdmin) ?        Visibility.Visible : Visibility.Collapsed;}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>This uses the WebContext class, which is provided by WCF RIA Services. This has built-in support for the concept of user authentication and roles. This relies on the AuthenticationService in the SlWebManager.Web project’s Services folder.</td></tr></table><p /></div></li>
+          <li>We need to call the UpdateForUserRole method when the UI first loads, but also whenever the user logs in or out. So add the following constructor to your ViewModel:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public HomeViewModel(){    WebContext.Current.Authentication.LoggedIn += (s, e) =&gt; UpdateForUserRole();    WebContext.Current.Authentication.LoggedOut += (s, e) =&gt; UpdateForUserRole();    UpdateForUserRole();}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The WebContext.Current.Authentication object offers these events to notify you when the user logs in or out, enabling us to know when we should update the ViewModel’s state.</td></tr></table><p /></div></li>
+          <li>Create an instance of this ViewModel and bind the view to it by adding the field declaration and initializer in the Home.xaml.cs codebehind:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>HomeViewModel _viewModel = new HomeViewModel();</pre></td></tr></table></span></div></li>
+          <li>Add this using statement:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>using SlEventManager.ViewModels;</pre></td></tr></table></span></div></li>
+          <li>In the view’s constructor, assign this into the DataContext for the view:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>this.DataContext = _viewModel;</pre></td></tr></table></span></div></li>
+          <li>In <b>Home.xaml</b>, go to the original <b>StackPanel</b>, the one containing the buttons for editing and creating events.</li>
+          <li>Add the following attribute to the 2 StackPanels to cause the panel’s visibility to be controlled by the ViewModel.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>Visibility="{Binding Path=AdminButtonsVisibility}"</pre></td></tr></table></span></div></li>
+          <li>Add a similar attribute to the other StackPanel, binding its Visibility to the AttendeeButtonsVisibility property.</li>
+          <li>Run the application.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Initially you will most likely not be logged in (unless you checked the checkbox to remain logged in earlier.) When not logged on, you will see no buttons at all. But if you log in as a normal user (e.g. ian, password P@ssw0rd), you should see the Register and Unregister buttons appear. If you log back out these will disappear again. If you log in as administrator (P@ssw0rd) you will see the buttons for editing and creating events.</td></tr></table><p /></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to jopapa@microsoft.com<p />Copyright © 2010 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

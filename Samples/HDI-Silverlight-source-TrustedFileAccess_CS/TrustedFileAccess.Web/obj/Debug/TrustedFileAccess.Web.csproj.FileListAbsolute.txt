@@ -1,0 +1,5 @@
+C:\Users\Jonathan Moore\Desktop\HDI-Silverlight-source-TrustedFileAccess_CS\TrustedFileAccess.Web\bin\TrustedFileAccess.Web.dll
+C:\Users\Jonathan Moore\Desktop\HDI-Silverlight-source-TrustedFileAccess_CS\TrustedFileAccess.Web\bin\TrustedFileAccess.Web.pdb
+C:\Users\Jonathan Moore\Desktop\HDI-Silverlight-source-TrustedFileAccess_CS\TrustedFileAccess.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonathan Moore\Desktop\HDI-Silverlight-source-TrustedFileAccess_CS\TrustedFileAccess.Web\obj\Debug\TrustedFileAccess.Web.dll
+C:\Users\Jonathan Moore\Desktop\HDI-Silverlight-source-TrustedFileAccess_CS\TrustedFileAccess.Web\obj\Debug\TrustedFileAccess.Web.pdb

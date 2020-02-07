@@ -1,0 +1,240 @@
+/*
+ * value.h: Generated code for the type system.
+ *
+ * Contact:
+ *   Moonlight List (moonlight-list@lists.ximian.com)
+ *
+ * Copyright 2007 Novell, Inc. (http://www.novell.com)
+ *
+ * See the LICENSE file included with the distribution for details.
+ * 
+ */
+
+#ifndef MOON_VALUE_H
+#define MOON_VALUE_H
+
+#include <glib.h>
+#include <string.h>
+#include <cairo.h>
+
+#include "moonbuild.h"
+#include "type.h"
+
+/* 
+ * ugly file containing the catchall value type we use.
+ */
+
+struct FontFamily;
+struct FontSource;
+struct FontWeight;
+struct FontStyle;
+struct FontStretch;
+struct PropertyPath;
+struct Color;
+struct Duration;
+struct KeyTime;
+struct Point;
+struct Rect;
+struct Size;
+struct Uri;
+struct RepeatBehavior;
+struct GridLength;
+struct Thickness;
+struct CornerRadius;
+struct ManagedTypeInfo;
+
+struct Value;
+
+class Type;
+class DependencyProperty;
+class Surface;
+class AnimationStorage;
+
+/*DO_FWD_DECLS*/
+
+#if SANITY || DEBUG
+#define checked_get_exact(kind, errval, mem)  g_return_val_if_fail (k == (kind), errval); return mem;
+#define checked_get_subclass(kind, castas) \
+	if (u.dependency_object == NULL || k == (kind)) \
+		return (castas*)u.dependency_object;	\
+	g_return_val_if_fail (Types::IsSubclassOrSuperclassOf (types, k, kind), NULL); \
+	return (castas*)u.dependency_object;
+#else
+#define checked_get_exact(kind, errval, mem) return mem;
+#define checked_get_subclass(kind, castas) return (castas*)u.dependency_object;
+#endif
+
+struct MOON_API Value {
+public:
+	void Init ();
+
+	Value ();
+	Value (const Value& v);
+	explicit Value (Type::Kind k);
+	explicit Value (bool z);
+	explicit Value (double d);
+	explicit Value (gint32 i);
+	explicit Value (guint32 i);
+	Value (gunichar c, Type::Kind as); // for use with char values.
+	Value (gint64 i, Type::Kind as); // Use for TimeSpan and int64 values.
+	Value (Color c);
+	Value (EventObject *obj);
+	Value (FontFamily family);
+	Value (FontSource source);
+	Value (FontWeight weight);
+	Value (FontStyle style);
+	Value (FontStretch stretch);
+	Value (PropertyPath propertypath);
+	Value (Point pt);
+	Value (Rect rect);
+	Value (Size size);
+	Value (Uri uri);
+	Value (RepeatBehavior repeat);
+	Value (Duration duration);
+	Value (KeyTime keytime);
+	Value (GridLength grid_length);
+	Value (Thickness thickness);
+	Value (CornerRadius radius);
+	Value (ManagedTypeInfo type_info);
+	Value (const char *s, bool take = false);
+	Value (Point *points, int count);
+	Value (double *values, int count);
+	Value (Type::Kind, void *npobj);
+
+	~Value ();
+
+	// Use these to create Values with dependency objects with
+	// a reference count of 1 (giving the ownership of the object
+	// to Value).
+	// Useful in cases like this:
+	//   SetValue (SomeProperty, new DependencyObject ())
+	// in which case we have to unref the newly created object.
+	static Value* CreateUnrefPtr (EventObject* dob);
+	static Value  CreateUnref (EventObject* dob);
+
+	// essentially the same as the copy constructor, except it
+	// does a deep copy of DependencyObjects.
+	static Value* Clone (Value *v, Types *types = NULL);
+
+	bool GetIsNull ();
+	void SetIsNull (bool isNull);
+
+	bool operator!= (const Value &v) const;
+	bool operator== (const Value &v) const;
+
+	Value& operator= (const Value& other);
+	
+	bool		Is (Deployment *deployment, Type::Kind type) { return Type::IsSubclassOf (deployment, k, type); }
+
+	bool		AsBool ()	{ checked_get_exact (Type::BOOL, false, (bool)u.i32); }
+	gunichar	AsChar ()       { checked_get_exact (Type::CHAR, 0, u.c); }
+	double 		AsDouble ()	{ checked_get_exact (Type::DOUBLE, 0.0, u.d); }
+	float 		AsFloat ()	{ checked_get_exact (Type::FLOAT, 0.0, u.f); }
+	guint64		AsUInt64 ()	{ checked_get_exact (Type::UINT64, 0, u.ui64); }
+	gint64		AsInt64 ()	{ checked_get_exact (Type::INT64, 0, u.i64); }
+	TimeSpan	AsTimeSpan ()	{ checked_get_exact (Type::TIMESPAN, 0, (TimeSpan)u.i64); }
+	guint32		AsUInt32 ()	{ checked_get_exact (Type::UINT32, 0, u.ui32); }
+	gint32		AsInt32 ()	{ checked_get_exact (Type::INT32, 0, u.i32); }
+	Color*		AsColor ()	{ checked_get_exact (Type::COLOR, NULL, u.color); }
+	Point*		AsPoint ()	{ checked_get_exact (Type::POINT, NULL, u.point); }
+	Uri*		AsUri ()	{ checked_get_exact (Type::URI, NULL, u.uri); }
+	Rect*		AsRect ()	{ checked_get_exact (Type::RECT, NULL, u.rect); }
+	Size*		AsSize ()	{ checked_get_exact (Type::SIZE, NULL, u.size); }
+	FontFamily*	AsFontFamily ()	{ checked_get_exact (Type::FONTFAMILY, NULL, u.fontfamily); }
+	FontWeight*	AsFontWeight ()	{ checked_get_exact (Type::FONTWEIGHT, NULL, u.fontweight); }
+	FontStyle*	AsFontStyle ()	{ checked_get_exact (Type::FONTSTYLE, NULL, u.fontstyle); }
+	FontStretch*	AsFontStretch() { checked_get_exact (Type::FONTSTRETCH, NULL, u.fontstretch); }
+	FontSource*	AsFontSource ()	{ checked_get_exact (Type::FONTSOURCE, NULL, u.fontsource); }
+	PropertyPath*	AsPropertyPath ()	{ checked_get_exact (Type::PROPERTYPATH, NULL, u.propertypath); }
+	char*		AsString ()	{ checked_get_exact (Type::STRING, NULL, u.s); }
+	DependencyProperty*		AsDependencyProperty ()	{ checked_get_exact (Type::DEPENDENCYPROPERTY, NULL, u.dp); }
+	
+	void *		AsManagedObject () { checked_get_exact (Type::MANAGED, NULL, u.managed_object); }
+	void *		AsNPObj () { checked_get_exact (Type::NPOBJ, NULL, u.npobj); }
+	
+	RepeatBehavior*	AsRepeatBehavior ()	{ checked_get_exact (Type::REPEATBEHAVIOR, NULL, u.repeat); }
+	Duration*	AsDuration ()	{ checked_get_exact (Type::DURATION, NULL, u.duration); }
+	KeyTime*	AsKeyTime ()	{ checked_get_exact (Type::KEYTIME, NULL, u.keytime); }
+	GridLength*     AsGridLength () { checked_get_exact (Type::GRIDLENGTH, NULL, u.grid_length); }
+	Thickness*      AsThickness () { checked_get_exact (Type::THICKNESS, NULL, u.thickness); }
+	CornerRadius*   AsCornerRadius () { checked_get_exact (Type::CORNERRADIUS, NULL, u.corner); }
+	ManagedTypeInfo* AsManagedTypeInfo () { checked_get_exact (Type::MANAGEDTYPEINFO, NULL, u.type_info); }
+	/* nullable primitives (all but bool) */
+	double*		AsNullableDouble ()	{ checked_get_exact (Type::DOUBLE, NULL, &u.d); }
+	guint64*	AsNullableUint64 ()	{ checked_get_exact (Type::UINT64, NULL, &u.ui64); }
+	gint64* 	AsNullableInt64 ()	{ checked_get_exact (Type::INT64, NULL, &u.i64); }
+	gint32* 	AsNullableInt32 ()	{ checked_get_exact (Type::INT32, NULL, &u.i32); }
+	
+/*DO_AS*/
+	
+	char *ToString ();
+	
+  	Type::Kind GetKind ();
+	
+	void FreeValue ();
+	
+  private:
+	Type::Kind k;
+	
+	gint32 padding;
+	
+	union {
+		double d;
+		float f;
+		guint64 ui64;
+		gint64 i64;
+		guint32 ui32;
+		gint32 i32;
+		gunichar c;
+		char *s;
+		EventObject *dependency_object;
+		Color *color;
+		DependencyProperty *dp;
+		Point *point;
+		Uri *uri;
+		Rect *rect;
+		Size *size;
+		FontFamily *fontfamily;
+		FontSource *fontsource;
+		FontWeight *fontweight;
+		FontStretch *fontstretch;
+		FontStyle *fontstyle;
+		PropertyPath *propertypath;
+		RepeatBehavior *repeat;
+		Duration *duration;
+		KeyTime *keytime;
+		GridLength *grid_length;
+		Thickness *thickness;
+		CornerRadius *corner;
+		ManagedTypeInfo *type_info;
+		void *managed_object;
+		void *npobj;
+	} u;
+	
+	// You don't want to be using this ctor.  it's here to help
+	// c++ recognize bad unspecified pointer args to Value ctors
+	// (it normally converts them to bool, which we handle, so you
+	// never see the error of your ways).  So do the world a
+	// favor, and don't expose this ctor. :)
+	Value (void *v) { }
+	// You don't want to be using this ctor either.
+	// Use the Value (gint64, Type::Kind) ctor
+	// (Both for TimeSpan and int64_t)
+	// This one is bad because it get used by either int64_t
+	// and TimeSpan, and the constructor doesn't know which 
+	// of the two types it is.
+	explicit Value (gint64 i) {};
+
+	void Copy (const Value& other);
+	char *GetName ();
+};
+
+G_BEGIN_DECLS
+/* @GeneratePInvoke */
+void value_free_value (Value *value) MOON_API;
+/* @GeneratePInvoke */
+void value_free_value2 (/* @MarshalAs=IntPtr */ Value *value) MOON_API;
+G_END_DECLS
+
+
+#endif /* MOON_VALUE_H */

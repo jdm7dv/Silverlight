@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SlEventManagerModelStoreContainer" CdmEntityContainer="SlEventManagerEntities">
+    <EntitySetMapping Name="Attendees">
+      <EntityTypeMapping TypeName="SlEventManagerModel.Attendee">
+        <MappingFragment StoreEntitySet="Attendee">
+          <ScalarProperty Name="AttendeeID" ColumnName="AttendeeID" />
+          <ScalarProperty Name="AspNetUserId" ColumnName="AspNetUserId" />
+          <ScalarProperty Name="UserPicture" ColumnName="UserPicture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttendeeEvents">
+      <EntityTypeMapping TypeName="SlEventManagerModel.AttendeeEvent">
+        <MappingFragment StoreEntitySet="AttendeeEvent">
+          <ScalarProperty Name="AttendeeEventID" ColumnName="AttendeeEventID" />
+          <ScalarProperty Name="AttendeeID" ColumnName="AttendeeID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="IsAcknowledged" ColumnName="IsAcknowledged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttendeeScheduleTalks">
+      <EntityTypeMapping TypeName="SlEventManagerModel.AttendeeScheduleTalk">
+        <MappingFragment StoreEntitySet="AttendeeScheduleTalk">
+          <ScalarProperty Name="AttendeeScheduleTalkID" ColumnName="AttendeeScheduleTalkID" />
+          <ScalarProperty Name="AttendeeID" ColumnName="AttendeeID" />
+          <ScalarProperty Name="TalkID" ColumnName="TalkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="SlEventManagerModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
+          <ScalarProperty Name="EventVenueName" ColumnName="EventVenueName" />
+          <ScalarProperty Name="EventStartDate" ColumnName="EventStartDate" />
+          <ScalarProperty Name="EventEndDate" ColumnName="EventEndDate" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="IsLive" ColumnName="IsLive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventTracks">
+      <EntityTypeMapping TypeName="SlEventManagerModel.EventTrack">
+        <MappingFragment StoreEntitySet="EventTrack">
+          <ScalarProperty Name="EventTrackID" ColumnName="EventTrackID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventTrackTitle" ColumnName="EventTrackTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Talks">
+      <EntityTypeMapping TypeName="SlEventManagerModel.Talk">
+        <MappingFragment StoreEntitySet="Talk">
+          <ScalarProperty Name="TalkID" ColumnName="TalkID" />
+          <ScalarProperty Name="EventTrackID" ColumnName="EventTrackID" />
+          <ScalarProperty Name="TalkTitle" ColumnName="TalkTitle" />
+          <ScalarProperty Name="TalkAbstract" ColumnName="TalkAbstract" />
+          <ScalarProperty Name="TalkStartTime" ColumnName="TalkStartTime" />
+          <ScalarProperty Name="TalkEndTime" ColumnName="TalkEndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

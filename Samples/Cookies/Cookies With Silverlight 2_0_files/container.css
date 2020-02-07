@@ -1,0 +1,75 @@
+.boxtop {
+	BACKGROUND: url(images/container1top.gif) no-repeat; MARGIN: 0px; WIDTH: 196px; HEIGHT: 66px
+}
+.boxtitle {
+	PADDING-LEFT: 10px; FLOAT: left
+}
+.boxtitlestyle {
+	FONT-WEIGHT: normal; FONT-SIZE: 16px; COLOR: #bccbd8; LINE-HEIGHT: 50px; FONT-FAMILY: "trebuchet ms", trebuchet, tahoma,arial,verdana,sans-serif
+}
+.boxicon {
+	FLOAT: right; WIDTH: 50px; PADDING-TOP: 2px; HEIGHT: 50px
+}
+.boxbody {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 11px; BACKGROUND: url(images/container1body.gif); PADDING-BOTTOM: 0px; WIDTH: 196px; PADDING-TOP: 0px
+}
+.boxbottom {
+	BACKGROUND: url(images/container1bottom.gif) no-repeat; WIDTH: 196px; HEIGHT: 7px
+}
+.boxtext {
+	FONT-SIZE: 11px; MARGIN: 0px 10px 0px 7px; WIDTH: 179px; LINE-HEIGHT: 16px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; font-color: #374049
+}
+.borderlesscontainertop {
+	
+}
+.borderlesscontainertitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #be0000; LINE-HEIGHT: 30px; FONT-FAMILY: "trebuchet ms", trebuchet, tahoma,arial,verdana,sans-serif
+}
+.borderlesscontainerbody {
+	DISPLAY: block; FONT-SIZE: 11px; LINE-HEIGHT: 18px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; font-color: #455058
+}
+.bordernesscontainerbottom {
+	
+}
+.leftcontainertop {
+	DISPLAY: block; BACKGROUND: url(images/leftcontainertop.gif) no-repeat; HEIGHT: 45px; TEXT-ALIGN: left
+}
+.leftcontainerbody {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-COLOR: #e2e5e8
+}
+.leftcontainerbottom {
+	
+}
+.leftcontainertext {
+	DISPLAY: block; FONT-SIZE: 11px; MARGIN: 0px 5px 1px 15px; COLOR: #374049; LINE-HEIGHT: 16px; FONT-FAMILY: tahoma, arial, verdana, sans-serif
+}
+.leftcontainertitlestyle {
+	PADDING-LEFT: 30px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 24px; FONT-FAMILY: "trebuchet ms", trebuchet, tahoma,arial,verdana,sans-serif
+}
+.borderbox {
+	MARGIN: 0px auto 0px 22px; POSITION: relative
+}
+.bordertitle {
+	BACKGROUND: url(images/border_title_back.gif) no-repeat right top; WIDTH: 100%; POSITION: relative; HEIGHT: 56px
+}
+.bordertitleleft {
+	BACKGROUND: url(images/border_title_left.gif) no-repeat left top; FLOAT: left; MARGIN-LEFT: -22px; WIDTH: 22px; POSITION: relative; HEIGHT: 56px
+}
+.bordertitletext {
+	DISPLAY: block; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 20px; COLOR: #f0f2f4; LINE-HEIGHT: 40px; FONT-FAMILY: "trebuchet ms",tahoma,arial,verdana
+}
+.borderfooter {
+	BACKGROUND: url(images/border_footer_back.gif) no-repeat right top; WIDTH: 100%; POSITION: relative; HEIGHT: 18px
+}
+.borderfooterleft {
+	BACKGROUND: url(images/border_footer_left.gif) no-repeat left top; MARGIN-LEFT: -22px; WIDTH: 22px; POSITION: relative; HEIGHT: 18px
+}
+.bordercontent {
+	BORDER-RIGHT: #d4dbe0 2px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN-LEFT: -22px; BORDER-LEFT: #d4dbe0 2px solid; LINE-HEIGHT: 18px; PADDING-TOP: 0px; FONT-FAMILY: tahoma,arial,verdana; BACKGROUND-COLOR: #f0f2f4
+}
+.bordertitlecolor {
+	BACKGROUND: url(images/border_title_back_color.gif) no-repeat right top; WIDTH: 100%; POSITION: relative; HEIGHT: 56px
+}
+.bordertitleleftcolor {
+	BACKGROUND: url(images/border_title_left_color.gif) no-repeat left top; FLOAT: left; MARGIN-LEFT: -22px; WIDTH: 22px; POSITION: relative; HEIGHT: 56px
+}

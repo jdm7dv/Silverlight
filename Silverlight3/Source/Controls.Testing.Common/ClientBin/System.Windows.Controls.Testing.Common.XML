@@ -1,0 +1,2610 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.Testing.Common</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Controls.Testing.EnumerableExtensions">
+            <summary>
+            Extension methods for the IEnumerable class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.EnumerableExtensions.HoldUntilChanges``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Only returns a new item if it has a different type than the previous
+            item.
+            </summary>
+            <typeparam name="T">The type of the items in the sequence.</typeparam>
+            <param name="that">The sequence of items.</param>
+            <returns>A filtered sequence of items.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.EnumerableExtensions.ItemsEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns a value indicating whether the items in the left sequence
+            and the right sequence are equal.
+            </summary>
+            <typeparam name="T">The type of the items in the sequence.</typeparam>
+            <param name="left">The left sequence.</param>
+            <param name="right">The right sequence.</param>
+            <returns>A value indicating whether the items in the left sequence
+            and the right sequence are equal.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.ActionSubject`1">
+            <summary>
+            A subject that executes an action and then returns a single value.
+            </summary>
+            <typeparam name="T">The type of value returned.</typeparam>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ActionSubject`1.Action">
+            <summary>
+            Gets the action to execute when an observer is registered.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ActionSubject`1.#ctor(System.Action{System.Windows.Controls.Testing.ActionSubject{`0},System.Collections.Generic.IObserver{`0}})">
+            <summary>
+            Initializes a new instance of the ActionSubject class.
+            </summary>
+            <param name="action">The action to execute.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ActionSubject`1.Subscribe(System.Collections.Generic.IObserver{`0})">
+            <summary>
+            Executes an action when an observer is registered.
+            </summary>
+            <param name="observer">The observer of the action.</param>
+            <returns>A registration object that can be used to unregister.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.ContentControlTest">
+            <summary>
+            ContentControl unit tests.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.DefaultControlToTest">
+            <summary>
+            Gets a default instance of Control (or a derived type) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.ControlsToTest">
+            <summary>
+            Gets instances of Control (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.OverriddenControlsToTest">
+            <summary>
+            Gets instances of IOverriddenControl (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.DefaultContentControlToTest">
+            <summary>
+            Gets a default instance of ContentControl (or a derived type) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.ContentControlsToTest">
+            <summary>
+            Gets instances of ContentControl (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.OverriddenContentControlsToTest">
+            <summary>
+            Gets instances of IOverriddenContentControl (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.ContentProperty">
+            <summary>
+            Gets the Content dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ContentControlTest.ContentTemplateProperty">
+            <summary>
+            Gets the ContentTemplate dependency property test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ContentControlTest.#ctor">
+            <summary>
+            Initializes a new instance of the ContentControlTest class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ContentControlTest.GetDependencyPropertyTests">
+            <summary>
+            Get the dependency property tests.
+            </summary>
+            <returns>The dependency property tests.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.IOverriddenContentControl">
+            <summary>
+            Interface used to test virtual members of ContentControl.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenContentControl.ContentChangedActions">
+            <summary>
+            Gets the OnContentChanged test actions.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.ControlTest">
+            <summary>
+            Base class used to author unit tests for controls.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.DefaultFrameworkElementToTest">
+            <summary>
+            Gets a default instance of FrameworkElement (or a derived type) to
+            test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.FrameworkElementsToTest">
+            <summary>
+            Gets instances of FrameworkElement (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.OverriddenFrameworkElementsToTest">
+            <summary>
+            Gets instances of IOverriddenFrameworkElement (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.DefaultControlToTest">
+            <summary>
+            Gets a default instance of Control (or a derived type) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.ControlsToTest">
+            <summary>
+            Gets instances of Control (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.OverriddenControlsToTest">
+            <summary>
+            Gets instances of IOverriddenControl (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.BackgroundProperty">
+            <summary>
+            Gets the Background dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.BorderBrushProperty">
+            <summary>
+            Gets the BorderBrush dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.BorderThicknessProperty">
+            <summary>
+            Gets the BorderThickness dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.FontFamilyProperty">
+            <summary>
+            Gets the FontFamily dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.FontSizeProperty">
+            <summary>
+            Gets the FontSize dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.FontStretchProperty">
+            <summary>
+            Gets the FontStretch dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.FontStyleProperty">
+            <summary>
+            Gets the FontStyle dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.FontWeightProperty">
+            <summary>
+            Gets the FontWeight dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.ForegroundProperty">
+            <summary>
+            Gets the Foreground dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.HorizontalContentAlignmentProperty">
+            <summary>
+            Gets the HorizontalContentAlignment dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.PaddingProperty">
+            <summary>
+            Gets the Padding dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.IsEnabledProperty">
+            <summary>
+            Gets the IsEnabled dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ControlTest.VerticalContentAlignmentProperty">
+            <summary>
+            Gets the VerticalContentAlignment dependency property test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ControlTest.#ctor">
+            <summary>
+            Initializes a new instance of the ControlTest class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ControlTest.GetDependencyPropertyTests">
+            <summary>
+            Get the dependency property tests.
+            </summary>
+            <returns>The dependency property tests.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.IOverriddenControl">
+            <summary>
+            Interface used to test virtual members of Control.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.GotFocusActions">
+            <summary>
+            Gets the OnGotFocus test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.LostFocusActions">
+            <summary>
+            Gets the OnLostFocus test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.KeyDownActions">
+            <summary>
+            Gets the OnKeyDown test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.KeyUpActions">
+            <summary>
+            Gets the OnKeyUp test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.MouseEnterActions">
+            <summary>
+            Gets the OnMouseEnter test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.MouseLeaveActions">
+            <summary>
+            Gets the OnMouseLeave test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.MouseMoveActions">
+            <summary>
+            Gets the OnMouseMove test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.MouseLeftButtonDownActions">
+            <summary>
+            Gets the OnMouseLeftButtonDown test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.MouseLeftButtonUpActions">
+            <summary>
+            Gets the OnMouseLeftButtonUp test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenControl.ApplyTemplateActions">
+            <summary>
+            Gets the OnApplyTemplate test actions.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.DependencyPropertyTest`2">
+            <summary>
+            DependencyPropertyTest provides rich support for testing the behavior
+            of a dependency property.
+            </summary>
+            <typeparam name="T">Type containing the dependency property.</typeparam>
+            <typeparam name="P">Type of the dependency property.</typeparam>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.Test">
+            <summary>
+            Gets a reference to the test class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.Name">
+            <summary>
+            Gets the name of the property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.Property">
+            <summary>
+            Gets or sets the actual DependencyProperty.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.Initializer">
+            <summary>
+            Gets or sets a function used to create a new instance of the type
+            that contains the dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.IsAttached">
+            <summary>
+            Gets or sets a value indicating whether the property is attached.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.AttachedInitializer">
+            <summary>
+            Gets or sets a function used to create a new instance of a type
+            that an attached property can be set on.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.DefaultValue">
+            <summary>
+            Gets or sets the default value of the dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.OtherValues">
+            <summary>
+            Gets or sets a collection of acceptable non-default values for the
+            dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.AllValues">
+            <summary>
+            Gets a combination of the DefaultValue and OtherValues.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.InvalidValues">
+            <summary>
+            Gets or sets a mapping of invalid values to the types of exceptions
+            that they throw.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.TemplateProperty">
+            <summary>
+            Gets or sets the dependency property test used as the DataTemplate
+            for the dependency property.  This is only useful for properties
+            like Content which has a ContentTemplate, Header which has a
+            HeaderTemplate, etc.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.#ctor(System.Windows.Controls.Testing.TestBase,System.String)">
+            <summary>
+            Initializes a new instance of the DependencyPropertyTest class.
+            </summary>
+            <param name="test">Reference to the test class.</param>
+            <param name="name">Name of the property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.GetInstance">
+            <summary>
+            Get an instance that the property can be set on.
+            </summary>
+            <returns>Instance that the property can be set on.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.GetValue(System.Windows.FrameworkElement)">
+            <summary>
+            Get the value of the dependency property using its CLR getter.
+            </summary>
+            <param name="instance">Instance to get the value from.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetValue(System.Windows.FrameworkElement,`1)">
+            <summary>
+            Set the value of the dependency property using its CLR setter.
+            </summary>
+            <param name="instance">Instance to set the value on.</param>
+            <param name="value">The value of the property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.AssertAreEqual``1(``0,``0,System.String,System.Object[])">
+            <summary>
+            Assert that two values are equal.
+            </summary>
+            <typeparam name="V">Type of the values.</typeparam>
+            <param name="expected">Expected value.</param>
+            <param name="actual">Actual value.</param>
+            <param name="message">Assertion message.</param>
+            <param name="arguments">Assertion message arguments.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.IsParented(System.Object)">
+            <summary>
+            Determine whether a UIElement is currently parented.
+            </summary>
+            <param name="value">The element.</param>
+            <returns>
+            A value indicating whether a UIElement is currently parented.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.GetTestMethod(System.String,System.Action)">
+            <summary>
+            Get the metadata for a test method.
+            </summary>
+            <param name="methodName">Name of the test method.</param>
+            <param name="test">Test action to perform.</param>
+            <returns>Metadata for the test method.</returns>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.CheckDefaultValueTest">
+            <summary>
+            Gets the CheckDefaultValue test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.CheckDefaultValue">
+            <summary>
+            Check the default value of the dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.ChangeClrSetterTest">
+            <summary>
+            Gets the ChangeClrSetter test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.ChangeClrSetter">
+            <summary>
+            Change the value of the property to known good values using the CLR setter.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.ChangeSetValueTest">
+            <summary>
+            Gets the ChangeSetValue test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.ChangeSetValue">
+            <summary>
+            Change the value of the property to known good values using SetValue.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetNullTest">
+            <summary>
+            Gets the SetNull test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetNull">
+            <summary>
+            Set the property to null.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.ClearValueResetsDefaultTest">
+            <summary>
+            Gets the ClearValueResetsDefault test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.ClearValueResetsDefault">
+            <summary>
+            Verify that clearing a dependency property restores its default.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.InvalidValueFailsTest">
+            <summary>
+            Gets the InvalidValueFails test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.InvalidValueFails">
+            <summary>
+            Verify the dependency throws exceptions when setting invalid values.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.InvalidValueIsIgnoredTest">
+            <summary>
+            Gets the InvalidValueIsIgnored test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.InvalidValueIsIgnored">
+            <summary>
+            Verify that any invalid values are ignored when set.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.InvalidValueDoesNotChangeVisualStateTest">
+            <summary>
+            Gets the InvalidValueDoesNotChangeVisualState test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.InvalidValueDoesNotChangeVisualState">
+            <summary>
+            Ensure that an invalid value does not change the visual state.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.IsReadOnlyTest">
+            <summary>
+            Gets the IsReadOnly test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.IsReadOnly">
+            <summary>
+            Determine whether a property is read only.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.CanBeStyledTest">
+            <summary>
+            Gets the CanBeStyled test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.CanBeStyled">
+            <summary>
+            Ensure that a property can be styled.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.TemplateBindTest">
+            <summary>
+            Gets the TemplateBind test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.TemplateBind">
+            <summary>
+            Verify the dependency property can be templated bound.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.BindingTest">
+            <summary>
+            Gets the Binding test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.Binding">
+            <summary>
+            Verify the dependency property can be bound.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.ChangesVisualStateTest(`1,`1,System.String)">
+            <summary>
+            Gets the ChangesVisualState test.
+            </summary>
+            <param name="fromValue">Initial value of the property.</param>
+            <param name="toValue">New value of the property.</param>
+            <param name="newState">State that should be changed to.</param>
+            <returns>The ChangesVisualState test.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.ChangesVisualState(`1,`1,System.String)">
+            <summary>
+            Verify the dependency property changes the visual state of the
+            control.
+            </summary>
+            <param name="fromValue">Initial value of the property.</param>
+            <param name="toValue">New value of the property.</param>
+            <param name="newState">State that should be changed to.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.DoesNotChangeVisualStateTest(`1,`1)">
+            <summary>
+            Gets the DoesNotChangeVisualState test.
+            </summary>
+            <param name="fromValue">Initial value of the property.</param>
+            <param name="toValue">New value of the property.</param>
+            <returns>The DoesNotChangeVisualState test.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.DoesNotChangeVisualState(`1,`1)">
+            <summary>
+            Ensure that setting the dependency property to an invalid value does
+            not change the visual state.
+            </summary>
+            <param name="fromValue">Initial value of the property.</param>
+            <param name="toValue">New value of the property.</param>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetXamlAttributeTest">
+            <summary>
+            Gets the SetXamlAttribute test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetXamlAttribute">
+            <summary>
+            Verify the property can be set in XAML as an attribute.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetXamlElementTest">
+            <summary>
+            Gets the SetXamlElement test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetXamlElement">
+            <summary>
+            Verify the property can be set in XAML as an element.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetXamlContentTest">
+            <summary>
+            Gets the SetXamlContent test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.SetXamlContent">
+            <summary>
+            Verify the property can be set in XAML as content.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.IsContentPropertyTest">
+            <summary>
+            Gets the IsContentProperty test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.IsContentProperty">
+            <summary>
+            Ensure the ContentProperty attribute is applied to its owning Type.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.HasTypeConverterTest(System.Type)">
+            <summary>
+            Gets the HasTypeConverter test.
+            </summary>
+            <param name="converterType">The type of the TypeConverter.</param>
+            <returns>The HasTypeConverter test.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.HasTypeConverter(System.Type)">
+            <summary>
+            Verify the property is associated with a TypeConverter.
+            </summary>
+            <param name="converterType">The type of the TypeConverter.</param>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.AttachedGetNullFailsTest">
+            <summary>
+            Gets the AttachedGetNullFails test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.AttachedGetNullFails">
+            <summary>
+            Test getting the target of an attached dependency property to null.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.AttachedSetNullFailsTest">
+            <summary>
+            Gets the AttachedSetNullFails test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.AttachedSetNullFails">
+            <summary>
+            Test setting the target of an attached dependency property to null.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.CheckDataTemplateTest(`1,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Create a DataTemplate test.
+            </summary>
+            <param name="data">Data for the template.</param>
+            <param name="bindings">Bindings to create in the template.</param>
+            <returns>DataTemplate property test.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.CheckDataTemplate(`1,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Verify the application of a DataTemplate.
+            </summary>
+            <param name="data">Data for the template.</param>
+            <param name="bindings">Bindings to create in the template.</param>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithIntTest">
+            <summary>
+            Gets the DataTemplateWithInt test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithInt">
+            <summary>
+            Verify the application of a DataTemplate with Int content.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithStringTest">
+            <summary>
+            Gets the DataTemplateWithString test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithString">
+            <summary>
+            Verify the application of a DataTemplate with String content.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithStringAndPropertyTest">
+            <summary>
+            Gets the DataTemplateWithStringAndProperty test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithStringAndProperty">
+            <summary>
+            Verify the application of a DataTemplate with String content and a
+            property binding.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithBusinessObjectTest">
+            <summary>
+            Gets the DataTemplateWithBusinessObject test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithBusinessObject">
+            <summary>
+            Verify the application of a DataTemplate with UIElement content.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithUIElementFailsTest">
+            <summary>
+            Gets the DataTemplateWithUIElementFails test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTest`2.DataTemplateWithUIElementFails">
+            <summary>
+            Verify the application of a DataTemplate with UIElement content
+            fails.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.DependencyPropertyTestMethod">
+            <summary>
+            Provide custom metadata for dependency property tests.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTestMethod.PropertyName">
+            <summary>
+            Gets the name of the property being tested.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTestMethod.PropertyDetail">
+            <summary>
+            Gets or sets an additional modifier for the property to be used in
+            the name.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Name">
+            <summary>
+            Gets the name of the test method.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Test">
+            <summary>
+            Gets the test action to perform.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Bugs">
+            <summary>
+            Gets a list of dynamically defined bug attributes.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Tags">
+            <summary>
+            Gets a list of dynamically defined tag attributes.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTestMethod.#ctor(System.Reflection.MethodInfo,System.String,System.Action)">
+            <summary>
+            Initializes a new instance of the DependencyPropertyTestMethod
+            class.
+            </summary>
+            <param name="methodInfo">The method being tested.</param>
+            <param name="propertyName">
+            The name of the property being tested.
+            </param>
+            <param name="test">The test action to perform.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTestMethod.GetDynamicAttributes">
+            <summary>
+            Get any attribute on the test method that are provided dynamically.
+            </summary>
+            <returns>
+            Dynamically provided attributes on the test method.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Invoke(System.Object)">
+            <summary>
+            Invoke the test.
+            </summary>
+            <param name="instance">Instance of the test class.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Bug(System.String,System.Boolean)">
+            <summary>
+            Associate a bug with the test method.
+            </summary>
+            <param name="description">Description of the bug.</param>
+            <param name="isFixed">
+            A value indicating whether or not the bug has been fixed.
+            </param>
+            <returns>The DependencyPropertyTestMethod.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Bug(System.String)">
+            <summary>
+            Associate a bug with the test method.
+            </summary>
+            <param name="description">Description of the bug.</param>
+            <returns>The DependencyPropertyTestMethod.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.DependencyPropertyTestMethod.Tag(System.String)">
+            <summary>
+            Associate a tag with the test method.
+            </summary>
+            <param name="tag">The tag to associate.</param>
+            <returns>The DependencyPropertyTestMethod.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.FrameworkElementTest">
+            <summary>
+            Base class used to author unit tests for FrameworkElements.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.FrameworkElementTest.DefaultFrameworkElementToTest">
+            <summary>
+            Gets a default instance of FrameworkElement (or a derived type) to
+            test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.FrameworkElementTest.FrameworkElementsToTest">
+            <summary>
+            Gets instances of FrameworkElement (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.FrameworkElementTest.OverriddenFrameworkElementsToTest">
+            <summary>
+            Gets instances of IOverriddenFrameworkElement (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.FrameworkElementTest.HorizontalAlignmentProperty">
+            <summary>
+            Gets the HorizontalAlignment dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.FrameworkElementTest.VerticalAlignmentProperty">
+            <summary>
+            Gets the VerticalAlignment dependency property test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.FrameworkElementTest.#ctor">
+            <summary>
+            Initializes a new instance of the FrameworkElementTest class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.FrameworkElementTest.GetDynamicTestMethods">
+            <summary>
+            Get any dynamically created test methods.
+            </summary>
+            <returns>Dynamically created test methods.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.FrameworkElementTest.GetDependencyPropertyTests">
+            <summary>
+            Get any dependency property tests.
+            </summary>
+            <returns>Dependency property tests.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.FrameworkElementTest.TagInherited(System.Collections.Generic.IEnumerable{System.Windows.Controls.Testing.DependencyPropertyTestMethod})">
+            <summary>
+            Associate an Inherited tag with the test methods.
+            </summary>
+            <param name="methods">Test methods.</param>
+            <returns>List of inherited DependencyPropertyTestMethod.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.FrameworkElementTest.TemplatePartsAreDefined">
+            <summary>
+            Verify the control's template parts.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.FrameworkElementTest.TemplateVisualStatesAreDefined">
+            <summary>
+            Verify the control's template visual states.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.FrameworkElementTest.StyleTypedPropertiesAreDefined">
+            <summary>
+            Verify the control's style typed properties.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.IOverriddenFrameworkElement">
+            <summary>
+            Interface used to test virtual members of FrameworkElement.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenFrameworkElement.MeasureActions">
+            <summary>
+            Gets the MeasureOverride test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenFrameworkElement.ArrangeActions">
+            <summary>
+            Gets the ArrangeOverride test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenFrameworkElement.CreateAutomationPeerActions">
+            <summary>
+            Gets the OnCreateAutomationPeer test actions.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.IOverriddenItemsControl">
+            <summary>
+            Interface used to test virtual members of ItemsControl.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenItemsControl.IsItemItsOwnContainerOverrideActions">
+            <summary>
+            Gets the IsItemItsOwnContainerOverride test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenItemsControl.GetContainerForItemOverrideActions">
+            <summary>
+            Gets the GetContainerForItemOverride test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenItemsControl.PrepareContainerForItemOverrideActions">
+            <summary>
+            Gets the PrepareContainerForItemOverride test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenItemsControl.ClearContainerForItemOverrideActions">
+            <summary>
+            Gets the ClearContainerForItemOverride test actions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.IOverriddenItemsControl.OnItemsChangedActions">
+            <summary>
+            Gets the OnItemsChanged test actions.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.ItemsControlTest">
+            <summary>
+            ItemsControl unit tests.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.DefaultControlToTest">
+            <summary>
+            Gets a default instance of Control (or a derived type) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.ControlsToTest">
+            <summary>
+            Gets instances of Control (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.OverriddenControlsToTest">
+            <summary>
+            Gets instances of IOverriddenControl (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.DefaultItemsControlToTest">
+            <summary>
+            Gets a default instance of ItemsControl (or a derived type) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.ItemsControlsToTest">
+            <summary>
+            Gets instances of ItemsControl (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.OverriddenItemsControlsToTest">
+            <summary>
+            Gets instances of IOverriddenItemsControl (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.DisplayMemberPathProperty">
+            <summary>
+            Gets the DisplayMemberPath dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.ItemsPanelProperty">
+            <summary>
+            Gets the ItemsPanel dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.ItemsSourceProperty">
+            <summary>
+            Gets the ItemsSource dependency property test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.ItemsControlTest.ItemTemplateProperty">
+            <summary>
+            Gets the ItemTemplate dependency property test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ItemsControlTest.#ctor">
+            <summary>
+            Initializes a new instance of the ItemsControlTest class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ItemsControlTest.GetDependencyPropertyTests">
+            <summary>
+            Get the dependency property tests.
+            </summary>
+            <returns>The dependency property tests.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.ObservableExtensions">
+            <summary>
+            A set of extension methods for observables.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ObservableExtensions.Assert``1(System.Collections.Generic.IObservable{``0},System.Linq.Expressions.Expression{System.Func{System.Boolean}})">
+            <summary>
+            Asserts that a predicate is true.
+            </summary>
+            <typeparam name="T">The type of the items in the observable.
+            </typeparam>
+            <param name="observable">The observable.</param>
+            <param name="predicate">The predicate to assert.</param>
+            <returns>An observable.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ObservableExtensions.Do(System.Action)">
+            <summary>
+            Queues an action and returns an observable that will yield a null
+            result when the action is completed.
+            </summary>
+            <param name="action">The action to execute.</param>
+            <returns>An observable that will return null when the action 
+            completes.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ObservableExtensions.Do``1(System.Collections.Generic.IObservable{``0},System.Action)">
+            <summary>
+            Queues an action and returns an observable that will yield a null
+            result when the action is completed.
+            </summary>
+            <typeparam name="T">The type of items in the sequence.</typeparam>
+            <param name="that">The observable sequence.</param>
+            <param name="action">The action to execute.</param>
+            <returns>An observable that will return null when the action 
+            completes.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ObservableExtensions.Create``1(System.Func{``0})">
+            <summary>
+            Creates an object an updates the observers with that object.
+            </summary>
+            <typeparam name="T">The type of the element created.</typeparam>
+            <param name="func">The factory function.</param>
+            <returns>An observable that will return the object when the function 
+            completes.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ObservableExtensions.WaitFor``2(System.Collections.Generic.IObservable{``0},System.Func{System.Collections.Generic.IObservable{``1}})">
+            <summary>
+            Waits for another observable to return a value.
+            </summary>
+            <typeparam name="TFirst">The type of the first observable.</typeparam>
+            <typeparam name="TSecond">The type of the second observable.</typeparam>
+            <param name="observable">The first observable.</param>
+            <param name="nextObservable">A function that returns the second 
+            observable when executed.</param>
+            <returns>An observable object.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ObservableExtensions.RunAsyncTest``1(System.Collections.Generic.IObservable{``0},Microsoft.Silverlight.Testing.PresentationTest)">
+            <summary>
+            Runs an asynchronous test and cleans up afterwards.
+            </summary>
+            <typeparam name="T">The type of the items in the sequence.</typeparam>
+            <param name="observable">The asynchronous test.</param>
+            <param name="presentationTest">The presentation test object.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.ObservableExtensions.IgnoreAll``1(System.Collections.Generic.IObservable{``0})">
+            <summary>
+            Converts an observable sequence into a sequence of unit values.
+            </summary>
+            <typeparam name="T">The type of the sequence.</typeparam>
+            <param name="that">The sequence.</param>
+            <returns>A sequence of unit values.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.MethodCallMonitor">
+            <summary>
+            Monitor whether a method is called.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.MethodCallMonitor._initialNumberOfTimesCalled">
+            <summary>
+            Number of times the method had been called when we start monitoring
+            (which we use to determine if it was called or not).
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.MethodCallMonitor.Method">
+            <summary>
+            Gets the method to monitor.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.MethodCallMonitor.#ctor">
+            <summary>
+            Prevent external instantiation of the MethodCallMonitor class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.MethodCallMonitor.#ctor(System.Windows.Controls.Testing.OverriddenMethodBase)">
+            <summary>
+            Initializes a new instance of the MethodCallMonitor class.
+            </summary>
+            <param name="method">Method to monitor.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.MethodCallMonitor.AssertCalled">
+            <summary>
+            Require that the method is called.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.MethodCallMonitor.AssertCalled(System.String)">
+            <summary>
+            Require that the method is called.
+            </summary>
+            <param name="message">Assertion message.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.MethodCallMonitor.AssertNotCalled">
+            <summary>
+            Require that the method is not called.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.MethodCallMonitor.AssertNotCalled(System.String)">
+            <summary>
+            Require that the method is not called.
+            </summary>
+            <param name="message">Assertion message.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.MethodCallMonitor.Reset">
+            <summary>
+            Reset the monitor.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.OverriddenMethod">
+            <summary>
+            Overridden method tests for methods with no parameters.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod.PreTest">
+            <summary>
+            Test action to perform before the base implementation is invoked.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod.Test">
+            <summary>
+            Test action to perform after the base implementation was invoked.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod.#ctor">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+            <param name="invariantTest">
+            Test action to perform before and after the other tests.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod.InvokeTest(System.Action,System.Object[])">
+            <summary>
+            Invoke the test action.
+            </summary>
+            <param name="test">Test action to invoke.</param>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod.DoPreTest(System.Object[])">
+            <summary>
+            Perform the test action before the base implementation is invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod.DoTest(System.Object[])">
+            <summary>
+            Perform the test action after the base implementation was invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.OverriddenMethod`2">
+            <summary>
+            Overridden method tests for methods with 2 parameters.
+            </summary>
+            <typeparam name="T1">Type of the method's first parameter.</typeparam>
+            <typeparam name="T2">Type of the method's second parameter.</typeparam>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`2.PreTest">
+            <summary>
+            Test action to perform before the base implementation is invoked.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`2.Test">
+            <summary>
+            Test action to perform after the base implementation was invoked.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`2.#ctor">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`2.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+            <param name="invariantTest">
+            Test action to perform before and after the other tests.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`2.InvokeTest(System.Action{`0,`1},System.Object[])">
+            <summary>
+            Invoke the test action.
+            </summary>
+            <param name="test">Test action to invoke.</param>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`2.DoPreTest(System.Object[])">
+            <summary>
+            Perform the test action before the base implementation is invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`2.DoTest(System.Object[])">
+            <summary>
+            Perform the test action after the base implementation was invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.OverriddenMethod`4">
+            <summary>
+            Overridden method tests for methods with 3 parameters.
+            </summary>
+            <typeparam name="T1">Type of the method's first parameter.</typeparam>
+            <typeparam name="T2">Type of the method's second parameter.</typeparam>
+            <typeparam name="T3">Type of the method's third parameter.</typeparam>
+            <typeparam name="T4">Type of the method's fourth parameter.</typeparam>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`4.PreTest">
+            <summary>
+            Test action to perform before the base implementation is invoked.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`4.Test">
+            <summary>
+            Test action to perform after the base implementation was invoked.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`4.#ctor">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`4.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+            <param name="invariantTest">
+            Test action to perform before and after the other tests.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`4.InvokeTest(System.Action{`0,`1,`2,`3},System.Object[])">
+            <summary>
+            Invoke the test action.
+            </summary>
+            <param name="test">Test action to invoke.</param>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`4.DoPreTest(System.Object[])">
+            <summary>
+            Perform the test action before the base implementation is invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`4.DoTest(System.Object[])">
+            <summary>
+            Perform the test action after the base implementation was invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.OverriddenMethod`1">
+            <summary>
+            Overridden method tests for methods with 1 parameter.
+            </summary>
+            <typeparam name="T1">Type of the method's parameter.</typeparam>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`1.PreTest">
+            <summary>
+            Test action to perform before the base implementation is invoked.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`1.Test">
+            <summary>
+            Test action to perform after the base implementation was invoked.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`1.#ctor">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`1.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+            <param name="invariantTest">
+            Test action to perform before and after the other tests.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`1.InvokeTest(System.Action{`0},System.Object[])">
+            <summary>
+            Invoke the test action.
+            </summary>
+            <param name="test">Test action to invoke.</param>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`1.DoPreTest(System.Object[])">
+            <summary>
+            Perform the test action before the base implementation is invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`1.DoTest(System.Object[])">
+            <summary>
+            Perform the test action after the base implementation was invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.OverriddenMethod`3">
+            <summary>
+            Overridden method tests for methods with 3 parameters.
+            </summary>
+            <typeparam name="T1">Type of the method's first parameter.</typeparam>
+            <typeparam name="T2">Type of the method's second parameter.</typeparam>
+            <typeparam name="T3">Type of the method's third parameter.</typeparam>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`3.PreTest">
+            <summary>
+            Test action to perform before the base implementation is invoked.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.Testing.OverriddenMethod`3.Test">
+            <summary>
+            Test action to perform after the base implementation was invoked.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`3.#ctor">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`3.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the OverriddenMethod class.
+            </summary>
+            <param name="invariantTest">
+            Test action to perform before and after the other tests.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`3.InvokeTest(System.Action{`0,`1,`2},System.Object[])">
+            <summary>
+            Invoke the test action.
+            </summary>
+            <param name="test">Test action to invoke.</param>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`3.DoPreTest(System.Object[])">
+            <summary>
+            Perform the test action before the base implementation is invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethod`3.DoTest(System.Object[])">
+            <summary>
+            Perform the test action after the base implementation was invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.OverriddenMethodBase">
+            <summary>
+            Base class for overridden method tests.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.OverriddenMethodBase.NumberOfTimesCalled">
+            <summary>
+            Gets the number of times the method has been called.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.OverriddenMethodBase.InvariantTest">
+            <summary>
+            Gets a test action to perform before and after the other tests.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.#ctor">
+            <summary>
+            Initializes a new instance of the OverriddenMethodBase class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the OverriddenMethodBase class.
+            </summary>
+            <param name="invariantTest">
+            Test action to perform before and after the other tests.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.DoInvariantTest">
+            <summary>
+            Perform the invariant test action.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.DoPreTest(System.Object[])">
+            <summary>
+            Perform the test action before the base implementation is invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.DoTest(System.Object[])">
+            <summary>
+            Perform the test action after the base implementation was invoked.
+            </summary>
+            <param name="parameters">Parameters to the test action.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.ValidateParameters(System.Object[],System.Int32)">
+            <summary>
+            Validate the parameters for a test action.
+            </summary>
+            <param name="parameters">
+            Parameters supplied to a test action.
+            </param>
+            <param name="expectedLength">
+            Expected number of parameters for the test action.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.GetParameter``1(System.Object[],System.Int32)">
+            <summary>
+            Get a parameter for a test action of a specific type.
+            </summary>
+            <typeparam name="T">
+            Type of the parameters for the test action.
+            </typeparam>
+            <param name="parameters">Parameters for a test action.</param>
+            <param name="index">Index of the desired parameter.</param>
+            <returns>Parameter for a test action as a specific type.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.OverriddenMethodBase.CreateMonitor">
+            <summary>
+            Create a method call monitor to track whether the method is called.
+            </summary>
+            <returns>
+            Method call monitor to track whether the method is called.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.IOverriddenPanel">
+            <summary>
+            Interface used to test virtual members of Panel.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.LayoutTestContentControl">
+            <summary>
+            A ContentControl that records details about its last layout pass.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.LayoutTestContentControl.SuggestedAvailableSize">
+            <summary>
+            Gets the available size suggested during the last measure pass.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.LayoutTestContentControl.SuggestedFinalSize">
+            <summary>
+            Gets the final size suggested during the last arrange pass.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.LayoutTestContentControl.#ctor">
+            <summary>
+            Initializes a new instance of the LayoutTestContentControl class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.LayoutTestContentControl.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures the control.
+            </summary>
+            <param name="availableSize">A maximum Size to not exceed.</param>
+            <returns>The desired size of the control.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.LayoutTestContentControl.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arranges the control.
+            </summary>
+            <param name="finalSize">The final Size of the control.</param>
+            <returns>The arranged size of the control.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.PanelTest">
+            <summary>
+            Base class used to author unit tests for layout containers.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.PanelTest.DefaultFrameworkElementToTest">
+            <summary>
+            Gets a default instance of FrameworkElement (or a derived type) to
+            test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.PanelTest.FrameworkElementsToTest">
+            <summary>
+            Gets instances of FrameworkElement (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.PanelTest.OverriddenFrameworkElementsToTest">
+            <summary>
+            Gets instances of IOverriddenFrameworkElement (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.PanelTest.DefaultPanelToTest">
+            <summary>
+            Gets a default instance of Panel (or a derived type) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.PanelTest.PanelsToTest">
+            <summary>
+            Gets instances of Panel (or derived types) to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.PanelTest.OverriddenPanelsToTest">
+            <summary>
+            Gets instances of IOverriddenPanel (or derived types) to test.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.PanelTest.#ctor">
+            <summary>
+            Initializes a new instance of the PanelTest class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.PanelTest.GetDependencyPropertyTests">
+            <summary>
+            Get the dependency property tests.
+            </summary>
+            <returns>The dependency property tests.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.PanelTest.TestLayoutAsync(System.Windows.Controls.Panel,System.Func{System.Windows.Controls.ContentControl,System.Windows.Rect}[])">
+            <summary>
+            Create a layout test that adds a series of elements to a panel and
+            then verifies their positions once they have all been added.  An
+            element will be created and added for each function used to compute
+            a position.
+            </summary>
+            <param name="panel">Panel to test.</param>
+            <param name="computePositions">
+            Functions to compute the final positions of the elements that are
+            added to the panel.  The functions can also customize the element
+            (by setting size, etc.) before returning the desired final position.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.PanelTest.TestLayoutAsync(System.Windows.UIElement,System.Windows.Controls.Panel,System.Func{System.Windows.Controls.ContentControl,System.Windows.Rect}[])">
+            <summary>
+            Create a layout test that adds a series of elements to a panel and
+            then verifies their positions once they have all been added.  An
+            element will be created and added for each function used to compute
+            a position.
+            </summary>
+            <param name="root">Root object containing the panel to test.</param>
+            <param name="panel">Panel to test.</param>
+            <param name="computePositions">
+            Functions to compute the final positions of the elements that are
+            added to the panel.  The functions can also customize the element
+            (by setting size, etc.) before returning the desired final position.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.PanelTest.Prepare(System.Windows.Controls.Panel)">
+            <summary>
+            Prepare a Panel to be used in a layout test.
+            </summary>
+            <param name="panel">Panel to prepare.</param>
+            <returns>The prepared Panel.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.PanelTest.Prepare(System.Windows.Controls.Panel,System.Double,System.Double)">
+            <summary>
+            Prepare a Panel to be used in a layout test.
+            </summary>
+            <param name="panel">Panel to prepare.</param>
+            <param name="width">Width of the control.</param>
+            <param name="height">Height of the control.</param>
+            <returns>The prepared Panel.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.PanelTest.Prepare(System.Windows.Controls.ContentControl,System.Double,System.Double)">
+            <summary>
+            Prepare a ContentControl to be used in a layout test.
+            </summary>
+            <param name="control">Control to prepare.</param>
+            <param name="minWidth">Minimum width of the control.</param>
+            <param name="minHeight">Minimum height of the control.</param>
+            <returns>The prepared Control.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.Tags">
+            <summary>
+            Defined tag constants.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.Tags.RequiresFocus">
+            <summary>
+            Defines a tag name used to identify tests that require the control
+            to have focus in order to pass.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.Tags.RequiresInput">
+            <summary>
+            Defines a tag name used to identify tests that generate mouse and
+            keyboard input.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.Tags.VisualVerificationTest">
+            <summary>
+            Defines a tag name used to identify tests that use the visual
+            verification.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.TestBase">
+            <summary>
+            Base class of the unit testing hierarchy for control and layout
+            container tests.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TestBase.DefaultVisualDelayInMilliseconds">
+            <summary>
+            Gets or sets the number of milliseconds to wait between actions in
+            TestAsync, TestTaskAsync, and TestSequenceAsync.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.TestBase.DefaultTimeout">
+            <summary>
+            The default timeout that can easily be used by any derived test. A
+            default timeout value can allow for EnqueueConditional statements to
+            wait for an event to fire, or otherwise Timeout.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.#cctor">
+            <summary>
+            Initializes static members of the TestBase class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.#ctor">
+            <summary>
+            Initializes a new instance of the TestBase class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.SetupCachedCompositionTest">
+            <summary>
+            Sets up the cached composition tests. 
+            Examines if the host if GPU accelerated and if so
+            changes the TestPanel to CacheMode=BitmapCache. 
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.TestTaskAsync(System.Windows.FrameworkElement,System.Action[])">
+            <summary>
+            Add an element to the test surface and perform a series of test
+            actions with a pause in between each allowing the test surface to be
+            updated.  This task does not complete the async test and a call to
+            EnqueueTestCompleted is still required.
+            </summary>
+            <param name="element">Element to test.</param>
+            <param name="actions">Test actions.</param>
+            <remarks>
+            TestTaskAsync should only be invoked via test methods with the
+            AsynchronousAttribute applied.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.TestTaskAsync(System.Int32,System.Windows.FrameworkElement,System.Action[])">
+            <summary>
+            Add an element to the test surface and perform a series of test
+            actions with a pause in between each allowing the test surface to be
+            updated.  This task does not complete the async test and a call to
+            EnqueueTestCompleted is still required.
+            </summary>
+            <param name="visualDelay">
+            The visual delay in milliseconds to wait between asynchronous test
+            actions.
+            </param>
+            <param name="element">Element to test.</param>
+            <param name="actions">Test actions.</param>
+            <remarks>
+            TestTaskAsync should only be invoked via test methods with the
+            AsynchronousAttribute applied.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.TestAsync(System.Windows.FrameworkElement,System.Action[])">
+            <summary>
+            Add an element to the test surface and perform a series of test
+            actions with a pause in between each allowing the test surface to be
+            updated.
+            </summary>
+            <param name="element">Element to test.</param>
+            <param name="actions">Test actions.</param>
+            <remarks>
+            TestAsync should only be invoked via test methods with the
+            AsynchronousAttribute applied.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.TestAsync(System.Int32,System.Windows.FrameworkElement,System.Action[])">
+            <summary>
+            Add an element to the test surface and perform a series of test
+            actions with a pause in between each allowing the test surface to be
+            updated.
+            </summary>
+            <param name="visualDelay">
+            The visual delay in milliseconds to wait between asynchronous test
+            actions.
+            </param>
+            <param name="element">Element to test.</param>
+            <param name="actions">Test actions.</param>
+            <remarks>
+            TestAsync should only be invoked via test methods with the
+            AsynchronousAttribute applied.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.TestSequenceAsync``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0}[])">
+            <summary>
+            Add a series of elements to the test surface one at a time and
+            perform a series of test actions with a pause between each action
+            allowing the test surface to be updated.
+            </summary>
+            <typeparam name="T">Type of elements to test.</typeparam>
+            <param name="elements">Sequence of elements to test.</param>
+            <param name="actions">Test actions for an element.</param>
+            <remarks>
+            TestSequenceAsync should only be invoked via test methods with the
+            AsynchronousAttribute applied.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.TestSequenceAsync``1(System.Int32,System.Collections.Generic.IEnumerable{``0},System.Action{``0}[])">
+            <summary>
+            Add a series of elements to the test surface one at a time and
+            perform a series of test actions with a pause between each action
+            allowing the test surface to be updated.
+            </summary>
+            <typeparam name="T">Type of elements to test.</typeparam>
+            <param name="visualDelay">
+            The visual delay in milliseconds to wait between asynchronous test
+            actions.
+            </param>
+            <param name="elements">Sequence of elements to test.</param>
+            <param name="actions">Test actions for an element.</param>
+            <remarks>
+            TestSequenceAsync should only be invoked via test methods with the
+            AsynchronousAttribute applied.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestBase.EnqueueVisualDelay(System.Int32)">
+            <summary>
+            Enqueue a visual delay.
+            </summary>
+            <param name="visualDelay">
+            The visual delay in milliseconds to wait between asynchronous test
+            actions.
+            </param>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.TypeConverterTest`1">
+            <summary>
+            Unit tests for type converters.
+            </summary>
+            <typeparam name="T">Type of values being converted to.</typeparam>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TypeConverterTest`1.Converter">
+            <summary>
+            Gets the TypeConverter to test.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TypeConverterTest`1.ExpectedValues">
+            <summary>
+            Gets objects and their converted values.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TypeConverterTest`1.ExpectedFailures">
+            <summary>
+            Gets objects and the types of exceptions they should throw.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TypeConverterTest`1.CanConvertFrom">
+            <summary>
+            Gets types and whether they should be supported by the converter.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TypeConverterTest`1.CanConvertTo">
+            <summary>
+            Gets types and whether they should be supported by the converter.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TypeConverterTest`1.PropertiesToConvert">
+            <summary>
+            Gets properties the converter should be defined on.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.CanConvertFromExpectedTypes">
+            <summary>
+            Ensure the type converter notifies of the types it can convert from.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.ConvertFromExpectedValues">
+            <summary>
+            Ensure the type converter properly converts the expected values.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.ConvertFromExpectedFailures">
+            <summary>
+            Ensure the type converter properly throws exceptions for expected
+            failures.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.ConvertFromStringMatches">
+            <summary>
+            Ensure the type converter's ConvertFromString matches ConvertFrom.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.CanConvertToExpectedTypes">
+            <summary>
+            Ensure the type converter's CanConvertTo works correctly.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.ConvertToFails">
+            <summary>
+            Ensure the type converter's ConvertTo throws a
+            NotImplementedException.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.ConvertToStringFails">
+            <summary>
+            Ensure the type converter's ConvertToString throws a
+            NotImplementedException.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TypeConverterTest`1.AttributeIsDefined">
+            <summary>
+            Ensure the TypeConverterAttribute is applied to the required
+            properties.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.Hierarchy">
+            <summary>
+            The Hierarchy type is used as a sample hierarchical data source.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.Hierarchy.Parent">
+            <summary>
+            Gets or sets the parent of the element.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.Hierarchy.Element">
+            <summary>
+            Gets or sets the element name.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.Hierarchy.Children">
+            <summary>
+            Gets or sets the children of the element.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.Hierarchy.#ctor">
+            <summary>
+            Initializes a new instance of the Hierarchy class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.Hierarchy.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Hierarchy class.
+            </summary>
+            <param name="element">The element name.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.Hierarchy.Item(System.String)">
+            <summary>
+            Add a single child to the hierarchy.
+            </summary>
+            <param name="element">The element name.</param>
+            <returns>A Hierarchy object to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.Hierarchy.Items(System.String)">
+            <summary>
+            Add a new child to the hierarchy that will contain its own children.
+            </summary>
+            <param name="element">The element name.</param>
+            <returns>A Hierarchy object to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.Hierarchy.EndItems">
+            <summary>
+            Finish adding children to this element.
+            </summary>
+            <returns>A Hierarchy object to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.Hierarchy.Named(System.Windows.Controls.Testing.Hierarchy@)">
+            <summary>
+            Associate a binding to the last element added.
+            </summary>
+            <param name="element">
+            Variable to bind to the last element added.
+            </param>
+            <returns>A Hierarchy object to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.Hierarchy.GetDataTemplate">
+            <summary>
+            Get a HierarchicalDataTemplate that can be used to bind a Hierarchy.
+            </summary>
+            <returns>
+            A HierarchicalDataTemplate that can be used to bind a Hierarchy.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.UIElementExtensions">
+            <summary>
+            A set of extension methods for UIElement.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetLayoutUpdated(System.Windows.FrameworkElement)">
+            <summary>
+            Returns an observable that represents the LayoutUpdated
+            event.
+            </summary>
+            <param name="that">The instance to create an observable
+            for.</param>
+            <returns>An observable that represents the LayoutUpdated 
+            event.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetNextLayoutUpdated(System.Windows.FrameworkElement)">
+            <summary>
+            Returns an observable that represents the next LayoutUpdated
+            event.
+            </summary>
+            <param name="that">The instance to create an observable
+            for.</param>
+            <returns>An observable that represents the LayoutUpdated 
+            event.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetSizeChanged(System.Windows.FrameworkElement)">
+            <summary>
+            Returns an observable that represents the SizeChanged event.
+            </summary>
+            <param name="that">The instance to create an observable
+            for.</param>
+            <returns>An observable that represents the SizeChanged event.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetNextSizeChanged(System.Windows.FrameworkElement)">
+            <summary>
+            Returns an observable that represents the next SizeChanged
+            event.
+            </summary>
+            <param name="that">The instance to create an observable
+            for.</param>
+            <returns>An observable that represents the SizeChanged 
+            event.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetBeginInvoke(System.Windows.FrameworkElement)">
+            <summary>
+            An observable sequence that returns when a dispatcher invokes.
+            </summary>
+            <param name="that">The framework element.</param>
+            <returns>An observable sequence that returns when a dispatcher 
+            invokes.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.AfterNextLayoutUpdate(System.Windows.FrameworkElement)">
+            <summary>
+            An observable sequence that returns when the size changes, the
+            layout updates, or a dispatcher task invokes.
+            </summary>
+            <param name="that">The framework element.</param>
+            <returns>An observable sequence that returns when the size changes, 
+            the layout updates, or a dispatcher task invokes.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetKeyUpAlways(System.Windows.UIElement)">
+            <summary>
+            Returns an observable that wraps the KeyUp event and
+            returns even if one of the events involved is handled.
+            </summary>
+            <param name="that">The element to listen to.</param>
+            <returns>An observable that that wraps the KeyUp event 
+            and returns even if one of the events involved is handled.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetGotFocus(System.Windows.UIElement)">
+            <summary>
+            Gets an observable sequence based on the GotFocus event.
+            </summary>
+            <param name="that">The element to listen to.</param>
+            <returns>An observable sequence based on the GotFocus event.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetMouseLeftButtonDown(System.Windows.UIElement)">
+            <summary>
+            Gets an observable sequence based on the MouseLeftButtonDown event.
+            </summary>
+            <param name="that">The element.</param>
+            <returns>An observable sequence based on the MouseLeftButtonDown event.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.UIElementExtensions.GetMouseLeftButtonUp(System.Windows.UIElement)">
+            <summary>
+            Gets an observable sequence based on the MouseLeftButtonUp event.
+            </summary>
+            <param name="that">The element.</param>
+            <returns>An observable sequence based on the MouseLeftButtonUp event.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.LiveReference">
+            <summary>
+            LiveReference is used to track elements that are added to the testing
+            surface canvas so they can automatically be removed once the test is
+            complete.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.LiveReference._test">
+            <summary>
+            Reference to the executing test class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.LiveReference.Element">
+            <summary>
+            Gets the element added to the testing surface canvas.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.LiveReference.#ctor">
+            <summary>
+            Initializes a new instance of the LiveReference class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.LiveReference.#ctor(System.Windows.Controls.Testing.TestBase,System.Windows.UIElement)">
+            <summary>
+            Initializes a new instance of the LiveReference class.
+            </summary>
+            <param name="test">Reference to the executing test class.</param>
+            <param name="element">Element to add to the testing surface.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.LiveReference.Dispose">
+            <summary>
+            Remove the element from the testing surface canvas when finished.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.TestExtensions">
+            <summary>
+            Extension methods used to unit test controls and layout containers.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.CreateLiveReference(System.Windows.UIElement,System.Windows.Controls.Testing.TestBase)">
+            <summary>
+            Create a reference to the element that will be added to the testing
+            surface and then removed when the reference is disposed.
+            </summary>
+            <param name="element">Element create the reference for.</param>
+            <param name="test">Currently executing test class.</param>
+            <returns>LiveReference to track the element.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetAttributes``1(System.Reflection.MemberInfo)">
+            <summary>
+            Get the custom attributes of a specified member.
+            </summary>
+            <typeparam name="T">Type of the attribute.</typeparam>
+            <param name="member">Member to check for attributes.</param>
+            <returns>The custom attributes of a specified member.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetTemplateParts(System.Type)">
+            <summary>
+            Get the template parts for a given type.
+            </summary>
+            <param name="type">Type to check for attributes.</param>
+            <returns>
+            Dictionary mapping the names of template parts to their types.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetVisualStates(System.Type)">
+            <summary>
+            Get the visual states for a given type.
+            </summary>
+            <param name="type">Type to check for attributes.</param>
+            <returns>
+            Dictionary mapping visual state names to their groups.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetStyleTypedProperties(System.Type)">
+            <summary>
+            Get the style typed properties for a given type.
+            </summary>
+            <param name="type">Type to check for attributes.</param>
+            <returns>
+            Dictionary mapping style typed property names to the type of their
+            style.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AssertIsNullOrEmpty(System.String)">
+            <summary>
+            Assert that a string is null or empty.
+            </summary>
+            <param name="value">Value of the string.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AreSequencesEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Assert that the actual sequence matches the expected sequence.
+            </summary>
+            <typeparam name="T">Type of the sequences.</typeparam>
+            <param name="expected">The expected sequence.</param>
+            <param name="actual">The actual sequence.</param>
+            <returns>
+            A value indicating whether the sequences are equal.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AssertSequencesEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])">
+            <summary>
+            Assert that the actual sequence matches the expected sequence.
+            </summary>
+            <typeparam name="T">Type of the sequences.</typeparam>
+            <param name="expected">The expected sequence.</param>
+            <param name="actual">The actual sequence.</param>
+            <param name="message">Assertion message.</param>
+            <param name="args">Assertion message arguments.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AssertSequencesEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.String,System.Object[])">
+            <summary>
+            Assert that the actual sequence matches the expected sequence.
+            </summary>
+            <typeparam name="T">Type of the sequences.</typeparam>
+            <param name="expected">The expected sequence.</param>
+            <param name="actual">The actual sequence.</param>
+            <param name="elementToString">
+            Function to convert an element of the sequence to a string.
+            </param>
+            <param name="message">Assertion message.</param>
+            <param name="args">Assertion message arguments.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.SequenceToString``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String})">
+            <summary>
+            Convert a sequence of elements to a string.
+            </summary>
+            <typeparam name="T">Type of elements in the sequence.</typeparam>
+            <param name="sequence">The sequence of elements.</param>
+            <param name="elementToString">
+            Function to convert an element of the sequence to a string.
+            </param>
+            <returns>A string representation of the sequence.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AreBrushesEqual(System.Windows.Media.Brush,System.Windows.Media.Brush)">
+            <summary>
+            Determines if the specified brushes are equal.
+            </summary>
+            <param name="first">The first brush to compare.</param>
+            <param name="second">The second brush to compare.</param>
+            <returns>True if the brushes are equal, false otherwise.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AssertBrushesAreEqual(System.Windows.Media.Brush,System.Windows.Media.Brush)">
+            <summary>
+            Verifies that the specified brushes are equal.
+            </summary>
+            <param name="expected">
+            The first brush to compare.  This is the brush the unit test
+            expects.
+            </param>
+            <param name="actual">
+            The second brush to compare.  This is the brush the unit test
+            produced.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AssertBrushesAreEqual(System.Windows.Media.Brush,System.Windows.Media.Brush,System.String,System.Object[])">
+            <summary>
+            Verifies that the specified brushes are equal.
+            </summary>
+            <param name="expected">
+            The first brush to compare.  This is the brush the unit test
+            expects.
+            </param>
+            <param name="actual">
+            The second brush to compare.  This is the brush the unit test
+            produced.
+            </param>
+            <param name="message">Exception message.</param>
+            <param name="arguments">Exception message arguments.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetVisualAncestors(System.Windows.FrameworkElement)">
+            <summary>
+            Returns the visual tree ancestors of an element.
+            </summary>
+            <param name="element">The descendent of the ancestors.</param>
+            <returns>The visual tree ancestors of the element.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetVisualDescendents(System.Windows.DependencyObject)">
+            <summary>
+            Use VisualTreeHelper to enumerate the descendants of a dependency
+            object.
+            </summary>
+            <param name="parent">Dependency object.</param>
+            <returns>Sequence of the object's visual children.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetVisualChild(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Use VisualTreeHelper to find a named descendent of a dependency
+            object.
+            </summary>
+            <param name="parent">Dependency object.</param>
+            <param name="name">Name of the visual child.</param>
+            <returns>Desired visual child.</returns>
+            <remarks>
+            Note: This only returns the first visual child with the desired
+            name.  It's possible to have multiple children with the same names
+            in different namescopes.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.GetChildrenByType(System.Windows.FrameworkElement,System.Type)">
+            <summary>
+            This helper method is designed to find the first child element that
+            has a Type of type, using VisualTreeHelper.
+            </summary>
+            <param name="root">Root is the UI element root.</param>
+            <param name="type">
+            Type is the specified type that the method needs to find from the
+            root's children and return.
+            </param>
+            <returns>The child element that is type of "type".</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.AreClose(System.Double,System.Double)">
+            <summary>
+            A method to judge if two double values are close enough, that is, differ in less than 5 percent.
+            </summary>
+            <param name="expected">Expected value.</param>
+            <param name="actual">Actual value.</param>
+            <returns>Either true or false.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestExtensions.RemoveTests(System.Collections.Generic.ICollection{System.Windows.Controls.Testing.DependencyPropertyTestMethod},System.Windows.Controls.Testing.DependencyPropertyTestMethod)">
+            <summary>
+            Remove all instances of a specific test from the list of tests.
+            </summary>
+            <param name="tests">List of tests.</param>
+            <param name="test">Type of tests to remove.</param>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.TestVisualStateManager">
+            <summary>
+            The TestVisualStateManager class is used to track state change
+            notifications.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TestVisualStateManager.ChangedStates">
+            <summary>
+            Gets a list of states that have been changed.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestVisualStateManager.#ctor">
+            <summary>
+            Initializes a new instance of the TestVisualStateManager class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TestVisualStateManager.GoToStateCore(System.Windows.Controls.Control,System.Windows.FrameworkElement,System.String,System.Windows.VisualStateGroup,System.Windows.VisualState,System.Boolean)">
+            <summary>
+            Change the visual state.
+            </summary>
+            <param name="control">Control whose state changed.</param>
+            <param name="templateRoot">Root of the control's template.</param>
+            <param name="stateName">New state name.</param>
+            <param name="group">Visual state group.</param>
+            <param name="state">Visual state.</param>
+            <param name="useTransitions">
+            A value indicating whether to animate transitions.
+            </param>
+            <returns>A value indicating whether the state was changed.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.TreeViewBuilder">
+            <summary>
+            Utility that facilitates building a TreeView via simple method chaining.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TreeViewBuilder.ParentContainer">
+            <summary>
+            Gets or sets the parent ItemsControl Container.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TreeViewBuilder.ParentBuilder">
+            <summary>
+            Gets or sets the parent TreeViewBuilder.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.TreeViewBuilder.LastTreeViewItem">
+            <summary>
+            Gets the last TreeViewItem to have been added.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the TreeViewBuilder class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.#ctor(System.Windows.Controls.TreeView)">
+            <summary>
+            Initializes a new instance of the TreeViewBuilder class.
+            </summary>
+            <param name="view">The TreeView to build.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.#ctor(System.Windows.Controls.TreeViewItem)">
+            <summary>
+            Initializes a new instance of the TreeViewBuilder class.
+            </summary>
+            <param name="item">The TreeViewItem to build.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Add(System.Windows.Controls.TreeViewItem)">
+            <summary>
+            Add a TreeViewItem to the parent TreeView.
+            </summary>
+            <param name="item">The TreeViewItem.</param>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Item(System.Object)">
+            <summary>
+            Add a new TreeViewItem with no nested Items.
+            </summary>
+            <param name="header">The header of the TreeViewItem.</param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Item(System.Windows.Controls.TreeViewItem)">
+            <summary>
+            Add a new TreeViewItem with no nested Items.
+            </summary>
+            <param name="item">The TreeViewItem.</param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Items(System.Object)">
+            <summary>
+            Add a new TreeViewItem with nested Items (which will be comprised of
+            any new Item or Items calls that are chained before EndItems).
+            </summary>
+            <param name="header">The header of the TreeViewItem.</param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Items(System.Windows.Controls.TreeViewItem)">
+            <summary>
+            Add a new TreeViewItem with nested Items (which will be comprised of
+            any new Item or Items calls that are chained before EndItems).
+            </summary>
+            <param name="item">The TreeViewItem.</param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.EndItems">
+            <summary>
+            Complete a sequence of nested Items.
+            </summary>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Set(System.Action{System.Windows.Controls.TreeViewItem})">
+            <summary>
+            Set various properties on the last TreeViewItem added.
+            </summary>
+            <param name="setter">Action that sets the properties.</param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Select">
+            <summary>
+            Select the last TreeViewItem added.
+            </summary>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Select(System.Boolean)">
+            <summary>
+            Select the last TreeViewItem added.
+            </summary>
+            <param name="selected">
+            A value indicating whether the last TreeViewItem added is selected.
+            </param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Expand">
+            <summary>
+            Expand the last TreeViewItem added.
+            </summary>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Expand(System.Boolean)">
+            <summary>
+            Expand the last TreeViewItem added.
+            </summary>
+            <param name="expanded">
+            A value indicating whether the last TreeViewItem added is expanded.
+            </param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.Named(System.Windows.Controls.TreeViewItem@)">
+            <summary>
+            Associate a binding to the last TreeViewItem added.
+            </summary>
+            <param name="item">
+            Variable to bind to the last TreeViewItem added.
+            </param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.op_Implicit(System.Windows.Controls.Testing.TreeViewBuilder)~System.Windows.Controls.TreeView">
+            <summary>
+            Implicitly cast a TreeViewBuilder to a TreeView.
+            </summary>
+            <param name="builder">The TreeViewBuilder.</param>
+            <returns>The TreeView.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.op_Implicit(System.Windows.Controls.Testing.TreeViewBuilder)~System.Windows.Controls.TreeViewItem">
+            <summary>
+            Implicitly cast a TreeViewBuilder to a TreeViewItem.
+            </summary>
+            <param name="builder">The TreeViewBuilder.</param>
+            <returns>The TreeViewItem.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.op_Implicit(System.Windows.Controls.TreeView)~System.Windows.Controls.Testing.TreeViewBuilder">
+            <summary>
+            Implicitly cast a TreeView to a TreeViewBuilder.
+            </summary>
+            <param name="view">The TreeView.</param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.TreeViewBuilder.op_Implicit(System.Windows.Controls.TreeViewItem)~System.Windows.Controls.Testing.TreeViewBuilder">
+            <summary>
+            Implicitly cast a TreeViewItem to a TreeViewBuilder.
+            </summary>
+            <param name="item">The TreeViewItem.</param>
+            <returns>A TreeViewBuilder to continue construction.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.XamlBuilder">
+            <summary>
+            The XamlBuilder provides simplified programmatic creation of XAML
+            markup for testing.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.XamlBuilder.DefaultNamespace">
+            <summary>
+            Get the default Silverlight namespace.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.Testing.XamlBuilder.MarkupNamespace">
+            <summary>
+            Get the default XAML markup namespace.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.ElementType">
+            <summary>
+            Gets or sets the Type of the XAML element.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.Name">
+            <summary>
+            Gets or sets the name of the XAML element.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.Key">
+            <summary>
+            Gets or sets the key of the XAML element.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.Content">
+            <summary>
+            Gets or sets the text content of the XAML element.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.IsLiteral">
+            <summary>
+            Gets or sets a value indicating whether the XAML element is literal
+            content.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.ExplicitNamespaces">
+            <summary>
+            Gets or sets a mapping of prefixes to namespaces that should be
+            explicitly added.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.AttributeProperties">
+            <summary>
+            Gets or sets the attribute properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.AttachedAttributeProperties">
+            <summary>
+            Gets or sets the attached attribute properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.ElementProperties">
+            <summary>
+            Gets or sets the element properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.AttachedElementProperties">
+            <summary>
+            Gets or sets the attached element properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.Testing.XamlBuilder.Children">
+            <summary>
+            Gets or sets the child elements.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the XamlBuilder class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder.GetAssemblyName(System.Reflection.Assembly)">
+            <summary>
+            Get the name of an assembly.
+            </summary>
+            <param name="assembly">The assembly.</param>
+            <returns>Name of the assembly.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder.GetNamespace(System.Type)">
+            <summary>
+            Get the namespace for a Type.
+            </summary>
+            <param name="type">The Type to get a namespace for.</param>
+            <returns>The namespace for a Type.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder.BuildElement(System.Boolean)">
+            <summary>
+            Convert the XamlBuilder tree into an XElement tree.
+            </summary>
+            <param name="root">
+            A value indicating whether this element is the root of the XElement
+            tree.
+            </param>
+            <returns>XElement tree representing the XAML.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder.BuildPropertyElement(System.Xml.Linq.XName,System.Windows.Controls.Testing.XamlBuilder)">
+            <summary>
+            Convert the XamlBuilder property into an XElement tree.
+            </summary>
+            <param name="name">Name of the property.</param>
+            <param name="value">Value of the property.</param>
+            <returns>XElement tree representing the property.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder.Build">
+            <summary>
+            Create the XAML corresponding to the XamlBuilder tree.
+            </summary>
+            <returns>The XAML corresponding to the XamlBuilder tree.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder.Load">
+            <summary>
+            Load the object corresponding to the XamlBuilder tree.
+            </summary>
+            <returns>The object corresponding to the XamlBuilder tree.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.XamlBuilder`1">
+            <summary>
+            The XamlBuilder provides simplified programmatic creation of XAML
+            markup for testing.
+            </summary>
+            <typeparam name="T">Type of the XAML element.</typeparam>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder`1.#ctor">
+            <summary>
+            Initializes a new instance of the XamlBuilder class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlBuilder`1.Load">
+            <summary>
+            Load the object corresponding to the XamlBuilder tree.
+            </summary>
+            <returns>The object corresponding to the XamlBuilder tree.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.Testing.XamlConverter">
+            <summary>
+            The XamlConverter class is used as a very simple XamlWriter for the
+            purpose of testing.  It allows writing values as either attributes or
+            elements.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlConverter.CanConvertToAttribute(System.Object)">
+            <summary>
+            Determine whether the object can be converted to a XAML attribute
+            using the XamlConverter.
+            </summary>
+            <param name="value">Value to convert.</param>
+            <returns>
+            A value indicating whether the object can be converted.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlConverter.ConvertToAttribute(System.Object)">
+            <summary>
+            Convert an object to a XAML attribute.
+            </summary>
+            <param name="value">Object to convert.</param>
+            <returns>XAML representation.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlConverter.CanConvertToElement(System.Object)">
+            <summary>
+            Determine whether the object can be converted to a XAML element
+            using the XamlConverter.
+            </summary>
+            <param name="value">Value to convert.</param>
+            <returns>
+            A value indicating whether the object can be converted.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.Testing.XamlConverter.ConvertToElement(System.Object)">
+            <summary>
+            Convert an object to a XAML element.
+            </summary>
+            <param name="value">Object to convert.</param>
+            <returns>XAML representation.</returns>
+        </member>
+        <member name="T:System.AnonymousDisposable">
+            <summary>
+            A class that facilitates the creation of anonymous IDisposable objects.
+            </summary>
+            <QualityBand>Experimental</QualityBand>
+        </member>
+        <member name="F:System.AnonymousDisposable._dispose">
+            <summary>
+            The action to execute when the Dispose method is called.
+            </summary>
+        </member>
+        <member name="M:System.AnonymousDisposable.#ctor(System.Action)">
+            <summary>
+            Creates a new instance of the GenericDispose class.
+            </summary>
+            <param name="dispose">The action to execute when the Dispose method
+            is called.</param>
+        </member>
+        <member name="M:System.AnonymousDisposable.Dispose">
+            <summary>
+            Executes the dispose action.
+            </summary>
+        </member>
+        <member name="T:System.Linq.AnonymousObservable`1">
+            <summary>
+            A class that facilitates the creation of anonymous IObservable objects.
+            </summary>
+            <typeparam name="T">The type of the items in the sequence.</typeparam>
+            <QualityBand>Experimental</QualityBand>
+        </member>
+        <member name="F:System.Linq.AnonymousObservable`1._subscribe">
+            <summary>
+            The function to invoke when the subscribe method is called.
+            </summary>
+        </member>
+        <member name="M:System.Linq.AnonymousObservable`1.#ctor(System.Func{System.Collections.Generic.IObserver{`0},System.IDisposable})">
+            <summary>
+            Initializes a new instance of the AnonymousObservable class.
+            </summary>
+            <param name="subscribe">The method to invoke when the subscribe 
+            method is called.</param>
+        </member>
+        <member name="M:System.Linq.AnonymousObservable`1.Subscribe(System.Collections.Generic.IObserver{`0})">
+            <summary>
+            This method ensures that an observer is subscribing to the 
+            information in the observable.
+            </summary>
+            <param name="observer">The observer that is subscribing to the 
+            information in the observable.</param>
+            <returns>An disposable object used to unsubscribe from the 
+            observable.</returns>
+        </member>
+    </members>
+</doc>
